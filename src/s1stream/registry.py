@@ -21,11 +21,17 @@ class Registry:
 
         Raise RegistryError when name is already registered in this slot.
         """
-        raise NotImplementedError
+        def decorator(cls: type) -> type:
+            if name in self._classes:
+                raise RegistryError(f"Duplicate {self.slot} plugin {name!r}; known names: {', '.join(self.names())}")
+            self._classes[name] = cls
+            return cls
+
+        return decorator
 
     def names(self) -> list[str]:
         """Return the registered names, sorted."""
-        raise NotImplementedError
+        return sorted(self._classes)
 
     def build(self, spec: Mapping[str, Any]) -> Any:
         """Create the plugin spec["name"] with the other keys of spec as keyword arguments.
@@ -33,7 +39,13 @@ class Registry:
         Raise RegistryError when spec has no "name" or the name is unknown.
         The message of an unknown name lists the known names.
         """
-        raise NotImplementedError
+        name = spec.get("name")
+        if name not in self._classes:
+            raise RegistryError(
+                f"Unknown {self.slot} plugin {name!r}; known names: {', '.join(self.names())}"
+            )
+        params = {key: value for key, value in spec.items() if key != "name"}
+        return self._classes[name](**params)
 
 
 DATASETS = Registry("dataset")

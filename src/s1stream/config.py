@@ -6,6 +6,7 @@ A slot spec may name an asset: {"name": "jev_omni", "asset": "jev-omni"}. load_c
 """
 from __future__ import annotations
 
+import copy
 from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -51,4 +52,54 @@ def load_config(path: Path, resolver: Callable[[str], Path] | None = None) -> Ex
       An s1stream.assets.AssetError from the resolver becomes a ConfigError that names the asset.
     - question.options becomes a tuple.
     """
-    raise NotImplementedError
+    import yaml
+
+    try:
+        data = yaml.safe_load(path.read_text())
+    except (OSError, yaml.YAMLError) as exc:
+        raise ConfigError(f"Could not read config: {exc}") from exc
+
+    if not isinstance(data, dict):
+        raise ConfigError("Config must be a mapping")
+    for section in SECTIONS:
+        if section not in data:
+            raise ConfigError(f"Missing section: {section}")
+
+    question_data = data["question"]
+    if question_data["positive"] not in question_data["options"]:
+        raise ConfigError("question.positive must be in question.options")
+
+    original = copy.deepcopy(data)
+    specs = [data[section] for section in SLOT_SECTIONS]
+    specs.extend(data["decision_rules"])
+    asset_specs = [spec for spec in specs if "asset" in spec]
+    if asset_specs:
+        from s1stream.assets import AssetError
+
+        if resolver is None:
+            from s1stream.assets import resolve
+
+            resolver = resolve
+        for spec in asset_specs:
+            try:
+                spec["path"] = resolver(spec["asset"])
+            except AssetError as exc:
+                raise ConfigError(f"Could not resolve asset {spec['asset']!r}: {exc}") from exc
+
+    window = data["window"]
+    return ExperimentConfig(
+        name=data["name"],
+        dataset=data["dataset"],
+        window=WindowSpec(**window),
+        question=Question(
+            state=question_data["state"],
+            text=question_data["text"],
+            options=tuple(question_data["options"]),
+            positive=question_data["positive"],
+        ),
+        input_form=data["input_form"],
+        backbone=data["backbone"],
+        answer_head=data["answer_head"],
+        decision_rules=data["decision_rules"],
+        raw=original,
+    )
