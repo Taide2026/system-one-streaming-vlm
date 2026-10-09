@@ -26,6 +26,7 @@ The repository is empty, so this change also sets up the project.
 12. Each slot is a Python protocol with a registry. A plugin registers under a name, and the config refers to that name. This change implements one plugin per slot: dataset `ucf_crime`, input form `frames`, backbone `jev_omni`, answer head `option_prob`, and decision rule `threshold`.
 13. The GPU stage and the offline stage are separate commands. `s1stream run <config>` writes the window scores. `s1stream report <run dir>` applies the decision rules and computes the metrics. The report never loads a model.
 14. A run folder holds `config.yaml` (a copy), `manifest.json`, `scores.jsonl`, `run.json` and `report.json`.
+15. Models and datasets are assets. The git file `assets.yaml` lists each asset with its source, exact revision and file hashes. A config refers to an asset by name, never by an absolute path. Each machine sets one asset root in the environment variable `S1_ASSETS`; asset `<name>` lives at `$S1_ASSETS/<name>`. `s1stream fetch <name>` downloads an asset and checks its hashes. `s1stream fetch --check <name>` only checks. On this machine, `S1_ASSETS=/home/cctsai/Eric/VLM/assets`, which holds links to the existing folders. `run.json` records the revision and hashes of each asset it used. The manifest, `scores.jsonl` and `report.json` of each run go into git; models and videos never do.
 
 ## Reasons
 
@@ -36,6 +37,7 @@ The repository is empty, so this change also sets up the project.
 - Decision 5: one fixed question keeps the run comparable with later runs. Prompt tuning is a separate change.
 - Decision 9: the GB10 has unified memory, and other processes use about 73 GB now.
 - Decision 9 (measured): the smoke run on 2026-10-09 measured 1.42 s per window (after a 3.8 s first window), 22.6 GB peak GPU memory and 128 s load time. 2228 tokens go into each window.
+- Decision 15: teammates must replay runs without access to this machine. A model upload to a remote repo is large and outward, so we commit the recipe to get each asset instead.
 - Decision 13: the model runs once per config. Threshold, CUSUM and SPRT then cost no GPU time.
 
 ## Out of scope
