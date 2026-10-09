@@ -122,7 +122,6 @@ def _move_contents(source: Path, target: Path) -> None:
         destination = target / item.name
         if destination.exists() and item.is_dir():
             _move_contents(item, destination)
-            item.rmdir()
         else:
             shutil.move(str(item), str(destination))
     source.rmdir()
@@ -172,14 +171,6 @@ def prepare_ucf_crime(folder: Path) -> None:
         top_train.rename(destination)
     for empty in (folder / "Anomaly_Detection_splits", folder / "Action_Regnition_splits"):
         if empty.exists():
-            for child in empty.iterdir():
-                if child.is_dir():
-                    for nested in child.rglob("*"):
-                        if nested.is_file():
-                            nested.unlink(missing_ok=True)
-                    child.rmdir()
-                else:
-                    child.unlink(missing_ok=True)
             empty.rmdir()
 
 
