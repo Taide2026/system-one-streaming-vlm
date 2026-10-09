@@ -3,6 +3,7 @@
 Writes into a new run folder:
   config.yaml    the config as read (ExperimentConfig.raw)
   manifest.json  the selected videos: [{name, category, fps, n_frames, duration_s, events, path}]
+                 path is relative to the dataset's asset folder, so no machine path leaves the machine
   scores.jsonl   one line per window, written and flushed as it is scored:
                  {video, window, start_s, end_s, label, score, probabilities, seconds}
                  score = probabilities[question.positive]; seconds = wall time of input form + backbone + head.
@@ -39,6 +40,13 @@ def free_memory_gb() -> float | None:
     return None
 
 
+def manifest_path(path: Path, root: str | Path | None) -> str:
+    """path relative to root when path lies under root; else path unchanged."""
+    if root is None or not Path(path).is_relative_to(root):
+        return str(path)
+    return str(Path(path).relative_to(root))
+
+
 def git_commit(repo: Path) -> tuple[str | None, bool]:
     """(HEAD commit, True when the work tree has uncommitted changes); (None, False) when git fails."""
     try:
@@ -71,7 +79,7 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
     items = DATASETS.build(config.dataset).items()
     manifest = [{"name": item.name, "category": item.category, "fps": item.fps,
                  "n_frames": item.n_frames, "duration_s": item.duration_s,
-                 "events": [list(event) for event in item.events], "path": str(item.path)} for item in items]
+                 "events": [list(event) for event in item.events], "path": manifest_path(item.path, config.dataset.get("path"))} for item in items]
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=1))
 
     input_form = INPUT_FORMS.build(config.input_form)

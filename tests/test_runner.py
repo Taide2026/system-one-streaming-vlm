@@ -117,3 +117,22 @@ def test_report_computes_metrics_without_a_model(tmp_path, config, monkeypatch):
     assert rows[1]["detection_rate"] == pytest.approx(1.0)
     assert rows[1]["mean_delay_s"] == pytest.approx(2.0)  # event starts at 2 s, first alarm window ends at 4 s
     assert rows[1]["false_alarms_per_hour"] == pytest.approx(0.0)
+
+
+@DATASETS.register("fake_rooted_dataset")
+class FakeRootedDataset:
+    def __init__(self, path):
+        self.root = Path(path)
+
+    def items(self):
+        return [VideoItem("a.mp4", self.root / "videos" / "a.mp4", "Abuse", 30.0, 60, ())]
+
+
+def test_manifest_paths_are_relative_to_the_dataset_folder(tmp_path):
+    import s1stream.rules.threshold  # noqa: F401
+    data = dict(CONFIG, dataset={"name": "fake_rooted_dataset", "path": str(tmp_path / "assets" / "ucf")})
+    path = tmp_path / "config.yaml"
+    path.write_text(yaml.safe_dump(data))
+    out = run(load_config(path), tmp_path / "run")
+    manifest = json.loads((out / "manifest.json").read_text())
+    assert manifest[0]["path"] == "videos/a.mp4"
