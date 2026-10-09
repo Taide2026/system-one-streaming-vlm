@@ -137,3 +137,26 @@ def summarize_alarms(results: Sequence[VideoAlarms]) -> dict[str, float | None]:
         "median_delay_s": float(np.median(delays)) if delays else None,
         "false_alarms_per_hour": false_alarms / (negative_s / 3600) if negative_s else None,
     }
+
+
+def classification(scores: Sequence[float], labels: Sequence[int], threshold: float) -> dict[str, float | int | None]:
+    """Window classification at one threshold: a window is predicted abnormal when its score >= threshold.
+
+    Returns tp, fp, fn, tn, accuracy, precision, recall, f1. precision is None when nothing is predicted
+    abnormal; recall is None when no window is abnormal; f1 is None when precision or recall is None or both are 0.
+    """
+    predicted = np.asarray(scores, dtype=float) >= threshold
+    actual = np.asarray(labels, dtype=int) == 1
+    tp = int((predicted & actual).sum())
+    fp = int((predicted & ~actual).sum())
+    fn = int((~predicted & actual).sum())
+    tn = int((~predicted & ~actual).sum())
+    total = tp + fp + fn + tn
+    precision = tp / (tp + fp) if tp + fp else None
+    recall = tp / (tp + fn) if tp + fn else None
+    f1 = None
+    if precision is not None and recall is not None and precision + recall > 0:
+        f1 = 2 * precision * recall / (precision + recall)
+    return {"threshold": threshold, "tp": tp, "fp": fp, "fn": fn, "tn": tn,
+            "accuracy": (tp + tn) / total if total else None,
+            "precision": precision, "recall": recall, "f1": f1}

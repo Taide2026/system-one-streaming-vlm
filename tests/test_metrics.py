@@ -79,3 +79,15 @@ def test_threshold_rule_one_sequence_per_threshold_and_monotone_detection():
     wins = windows(4, labels=[0, 0, 1, 0])
     rates = [summarize_alarms([video_alarms(video, wins, s)])["detection_rate"] for s in seqs]
     assert all(a >= b for a, b in zip(rates, rates[1:]))
+
+
+def test_classification_hand_computed_and_no_positive_predictions():
+    from s1stream.metrics import classification
+    row = classification([0.9, 0.6, 0.4, 0.1], [1, 0, 1, 0], 0.5)
+    assert (row["tp"], row["fp"], row["fn"], row["tn"]) == (1, 1, 1, 1)
+    assert (row["accuracy"], row["precision"], row["recall"], row["f1"]) == pytest.approx((0.5, 0.5, 0.5, 0.5))
+    none = classification([0.9, 0.6, 0.4, 0.1], [1, 0, 1, 0], 1.0)
+    assert (none["tp"], none["fp"]) == (0, 0)
+    assert none["precision"] is None
+    assert none["f1"] is None
+    assert none["recall"] == pytest.approx(0.0)

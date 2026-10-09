@@ -136,3 +136,14 @@ def test_manifest_paths_are_relative_to_the_dataset_folder(tmp_path):
     out = run(load_config(path), tmp_path / "run")
     manifest = json.loads((out / "manifest.json").read_text())
     assert manifest[0]["path"] == "videos/a.mp4"
+
+
+def test_report_has_classification_per_threshold_and_majority_accuracy(tmp_path, config):
+    result = report(run(config, tmp_path / "run"))
+    # 5 windows, 1 abnormal: marking every window normal is right 4 times out of 5.
+    assert result["majority_accuracy"] == pytest.approx(0.8)
+    rows = result["classification"]
+    assert [r["threshold"] for r in rows] == [0.0, 0.5, 1.0]
+    assert rows[1]["accuracy"] == pytest.approx(1.0)
+    assert (rows[1]["precision"], rows[1]["recall"]) == pytest.approx((1.0, 1.0))
+    assert rows[0]["precision"] == pytest.approx(0.2)

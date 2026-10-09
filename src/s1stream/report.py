@@ -7,6 +7,9 @@ report.json:
   real_time_factor = seconds_per_window.mean / window.stride_s
   peak_gpu_gb, load_s                      (copied from run.json)
   rules: {<rule name>: [{setting, detection_rate, mean_delay_s, median_delay_s, false_alarms_per_hour}, ...]}
+  classification: [{threshold, tp, fp, fn, tn, accuracy, precision, recall, f1}, ...]  (window level; the thresholds
+                  of every "threshold" rule in the config, or 0.5 when there is none)
+  majority_accuracy: accuracy of marking every window as the larger class (the baseline for accuracy)
 """
 from __future__ import annotations
 
@@ -75,12 +78,21 @@ def report(run_dir: Path) -> dict[str, Any]:
             rule_rows.append({"setting": setting, **metrics.summarize_alarms(results)})
         rules[spec["name"]] = rule_rows
 
+    thresholds = sorted({setting for spec in config["decision_rules"] if spec["name"] == "threshold"
+                         for setting in DECISION_RULES.build(spec).settings()})
+    if not thresholds:
+        thresholds = [0.5]
+    positives = sum(labels)
+    majority = max(positives, len(labels) - positives) / len(labels) if labels else None
+
     result = {"windows": len(rows), "videos": len(videos),
               "window_auroc": metrics.auroc(scores, labels) if both_classes else None,
               "frame_auc": metrics.frame_auc(videos) if both_classes else None,
               "ece": metrics.ece(scores, labels), "brier": metrics.brier(scores, labels) if rows else None,
               "seconds_per_window": timing,
               "real_time_factor": timing["mean"] / stride if timing["mean"] is not None else None,
-              "peak_gpu_gb": run_data["peak_gpu_gb"], "load_s": run_data["load_s"], "rules": rules}
+              "peak_gpu_gb": run_data["peak_gpu_gb"], "load_s": run_data["load_s"], "rules": rules,
+              "classification": [metrics.classification(scores, labels, t) for t in thresholds],
+              "majority_accuracy": majority}
     (run_dir / "report.json").write_text(json.dumps(result, indent=1))
     return result
