@@ -123,7 +123,7 @@ Run folders under `results/<config name>/` go into git. `results/smoke/` does no
 
 | Group | Metrics |
 |---|---|
-| Accuracy | window AUROC, frame-level AUC |
+| Accuracy | window AUROC, frame-level AUC; per threshold: accuracy, precision, recall, F1 (window level); `majority_accuracy` = accuracy of marking every window as the larger class |
 | Calibration | ECE, Brier score |
 | Latency | seconds per window (first, mean, median, p95), real-time factor = mean ÷ stride, peak GPU memory, load time |
 | Alarms (per decision rule setting) | detection rate, mean and median detection delay, false alarms per hour |
