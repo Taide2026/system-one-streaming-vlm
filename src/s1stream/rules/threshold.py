@@ -12,8 +12,18 @@ class Threshold:
         self.start, self.stop, self.step = start, stop, step
 
     def settings(self) -> list[float]:
-        raise NotImplementedError
+        if self.step <= 0:
+            raise ValueError("step must be positive")
+        values = []
+        index = 0
+        while True:
+            value = round(self.start + index * self.step, 10)
+            if value > self.stop + 1e-9:
+                break
+            values.append(value)
+            index += 1
+        return values
 
     def alarms(self, scores: list[float]) -> list[list[bool]]:
         """One sequence per threshold t: [score >= t for each score]."""
-        raise NotImplementedError
+        return [[score >= threshold for score in scores] for threshold in self.settings()]
