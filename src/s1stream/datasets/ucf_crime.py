@@ -6,8 +6,11 @@ Annotation line: "Arrest001_x264.mp4  Arrest  1185  1485  -1  -1" (name, categor
 """
 from __future__ import annotations
 
+import random
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass
+
+import cv2
 from pathlib import Path
 
 from s1stream.registry import DATASETS
@@ -33,12 +36,21 @@ class AnnotationRow:
 
 def parse_annotation_line(line: str) -> AnnotationRow:
     """Parse one annotation line. Drop a (start, end) pair when start is -1. Raise DatasetError on a malformed line."""
-    raise NotImplementedError
+    fields = line.split()
+    if len(fields) < 2 or (len(fields) - 2) % 2:
+        raise DatasetError(f"Malformed annotation line: {line!r}")
+    try:
+        pairs = [(int(fields[i]), int(fields[i + 1])) for i in range(2, len(fields), 2)]
+    except ValueError as exc:
+        raise DatasetError(f"Malformed annotation line: {line!r}") from exc
+    events = tuple((start, end) for start, end in pairs if start != -1)
+    return AnnotationRow(fields[0], fields[1], events)
 
 
 def read_annotations(path: Path) -> list[AnnotationRow]:
     """Parse every non-empty line of the annotation file, in file order."""
-    raise NotImplementedError
+    with path.open() as annotations:
+        return [parse_annotation_line(line) for line in annotations if line.strip()]
 
 
 def video_path(root: Path, row: AnnotationRow) -> Path:
@@ -46,12 +58,22 @@ def video_path(root: Path, row: AnnotationRow) -> Path:
 
     Raise DatasetError that names the video when the file does not exist.
     """
-    raise NotImplementedError
+    folder = NORMAL_TEST_FOLDER if row.category == NORMAL_CATEGORY else row.category
+    path = root / "videos" / folder / row.name
+    if not path.is_file():
+        raise DatasetError(f"Video not found: {row.name} ({path})")
+    return path
 
 
 def probe_video(path: Path) -> tuple[float, int]:
     """Read fps and frame count with OpenCV. Raise DatasetError when the file cannot be opened."""
-    raise NotImplementedError
+    cap = cv2.VideoCapture(str(path))
+    try:
+        if not cap.isOpened():
+            raise DatasetError(f"Cannot open video: {path}")
+        return float(cap.get(cv2.CAP_PROP_FPS)), int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    finally:
+        cap.release()
 
 
 def select(rows: Sequence[AnnotationRow], root: Path, probe: Probe, n_anomaly: int, n_normal: int,
@@ -65,7 +87,25 @@ def select(rows: Sequence[AnnotationRow], root: Path, probe: Probe, n_anomaly: i
     3. Raise DatasetError naming the group when fewer than n videos fit.
     Return anomaly items then Normal items, each group sorted by name.
     """
-    raise NotImplementedError
+    selected: list[VideoItem] = []
+    for category, needed in (("anomaly", n_anomaly), ("Normal", n_normal)):
+        group = [row for row in rows if (row.category == NORMAL_CATEGORY) == (category == "Normal")]
+        group.sort(key=lambda row: row.name)
+        random.Random(seed).shuffle(group)
+        kept: list[VideoItem] = []
+        for row in group:
+            path = video_path(root, row)
+            fps, n_frames = probe(path)
+            if fps <= 0:
+                continue
+            if n_frames / fps <= max_duration_s:
+                kept.append(VideoItem(row.name, path, row.category, fps, n_frames, row.events))
+            if len(kept) == needed:
+                break
+        if len(kept) < needed:
+            raise DatasetError(f"Too few {category} videos fit the duration limit")
+        selected.extend(sorted(kept, key=lambda item: item.name))
+    return selected
 
 
 @DATASETS.register("ucf_crime")

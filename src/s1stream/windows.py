@@ -6,7 +6,7 @@ from s1stream.types import VideoItem, Window
 
 def window_frame_range(start_s: float, end_s: float, fps: float) -> tuple[int, int]:
     """Inclusive frame range of a window: (round(start_s * fps), round(end_s * fps) - 1)."""
-    raise NotImplementedError
+    return round(start_s * fps), round(end_s * fps) - 1
 
 
 def plan_windows(item: VideoItem, length_s: float, stride_s: float, frames: int) -> list[Window]:
@@ -15,4 +15,24 @@ def plan_windows(item: VideoItem, length_s: float, stride_s: float, frames: int)
     frame_indices[k] = round((start + (k + 0.5) * length_s / frames) * fps) for k in 0 .. frames - 1.
     label = 1 when window_frame_range overlaps any event range of item (inclusive), else 0.
     """
-    raise NotImplementedError
+    result: list[Window] = []
+    duration = item.duration_s
+    index = 0
+    while True:
+        start = index * stride_s
+        end = start + length_s
+        if end > duration + 1e-9:
+            break
+        frame_range = window_frame_range(start, end, item.fps)
+        frame_indices = tuple(
+            round((start + (k + 0.5) * length_s / frames) * item.fps)
+            for k in range(frames)
+        )
+        label = 0
+        for event_start, event_end in item.events:
+            if frame_range[0] <= event_end and event_start <= frame_range[1]:
+                label = 1
+                break
+        result.append(Window(item.name, index, start, end, frame_indices, label))
+        index += 1
+    return result
