@@ -156,7 +156,6 @@ configs/                    one YAML file per experiment
 src/s1stream/               the package (slots, plugins, runner, report, metrics, assets, cli)
 tests/                      CPU tests
 results/                    run folders
-.specs/changes/             proposals and unit tables of each change
 ```
 
 ## Commit messages
