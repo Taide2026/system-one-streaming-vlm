@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import pytest
 
-from s1stream.datasets.ucf_crime import (AnnotationRow, DatasetError, parse_annotation_line, select,
+from s1stream.datasets.ucf_crime import (AnnotationRow, DatasetError, UcfCrime, parse_annotation_line, select,
                                          video_path)
 from s1stream.input_forms.frames import FrameReadError, Frames
 from s1stream.types import Question, VideoItem
@@ -148,3 +148,15 @@ def test_frames_input_form_raises_past_end(tmp_path):
     win = plan_windows(VideoItem("v.mp4", path, "X", 30.0, 300), 2.0, 2.0, 8)[4]  # frames 240-299 do not exist
     with pytest.raises(FrameReadError):
         Frames().build(video, win, QUESTION)
+
+
+def test_ucf_crime_items_reads_annotation_file_and_selects(tmp_path):
+    rows = forty_rows()
+    make_tree(tmp_path, rows)
+    (tmp_path / "annotations").mkdir()
+    lines = [f"{r.name}  {r.category}  {r.events[0][0] if r.events else -1}  {r.events[0][1] if r.events else -1}  -1  -1"
+             for r in rows]
+    (tmp_path / "annotations" / "Temporal_Anomaly_Annotation_for_Testing_Videos.txt").write_text("\n".join(lines) + "\n")
+    dataset = UcfCrime(path=tmp_path, n_anomaly=3, n_normal=2, max_duration_s=60, seed=7, probe=probe_by_index)
+    expected = select(rows, tmp_path, probe_by_index, 3, 2, 60, seed=7)
+    assert dataset.items() == expected
