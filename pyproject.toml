@@ -16,6 +16,9 @@ dependencies = [
     "transformers==5.17.0",
 ]
 
+[project.scripts]
+s1stream = "s1stream.cli:main"
+
 [dependency-groups]
 dev = ["pytest>=8"]
 
