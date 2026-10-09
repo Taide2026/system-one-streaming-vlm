@@ -9,9 +9,9 @@ from __future__ import annotations
 import random
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass
+from pathlib import Path
 
 import cv2
-from pathlib import Path
 
 from s1stream.registry import DATASETS
 from s1stream.types import VideoItem
@@ -121,4 +121,6 @@ class UcfCrime:
 
     def items(self) -> list[VideoItem]:
         """read_annotations(root / ANNOTATION_FILE), then select(...)."""
-        raise NotImplementedError
+        rows = read_annotations(self.root / ANNOTATION_FILE)
+        return select(rows, self.root, self.probe, self.n_anomaly, self.n_normal,
+                      self.max_duration_s, self.seed)
