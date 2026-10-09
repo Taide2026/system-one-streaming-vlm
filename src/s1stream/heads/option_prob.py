@@ -5,6 +5,7 @@ mean and standard deviation, then one linear logit per option slot (256 slots); 
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import torch
@@ -33,16 +34,28 @@ class OptionProb:
 
     def __init__(self, path: str | Path, asset: str | None = None) -> None:
         """Load Head256 on the CPU with torch.load(..., map_location="cpu", weights_only=True); eval mode."""
-        raise NotImplementedError
+        folder = Path(path)
+        hidden = json.loads((folder / "decision_config.json").read_text())["hidden_size"]
+        self.head = Head256(hidden)
+        self.head.load_state_dict(torch.load(folder / "head.pt", map_location="cpu", weights_only=True))
+        self.head.eval()
 
     @classmethod
     def from_module(cls, head: Head256) -> "OptionProb":
         """Build from an existing head (used by tests)."""
-        raise NotImplementedError
+        instance = cls.__new__(cls)
+        instance.head = head
+        return instance
 
     def probabilities(self, out: BackboneOutput, question: Question) -> dict[str, float]:
         """Raise ValueError when question has fewer than 2 or more than 256 options.
 
         Under torch.inference_mode(): logits = head(out.hidden)[0, :n]; return {option: softmax value} in option order.
         """
-        raise NotImplementedError
+        n = len(question.options)
+        if not 2 <= n <= 256:
+            raise ValueError("Jev-Omni needs 2–256 options")
+        with torch.inference_mode():
+            logits = self.head(out.hidden)[0, :n]
+            values = logits.softmax(dim=-1).tolist()
+        return dict(zip(question.options, values))
