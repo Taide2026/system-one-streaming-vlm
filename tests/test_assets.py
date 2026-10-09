@@ -173,3 +173,14 @@ def test_load_config_resolves_asset_and_rejects_unknown_asset(tmp_path, monkeypa
     with pytest.raises(ConfigError) as err:
         load_config(path)
     assert "not-in-lock" in str(err.value)
+
+
+def test_prepare_ucf_crime_merges_a_class_folder_split_over_two_parts(tmp_path):
+    make_zip(tmp_path / "Anomaly-Videos-Part-1.zip", {"Anomaly-Videos-Part-1/Abuse/Abuse001_x264.mp4": b"a"})
+    make_zip(tmp_path / "Anomaly-Videos-Part-2.zip", {"Anomaly-Videos-Part-2/Abuse/Abuse002_x264.mp4": b"b"})
+
+    prepare_ucf_crime(tmp_path)
+
+    assert sorted(p.name for p in (tmp_path / "videos" / "Abuse").iterdir()) == ["Abuse001_x264.mp4", "Abuse002_x264.mp4"]
+    assert not (tmp_path / "Anomaly-Videos-Part-1").exists()
+    assert not (tmp_path / "Anomaly-Videos-Part-2").exists()
