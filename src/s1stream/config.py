@@ -12,6 +12,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 from s1stream.types import Question
 
 SECTIONS = ("name", "dataset", "window", "question", "input_form", "backbone", "answer_head", "decision_rules")
@@ -52,8 +54,6 @@ def load_config(path: Path, resolver: Callable[[str], Path] | None = None) -> Ex
       An s1stream.assets.AssetError from the resolver becomes a ConfigError that names the asset.
     - question.options becomes a tuple.
     """
-    import yaml
-
     try:
         data = yaml.safe_load(path.read_text())
     except (OSError, yaml.YAMLError) as exc:
