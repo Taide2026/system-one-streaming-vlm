@@ -1,0 +1,83 @@
+"""Unit core: registry and config."""
+from pathlib import Path
+
+import pytest
+import yaml
+
+from s1stream.config import ConfigError, ExperimentConfig, load_config
+from s1stream.registry import Registry, RegistryError
+
+EXAMPLE = {
+    "name": "demo",
+    "dataset": {"name": "ucf_crime", "n_anomaly": 1, "n_normal": 1, "max_duration_s": 60, "seed": 1},
+    "window": {"length_s": 2.0, "stride_s": 2.0, "frames": 8},
+    "question": {"state": "Camera.", "text": "Abnormal?", "options": ["Yes", "No"], "positive": "Yes"},
+    "input_form": {"name": "frames"},
+    "backbone": {"name": "fake"},
+    "answer_head": {"name": "option_prob"},
+    "decision_rules": [{"name": "threshold", "start": 0.0, "stop": 1.0, "step": 0.5}],
+}
+
+
+def write(tmp_path: Path, data: dict) -> Path:
+    path = tmp_path / "config.yaml"
+    path.write_text(yaml.safe_dump(data))
+    return path
+
+
+def test_register_and_build_with_params():
+    reg = Registry("demo")
+
+    @reg.register("x")
+    class X:
+        def __init__(self, a):
+            self.a = a
+
+    built = reg.build({"name": "x", "a": 1})
+    assert isinstance(built, X)
+    assert built.a == 1
+
+
+def test_build_unknown_name_lists_known_names():
+    reg = Registry("demo")
+    reg.register("alpha")(type("A", (), {}))
+    reg.register("beta")(type("B", (), {}))
+    with pytest.raises(RegistryError) as err:
+        reg.build({"name": "gamma"})
+    assert "alpha" in str(err.value)
+    assert "beta" in str(err.value)
+
+
+def test_register_same_name_twice_raises():
+    reg = Registry("demo")
+    reg.register("x")(type("A", (), {}))
+    with pytest.raises(RegistryError):
+        reg.register("x")(type("B", (), {}))
+
+
+def test_load_config_reads_all_sections(tmp_path):
+    cfg = load_config(write(tmp_path, EXAMPLE), resolver=lambda name: tmp_path)
+    assert isinstance(cfg, ExperimentConfig)
+    assert cfg.name == "demo"
+    assert cfg.dataset["n_anomaly"] == 1
+    assert (cfg.window.length_s, cfg.window.stride_s, cfg.window.frames) == (2.0, 2.0, 8)
+    assert cfg.question.options == ("Yes", "No")
+    assert cfg.question.positive == "Yes"
+    assert cfg.input_form == {"name": "frames"}
+    assert cfg.backbone == {"name": "fake"}
+    assert cfg.answer_head == {"name": "option_prob"}
+    assert cfg.decision_rules[0]["step"] == 0.5
+    assert cfg.raw == EXAMPLE
+
+
+def test_load_config_missing_section_names_it(tmp_path):
+    data = {k: v for k, v in EXAMPLE.items() if k != "backbone"}
+    with pytest.raises(ConfigError) as err:
+        load_config(write(tmp_path, data), resolver=lambda name: tmp_path)
+    assert "backbone" in str(err.value)
+
+
+def test_load_config_positive_not_in_options(tmp_path):
+    data = dict(EXAMPLE, question=dict(EXAMPLE["question"], positive="Maybe"))
+    with pytest.raises(ConfigError):
+        load_config(write(tmp_path, data), resolver=lambda name: tmp_path)
