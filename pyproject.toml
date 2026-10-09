@@ -1,0 +1,39 @@
+[project]
+name = "s1stream"
+version = "0.1.0"
+description = "Streaming System One experiments: dataset, windowing, input form, backbone, answer head, decision rule, evaluation."
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.15.0",
+    "numpy>=2.5.3",
+    "opencv-python-headless>=5.0.0.93",
+    "pillow>=12.3.0",
+    "pyyaml>=6.0",
+    "safetensors",
+    "torch>=2.14.1",
+    "torchvision>=0.29.1",
+    # Pinned to the version in the Jev-Omni requirements.txt (revision 5addda8).
+    "transformers==5.17.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/s1stream"]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
