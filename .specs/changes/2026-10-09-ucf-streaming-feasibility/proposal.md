@@ -1,6 +1,6 @@
 # ucf-streaming-feasibility: run Jev-Omni as a streaming anomaly detector on 20 UCF-Crime test videos
 
-Status: approved (2026-10-09)
+Status: done (2026-10-09)
 
 ## Problem
 
