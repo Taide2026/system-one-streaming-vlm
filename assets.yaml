@@ -1,0 +1,46 @@
+# External assets (proposal decision 15). Git holds the recipe, never the files.
+# Asset <name> lives at $S1_ASSETS/<name> (default ./assets). Get one with: uv run s1stream fetch <name>
+# kind hf_model: source = Hugging Face repo id, revision = exact commit.
+# kind archive:  source = download URL of a zip, size = zip size in bytes, prepare = layout step after unzip.
+# sha256: files checked by `s1stream fetch --check <name>`, paths relative to the asset folder.
+
+ucf-crime:
+  kind: archive
+  source: https://www.dropbox.com/scl/fo/2aczdnx37hxvcfdo4rq4q/AOjRokSTaiKxXmgUyqdcI6k?rlkey=5bg7mxxbq46t7aujfch46dlvz&dl=1
+  size: 102967273958
+  prepare: ucf_crime
+  sha256:
+    annotations/Temporal_Anomaly_Annotation_for_Testing_Videos.txt: 3b9542413f2ed9e94f73bf0488c151b3d7d595a8d2ad30f524e9243a2ae2a17c
+    splits/Anomaly_Test.txt: afcb2a6bffe7286607e08c864425964d8784cbd5b1f263e03b76025e11548de7
+    splits/Anomaly_Train.txt: ea91e03de7581bfa6b139e663ebb7511ab1651c33427f85741d3f497a2027744
+    splits/Action_Regnition_splits/ClassIDs.txt: 4e2af08c8fdeb3466494f276e1e877e837317a001eca9d826f933be73e6e7fd8
+    ReadMe-Anomaly-Detection.txt: 90e6c08923ef91c31e7b2ebf455b7ff82b8de31c79a7334a7b76f4cd2562098b
+
+jev-omni:
+  kind: hf_model
+  source: akhilaaa3/Jev-Omni
+  revision: 5addda86ddee081a68fb067477ea100c221b8917
+  sha256:
+    model.safetensors: d78782f3b9c3302353a7d1a1b6277fa5e05d692f4a0cb2b862797026c65eabe6
+    head.pt: 8c81edecd733f7db327604803c14cf9ecbee53d2af055eeb09f78b64bcbf2638
+    config.json: 346145528d5ee228965be07212dc3ef1bc442629b12ba71b92528ea57540faa5
+    decision_config.json: 2cf5e5781871ed86be130abe0fccda8dbad35f32c6deebe08cd8f92f5f452200
+    tokenizer.json: cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f
+    tokenizer_config.json: 3776d16773f89b8047057deace4a362c0dc70853abadb2102bc1c19fc4b7af90
+    processor_config.json: 6b938e76555b3e9946890770e1abcd442a4718f34041a58e8139dc8ad34545c9
+    chat_template.jinja: ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4
+    generation_config.json: a8349d9bd64cc5841297fcb5002f0fdc4749c473c8f1b10ea337f9ce4ee7014e
+
+laya:
+  kind: hf_model
+  source: convaiinnovations/laya
+  revision: 7b928d828b7b0e022f929d9bd2e44165aa270148
+  sha256:
+    model.safetensors: 891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c
+
+clm-8b:
+  kind: hf_model
+  source: Contrastive-LM/CLM-v0.1-8B
+  revision: e939398d4556fcd9400c76fa8c5a513202f42b0a
+  sha256:
+    CLM_v0.1-8B.pt: b2b4a8c9c2d39263eff78a351eb909a342ce9b3bf21a3f07c1d1bf15f1c4eda5
