@@ -23,7 +23,10 @@ def plan_windows(item: VideoItem, length_s: float, stride_s: float, frames: int)
         end = start + length_s
         if end > duration + 1e-9:
             break
+
+        # current frame range, e.g. frames on 30s - 27s
         frame_range = window_frame_range(start, end, item.fps)
+        # calculation of current frames' distribution
         frame_indices = tuple(
             round((start + (k + 0.5) * length_s / frames) * item.fps)
             for k in range(frames)

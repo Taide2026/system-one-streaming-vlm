@@ -9,7 +9,7 @@ dataset:
 window:
   length_s: 2.0
   stride_s: 2.0
-  frames: 8
+  frames: 8 # 16, 32 
 question:
   state: Surveillance camera footage, 2 seconds.
   text: Is something abnormal happening, such as a crime, an accident, a fight, a
