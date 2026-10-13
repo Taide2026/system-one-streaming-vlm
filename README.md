@@ -1,7 +1,7 @@
 # system-one-streaming-vlm
 
 Streaming anomaly detection with System One models: one forward pass per video window, no text generation.
-The package `s1stream` runs an experiment from one YAML config and evaluates accuracy, calibration, latency and alarm delay.
+The package `s1stream` runs an experiment from one YAML config and evaluates latency and window classification.
 
 ## How an experiment works
 
@@ -9,10 +9,10 @@ The package `s1stream` runs an experiment from one YAML config and evaluates acc
 config.yaml ─► s1stream run (GPU)
                  dataset ─► windows ─► V1 input form ─► V2 backbone ─► V3 answer head ─► scores.jsonl
                s1stream report (offline, no model)
-                 scores.jsonl ─► decision rules (threshold, …) ─► metrics ─► report.json
+                 scores.jsonl ─► thresholds (threshold rule) ─► metrics ─► report.json
 ```
 
-- The model runs once per config. Decision rules and metrics run later on the saved scores.
+- The model runs once per config. Metrics run later on the saved scores and times.
 - Each slot is a plugin that registers under a name. A config names the plugin and its parameters.
 
 | Slot | Plugins now | File |
@@ -121,22 +121,26 @@ Run folders under `results/<config name>/` go into git. `results/smoke/` does no
 
 ## Metrics
 
-| Group | Metrics |
-|---|---|
-| Accuracy | window AUROC, frame-level AUC; per threshold: accuracy, precision, recall, F1 (window level); `majority_accuracy` = accuracy of marking every window as the larger class |
-| Calibration | ECE, Brier score |
-| Latency | seconds per window (first, mean, median, p95), real-time factor = mean ÷ stride, peak GPU memory, load time |
-| Alarms (per decision rule setting) | detection rate, mean and median detection delay, false alarms per hour |
+| Field | Definition | Unit |
+|---|---|---|
+| `latency.ms_per_frame` | Σ L ÷ total sampled frames | ms/frame |
+| `latency.p50_ms`, `p95_ms`, `p99_ms` | percentiles of the per-window latency L | ms |
+| `latency.rtf_p95` | P95(L) ÷ budget; ≤ 1 meets the budget | ratio |
+| `classification[].accuracy` | correct windows ÷ all windows, per threshold | fraction |
+| `classification[].recall`, `fnr` | TP ÷ (TP + FN); FN ÷ (TP + FN), per threshold | fraction |
 
-- A window is abnormal when it overlaps an event by at least 1 frame.
-- An event is detected when an alarm window overlaps it. The delay = that window's end − the event start.
-- A false alarm is an alarm on a window with label 0.
+- L is the `seconds` field of `scores.jsonl`: frame read + preprocessing + backbone + answer head, with CUDA synchronized at both ends.
+- The first window is warm-up. Every latency field leaves it out; `latency.first_window_ms` shows it.
+- The budget is `window.stride_s` (`latency.budget_ms`).
+- Positive = abnormal. A window is abnormal when it overlaps an event by at least 1 frame. A window is predicted abnormal when its score ≥ the threshold.
+- The thresholds are the settings of the `threshold` rules in the config, or 0.5 when there is none.
+- `report.json` also has `windows`, `videos`, `frames_per_window`, `peak_gpu_gb` and `load_s`.
 
 ## Results
 
-| Run | Windows | Time per window | Window AUROC | Threshold 0.1 |
-|---|---|---|---|---|
-| `results/jev_omni_ucf20/20261009-feasibility` | 364 (20 videos) | 1.58 s (real-time factor 0.79) | 0.826 | 82% detected, median delay 2.0 s, 318 false alarms per hour |
+| Run | Windows | ms/frame | Latency P50 / P95 / P99 | RTF P95 | Threshold 0.1: accuracy / recall / FNR |
+|---|---|---|---|---|---|
+| `results/jev_omni_ucf20/20261009-feasibility` | 364 (20 videos) | 197 | 1573 / 1660 / 1692 ms | 0.83 | 79.7% / 64.2% / 35.8% |
 
 This run is a feasibility check on 20 short test videos (11 events), not a benchmark.
 
