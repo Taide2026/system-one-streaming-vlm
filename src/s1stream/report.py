@@ -26,4 +26,27 @@ def report(run_dir: Path) -> dict[str, Any]:
     """Read config.yaml, scores.jsonl and run.json from run_dir, write run_dir / "report.json" (json.dumps,
     indent=1), and return the same dict with exactly the keys in the module docstring.
     """
-    raise NotImplementedError
+    config = yaml.safe_load((run_dir / "config.yaml").read_text())
+    run_data = json.loads((run_dir / "run.json").read_text())
+    rows = [json.loads(line) for line in (run_dir / "scores.jsonl").read_text().splitlines()]
+
+    scores = [row["score"] for row in rows]
+    labels = [row["label"] for row in rows]
+    seconds = [row["seconds"] for row in rows]
+    window = config["window"]
+    thresholds = sorted({setting for spec in config["decision_rules"] if spec["name"] == "threshold"
+                         for setting in DECISION_RULES.build(spec).settings()})
+    if not thresholds:
+        thresholds = [0.5]
+
+    result = {
+        "windows": len(rows),
+        "videos": len({row["video"] for row in rows}),
+        "frames_per_window": window["frames"],
+        "peak_gpu_gb": run_data["peak_gpu_gb"],
+        "load_s": run_data["load_s"],
+        "latency": metrics.latency(seconds, window["frames"], window["stride_s"]),
+        "classification": [metrics.classification(scores, labels, threshold) for threshold in thresholds],
+    }
+    (run_dir / "report.json").write_text(json.dumps(result, indent=1))
+    return result
