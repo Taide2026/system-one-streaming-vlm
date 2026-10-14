@@ -97,28 +97,6 @@ def test_run_limit_windows(tmp_path, config):
     assert len(lines(out)) == 3
 
 
-def test_report_computes_metrics_without_a_model(tmp_path, config, monkeypatch):
-    out = run(config, tmp_path / "run")
-
-    def no_model(spec):
-        raise AssertionError("report must not build a backbone or a head")
-
-    monkeypatch.setattr(registry.BACKBONES, "build", no_model)
-    monkeypatch.setattr(registry.ANSWER_HEADS, "build", no_model)
-    result = report(out)
-    assert json.loads((out / "report.json").read_text()) == result
-    assert result["windows"] == 5
-    assert result["window_auroc"] == pytest.approx(1.0)
-    assert result["frame_auc"] == pytest.approx(1.0)
-    for key in ("ece", "brier", "seconds_per_window", "real_time_factor", "peak_gpu_gb", "load_s"):
-        assert key in result
-    rows = result["rules"]["threshold"]
-    assert [r["setting"] for r in rows] == [0.0, 0.5, 1.0]
-    assert rows[1]["detection_rate"] == pytest.approx(1.0)
-    assert rows[1]["mean_delay_s"] == pytest.approx(2.0)  # event starts at 2 s, first alarm window ends at 4 s
-    assert rows[1]["false_alarms_per_hour"] == pytest.approx(0.0)
-
-
 @DATASETS.register("fake_rooted_dataset")
 class FakeRootedDataset:
     def __init__(self, path):
@@ -138,12 +116,58 @@ def test_manifest_paths_are_relative_to_the_dataset_folder(tmp_path):
     assert manifest[0]["path"] == "videos/a.mp4"
 
 
-def test_report_has_classification_per_threshold_and_majority_accuracy(tmp_path, config):
+REPORT_KEYS = {"windows", "videos", "frames_per_window", "peak_gpu_gb", "load_s", "latency", "classification"}
+
+
+def edit_config(run_dir: Path, **changes) -> None:
+    data = yaml.safe_load((run_dir / "config.yaml").read_text())
+    for key, value in changes.items():
+        if key == "decision_rules":
+            data[key] = value
+        else:
+            data["window"][key] = value
+    (run_dir / "config.yaml").write_text(yaml.safe_dump(data))
+
+
+def test_report_has_only_the_new_keys(tmp_path, config):
     result = report(run(config, tmp_path / "run"))
-    # 5 windows, 1 abnormal: marking every window normal is right 4 times out of 5.
-    assert result["majority_accuracy"] == pytest.approx(0.8)
-    rows = result["classification"]
+    assert set(result) == REPORT_KEYS
+    assert result["windows"] == 5
+    assert result["videos"] == 2
+    assert result["frames_per_window"] == 8
+    assert set(result["latency"]) == {"first_window_ms", "ms_per_frame", "p50_ms", "p95_ms", "p99_ms",
+                                      "rtf_p95", "budget_ms"}
+
+
+def test_report_budget_and_frames_come_from_the_config(tmp_path, config):
+    out = run(config, tmp_path / "run")
+    base = report(out)["latency"]
+    edit_config(out, stride_s=1.0, frames=4)
+    changed = report(out)["latency"]
+    assert changed["budget_ms"] == pytest.approx(1000.0)
+    assert changed["rtf_p95"] == pytest.approx(2 * base["rtf_p95"])
+    assert changed["ms_per_frame"] == pytest.approx(2 * base["ms_per_frame"])
+
+
+def test_report_classification_per_threshold_or_default(tmp_path, config):
+    out = run(config, tmp_path / "run")
+    rows = report(out)["classification"]
     assert [r["threshold"] for r in rows] == [0.0, 0.5, 1.0]
     assert rows[1]["accuracy"] == pytest.approx(1.0)
-    assert (rows[1]["precision"], rows[1]["recall"]) == pytest.approx((1.0, 1.0))
-    assert rows[0]["precision"] == pytest.approx(0.2)
+    assert (rows[1]["recall"], rows[1]["fnr"]) == pytest.approx((1.0, 0.0))
+    edit_config(out, decision_rules=[])
+    rows = report(out)["classification"]
+    assert [r["threshold"] for r in rows] == [0.5]
+
+
+def test_report_computes_metrics_without_a_model(tmp_path, config, monkeypatch):
+    out = run(config, tmp_path / "run")
+
+    def no_model(spec):
+        raise AssertionError("report must not build a backbone or a head")
+
+    monkeypatch.setattr(registry.BACKBONES, "build", no_model)
+    monkeypatch.setattr(registry.ANSWER_HEADS, "build", no_model)
+    result = report(out)
+    assert json.loads((out / "report.json").read_text()) == result
+    assert result["latency"]["p50_ms"] > 0
