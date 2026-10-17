@@ -93,3 +93,17 @@ qwen3.5-4b:
     tokenizer_config.json: 316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8
     video_preprocessor_config.json: 7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13
     vocab.json: ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003
+
+# Gemma 4 E4B instruct: decodes its answer (backbone gemma_generate). Not gated.
+gemma-4-e4b:
+  kind: hf_model
+  source: google/gemma-4-E4B-it
+  revision: ee0ef6023621cff504d758262d4e04895a5af4a2
+  sha256:
+    chat_template.jinja: 0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5
+    config.json: 33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4
+    generation_config.json: d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de
+    model.safetensors: cfbd3d2f1cd71bd471c37fe2bf8546d5028d41e5736f64e1ca6c6b8893125503
+    processor_config.json: 32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c
+    tokenizer.json: cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f
+    tokenizer_config.json: 9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633
