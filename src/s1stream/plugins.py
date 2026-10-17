@@ -3,6 +3,7 @@ import s1stream.backbones.clef_flash  # noqa: F401
 import s1stream.backbones.imajev  # noqa: F401
 import s1stream.backbones.jev_omni  # noqa: F401
 import s1stream.datasets.ucf_crime  # noqa: F401
+import s1stream.heads.generated_answer  # noqa: F401
 import s1stream.heads.option_logits  # noqa: F401
 import s1stream.heads.option_prob  # noqa: F401
 import s1stream.input_forms.frames  # noqa: F401
