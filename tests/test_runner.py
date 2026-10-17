@@ -180,3 +180,10 @@ def test_report_decision_and_auc_on_perfectly_separated_scores(tmp_path, config)
     assert result["decision"]["threshold"] == 0.5
     assert result["decision"]["balanced_accuracy"] == pytest.approx(1.0)
     assert result["auc"] == pytest.approx({"frame": 1.0, "window": 1.0})
+
+
+def test_run_writes_the_answer_text_of_a_decoding_backbone(tmp_path, config, monkeypatch):
+    assert "text" not in lines(run(config, tmp_path / "plain"))[0]
+    monkeypatch.setattr(FakeBackbone, "forward", lambda self, inp, question: BackboneOutput(hidden=int(inp.text),
+                                                                                           text="Yes."))
+    assert lines(run(config, tmp_path / "decoding"))[0]["text"] == "Yes."
