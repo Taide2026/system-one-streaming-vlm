@@ -6,6 +6,8 @@ import pytest
 import torch
 from PIL import Image
 
+from s1stream.backbones.gemma_generate import (GemmaGenerate, build_prompt, clean, options_grammar,
+                                               xgrammar_processor_factory)
 from s1stream.heads.generated_answer import GeneratedAnswer, parse
 from s1stream.types import BackboneOutput, ModelInput, Question
 
@@ -87,6 +89,98 @@ def backbone(steps, **kwargs):
     if kwargs.get("decode") == "constrained":
         kwargs.setdefault("grammar_processor", FakeGrammar)
     return GemmaGenerate.from_parts(model, processor, **kwargs), model, processor
+
+
+# ---------- prompt and text ----------
+
+def test_structured_prompt_has_state_question_options_and_rule():
+    assert build_prompt(QUESTION, "structured") == (
+        "Camera, 2 seconds.\n\nQUESTION: Abnormal?\nOPTIONS: Yes, No\n\n"
+        "Answer with exactly one of the options and nothing else.")
+
+
+def test_pure_prompt_is_the_question_and_answer_yes_or_no():
+    assert build_prompt(QUESTION, "question") == "Abnormal? Answer yes or no."
+
+
+def test_clean_drops_thinking_block_and_special_tokens():
+    assert clean("<|channel>thought\nhmm<channel|>Yes.<turn|>") == "Yes."
+    assert clean(" No <eos>") == "No"
+
+
+def test_bad_prompt_or_decode_is_rejected():
+    with pytest.raises(ValueError):
+        backbone([{}], prompt="json")
+    with pytest.raises(ValueError):
+        backbone([{}], decode="beam")
+
+
+# ---------- free decoding ----------
+
+def test_free_decoding_returns_the_cleaned_text_and_no_logits():
+    gemma, model, processor = backbone([{10: 5.0}, {12: 5.0}, {EOS: 5.0}])
+    out = gemma.forward(ModelInput(images=images(3)), QUESTION)
+    assert out.text == "Yes ."
+    assert out.logits is None
+    assert model.kwargs["do_sample"] is False
+    assert model.kwargs["max_new_tokens"] == 16
+    assert model.kwargs["logits_processor"] is None
+
+
+def test_frames_come_first_then_the_prompt_with_thinking_off():
+    gemma, _, processor = backbone([{EOS: 5.0}], prompt="question")
+    imgs = images(16)
+    gemma.forward(ModelInput(images=imgs), QUESTION)
+    content = processor.messages[0]["content"]
+    assert [part["image"] for part in content[:-1]] == imgs
+    assert content[-1] == {"type": "text", "text": "Abnormal? Answer yes or no."}
+    assert processor.kwargs["enable_thinking"] is False
+    assert processor.kwargs["add_generation_prompt"] is True
+
+
+def test_free_decoding_stops_at_max_new_tokens():
+    gemma, _, _ = backbone([{5: 5.0}], max_new_tokens=3)
+    assert gemma.forward(ModelInput(images=images(1)), QUESTION).text == "Maybe Maybe Maybe"
+
+
+# ---------- constrained decoding ----------
+
+def test_options_grammar_is_one_option():
+    assert options_grammar(("Yes", "No")) == 'root ::= "Yes" | "No"'
+
+
+def test_xgrammar_allows_only_an_option_then_the_end():
+    """Real xgrammar on a tiny word-level tokenizer: the first step allows only tokens that start an option; after
+    "Yes" only the end of the turn."""
+    from tokenizers import Tokenizer, models
+    from transformers import PreTrainedTokenizerFast
+
+    vocab = {"<eos>": 0, "Yes": 1, "No": 2, "Maybe": 3, "Y": 4, "es": 5, "N": 6, "o": 7}
+    tokenizer = PreTrainedTokenizerFast(tokenizer_object=Tokenizer(models.WordLevel(vocab, unk_token="<eos>")),
+                                        eos_token="<eos>")
+    make = xgrammar_processor_factory(tokenizer, vocab_size=len(vocab), eos_ids=[0])
+    rule = make(("Yes", "No"))
+    prompt = torch.tensor([[3]])
+    first = rule(prompt, torch.zeros(1, len(vocab)))
+    assert set(torch.isfinite(first[0]).nonzero().flatten().tolist()) == {1, 2, 4, 6}
+    after_yes = rule(torch.tensor([[3, 1]]), torch.zeros(1, len(vocab)))
+    assert set(torch.isfinite(after_yes[0]).nonzero().flatten().tolist()) == {0}
+
+
+def test_constrained_decoding_picks_an_option_even_when_another_token_wins():
+    # Raw logits prefer "Maybe" (5); the rule leaves only Yes (10) / No (11), and No is higher.
+    gemma, model, _ = backbone([{5: 9.0, 10: 1.0, 11: 2.0}, {5: 9.0}], decode="constrained")
+    out = gemma.forward(ModelInput(images=images(2)), QUESTION)
+    assert out.text == "No"
+    assert model.kwargs["max_new_tokens"] == 4  # one per character of the longest option ("Yes") plus the end
+    assert torch.equal(out.logits, torch.tensor([1.0, 2.0]))  # raw first-step logits, option order
+
+
+def test_constrained_decoding_rejects_options_sharing_a_first_token():
+    gemma, _, _ = backbone([{10: 1.0}], decode="constrained")
+    question = Question(state="s", text="q", options=("Yes", "Yesterday"), positive="Yes")
+    with pytest.raises(ValueError):
+        gemma.forward(ModelInput(images=images(1)), question)
 
 
 # ---------- generated_answer ----------
