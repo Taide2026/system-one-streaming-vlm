@@ -32,9 +32,12 @@ Requirements: Linux, an NVIDIA GPU with CUDA 13 (developed on a GB10), [uv](http
 ```bash
 git clone https://github.com/Taide2026/system-one-streaming-vlm.git
 cd system-one-streaming-vlm
-uv sync
-uv run pytest -q          # 53 tests, CPU only, no model download
+uv sync --managed-python
+uv run pytest -q          # 99 tests, CPU only, no model download
 ```
+
+`--managed-python` installs a uv-managed Python. Triton compiles a C helper at run time and needs `Python.h`.
+A uv-managed Python has it. The system Python has it only when `python3.12-dev` is installed.
 
 Torch comes from the PyTorch cu130 index. Transformers is pinned to 5.17.0, the version the Jev-Omni checkpoint was tested with.
 
@@ -48,12 +51,27 @@ A config names an asset (`asset: jev-omni`), never a path.
 3. Download and check: `uv run s1stream fetch jev-omni ucf-crime`.
 4. Check only: `uv run s1stream fetch --check jev-omni`.
 
-| Asset | Source | Size |
-|---|---|---|
-| `ucf-crime` | UCF-Crime zip (Dropbox); `fetch` unzips it and builds the layout below | 98 GB |
-| `jev-omni` | `akhilaaa3/Jev-Omni` @ `5addda8` | 24 GB |
-| `laya` | `convaiinnovations/laya` @ `7b928d8` | 2.3 GB |
-| `clm-8b` | `Contrastive-LM/CLM-v0.1-8B` @ `e939398` (heads only; needs Qwen3-8B) | 73 MB |
+A config names its assets in its `asset:` fields. Download only the assets of the configs you run.
+When `assets.yaml` gets a new asset after `git pull`, run `fetch` for that name only.
+
+| Asset | Source | Size | Used by |
+|---|---|---|---|
+| `ucf-crime` | UCF-Crime zip (Dropbox); `fetch` unzips it and builds the layout below | 98 GB | all configs |
+| `jev-omni` | `akhilaaa3/Jev-Omni` @ `5addda8` | 24 GB | `jev_omni_*` |
+| `clef-flash` | `Cloudflare/clef-flash` @ `8b2e5fd` | 19 GB | `clef_flash_*` |
+| `imajev-4b` | `mohit67890/imajev-4b` @ `27d4e54` (LoRA + readout; needs `qwen3.5-4b`) | 1.0 GB | `imajev_4b_*` |
+| `qwen3.5-4b` | `Qwen/Qwen3.5-4B` @ `851bf6e` (base model of `imajev-4b`) | 9.3 GB | `imajev_4b_*` |
+| `gemma-4-e4b` | `google/gemma-4-E4B-it` @ `ee0ef60` | 16 GB | `gemma4_e4b_*` |
+| `d3` | `vllm-sr/d3` @ `225be8b` | 52 GB | `d3_ucf_*` |
+| `d3-flash` | `vllm-sr/d3-flash` @ `8b35c85` | 17 GB | `d3_flash_*` |
+| `d3-mini` | `vllm-sr/d3-mini` @ `97dd054` | 9.1 GB | `d3_mini_*` |
+| `d3-nano` | `vllm-sr/d3-nano` @ `aeb70d4` | 4.5 GB | `d3_nano_*` |
+| `d3-lite` | `vllm-sr/d3-lite` @ `9c10703` | 1.7 GB | `d3_lite_*` |
+| `d3-edge` | `vllm-sr/d3-edge` @ `cab71e6` | 1.2 GB | `d3_edge_*` |
+| `laya` | `convaiinnovations/laya` @ `7b928d8` | 2.3 GB | none yet |
+| `clm-8b` | `Contrastive-LM/CLM-v0.1-8B` @ `e939398` (heads only; needs Qwen3-8B) | 73 MB | none yet |
+
+Sizes are the full Hugging Face snapshot at that revision. `fetch` downloads the full snapshot.
 
 You may already have an asset somewhere else. Then put a link in `$S1_ASSETS` instead of downloading again:
 `ln -s /data/ucf $S1_ASSETS/ucf-crime`, then run `fetch --check`.
@@ -77,19 +95,53 @@ ucf-crime/
 The annotation line `Arrest001_x264.mp4  Arrest  1185  1485  -1  -1` gives the start and end frame of up to 2 events (-1 = none).
 All 290 test videos are 30 fps, 320×240. Only the test videos have event times; no video has a text description.
 
+### UCF-Crime from ucf-clips
+
+`scripts/run.sh assets` builds `ucf-crime` without the 98 GB zip. It uses an extracted copy of the
+Hugging Face dataset `bear7011/ucf-clips` (`labels.csv`, `short/`, `medium/`, `long/`), set by `UCF_CLIPS`.
+
+1. It downloads the annotation file from the UCF-Crime authors' repository and checks its SHA-256 against `assets.yaml`.
+2. It links every video of `labels.csv` into `videos/<Class>/` (symlinks, no copies).
+3. It also runs `uv run s1stream fetch jev-omni`.
+
+This layout has no `splits/` and no `ReadMe-Anomaly-Detection.txt`. The `ucf_crime` dataset does not read them,
+but `fetch --check ucf-crime` fails on this layout.
+
+**Do not run it on a machine that has `ucf-crime` from the zip.** Before it makes a link, it deletes the file
+of the same name in `videos/`. On a zip layout, that file is the real video.
+
 ## Run an experiment
 
 ```bash
 export S1_ASSETS=/path/to/assets
-free -g                                                     # the run needs about 23 GB of GPU memory
-uv run s1stream run configs/jev_omni_ucf20.yaml --out results/smoke/try --limit-windows 5
-uv run s1stream run configs/jev_omni_ucf20.yaml             # writes results/jev_omni_ucf20/<YYYYmmdd-HHMMSS>/
+free -g                                                     # jev_omni needs about 23 GB of GPU memory
+timeout 30m uv run s1stream run configs/jev_omni_ucf20.yaml --out results/smoke/try --limit-windows 5
+timeout 6h uv run s1stream run configs/jev_omni_ucf20.yaml  # writes results/jev_omni_ucf20/<YYYYmmdd-HHMMSS>/
 uv run s1stream report results/jev_omni_ucf20/<run>
 ```
 
 - `run` refuses an output folder that already exists. A rerun gets a new folder.
 - `--limit-windows N` stops after N windows. Use it for a smoke test before a real run.
 - The backbone caps its GPU memory with `memory_cap_gb` (default 40).
+- A full run takes a while: start it inside tmux.
+
+### scripts/run.sh
+
+`scripts/run.sh` wraps the same commands. Run it without arguments to print its usage.
+
+| Command | What it does |
+|---|---|
+| `scripts/run.sh setup` | installs uv when missing, `uv sync --managed-python`, checks `Python.h`, runs the CPU tests |
+| `scripts/run.sh assets` | `fetch jev-omni`, then builds `ucf-crime` from ucf-clips (see above) |
+| `scripts/run.sh smoke [config]` | 5 windows into `results/smoke/<time>`, then prints a short report |
+| `scripts/run.sh run [config]` | full run into `results/<config name>/<time>`, then prints a short report |
+| `scripts/run.sh report <run dir>` | `s1stream report` and the short report, no GPU |
+| `scripts/run.sh all [config]` | `setup`, `assets`, `smoke`, `run` |
+
+- The default config is `configs/jev_omni_ucf20.yaml`.
+- `S1_ASSETS` defaults to `~/s1-assets` in this script (not `./assets`). Set it when your assets are elsewhere.
+- `UCF_CLIPS` defaults to `~/datasets/ucf-clips`.
+- The script adds no `timeout`. It prints `free -g` but does not stop when memory is low.
 
 ### Config
 
