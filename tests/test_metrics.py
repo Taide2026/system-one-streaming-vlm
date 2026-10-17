@@ -54,3 +54,12 @@ def test_classification_without_abnormal_windows():
     assert (row["tp"], row["fp"], row["fn"], row["tn"]) == (0, 1, 0, 1)
     assert row["recall"] is None
     assert row["fnr"] is None
+
+
+def test_classification_specificity_and_balanced_accuracy():
+    # Same case as above: recall 1/3, specificity tn / (tn + fp) = 1/2.
+    row = classification([0.9, 0.6, 0.4, 0.3, 0.1], [1, 0, 1, 1, 0], 0.5)
+    assert row["specificity"] == pytest.approx(0.5)
+    assert row["balanced_accuracy"] == pytest.approx((1 / 3 + 0.5) / 2)
+    assert classification([0.9, 0.1], [0, 0], 0.5)["balanced_accuracy"] is None
+

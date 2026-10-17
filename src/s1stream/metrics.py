@@ -54,8 +54,10 @@ def latency(seconds: Sequence[float], frames_per_window: int, budget_s: float) -
 def classification(scores: Sequence[float], labels: Sequence[int], threshold: float) -> dict[str, float | int | None]:
     """Window classification at one threshold.
 
-    Returns threshold, tp, fp, fn, tn, accuracy = (tp + tn) / all, recall = tp / (tp + fn), fnr = fn / (tp + fn).
-    accuracy is None when there are no windows; recall and fnr are None when no window is abnormal.
+    Returns threshold, tp, fp, fn, tn, accuracy = (tp + tn) / all, recall = tp / (tp + fn), fnr = fn / (tp + fn),
+    specificity = tn / (tn + fp), balanced_accuracy = (recall + specificity) / 2.
+    accuracy is None when there are no windows; recall and fnr are None when no window is abnormal;
+    specificity is None when no window is normal; balanced_accuracy is None when recall or specificity is.
     """
     score_values = np.asarray(scores)
     label_values = np.asarray(labels)
@@ -71,6 +73,8 @@ def classification(scores: Sequence[float], labels: Sequence[int], threshold: fl
     accuracy = float((tp + tn) / total) if total else None
     recall = float(tp / abnormal) if abnormal else None
     fnr = float(fn / abnormal) if abnormal else None
+    specificity = float(tn / (tn + fp)) if tn + fp else None
+    balanced = (recall + specificity) / 2 if recall is not None and specificity is not None else None
     return {
         "threshold": float(threshold),
         "tp": tp,
@@ -80,4 +84,7 @@ def classification(scores: Sequence[float], labels: Sequence[int], threshold: fl
         "accuracy": accuracy,
         "recall": recall,
         "fnr": fnr,
+        "specificity": specificity,
+        "balanced_accuracy": balanced,
     }
+
