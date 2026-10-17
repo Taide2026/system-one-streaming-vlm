@@ -107,3 +107,66 @@ gemma-4-e4b:
     processor_config.json: 32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c
     tokenizer.json: cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f
     tokenizer_config.json: 9f4fec4b1dc6ecddf8f4a92e9caea5971c0e67d81309f3f9066a2bee8c362633
+
+# Decision 3.0 (vllm-sr): d3 and its smaller sizes, one runtime (d3_runtime.py) for all; backbone d3.
+# Its load also checks every file it reads against the release's MODEL_MANIFEST.json.
+d3:
+  kind: hf_model
+  source: vllm-sr/d3
+  revision: 225be8b1e2270becab69c5fe05b26f99cbbdd66b
+  sha256:
+    MODEL_MANIFEST.json: 4959df7ee964c2fad24a8e853df8e3cda9bae61636fa5650cc1a0fed78539677
+    config.json: 7e16284fafd2d54b73c10073c0391bfd6804886ceaf2cbe37fdb62d4c6813dea
+    d3_runtime.py: 2d90e93ac06b9ca4a84e0610ab9acfa2d6793ea4b40eec1b4a3da47577bdea37
+    decision_config.json: 6b80ca11bd6ba481df4b3c187db8a5d1983786563ca05e2edccb0bdac0d2fc4f
+    readout.safetensors: 5319cbf3ccdc5d3ba348b318d7b54acfc3a861d3ff94b578e787852c8726055a
+d3-flash:
+  kind: hf_model
+  source: vllm-sr/d3-flash
+  revision: 8b35c853b90e777595ec36bacae820fe08ea077a
+  sha256:
+    MODEL_MANIFEST.json: abdafb9f4a3e39595a54b7ca977e6bd7a3279c57745231319e3a171a43976e65
+    config.json: 9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb
+    d3_runtime.py: adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917
+    decision_config.json: 0269c72ac055d8149a7a778c477780af361f4c1cde3fd0e5ba9af791453ece18
+    readout.safetensors: 8bbc9a9df4e1b7df85a80a1091977092b938d8d2d2869dfaeb8fd36063cf322f
+d3-mini:
+  kind: hf_model
+  source: vllm-sr/d3-mini
+  revision: 97dd054df4b3e0b3beb6af23ab8c82b7c0052e0e
+  sha256:
+    MODEL_MANIFEST.json: bc638e17982411f6ad0f524d33d0dc1f0db81ad7995c1bfdf93dba7674df5e48
+    config.json: 8f5f404a71ecc53c4ff26fc42cb4c778ffacfb4c9623f5e2d51245166d6b5057
+    d3_runtime.py: adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917
+    decision_config.json: 588bc0ac7644479b9adde0498d80b6fb7c576388992564ac67599c05d29add07
+    readout.safetensors: d570665c1da72cb9fca7ad7b23a25720eb691362694dd69d4c80c17d7656ed55
+d3-nano:
+  kind: hf_model
+  source: vllm-sr/d3-nano
+  revision: aeb70d4dd53ed25b855c3b0a66394b8fe265db7f
+  sha256:
+    MODEL_MANIFEST.json: db2139c5b5b7060f8f95150ec70ca2fe7e69e6bf4249e5766df5388bf35977f2
+    config.json: 9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f
+    d3_runtime.py: adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917
+    decision_config.json: 9175a0f42d5886def9c8429fdf8b0be58a3c97d106b94520e2ac38fe326302bf
+    readout.safetensors: 662e8a26d8016b2d479f1ca66bf64944603316c2b5e074ab7ac3304b8ae045e9
+d3-lite:
+  kind: hf_model
+  source: vllm-sr/d3-lite
+  revision: 9c10703193afc7c7d28c88201c0364bfbbf58320
+  sha256:
+    MODEL_MANIFEST.json: 31f0ff94ff26619c0a063ccac803edcfe34c56c92e5c9c50b703b62893f125dd
+    config.json: a9071195384e1fc2c68f9fe0fae007a22182ab77eb14fe8228a1a24b37d3cee9
+    d3_runtime.py: adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917
+    decision_config.json: 30b6095b945d5a93697868afdf9be9123ea892085fbaff3078112c48da20dc6b
+    readout.safetensors: fe11cfac5c79b6a83e35b707581b1260214279bb22b003c215c62719186ef629
+d3-edge:
+  kind: hf_model
+  source: vllm-sr/d3-edge
+  revision: cab71e6ad3461b8086d51ddb572c656babd63b0b
+  sha256:
+    MODEL_MANIFEST.json: 3bae8989a6feb36a66bf4d8c44112dc63199d0dc69f564dc895fe368b1e08e59
+    config.json: 5e529d9aea2f8d387750acf5b02cc32a47d7e87dc65d6d008fba98e5d15acc4d
+    d3_runtime.py: adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917
+    decision_config.json: 30b6095b945d5a93697868afdf9be9123ea892085fbaff3078112c48da20dc6b
+    readout.safetensors: de33d5dc795bbd77168e40bfadc340cca9b9f163b88744c10e1a788f4e166d3d
