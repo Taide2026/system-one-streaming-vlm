@@ -6,6 +6,12 @@ Latency (one value L per window, the runner's `seconds`: frame read + preprocess
 - The budget is the window stride: a window must be done before the next one is ready.
 
 Classification (window level): a window is predicted abnormal when its score >= threshold. Positive = abnormal.
+
+AUC (threshold free): ROC-AUC with ties counted as half (the Mann-Whitney U statistic).
+- window: one score and one label per window.
+- frame: the UCF-Crime convention. Every frame of a window's frame range gets that window's score; a frame is
+  abnormal when it lies in an annotated event. Frames that no window covers (the tail shorter than one window)
+  are left out. With overlapping windows a frame takes the highest score of the windows covering it.
 """
 from __future__ import annotations
 
@@ -54,8 +60,10 @@ def latency(seconds: Sequence[float], frames_per_window: int, budget_s: float) -
 def classification(scores: Sequence[float], labels: Sequence[int], threshold: float) -> dict[str, float | int | None]:
     """Window classification at one threshold.
 
-    Returns threshold, tp, fp, fn, tn, accuracy = (tp + tn) / all, recall = tp / (tp + fn), fnr = fn / (tp + fn).
-    accuracy is None when there are no windows; recall and fnr are None when no window is abnormal.
+    Returns threshold, tp, fp, fn, tn, accuracy = (tp + tn) / all, recall = tp / (tp + fn), fnr = fn / (tp + fn),
+    specificity = tn / (tn + fp), balanced_accuracy = (recall + specificity) / 2.
+    accuracy is None when there are no windows; recall and fnr are None when no window is abnormal;
+    specificity is None when no window is normal; balanced_accuracy is None when recall or specificity is.
     """
     score_values = np.asarray(scores)
     label_values = np.asarray(labels)
@@ -71,6 +79,8 @@ def classification(scores: Sequence[float], labels: Sequence[int], threshold: fl
     accuracy = float((tp + tn) / total) if total else None
     recall = float(tp / abnormal) if abnormal else None
     fnr = float(fn / abnormal) if abnormal else None
+    specificity = float(tn / (tn + fp)) if tn + fp else None
+    balanced = (recall + specificity) / 2 if recall is not None and specificity is not None else None
     return {
         "threshold": float(threshold),
         "tp": tp,
@@ -80,4 +90,55 @@ def classification(scores: Sequence[float], labels: Sequence[int], threshold: fl
         "accuracy": accuracy,
         "recall": recall,
         "fnr": fnr,
+        "specificity": specificity,
+        "balanced_accuracy": balanced,
     }
+
+
+def auc(scores: Sequence[float], labels: Sequence[int]) -> float | None:
+    """ROC-AUC = P(score of a random abnormal > score of a random normal) + P(tie) / 2.
+
+    None when every label is the same (or there are none).
+    """
+    score_values = np.asarray(scores, dtype=float)
+    actual = np.asarray(labels) == 1
+    positives = int(np.count_nonzero(actual))
+    negatives = int(actual.size - positives)
+    if not positives or not negatives:
+        return None
+    order = np.argsort(score_values, kind="mergesort")
+    ordered = score_values[order]
+    ranks = np.empty(ordered.size, dtype=float)
+    start = 0
+    while start < ordered.size:  # average rank (1-based) within each run of equal scores
+        end = start
+        while end < ordered.size and ordered[end] == ordered[start]:
+            end += 1
+        ranks[start:end] = (start + end + 1) / 2
+        start = end
+    rank_sum = float(ranks[actual[order]].sum())
+    return (rank_sum - positives * (positives + 1) / 2) / (positives * negatives)
+
+
+def frame_auc(videos: Sequence[dict]) -> float | None:
+    """Frame-level ROC-AUC over every video (see the module docstring).
+
+    Each video: {"n_frames": int, "events": [[start_frame, end_frame], ...] (inclusive),
+                 "windows": [(first_frame, last_frame, score), ...] (inclusive frame ranges)}.
+    """
+    scores: list[np.ndarray] = []
+    labels: list[np.ndarray] = []
+    for video in videos:
+        frame_scores = np.full(video["n_frames"], -np.inf)
+        for first, last, score in video["windows"]:
+            span = slice(max(first, 0), min(last, video["n_frames"] - 1) + 1)
+            frame_scores[span] = np.maximum(frame_scores[span], score)
+        frame_labels = np.zeros(video["n_frames"], dtype=int)
+        for start, end in video["events"]:
+            frame_labels[max(start, 0):min(end, video["n_frames"] - 1) + 1] = 1
+        covered = np.isfinite(frame_scores)
+        scores.append(frame_scores[covered])
+        labels.append(frame_labels[covered])
+    if not scores:
+        return None
+    return auc(np.concatenate(scores), np.concatenate(labels))

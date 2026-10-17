@@ -19,8 +19,8 @@ config.yaml ─► s1stream run (GPU)
 |---|---|---|
 | dataset | `ucf_crime` | `src/s1stream/datasets/ucf_crime.py` |
 | input form (V1) | `frames` | `src/s1stream/input_forms/frames.py` |
-| backbone (V2) | `jev_omni` | `src/s1stream/backbones/jev_omni.py` |
-| answer head (V3) | `option_prob` | `src/s1stream/heads/option_prob.py` |
+| backbone (V2) | `jev_omni`, `clef_flash`, `imajev`, `gemma_generate`, `d3` | `src/s1stream/backbones/<name>.py` |
+| answer head (V3) | `option_prob`, `option_logits`, `generated_answer` | `src/s1stream/heads/<name>.py` |
 | decision rule | `threshold` | `src/s1stream/rules/threshold.py` |
 
 The slot protocols are in `src/s1stream/slots.py`. The shared data types are in `src/s1stream/types.py`.
@@ -128,6 +128,9 @@ Run folders under `results/<config name>/` go into git. `results/smoke/` does no
 | `latency.rtf_p95` | P95(L) ÷ budget; ≤ 1 meets the budget | ratio |
 | `classification[].accuracy` | correct windows ÷ all windows, per threshold | fraction |
 | `classification[].recall`, `fnr` | TP ÷ (TP + FN); FN ÷ (TP + FN), per threshold | fraction |
+| `classification[].specificity`, `balanced_accuracy` | TN ÷ (TN + FP); (recall + specificity) ÷ 2, per threshold | fraction |
+| `decision` | `classification` at 0.5: the model's own answer | — |
+| `auc.window`, `auc.frame` | ROC-AUC on window scores; on frames, each frame taking its window's score (UCF-Crime convention) | 0–1 |
 
 - L is the `seconds` field of `scores.jsonl`: frame read + preprocessing + backbone + answer head, with CUDA synchronized at both ends.
 - The first window is warm-up. Every latency field leaves it out; `latency.first_window_ms` shows it.
@@ -144,6 +147,17 @@ Run folders under `results/<config name>/` go into git. `results/smoke/` does no
 
 This run is a feasibility check on 20 short test videos (11 events), not a benchmark.
 
+UCF-Crime short (all 117 test videos under 50 s: 1684 windows of 2 s, 8 or 16 frames each) has one run folder per
+model and frame count under `results/<model>_ucf_short_f{8,16}/`, from `configs/<model>_ucf_short_f{8,16}.yaml`:
+
+| Backbone | Configs (`<model>`) |
+|---|---|
+| `jev_omni` | `jev_omni` |
+| `clef_flash` | `clef_flash` |
+| `imajev` | `imajev_4b` |
+| `gemma_generate` (Gemma 4 E4B) | `gemma4_e4b_constrained` (structured prompt, xgrammar), `gemma4_e4b_pure_prob` (question only, xgrammar), `gemma4_e4b_pure` (question only, free decoding) |
+| `d3` (Decision 3.0) | `d3`, `d3_flash`, `d3_mini`, `d3_nano`, `d3_lite`, `d3_edge` |
+
 ## Add a plugin
 
 1. Write a class that implements one protocol of `src/s1stream/slots.py`.
@@ -157,6 +171,7 @@ This run is a feasibility check on 20 short test videos (11 events), not a bench
 ```
 assets.yaml                 asset lock file
 configs/                    one YAML file per experiment
+scripts/run.sh              setup, assets, smoke and full runs on the GPU machine
 src/s1stream/               the package (slots, plugins, runner, report, metrics, assets, cli)
 tests/                      CPU tests
 results/                    run folders

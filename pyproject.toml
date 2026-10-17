@@ -7,6 +7,8 @@ dependencies = [
     "accelerate>=1.15.0",
     "numpy>=2.5.3",
     "opencv-python-headless>=5.0.0.93",
+    # imajev-4b ships a PEFT LoRA adapter (saved with peft 0.21.0).
+    "peft>=0.21.0",
     "pillow>=12.3.0",
     "pyyaml>=6.0",
     "safetensors",
@@ -14,6 +16,8 @@ dependencies = [
     "torchvision>=0.29.1",
     # Pinned to the version in the Jev-Omni requirements.txt (revision 5addda8).
     "transformers==5.17.0",
+    # Constrained decoding of the gemma_generate backbone (decode: constrained).
+    "xgrammar==0.2.8",
 ]
 
 [project.scripts]

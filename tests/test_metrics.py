@@ -1,7 +1,7 @@
 """Unit latency: latency and classification metrics on saved values."""
 import pytest
 
-from s1stream.metrics import classification, latency
+from s1stream.metrics import auc, classification, frame_auc, latency
 
 MEASURED = ("ms_per_frame", "p50_ms", "p95_ms", "p99_ms", "rtf_p95")
 
@@ -54,3 +54,27 @@ def test_classification_without_abnormal_windows():
     assert (row["tp"], row["fp"], row["fn"], row["tn"]) == (0, 1, 0, 1)
     assert row["recall"] is None
     assert row["fnr"] is None
+
+
+def test_classification_specificity_and_balanced_accuracy():
+    # Same case as above: recall 1/3, specificity tn / (tn + fp) = 1/2.
+    row = classification([0.9, 0.6, 0.4, 0.3, 0.1], [1, 0, 1, 1, 0], 0.5)
+    assert row["specificity"] == pytest.approx(0.5)
+    assert row["balanced_accuracy"] == pytest.approx((1 / 3 + 0.5) / 2)
+    assert classification([0.9, 0.1], [0, 0], 0.5)["balanced_accuracy"] is None
+
+
+def test_auc_counts_ties_as_half():
+    # Pairs (abnormal, normal): (0.8, 0.2) win, (0.8, 0.5) win, (0.5, 0.2) win, (0.5, 0.5) tie -> 3.5 / 4.
+    assert auc([0.8, 0.5, 0.5, 0.2], [1, 1, 0, 0]) == pytest.approx(0.875)
+    assert auc([0.1, 0.9], [1, 0]) == pytest.approx(0.0)
+    assert auc([0.3, 0.4], [0, 0]) is None
+
+
+def test_frame_auc_spreads_window_scores_and_drops_uncovered_frames():
+    # 10 frames, event 2-5; windows 0-4 (score 0.9) and 5-8 (score 0.1); frame 9 is uncovered.
+    # Frames 0-4 score 0.9 (labels 0,0,1,1,1), frames 5-8 score 0.1 (labels 1,0,0,0).
+    # Abnormal: 3 at 0.9, 1 at 0.1. Normal: 2 at 0.9, 3 at 0.1.
+    # Wins 3*3 = 9, ties 3*2 + 1*3 = 9 -> (9 + 4.5) / 20.
+    video = {"n_frames": 10, "events": [[2, 5]], "windows": [(0, 4, 0.9), (5, 8, 0.1)]}
+    assert frame_auc([video]) == pytest.approx(13.5 / 20)

@@ -7,6 +7,7 @@ Writes into a new run folder:
   scores.jsonl   one line per window, written and flushed as it is scored:
                  {video, window, start_s, end_s, label, score, probabilities, seconds}
                  score = probabilities[question.positive]; seconds = wall time of input form + backbone + head.
+                 A backbone that decodes adds text, its answer.
   run.json       {name, started, finished, free_memory_gb, peak_gpu_gb, load_s, windows, limit_windows,
                   versions: {python, torch, transformers}, git_commit, git_dirty, assets: {name: {revision, sha256}}}
 """
@@ -115,6 +116,8 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
                        "end_s": window.end_s, "label": window.label,
                        "score": probabilities[config.question.positive],
                        "probabilities": probabilities, "seconds": seconds}
+                if output.text is not None:
+                    row["text"] = output.text
                 stream.write(json.dumps(row) + "\n")
                 stream.flush()
                 count += 1
