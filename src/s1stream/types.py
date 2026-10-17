@@ -61,6 +61,10 @@ class BackboneOutput:
 
     hidden: last hidden state at the last prompt position, shape (1, hidden_size), float32.
     logits: next-token logits at the same position, or None when the backbone does not compute them.
+            A backbone whose model scores the options itself (clef_flash, imajev) puts one logit per option here,
+            in question.options order, and leaves hidden None (head: option_logits).
+    text: the decoded answer, for a backbone that generates (gemma_generate); None otherwise.
     """
     hidden: Any = None
     logits: Any = None
+    text: str | None = None
