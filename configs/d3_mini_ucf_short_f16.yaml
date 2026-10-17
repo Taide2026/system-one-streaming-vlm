@@ -1,0 +1,40 @@
+# Latency and abnormal metrics of d3-mini (Decision 3.0) on the UCF-Crime short test videos (< 50 s): 49 anomaly + 68 normal = all 117.
+# max_duration_s 49.9 sits between the longest short video (49.83 s) and the shortest medium one (49.97 s).
+# Run: scripts/run.sh run configs/d3_mini_ucf_short_f16.yaml
+name: d3_mini_ucf_short_f16
+
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 49
+  n_normal: 68
+  max_duration_s: 49.9
+  seed: 20261009
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 16
+
+question:
+  state: Surveillance camera footage, 2 seconds.
+  text: Is something abnormal happening?
+  options: ["Yes", "No"]
+  positive: "Yes"
+
+input_form:
+  name: frames
+
+backbone:
+  name: d3
+  asset: d3-mini
+  memory_cap_gb: 40
+
+answer_head:
+  name: option_logits
+
+decision_rules:
+  - name: threshold
+    start: 0.0
+    stop: 1.0
+    step: 0.01
