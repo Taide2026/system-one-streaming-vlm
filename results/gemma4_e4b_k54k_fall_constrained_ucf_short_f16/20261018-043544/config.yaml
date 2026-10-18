@@ -1,0 +1,35 @@
+name: gemma4_e4b_k54k_fall_constrained_ucf_short_f16
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 49
+  n_normal: 68
+  max_duration_s: 49.9
+  seed: 20261009
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 16
+question:
+  state: Surveillance camera footage, 2 seconds.
+  text: Is something abnormal happening?
+  options:
+  - 'Yes'
+  - 'No'
+  positive: 'Yes'
+input_form:
+  name: frames
+backbone:
+  name: gemma_generate
+  asset: gemma-4-e4b-k54k-fall
+  prompt: structured
+  decode: constrained
+  max_new_tokens: 16
+  memory_cap_gb: 40
+answer_head:
+  name: generated_answer
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01
