@@ -41,11 +41,16 @@ class Window:
 
 @dataclass(frozen=True)
 class Question:
-    """A typed question. positive is the option whose probability is the abnormal score."""
+    """A typed question. positive is the option whose probability is the abnormal score, or a tuple of options
+    whose probabilities add up to it (e.g. every anomaly class of a many-class question)."""
     state: str
     text: str
     options: tuple[str, ...]
-    positive: str
+    positive: str | tuple[str, ...]
+
+    def score(self, probabilities: dict[str, float]) -> float:
+        """The abnormal score: probabilities[positive], or the sum over positive when it is a tuple."""
+        raise NotImplementedError
 
 
 @dataclass
