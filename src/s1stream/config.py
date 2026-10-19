@@ -48,7 +48,8 @@ def load_config(path: Path, resolver: Callable[[str], Path] | None = None) -> Ex
     """Read and check the config at path.
 
     - Raise ConfigError naming the section when one of SECTIONS is missing.
-    - Raise ConfigError when question.positive is not in question.options.
+    - Raise ConfigError when question.positive is not in question.options. A list (the abnormal score is the sum
+      of their probabilities) must hold distinct options and becomes a tuple.
     - For each spec in SLOT_SECTIONS and in decision_rules that has the key "asset", set
       spec["path"] = resolver(spec["asset"]). resolver defaults to s1stream.assets.resolve.
       An s1stream.assets.AssetError from the resolver becomes a ConfigError that names the asset.
@@ -66,7 +67,13 @@ def load_config(path: Path, resolver: Callable[[str], Path] | None = None) -> Ex
             raise ConfigError(f"Missing section: {section}")
 
     question_data = data["question"]
-    if question_data["positive"] not in question_data["options"]:
+    positive = question_data["positive"]
+    if isinstance(positive, list):
+        if not positive or len(set(positive)) != len(positive) \
+                or any(option not in question_data["options"] for option in positive):
+            raise ConfigError("question.positive must list distinct options of question.options")
+        positive = tuple(positive)
+    elif positive not in question_data["options"]:
         raise ConfigError("question.positive must be in question.options")
 
     original = copy.deepcopy(data)
@@ -95,7 +102,7 @@ def load_config(path: Path, resolver: Callable[[str], Path] | None = None) -> Ex
             state=question_data["state"],
             text=question_data["text"],
             options=tuple(question_data["options"]),
-            positive=question_data["positive"],
+            positive=positive,
         ),
         input_form=data["input_form"],
         backbone=data["backbone"],

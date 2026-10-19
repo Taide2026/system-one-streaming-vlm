@@ -50,7 +50,9 @@ class Question:
 
     def score(self, probabilities: dict[str, float]) -> float:
         """The abnormal score: probabilities[positive], or the sum over positive when it is a tuple."""
-        raise NotImplementedError
+        if isinstance(self.positive, str):
+            return probabilities[self.positive]
+        return sum(probabilities[option] for option in self.positive)
 
 
 @dataclass
