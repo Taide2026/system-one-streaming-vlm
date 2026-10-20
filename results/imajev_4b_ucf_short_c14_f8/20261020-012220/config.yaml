@@ -1,0 +1,58 @@
+name: imajev_4b_ucf_short_c14_f8
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 49
+  n_normal: 68
+  max_duration_s: 49.9
+  seed: 20261009
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  state: Surveillance camera footage, 2 seconds.
+  text: What is happening?
+  options:
+  - Normal
+  - Abuse
+  - Police arrest
+  - Arson
+  - Assault
+  - Burglary
+  - Explosion
+  - Fighting
+  - Road accident
+  - Robbery
+  - Shooting
+  - Shoplifting
+  - Stealing
+  - Vandalism
+  positive:
+  - Abuse
+  - Police arrest
+  - Arson
+  - Assault
+  - Burglary
+  - Explosion
+  - Fighting
+  - Road accident
+  - Robbery
+  - Shooting
+  - Shoplifting
+  - Stealing
+  - Vandalism
+input_form:
+  name: frames
+backbone:
+  name: imajev
+  asset: imajev-4b
+  base: qwen3.5-4b
+  memory_cap_gb: 40
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01
