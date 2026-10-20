@@ -170,3 +170,30 @@ d3-edge:
     d3_runtime.py: adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917
     decision_config.json: 30b6095b945d5a93697868afdf9be9123ea892085fbaff3078112c48da20dc6b
     readout.safetensors: de33d5dc795bbd77168e40bfadc340cca9b9f163b88744c10e1a788f4e166d3d
+
+# Gemma 4 E4B full fine-tunes (THChou1220): same architecture, chat template and processor as gemma-4-e4b, fp16
+# weights (loaded in bf16 as gemma-4-e4b); backbone gemma_generate.
+gemma-4-e4b-k54k-fall:
+  kind: hf_model
+  source: THChou1220/gemma-4-e4b-kinetics54K-enhanced-fall_FFT
+  revision: 6a3b3ba091c90a72604eeffd4bbe7c1a17a509f7
+  sha256:
+    chat_template.jinja: 0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5
+    config.json: 6b3367d2dee3fd15256c4c8b7746ac09d3cc6b1cbce23117e12ac97071032e1f
+    generation_config.json: c539fb916b87711363b4ea21d893ad681ad4e439412c206bedff8412319e83d4
+    model.safetensors: 6d7e2cec66cc29f4c9c06a00c8e7ec9be3d37f5016061c7f9856339f433a09bf
+    processor_config.json: 32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c
+    tokenizer.json: cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f
+    tokenizer_config.json: a1bab8c81ed15fa6ce912ec993c66cb49392e0487fb1ea5f5f11ea3618683627
+gemma-4-e4b-k417k:
+  kind: hf_model
+  source: THChou1220/gemma-4-e4b-kinetics417K_FFT
+  revision: 4140a23c26110aeca334a3cfaad1f1636c98d386
+  sha256:
+    chat_template.jinja: 0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5
+    config.json: 6b3367d2dee3fd15256c4c8b7746ac09d3cc6b1cbce23117e12ac97071032e1f
+    generation_config.json: c539fb916b87711363b4ea21d893ad681ad4e439412c206bedff8412319e83d4
+    model.safetensors: 109c2c36f3be9b654fb6f89cf9406e91a445349f83de8c2577215c50c471afd0
+    processor_config.json: 32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c
+    tokenizer.json: cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f
+    tokenizer_config.json: a1bab8c81ed15fa6ce912ec993c66cb49392e0487fb1ea5f5f11ea3618683627

@@ -1,0 +1,41 @@
+{
+ "name": "gemma4_e4b_k54k_fall_constrained_ucf_short_f8",
+ "started": "2026-10-17T19:49:03.979554+00:00",
+ "finished": "2026-10-17T20:35:38.487486+00:00",
+ "free_memory_gb": 117.44743347167969,
+ "peak_gpu_gb": 15.433002471923828,
+ "load_s": 12.70910376496613,
+ "windows": 1684,
+ "limit_windows": null,
+ "versions": {
+  "python": "3.12.15",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.17.0"
+ },
+ "git_commit": "5382df3ca227beb9ecad76f9827d432cd1d06a85",
+ "git_dirty": true,
+ "assets": {
+  "gemma-4-e4b-k54k-fall": {
+   "revision": "6a3b3ba091c90a72604eeffd4bbe7c1a17a509f7",
+   "sha256": {
+    "chat_template.jinja": "0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5",
+    "config.json": "6b3367d2dee3fd15256c4c8b7746ac09d3cc6b1cbce23117e12ac97071032e1f",
+    "generation_config.json": "c539fb916b87711363b4ea21d893ad681ad4e439412c206bedff8412319e83d4",
+    "model.safetensors": "6d7e2cec66cc29f4c9c06a00c8e7ec9be3d37f5016061c7f9856339f433a09bf",
+    "processor_config.json": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+    "tokenizer.json": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+    "tokenizer_config.json": "a1bab8c81ed15fa6ce912ec993c66cb49392e0487fb1ea5f5f11ea3618683627"
+   }
+  },
+  "ucf-crime": {
+   "revision": null,
+   "sha256": {
+    "annotations/Temporal_Anomaly_Annotation_for_Testing_Videos.txt": "3b9542413f2ed9e94f73bf0488c151b3d7d595a8d2ad30f524e9243a2ae2a17c",
+    "splits/Anomaly_Test.txt": "afcb2a6bffe7286607e08c864425964d8784cbd5b1f263e03b76025e11548de7",
+    "splits/Anomaly_Train.txt": "ea91e03de7581bfa6b139e663ebb7511ab1651c33427f85741d3f497a2027744",
+    "splits/Action_Regnition_splits/ClassIDs.txt": "4e2af08c8fdeb3466494f276e1e877e837317a001eca9d826f933be73e6e7fd8",
+    "ReadMe-Anomaly-Detection.txt": "90e6c08923ef91c31e7b2ebf455b7ff82b8de31c79a7334a7b76f4cd2562098b"
+   }
+  }
+ }
+}
