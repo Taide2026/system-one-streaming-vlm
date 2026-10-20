@@ -157,7 +157,8 @@ decision_rules:
   - {name: threshold, start: 0.0, stop: 1.0, step: 0.01}
 ```
 
-The score of a window is the probability of the `positive` option.
+The score of a window is the probability of the `positive` option. `positive` may also list several options; the
+score is then the sum of their probabilities (e.g. every anomaly class of a many-class question, = 1 − p(Normal)).
 
 ### Run folder
 
@@ -209,6 +210,10 @@ model and frame count under `results/<model>_ucf_short_f{8,16}/`, from `configs/
 | `imajev` | `imajev_4b` |
 | `gemma_generate` (Gemma 4 E4B) | `gemma4_e4b_constrained` (structured prompt, xgrammar), `gemma4_e4b_pure_prob` (question only, xgrammar), `gemma4_e4b_pure` (question only, free decoding) |
 | `d3` (Decision 3.0) | `d3`, `d3_flash`, `d3_mini`, `d3_nano`, `d3_lite`, `d3_edge` |
+
+`results/<model>_ucf_short_c14_f8/` (`configs/<model>_ucf_short_c14_f8.yaml`) are the same 8-frame runs with a
+14-class prompt: the 13 UCF-Crime anomaly classes + Normal as options, score 1 − p(Normal). Models:
+`gemma4_e4b_constrained`, `clef_flash`, `imajev_4b`, `jev_omni` and the six `d3` sizes.
 
 ## Add a plugin
 
