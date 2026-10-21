@@ -5,6 +5,7 @@ import pytest
 import yaml
 
 from s1stream.config import ConfigError, ExperimentConfig, load_config
+from s1stream.prompt import PROMPTS, V2_CLASSES
 from s1stream.registry import Registry, RegistryError
 from s1stream.types import Question
 
@@ -98,6 +99,25 @@ def test_load_config_positive_list_must_be_distinct_options(tmp_path, positive):
     data = dict(EXAMPLE, question=dict(CLASSES, positive=positive))
     with pytest.raises(ConfigError):
         load_config(write(tmp_path, data), resolver=lambda name: tmp_path)
+
+
+def test_question_prompt_fills_the_question_and_raw(tmp_path):
+    cfg = load_config(write(tmp_path, dict(EXAMPLE, question={"prompt": "v2"})), resolver=lambda name: tmp_path)
+    assert cfg.question.options == ("None",) + tuple(V2_CLASSES)
+    assert cfg.question.score({option: 1 / 14 for option in cfg.question.options}) == pytest.approx(13 / 14)
+    assert cfg.raw["question"] == {"prompt": "v2", **PROMPTS["v2"]}
+
+
+def test_question_prompt_keys_in_the_config_win(tmp_path):
+    data = dict(EXAMPLE, question={"prompt": "v1", "state": "Camera."})
+    cfg = load_config(write(tmp_path, data), resolver=lambda name: tmp_path)
+    assert (cfg.question.state, cfg.question.options, cfg.question.positive) == ("Camera.", ("Yes", "No"), "Yes")
+    assert cfg.question.text == PROMPTS["v1"]["text"]
+
+
+def test_unknown_question_prompt_raises(tmp_path):
+    with pytest.raises(ConfigError, match="question.prompt"):
+        load_config(write(tmp_path, dict(EXAMPLE, question={"prompt": "v9"})), resolver=lambda name: tmp_path)
 
 
 def test_question_score_is_the_positive_probability_or_their_sum():

@@ -48,6 +48,9 @@ def load_config(path: Path, resolver: Callable[[str], Path] | None = None) -> Ex
     """Read and check the config at path.
 
     - Raise ConfigError naming the section when one of SECTIONS is missing.
+    - question.prompt names a prompt of s1stream.prompt.PROMPTS: its state, text, options and positive fill the
+      question (keys given in the config win), in raw too, so a run folder's config.yaml holds the whole question.
+      Raise ConfigError for an unknown name.
     - Raise ConfigError when question.positive is not in question.options. A list (the abnormal score is the sum
       of their probabilities) must hold distinct options and becomes a tuple.
     - For each spec in SLOT_SECTIONS and in decision_rules that has the key "asset", set
@@ -67,6 +70,14 @@ def load_config(path: Path, resolver: Callable[[str], Path] | None = None) -> Ex
             raise ConfigError(f"Missing section: {section}")
 
     question_data = data["question"]
+    if "prompt" in question_data:
+        from s1stream.prompt import PROMPTS
+
+        name = question_data["prompt"]
+        if name not in PROMPTS:
+            raise ConfigError(f"Unknown question.prompt {name!r}: one of {', '.join(PROMPTS)}")
+        question_data = data["question"] = {"prompt": name, **copy.deepcopy(PROMPTS[name]),
+                                            **{key: value for key, value in question_data.items() if key != "prompt"}}
     positive = question_data["positive"]
     if isinstance(positive, list):
         if not positive or len(set(positive)) != len(positive) \
