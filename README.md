@@ -160,6 +160,21 @@ decision_rules:
 The score of a window is the probability of the `positive` option. `positive` may also list several options; the
 score is then the sum of their probabilities (e.g. every anomaly class of a many-class question, = 1 − p(Normal)).
 
+### Prompt variants
+
+`configs/<model>_ucf_short_v{1,2,3}_f8.yaml` change only the `question` block, to match the prompts of online methods
+(models: `d3`, `d3_flash`, `d3_nano`, `clef_flash`, `gemma4_e4b_constrained`; baselines: `_ucf_short_f8` Yes / No,
+`_ucf_short_c14_f8` 14-class):
+
+| Variant | Follows | Options | Score |
+|---|---|---|---|
+| `v1` | MoniTor (NeurIPS 2025): its anomaly prior, 13 activities with their definitions, verbatim | Yes / No | p(Yes) |
+| `v2` | ESOM (arXiv 2026): definition table with anonymous options, what counts / does not count, event boundary | None, A–M | 1 − p(None) |
+| `v3` | ReactVAU (ECCV 2026): its fast model's question | Yes / No | p(Yes) |
+
+To switch, run another variant's config (`scripts/run.sh run configs/d3_ucf_short_v2_f8.yaml`), or copy its
+`question:` block into any config. Sources, and the v2 option → class map, are in each config's comments.
+
 ### Run folder
 
 | File | Contents |
