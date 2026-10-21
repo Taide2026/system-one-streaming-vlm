@@ -6,6 +6,7 @@ import yaml
 
 from s1stream.config import ConfigError, ExperimentConfig, load_config
 from s1stream.registry import Registry, RegistryError
+from s1stream.types import Question
 
 EXAMPLE = {
     "name": "demo",
@@ -81,3 +82,27 @@ def test_load_config_positive_not_in_options(tmp_path):
     data = dict(EXAMPLE, question=dict(EXAMPLE["question"], positive="Maybe"))
     with pytest.raises(ConfigError):
         load_config(write(tmp_path, data), resolver=lambda name: tmp_path)
+
+
+CLASSES = {"state": "Camera.", "text": "What is happening?", "options": ["Normal", "Fighting", "Arson"],
+           "positive": ["Fighting", "Arson"]}
+
+
+def test_load_config_positive_list_becomes_a_tuple(tmp_path):
+    cfg = load_config(write(tmp_path, dict(EXAMPLE, question=CLASSES)), resolver=lambda name: tmp_path)
+    assert cfg.question.positive == ("Fighting", "Arson")
+
+
+@pytest.mark.parametrize("positive", [[], ["Fighting", "Maybe"], ["Arson", "Arson"]])
+def test_load_config_positive_list_must_be_distinct_options(tmp_path, positive):
+    data = dict(EXAMPLE, question=dict(CLASSES, positive=positive))
+    with pytest.raises(ConfigError):
+        load_config(write(tmp_path, data), resolver=lambda name: tmp_path)
+
+
+def test_question_score_is_the_positive_probability_or_their_sum():
+    probabilities = {"Normal": 0.5, "Fighting": 0.3, "Arson": 0.2}
+    one = Question(state="s", text="q", options=("Normal", "Fighting", "Arson"), positive="Fighting")
+    many = Question(state="s", text="q", options=("Normal", "Fighting", "Arson"), positive=("Fighting", "Arson"))
+    assert one.score(probabilities) == pytest.approx(0.3)
+    assert many.score(probabilities) == pytest.approx(0.5)
