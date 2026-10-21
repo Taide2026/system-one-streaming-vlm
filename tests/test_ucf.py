@@ -81,6 +81,15 @@ def test_select_too_few_short_videos_raises(tmp_path):
         select(rows, tmp_path, probe_by_index, 11, 10, 60, seed=1)
 
 
+def test_select_min_duration_keeps_only_longer_videos(tmp_path):
+    rows = forty_rows()
+    make_tree(tmp_path, rows)
+    items = select(rows, tmp_path, probe_by_index, 10, 10, 120, seed=1, min_duration_s=60)
+    assert all(i.duration_s == 90 for i in items)
+    with pytest.raises(DatasetError):
+        select(rows, tmp_path, probe_by_index, 11, 10, 120, seed=1, min_duration_s=60)
+
+
 def test_video_path_class_folder_normal_folder_and_missing(tmp_path):
     rows = [AnnotationRow("Abuse028_x264.mp4", "Abuse", ((1, 2),)),
             AnnotationRow("Normal_Videos_003_x264.mp4", "Normal", ())]

@@ -77,13 +77,14 @@ def probe_video(path: Path) -> tuple[float, int]:
 
 
 def select(rows: Sequence[AnnotationRow], root: Path, probe: Probe, n_anomaly: int, n_normal: int,
-           max_duration_s: float, seed: int) -> list[VideoItem]:
-    """Pick n_anomaly anomaly rows and n_normal Normal rows whose duration is at most max_duration_s.
+           max_duration_s: float, seed: int, min_duration_s: float = 0.0) -> list[VideoItem]:
+    """Pick n_anomaly anomaly rows and n_normal Normal rows whose duration is above min_duration_s and at most
+    max_duration_s.
 
     Algorithm (fixed, so a seed always gives the same list):
     1. Split rows into anomaly and Normal; sort each group by name.
     2. For each group, shuffle with random.Random(seed) (one new Random per group), then walk the list:
-       probe the video, keep it when n_frames / fps <= max_duration_s, stop at n kept.
+       probe the video, keep it when min_duration_s < n_frames / fps <= max_duration_s, stop at n kept.
     3. Raise DatasetError naming the group when fewer than n videos fit.
     Return anomaly items then Normal items, each group sorted by name.
     """
@@ -98,7 +99,7 @@ def select(rows: Sequence[AnnotationRow], root: Path, probe: Probe, n_anomaly: i
             fps, n_frames = probe(path)
             if fps <= 0:
                 continue
-            if n_frames / fps <= max_duration_s:
+            if min_duration_s < n_frames / fps <= max_duration_s:
                 kept.append(VideoItem(row.name, path, row.category, fps, n_frames, row.events))
             if len(kept) == needed:
                 break
@@ -110,17 +111,18 @@ def select(rows: Sequence[AnnotationRow], root: Path, probe: Probe, n_anomaly: i
 
 @DATASETS.register("ucf_crime")
 class UcfCrime:
-    """Config: {name: ucf_crime, asset: ucf-crime, n_anomaly, n_normal, max_duration_s, seed}. load_config adds path."""
+    """Config: {name: ucf_crime, asset: ucf-crime, n_anomaly, n_normal, max_duration_s, seed, min_duration_s
+    (optional, default 0)}. load_config adds path."""
 
     def __init__(self, path: str | Path, n_anomaly: int, n_normal: int, max_duration_s: float, seed: int,
-                 asset: str | None = None, probe: Probe = probe_video) -> None:
+                 asset: str | None = None, probe: Probe = probe_video, min_duration_s: float = 0.0) -> None:
         self.root = Path(path)
         self.n_anomaly, self.n_normal = n_anomaly, n_normal
-        self.max_duration_s, self.seed = max_duration_s, seed
+        self.min_duration_s, self.max_duration_s, self.seed = min_duration_s, max_duration_s, seed
         self.probe = probe
 
     def items(self) -> list[VideoItem]:
         """read_annotations(root / ANNOTATION_FILE), then select(...)."""
         rows = read_annotations(self.root / ANNOTATION_FILE)
         return select(rows, self.root, self.probe, self.n_anomaly, self.n_normal,
-                      self.max_duration_s, self.seed)
+                      self.max_duration_s, self.seed, self.min_duration_s)
