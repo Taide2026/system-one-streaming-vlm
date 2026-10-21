@@ -221,7 +221,7 @@ model and frame count under `results/<model>_ucf_short_f{8,16}/`, from `configs/
 | Backbone | Configs (`<model>`) |
 |---|---|
 | `jev_omni` | `jev_omni` |
-| `clef_flash` | `clef_flash` |
+| `clef_flash` | `clef_flash`, `clef` (Clef 27B, all 290 only) |
 | `imajev` | `imajev_4b` |
 | `gemma_generate` (Gemma 4 E4B) | `gemma4_e4b_constrained` (structured prompt, xgrammar), `gemma4_e4b_pure_prob` (question only, xgrammar), `gemma4_e4b_pure` (question only, free decoding) |
 | `gemma_generate` (Gemma 4 E4B full fine-tunes, THChou1220) | `gemma4_e4b_k54k_fall_{constrained,pure_prob}`, `gemma4_e4b_k417k_{constrained,pure_prob}` |
