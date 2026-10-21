@@ -226,6 +226,7 @@ model and frame count under `results/<model>_ucf_short_f{8,16}/`, from `configs/
 | `gemma_generate` (Gemma 4 E4B) | `gemma4_e4b_constrained` (structured prompt, xgrammar), `gemma4_e4b_pure_prob` (question only, xgrammar), `gemma4_e4b_pure` (question only, free decoding) |
 | `gemma_generate` (Gemma 4 E4B full fine-tunes, THChou1220) | `gemma4_e4b_k54k_fall_{constrained,pure_prob}`, `gemma4_e4b_k417k_{constrained,pure_prob}` |
 | `d3` (Decision 3.0) | `d3`, `d3_flash`, `d3_mini`, `d3_nano`, `d3_lite`, `d3_edge` |
+| `d1` (Liquid AI d1-3B, all 290 only) | `d1_3b` |
 
 `results/<model>_ucf_short_c14_f8/` (`configs/<model>_ucf_short_c14_f8.yaml`) are the same 8-frame runs with a
 14-class prompt: the 13 UCF-Crime anomaly classes + Normal as options, score 1 − p(Normal). Models:

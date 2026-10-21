@@ -1,5 +1,6 @@
 """Import every plugin module once, so each registers its name. Add a new plugin module here."""
 import s1stream.backbones.clef_flash  # noqa: F401
+import s1stream.backbones.d1  # noqa: F401
 import s1stream.backbones.d3  # noqa: F401
 import s1stream.backbones.gemma_generate  # noqa: F401
 import s1stream.backbones.imajev  # noqa: F401
