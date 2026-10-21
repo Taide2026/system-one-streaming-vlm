@@ -235,8 +235,9 @@ All 290 UCF-Crime test videos with frame annotations (140 anomaly + 150 normal, 
 frames) have one Yes / No run per model under `results/<model>_ucf_test_f8/` (`configs/<model>_ucf_test_f8.yaml`), for
 `d3`, `d3_flash`, `d3_nano`, `clef_flash` and `gemma4_e4b_constrained`.
 
-The 14-class prompt on all 290 reuses the short runs: `configs/<model>_ucf_long_c14_f8.yaml` runs only the 173 videos
-above 49.9 s (`dataset.min_duration_s`), then `uv run python scripts/merge-c14-290.py <model>` joins both into
+The 14-class prompt on all 290: `configs/<model>_ucf_test_c14_f8.yaml`. The d3-nano and d3-flash runs instead reuse
+their short runs: `configs/<model>_ucf_long_c14_f8.yaml` runs only the 173 videos above 49.9 s
+(`dataset.min_duration_s`), then `uv run python scripts/merge-c14-290.py <model>` joins both into
 `results/<model>_ucf_test_c14_f8/` (it checks that the windows equal the Yes / No run's) and writes the report.
 
 ## Add a plugin
