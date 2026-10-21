@@ -216,6 +216,14 @@ model and frame count under `results/<model>_ucf_short_f{8,16}/`, from `configs/
 14-class prompt: the 13 UCF-Crime anomaly classes + Normal as options, score 1 − p(Normal). Models:
 `gemma4_e4b_constrained`, `clef_flash`, `imajev_4b`, `jev_omni` and the six `d3` sizes.
 
+All 290 UCF-Crime test videos with frame annotations (140 anomaly + 150 normal, 10.3 h: 18390 windows of 2 s, 8
+frames) have one Yes / No run per model under `results/<model>_ucf_test_f8/` (`configs/<model>_ucf_test_f8.yaml`), for
+`d3`, `d3_flash`, `d3_nano`, `clef_flash` and `gemma4_e4b_constrained`.
+
+The 14-class prompt on all 290 reuses the short runs: `configs/<model>_ucf_long_c14_f8.yaml` runs only the 173 videos
+above 49.9 s (`dataset.min_duration_s`), then `uv run python scripts/merge-c14-290.py <model>` joins both into
+`results/<model>_ucf_test_c14_f8/` (it checks that the windows equal the Yes / No run's) and writes the report.
+
 ## Add a plugin
 
 1. Write a class that implements one protocol of `src/s1stream/slots.py`.
