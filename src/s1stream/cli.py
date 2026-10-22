@@ -6,7 +6,9 @@
   s1stream fetch [--check] <asset> [<asset> ...]
   s1stream probe-extract <probe config.yaml> --condition <name> --run <name> [--limit-windows N]
       s1stream.probe.extract.run_extract; output $S1_FEATURES/<config name>/<condition>/<run name>
-      fetch: assets.fetch(lock[name], asset_root() / name); --check: assets.check only.
+  s1stream probe-fit <features run dir> [--out <dir>]
+      s1stream.probe.fit.fit_condition; default --out: results/<config name>/<run name>/fit-<condition>
+fetch: assets.fetch(lock[name], asset_root() / name); --check: assets.check only.
 Exit code 0 on success, 1 on an AssetError, ConfigError, DatasetError or FileExistsError (message on stderr).
 """
 from __future__ import annotations
@@ -41,6 +43,9 @@ def main(argv: list[str] | None = None) -> int:
     extract_parser.add_argument("--condition", required=True)
     extract_parser.add_argument("--run", required=True)
     extract_parser.add_argument("--limit-windows", type=int)
+    fit_parser = commands.add_parser("probe-fit")
+    fit_parser.add_argument("features", type=Path)
+    fit_parser.add_argument("--out", type=Path)
     args = parser.parse_args(argv)
 
     try:
@@ -57,6 +62,15 @@ def main(argv: list[str] | None = None) -> int:
             from s1stream.probe.extract import run_extract
 
             print(run_extract(args.config, args.condition, args.run, limit_windows=args.limit_windows))
+        elif args.command == "probe-fit":
+            from s1stream.probe.fit import fit_condition
+
+            out_dir = args.out
+            if out_dir is None:
+                features = args.features.resolve()
+                out_dir = Path("results") / features.parent.parent.name / features.name / f"fit-{features.parent.name}"
+            fit_condition(args.features, out_dir)
+            print(out_dir)
         elif args.command == "report":
             report(args.run_dir)
         else:

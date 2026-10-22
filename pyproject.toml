@@ -12,6 +12,7 @@ dependencies = [
     "pillow>=12.3.0",
     "pyyaml>=6.0",
     "safetensors",
+    "scikit-learn>=1.9.1",
     "torch>=2.14.1",
     "torchvision>=0.29.1",
     # Pinned to the version in the Jev-Omni requirements.txt (revision 5addda8).
