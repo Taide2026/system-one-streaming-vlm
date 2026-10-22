@@ -70,6 +70,8 @@ When `assets.yaml` gets a new asset after `git pull`, run `fetch` for that name 
 | `d3-edge` | `vllm-sr/d3-edge` @ `cab71e6` | 1.2 GB | `d3_edge_*` |
 | `laya` | `convaiinnovations/laya` @ `7b928d8` | 2.3 GB | none yet |
 | `clm-8b` | `Contrastive-LM/CLM-v0.1-8B` @ `e939398` (heads only; needs Qwen3-8B) | 73 MB | none yet |
+| `qwen3.5-9b` | `Qwen/Qwen3.5-9B` @ `c202236` (base model of `d3-flash`) | 19 GB | probing conditions A and B |
+| `holmes-vau-ucf-train` | `ucf_database_train.json` of `pipixin321/HolmesVAU` @ `e6a89b1` (UCF-Crime train events, seconds) | 6.7 MB | probing (Holmes head labels) |
 
 Sizes are the full Hugging Face snapshot at that revision. `fetch` downloads the full snapshot.
 

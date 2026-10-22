@@ -16,9 +16,10 @@ from dataclasses import dataclass
 from pathlib import Path
 
 LOCK_FILE = Path(__file__).resolve().parents[2] / "assets.yaml"
-KINDS = ("hf_model", "archive")
+KINDS = ("hf_model", "archive", "url_file")
 REQUIRED = {"hf_model": ("kind", "source", "revision", "sha256"),
-            "archive": ("kind", "source", "size", "sha256")}
+            "archive": ("kind", "source", "size", "sha256"),
+            "url_file": ("kind", "source", "file", "sha256")}
 
 
 class AssetError(Exception):
@@ -34,6 +35,7 @@ class Asset:
     revision: str | None = None
     size: int | None = None
     prepare: str | None = None
+    file: str | None = None  # url_file: the name the downloaded file gets in the asset folder
 
 
 Downloader = Callable[[Asset, Path], None]
@@ -58,7 +60,8 @@ def load_lock(path: Path) -> dict[str, Asset]:
             raise AssetError(f"Asset {name!r} is missing required field {missing[0]!r}")
         result[name] = Asset(name=name, kind=values["kind"], source=values["source"],
                              sha256=values["sha256"], revision=values.get("revision"),
-                             size=values.get("size"), prepare=values.get("prepare"))
+                             size=values.get("size"), prepare=values.get("prepare"),
+                             file=values.get("file"))
     return result
 
 
@@ -189,7 +192,17 @@ def prepare_xd_violence(folder: Path) -> None:
         target.write_bytes(response.read())
 
 
-DOWNLOADERS: dict[str, Downloader] = {"hf_model": hf_download, "archive": archive_download}
+def url_download(asset: Asset, folder: Path, opener: Callable[[str], bytes] | None = None) -> None:
+    """Download one file: the bytes at asset.source go to folder / asset.file. opener (url -> bytes) is for tests."""
+    if opener is None:
+        def opener(url: str) -> bytes:
+            with urllib.request.urlopen(url) as response:
+                return response.read()
+    (folder / asset.file).write_bytes(opener(asset.source))
+
+
+DOWNLOADERS: dict[str, Downloader] = {"hf_model": hf_download, "archive": archive_download,
+                                      "url_file": url_download}
 PREPARES: dict[str, Callable[[Path], None]] = {"ucf_crime": prepare_ucf_crime, "xd_violence": prepare_xd_violence}
 
 
