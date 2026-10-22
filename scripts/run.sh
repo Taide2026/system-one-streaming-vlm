@@ -90,7 +90,7 @@ print(f"latency P50/P95/P99 {lat['p50_ms']:.0f}/{lat['p95_ms']:.0f}/{lat['p99_ms
       f"{lat['ms_per_frame']:.0f} ms/frame, RTF P95 {lat['rtf_p95']:.2f} (<= 1 meets the {lat['budget_ms']:.0f} ms budget)")
 auc, decision = data["auc"], data["decision"]
 fmt = lambda v: "n/a" if v is None else f"{v:.3f}"
-print(f"AUC frame {fmt(auc['frame'])}, window {fmt(auc['window'])}; answer (p >= 0.5): "
+print(f"AUC frame {fmt(auc['frame'])}, window {fmt(auc['window'])}; AP frame {fmt(data['ap']['frame'])}; answer (p >= 0.5): "
       f"balanced accuracy {fmt(decision['balanced_accuracy'])}, recall {fmt(decision['recall'])}, "
       f"specificity {fmt(decision['specificity'])}")
 for row in data["classification"]:
