@@ -8,6 +8,8 @@
       s1stream.probe.extract.run_extract; output $S1_FEATURES/<config name>/<condition>/<run name>
   s1stream probe-fit <features run dir> [--out <dir>]
       s1stream.probe.fit.fit_condition; default --out: results/<config name>/<run name>/fit-<condition>
+  s1stream probe-compare <probe config.yaml> <results run dir>
+      s1stream.probe.compare.run_compare; reads fit-<condition>/ in the run dir, writes compare.json and PNG files
 fetch: assets.fetch(lock[name], asset_root() / name); --check: assets.check only.
 Exit code 0 on success, 1 on an AssetError, ConfigError, DatasetError or FileExistsError (message on stderr).
 """
@@ -46,6 +48,9 @@ def main(argv: list[str] | None = None) -> int:
     fit_parser = commands.add_parser("probe-fit")
     fit_parser.add_argument("features", type=Path)
     fit_parser.add_argument("--out", type=Path)
+    compare_parser = commands.add_parser("probe-compare")
+    compare_parser.add_argument("config", type=Path)
+    compare_parser.add_argument("run_dir", type=Path)
     args = parser.parse_args(argv)
 
     try:
@@ -71,6 +76,11 @@ def main(argv: list[str] | None = None) -> int:
                 out_dir = Path("results") / features.parent.parent.name / features.name / f"fit-{features.parent.name}"
             fit_condition(args.features, out_dir)
             print(out_dir)
+        elif args.command == "probe-compare":
+            import s1stream.plugins  # noqa: F401  Register the dataset plugins.
+            from s1stream.probe.compare import run_compare
+
+            print(run_compare(args.config, args.run_dir))
         elif args.command == "report":
             report(args.run_dir)
         else:

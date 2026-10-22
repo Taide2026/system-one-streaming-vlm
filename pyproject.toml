@@ -5,6 +5,7 @@ description = "Streaming System One experiments: dataset, windowing, input form,
 requires-python = ">=3.12"
 dependencies = [
     "accelerate>=1.15.0",
+    "matplotlib>=3.11.2",
     "numpy>=2.5.3",
     "opencv-python-headless>=5.0.0.93",
     # imajev-4b ships a PEFT LoRA adapter (saved with peft 0.21.0).
