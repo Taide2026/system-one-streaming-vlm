@@ -19,7 +19,7 @@ Writes into out:
   fit.json          {"methods": METHODS, "kinds": KINDS, "n_states": S, "features": <features dir>,
                      "val_videos": [...], "choices": {"<method>/<kind>/<state>": {"setting": {...}, "validation": x}}}
                     mil and holmes choices also hold "final_loss" and "min_loss": the training loss after the last
-                    step and the lowest training loss over all steps of the head refit on all train windows
+                    step (before its update) and the lowest training loss over all steps of the head refit on all train windows
   test_scores.npy   float32 (len(METHODS), len(KINDS), S, n_test), in METHODS and KINDS order
   test_meta.jsonl   the test meta.jsonl of the features run, unchanged
 """
@@ -49,8 +49,8 @@ K_NEIGHBORS, PCA_DIM = 5, 256
 
 
 class Fitted(NamedTuple):
-    """A trained head on the CPU, the training loss (data loss + lam * |w|^2) after the last step, and the lowest
-    training loss over all STEPS steps."""
+    """A trained head on the CPU, the training loss (data loss + lam * |w|^2) of the last step (computed before that
+    step's update), and the lowest training loss over all STEPS steps."""
     head: torch.nn.Linear
     final_loss: float
     min_loss: float
@@ -125,7 +125,8 @@ def fit_mil(x: torch.Tensor, video_y: torch.Tensor, index: torch.Tensor, mask: t
 def fit_window(x: torch.Tensor, y: torch.Tensor, lam: float, device: str = "cpu") -> Fitted:
     """As fit_mil, but the loss is the per-window BCE-with-logits with pos_weight = (1 - mean(y)) / mean(y)."""
     y = y.to(device)
-    pos_weight = ((1 - y.mean()) / y.mean()).detach()
+    pos = y.mean().clamp(min=1e-6)
+    pos_weight = ((1 - pos) / pos).detach()
     bce = torch.nn.BCEWithLogitsLoss(pos_weight=pos_weight)
     return _fit_linear(x, lambda scores: bce(scores, y), lam, device)
 
