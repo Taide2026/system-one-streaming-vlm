@@ -207,6 +207,7 @@ Run folders under `results/<config name>/` go into git. `results/smoke/` does no
 | `classification[].specificity`, `balanced_accuracy` | TN ÷ (TN + FP); (recall + specificity) ÷ 2, per threshold | fraction |
 | `decision` | `classification` at 0.5: the model's own answer | — |
 | `auc.window`, `auc.frame` | ROC-AUC on window scores; on frames, each frame taking its window's score (UCF-Crime convention) | 0–1 |
+| `ap.window`, `ap.frame` | average precision (area under the precision-recall curve) on the same windows and frames; XD-Violence's main metric | 0–1 |
 
 - L is the `seconds` field of `scores.jsonl`: frame read + preprocessing + backbone + answer head, with CUDA synchronized at both ends.
 - The first window is warm-up. Every latency field leaves it out; `latency.first_window_ms` shows it.

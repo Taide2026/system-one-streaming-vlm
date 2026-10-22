@@ -12,6 +12,7 @@ report.json:
             are 2 options), with balanced_accuracy
   auc: {frame: metrics.frame_auc (UCF-Crime convention; frame ranges from windows.window_frame_range and the
         fps, n_frames and events of manifest.json), window: metrics.auc on the window scores and labels}
+  ap: {frame: metrics.frame_ap on the same frames, window: metrics.ap on the window scores and labels}
 """
 from __future__ import annotations
 
@@ -55,6 +56,7 @@ def report(run_dir: Path) -> dict[str, Any]:
         "classification": [metrics.classification(scores, labels, threshold) for threshold in thresholds],
         "decision": metrics.classification(scores, labels, 0.5),
         "auc": {"frame": metrics.frame_auc(frame_videos(rows, manifest)), "window": metrics.auc(scores, labels)},
+        "ap": {"frame": metrics.frame_ap(frame_videos(rows, manifest)), "window": metrics.ap(scores, labels)},
     }
     (run_dir / "report.json").write_text(json.dumps(result, indent=1))
     return result

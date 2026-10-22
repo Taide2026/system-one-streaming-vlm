@@ -12,6 +12,9 @@ AUC (threshold free): ROC-AUC with ties counted as half (the Mann-Whitney U stat
 - frame: the UCF-Crime convention. Every frame of a window's frame range gets that window's score; a frame is
   abnormal when it lies in an annotated event. Frames that no window covers (the tail shorter than one window)
   are left out. With overlapping windows a frame takes the highest score of the windows covering it.
+
+AP (threshold free): average precision, the area under the precision-recall curve as scikit-learn's
+average_precision_score computes it; window and frame as for AUC, on the same frames. XD-Violence's main metric.
 """
 from __future__ import annotations
 
@@ -120,8 +123,26 @@ def auc(scores: Sequence[float], labels: Sequence[int]) -> float | None:
     return (rank_sum - positives * (positives + 1) / 2) / (positives * negatives)
 
 
-def frame_auc(videos: Sequence[dict]) -> float | None:
-    """Frame-level ROC-AUC over every video (see the module docstring).
+def ap(scores: Sequence[float], labels: Sequence[int]) -> float | None:
+    """Average precision: over the distinct scores from the highest, the sum of (recall gained at that score) x
+    (precision at that score), as scikit-learn's average_precision_score. None when no label is abnormal."""
+    score_values = np.asarray(scores, dtype=float)
+    actual = np.asarray(labels) == 1
+    positives = int(np.count_nonzero(actual))
+    if not positives:
+        return None
+    order = np.argsort(-score_values, kind="mergesort")
+    ordered, hits = score_values[order], actual[order]
+    true_positives = np.cumsum(hits)
+    last = np.r_[np.nonzero(np.diff(ordered))[0], ordered.size - 1]  # last index of each run of equal scores
+    precision = true_positives[last] / (last + 1)
+    recall = true_positives[last] / positives
+    return float(np.sum(np.diff(np.r_[0.0, recall]) * precision))
+
+
+def frame_scores(videos: Sequence[dict]) -> tuple[np.ndarray, np.ndarray] | None:
+    """The scores and labels of every covered frame of every video (see the module docstring), or None without
+    videos.
 
     Each video: {"n_frames": int, "events": [[start_frame, end_frame], ...] (inclusive),
                  "windows": [(first_frame, last_frame, score), ...] (inclusive frame ranges)}.
@@ -141,4 +162,16 @@ def frame_auc(videos: Sequence[dict]) -> float | None:
         labels.append(frame_labels[covered])
     if not scores:
         return None
-    return auc(np.concatenate(scores), np.concatenate(labels))
+    return np.concatenate(scores), np.concatenate(labels)
+
+
+def frame_auc(videos: Sequence[dict]) -> float | None:
+    """Frame-level ROC-AUC over every video (frame_scores)."""
+    frames = frame_scores(videos)
+    return None if frames is None else auc(*frames)
+
+
+def frame_ap(videos: Sequence[dict]) -> float | None:
+    """Frame-level average precision over every video, on the frames of frame_auc."""
+    frames = frame_scores(videos)
+    return None if frames is None else ap(*frames)

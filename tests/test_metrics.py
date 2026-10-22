@@ -1,7 +1,7 @@
 """Unit latency: latency and classification metrics on saved values."""
 import pytest
 
-from s1stream.metrics import auc, classification, frame_auc, latency
+from s1stream.metrics import ap, auc, classification, frame_ap, frame_auc, latency
 
 MEASURED = ("ms_per_frame", "p50_ms", "p95_ms", "p99_ms", "rtf_p95")
 
@@ -78,3 +78,16 @@ def test_frame_auc_spreads_window_scores_and_drops_uncovered_frames():
     # Wins 3*3 = 9, ties 3*2 + 1*3 = 9 -> (9 + 4.5) / 20.
     video = {"n_frames": 10, "events": [[2, 5]], "windows": [(0, 4, 0.9), (5, 8, 0.1)]}
     assert frame_auc([video]) == pytest.approx(13.5 / 20)
+
+
+def test_ap_sums_recall_gain_times_precision_over_distinct_scores():
+    # 0.9: P 1, R 0.5; 0.8: P 0.5, R 0.5; 0.7: P 2/3, R 1; 0.6: P 0.5, R 1.
+    assert ap([0.9, 0.8, 0.7, 0.6], [1, 0, 1, 0]) == pytest.approx(0.5 + 0.5 * 2 / 3)
+    assert ap([0.5, 0.5], [1, 0]) == pytest.approx(0.5)  # tied scores are one threshold
+    assert ap([0.3, 0.4], [0, 0]) is None
+
+
+def test_frame_ap_uses_the_frames_of_frame_auc():
+    video = {"n_frames": 10, "events": [[2, 4]], "windows": [(0, 4, 0.9), (5, 9, 0.1)]}
+    # Frames 0-4 score 0.9 (3 abnormal of 5), frames 5-9 score 0.1: P 0.6 at R 1.
+    assert frame_ap([video]) == pytest.approx(0.6)
