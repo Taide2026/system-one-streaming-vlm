@@ -8,6 +8,8 @@ The holmes-vau-ucf-train asset gives ucf_database_train.json: {"Abuse001_x264": 
 """
 from __future__ import annotations
 
+import json
+import random
 from collections.abc import Callable
 from pathlib import Path
 
@@ -23,7 +25,7 @@ NORMAL_CATEGORY = "Normal"
 
 def holmes_frames(events_s: list[list[float]], fps: float) -> tuple[tuple[int, int], ...]:
     """Holmes events in seconds -> inclusive frame ranges (round(start * fps), round(end * fps) - 1), in order."""
-    raise NotImplementedError
+    return tuple((round(start * fps), round(end * fps) - 1) for start, end in events_s)
 
 
 @DATASETS.register("ucf_crime_train")
@@ -35,7 +37,18 @@ class UcfCrimeTrain:
     def __init__(self, path: str | Path, holmes_asset: str, max_duration_s: float, per_class: int, n_normal: int,
                  seed: int, asset: str | None = None, probe: Probe = probe_video,
                  resolver: Callable[[str], Path] | None = None) -> None:
-        raise NotImplementedError
+        self.root = Path(path)
+        self.max_duration_s, self.per_class, self.n_normal, self.seed = max_duration_s, per_class, n_normal, seed
+        self.probe = probe
+        if resolver is None:
+            from s1stream.assets import resolve
+            resolver = resolve
+        self.holmes_path = resolver(holmes_asset) / HOLMES_FILE
+        try:
+            with self.holmes_path.open() as stream:
+                self.holmes = json.load(stream)
+        except (OSError, json.JSONDecodeError) as exc:
+            raise DatasetError(f"Cannot read Holmes data: {self.holmes_path}") from exc
 
     def items(self) -> list[VideoItem]:
         """The selected train videos.
@@ -50,4 +63,31 @@ class UcfCrimeTrain:
            holmes_frames(holmes[stem]["events"], fps) for anomaly videos and () for normal videos.
         Return the anomaly categories in sorted order, then the normal videos; each group sorted by name.
         """
-        raise NotImplementedError
+        groups: dict[str, list[VideoItem]] = {}
+        for line in (self.root / SPLIT_FILE).read_text().splitlines():
+            if not line.strip():
+                continue
+            relative = Path(line)
+            name, stem = relative.name, relative.stem
+            if stem not in self.holmes:
+                continue
+            path = self.root / "videos" / relative
+            fps, n_frames = self.probe(path)
+            if fps <= 0 or n_frames / fps > self.max_duration_s:
+                continue
+            category = NORMAL_CATEGORY if relative.parent.name == NORMAL_TRAIN_FOLDER else relative.parent.name
+            events = () if category == NORMAL_CATEGORY else holmes_frames(self.holmes[stem]["events"], fps)
+            groups.setdefault(category, []).append(VideoItem(name, path, category, fps, n_frames, events))
+
+        selected: list[VideoItem] = []
+        categories = sorted(category for category in groups if category != NORMAL_CATEGORY)
+        if NORMAL_CATEGORY in groups:
+            categories.append(NORMAL_CATEGORY)
+        for category in categories:
+            group = sorted(groups[category], key=lambda item: item.name)
+            needed = self.n_normal if category == NORMAL_CATEGORY else self.per_class
+            if len(group) < needed:
+                raise DatasetError(f"Too few {category} videos")
+            picked = random.Random(self.seed).sample(group, needed)
+            selected.extend(sorted(picked, key=lambda item: item.name))
+        return selected
