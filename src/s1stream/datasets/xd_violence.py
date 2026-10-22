@@ -3,7 +3,8 @@
 Asset layout (prepare xd_violence): videos/<name>.mp4 and annotations/annotations.txt. A video's labels are the part
 of its name after "_label_": A (non-violent) or up to three of B1 Fighting, B2 Shooting, B4 Riot, B5 Abuse,
 B6 Car accident, G Explosion, "0" for none (e.g. "..._label_G-B2-B6.mp4"). annotations.txt has one line per violent
-video: its name without ".mp4", then the first and last frame of each violent event ("<name> s1 e1 [s2 e2 ...]").
+video: its name (most lines without ".mp4", 14 with it), then the first and last frame of each violent event
+("<name> s1 e1 [s2 e2 ...]").
 """
 from __future__ import annotations
 
@@ -33,8 +34,8 @@ def classes_of(name: str) -> tuple[str, ...]:
 
 
 def parse_annotations(text: str) -> dict[str, tuple[tuple[int, int], ...]]:
-    """annotations.txt -> {video name with ".mp4": ((first, last), ...)}. Raise DatasetError for a line whose frame
-    numbers do not come in pairs."""
+    """annotations.txt -> {video name with ".mp4": ((first, last), ...)}; a name may come with or without ".mp4".
+    Raise DatasetError for a line whose frame numbers do not come in pairs."""
     events = {}
     for line in text.splitlines():
         fields = line.split()
@@ -43,7 +44,7 @@ def parse_annotations(text: str) -> dict[str, tuple[tuple[int, int], ...]]:
         frames = [int(value) for value in fields[1:]]
         if not frames or len(frames) % 2:
             raise DatasetError(f"Frames do not come in pairs: {line!r}")
-        events[fields[0] + ".mp4"] = tuple(zip(frames[0::2], frames[1::2]))
+        events[fields[0].removesuffix(".mp4") + ".mp4"] = tuple(zip(frames[0::2], frames[1::2]))
     return events
 
 

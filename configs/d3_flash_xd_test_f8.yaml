@@ -1,5 +1,5 @@
 # Latency and abnormal metrics of d3-flash (Decision 3.0) on the XD-Violence test set: 500 violent + 300 non-violent = 800.
-# max_duration_s 4000 keeps every test video.
+# max_duration_s 4000 keeps every test video (the longest is 1383 s): 27.0 h at 24 fps, 48663 windows of 2 s.
 # Run: scripts/run.sh run configs/d3_flash_xd_test_f8.yaml
 name: d3_flash_xd_test_f8
 

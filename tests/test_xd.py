@@ -41,6 +41,8 @@ def test_parse_annotations_pairs_frames_per_video():
     assert events["v=abc__#1_label_B1-0-0.mp4"] == ((523, 610), (900, 1700))
     with pytest.raises(DatasetError):
         parse_annotations("v=abc__#1_label_B1-0-0 523 610 900\n")
+    # Some lines of the authors' file name the video with ".mp4".
+    assert parse_annotations("v=abc__#1_label_B1-0-0.mp4 3 9\n") == {"v=abc__#1_label_B1-0-0.mp4": ((3, 9),)}
 
 
 def test_select_splits_violent_and_normal_with_events(tmp_path):
