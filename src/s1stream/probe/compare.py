@@ -51,6 +51,7 @@ from s1stream.windows import window_frame_range
 
 METRICS = ("frame_auc", "frame_ap", "window_auc")
 PAIRS = (("A", "B"), ("C", "B"), ("C", "A"))
+WINDOW_KEYS = ("i", "video", "window", "start_s", "end_s", "label")  # p_yes and seconds differ per condition
 N_BOOT, SEED = 1000, 20261022
 
 
@@ -216,10 +217,14 @@ def bootstrap(scores: dict[str, np.ndarray], p_yes: dict[str, np.ndarray], meta:
     return result
 
 
+def _window_keys(rows: list[dict]) -> list[tuple]:
+    return [tuple(row.get(key) for key in WINDOW_KEYS) for row in rows]
+
+
 def run_compare(config_path: Path, run_dir: Path, items: dict[str, VideoItem] | None = None,
                 log: Callable[[str], None] = print) -> Path:
     """Read run_dir/fit-<condition>/ (fit.json, test_scores.npy, test_meta.jsonl) for each condition present;
-    raise ValueError when the test_meta.jsonl rows of two conditions differ, FileNotFoundError without any fit
+    raise ValueError when the WINDOW_KEYS of the test_meta.jsonl rows of two conditions differ, FileNotFoundError without any fit
     folder and FileExistsError when run_dir/compare.json exists. items None: build the test items from the config
     (probe.extract.load_probe_config, registry DATASETS); given items: the config is not read. CKA reads the test features of each fit (fit.json
     "features" / "test" / "<kind>.npy") one state at a time (mmap). Write compare.json and the PNG files with
@@ -250,7 +255,7 @@ def run_compare(config_path: Path, run_dir: Path, items: dict[str, VideoItem] | 
             rows = [json.loads(line) for line in (folder / "test_meta.jsonl").read_text().splitlines()]
         except json.JSONDecodeError as exc:
             raise ValueError(f"Invalid test metadata in {folder}") from exc
-        if meta is not None and rows != meta:
+        if meta is not None and _window_keys(rows) != _window_keys(meta):
             raise ValueError(f"Test metadata differs for {condition}")
         meta = rows
         features[condition] = Path(fit["features"])

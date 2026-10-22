@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 import numpy as np
+import pytest
 
 from s1stream import metrics
 from s1stream.probe.compare import bootstrap, frame_metric, layer_summary, linear_cka, run_compare
@@ -93,8 +94,8 @@ def test_bootstrap_point_equals_frame_metric():
     assert abs(frame_metric(scores["B"][0, 0, 0], meta, items, "frame_auc") - metrics.frame_auc(videos)) < 1e-12
 
 
-def test_run_compare_writes_outputs(tmp_path):
-    items, meta = make_test_set()
+def write_fits(tmp_path: Path, meta: list[dict], metas: dict[str, list[dict]] | None = None) -> Path:
+    """Three synthetic fit folders under tmp_path/run; metas overrides the test_meta.jsonl rows per condition."""
     run = tmp_path / "run"
     rng = np.random.default_rng(6)
     for seed, name in enumerate(("A", "B", "C")):
@@ -105,9 +106,16 @@ def test_run_compare_writes_outputs(tmp_path):
         fit = run / f"fit-{name}"
         fit.mkdir(parents=True)
         np.save(fit / "test_scores.npy", scores_array(meta, seed))
-        (fit / "test_meta.jsonl").write_text("".join(json.dumps(row) + "\n" for row in meta))
+        rows = (metas or {}).get(name, meta)
+        (fit / "test_meta.jsonl").write_text("".join(json.dumps(row) + "\n" for row in rows))
         (fit / "fit.json").write_text(json.dumps({"methods": list(METHODS), "kinds": list(KINDS), "n_states": STATES,
                                                   "features": str(features.parent), "choices": {}}))
+    return run
+
+
+def test_run_compare_writes_outputs(tmp_path):
+    items, meta = make_test_set()
+    run = write_fits(tmp_path, meta)
     out = run_compare(Path("unused.yaml"), run, items=items, log=lambda line: None)
     assert out == run / "compare.json"
     result = json.loads(out.read_text())
@@ -116,3 +124,15 @@ def test_run_compare_writes_outputs(tmp_path):
         for kind in KINDS:
             assert (run / f"{method}_{kind}.png").stat().st_size > 0
     assert (run / "cka.png").stat().st_size > 0
+
+
+def test_run_compare_checks_only_window_keys(tmp_path):
+    items, meta = make_test_set()
+    own = [dict(row, p_yes=0.1 * (row["i"] % 7), seconds=0.6 + row["i"]) for row in meta]
+    run = write_fits(tmp_path / "ok", meta, {"B": own})
+    result = json.loads(run_compare(Path("unused.yaml"), run, items=items, log=lambda line: None).read_text())
+    assert result["conditions"] == ["A", "B", "C"]
+    moved = [dict(row, video="v0.mp4") if row["i"] == 5 else row for row in meta]
+    run = write_fits(tmp_path / "bad", meta, {"B": moved})
+    with pytest.raises(ValueError, match="differs for B"):
+        run_compare(Path("unused.yaml"), run, items=items, log=lambda line: None)
