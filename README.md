@@ -110,6 +110,13 @@ but `fetch --check ucf-crime` fails on this layout.
 **Do not run it on a machine that has `ucf-crime` from the zip.** Before it makes a link, it deletes the file
 of the same name in `videos/`. On a zip layout, that file is the real video.
 
+### XD-Violence (test set)
+
+`uv run s1stream fetch xd-violence` downloads the 800 test videos (10.8 GB zip, the authors' OneDrive link) into
+`videos/` and the test annotations into `annotations/annotations.txt` (hash in `assets.yaml`). Dataset `xd_violence`:
+a video's labels are in its name (`_label_A` non-violent; B1 Fighting, B2 Shooting, B4 Riot, B5 Abuse, B6 Car accident,
+G Explosion), its events in `annotations.txt`. Configs: `configs/<model>_xd_test_f8.yaml` (Yes / No).
+
 ## Run an experiment
 
 ```bash
