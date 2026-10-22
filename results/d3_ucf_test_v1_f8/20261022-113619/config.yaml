@@ -1,0 +1,41 @@
+name: d3_ucf_test_v1_f8
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 140
+  n_normal: 150
+  max_duration_s: 4000
+  seed: 20261009
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+  state: Surveillance camera footage, 2 seconds.
+  text: If you were a law enforcement agency, would you rate this scene as a scene
+    involving suspicious activities such as abuse (intentionally harming or mistreating
+    others), arrest (legally detaining someone), arson (deliberately setting fire),
+    assault (physical attack on someone), burglary (illegally entering with the intent
+    to commit a crime), disorderly conduct (disruptive or destructive behavior), explosion
+    (violent release of energy), fighting (violent confrontation), robbery (unlawfully
+    taking property), shooting (firing a gun), shoplifting (stealing from a retail
+    store), theft (taking someone else's property without permission), or vandalism
+    (deliberate destruction of property), rather than a standard scene?
+  options:
+  - 'Yes'
+  - 'No'
+  positive: 'Yes'
+input_form:
+  name: frames
+backbone:
+  name: d3
+  asset: d3
+  memory_cap_gb: 90
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01
