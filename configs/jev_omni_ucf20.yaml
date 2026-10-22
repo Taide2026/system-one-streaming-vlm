@@ -17,10 +17,7 @@ window:
   frames: 8
 
 question:
-  state: Surveillance camera footage, 2 seconds.
-  text: Is something abnormal happening, such as a crime, an accident, a fight, a fire or an explosion?
-  options: ["Yes", "No"]
-  positive: "Yes"
+  prompt: yes_no_hint
 
 input_form:
   name: frames

@@ -19,14 +19,7 @@ window:
   frames: 8
 
 question:
-  state: Surveillance camera footage, 2 seconds.
-  text: What is happening?
-  # UCF-Crime's 13 anomaly classes + Normal. Arrest is "Police arrest" (for Gemma 4 E4B "Arrest" and "Arson" share
-  # their first token) and RoadAccidents is "Road accident"; the score is the sum over the 13 anomaly classes.
-  options: [Normal, Abuse, Police arrest, Arson, Assault, Burglary, Explosion, Fighting, Road accident, Robbery,
-            Shooting, Shoplifting, Stealing, Vandalism]
-  positive: [Abuse, Police arrest, Arson, Assault, Burglary, Explosion, Fighting, Road accident, Robbery, Shooting,
-             Shoplifting, Stealing, Vandalism]
+  prompt: c14
 
 input_form:
   name: frames

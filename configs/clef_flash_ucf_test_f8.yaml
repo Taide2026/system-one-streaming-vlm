@@ -17,10 +17,7 @@ window:
   frames: 8
 
 question:
-  state: Surveillance camera footage, 2 seconds.
-  text: Is something abnormal happening?
-  options: ["Yes", "No"]
-  positive: "Yes"
+  prompt: yes_no
 
 input_form:
   name: frames

@@ -1,5 +1,13 @@
-"""Prompt variants that follow the prompts of online VAD methods. A config picks one with question: {prompt: <name>}
-(s1stream.config.load_config fills state, text, options and positive from PROMPTS; keys given in the config win).
+"""Every question prompt of the configs. A config picks one with question: {prompt: <name>} (s1stream.config.load_config
+fills state, text, options and positive from PROMPTS; keys given in the config win).
+
+Our first prompts, retired on 2026-10-23 for v1 and v2:
+yes_no  "Is something abnormal happening?"; score p(Yes).
+c14  UCF-Crime's 13 anomaly classes + Normal by name; score 1 - p(Normal). Arrest is "Police arrest" (for Gemma 4 E4B
+    "Arrest" and "Arson" share their first token) and RoadAccidents is "Road accident".
+yes_no_hint  yes_no with examples, the question of the jev_omni_ucf20 run.
+
+The variants that follow the prompts of online VAD methods:
 
 v1  MoniTor (NeurIPS 2025): its anomaly prior, the 13 activities and their definitions verbatim from its released
     context prompt (github.com/YsTvT/MoniTor, slurm/ucf_crime/04_summary.sh, "Recommended"): disorderly conduct and
@@ -18,6 +26,12 @@ v1_xd, v2_xd  v1 and v2 for XD-Violence: its six classes, defined as in MoniTor'
 from __future__ import annotations
 
 STATE = "Surveillance camera footage, 2 seconds."
+
+YES_NO_TEXT = "Is something abnormal happening?"
+YES_NO_HINT_TEXT = "Is something abnormal happening, such as a crime, an accident, a fight, a fire or an explosion?"
+C14_TEXT = "What is happening?"
+C14_OPTIONS = ["Normal", "Abuse", "Police arrest", "Arson", "Assault", "Burglary", "Explosion", "Fighting",
+               "Road accident", "Robbery", "Shooting", "Shoplifting", "Stealing", "Vandalism"]
 
 V1_TEXT = (
     "If you were a law enforcement agency, would you rate this scene as a scene involving suspicious activities such "
@@ -99,6 +113,9 @@ V2_XD_TEXT = "\n".join([
 ])
 
 PROMPTS: dict[str, dict] = {
+    "yes_no": {"state": STATE, "text": YES_NO_TEXT, "options": ["Yes", "No"], "positive": "Yes"},
+    "yes_no_hint": {"state": STATE, "text": YES_NO_HINT_TEXT, "options": ["Yes", "No"], "positive": "Yes"},
+    "c14": {"state": STATE, "text": C14_TEXT, "options": C14_OPTIONS, "positive": C14_OPTIONS[1:]},
     "v1": {"state": STATE, "text": V1_TEXT, "options": ["Yes", "No"], "positive": "Yes"},
     "v2": {"state": STATE, "text": V2_TEXT, "options": [*V2_CLASSES, "None"], "positive": list(V2_CLASSES)},
     "v3": {"state": STATE, "text": V3_TEXT, "options": ["Yes", "No"], "positive": "Yes"},

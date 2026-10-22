@@ -116,7 +116,7 @@ of the same name in `videos/`. On a zip layout, that file is the real video.
 `videos/` and the test annotations into `annotations/annotations.txt` (hash in `assets.yaml`). Dataset `xd_violence`:
 a video's labels are in its name (`_label_A` non-violent; B1 Fighting, B2 Shooting, B4 Riot, B5 Abuse, B6 Car accident,
 G Explosion), its events in `annotations.txt`. Configs: `configs/<model>_xd_test_v1_f8.yaml` and
-`configs/<model>_xd_test_v2_f8.yaml` (prompts `v1_xd`, `v2_xd`); `<model>_xd_test_f8.yaml` is the old Yes / No.
+`configs/<model>_xd_test_v2_f8.yaml` (prompts `v1_xd`, `v2_xd`).
 
 ## Run an experiment
 
@@ -157,7 +157,7 @@ uv run s1stream report results/jev_omni_ucf20/<run>
 name: jev_omni_ucf20
 dataset:     {name: ucf_crime, asset: ucf-crime, n_anomaly: 10, n_normal: 10, max_duration_s: 60, seed: 20261009}
 window:      {length_s: 2.0, stride_s: 2.0, frames: 8}
-question:    {state: "...", text: "...", options: ["Yes", "No"], positive: "Yes"}
+question:    {prompt: yes_no_hint}
 input_form:  {name: frames}
 backbone:    {name: jev_omni, asset: jev-omni, memory_cap_gb: 40}
 answer_head: {name: option_prob, asset: jev-omni}
@@ -168,17 +168,21 @@ decision_rules:
 The score of a window is the probability of the `positive` option. `positive` may also list several options; the
 score is then the sum of their probabilities (e.g. every anomaly class of a many-class question, = 1 − p(Normal)).
 
-### Prompt variants
+### Prompts
 
-`src/s1stream/prompt.py` holds prompts that follow online methods; a config picks one with `question: {prompt: <name>}`
-(state, text, options and positive come from the prompt; keys written next to it win). The run folder's `config.yaml`
-holds the whole question.
+`src/s1stream/prompt.py` holds every prompt; a config picks one with `question: {prompt: <name>}` (state, text, options
+and positive come from the prompt; keys written next to it win). The run folder's `config.yaml` holds the whole
+question.
 
 | Prompt | Follows | Options | Score |
 |---|---|---|---|
+| `yes_no` | ours, retired for `v1` (2026-10-23): "Is something abnormal happening?" | Yes / No | p(Yes) |
+| `yes_no_hint` | `yes_no` with examples (the `jev_omni_ucf20` run) | Yes / No | p(Yes) |
+| `c14` | ours, retired for `v2`: UCF-Crime's 13 classes + Normal by name | Normal + 13 | 1 − p(Normal) |
 | `v1` | MoniTor (NeurIPS 2025): its anomaly prior, 13 activities with their definitions, verbatim | Yes / No | p(Yes) |
-| `v2` | ESOM (arXiv 2026): definition table with anonymous options, what counts / does not count, event boundary | None, A–M | 1 − p(None) |
+| `v2` | ESOM (arXiv 2026): definition table with anonymous options, what counts / does not count, event boundary | A–M, None | 1 − p(None) |
 | `v3` | ReactVAU (ECCV 2026): its fast model's question | Yes / No | p(Yes) |
+| `v1_xd`, `v2_xd` | `v1`, `v2` for XD-Violence: its six classes (MoniTor's XD-Violence definitions) | as `v1`, `v2` (A–F) | as `v1`, `v2` |
 
 To switch, change the name: `question: {prompt: v2}`. `configs/<model>_ucf_test_v{1,2,3}_f8.yaml` run them on all 290
 test videos (models: `d3`, `d3_flash`, `d3_nano`, `clef_flash`, `gemma4_e4b_constrained`). Sources and the v2 option →
