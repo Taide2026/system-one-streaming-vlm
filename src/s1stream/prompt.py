@@ -7,7 +7,8 @@ v1  MoniTor (NeurIPS 2025): its anomaly prior, the 13 activities and their defin
 v2  ESOM (arXiv 2026): its normalized definition, a markdown table with anonymous options, what counts, what does not
     count and the event boundary, plus None; score 1 - p(None). Counts: MoniTor's definitions (H: Wikipedia, Traffic
     collision). Does not count and the boundary are ours: ESOM's own tables are not released. V2_CLASSES maps the
-    options to the UCF-Crime classes.
+    options to the UCF-Crime classes. None comes last: decision runtimes list the options under their own codes A, B,
+    ... in order, so with None last each letter's code is the letter itself (A: A, ..., M: M, N: None).
 v3  ReactVAU (ECCV 2026): its fast model's question, without "Analyze the 2x2 video grid." (frames here, no grid);
     score p(Yes).
 """
@@ -60,6 +61,6 @@ V3_TEXT = "Is there any anomalous behavior, safety hazard, or event that disrupt
 
 PROMPTS: dict[str, dict] = {
     "v1": {"state": STATE, "text": V1_TEXT, "options": ["Yes", "No"], "positive": "Yes"},
-    "v2": {"state": STATE, "text": V2_TEXT, "options": ["None", *V2_CLASSES], "positive": list(V2_CLASSES)},
+    "v2": {"state": STATE, "text": V2_TEXT, "options": [*V2_CLASSES, "None"], "positive": list(V2_CLASSES)},
     "v3": {"state": STATE, "text": V3_TEXT, "options": ["Yes", "No"], "positive": "Yes"},
 }

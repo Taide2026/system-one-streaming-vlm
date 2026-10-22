@@ -103,7 +103,7 @@ def test_load_config_positive_list_must_be_distinct_options(tmp_path, positive):
 
 def test_question_prompt_fills_the_question_and_raw(tmp_path):
     cfg = load_config(write(tmp_path, dict(EXAMPLE, question={"prompt": "v2"})), resolver=lambda name: tmp_path)
-    assert cfg.question.options == ("None",) + tuple(V2_CLASSES)
+    assert cfg.question.options == tuple(V2_CLASSES) + ("None",)
     assert cfg.question.score({option: 1 / 14 for option in cfg.question.options}) == pytest.approx(13 / 14)
     assert cfg.raw["question"] == {"prompt": "v2", **PROMPTS["v2"]}
 
