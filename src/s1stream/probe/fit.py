@@ -1,4 +1,4 @@
-"""CPU stage of probing: `s1stream probe-fit` (finetune-layer-probing decision 10).
+"""Probe stage of probing: `s1stream probe-fit` (finetune-layer-probing decision 10).
 
 Input: one features run of probe-extract (<set>/last.npy, <set>/visual.npy, <set>/meta.jsonl for train_anomaly,
 train_normal and test). For every token kind (KINDS) and state (0 .. n_states - 1) three probes give one score per
@@ -12,10 +12,14 @@ test window:
           video score = mean of the top-3 window scores.
 Validation: VAL_SHARE of the train videos of each category (split, seed). Choices read only train and validation
 windows. The chosen setting is then refit on all train windows and scores the test windows.
+mil and holmes heads train on `device` ("cpu" or "cuda"): Adam lr LR, STEPS full-batch steps (run-2 setting; run-1
+used lr 1e-2 and 200 steps, which oscillated on condition C). knn always runs on the CPU with scikit-learn.
 
 Writes into out:
   fit.json          {"methods": METHODS, "kinds": KINDS, "n_states": S, "features": <features dir>,
                      "val_videos": [...], "choices": {"<method>/<kind>/<state>": {"setting": {...}, "validation": x}}}
+                    mil and holmes choices also hold "final_loss" and "min_loss": the training loss after the last
+                    step and the lowest training loss over all steps of the head refit on all train windows
   test_scores.npy   float32 (len(METHODS), len(KINDS), S, n_test), in METHODS and KINDS order
   test_meta.jsonl   the test meta.jsonl of the features run, unchanged
 """
@@ -27,6 +31,7 @@ import time
 from collections import defaultdict
 from collections.abc import Callable
 from pathlib import Path
+from typing import NamedTuple
 
 import numpy as np
 import torch
@@ -39,8 +44,16 @@ KINDS = ("last", "visual")
 SETS = ("train_anomaly", "train_normal", "test")
 KS = ("1", "3", "frac8")
 LAMS = (1e-4, 1e-3, 1e-2)
-STEPS, LR, SEED, VAL_SHARE, TOP = 200, 1e-2, 20261022, 0.2, 3
+STEPS, LR, SEED, VAL_SHARE, TOP = 1000, 1e-3, 20261022, 0.2, 3
 K_NEIGHBORS, PCA_DIM = 5, 256
+
+
+class Fitted(NamedTuple):
+    """A trained head on the CPU, the training loss (data loss + lam * |w|^2) after the last step, and the lowest
+    training loss over all STEPS steps."""
+    head: torch.nn.Linear
+    final_loss: float
+    min_loss: float
 
 
 def bags(videos: list[str]) -> tuple[torch.Tensor, torch.Tensor, list[str]]:
@@ -95,18 +108,16 @@ def _fit_linear(x: torch.Tensor, loss_fn: Callable[[torch.Tensor], torch.Tensor]
 
 
 def fit_mil(x: torch.Tensor, video_y: torch.Tensor, index: torch.Tensor, mask: torch.Tensor, k: str,
-            lam: float) -> torch.nn.Linear:
+            lam: float, device: str = "cpu") -> Fitted:
     """Zero-initialized Linear(x.shape[1], 1), Adam lr LR, STEPS full-batch steps, torch.manual_seed(SEED); loss =
-    BCE-with-logits(topk_pool(head(x), index, mask, k), video_y) + lam * |w|^2."""
-    bce = torch.nn.BCEWithLogitsLoss()
-    return _fit_linear(x, lambda scores: bce(topk_pool(scores, index, mask, k), video_y), lam)
+    BCE-with-logits(topk_pool(head(x), index, mask, k), video_y) + lam * |w|^2. The inputs (CPU tensors) move to
+    device for training; the returned head is on the CPU."""
+    raise NotImplementedError
 
 
-def fit_window(x: torch.Tensor, y: torch.Tensor, lam: float) -> torch.nn.Linear:
+def fit_window(x: torch.Tensor, y: torch.Tensor, lam: float, device: str = "cpu") -> Fitted:
     """As fit_mil, but the loss is the per-window BCE-with-logits with pos_weight = (1 - mean(y)) / mean(y)."""
-    pos = float(y.mean())
-    bce = torch.nn.BCEWithLogitsLoss(pos_weight=torch.tensor((1 - pos) / max(pos, 1e-6)))
-    return _fit_linear(x, lambda scores: bce(scores, y), lam)
+    raise NotImplementedError
 
 
 def knn_scores(train_normal: np.ndarray, x: np.ndarray) -> np.ndarray:
@@ -132,10 +143,12 @@ def split(videos: list[str], category: dict[str, str], seed: int = SEED) -> set[
     return val
 
 
-def fit_condition(features: Path, out: Path, seed: int = SEED, log: Callable[[str], None] = print) -> None:
+def fit_condition(features: Path, out: Path, seed: int = SEED, log: Callable[[str], None] = print,
+                  device: str = "cpu") -> None:
     """Fit every method, kind and state on one features run and write fit.json, test_scores.npy and test_meta.jsonl
     into out (see the module docstring). Raise FileExistsError when out/fit.json exists. Load one state at a time
-    (np.load with mmap_mode="r") and cast it to float32."""
+    (np.load with mmap_mode="r") and cast it to float32. mil and holmes heads train on device (fit_mil, fit_window);
+    test scores are float32 numpy arrays on the CPU. knn does not depend on device."""
     if (out / "fit.json").exists():
         raise FileExistsError(out / "fit.json")
     meta_text = {name: (features / name / "meta.jsonl").read_text() for name in SETS}

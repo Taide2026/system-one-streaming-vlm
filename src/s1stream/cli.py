@@ -6,8 +6,8 @@
   s1stream fetch [--check] <asset> [<asset> ...]
   s1stream probe-extract <probe config.yaml> --condition <name> --run <name> [--limit-windows N]
       s1stream.probe.extract.run_extract; output $S1_FEATURES/<config name>/<condition>/<run name>
-  s1stream probe-fit <features run dir> [--out <dir>]
-      s1stream.probe.fit.fit_condition; default --out: results/<config name>/<run name>/fit-<condition>
+  s1stream probe-fit <features run dir> [--out <dir>] [--device cpu|cuda]
+      s1stream.probe.fit.fit_condition (device default cpu); default --out: results/<config name>/<run name>/fit-<condition>
   s1stream probe-compare <probe config.yaml> <results run dir>
       s1stream.probe.compare.run_compare; reads fit-<condition>/ in the run dir, writes compare.json and PNG files
 fetch: assets.fetch(lock[name], asset_root() / name); --check: assets.check only.
@@ -48,6 +48,7 @@ def main(argv: list[str] | None = None) -> int:
     fit_parser = commands.add_parser("probe-fit")
     fit_parser.add_argument("features", type=Path)
     fit_parser.add_argument("--out", type=Path)
+    fit_parser.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
     compare_parser = commands.add_parser("probe-compare")
     compare_parser.add_argument("config", type=Path)
     compare_parser.add_argument("run_dir", type=Path)
@@ -74,7 +75,7 @@ def main(argv: list[str] | None = None) -> int:
             if out_dir is None:
                 features = args.features.resolve()
                 out_dir = Path("results") / features.parent.parent.name / features.name / f"fit-{features.parent.name}"
-            fit_condition(args.features, out_dir)
+            fit_condition(args.features, out_dir, device=args.device)
             print(out_dir)
         elif args.command == "probe-compare":
             import s1stream.plugins  # noqa: F401  Register the dataset plugins.

@@ -71,7 +71,7 @@ def test_fit_mil_finds_positive_instance():
             instance.append(int(hit))
     index, mask, order = bags(videos)
     video_y = torch.tensor([1.0 if int(name[1:]) < 20 else 0.0 for name in order])
-    head = fit_mil(torch.tensor(np.stack(x), dtype=torch.float32), video_y, index, mask, "1", 1e-3)
+    head = fit_mil(torch.tensor(np.stack(x), dtype=torch.float32), video_y, index, mask, "1", 1e-3).head
     with torch.no_grad():
         scores = head(torch.tensor(np.stack(x), dtype=torch.float32)).squeeze(1).numpy()
     assert roc_auc_score(instance, scores) > 0.95
