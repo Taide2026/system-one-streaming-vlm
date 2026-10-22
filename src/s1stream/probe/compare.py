@@ -280,9 +280,10 @@ def run_compare(config_path: Path, run_dir: Path, items: dict[str, VideoItem] | 
             fig, ax = plt.subplots()
             for condition in fits:
                 curve = results["metrics"][f"{condition}/{method}/{kind}/frame_auc"]
-                ax.plot(curve["value"], label=condition)
-                ax.fill_between(range(n_states), curve["low"], curve["high"], alpha=0.2)
-                ax.axhline(results["p_yes"][f"{condition}/frame_auc"]["value"], linestyle="--",
+                line, = ax.plot(curve["value"], label=condition)
+                color = line.get_color()
+                ax.fill_between(range(n_states), curve["low"], curve["high"], color=color, alpha=0.2)
+                ax.axhline(results["p_yes"][f"{condition}/frame_auc"]["value"], color=color, linestyle="--",
                            label=f"{condition} P(Yes)")
             ax.set(xlabel="State", ylabel="Frame AUC", title=f"{method} / {kind}")
             ax.legend()
