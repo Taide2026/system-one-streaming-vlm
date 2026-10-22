@@ -16,6 +16,16 @@ ucf-crime:
     splits/Action_Regnition_splits/ClassIDs.txt: 4e2af08c8fdeb3466494f276e1e877e837317a001eca9d826f933be73e6e7fd8
     ReadMe-Anomaly-Detection.txt: 90e6c08923ef91c31e7b2ebf455b7ff82b8de31c79a7334a7b76f4cd2562098b
 
+# XD-Violence test set: videos.zip (the 800 test videos, the authors' OneDrive share link) + the test annotations from
+# the project page (roc-ng.github.io/XD-Violence); prepare xd_violence adds annotations/annotations.txt.
+xd-violence:
+  kind: archive
+  source: https://stuxidianeducn-my.sharepoint.com/:u:/g/personal/pengwu_stu_xidian_edu_cn/EdewYQSko-BHpew03RBfGLQBIAOUdF7jt1rC71rK5iBGag?e=v4Enay&download=1
+  size: 10804733011
+  prepare: xd_violence
+  sha256:
+    annotations/annotations.txt: 27b583ba06fe2e096d7e3d281845365c3b24de7e30797ae5c1ec771667e04c2f
+
 jev-omni:
   kind: hf_model
   source: akhilaaa3/Jev-Omni

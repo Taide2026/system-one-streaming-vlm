@@ -6,6 +6,7 @@ fetch downloads an asset, runs its prepare step, and checks its hashes. check on
 from __future__ import annotations
 
 import hashlib
+import http.cookiejar
 import os
 import shutil
 import urllib.request
@@ -102,10 +103,12 @@ def hf_download(asset: Asset, folder: Path) -> None:
 
 
 def archive_download(asset: Asset, folder: Path) -> None:
-    """Download, size-check, and extract an archive."""
+    """Download, size-check, and extract an archive. Cookies are kept across redirects: a SharePoint share link sets
+    one before it serves the file."""
     path = folder / "download.zip"
     size = 0
-    with urllib.request.urlopen(asset.source) as response, path.open("wb") as output:
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    with opener.open(asset.source) as response, path.open("wb") as output:
         while chunk := response.read(16 * 1024 * 1024):
             output.write(chunk)
             size += len(chunk)
@@ -174,8 +177,20 @@ def prepare_ucf_crime(folder: Path) -> None:
             empty.rmdir()
 
 
+XD_VIOLENCE_ANNOTATIONS = "https://roc-ng.github.io/XD-Violence/images/annotations.txt"
+
+
+def prepare_xd_violence(folder: Path) -> None:
+    """The XD-Violence test archive already holds videos/ (the 800 test videos); add the test annotations from the
+    project page as annotations/annotations.txt (its hash is locked)."""
+    target = folder / "annotations" / "annotations.txt"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with urllib.request.urlopen(XD_VIOLENCE_ANNOTATIONS) as response:
+        target.write_bytes(response.read())
+
+
 DOWNLOADERS: dict[str, Downloader] = {"hf_model": hf_download, "archive": archive_download}
-PREPARES: dict[str, Callable[[Path], None]] = {"ucf_crime": prepare_ucf_crime}
+PREPARES: dict[str, Callable[[Path], None]] = {"ucf_crime": prepare_ucf_crime, "xd_violence": prepare_xd_violence}
 
 
 def fetch(asset: Asset, folder: Path, download: Downloader | None = None) -> None:
