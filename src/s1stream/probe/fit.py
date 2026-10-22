@@ -82,7 +82,7 @@ def topk_pool(scores: torch.Tensor, index: torch.Tensor, mask: torch.Tensor, k: 
         counts = (sizes + 7) // 8
     else:
         counts = sizes.clamp(max=int(k))
-    keep = torch.arange(ordered.shape[1])[None, :] < counts[:, None]
+    keep = torch.arange(ordered.shape[1], device=ordered.device)[None, :] < counts[:, None]
     return torch.where(keep, ordered, 0).sum(dim=1) / counts
 
 
@@ -93,18 +93,23 @@ def standardize(train: np.ndarray, *others: np.ndarray) -> list[torch.Tensor]:
     return [torch.tensor((a - mean) / (std + 1e-4), dtype=torch.float32) for a in (train, *others)]
 
 
-def _fit_linear(x: torch.Tensor, loss_fn: Callable[[torch.Tensor], torch.Tensor], lam: float) -> torch.nn.Linear:
+def _fit_linear(x: torch.Tensor, loss_fn: Callable[[torch.Tensor], torch.Tensor], lam: float,
+                device: str) -> Fitted:
+    x = x.to(device)
     torch.manual_seed(SEED)
-    head = torch.nn.Linear(x.shape[1], 1)
+    head = torch.nn.Linear(x.shape[1], 1).to(device)
     torch.nn.init.zeros_(head.weight)
     torch.nn.init.zeros_(head.bias)
     optimizer = torch.optim.Adam(head.parameters(), lr=LR)
+    min_loss = float("inf")
     for _ in range(STEPS):
         optimizer.zero_grad()
         loss = loss_fn(head(x).squeeze(1)) + lam * head.weight.square().sum()
+        final_loss = float(loss.detach())
+        min_loss = min(min_loss, final_loss)
         loss.backward()
         optimizer.step()
-    return head
+    return Fitted(head.cpu(), final_loss, min_loss)
 
 
 def fit_mil(x: torch.Tensor, video_y: torch.Tensor, index: torch.Tensor, mask: torch.Tensor, k: str,
@@ -112,12 +117,17 @@ def fit_mil(x: torch.Tensor, video_y: torch.Tensor, index: torch.Tensor, mask: t
     """Zero-initialized Linear(x.shape[1], 1), Adam lr LR, STEPS full-batch steps, torch.manual_seed(SEED); loss =
     BCE-with-logits(topk_pool(head(x), index, mask, k), video_y) + lam * |w|^2. The inputs (CPU tensors) move to
     device for training; the returned head is on the CPU."""
-    raise NotImplementedError
+    video_y, index, mask = video_y.to(device), index.to(device), mask.to(device)
+    bce = torch.nn.BCEWithLogitsLoss()
+    return _fit_linear(x, lambda scores: bce(topk_pool(scores, index, mask, k), video_y), lam, device)
 
 
 def fit_window(x: torch.Tensor, y: torch.Tensor, lam: float, device: str = "cpu") -> Fitted:
     """As fit_mil, but the loss is the per-window BCE-with-logits with pos_weight = (1 - mean(y)) / mean(y)."""
-    raise NotImplementedError
+    y = y.to(device)
+    pos_weight = ((1 - y.mean()) / y.mean()).detach()
+    bce = torch.nn.BCEWithLogitsLoss(pos_weight=pos_weight)
+    return _fit_linear(x, lambda scores: bce(scores, y), lam, device)
 
 
 def knn_scores(train_normal: np.ndarray, x: np.ndarray) -> np.ndarray:
@@ -185,7 +195,7 @@ def fit_condition(features: Path, out: Path, seed: int = SEED, log: Callable[[st
             best_mil = (float("inf"), "1", LAMS[0])
             for k in KS:
                 for lam in LAMS:
-                    head = fit_mil(fit_x, fit_labels, fit_index, fit_mask, k, lam)
+                    head = fit_mil(fit_x, fit_labels, fit_index, fit_mask, k, lam, device=device).head
                     with torch.no_grad():
                         pooled = topk_pool(head(val_x).squeeze(1), val_index, val_mask, k)
                         value = float(bce(pooled, val_labels))
@@ -196,7 +206,7 @@ def fit_condition(features: Path, out: Path, seed: int = SEED, log: Callable[[st
 
             best_holmes = (-float("inf"), LAMS[0])
             for lam in LAMS:
-                head = fit_window(fit_x, holmes[~is_val], lam)
+                head = fit_window(fit_x, holmes[~is_val], lam, device=device).head
                 with torch.no_grad():
                     val_scores = head(val_x).squeeze(1).numpy()
                 value = float(roc_auc_score(holmes[is_val].numpy(), val_scores))
@@ -217,11 +227,13 @@ def fit_condition(features: Path, out: Path, seed: int = SEED, log: Callable[[st
 
             test = np.asarray(arrays[kind]["test"][:, state], dtype=np.float32)
             all_x, test_x = standardize(train, test)
-            mil_head = fit_mil(all_x, all_labels, all_index, all_mask, best_mil[1], best_mil[2])
-            holmes_head = fit_window(all_x, holmes, best_holmes[1])
+            mil_head = fit_mil(all_x, all_labels, all_index, all_mask, best_mil[1], best_mil[2], device=device)
+            holmes_head = fit_window(all_x, holmes, best_holmes[1], device=device)
+            choices[f"mil/{kind}/{state}"].update(final_loss=mil_head.final_loss, min_loss=mil_head.min_loss)
+            choices[f"holmes/{kind}/{state}"].update(final_loss=holmes_head.final_loss, min_loss=holmes_head.min_loss)
             with torch.no_grad():
-                scores[0, kind_i, state] = mil_head(test_x).squeeze(1).numpy()
-                scores[1, kind_i, state] = holmes_head(test_x).squeeze(1).numpy()
+                scores[0, kind_i, state] = mil_head.head(test_x).squeeze(1).numpy()
+                scores[1, kind_i, state] = holmes_head.head(test_x).squeeze(1).numpy()
             scores[2, kind_i, state] = knn_scores(train[normal], test)
             log(f"{kind} state {state}: {time.monotonic() - started:.2f}s")
 
