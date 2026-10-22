@@ -115,7 +115,8 @@ of the same name in `videos/`. On a zip layout, that file is the real video.
 `uv run s1stream fetch xd-violence` downloads the 800 test videos (10.8 GB zip, the authors' OneDrive link) into
 `videos/` and the test annotations into `annotations/annotations.txt` (hash in `assets.yaml`). Dataset `xd_violence`:
 a video's labels are in its name (`_label_A` non-violent; B1 Fighting, B2 Shooting, B4 Riot, B5 Abuse, B6 Car accident,
-G Explosion), its events in `annotations.txt`. Configs: `configs/<model>_xd_test_f8.yaml` (Yes / No).
+G Explosion), its events in `annotations.txt`. Configs: `configs/<model>_xd_test_v1_f8.yaml` and
+`configs/<model>_xd_test_v2_f8.yaml` (prompts `v1_xd`, `v2_xd`); `<model>_xd_test_f8.yaml` is the old Yes / No.
 
 ## Run an experiment
 

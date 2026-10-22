@@ -5,7 +5,8 @@ import pytest
 import yaml
 
 from s1stream.config import ConfigError, ExperimentConfig, load_config
-from s1stream.prompt import PROMPTS, V2_CLASSES
+from s1stream.datasets.xd_violence import LABELS
+from s1stream.prompt import PROMPTS, V2_CLASSES, V2_XD_CLASSES
 from s1stream.registry import Registry, RegistryError
 from s1stream.types import Question
 
@@ -106,6 +107,12 @@ def test_question_prompt_fills_the_question_and_raw(tmp_path):
     assert cfg.question.options == tuple(V2_CLASSES) + ("None",)
     assert cfg.question.score({option: 1 / 14 for option in cfg.question.options}) == pytest.approx(13 / 14)
     assert cfg.raw["question"] == {"prompt": "v2", **PROMPTS["v2"]}
+
+
+def test_xd_prompts_name_the_xd_classes_with_none_last():
+    assert set(V2_XD_CLASSES.values()) == set(LABELS.values())
+    assert PROMPTS["v2_xd"]["options"] == [*V2_XD_CLASSES, "None"]
+    assert PROMPTS["v1_xd"]["options"] == ["Yes", "No"]
 
 
 def test_question_prompt_keys_in_the_config_win(tmp_path):

@@ -11,6 +11,9 @@ v2  ESOM (arXiv 2026): its normalized definition, a markdown table with anonymou
     ... in order, so with None last each letter's code is the letter itself (A: A, ..., M: M, N: None).
 v3  ReactVAU (ECCV 2026): its fast model's question, without "Analyze the 2x2 video grid." (frames here, no grid);
     score p(Yes).
+v1_xd, v2_xd  v1 and v2 for XD-Violence: its six classes, defined as in MoniTor's XD-Violence context prompt
+    (slurm/xd_violence/04_summary.sh, the one with definitions), and STATE_XD (movies, sports, news and CCTV, not
+    only surveillance). V2_XD_CLASSES maps the options to the XD-Violence classes (datasets/xd_violence.LABELS).
 """
 from __future__ import annotations
 
@@ -59,8 +62,47 @@ V2_TEXT = "\n".join([
 
 V3_TEXT = "Is there any anomalous behavior, safety hazard, or event that disrupts the normal scene?"
 
+STATE_XD = "Video footage, 2 seconds."
+
+V1_XD_TEXT = (
+    "Would you rate this scene as a scene involving suspicious or potential criminal activities, such as abuse "
+    "(inflicting improper harm or misconduct on others), car accident (collision events involving motor vehicles on "
+    "roads that may cause property damage or personal injury), explosion (phenomenon where substances release energy "
+    "violently due to chemical reactions or physical processes), fighting (physical conflicts between two or more "
+    "parties due to disputes, revenge, or other reasons), riot (a group of people protesting or resisting against the "
+    "government or other organizations in a violent manner), or shooting (act of firing with firearms, possibly "
+    "involving murder or assault), rather than a normal scene?"
+)
+
+V2_XD_CLASSES = {"A": "Abuse", "B": "Car accident", "C": "Explosion", "D": "Fighting", "E": "Riot", "F": "Shooting"}
+# (option, counts, does not count), in V2_XD_CLASSES order.
+V2_XD_ROWS = (
+    ("A", "inflicting improper harm or misconduct on others", "play, care, or both sides hitting (D)"),
+    ("B", "collision events involving motor vehicles on roads that may cause property damage or personal injury",
+     "heavy traffic, a near miss without contact"),
+    ("C", "phenomenon where substances release energy violently due to chemical reactions or physical processes",
+     "smoke or fire without a blast"),
+    ("D", "physical conflicts between two or more parties due to disputes, revenge, or other reasons",
+     "sports, play fighting"),
+    ("E", "a group of people protesting or resisting against the government or other organizations in a violent manner",
+     "peaceful protests, marches, cheering crowds"),
+    ("F", "act of firing with firearms, possibly involving murder or assault", "holding or showing a gun without firing"),
+)
+V2_XD_TEXT = "\n".join([
+    "Which defined event happens in these 2 seconds? Answer with its option, or None if no defined event happens.",
+    "An event counts from its first act (the first blow, shot, blast or contact) until it stops.",
+    "",
+    "| Option | Counts | Does not count |",
+    "|---|---|---|",
+    *(f"| {option} | {counts} | {excluded} |" for option, counts, excluded in V2_XD_ROWS),
+    "| None | no defined event: people, vehicles and scenes as usual | |",
+])
+
 PROMPTS: dict[str, dict] = {
     "v1": {"state": STATE, "text": V1_TEXT, "options": ["Yes", "No"], "positive": "Yes"},
     "v2": {"state": STATE, "text": V2_TEXT, "options": [*V2_CLASSES, "None"], "positive": list(V2_CLASSES)},
     "v3": {"state": STATE, "text": V3_TEXT, "options": ["Yes", "No"], "positive": "Yes"},
+    "v1_xd": {"state": STATE_XD, "text": V1_XD_TEXT, "options": ["Yes", "No"], "positive": "Yes"},
+    "v2_xd": {"state": STATE_XD, "text": V2_XD_TEXT, "options": [*V2_XD_CLASSES, "None"],
+              "positive": list(V2_XD_CLASSES)},
 }
