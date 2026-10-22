@@ -4,8 +4,10 @@
       default --out: results/<config name>/<YYYYmmdd-HHMMSS>
   s1stream report <run dir>
   s1stream fetch [--check] <asset> [<asset> ...]
+  s1stream probe-extract <probe config.yaml> --condition <name> --run <name> [--limit-windows N]
+      s1stream.probe.extract.run_extract; output $S1_FEATURES/<config name>/<condition>/<run name>
       fetch: assets.fetch(lock[name], asset_root() / name); --check: assets.check only.
-Exit code 0 on success, 1 on an AssetError, ConfigError or FileExistsError (message on stderr).
+Exit code 0 on success, 1 on an AssetError, ConfigError, DatasetError or FileExistsError (message on stderr).
 """
 from __future__ import annotations
 
@@ -16,6 +18,7 @@ from pathlib import Path
 
 from s1stream import assets
 from s1stream.config import ConfigError, load_config
+from s1stream.datasets.ucf_crime import DatasetError
 from s1stream.report import report
 from s1stream.runner import run
 
@@ -33,6 +36,11 @@ def main(argv: list[str] | None = None) -> int:
     fetch_parser = commands.add_parser("fetch")
     fetch_parser.add_argument("--check", action="store_true")
     fetch_parser.add_argument("assets", nargs="+")
+    extract_parser = commands.add_parser("probe-extract")
+    extract_parser.add_argument("config", type=Path)
+    extract_parser.add_argument("--condition", required=True)
+    extract_parser.add_argument("--run", required=True)
+    extract_parser.add_argument("--limit-windows", type=int)
     args = parser.parse_args(argv)
 
     try:
@@ -44,6 +52,11 @@ def main(argv: list[str] | None = None) -> int:
             if out_dir is None:
                 out_dir = Path("results") / config.name / datetime.now().strftime("%Y%m%d-%H%M%S")
             print(run(config, out_dir, limit_windows=args.limit_windows))
+        elif args.command == "probe-extract":
+            import s1stream.plugins  # noqa: F401  Register the dataset and input-form plugins.
+            from s1stream.probe.extract import run_extract
+
+            print(run_extract(args.config, args.condition, args.run, limit_windows=args.limit_windows))
         elif args.command == "report":
             report(args.run_dir)
         else:
@@ -56,7 +69,7 @@ def main(argv: list[str] | None = None) -> int:
                     assets.check(lock[name], folder)
                 else:
                     assets.fetch(lock[name], folder)
-    except (assets.AssetError, ConfigError, FileExistsError) as exc:
+    except (assets.AssetError, ConfigError, DatasetError, FileExistsError) as exc:
         print(exc, file=sys.stderr)
         return 1
     return 0
