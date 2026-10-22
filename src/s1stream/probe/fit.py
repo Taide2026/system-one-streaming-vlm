@@ -18,7 +18,7 @@ used lr 1e-2 and 200 steps, which oscillated on condition C). knn always runs on
 Writes into out:
   fit.json          {"methods": METHODS, "kinds": KINDS, "n_states": S, "features": <features dir>,
                      "val_videos": [...], "choices": {"<method>/<kind>/<state>": {"setting": {...}, "validation": x}}}
-                    mil and holmes choices also hold "final_loss" and "min_loss": the training loss after the last
+                    mil and holmes choices also hold "final_loss" and "min_loss": the training loss of the last
                     step (before its update) and the lowest training loss over all steps of the head refit on all train windows
   test_scores.npy   float32 (len(METHODS), len(KINDS), S, n_test), in METHODS and KINDS order
   test_meta.jsonl   the test meta.jsonl of the features run, unchanged
