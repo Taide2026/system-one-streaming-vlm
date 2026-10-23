@@ -7,7 +7,7 @@ dataset:
   asset: ucf-crime
   n_anomaly: 140
   n_normal: 150
-  max_duration_s: 1.0e9
+  max_duration_s: 1000000000
   seed: 0
 
 window:
