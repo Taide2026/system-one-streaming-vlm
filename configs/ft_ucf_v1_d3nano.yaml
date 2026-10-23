@@ -1,0 +1,40 @@
+# Stage 1 of the fine-tuning study (2026-10-24): d3-nano (2.2B, noncausal prompt, 255-code read-out), UCF-Crime
+# training windows, V1 prompt. Same records as configs/ft_ucf_v1_clef.yaml (same data section and seed).
+# Run: scripts/ft.sh train d3nano (tmux) on spark.
+name: ft_ucf_v1_d3nano
+
+data:
+  asset: ucf-crime
+  hivau_json: ~/datasets/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json
+  n_abnormal: 20000
+  n_normal: 20000
+  n_val: 2000
+  holdout: 0.1
+  seed: 0
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+backbone:
+  name: d3
+  asset: d3-nano
+
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+
+optim:
+  lr: 1.5e-4
+  head_lr: 1.5e-4
+  warmup: 0.03
+  batch: 8
+  accumulate: 4
+  epochs: 1
+  workers: 6
+  grad_checkpoint: true

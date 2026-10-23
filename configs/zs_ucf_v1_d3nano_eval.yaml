@@ -1,0 +1,36 @@
+# Zero-shot reference on the same machine as the fine-tune (2026-10-24): d3-nano, all 290 UCF-Crime test videos,
+# V1 prompt, no adapter. Same windows as configs/ft_ucf_v1_d3nano_eval.yaml so the two runs differ only in the weights.
+name: zs_ucf_v1_d3nano_eval
+
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 140
+  n_normal: 150
+  max_duration_s: 1.0e9
+  seed: 0
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+input_form:
+  name: frames
+
+backbone:
+  name: d3
+  asset: d3-nano
+  memory_cap_gb: 40
+
+answer_head:
+  name: option_logits
+
+decision_rules:
+  - name: threshold
+    start: 0.0
+    stop: 1.0
+    step: 0.01
