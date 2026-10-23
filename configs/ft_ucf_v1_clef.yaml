@@ -6,7 +6,7 @@ name: ft_ucf_v1_clef
 
 data:
   asset: ucf-crime
-  hivau_json: ~/datasets/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json
+  hivau_json: $S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json  # S1_DATASETS: scripts/ft.sh
   n_abnormal: 10000
   n_normal: 10000
   n_val: 2000

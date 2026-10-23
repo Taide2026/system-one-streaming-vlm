@@ -7,13 +7,15 @@
 #                                         with backbone.adapter = run dir; default: the latest training run), then the report
 #   scripts/ft.sh zeroshot <model>        the zero-shot reference on the same machine (configs/zs_ucf_v1_<model>_eval.yaml)
 #   scripts/ft.sh stage1 <model>          smoke, train, eval, zeroshot in turn (tmux: `tmux new -s ft 'scripts/ft.sh stage1 clef'`)
-# <model>: clef | d3nano. PY: the python to use (default: the main checkout's venv; ~/kv-across/.venv has the fast
-# DeltaNet kernels).
+# <model>: clef | d3nano. PY: the python to use (default: the main checkout's venv on spark; ~/kv-across/.venv there has
+# the fast DeltaNet kernels; in the pro6000 container: /opt/venv/bin/python). S1_MACHINE names results/<machine>/.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 export S1_ASSETS="${S1_ASSETS:-$HOME/s1-assets}"
 export S1_MACHINE="${S1_MACHINE:-spark}"
 export PYTHONPATH=src
+# HIVAU-70k clone (github.com/pipixin321/HolmesVAU) lives under S1_DATASETS (spark: ~/datasets; pro6000: $DATA/datasets).
+export S1_DATASETS="${S1_DATASETS:-$HOME/datasets}"
 PY="${PY:-$HOME/system-one-streaming-vlm/.venv/bin/python}"
 MODEL="${2:-clef}"
 TRAIN="configs/ft_ucf_v1_$MODEL.yaml"

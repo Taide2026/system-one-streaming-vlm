@@ -301,7 +301,7 @@ def train(config_path: Path, out_dir: Path, limit_steps: int | None = None) -> P
 
     # ---- records
     root = resolve(dspec["asset"])
-    items = read_hivau(Path(dspec["hivau_json"]).expanduser(), root)
+    items = read_hivau(Path(os.path.expandvars(os.path.expanduser(dspec["hivau_json"]))), root)
     train_records, val_records = sample_records(
         items, float(window["length_s"]), float(window["stride_s"]), int(window["frames"]),
         int(dspec["n_abnormal"]), int(dspec["n_normal"]), int(dspec.get("n_val", 0)),
