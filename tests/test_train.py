@@ -23,7 +23,7 @@ def test_read_hivau_rounds_events_to_frames_and_checks_files(tmp_path: Path):
         (root / "videos" / folder).mkdir(parents=True)
         (root / "videos" / folder / f"{name}.mp4").write_bytes(b"")
     data = {"Abuse001_x264": {"n_frames": 300, "fps": 30.0, "label": ["Abuse"], "events": [[1.0, 2.5]]},
-            "Normal_Videos001_x264": {"n_frames": 120, "fps": 30.0, "label": ["Normal"], "events": [[0.5, 3.0]]}}
+            "Normal_Videos001_x264": {"n_frames": 120, "fps": 30.0, "label": [], "events": [[0.5, 3.0]]}}
     json_path = tmp_path / "ucf_database_train.json"
     json_path.write_text(json.dumps(data))
     items = read_hivau(json_path, root)

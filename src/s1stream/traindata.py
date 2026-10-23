@@ -78,7 +78,8 @@ def read_hivau(json_path: Path, root: Path) -> list[VideoItem]:
             raise TrainDataError(f"Video not found: {path}")
         # HIVAU lists "events" for normal videos too: randomly cropped normal segments (its event-level normal
         # samples). They are not anomalies: a normal video has no event here.
-        normal = list(entry.get("label", [])) == ["Normal"] or name.startswith("Normal_Videos")
+        label = list(entry.get("label") or [])
+        normal = label in ([], ["Normal"]) or name.startswith("Normal_Videos")
         events = () if normal else tuple((round(start * fps), max(round(start * fps), round(end * fps) - 1))
                                          for start, end in entry.get("events", []))
         category = "Normal" if normal else video_folder(name)
