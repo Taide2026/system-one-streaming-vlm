@@ -33,6 +33,8 @@ train() {
 }
 
 eval_run() {
+    # Accuracy run on a shared machine: frames are read ahead in background threads (seconds = model time only).
+    export S1_PREFETCH="${S1_PREFETCH:-4}"
     local run="${1:-$(latest_run)}" out config
     [ -n "$run" ] || { echo "no training run found" >&2; exit 1; }
     run="${run%/}"
@@ -50,6 +52,7 @@ EOF
 }
 
 zeroshot() {
+    export S1_PREFETCH="${S1_PREFETCH:-4}"
     local out="results/$S1_MACHINE/zs_ucf_v1_${MODEL}_eval/$(date +%Y%m%d-%H%M%S)"
     $PY -m s1stream.cli run "configs/zs_ucf_v1_${MODEL}_eval.yaml" --out "$out"
     $PY -m s1stream.cli report "$out"

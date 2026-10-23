@@ -15,7 +15,11 @@ windows' frames are read again), kv / kv_sinks / kv_compress (a StreamingBackbon
 video's first window), text (the past windows' scores go into the question's state). The window scored and labelled
 is always the newest one.
   run.json       {name, machine, gpu, started, finished, free_memory_gb, peak_gpu_gb, load_s, windows, limit_windows,
-                  versions: {python, torch, transformers}, git_commit, git_dirty, assets: {name: {revision, sha256}}}
+                  prefetch, versions: {python, torch, transformers}, git_commit, git_dirty,
+                  assets: {name: {revision, sha256}}}
+                 prefetch: S1_PREFETCH (default 0). > 0: the inputs of the next windows are built in that many
+                 background threads while the GPU runs (accuracy runs on a shared, I/O-bound machine); seconds
+                 then covers the backbone and the head only and is not a streaming latency. 0: sequential, as before.
                  machine: S1_MACHINE (e.g. spark, pro6000), else the host name; gpu: the CUDA device's name.
 """
 from __future__ import annotations
@@ -115,6 +119,9 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
                           f"{config.backbone['name']!r} keeps no cache (noncausal or bidirectional prompt?)")
     keep_windows = spec.keep_windows(config.window.stride_s)
     policy = cache_policy(spec, config.window.stride_s) if streaming else None
+    prefetch = int(os.environ.get("S1_PREFETCH", "0") or 0)
+    if prefetch and (streaming or spec.strategy == "text"):
+        prefetch = 0  # these build their inputs from the running state
 
     count = 0
     with (out_dir / "scores.jsonl").open("w") as stream:
@@ -126,9 +133,21 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
             scores_so_far: list[float] = []
             if streaming:
                 backbone.start_video()
+            built = None
+            if prefetch:
+                from concurrent.futures import ThreadPoolExecutor
+
+                pool = ThreadPoolExecutor(max_workers=prefetch)
+                todo = windows if limit_windows is None else windows[:max(0, limit_windows - count)]
+                built = {index: pool.submit(input_form.build, item,
+                                            with_past_frames(windows, index, keep_windows)
+                                            if spec.strategy == "recompute" else window, config.question)
+                         for index, window in enumerate(todo)}
             for index, window in enumerate(windows):
                 if limit_windows is not None and count >= limit_windows:
                     break
+                if built is not None:
+                    inp = built[index].result()
                 if cuda:
                     torch.cuda.synchronize()
                 start = time.perf_counter()
@@ -136,7 +155,8 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
                     seen = with_past_frames(windows, index, keep_windows) if spec.strategy == "recompute" else window
                     question = text_state(config.question, scores_so_far, spec.history) if spec.strategy == "text" \
                         else config.question
-                    inp = input_form.build(item, seen, question)
+                    if built is None:
+                        inp = input_form.build(item, seen, question)
                     if streaming:
                         output = backbone.forward_stream(inp, question, policy, window.index)
                     else:
@@ -159,6 +179,8 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
                 stream.flush()
                 count += 1
                 video_count += 1
+            if built is not None:
+                pool.shutdown(wait=False, cancel_futures=True)
             print(f"{item.name}: {video_count} windows")
 
     specs = [config.raw[key] for key in ("dataset", "input_form", "backbone", "answer_head")]
@@ -173,7 +195,7 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
     data = {"name": config.name, "machine": machine(), "gpu": torch.cuda.get_device_name() if cuda else None,
             "started": started, "finished": datetime.now(timezone.utc).isoformat(),
             "free_memory_gb": memory, "peak_gpu_gb": torch.cuda.max_memory_allocated() / 2**30 if cuda else None,
-            "load_s": load_s, "windows": count, "limit_windows": limit_windows,
+            "load_s": load_s, "windows": count, "limit_windows": limit_windows, "prefetch": prefetch,
             "versions": {"python": platform.python_version(), "torch": torch.__version__,
                          "transformers": version("transformers")},
             "git_commit": commit, "git_dirty": dirty, "assets": assets}

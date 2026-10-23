@@ -188,3 +188,14 @@ def test_run_writes_the_answer_text_of_a_decoding_backbone(tmp_path, config, mon
     monkeypatch.setattr(FakeBackbone, "forward", lambda self, inp, question: BackboneOutput(hidden=int(inp.text),
                                                                                            text="Yes."))
     assert lines(run(config, tmp_path / "decoding"))[0]["text"] == "Yes."
+
+
+def test_run_with_prefetch_gives_the_same_scores(tmp_path, config, monkeypatch):
+    run(config, tmp_path / "plain")
+    monkeypatch.setenv("S1_PREFETCH", "2")
+    run(config, tmp_path / "prefetch")
+    plain = [json.loads(line) for line in (tmp_path / "plain" / "scores.jsonl").read_text().splitlines()]
+    pre = [json.loads(line) for line in (tmp_path / "prefetch" / "scores.jsonl").read_text().splitlines()]
+    assert [(r["video"], r["window"], r["score"]) for r in plain] == [(r["video"], r["window"], r["score"]) for r in pre]
+    assert json.loads((tmp_path / "prefetch" / "run.json").read_text())["prefetch"] == 2
+    assert json.loads((tmp_path / "plain" / "run.json").read_text())["prefetch"] == 0
