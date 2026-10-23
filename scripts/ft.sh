@@ -14,6 +14,7 @@ cd "$(dirname "$0")/.."
 export S1_ASSETS="${S1_ASSETS:-$HOME/s1-assets}"
 export S1_MACHINE="${S1_MACHINE:-spark}"
 export PYTHONPATH=src
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-8}" MKL_NUM_THREADS="${MKL_NUM_THREADS:-8}"
 # HIVAU-70k clone (github.com/pipixin321/HolmesVAU) lives under S1_DATASETS (spark: ~/datasets; pro6000: $DATA/datasets).
 export S1_DATASETS="${S1_DATASETS:-$HOME/datasets}"
 PY="${PY:-$HOME/system-one-streaming-vlm/.venv/bin/python}"

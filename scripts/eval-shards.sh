@@ -10,6 +10,8 @@ set -euo pipefail
 config="$1"; manifest="$2"; out="$3"; n="${4:-3}"
 PY="${PY:-/opt/venv/bin/python}"
 export PYTHONPATH=src S1_PREFETCH="${S1_PREFETCH:-4}"
+# A shared 128-core box: without a cap every torch process spawns one thread per core and they fight.
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-8}" MKL_NUM_THREADS="${MKL_NUM_THREADS:-8}"
 mkdir -p "$out"
 $PY - "$config" "$manifest" "$out" "$n" <<'EOF'
 import json, sys, yaml
