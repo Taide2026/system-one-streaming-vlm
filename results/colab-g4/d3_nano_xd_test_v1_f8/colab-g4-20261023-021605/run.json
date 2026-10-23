@@ -1,5 +1,6 @@
 {
  "name": "d3_nano_xd_test_v1_f8",
+ "machine": "colab-g4",
  "started": "2026-10-23T02:16:06.353939+00:00",
  "finished": "2026-10-23T05:13:30.004220+00:00",
  "free_memory_gb": 173.42055130004883,
