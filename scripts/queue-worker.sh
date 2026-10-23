@@ -5,10 +5,13 @@
 # worker claims the first config that no one has claimed and whose assets are in place (fetch --check; ucf-crime:
 # $DATA/ucf-setup.log says UCF SETUP DONE), under a lock, and runs it in its container into results/$S1_MACHINE/. Downloads still running only
 # delay a config. Claimed configs go to queue.claimed, finished or twice-failed ones to queue.done; edit queue.txt any time.
+# THREADS (default 8) caps a run's CPU threads (torch / OpenMP / OpenCV): by default each would start one per host core
+# and several runs crowd a shared machine's CPUs.
 set -uo pipefail
 C=${1:?usage: queue-worker.sh <container>}
 D=${DATA:-/data/$(id -un)}
 MACHINE=${S1_MACHINE:-pro6000}
+THREADS=${THREADS:-8}
 Q=$D/queue.txt DONE=$D/queue.done CLAIMED=$D/queue.claimed READY=$D/queue.ready LOG=$D/queue.log LOCK=$D/queue.lock
 REPO=$(cd "$(dirname "$0")/.." && pwd)
 mkdir -p $D/logs; touch $DONE $CLAIMED $READY
@@ -40,7 +43,8 @@ while :; do
     [ -z "$next" ] && { sleep 120; continue; }
     log "start $next"
     for attempt in 1 2; do
-        if docker exec -e S1_MACHINE=$MACHINE $C scripts/run.sh run "configs/$next.yaml" > "$D/logs/$next-$attempt.log" 2>&1; then
+        if docker exec -e S1_MACHINE=$MACHINE -e OMP_NUM_THREADS=$THREADS -e MKL_NUM_THREADS=$THREADS \
+                -e OPENBLAS_NUM_THREADS=$THREADS -e OPENCV_FOR_THREADS_NUM=$THREADS $C scripts/run.sh run "configs/$next.yaml" > "$D/logs/$next-$attempt.log" 2>&1; then
             log "done $next (attempt $attempt)"; break
         fi
         log "FAIL $next (attempt $attempt): $(grep -a -E 'Error|error' "$D/logs/$next-$attempt.log" | tail -1)"

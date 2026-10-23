@@ -5,6 +5,7 @@
 #   scripts/docker.sh build              build image s1stream:$USER (again after a uv.lock change)
 #   GPU=<index> scripts/docker.sh up     start container s1stream-$USER on that GPU (pick a free one: nvidia-smi)
 #   SLOT=<n> ...                         a further container, s1stream-$USER-<n>, e.g. one per GPU for parallel runs
+#   CPUS=<n> ...                         its CPU cap (default 8 cores; docker update --cpus <n> changes it later)
 #   scripts/docker.sh exec <cmd...>      run a command in it, e.g. scripts/docker.sh exec scripts/run.sh smoke <config>
 #   scripts/docker.sh shell              an interactive shell in it
 #   scripts/docker.sh down               stop and remove the container (the image and the data stay)
@@ -25,7 +26,7 @@ case "${1:-}" in
     up)
         : "${GPU:?set GPU=<index> (one GPU; nvidia-smi shows which are free)}"
         mkdir -p "$DATA/s1-assets" "$DATA/hf-cache"
-        docker run -d --name "$NAME" --gpus "device=$GPU" --shm-size 16g \
+        docker run -d --name "$NAME" --gpus "device=$GPU" --cpus "${CPUS:-8}" --shm-size 16g \
             -v "$PWD:/work" -v "$DATA:$DATA" \
             -e S1_ASSETS="$DATA/s1-assets" -e HF_HOME="$DATA/hf-cache" -e UCF_CLIPS="$DATA/datasets/ucf-clips" \
             -e S1_MACHINE="${S1_MACHINE:-pro6000}" \
@@ -39,5 +40,5 @@ case "${1:-}" in
     down)
         docker rm -f "$NAME" ;;
     *)
-        sed -n '2,13p' "$0"; exit 1 ;;
+        sed -n '2,14p' "$0"; exit 1 ;;
 esac
