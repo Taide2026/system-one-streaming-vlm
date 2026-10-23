@@ -1,15 +1,16 @@
 # The s1stream environment for a shared GPU server (pro6000), built and run by scripts/docker.sh.
-# CUDA 12.9 runtime base: torch's cu130 wheels bring their own CUDA libraries and need a driver >= 580. uv with its own
-# Python of .python-version (Triton needs Python.h); the locked dependencies, dev group included, in /opt/venv. The repository is
-# mounted at /work at run time, so a code change needs no rebuild; a uv.lock change does. The container runs as the
-# host user (UID / GID), so files it writes to the mounted folders stay theirs.
+# CUDA 12.9 runtime base: torch's cu130 wheels bring their own CUDA libraries and need a driver >= 580. gcc and the
+# Python of .python-version (uv-managed, with Python.h): Triton compiles a C helper at run time. The locked
+# dependencies, dev group included, in /opt/venv. The repository is mounted at /work at run time, so a code change
+# needs no rebuild; a uv.lock change does. The container runs as the host user (UID / GID), so files it writes to the
+# mounted folders stay theirs.
 FROM nvidia/cuda:12.9.1-cudnn-runtime-ubuntu24.04
 
 ARG UID=1000
 ARG GID=1000
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends ca-certificates curl git tmux \
+    && apt-get install -y --no-install-recommends ca-certificates curl gcc git libc6-dev tmux \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=ghcr.io/astral-sh/uv:0.10.0 /uv /uvx /usr/local/bin/
 
