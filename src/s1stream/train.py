@@ -93,7 +93,7 @@ def fit_temperature(logits: torch.Tensor, target: torch.Tensor) -> float:
     def nll(log_t: float) -> float:
         return soft_cross_entropy(logits / math.exp(log_t), target).item()
 
-    lo, hi = math.log(0.2), math.log(5.0)
+    lo, hi = math.log(0.1), math.log(10.0)
     phi = (math.sqrt(5) - 1) / 2
     a, b = hi - phi * (hi - lo), lo + phi * (hi - lo)
     fa, fb = nll(a), nll(b)
