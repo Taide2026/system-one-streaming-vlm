@@ -35,8 +35,8 @@ optim:
   lr: 1.0e-4
   head_lr: 1.0e-4
   warmup: 0.03
-  batch: 4
-  accumulate: 8
+  batch: 2
+  accumulate: 16  # 32 windows per step; batch 2 keeps the 9B under ~35 GB on a shared GPU (pro6000)
   epochs: 1
   workers: 6
   grad_checkpoint: true
