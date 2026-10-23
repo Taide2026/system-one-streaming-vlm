@@ -153,16 +153,17 @@ class ClefTrainee:
         self.clef.language_model = lora_wrap(self.clef.language_model, int(lora["r"]), int(lora["alpha"]),
                                              float(lora.get("dropout", 0.0)), grad_checkpoint)
         self.clef.head.float().requires_grad_(True)
-        self.option_ids: tuple[str, ...] = ()
+        # Option ids in the release's order (it sorts choice options by id); fixed by the question, so computed
+        # here rather than in collate, which runs in the loader's worker processes.
+        probe = self.code.encode_record(self.processor.tokenizer, self.build_record(question, []))
+        self.option_ids: tuple[str, ...] = tuple(probe.questions[0].option_ids)
 
     def encode(self, images: list) -> Any:
         return self.code.encode_record(self.processor.tokenizer, self.build_record(self.question, images),
                                        processor=self.processor)
 
     def collate(self, encoded: list) -> dict[str, Any]:
-        batch = self.code.collate_records(encoded, self.processor.tokenizer.pad_token_id, torch.device("cpu"))
-        self.option_ids = encoded[0].questions[0].option_ids
-        return batch
+        return self.code.collate_records(encoded, self.processor.tokenizer.pad_token_id, torch.device("cpu"))
 
     def forward(self, batch: dict[str, Any]) -> torch.Tensor:
         base = self.clef.language_model.get_base_model()
