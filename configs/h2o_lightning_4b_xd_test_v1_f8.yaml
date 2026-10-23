@@ -1,0 +1,38 @@
+# V1, MoniTor style (NeurIPS 2025): the question is prompt v1_xd of src/s1stream/prompt.py; score p(Yes).
+# Latency and abnormal metrics of H2O-Lightning-4B (image weights; at most 4 images: 4 of the 8 frames, spread over the window) on the XD-Violence test set: 500 violent + 300 non-violent = 800.
+# max_duration_s 4000 keeps every test video (the longest is 1383 s): 27.0 h at 24 fps, 48663 windows of 2 s.
+# Run: scripts/run.sh run configs/h2o_lightning_4b_xd_test_v1_f8.yaml
+name: h2o_lightning_4b_xd_test_v1_f8
+
+dataset:
+  name: xd_violence
+  asset: xd-violence
+  n_violent: 500
+  n_normal: 300
+  max_duration_s: 4000
+  seed: 20261009
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1_xd
+
+input_form:
+  name: frames
+
+backbone:
+  name: h2o_lightning
+  asset: h2o-lightning-4b-image
+  memory_cap_gb: 40
+
+answer_head:
+  name: option_logits
+
+decision_rules:
+  - name: threshold
+    start: 0.0
+    stop: 1.0
+    step: 0.01

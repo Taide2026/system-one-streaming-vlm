@@ -3,6 +3,7 @@ import s1stream.backbones.clef_flash  # noqa: F401
 import s1stream.backbones.d1  # noqa: F401
 import s1stream.backbones.d3  # noqa: F401
 import s1stream.backbones.gemma_generate  # noqa: F401
+import s1stream.backbones.h2o_lightning  # noqa: F401
 import s1stream.backbones.imajev  # noqa: F401
 import s1stream.backbones.jev_omni  # noqa: F401
 import s1stream.backbones.qwen_first_token  # noqa: F401

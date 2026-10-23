@@ -91,6 +91,7 @@ When `assets.yaml` gets a new asset after `git pull`, run `fetch` for that name 
 | `startlux-4b-instant` | `startlux-models/StartLux-Decision-v1.1-4B-Instant` @ `416088f` (CC BY-NC 4.0) | 9.3 GB | `startlux_4b_*` |
 | `startlux-9b-instant` | `startlux-models/StartLux-Decision-v1.1-9B-Instant` @ `18a17f7` (CC BY-NC 4.0) | 19 GB | `startlux_9b_*` |
 | `qwen3.5-9b` | `Qwen/Qwen3.5-9B` @ `c202236` (base of `d3-flash` and `clef-flash`, no decision training) | 19 GB | `qwen3_5_9b_*` |
+| `h2o-lightning-4b-image` | `h2oai/h2o-lightning-4b` @ `ac0b458` (branch image-preview) | 9.3 GB | `h2o_lightning_4b_*` |
 | `laya` | `convaiinnovations/laya` @ `7b928d8` | 2.3 GB | none yet |
 | `clm-8b` | `Contrastive-LM/CLM-v0.1-8B` @ `e939398` (heads only; needs Qwen3-8B) | 73 MB | none yet |
 
@@ -268,6 +269,7 @@ model and frame count under `results/spark/<model>_ucf_short_f{8,16}/`, from `co
 | `d1` (Liquid AI d1-3B, all 290 only) | `d1_3b` |
 | `startlux` (StartLux-Decision v1.1 Instant, its `startlux-decide` package in process; all 290 only) | `startlux_4b`, `startlux_9b` |
 | `qwen_first_token` (a plain VLM: each option's first-token logit; all 290 only) | `qwen3_5_9b` |
+| `h2o_lightning` (H2O-Lightning-4B image weights, its shim's prompt in process; reads 4 of the 8 frames) | `h2o_lightning_4b` |
 
 `results/spark/<model>_ucf_short_c14_f8/` (`configs/<model>_ucf_short_c14_f8.yaml`) are the same 8-frame runs with a
 14-class prompt: the 13 UCF-Crime anomaly classes + Normal as options, score 1 − p(Normal). Models:
