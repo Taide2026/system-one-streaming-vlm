@@ -4,6 +4,7 @@
 #
 #   scripts/docker.sh build              build image s1stream:$USER (again after a uv.lock change)
 #   GPU=<index> scripts/docker.sh up     start container s1stream-$USER on that GPU (pick a free one: nvidia-smi)
+#   SLOT=<n> ...                         a further container, s1stream-$USER-<n>, e.g. one per GPU for parallel runs
 #   scripts/docker.sh exec <cmd...>      run a command in it, e.g. scripts/docker.sh exec scripts/run.sh smoke <config>
 #   scripts/docker.sh shell              an interactive shell in it
 #   scripts/docker.sh down               stop and remove the container (the image and the data stay)
@@ -15,7 +16,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 user=$(id -un)
 IMAGE="s1stream:$user"
-NAME="s1stream-$user"
+NAME="s1stream-$user${SLOT:+-$SLOT}"
 DATA="${DATA:-/data/$user}"
 
 case "${1:-}" in

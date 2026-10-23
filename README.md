@@ -55,6 +55,7 @@ scripts/docker.sh exec uv run --frozen s1stream fetch d3-nano xd-violence
 scripts/docker.sh exec scripts/run.sh smoke configs/d3_nano_xd_test_v1_f8.yaml
 scripts/docker.sh shell                    # long runs: start tmux in here
 scripts/docker.sh down                     # remove the container; image and data stay
+SLOT=2 GPU=7 scripts/docker.sh up         # a second container, s1stream-$USER-2, for parallel runs
 ```
 
 The repository is mounted at `/work` (a code change needs no rebuild); `DATA` (default `/data/$USER`) at the same
