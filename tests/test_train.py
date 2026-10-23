@@ -23,13 +23,14 @@ def test_read_hivau_rounds_events_to_frames_and_checks_files(tmp_path: Path):
         (root / "videos" / folder).mkdir(parents=True)
         (root / "videos" / folder / f"{name}.mp4").write_bytes(b"")
     data = {"Abuse001_x264": {"n_frames": 300, "fps": 30.0, "label": ["Abuse"], "events": [[1.0, 2.5]]},
-            "Normal_Videos001_x264": {"n_frames": 120, "fps": 30.0, "label": ["Normal"], "events": []}}
+            "Normal_Videos001_x264": {"n_frames": 120, "fps": 30.0, "label": ["Normal"], "events": [[0.5, 3.0]]}}
     json_path = tmp_path / "ucf_database_train.json"
     json_path.write_text(json.dumps(data))
     items = read_hivau(json_path, root)
     assert [item.name for item in items] == ["Abuse001_x264", "Normal_Videos001_x264"]
     assert items[0].events == ((30, 74),)
     assert items[0].category == "Abuse" and items[1].category == "Normal"
+    assert items[1].events == ()  # HIVAU's normal segments are not anomaly events
     data["Missing001_x264"] = {"n_frames": 10, "fps": 30.0, "label": ["Missing"], "events": []}
     json_path.write_text(json.dumps(data))
     with pytest.raises(TrainDataError):

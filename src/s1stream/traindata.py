@@ -4,7 +4,8 @@ The UCF-Crime training split carries one label per video. HIVAU-70k (Holmes-VAU,
 github.com/pipixin321/HolmesVAU, HIVAU-70k/raw_annotations/ucf_database_train.json) adds the start and end of every
 anomaly event, in seconds:
   {"Abuse001_x264": {"n_frames": 2729, "fps": 30.0, "label": ["Abuse"], "events": [[3.933, 15.867], ...], ...}, ...}
-Normal training videos are in there too, with "events": [].
+Normal training videos are in there too; their "events" are HIVAU's randomly cropped normal segments (event-level
+normal samples), not anomalies, so they are dropped and a normal video has no events.
 
 A record is one window of a training video, cut exactly as at inference (s1stream.windows.plan_windows: length,
 stride, frames), with a soft label y = coverage = the share of the window's time inside an event (0 outside, 1 inside,
@@ -75,9 +76,12 @@ def read_hivau(json_path: Path, root: Path) -> list[VideoItem]:
         path = root / "videos" / video_folder(name) / f"{name}.mp4"
         if not path.is_file():
             raise TrainDataError(f"Video not found: {path}")
-        events = tuple((round(start * fps), max(round(start * fps), round(end * fps) - 1))
-                       for start, end in entry.get("events", []))
-        category = "Normal" if not events else video_folder(name)
+        # HIVAU lists "events" for normal videos too: randomly cropped normal segments (its event-level normal
+        # samples). They are not anomalies: a normal video has no event here.
+        normal = list(entry.get("label", [])) == ["Normal"] or name.startswith("Normal_Videos")
+        events = () if normal else tuple((round(start * fps), max(round(start * fps), round(end * fps) - 1))
+                                         for start, end in entry.get("events", []))
+        category = "Normal" if normal else video_folder(name)
         items.append(VideoItem(name, path, category, fps, n_frames, events))
     return items
 
