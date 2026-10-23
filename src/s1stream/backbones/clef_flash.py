@@ -77,18 +77,42 @@ class ClefFlash:
     """Config: {name: clef_flash, asset: clef-flash, memory_cap_gb: 40}. load_config adds path."""
 
     def __init__(self, path: str | Path, memory_cap_gb: float = 40.0, device: str = "cuda",
-                 asset: str | None = None) -> None:
-        """On cuda, cap the GPU memory as jev_omni does; then load_release_model(path, device, local_files_only)."""
+                 asset: str | None = None, adapter: str | Path | None = None) -> None:
+        """On cuda, cap the GPU memory as jev_omni does; then load_release_model(path, device, local_files_only).
+
+        adapter: a fine-tuning run folder (s1stream.train): its peft adapter is merged into the backbone, its
+        head.safetensors replaces the head, and calibration.json's temperature divides the option logits.
+        """
         if device.startswith("cuda"):
             total_memory = torch.cuda.get_device_properties(0).total_memory
             torch.cuda.set_per_process_memory_fraction(min(1.0, memory_cap_gb * 2**30 / total_memory))
         code = load_release_code(Path(path))
         model, processor = code.load_release_model(Path(path), device=device, local_files_only=True)
         self._init(model, processor, code, device)
+        if adapter is not None:
+            self.load_adapter(Path(adapter))
 
     def _init(self, model: Any, processor: Any, code: ModuleType, device: str) -> None:
         self.model, self.processor, self.code, self.device = model, processor, code, device
         self.stream: StreamState | None = None
+        self.temperature = 1.0
+
+    def load_adapter(self, run_dir: Path) -> None:
+        """Merge run_dir/adapter into the backbone, load run_dir/head.safetensors, read the temperature."""
+        import json
+
+        from peft import PeftModel
+        from safetensors.torch import load_file
+
+        merged = PeftModel.from_pretrained(self.model.language_model, run_dir / "adapter").merge_and_unload()
+        self.model.language_model = merged
+        head_dtype = next(self.model.head.parameters()).dtype
+        state = {k: v.to(head_dtype) for k, v in load_file(run_dir / "head.safetensors").items()}
+        self.model.head.load_state_dict(state, strict=True)
+        calibration = run_dir / "calibration.json"
+        if calibration.is_file():
+            self.temperature = float(json.loads(calibration.read_text()).get("temperature", 1.0))
+        self.model.eval()
 
     @classmethod
     def from_parts(cls, model: Any, processor: Any, code: ModuleType, device: str = "cpu") -> "ClefFlash":
@@ -109,10 +133,12 @@ class ClefFlash:
             logits = self.model(batch)[0][0].float().cpu()
         return self._in_option_order(encoded.questions[0].option_ids, logits, question)
 
-    @staticmethod
-    def _in_option_order(option_ids: tuple, logits: torch.Tensor, question: Question) -> BackboneOutput:
+    def _in_option_order(self, option_ids: tuple, logits: torch.Tensor, question: Question) -> BackboneOutput:
+        """One logit per option in question.options order, divided by the calibration temperature (1 unless an
+        adapter set it)."""
         by_option = dict(zip(option_ids, logits.tolist()))
-        return BackboneOutput(logits=torch.tensor([by_option[option] for option in question.options]))
+        temperature = getattr(self, "temperature", 1.0)
+        return BackboneOutput(logits=torch.tensor([by_option[option] / temperature for option in question.options]))
 
     # ---------- streaming: the KV cache across windows ----------
 

@@ -3,6 +3,8 @@
   s1stream run <config.yaml> [--out <dir>] [--limit-windows N]
       default --out: results/<machine>/<config name>/<YYYYmmdd-HHMMSS> (machine: S1_MACHINE, else the host name)
   s1stream report <run dir>
+  s1stream train <config.yaml> [--out <dir>] [--limit-steps N]
+      the read-out-level fine-tune (s1stream.train); default --out as run
   s1stream fetch [--check] <asset> [<asset> ...]
       fetch: assets.fetch(lock[name], asset_root() / name); --check: assets.check only.
 Exit code 0 on success, 1 on an AssetError, ConfigError or FileExistsError (message on stderr).
@@ -28,6 +30,10 @@ def main(argv: list[str] | None = None) -> int:
     run_parser.add_argument("config", type=Path)
     run_parser.add_argument("--out", type=Path)
     run_parser.add_argument("--limit-windows", type=int)
+    train_parser = commands.add_parser("train")
+    train_parser.add_argument("config", type=Path)
+    train_parser.add_argument("--out", type=Path)
+    train_parser.add_argument("--limit-steps", type=int)
     report_parser = commands.add_parser("report")
     report_parser.add_argument("run_dir", type=Path)
     fetch_parser = commands.add_parser("fetch")
@@ -44,6 +50,16 @@ def main(argv: list[str] | None = None) -> int:
             if out_dir is None:
                 out_dir = Path("results") / machine() / config.name / datetime.now().strftime("%Y%m%d-%H%M%S")
             print(run(config, out_dir, limit_windows=args.limit_windows))
+        elif args.command == "train":
+            import s1stream.plugins  # noqa: F401
+
+            from s1stream.train import load_train_config, train
+
+            out_dir = args.out
+            if out_dir is None:
+                name = load_train_config(args.config)["name"]
+                out_dir = Path("results") / machine() / name / datetime.now().strftime("%Y%m%d-%H%M%S")
+            print(train(args.config, out_dir, limit_steps=args.limit_steps))
         elif args.command == "report":
             report(args.run_dir)
         else:
