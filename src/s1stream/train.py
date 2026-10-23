@@ -9,7 +9,8 @@ path does not change: the backbone loads the adapter (merged) and the read-out f
 (backbone: {adapter: <run folder>}). The prompt mask stays the release's (Clef causal, d3 noncausal: its PromptEncoder).
 
 Config (configs/ft_ucf_v1_<model>.yaml):
-  name, data: {hivau_json, asset: ucf-crime, n_abnormal, n_normal, n_val, holdout, seed}, window: {length_s,
+  name, data: {hivau_json, asset: ucf-crime, n_abnormal, n_normal, n_val, holdout, seed, hard_labels (ablation)},
+  window: {length_s,
   stride_s, frames}, question: {prompt: v1}, backbone: {name: clef_flash | d3, asset}, lora: {r, alpha, dropout},
   optim: {lr, head_lr, warmup, batch, accumulate, epochs, workers, grad_checkpoint}
 
@@ -306,6 +307,11 @@ def train(config_path: Path, out_dir: Path, limit_steps: int | None = None) -> P
         items, float(window["length_s"]), float(window["stride_s"]), int(window["frames"]),
         int(dspec["n_abnormal"]), int(dspec["n_normal"]), int(dspec.get("n_val", 0)),
         float(dspec.get("holdout", 0.1)), int(dspec.get("seed", 0)))
+    if dspec.get("hard_labels"):  # ablation: y >= 0.5 -> 1, else 0 (the soft coverage target is the default)
+        from dataclasses import replace
+
+        train_records = [replace(r, y=1.0 if r.y >= 0.5 else 0.0) for r in train_records]
+        val_records = [replace(r, y=1.0 if r.y >= 0.5 else 0.0) for r in val_records]
     if limit_steps is not None:
         train_records = train_records[:limit_steps * batch_size * accumulate]
         val_records = val_records[:min(len(val_records), 64)]
