@@ -60,3 +60,7 @@ def main(argv: list[str] | None = None) -> int:
         print(exc, file=sys.stderr)
         return 1
     return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
