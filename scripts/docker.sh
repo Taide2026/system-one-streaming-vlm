@@ -8,7 +8,8 @@
 #   scripts/docker.sh shell              an interactive shell in it
 #   scripts/docker.sh down               stop and remove the container (the image and the data stay)
 #
-# In the container: the repository at /work, DATA (default /data/$USER) at the same path, S1_ASSETS=$DATA/s1-assets,
+# In the container: S1_MACHINE (default pro6000: runs go to results/pro6000/), the repository at /work, DATA (default
+# /data/$USER) at the same path, S1_ASSETS=$DATA/s1-assets,
 # the Hugging Face cache in $DATA/hf-cache. Long runs: start them in tmux inside the container (scripts/docker.sh shell).
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -26,6 +27,7 @@ case "${1:-}" in
         docker run -d --name "$NAME" --gpus "device=$GPU" --shm-size 16g \
             -v "$PWD:/work" -v "$DATA:$DATA" \
             -e S1_ASSETS="$DATA/s1-assets" -e HF_HOME="$DATA/hf-cache" -e UCF_CLIPS="$DATA/datasets/ucf-clips" \
+            -e S1_MACHINE="${S1_MACHINE:-pro6000}" \
             "$IMAGE" sleep infinity
         docker exec "$NAME" uv sync --frozen --managed-python ;;
     exec)

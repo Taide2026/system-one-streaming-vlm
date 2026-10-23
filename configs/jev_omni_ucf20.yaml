@@ -1,6 +1,6 @@
 # Feasibility run (proposal .specs/changes/2026-10-09-ucf-streaming-feasibility): Jev-Omni on 20 UCF-Crime test videos.
 # Run:    S1_ASSETS=<asset root> uv run s1stream run configs/jev_omni_ucf20.yaml
-# Report: uv run s1stream report results/jev_omni_ucf20/<run>
+# Report: uv run s1stream report results/<machine>/jev_omni_ucf20/<run>
 name: jev_omni_ucf20
 
 dataset:

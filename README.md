@@ -147,8 +147,8 @@ G Explosion), its events in `annotations.txt`. Configs: `configs/<model>_xd_test
 export S1_ASSETS=/path/to/assets
 free -g                                                     # jev_omni needs about 23 GB of GPU memory
 timeout 30m uv run s1stream run configs/jev_omni_ucf20.yaml --out results/smoke/try --limit-windows 5
-timeout 6h uv run s1stream run configs/jev_omni_ucf20.yaml  # writes results/jev_omni_ucf20/<YYYYmmdd-HHMMSS>/
-uv run s1stream report results/jev_omni_ucf20/<run>
+timeout 6h uv run s1stream run configs/jev_omni_ucf20.yaml  # writes results/<machine>/jev_omni_ucf20/<YYYYmmdd-HHMMSS>/
+uv run s1stream report results/<machine>/jev_omni_ucf20/<run>
 ```
 
 - `run` refuses an output folder that already exists. A rerun gets a new folder.
@@ -165,7 +165,7 @@ uv run s1stream report results/jev_omni_ucf20/<run>
 | `scripts/run.sh setup` | installs uv when missing, `uv sync --managed-python`, checks `Python.h`, runs the CPU tests |
 | `scripts/run.sh assets` | `fetch jev-omni`, then builds `ucf-crime` from ucf-clips (see above) |
 | `scripts/run.sh smoke [config]` | 5 windows into `results/smoke/<time>`, then prints a short report |
-| `scripts/run.sh run [config]` | full run into `results/<config name>/<time>`, then prints a short report |
+| `scripts/run.sh run [config]` | full run into `results/<machine>/<config name>/<time>`, then prints a short report |
 | `scripts/run.sh report <run dir>` | `s1stream report` and the short report, no GPU |
 | `scripts/run.sh all [config]` | `setup`, `assets`, `smoke`, `run` |
 
@@ -221,7 +221,9 @@ class map: `prompt.py`.
 | `run.json` | free memory, peak GPU memory, load time, versions, git commit, asset revisions and hashes |
 | `report.json` | the metrics below |
 
-Run folders under `results/<config name>/` go into git. `results/smoke/` does not.
+Run folders under `results/<machine>/<config name>/` go into git; `<machine>` is `S1_MACHINE` (else the host name):
+`results/spark/` holds the runs on spark (GB10) up to 2026-10-23, `results/pro6000/` those on pro6000 (RTX PRO 6000,
+Docker), and `run.json` names the machine and GPU. `results/smoke/` does not go into git.
 
 ## Metrics
 
@@ -248,12 +250,12 @@ Run folders under `results/<config name>/` go into git. `results/smoke/` does no
 
 | Run | Windows | ms/frame | Latency P50 / P95 / P99 | RTF P95 | Threshold 0.1: accuracy / recall / FNR |
 |---|---|---|---|---|---|
-| `results/jev_omni_ucf20/20261009-feasibility` | 364 (20 videos) | 197 | 1573 / 1660 / 1692 ms | 0.83 | 79.7% / 64.2% / 35.8% |
+| `results/spark/jev_omni_ucf20/20261009-feasibility` | 364 (20 videos) | 197 | 1573 / 1660 / 1692 ms | 0.83 | 79.7% / 64.2% / 35.8% |
 
 This run is a feasibility check on 20 short test videos (11 events), not a benchmark.
 
 UCF-Crime short (all 117 test videos under 50 s: 1684 windows of 2 s, 8 or 16 frames each) has one run folder per
-model and frame count under `results/<model>_ucf_short_f{8,16}/`, from `configs/<model>_ucf_short_f{8,16}.yaml`:
+model and frame count under `results/spark/<model>_ucf_short_f{8,16}/`, from `configs/<model>_ucf_short_f{8,16}.yaml`:
 
 | Backbone | Configs (`<model>`) |
 |---|---|
@@ -267,18 +269,18 @@ model and frame count under `results/<model>_ucf_short_f{8,16}/`, from `configs/
 | `startlux` (StartLux-Decision v1.1 Instant, its `startlux-decide` package in process; all 290 only) | `startlux_4b`, `startlux_9b` |
 | `qwen_first_token` (a plain VLM: each option's first-token logit; all 290 only) | `qwen3_5_9b` |
 
-`results/<model>_ucf_short_c14_f8/` (`configs/<model>_ucf_short_c14_f8.yaml`) are the same 8-frame runs with a
+`results/spark/<model>_ucf_short_c14_f8/` (`configs/<model>_ucf_short_c14_f8.yaml`) are the same 8-frame runs with a
 14-class prompt: the 13 UCF-Crime anomaly classes + Normal as options, score 1 − p(Normal). Models:
 `gemma4_e4b_constrained`, `clef_flash`, `imajev_4b`, `jev_omni` and the six `d3` sizes.
 
 All 290 UCF-Crime test videos with frame annotations (140 anomaly + 150 normal, 10.3 h: 18390 windows of 2 s, 8
-frames) have one Yes / No run per model under `results/<model>_ucf_test_f8/` (`configs/<model>_ucf_test_f8.yaml`), for
+frames) have one Yes / No run per model under `results/spark/<model>_ucf_test_f8/` (`configs/<model>_ucf_test_f8.yaml`), for
 `d3`, `d3_flash`, `d3_nano`, `clef_flash` and `gemma4_e4b_constrained`.
 
 The 14-class prompt on all 290: `configs/<model>_ucf_test_c14_f8.yaml`. The d3-nano and d3-flash runs instead reuse
 their short runs: `configs/<model>_ucf_long_c14_f8.yaml` runs only the 173 videos above 49.9 s
 (`dataset.min_duration_s`), then `uv run python scripts/merge-c14-290.py <model>` joins both into
-`results/<model>_ucf_test_c14_f8/` (it checks that the windows equal the Yes / No run's) and writes the report.
+`results/spark/<model>_ucf_test_c14_f8/` (it checks that the windows equal the Yes / No run's) and writes the report.
 
 ## Add a plugin
 
@@ -297,7 +299,7 @@ scripts/run.sh              setup, assets, smoke and full runs on the GPU machin
 scripts/docker.sh           the Docker environment on a shared GPU server (docker/Dockerfile)
 src/s1stream/               the package (slots, plugins, runner, report, metrics, assets, cli)
 tests/                      CPU tests
-results/                    run folders
+results/<machine>/          run folders (spark, pro6000)
 ```
 
 ## Commit messages

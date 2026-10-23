@@ -1,0 +1,40 @@
+{
+ "name": "d3_edge_ucf_short_f8",
+ "machine": "spark",
+ "started": "2026-10-16T03:02:37.987436+00:00",
+ "finished": "2026-10-16T03:12:09.616232+00:00",
+ "free_memory_gb": 117.61002731323242,
+ "peak_gpu_gb": 1.2399110794067383,
+ "load_s": 28.907526005990803,
+ "windows": 1684,
+ "limit_windows": null,
+ "versions": {
+  "python": "3.12.15",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.17.0"
+ },
+ "git_commit": "9c4ac744172282de1a845256183dc445fcadea5f",
+ "git_dirty": true,
+ "assets": {
+  "d3-edge": {
+   "revision": "cab71e6ad3461b8086d51ddb572c656babd63b0b",
+   "sha256": {
+    "MODEL_MANIFEST.json": "3bae8989a6feb36a66bf4d8c44112dc63199d0dc69f564dc895fe368b1e08e59",
+    "config.json": "5e529d9aea2f8d387750acf5b02cc32a47d7e87dc65d6d008fba98e5d15acc4d",
+    "d3_runtime.py": "adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917",
+    "decision_config.json": "30b6095b945d5a93697868afdf9be9123ea892085fbaff3078112c48da20dc6b",
+    "readout.safetensors": "de33d5dc795bbd77168e40bfadc340cca9b9f163b88744c10e1a788f4e166d3d"
+   }
+  },
+  "ucf-crime": {
+   "revision": null,
+   "sha256": {
+    "annotations/Temporal_Anomaly_Annotation_for_Testing_Videos.txt": "3b9542413f2ed9e94f73bf0488c151b3d7d595a8d2ad30f524e9243a2ae2a17c",
+    "splits/Anomaly_Test.txt": "afcb2a6bffe7286607e08c864425964d8784cbd5b1f263e03b76025e11548de7",
+    "splits/Anomaly_Train.txt": "ea91e03de7581bfa6b139e663ebb7511ab1651c33427f85741d3f497a2027744",
+    "splits/Action_Regnition_splits/ClassIDs.txt": "4e2af08c8fdeb3466494f276e1e877e837317a001eca9d826f933be73e6e7fd8",
+    "ReadMe-Anomaly-Detection.txt": "90e6c08923ef91c31e7b2ebf455b7ff82b8de31c79a7334a7b76f4cd2562098b"
+   }
+  }
+ }
+}
