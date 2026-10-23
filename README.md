@@ -18,7 +18,7 @@ The decision and its label stay on the newest 2 s window in every strategy, so e
 | S1 recompute | `{strategy: recompute, past_s: L}` | the newest 2 s + the past L s, read again | (L/2 + 1) × 8 frames |
 | S2 sliding KV | `{strategy: kv, past_s: L}` | as S1, but the past's KV / recurrent state is kept | 8 frames + the question |
 | S3 sinks + sliding | `{strategy: kv_sinks, past_s: L, sinks_s: 2}` | S2 + the first 2 s never evicted (StreamingVLM) | 8 frames + the question |
-| S4 compressed KV | `{strategy: kv_compress, past_s: L, budget_tokens: N}` | S2, the past pruned to N visual tokens | 8 frames + question + pruning |
+| S4 compressed KV | `{strategy: kv_compress, past_s: L, budget_tokens: N}` | S2, the past windows pruned to N visual tokens (every other token, oldest first) | 8 frames + question + pruning |
 | S5 text memory | `{strategy: text, history: n}` | the newest 2 s + the last n scores written into the state | 8 frames + a few tokens |
 
 `src/s1stream/context.py` defines the section; `src/s1stream/runner.py` applies it; the KV strategies need a

@@ -57,18 +57,24 @@ def test_evict_nothing_while_within_keep_windows():
     assert len(state.segments) == 3
 
 
-def test_compress_halves_the_oldest_frame_segment_until_within_budget():
-    state = state_with(windows=3, prefix=2, per_window=8)  # 24 frame tokens
-    removed = compress(state, budget_tokens=16)
+def test_compress_halves_the_past_segments_oldest_first_and_spares_the_newest():
+    state = state_with(windows=3, prefix=2, per_window=8)  # past: windows 0 and 1 (16 tokens); newest: window 2
+    removed = compress(state, budget_tokens=8)
     assert removed == 8 and state.frame_tokens() == 16
-    assert len(state.segments[1]) == 4 and state.segments[1].ids == [2, 4, 6, 8]  # every other token of window 0
+    assert state.segments[1].ids == [2, 4, 6, 8] and state.segments[2].ids == [10, 12, 14, 16]  # every other token
     assert state.segments[1].hidden.flatten().tolist() == [2, 4, 6, 8]
+    assert len(state.segments[3]) == 8  # the newest window is untouched
     assert state.cache.layers[0].keys.flatten().tolist() == state.cached_ids()
-    assert len(state.segments[2]) == 8  # untouched
+
+
+def test_compress_stops_as_soon_as_the_budget_holds():
+    state = state_with(windows=3, prefix=2, per_window=8)
+    assert compress(state, budget_tokens=12) == 4  # halving window 0 alone (16 -> 12) is enough
+    assert [len(s) for s in state.segments] == [2, 4, 8, 8]
 
 
 def test_compress_leaves_segments_of_two_tokens():
-    state = state_with(windows=1, prefix=1, per_window=2)
+    state = state_with(windows=2, prefix=1, per_window=2)
     assert compress(state, budget_tokens=1) == 0
 
 

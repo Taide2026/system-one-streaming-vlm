@@ -86,21 +86,29 @@ def evict(state: StreamState, policy: CachePolicy, current_window: int) -> list[
 
 
 def compress(state: StreamState, budget_tokens: int) -> int:
-    """kv_compress: while the frame segments hold more than budget_tokens tokens, keep every other token of the
-    oldest frame segment that still has more than 2 tokens. Return the number of tokens removed."""
+    """kv_compress: while the past frame segments (every frame segment but the newest) hold more than budget_tokens
+    tokens, keep every other token of each of them, oldest first, one pass at a time; a segment of 2 tokens or fewer
+    is left alone. The newest window is never pruned. Return the number of tokens removed."""
     removed = 0
-    while state.frame_tokens() > budget_tokens:
-        target = next((i for i, segment in enumerate(state.segments) if segment.window is not None and len(segment) > 2), None)
-        if target is None:
+    while True:
+        frames = [i for i, segment in enumerate(state.segments) if segment.window is not None]
+        past = frames[:-1]
+        if sum(len(state.segments[i]) for i in past) <= budget_tokens:
             break
-        segment = state.segments[target]
-        offset = _offsets(state.segments)[target]
-        keep = list(range(0, len(segment), 2))
-        drop = [offset + k for k in range(len(segment)) if k % 2 == 1]
-        remove_tokens(state.cache, drop)
-        segment.ids = [segment.ids[k] for k in keep]
-        segment.hidden = segment.hidden[keep]
-        removed += len(drop)
+        targets = [i for i in past if len(state.segments[i]) > 2]
+        if not targets:
+            break
+        for target in targets:
+            segment = state.segments[target]
+            offset = _offsets(state.segments)[target]
+            drop = [offset + k for k in range(len(segment)) if k % 2 == 1]
+            remove_tokens(state.cache, drop)
+            keep = list(range(0, len(segment), 2))
+            segment.ids = [segment.ids[k] for k in keep]
+            segment.hidden = segment.hidden[keep]
+            removed += len(drop)
+            if sum(len(state.segments[i]) for i in past) <= budget_tokens:
+                break
     return removed
 
 

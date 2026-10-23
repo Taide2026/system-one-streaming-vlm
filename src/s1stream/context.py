@@ -9,8 +9,9 @@ The decision and its label stay on the newest window in every strategy, so every
                frames; the question is appended, read, then dropped (snapshot -> restore). Needs a StreamingBackbone.
   kv_sinks     S3: kv, plus the frames of the first sinks_s seconds of the video that are never evicted (StreamingVLM's
                attention sinks; the prompt prefix is always kept in every kv strategy).
-  kv_compress  S4: kv, but the past's visual tokens are pruned to budget_tokens (oldest window first, every other
-               token), so memory stays flat as L grows (a stand-in for InfiniPot-V / StreamMem's scored pruning).
+  kv_compress  S4: kv, but the past windows' visual tokens are pruned to budget_tokens (every other token of each past
+               window, oldest first, pass after pass; the newest window is never pruned), so memory stays flat as L
+               grows (a stand-in for InfiniPot-V / StreamMem's scored pruning).
   text         S5: nothing cached; the abnormal probabilities of the last `history` windows are written into the
                question's state as text (MoniTor-like memory). Works with every backbone.
 
@@ -55,7 +56,8 @@ class CachePolicy:
 
     keep_windows: past windows whose frames stay in the cache (the newest window is always kept).
     sink_windows: the first windows of the video that are never evicted.
-    budget_tokens: when set, the past's visual tokens (sinks included) are pruned down to this many.
+    budget_tokens: when set, the past windows' visual tokens (sinks included, the newest window excluded) are
+                   pruned down to this many.
     """
     keep_windows: int
     sink_windows: int = 0
