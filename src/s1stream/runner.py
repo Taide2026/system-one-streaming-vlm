@@ -7,7 +7,13 @@ Writes into a new run folder:
   scores.jsonl   one line per window, written and flushed as it is scored:
                  {video, window, start_s, end_s, label, score, probabilities, seconds}
                  score = question.score(probabilities); seconds = wall time of input form + backbone + head.
-                 A backbone that decodes adds text, its answer.
+                 A backbone that decodes adds text, its answer. context recompute adds frames_read, the frames the
+                 model saw (past + newest).
+
+The context section (s1stream.context) decides how the past enters a window: s0 (nothing), recompute (the past
+windows' frames are read again), kv / kv_sinks / kv_compress (a StreamingBackbone keeps the cache; start_video at each
+video's first window), text (the past windows' scores go into the question's state). The window scored and labelled
+is always the newest one.
   run.json       {name, machine, gpu, started, finished, free_memory_gb, peak_gpu_gb, load_s, windows, limit_windows,
                   versions: {python, torch, transformers}, git_commit, git_dirty, assets: {name: {revision, sha256}}}
                  machine: S1_MACHINE (e.g. spark, pro6000), else the host name; gpu: the CUDA device's name.
@@ -28,7 +34,8 @@ import torch
 import yaml
 
 from s1stream.assets import LOCK_FILE, load_lock
-from s1stream.config import ExperimentConfig
+from s1stream.config import ConfigError, ExperimentConfig
+from s1stream.context import KV_STRATEGIES, policy as cache_policy, text_state, with_past_frames
 from s1stream.registry import ANSWER_HEADS, BACKBONES, DATASETS, INPUT_FORMS
 from s1stream.windows import plan_windows
 
@@ -101,32 +108,53 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
     if cuda:
         torch.cuda.reset_peak_memory_stats()
 
+    spec = config.context
+    streaming = spec.strategy in KV_STRATEGIES
+    if streaming and not hasattr(backbone, "forward_stream"):
+        raise ConfigError(f"context.strategy {spec.strategy!r} needs a streaming backbone; "
+                          f"{config.backbone['name']!r} keeps no cache (noncausal or bidirectional prompt?)")
+    keep_windows = spec.keep_windows(config.window.stride_s)
+    policy = cache_policy(spec, config.window.stride_s) if streaming else None
+
     count = 0
     with (out_dir / "scores.jsonl").open("w") as stream:
         for item in items:
             if limit_windows is not None and count >= limit_windows:
                 break
             video_count = 0
-            for window in plan_windows(item, config.window.length_s, config.window.stride_s,
-                                       config.window.frames):
+            windows = plan_windows(item, config.window.length_s, config.window.stride_s, config.window.frames)
+            scores_so_far: list[float] = []
+            if streaming:
+                backbone.start_video()
+            for index, window in enumerate(windows):
                 if limit_windows is not None and count >= limit_windows:
                     break
                 if cuda:
                     torch.cuda.synchronize()
                 start = time.perf_counter()
                 with torch.inference_mode():
-                    inp = input_form.build(item, window, config.question)
-                    output = backbone.forward(inp, config.question)
-                    probabilities = head.probabilities(output, config.question)
+                    seen = with_past_frames(windows, index, keep_windows) if spec.strategy == "recompute" else window
+                    question = text_state(config.question, scores_so_far, spec.history) if spec.strategy == "text" \
+                        else config.question
+                    inp = input_form.build(item, seen, question)
+                    if streaming:
+                        output = backbone.forward_stream(inp, question, policy, window.index)
+                    else:
+                        output = backbone.forward(inp, question)
+                    probabilities = head.probabilities(output, question)
                 if cuda:
                     torch.cuda.synchronize()
                 seconds = time.perf_counter() - start
+                score = question.score(probabilities)
+                scores_so_far.append(score)
                 row = {"video": item.name, "window": window.index, "start_s": window.start_s,
                        "end_s": window.end_s, "label": window.label,
-                       "score": config.question.score(probabilities),
+                       "score": score,
                        "probabilities": probabilities, "seconds": seconds}
                 if output.text is not None:
                     row["text"] = output.text
+                if spec.strategy == "recompute":
+                    row["frames_read"] = len(inp.images)
                 stream.write(json.dumps(row) + "\n")
                 stream.flush()
                 count += 1

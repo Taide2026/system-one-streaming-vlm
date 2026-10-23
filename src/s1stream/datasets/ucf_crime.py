@@ -109,20 +109,42 @@ def select(rows: Sequence[AnnotationRow], root: Path, probe: Probe, n_anomaly: i
     return selected
 
 
+def select_named(rows: Sequence[AnnotationRow], root: Path, probe: Probe, names: Sequence[str]) -> list[VideoItem]:
+    """The videos called names, in that order (a pilot's hand-picked list). Raise DatasetError for a name that is
+    not in the annotation file."""
+    by_name = {row.name: row for row in rows}
+    items: list[VideoItem] = []
+    for name in names:
+        if name not in by_name:
+            raise DatasetError(f"Unknown video: {name}")
+        row = by_name[name]
+        path = video_path(root, row)
+        fps, n_frames = probe(path)
+        items.append(VideoItem(row.name, path, row.category, fps, n_frames, row.events))
+    return items
+
+
 @DATASETS.register("ucf_crime")
 class UcfCrime:
     """Config: {name: ucf_crime, asset: ucf-crime, n_anomaly, n_normal, max_duration_s, seed, min_duration_s
-    (optional, default 0)}. load_config adds path."""
+    (optional, default 0)}, or {name: ucf_crime, asset: ucf-crime, names: [<video file name>, ...]} for a
+    hand-picked list in that order. load_config adds path."""
 
-    def __init__(self, path: str | Path, n_anomaly: int, n_normal: int, max_duration_s: float, seed: int,
-                 asset: str | None = None, probe: Probe = probe_video, min_duration_s: float = 0.0) -> None:
+    def __init__(self, path: str | Path, n_anomaly: int | None = None, n_normal: int | None = None,
+                 max_duration_s: float | None = None, seed: int | None = None, asset: str | None = None,
+                 probe: Probe = probe_video, min_duration_s: float = 0.0, names: Sequence[str] | None = None) -> None:
         self.root = Path(path)
         self.n_anomaly, self.n_normal = n_anomaly, n_normal
         self.min_duration_s, self.max_duration_s, self.seed = min_duration_s, max_duration_s, seed
         self.probe = probe
+        self.names = list(names) if names else None
+        if self.names is None and None in (n_anomaly, n_normal, max_duration_s, seed):
+            raise DatasetError("ucf_crime needs names, or n_anomaly, n_normal, max_duration_s and seed")
 
     def items(self) -> list[VideoItem]:
-        """read_annotations(root / ANNOTATION_FILE), then select(...)."""
+        """read_annotations(root / ANNOTATION_FILE), then select_named(names) or select(...)."""
         rows = read_annotations(self.root / ANNOTATION_FILE)
+        if self.names is not None:
+            return select_named(rows, self.root, self.probe, self.names)
         return select(rows, self.root, self.probe, self.n_anomaly, self.n_normal,
                       self.max_duration_s, self.seed, self.min_duration_s)

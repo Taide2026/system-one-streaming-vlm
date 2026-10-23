@@ -169,3 +169,20 @@ def test_ucf_crime_items_reads_annotation_file_and_selects(tmp_path):
     dataset = UcfCrime(path=tmp_path, n_anomaly=3, n_normal=2, max_duration_s=60, seed=7, probe=probe_by_index)
     expected = select(rows, tmp_path, probe_by_index, 3, 2, 60, seed=7)
     assert dataset.items() == expected
+
+
+def test_select_named_keeps_the_given_order_and_rejects_unknown_names(tmp_path):
+    rows = forty_rows()
+    make_tree(tmp_path, rows)
+    (tmp_path / "annotations").mkdir()
+    (tmp_path / "annotations" / "Temporal_Anomaly_Annotation_for_Testing_Videos.txt").write_text(
+        "".join(f"{row.name} {row.category} " + (f"{row.events[0][0]} {row.events[0][1]}" if row.events else "-1 -1")
+                + " -1 -1\n" for row in rows))
+    names = ["Normal_Videos_003_x264.mp4", "Abuse002_x264.mp4"]
+    items = UcfCrime(tmp_path, names=names, probe=probe_by_index).items()
+    assert [item.name for item in items] == names
+    assert items[1].events == ((10, 20),) and items[0].category == "Normal"
+    with pytest.raises(DatasetError):
+        UcfCrime(tmp_path, names=["Nope.mp4"], probe=probe_by_index).items()
+    with pytest.raises(DatasetError):
+        UcfCrime(tmp_path, probe=probe_by_index)

@@ -14,9 +14,11 @@ from typing import Any
 
 import yaml
 
+from s1stream.context import ContextError, ContextSpec, parse_context
 from s1stream.types import Question
 
 SECTIONS = ("name", "dataset", "window", "question", "input_form", "backbone", "answer_head", "decision_rules")
+OPTIONAL_SECTIONS = ("context",)  # see s1stream.context
 SLOT_SECTIONS = ("dataset", "input_form", "backbone", "answer_head")
 
 
@@ -41,6 +43,7 @@ class ExperimentConfig:
     backbone: dict[str, Any]
     answer_head: dict[str, Any]
     decision_rules: list[dict[str, Any]]
+    context: ContextSpec  # how the past enters a decision (section `context`, default s0)
     raw: dict[str, Any]  # the YAML as read, before asset resolution; copied into each run folder
 
 
@@ -57,6 +60,8 @@ def load_config(path: Path, resolver: Callable[[str], Path] | None = None) -> Ex
       spec["path"] = resolver(spec["asset"]). resolver defaults to s1stream.assets.resolve.
       An s1stream.assets.AssetError from the resolver becomes a ConfigError that names the asset.
     - question.options becomes a tuple.
+    - The optional section `context` becomes a ContextSpec (s1stream.context.parse_context); a ContextError becomes
+      a ConfigError.
     """
     try:
         data = yaml.safe_load(path.read_text())
@@ -105,6 +110,10 @@ def load_config(path: Path, resolver: Callable[[str], Path] | None = None) -> Ex
                 raise ConfigError(f"Could not resolve asset {spec['asset']!r}: {exc}") from exc
 
     window = data["window"]
+    try:
+        context = parse_context(data.get("context"), float(window["stride_s"]))
+    except ContextError as exc:
+        raise ConfigError(str(exc)) from exc
     return ExperimentConfig(
         name=data["name"],
         dataset=data["dataset"],
@@ -119,5 +128,6 @@ def load_config(path: Path, resolver: Callable[[str], Path] | None = None) -> Ex
         backbone=data["backbone"],
         answer_head=data["answer_head"],
         decision_rules=data["decision_rules"],
+        context=context,
         raw=original,
     )

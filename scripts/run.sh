@@ -2,12 +2,14 @@
 # Run an s1stream experiment on a GPU machine (developed on spark-20cb, NVIDIA GB10).
 #
 #   scripts/run.sh setup              install uv when missing, uv sync, CPU tests
-#   scripts/run.sh assets             jev-omni with `s1stream fetch`; ucf-crime built from the ucf-clips download
+#   scripts/run.sh assets             clef-flash with `s1stream fetch`; ucf-crime built from the ucf-clips download
 #   scripts/run.sh ucf                ucf-crime only, built from the ucf-clips download (UCF_CLIPS)
 #   scripts/run.sh smoke  [config]    5 windows into results/smoke/<time>, then report
 #   scripts/run.sh run    [config]    full run into results/<machine>/<config name>/<time>, then report
 #   scripts/run.sh report <run dir>   metrics only, no GPU
 #   scripts/run.sh all    [config]    setup, assets, smoke, run
+#   scripts/run.sh pilot              every configs/pilot_*.yaml in turn, then the correctness check (S1 vs S2, L = 2)
+#                                     and the pilot table (scripts/pilot-report.py)
 #
 # Environment:
 #   S1_ASSETS  asset root (default ~/s1-assets)
@@ -20,7 +22,7 @@ cd "$(dirname "$0")/.."
 export PATH="$HOME/.local/bin:$PATH"
 export S1_ASSETS="${S1_ASSETS:-$HOME/s1-assets}"
 UCF_CLIPS="${UCF_CLIPS:-$HOME/datasets/ucf-clips}"
-DEFAULT_CONFIG=configs/jev_omni_ucf20.yaml
+DEFAULT_CONFIG=configs/pilot_ucf_v1_s0.yaml
 
 # ucf-clips has the 1900 UCF-Crime videos but no event times. The annotation file comes from the
 # UCF-Crime authors' repository; its SHA-256 equals the one locked in assets.yaml.
@@ -75,7 +77,7 @@ EOF
 
 assets() {
     mkdir -p "$S1_ASSETS"
-    uv run s1stream fetch jev-omni
+    uv run s1stream fetch clef-flash
     ucf_crime
 }
 
@@ -102,6 +104,26 @@ print(f"full report: {sys.argv[1]}")
 EOF
 }
 
+# The pilot: one run per configs/pilot_*.yaml (skipping the configs that already have a run), then the checks.
+pilot() {
+    local machine="${S1_MACHINE:-$(hostname)}" config name out runs=()
+    for config in configs/pilot_*.yaml; do
+        name=$(sed -n 's/^name: *//p' "$config")
+        if ls -d "results/$machine/$name"/*/ >/dev/null 2>&1; then
+            echo "$name: already run, skipping"
+        else
+            experiment "$config" "results/$machine/$name/$(date +%Y%m%d-%H%M%S)"
+        fi
+        runs+=("$(ls -d "results/$machine/$name"/*/ | tail -1)")
+    done
+    local s1 s2
+    s1=$(ls -d "results/$machine/pilot_ucf_v1_s1_recompute_l2"/*/ | tail -1)
+    s2=$(ls -d "results/$machine/pilot_ucf_v1_s2_kv_l2"/*/ | tail -1)
+    echo "== correctness: S2 (kv, L = 2) vs S1 (recompute, L = 2)"
+    uv run python scripts/compare-runs.py "$s1" "$s2" --unevicted 1
+    uv run python scripts/pilot-report.py "${runs[@]}"
+}
+
 experiment() {
     local config="$1" out="$2"
     shift 2
@@ -122,5 +144,6 @@ case "$command" in
         experiment "$config" "results/${S1_MACHINE:-$(hostname)}/$(sed -n 's/^name: *//p' "$config")/$(date +%Y%m%d-%H%M%S)" ;;
     report) report "${1:?usage: scripts/run.sh report <run dir>}" ;;
     all)    setup; assets; "$0" smoke "${1:-$DEFAULT_CONFIG}"; "$0" run "${1:-$DEFAULT_CONFIG}" ;;
-    *)      sed -n '2,14p' "$0" | sed 's/^# \{0,1\}//'; exit 1 ;;
+    pilot)  pilot ;;
+    *)      sed -n '2,16p' "$0" | sed 's/^# \{0,1\}//'; exit 1 ;;
 esac

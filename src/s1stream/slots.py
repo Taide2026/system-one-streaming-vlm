@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from typing import Protocol
 
+from s1stream.context import CachePolicy
 from s1stream.types import BackboneOutput, ModelInput, Question, VideoItem, Window
 
 
@@ -25,6 +26,19 @@ class InputForm(Protocol):
 class Backbone(Protocol):
     def forward(self, inp: ModelInput, question: Question) -> BackboneOutput:
         """Run one forward pass without gradients. Return detached CPU tensors."""
+        ...
+
+
+class StreamingBackbone(Backbone, Protocol):
+    """A causal backbone that can keep the past across the windows of one video (context strategies kv*)."""
+
+    def start_video(self) -> None:
+        """Forget everything: the next forward_stream starts a new video."""
+        ...
+
+    def forward_stream(self, inp: ModelInput, question: Question, policy: CachePolicy, window: int) -> BackboneOutput:
+        """Prefill only inp.images (the newest window's frames) on top of the kept cache, append the question, read
+        the option logits, then drop the question's tokens. Keep the past as policy says."""
         ...
 
 
