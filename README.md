@@ -41,6 +41,26 @@ A uv-managed Python has it. The system Python has it only when `python3.12-dev` 
 
 Torch comes from the PyTorch cu130 index. Transformers is pinned to 5.17.0, the version the Jev-Omni checkpoint was tested with.
 
+### Docker (shared GPU server)
+
+On a server shared with other users (pro6000: 10 x RTX PRO 6000, Docker, driver 595), run everything in a container
+of your own, `scripts/docker.sh`: image `s1stream:$USER`, container `s1stream-$USER`, one GPU, run as your own UID.
+It never touches another user's image or container and takes no `--privileged` or `--gpus all`.
+
+```bash
+scripts/docker.sh build                    # image from docker/Dockerfile (again after a uv.lock change)
+GPU=4 scripts/docker.sh up                 # pick a free GPU with nvidia-smi; inside, it is cuda:0
+scripts/docker.sh exec uv run --frozen pytest -q
+scripts/docker.sh exec uv run --frozen s1stream fetch d3-nano xd-violence
+scripts/docker.sh exec scripts/run.sh smoke configs/d3_nano_xd_test_v1_f8.yaml
+scripts/docker.sh shell                    # long runs: start tmux in here
+scripts/docker.sh down                     # remove the container; image and data stay
+```
+
+The repository is mounted at `/work` (a code change needs no rebuild); `DATA` (default `/data/$USER`) at the same
+path, with the assets in `$DATA/s1-assets` and the Hugging Face cache in `$DATA/hf-cache`. The GPUs are shared:
+latency there depends on the other users' load, so compare latencies within one machine only.
+
 ## Assets (models and datasets)
 
 Models and datasets are never in git. `assets.yaml` lists each asset with its source, exact revision and file SHA-256.
@@ -274,6 +294,7 @@ their short runs: `configs/<model>_ucf_long_c14_f8.yaml` runs only the 173 video
 assets.yaml                 asset lock file
 configs/                    one YAML file per experiment
 scripts/run.sh              setup, assets, smoke and full runs on the GPU machine
+scripts/docker.sh           the Docker environment on a shared GPU server (docker/Dockerfile)
 src/s1stream/               the package (slots, plugins, runner, report, metrics, assets, cli)
 tests/                      CPU tests
 results/                    run folders
