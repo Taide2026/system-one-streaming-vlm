@@ -1,14 +1,14 @@
 # Stage 1 of the fine-tuning study (2026-10-24): Clef-Flash, UCF-Crime training windows, V1 prompt.
 # Recipe: deck p. 32 / paper Sec. 4.2. Window labels from HIVAU-70k's event times on the training videos
-# (github.com/pipixin321/HolmesVAU, cloned on spark at ~/datasets/HolmesVAU). 20k abnormal + 20k normal windows,
+# (github.com/pipixin321/HolmesVAU, cloned on spark at ~/datasets/HolmesVAU). 10k abnormal + 10k normal windows (stage 1: reference DeltaNet kernels make a 9B step 86 s per 32 windows),
 # 10 % of the training videos held out for the temperature. Run: scripts/ft.sh train (tmux) on spark.
 name: ft_ucf_v1_clef
 
 data:
   asset: ucf-crime
   hivau_json: ~/datasets/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json
-  n_abnormal: 20000
-  n_normal: 20000
+  n_abnormal: 10000
+  n_normal: 10000
   n_val: 2000
   holdout: 0.1
   seed: 0

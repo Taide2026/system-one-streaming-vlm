@@ -6,8 +6,8 @@ name: ft_ucf_v1_d3nano
 data:
   asset: ucf-crime
   hivau_json: ~/datasets/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json
-  n_abnormal: 20000
-  n_normal: 20000
+  n_abnormal: 10000
+  n_normal: 10000
   n_val: 2000
   holdout: 0.1
   seed: 0
