@@ -25,7 +25,6 @@ import math
 from pathlib import Path
 
 import numpy as np
-from scipy.optimize import minimize
 
 
 def logit(p: np.ndarray) -> np.ndarray:
@@ -53,13 +52,38 @@ def ece(p: np.ndarray, y: np.ndarray, bins: int = 10) -> float:
 
 
 def fit_temperature(d: np.ndarray, y: np.ndarray) -> float:
-    res = minimize(lambda t: nll(sigmoid(d / math.exp(t[0])), y), x0=[0.0], method="Nelder-Mead")
-    return float(math.exp(res.x[0]))
+    """Golden-section search of T in [0.1, 10] (on log T) minimising the NLL."""
+    lo, hi = math.log(0.1), math.log(10.0)
+    phi = (math.sqrt(5) - 1) / 2
+    f = lambda t: nll(sigmoid(d / math.exp(t)), y)  # noqa: E731
+    a, b = hi - phi * (hi - lo), lo + phi * (hi - lo)
+    fa, fb = f(a), f(b)
+    for _ in range(80):
+        if fa < fb:
+            hi, b, fb = b, a, fa
+            a = hi - phi * (hi - lo)
+            fa = f(a)
+        else:
+            lo, a, fa = a, b, fb
+            b = lo + phi * (hi - lo)
+            fb = f(b)
+    return float(math.exp((lo + hi) / 2))
 
 
 def fit_platt(d: np.ndarray, y: np.ndarray) -> tuple[float, float]:
-    res = minimize(lambda ab: nll(sigmoid(ab[0] * d + ab[1]), y), x0=[1.0, 0.0], method="Nelder-Mead")
-    return float(res.x[0]), float(res.x[1])
+    """Logistic regression of y on d (two parameters a, b) by Newton's method."""
+    a, b = 1.0, 0.0
+    for _ in range(100):
+        z = a * d + b
+        p = sigmoid(z)
+        w = p * (1 - p) + 1e-9
+        g = np.array([((p - y) * d).sum(), (p - y).sum()])
+        h = np.array([[(w * d * d).sum(), (w * d).sum()], [(w * d).sum(), w.sum()]]) + 1e-6 * np.eye(2)
+        step = np.linalg.solve(h, g)
+        a, b = a - step[0], b - step[1]
+        if np.abs(step).max() < 1e-8:
+            break
+    return float(a), float(b)
 
 
 def main() -> None:
