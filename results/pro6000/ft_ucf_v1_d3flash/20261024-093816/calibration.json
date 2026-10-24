@@ -1,0 +1,7 @@
+{
+ "temperature": 1.5388723015786347,
+ "val_nll_before": 0.4668528735637665,
+ "val_nll_after": 0.44132235646247864,
+ "val_window_auc": 0.8687929324690402,
+ "val_windows": 2000
+}

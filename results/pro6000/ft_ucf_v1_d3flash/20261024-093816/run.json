@@ -1,0 +1,26 @@
+{
+ "name": "ft_ucf_v1_d3flash",
+ "backbone": "d3",
+ "machine": "pro6000",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "started": "2026-10-24T09:38:18.215118+00:00",
+ "finished": "2026-10-24T12:11:13.750230+00:00",
+ "train_seconds": 8806.232701451518,
+ "steps": 625,
+ "total_steps": 625,
+ "train_windows": 20000,
+ "val_windows": 2000,
+ "limit_steps": null,
+ "trainable": {
+  "lora": 160432128,
+  "readout": 1044480
+ },
+ "peak_gpu_gb": 19.268227100372314,
+ "calibration": {
+  "temperature": 1.5388723015786347,
+  "val_nll_before": 0.4668528735637665,
+  "val_nll_after": 0.44132235646247864,
+  "val_window_auc": 0.8687929324690402,
+  "val_windows": 2000
+ }
+}
