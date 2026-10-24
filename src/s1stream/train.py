@@ -250,7 +250,54 @@ class D3Trainee:
         save_file({"weight": self.readout.detach().cpu().contiguous()}, out_dir / "readout.safetensors")
 
 
-TRAINEES = {"clef_flash": ClefTrainee, "d3": D3Trainee}
+class QwenTrainee:
+    """Qwen3.5 instruction model without decision training (the control): the backbone qwen_first_token's prompt,
+    the next-token logits at the answer position gathered at each option's first token; LoRA only, no head."""
+
+    name = "qwen_first_token"
+
+    def __init__(self, path: Path, device: torch.device, question: Question, lora: dict, grad_checkpoint: bool):
+        from s1stream.backbones.qwen_first_token import ANSWER_TAIL, QwenFirstToken, build_prompt, first_tokens
+
+        wrapper = QwenFirstToken(path, memory_cap_gb=100.0, device=str(device))
+        self.processor, self.device, self.question = wrapper.processor, device, question
+        self.option_ids = tuple(question.options)
+        self.token_ids = torch.tensor(first_tokens(self.processor.tokenizer, question.options), device=device)
+        self.peft = lora_wrap(wrapper.model, int(lora["r"]), int(lora["alpha"]), float(lora.get("dropout", 0.0)),
+                              grad_checkpoint)
+        self.build_prompt, self.answer_tail = build_prompt, ANSWER_TAIL
+
+    def encode(self, images: list) -> Any:
+        messages = [{"role": "user", "content": [{"type": "image"}] * len(images)
+                     + [{"type": "text", "text": self.build_prompt(self.question)}]}]
+        text = self.processor.apply_chat_template(messages, add_generation_prompt=True, tokenize=False,
+                                                  enable_thinking=False)
+        if not text.endswith(self.answer_tail):
+            raise RuntimeError("Unexpected Qwen non-thinking template boundary")
+        return text, images
+
+    def collate(self, encoded: list) -> dict[str, Any]:
+        self.processor.tokenizer.padding_side = "left"
+        texts = [text for text, _ in encoded]
+        images = [image for _, imgs in encoded for image in imgs]
+        return dict(self.processor(text=texts, images=images, padding=True, return_tensors="pt"))
+
+    def forward(self, batch: dict[str, Any]) -> torch.Tensor:
+        inputs = {k: v.to(self.device) for k, v in batch.items()}
+        logits = self.peft(**inputs, use_cache=False, logits_to_keep=1).logits[:, -1]
+        return logits.float()[:, self.token_ids]
+
+    def parameters(self) -> tuple[list[torch.nn.Parameter], list[torch.nn.Parameter]]:
+        return [p for p in self.peft.parameters() if p.requires_grad], []
+
+    def train(self, mode: bool) -> None:
+        self.peft.train(mode)
+
+    def save(self, out_dir: Path) -> None:
+        self.peft.save_pretrained(out_dir / "adapter")
+
+
+TRAINEES = {"clef_flash": ClefTrainee, "d3": D3Trainee, "qwen_first_token": QwenTrainee}
 
 
 class WindowDataset(torch.utils.data.Dataset):
@@ -340,8 +387,10 @@ def train(config_path: Path, out_dir: Path, limit_steps: int | None = None) -> P
     total_steps = math.ceil(len(loader) / accumulate) * epochs
     warmup = int(round(total_steps * float(optim.get("warmup", 0.03))))
     base_lr, head_lr = float(optim["lr"]), float(optim.get("head_lr", optim["lr"]))
-    optimizer = torch.optim.AdamW([{"params": lora_params, "lr": base_lr}, {"params": head_params, "lr": head_lr}],
-                                  weight_decay=0.0, betas=(0.9, 0.999))
+    groups = [{"params": lora_params, "lr": base_lr}]
+    if head_params:
+        groups.append({"params": head_params, "lr": head_lr})
+    optimizer = torch.optim.AdamW(groups, weight_decay=0.0, betas=(0.9, 0.999))
     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda s: lr_at(s, total_steps, warmup))
     if device.type == "cuda":
         torch.cuda.reset_peak_memory_stats()
