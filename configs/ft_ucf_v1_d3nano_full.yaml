@@ -1,12 +1,13 @@
-# Stage 2 push (2026-10-24): d3-nano, hard labels, 4x the data (40k abnormal + 40k normal windows, most of the
-# training split's abnormal windows), 1 epoch = 2,500 steps.
+# Stage 2 push (2026-10-24): d3-nano, hard labels, all the data: the training split (after the 10 % held-out videos) has
+# 13,624 abnormal windows in total, so 13k abnormal + 13k normal (1.3x the 20k baseline), 1 epoch = 812 steps.
+# A first attempt asked for 40k + 40k and failed (TrainDataError: only 13,624 abnormal windows exist).
 name: ft_ucf_v1_d3nano_full
 
 data:
   asset: ucf-crime
   hivau_json: $S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json  # S1_DATASETS: scripts/ft.sh
-  n_abnormal: 40000
-  n_normal: 40000
+  n_abnormal: 13000
+  n_normal: 13000
   n_val: 2000
   holdout: 0.1
   seed: 0
