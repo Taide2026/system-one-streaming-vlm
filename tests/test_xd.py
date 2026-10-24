@@ -78,3 +78,15 @@ def test_prepare_xd_violence_adds_the_annotations(tmp_path, monkeypatch):
     monkeypatch.setattr(assets.urllib.request, "urlopen", lambda url: io.BytesIO(ANNOTATIONS.encode()))
     assets.prepare_xd_violence(tmp_path)
     assert (tmp_path / "annotations" / "annotations.txt").read_text() == ANNOTATIONS
+
+
+def test_xd_names_selects_in_order(tmp_path):
+    from s1stream.datasets.xd_violence import XdViolence
+    root = tmp_path
+    (root / "videos").mkdir(); (root / "annotations").mkdir()
+    for name in ("a_label_A.mp4", "b_label_B1.mp4"):
+        (root / "videos" / name).write_bytes(b"")
+    (root / "annotations" / "annotations.txt").write_text("b_label_B1.mp4 10 20\n")
+    items = XdViolence(root, names=["b_label_B1.mp4", "a_label_A.mp4"], probe=lambda p: (24.0, 240)).items()
+    assert [i.name for i in items] == ["b_label_B1.mp4", "a_label_A.mp4"]
+    assert items[0].events == ((10, 20),) and items[0].category == "Fighting" and items[1].category == "Normal"

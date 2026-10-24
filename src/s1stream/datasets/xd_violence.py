@@ -9,6 +9,7 @@ video: its name (most lines without ".mp4", 14 with it), then the first and last
 from __future__ import annotations
 
 import random
+from collections.abc import Sequence
 from pathlib import Path
 
 from s1stream.datasets.ucf_crime import NORMAL_CATEGORY, DatasetError, Probe, probe_video
@@ -80,18 +81,42 @@ def select(root: Path, probe: Probe, n_violent: int, n_normal: int, max_duration
     return selected
 
 
+def select_named(root: Path, probe: Probe, names: Sequence[str]) -> list[VideoItem]:
+    """The videos called names, in that order (a shard's list). Raise DatasetError for a missing file or a violent
+    video without annotation."""
+    events = parse_annotations((root / ANNOTATION_FILE).read_text())
+    items: list[VideoItem] = []
+    for name in names:
+        path = root / "videos" / name
+        if not path.is_file():
+            raise DatasetError(f"Video not found: {name} ({path})")
+        fps, n_frames = probe(path)
+        classes = classes_of(name)
+        if classes and name not in events:
+            raise DatasetError(f"No annotation for violent video: {name}")
+        items.append(VideoItem(name, path, "+".join(classes) or NORMAL_CATEGORY, fps, n_frames, events.get(name, ())))
+    return items
+
+
 @DATASETS.register("xd_violence")
 class XdViolence:
     """Config: {name: xd_violence, asset: xd-violence, n_violent, n_normal, max_duration_s, seed, min_duration_s
-    (optional, default 0)}. load_config adds path."""
+    (optional, default 0)}, or {name: xd_violence, asset: xd-violence, names: [<video file name>, ...]} for a
+    hand-picked list in that order (shards). load_config adds path."""
 
-    def __init__(self, path: str | Path, n_violent: int, n_normal: int, max_duration_s: float, seed: int,
-                 asset: str | None = None, probe: Probe = probe_video, min_duration_s: float = 0.0) -> None:
+    def __init__(self, path: str | Path, n_violent: int | None = None, n_normal: int | None = None,
+                 max_duration_s: float | None = None, seed: int | None = None, asset: str | None = None,
+                 probe: Probe = probe_video, min_duration_s: float = 0.0, names: Sequence[str] | None = None) -> None:
         self.root = Path(path)
         self.n_violent, self.n_normal = n_violent, n_normal
         self.min_duration_s, self.max_duration_s, self.seed = min_duration_s, max_duration_s, seed
         self.probe = probe
+        self.names = list(names) if names else None
+        if self.names is None and None in (n_violent, n_normal, max_duration_s, seed):
+            raise DatasetError("xd_violence needs names, or n_violent, n_normal, max_duration_s and seed")
 
     def items(self) -> list[VideoItem]:
+        if self.names is not None:
+            return select_named(self.root, self.probe, self.names)
         return select(self.root, self.probe, self.n_violent, self.n_normal, self.max_duration_s, self.seed,
                       self.min_duration_s)
