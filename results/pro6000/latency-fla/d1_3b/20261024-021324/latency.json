@@ -1,0 +1,37 @@
+{
+ "windows": 575,
+ "warmup": 5,
+ "per_video": 2,
+ "first_window_ms": 322.1431039273739,
+ "ms_per_frame": 34.134984581255864,
+ "p50_ms": 239.33685524389148,
+ "p95_ms": 430.10743162594736,
+ "p99_ms": 492.87854317575693,
+ "rtf_p95": 0.21505371581297367,
+ "budget_ms": 2000.0,
+ "kernels": {
+  "fla": true,
+  "causal_conv1d": false
+ },
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "versions": {
+  "python": "3.12.12",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.17.0"
+ },
+ "finished": "2026-10-24T02:16:18.875649+00:00",
+ "compare": {
+  "full_run": "results/pro6000/d1_3b_ucf_test_v1_f8/20261023-115105",
+  "full": {
+   "first_window_ms": 4029.7379810363054,
+   "ms_per_frame": 45.32166986546027,
+   "p50_ms": 351.19598638266325,
+   "p95_ms": 582.2287913411855,
+   "p99_ms": 674.1014194115995,
+   "rtf_p95": 0.2911143956705927,
+   "budget_ms": 2000.0
+  },
+  "delta_p95_ms": -152.1213597152381,
+  "ratio_p95": 0.7387258033653387
+ }
+}

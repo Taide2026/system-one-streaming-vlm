@@ -1,0 +1,23 @@
+{
+ "windows": 575,
+ "warmup": 5,
+ "per_video": 2,
+ "first_window_ms": 343.0492328479886,
+ "ms_per_frame": 40.657763629186356,
+ "p50_ms": 321.44009275361896,
+ "p95_ms": 481.95674191229045,
+ "p99_ms": 511.7264568340031,
+ "rtf_p95": 0.24097837095614522,
+ "budget_ms": 2000.0,
+ "kernels": {
+  "fla": true,
+  "causal_conv1d": false
+ },
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "versions": {
+  "python": "3.12.12",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.17.0"
+ },
+ "finished": "2026-10-24T01:59:35.541734+00:00"
+}
