@@ -108,3 +108,17 @@ def test_hard_labels_option_rounds_coverage(tmp_path: Path, monkeypatch):
     records = [Record("v", "v.mp4", "A", 0, 0.0, 2.0, (0,), y) for y in (0.0, 0.3, 0.5, 0.9)]
     hard = [replace(r, y=1.0 if r.y >= 0.5 else 0.0) for r in records]
     assert [r.y for r in hard] == [0.0, 0.0, 1.0, 1.0]
+
+
+def test_draw_hard_negative_share_takes_negatives_from_anomaly_videos():
+    hard = [Record(f"a{i}", "a", "Abuse", i, 0.0, 2.0, (0,), 0.0) for i in range(10)]
+    easy = [Record(f"n{i}", "n", "Normal", i, 0.0, 2.0, (0,), 0.0) for i in range(100)]
+    pos = [Record(f"p{i}", "p", "Abuse", i, 0.0, 2.0, (0,), 1.0) for i in range(50)]
+    chosen = draw(hard + easy + pos, 20, 20, 0, hard_negative_share=0.5)
+    negatives = [r for r in chosen if r.y == 0]
+    assert len(negatives) == 20 and sum(r.category != "Normal" for r in negatives) == 10
+    chosen = draw(hard + easy + pos, 20, 40, 0, hard_negative_share=0.9)  # pool of 10 hard: all of it, rest easy
+    negatives = [r for r in chosen if r.y == 0]
+    assert len(negatives) == 40 and sum(r.category != "Normal" for r in negatives) == 10
+    plain = draw(hard + easy + pos, 20, 20, 0)
+    assert len(plain) == 40

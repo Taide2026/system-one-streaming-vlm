@@ -120,27 +120,41 @@ def split_videos(items: Sequence[VideoItem], holdout: float, seed: int) -> tuple
     return sorted(train, key=lambda i: i.name), sorted(held, key=lambda i: i.name)
 
 
-def draw(records: Sequence[Record], n_abnormal: int, n_normal: int, seed: int) -> list[Record]:
+def draw(records: Sequence[Record], n_abnormal: int, n_normal: int, seed: int,
+         hard_negative_share: float = 0.0) -> list[Record]:
     """n_abnormal records with y > 0 and n_normal with y == 0, drawn without replacement with the seed, shuffled
-    together. Raise TrainDataError when a pool is too small."""
+    together. hard_negative_share: the share of the n_normal that must come from anomaly videos (their label-0
+    windows outside the events, the "hard negatives"; 0 = draw the negatives at random); when that pool is smaller,
+    all of it is taken and normal videos fill the rest. Raise TrainDataError when a pool is too small."""
     abnormal = [record for record in records if record.y > 0]
     normal = [record for record in records if record.y == 0]
     if len(abnormal) < n_abnormal or len(normal) < n_normal:
         raise TrainDataError(f"Too few windows: {len(abnormal)} abnormal (need {n_abnormal}), "
                              f"{len(normal)} normal (need {n_normal})")
     rng = random.Random(seed)
-    chosen = rng.sample(abnormal, n_abnormal) + rng.sample(normal, n_normal)
+    if hard_negative_share > 0:
+        hard = [record for record in normal if record.category != "Normal"]
+        easy = [record for record in normal if record.category == "Normal"]
+        n_hard = min(len(hard), int(round(n_normal * hard_negative_share)))
+        if len(easy) < n_normal - n_hard:
+            raise TrainDataError(f"Too few normal-video windows: {len(easy)} (need {n_normal - n_hard})")
+        negatives = rng.sample(hard, n_hard) + rng.sample(easy, n_normal - n_hard)
+    else:
+        negatives = rng.sample(normal, n_normal)
+    chosen = rng.sample(abnormal, n_abnormal) + negatives
     rng.shuffle(chosen)
     return chosen
 
 
 def sample_records(items: Sequence[VideoItem], length_s: float, stride_s: float, frames: int, n_abnormal: int,
-                   n_normal: int, n_val: int, holdout: float, seed: int) -> tuple[list[Record], list[Record]]:
-    """(training records, held-out records); see the module docstring."""
+                   n_normal: int, n_val: int, holdout: float, seed: int,
+                   hard_negative_share: float = 0.0) -> tuple[list[Record], list[Record]]:
+    """(training records, held-out records); see the module docstring. hard_negative_share applies to the training
+    draw only (the held-out set keeps random negatives, so the temperature sees the natural mix)."""
     train_videos, held_videos = split_videos(items, holdout, seed)
     train_pool = [record for item in train_videos for record in windows_of(item, length_s, stride_s, frames)]
     held_pool = [record for item in held_videos for record in windows_of(item, length_s, stride_s, frames)]
-    train = draw(train_pool, n_abnormal, n_normal, seed)
+    train = draw(train_pool, n_abnormal, n_normal, seed, hard_negative_share)
     val = draw(held_pool, n_val // 2, n_val - n_val // 2, seed + 1) if n_val else []
     return train, val
 

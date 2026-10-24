@@ -1,0 +1,40 @@
+# Stage 2 (2026-10-24): Clef-Flash with hard labels (y >= 0.5), same records as ft_ucf_v1_clef (soft target).
+name: ft_ucf_v1_clef_hard
+
+data:
+  asset: ucf-crime
+  hivau_json: $S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json  # S1_DATASETS: scripts/ft.sh
+  n_abnormal: 10000
+  n_normal: 10000
+  n_val: 2000
+  holdout: 0.1
+  seed: 0
+  hard_labels: true
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+backbone:
+  name: clef_flash
+  asset: clef-flash
+  memory_cap_gb: 100
+
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+
+optim:
+  lr: 1.0e-4
+  head_lr: 1.0e-4
+  warmup: 0.03
+  batch: 2
+  accumulate: 16  # 32 windows per step; batch 2 keeps the 9B under ~35 GB on a shared GPU (pro6000)
+  epochs: 1
+  workers: 6
+  grad_checkpoint: true

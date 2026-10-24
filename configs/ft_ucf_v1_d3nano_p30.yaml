@@ -1,0 +1,39 @@
+# Stage 2 ablation (2026-10-24): hard labels, 30 % of the data (3k + 3k windows). Baseline: ft_ucf_v1_d3nano_hard.
+name: ft_ucf_v1_d3nano_p30
+
+data:
+  asset: ucf-crime
+  hivau_json: $S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json  # S1_DATASETS: scripts/ft.sh
+  n_abnormal: 3000
+  n_normal: 3000
+  n_val: 2000
+  holdout: 0.1
+  seed: 0
+  hard_labels: true
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+backbone:
+  name: d3
+  asset: d3-nano
+
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+
+optim:
+  lr: 1.5e-4
+  head_lr: 1.5e-4
+  warmup: 0.03
+  batch: 8
+  accumulate: 4
+  epochs: 1
+  workers: 6
+  grad_checkpoint: true
