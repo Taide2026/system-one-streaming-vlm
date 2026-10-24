@@ -60,16 +60,19 @@ def video_folder(name: str) -> str:
     return prefix
 
 
-def read_hivau(json_path: Path, root: Path, videos_dir: str = "videos", flat: bool = False) -> list[VideoItem]:
+def read_hivau(json_path: Path, root: Path, videos_dir: str = "videos", flat: bool = False,
+               skip_missing: bool = False) -> list[VideoItem]:
     """The HIVAU-70k training videos as VideoItems (events in inclusive frames, rounded from seconds), sorted by
     name. UCF-Crime layout (flat=False): root/<videos_dir>/<folder>/<name>.mp4 with the folder from the name;
     XD-Violence layout (flat=True, 2026-10-24): root/<videos_dir>/<name>.mp4, category = the HIVAU labels joined by
-    "+". Videos whose file is missing raise TrainDataError naming the first."""
+    "+". Videos whose file is missing raise TrainDataError naming the first, or are skipped (skip_missing: the XD
+    zips hold a few corrupt entries that scripts/xd-train-unpack.sh deletes); the skipped names are in .skipped."""
     try:
         data = json.loads(json_path.read_text())
     except (OSError, ValueError) as exc:
         raise TrainDataError(f"Could not read {json_path}: {exc}") from exc
     items: list[VideoItem] = []
+    skipped: list[str] = []
     for name in sorted(data):
         entry = data[name]
         fps, n_frames = float(entry["fps"]), int(entry["n_frames"])
@@ -77,6 +80,9 @@ def read_hivau(json_path: Path, root: Path, videos_dir: str = "videos", flat: bo
             raise TrainDataError(f"{name}: fps {fps}, n_frames {n_frames}")
         path = root / videos_dir / f"{name}.mp4" if flat else root / videos_dir / video_folder(name) / f"{name}.mp4"
         if not path.is_file():
+            if skip_missing:
+                skipped.append(name)
+                continue
             raise TrainDataError(f"Video not found: {path}")
         # HIVAU lists "events" for normal videos too: randomly cropped normal segments (its event-level normal
         # samples). They are not anomalies: a normal video has no event here.
@@ -86,6 +92,9 @@ def read_hivau(json_path: Path, root: Path, videos_dir: str = "videos", flat: bo
                                          for start, end in entry.get("events", []))
         category = "Normal" if normal else ("+".join(label) if flat else video_folder(name))
         items.append(VideoItem(name, path, category, fps, n_frames, events))
+    read_hivau.skipped = skipped  # type: ignore[attr-defined]
+    if skipped:
+        print(f"read_hivau: {len(skipped)} annotated videos without a file skipped (first: {skipped[0]})", flush=True)
     return items
 
 

@@ -9,6 +9,7 @@ data:
   hivau_json: $S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/xd_database_train.json  # S1_DATASETS: scripts/ft.sh
   videos_dir: train-videos
   flat: true
+  skip_missing: true   # a few zip entries are corrupt (bad CRC) and were deleted at unpack
   n_abnormal: 20000
   n_normal: 20000
   n_val: 2000
