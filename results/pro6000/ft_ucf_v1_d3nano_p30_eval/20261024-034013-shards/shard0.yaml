@@ -1,0 +1,98 @@
+name: ft_ucf_v1_d3nano_p30_eval
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  names:
+  - Abuse028_x264.mp4
+  - Arrest024_x264.mp4
+  - Arson009_x264.mp4
+  - Arson018_x264.mp4
+  - Assault006_x264.mp4
+  - Burglary017_x264.mp4
+  - Burglary032_x264.mp4
+  - Burglary061_x264.mp4
+  - Explosion002_x264.mp4
+  - Explosion010_x264.mp4
+  - Explosion017_x264.mp4
+  - Explosion025_x264.mp4
+  - Explosion033_x264.mp4
+  - Explosion043_x264.mp4
+  - Fighting042_x264.mp4
+  - RoadAccidents004_x264.mp4
+  - RoadAccidents012_x264.mp4
+  - RoadAccidents020_x264.mp4
+  - RoadAccidents122_x264.mp4
+  - RoadAccidents127_x264.mp4
+  - RoadAccidents133_x264.mp4
+  - Robbery106_x264.mp4
+  - Shooting007_x264.mp4
+  - Shooting013_x264.mp4
+  - Shooting021_x264.mp4
+  - Shooting028_x264.mp4
+  - Shooting037_x264.mp4
+  - Shooting048_x264.mp4
+  - Shoplifting007_x264.mp4
+  - Shoplifting017_x264.mp4
+  - Shoplifting027_x264.mp4
+  - Shoplifting033_x264.mp4
+  - Shoplifting044_x264.mp4
+  - Stealing058_x264.mp4
+  - Vandalism015_x264.mp4
+  - Normal_Videos_003_x264.mp4
+  - Normal_Videos_015_x264.mp4
+  - Normal_Videos_025_x264.mp4
+  - Normal_Videos_041_x264.mp4
+  - Normal_Videos_051_x264.mp4
+  - Normal_Videos_067_x264.mp4
+  - Normal_Videos_150_x264.mp4
+  - Normal_Videos_189_x264.mp4
+  - Normal_Videos_217_x264.mp4
+  - Normal_Videos_248_x264.mp4
+  - Normal_Videos_312_x264.mp4
+  - Normal_Videos_360_x264.mp4
+  - Normal_Videos_439_x264.mp4
+  - Normal_Videos_576_x264.mp4
+  - Normal_Videos_621_x264.mp4
+  - Normal_Videos_686_x264.mp4
+  - Normal_Videos_710_x264.mp4
+  - Normal_Videos_745_x264.mp4
+  - Normal_Videos_781_x264.mp4
+  - Normal_Videos_801_x264.mp4
+  - Normal_Videos_867_x264.mp4
+  - Normal_Videos_871_x264.mp4
+  - Normal_Videos_875_x264.mp4
+  - Normal_Videos_879_x264.mp4
+  - Normal_Videos_883_x264.mp4
+  - Normal_Videos_887_x264.mp4
+  - Normal_Videos_891_x264.mp4
+  - Normal_Videos_895_x264.mp4
+  - Normal_Videos_899_x264.mp4
+  - Normal_Videos_903_x264.mp4
+  - Normal_Videos_907_x264.mp4
+  - Normal_Videos_911_x264.mp4
+  - Normal_Videos_915_x264.mp4
+  - Normal_Videos_926_x264.mp4
+  - Normal_Videos_930_x264.mp4
+  - Normal_Videos_934_x264.mp4
+  - Normal_Videos_938_x264.mp4
+  - Normal_Videos_943_x264.mp4
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+input_form:
+  name: frames
+backbone:
+  name: d3
+  asset: d3-nano
+  memory_cap_gb: 40
+  adapter: results/pro6000/ft_ucf_v1_d3nano_p30/20261024-032005
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01

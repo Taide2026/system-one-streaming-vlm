@@ -1,0 +1,26 @@
+{
+ "name": "ft_ucf_v1_d3nano_hardneg",
+ "backbone": "d3",
+ "machine": "pro6000",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "started": "2026-10-24T02:51:37.033484+00:00",
+ "finished": "2026-10-24T03:48:13.888349+00:00",
+ "train_seconds": 3210.06202180963,
+ "steps": 625,
+ "total_steps": 625,
+ "train_windows": 20000,
+ "val_windows": 2000,
+ "limit_steps": null,
+ "trainable": {
+  "lora": 62521344,
+  "readout": 522240
+ },
+ "peak_gpu_gb": 7.206161022186279,
+ "calibration": {
+  "temperature": 1.0848879218100276,
+  "val_nll_before": 0.4235391914844513,
+  "val_nll_after": 0.4228369891643524,
+  "val_window_auc": 0.8780813620678535,
+  "val_windows": 2000
+ }
+}
