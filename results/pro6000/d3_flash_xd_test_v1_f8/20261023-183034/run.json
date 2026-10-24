@@ -1,0 +1,37 @@
+{
+ "name": "d3_flash_xd_test_v1_f8",
+ "machine": "pro6000",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "started": "2026-10-23T18:30:36.738850+00:00",
+ "finished": "2026-10-24T04:26:49.028227+00:00",
+ "free_memory_gb": 691.714672088623,
+ "peak_gpu_gb": 16.32829713821411,
+ "load_s": 9.195163790136576,
+ "windows": 48408,
+ "limit_windows": null,
+ "versions": {
+  "python": "3.12.12",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.17.0"
+ },
+ "git_commit": "df63fd956c8d247040a4465e64410d400c45beb8",
+ "git_dirty": true,
+ "assets": {
+  "d3-flash": {
+   "revision": "8b35c853b90e777595ec36bacae820fe08ea077a",
+   "sha256": {
+    "MODEL_MANIFEST.json": "abdafb9f4a3e39595a54b7ca977e6bd7a3279c57745231319e3a171a43976e65",
+    "config.json": "9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb",
+    "d3_runtime.py": "adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917",
+    "decision_config.json": "0269c72ac055d8149a7a778c477780af361f4c1cde3fd0e5ba9af791453ece18",
+    "readout.safetensors": "8bbc9a9df4e1b7df85a80a1091977092b938d8d2d2869dfaeb8fd36063cf322f"
+   }
+  },
+  "xd-violence": {
+   "revision": null,
+   "sha256": {
+    "annotations/annotations.txt": "27b583ba06fe2e096d7e3d281845365c3b24de7e30797ae5c1ec771667e04c2f"
+   }
+  }
+ }
+}
