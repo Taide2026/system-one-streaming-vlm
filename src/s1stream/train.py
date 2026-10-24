@@ -9,7 +9,8 @@ path does not change: the backbone loads the adapter (merged) and the read-out f
 (backbone: {adapter: <run folder>}). The prompt mask stays the release's (Clef causal, d3 noncausal: its PromptEncoder).
 
 Config (configs/ft_ucf_v1_<model>.yaml):
-  name, data: {hivau_json, asset: ucf-crime, n_abnormal, n_normal, n_val, holdout, seed, hard_labels, hard_negative_share (ablations)},
+  name, data: {hivau_json, asset: ucf-crime, n_abnormal, n_normal, n_val, holdout, seed, hard_labels, hard_negative_share (ablations),
+  videos_dir + flat: true for XD-Violence (root/train-videos/<name>.mp4)},
   window: {length_s,
   stride_s, frames}, question: {prompt: v1}, backbone: {name: clef_flash | d3, asset}, lora: {r, alpha, dropout},
   optim: {lr, head_lr, warmup, batch, accumulate, epochs, workers, grad_checkpoint}
@@ -349,7 +350,8 @@ def train(config_path: Path, out_dir: Path, limit_steps: int | None = None) -> P
 
     # ---- records
     root = resolve(dspec["asset"])
-    items = read_hivau(Path(os.path.expandvars(os.path.expanduser(dspec["hivau_json"]))), root)
+    items = read_hivau(Path(os.path.expandvars(os.path.expanduser(dspec["hivau_json"]))), root,
+                       str(dspec.get("videos_dir", "videos")), bool(dspec.get("flat", False)))
     train_records, val_records = sample_records(
         items, float(window["length_s"]), float(window["stride_s"]), int(window["frames"]),
         int(dspec["n_abnormal"]), int(dspec["n_normal"]), int(dspec.get("n_val", 0)),

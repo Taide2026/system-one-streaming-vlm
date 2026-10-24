@@ -60,9 +60,11 @@ def video_folder(name: str) -> str:
     return prefix
 
 
-def read_hivau(json_path: Path, root: Path) -> list[VideoItem]:
+def read_hivau(json_path: Path, root: Path, videos_dir: str = "videos", flat: bool = False) -> list[VideoItem]:
     """The HIVAU-70k training videos as VideoItems (events in inclusive frames, rounded from seconds), sorted by
-    name. Videos whose file is missing under root/videos/<folder>/<name>.mp4 raise TrainDataError naming the first."""
+    name. UCF-Crime layout (flat=False): root/<videos_dir>/<folder>/<name>.mp4 with the folder from the name;
+    XD-Violence layout (flat=True, 2026-10-24): root/<videos_dir>/<name>.mp4, category = the HIVAU labels joined by
+    "+". Videos whose file is missing raise TrainDataError naming the first."""
     try:
         data = json.loads(json_path.read_text())
     except (OSError, ValueError) as exc:
@@ -73,7 +75,7 @@ def read_hivau(json_path: Path, root: Path) -> list[VideoItem]:
         fps, n_frames = float(entry["fps"]), int(entry["n_frames"])
         if fps <= 0 or n_frames <= 0:
             raise TrainDataError(f"{name}: fps {fps}, n_frames {n_frames}")
-        path = root / "videos" / video_folder(name) / f"{name}.mp4"
+        path = root / videos_dir / f"{name}.mp4" if flat else root / videos_dir / video_folder(name) / f"{name}.mp4"
         if not path.is_file():
             raise TrainDataError(f"Video not found: {path}")
         # HIVAU lists "events" for normal videos too: randomly cropped normal segments (its event-level normal
@@ -82,7 +84,7 @@ def read_hivau(json_path: Path, root: Path) -> list[VideoItem]:
         normal = label in ([], ["Normal"]) or name.startswith("Normal_Videos")
         events = () if normal else tuple((round(start * fps), max(round(start * fps), round(end * fps) - 1))
                                          for start, end in entry.get("events", []))
-        category = "Normal" if normal else video_folder(name)
+        category = "Normal" if normal else ("+".join(label) if flat else video_folder(name))
         items.append(VideoItem(name, path, category, fps, n_frames, events))
     return items
 

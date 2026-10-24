@@ -1,0 +1,44 @@
+# XD-Violence training (2026-10-24): d3-nano with the UCF recipe (hard labels, LoRA r 64, 1 epoch) on the HIVAU-70k
+# event times of the 3,950 XD training videos (189 h; 54.8k abnormal / 285k label-0 windows available), 20k + 20k
+# windows (2x the UCF runs: the data axis was not saturated), V1 XD prompt. Videos: scripts/xd-train-download.sh +
+# scripts/xd-train-unpack.sh -> $S1_ASSETS/xd-violence/train-videos/<name>.mp4 (never the test videos).
+name: ft_xd_v1_d3nano
+
+data:
+  asset: xd-violence
+  hivau_json: $S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/xd_database_train.json  # S1_DATASETS: scripts/ft.sh
+  videos_dir: train-videos
+  flat: true
+  n_abnormal: 20000
+  n_normal: 20000
+  n_val: 2000
+  holdout: 0.1
+  seed: 0
+  hard_labels: true
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1_xd
+
+backbone:
+  name: d3
+  asset: d3-nano
+
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+
+optim:
+  lr: 1.5e-4
+  head_lr: 1.5e-4
+  warmup: 0.03
+  batch: 8
+  accumulate: 4
+  epochs: 1
+  workers: 6
+  grad_checkpoint: true
