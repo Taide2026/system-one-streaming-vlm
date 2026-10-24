@@ -1,0 +1,26 @@
+{
+ "name": "ft_ucf_v1_clef",
+ "backbone": "clef_flash",
+ "machine": "pro6000",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "started": "2026-10-23T20:01:04.960643+00:00",
+ "finished": "2026-10-23T22:37:12.766413+00:00",
+ "train_seconds": 8998.381976309232,
+ "steps": 625,
+ "total_steps": 625,
+ "train_windows": 20000,
+ "val_windows": 2000,
+ "limit_steps": null,
+ "trainable": {
+  "lora": 160432128,
+  "readout": 121762820
+ },
+ "peak_gpu_gb": 26.9268856048584,
+ "calibration": {
+  "temperature": 1.3045724034304724,
+  "val_nll_before": 0.44417887926101685,
+  "val_nll_after": 0.43689411878585815,
+  "val_window_auc": 0.8809909432629481,
+  "val_windows": 2000
+ }
+}
