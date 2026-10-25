@@ -1,0 +1,4 @@
+290 videos into 4 shards
+results/pro6000/ft_ucf_v1_d3nano_eval/20261023-192554-shards/merged: 290 videos, 18390 windows from 4 shards
+18390 windows: frame AUC 0.8773, frame AP 0.3340
+EVALSHARDS DONE

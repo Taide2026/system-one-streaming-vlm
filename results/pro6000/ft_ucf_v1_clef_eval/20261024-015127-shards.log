@@ -1,0 +1,4 @@
+290 videos into 3 shards
+results/pro6000/ft_ucf_v1_clef_eval/20261024-015127-shards/merged: 290 videos, 18390 windows from 3 shards
+18390 windows: frame AUC 0.8773, frame AP 0.4364
+CLEFEVAL DONE

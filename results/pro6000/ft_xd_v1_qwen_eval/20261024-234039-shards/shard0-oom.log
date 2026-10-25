@@ -1,0 +1,37 @@
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x21eab840] Referenced QT chapter track not found
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights:  15%|█▍        | 112/760 [00:00<00:00, 1046.91it/s]Loading weights:  33%|███▎      | 251/760 [00:00<00:00, 1240.82it/s]Loading weights:  49%|████▉     | 376/760 [00:00<00:00, 1182.38it/s]Loading weights:  65%|██████▌   | 495/760 [00:00<00:00, 1139.12it/s]Loading weights:  80%|████████  | 610/760 [00:00<00:00, 1045.32it/s]Loading weights:  94%|█████████▍| 716/760 [00:00<00:00, 1032.83it/s]Loading weights: 100%|██████████| 760/760 [00:00<00:00, 1116.48it/s]
+[W1024 23:41:04.364503631 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 20971520 bytes (free: 21757952, total: 101975851008).
+[W1024 23:41:04.364731014 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 20971520 bytes (free: 21757952, total: 101975851008).
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/work/src/s1stream/cli.py", line 82, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/work/src/s1stream/cli.py", line 52, in main
+    print(run(config, out_dir, limit_windows=args.limit_windows))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/src/s1stream/runner.py", line 108, in run
+    backbone = BACKBONES.build(config.backbone)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/src/s1stream/registry.py", line 48, in build
+    return self._classes[name](**params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/work/src/s1stream/backbones/qwen_first_token.py", line 59, in __init__
+    self.load_adapter(Path(adapter))
+  File "/work/src/s1stream/backbones/qwen_first_token.py", line 71, in load_adapter
+    self.model = PeftModel.from_pretrained(self.model, run_dir / "adapter").merge_and_unload().eval()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/peft/peft_model.py", line 601, in from_pretrained
+    load_result = model.load_adapter(
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/peft/peft_model.py", line 1499, in load_adapter
+    adapters_weights = load_peft_weights(
+                       ^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/peft/utils/save_and_load.py", line 774, in load_peft_weights
+    adapters_weights = safe_load_file(filename, device=device)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/safetensors/torch.py", line 360, in load_file
+    return f.get_tensors()
+           ^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 94.97 GiB of which 20.75 MiB is free. Including non-PyTorch memory, this process has 19.17 GiB memory in use. Process 4115091 has 19.27 GiB memory in use. 40.00 GiB allowed; Of the allocated memory 18.49 GiB is allocated by PyTorch, and 22.26 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

@@ -1,0 +1,184 @@
+name: ft_ucf_v1_qwen_eval
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  names:
+  - Abuse028_x264.mp4
+  - Arrest001_x264.mp4
+  - Arrest024_x264.mp4
+  - Arrest039_x264.mp4
+  - Arson009_x264.mp4
+  - Arson011_x264.mp4
+  - Arson018_x264.mp4
+  - Arson035_x264.mp4
+  - Assault006_x264.mp4
+  - Assault011_x264.mp4
+  - Burglary017_x264.mp4
+  - Burglary021_x264.mp4
+  - Burglary032_x264.mp4
+  - Burglary035_x264.mp4
+  - Burglary061_x264.mp4
+  - Burglary079_x264.mp4
+  - Explosion002_x264.mp4
+  - Explosion007_x264.mp4
+  - Explosion010_x264.mp4
+  - Explosion013_x264.mp4
+  - Explosion017_x264.mp4
+  - Explosion021_x264.mp4
+  - Explosion025_x264.mp4
+  - Explosion028_x264.mp4
+  - Explosion033_x264.mp4
+  - Explosion036_x264.mp4
+  - Explosion043_x264.mp4
+  - Fighting018_x264.mp4
+  - Fighting042_x264.mp4
+  - RoadAccidents001_x264.mp4
+  - RoadAccidents004_x264.mp4
+  - RoadAccidents010_x264.mp4
+  - RoadAccidents012_x264.mp4
+  - RoadAccidents017_x264.mp4
+  - RoadAccidents020_x264.mp4
+  - RoadAccidents022_x264.mp4
+  - RoadAccidents122_x264.mp4
+  - RoadAccidents124_x264.mp4
+  - RoadAccidents127_x264.mp4
+  - RoadAccidents131_x264.mp4
+  - RoadAccidents133_x264.mp4
+  - Robbery050_x264.mp4
+  - Robbery106_x264.mp4
+  - Shooting002_x264.mp4
+  - Shooting007_x264.mp4
+  - Shooting010_x264.mp4
+  - Shooting013_x264.mp4
+  - Shooting018_x264.mp4
+  - Shooting021_x264.mp4
+  - Shooting024_x264.mp4
+  - Shooting028_x264.mp4
+  - Shooting033_x264.mp4
+  - Shooting037_x264.mp4
+  - Shooting046_x264.mp4
+  - Shooting048_x264.mp4
+  - Shoplifting004_x264.mp4
+  - Shoplifting007_x264.mp4
+  - Shoplifting015_x264.mp4
+  - Shoplifting017_x264.mp4
+  - Shoplifting021_x264.mp4
+  - Shoplifting027_x264.mp4
+  - Shoplifting029_x264.mp4
+  - Shoplifting033_x264.mp4
+  - Shoplifting037_x264.mp4
+  - Shoplifting044_x264.mp4
+  - Stealing019_x264.mp4
+  - Stealing058_x264.mp4
+  - Stealing079_x264.mp4
+  - Vandalism015_x264.mp4
+  - Vandalism028_x264.mp4
+  - Normal_Videos_003_x264.mp4
+  - Normal_Videos_010_x264.mp4
+  - Normal_Videos_015_x264.mp4
+  - Normal_Videos_019_x264.mp4
+  - Normal_Videos_025_x264.mp4
+  - Normal_Videos_033_x264.mp4
+  - Normal_Videos_041_x264.mp4
+  - Normal_Videos_048_x264.mp4
+  - Normal_Videos_051_x264.mp4
+  - Normal_Videos_059_x264.mp4
+  - Normal_Videos_067_x264.mp4
+  - Normal_Videos_100_x264.mp4
+  - Normal_Videos_150_x264.mp4
+  - Normal_Videos_175_x264.mp4
+  - Normal_Videos_189_x264.mp4
+  - Normal_Videos_203_x264.mp4
+  - Normal_Videos_217_x264.mp4
+  - Normal_Videos_246_x264.mp4
+  - Normal_Videos_248_x264.mp4
+  - Normal_Videos_289_x264.mp4
+  - Normal_Videos_312_x264.mp4
+  - Normal_Videos_345_x264.mp4
+  - Normal_Videos_360_x264.mp4
+  - Normal_Videos_401_x264.mp4
+  - Normal_Videos_439_x264.mp4
+  - Normal_Videos_453_x264.mp4
+  - Normal_Videos_576_x264.mp4
+  - Normal_Videos_603_x264.mp4
+  - Normal_Videos_621_x264.mp4
+  - Normal_Videos_641_x264.mp4
+  - Normal_Videos_686_x264.mp4
+  - Normal_Videos_702_x264.mp4
+  - Normal_Videos_710_x264.mp4
+  - Normal_Videos_722_x264.mp4
+  - Normal_Videos_745_x264.mp4
+  - Normal_Videos_778_x264.mp4
+  - Normal_Videos_781_x264.mp4
+  - Normal_Videos_783_x264.mp4
+  - Normal_Videos_801_x264.mp4
+  - Normal_Videos_831_x264.mp4
+  - Normal_Videos_867_x264.mp4
+  - Normal_Videos_869_x264.mp4
+  - Normal_Videos_871_x264.mp4
+  - Normal_Videos_873_x264.mp4
+  - Normal_Videos_875_x264.mp4
+  - Normal_Videos_877_x264.mp4
+  - Normal_Videos_879_x264.mp4
+  - Normal_Videos_881_x264.mp4
+  - Normal_Videos_883_x264.mp4
+  - Normal_Videos_885_x264.mp4
+  - Normal_Videos_887_x264.mp4
+  - Normal_Videos_889_x264.mp4
+  - Normal_Videos_891_x264.mp4
+  - Normal_Videos_893_x264.mp4
+  - Normal_Videos_895_x264.mp4
+  - Normal_Videos_897_x264.mp4
+  - Normal_Videos_899_x264.mp4
+  - Normal_Videos_901_x264.mp4
+  - Normal_Videos_903_x264.mp4
+  - Normal_Videos_905_x264.mp4
+  - Normal_Videos_907_x264.mp4
+  - Normal_Videos_909_x264.mp4
+  - Normal_Videos_911_x264.mp4
+  - Normal_Videos_913_x264.mp4
+  - Normal_Videos_915_x264.mp4
+  - Normal_Videos_924_x264.mp4
+  - Normal_Videos_926_x264.mp4
+  - Normal_Videos_928_x264.mp4
+  - Normal_Videos_930_x264.mp4
+  - Normal_Videos_932_x264.mp4
+  - Normal_Videos_934_x264.mp4
+  - Normal_Videos_936_x264.mp4
+  - Normal_Videos_938_x264.mp4
+  - Normal_Videos_940_x264.mp4
+  - Normal_Videos_943_x264.mp4
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+  state: Surveillance camera footage, 2 seconds.
+  text: If you were a law enforcement agency, would you rate this scene as a scene
+    involving suspicious activities such as abuse (intentionally harming or mistreating
+    others), arrest (legally detaining someone), arson (deliberately setting fire),
+    assault (physical attack on someone), burglary (illegally entering with the intent
+    to commit a crime), disorderly conduct (disruptive or destructive behavior), explosion
+    (violent release of energy), fighting (violent confrontation), robbery (unlawfully
+    taking property), shooting (firing a gun), shoplifting (stealing from a retail
+    store), theft (taking someone else's property without permission), or vandalism
+    (deliberate destruction of property), rather than a standard scene?
+  options:
+  - 'Yes'
+  - 'No'
+  positive: 'Yes'
+input_form:
+  name: frames
+backbone:
+  name: qwen_first_token
+  asset: qwen3.5-9b
+  memory_cap_gb: 40
+  adapter: results/pro6000/ft_ucf_v1_qwen/20261024-061856
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01

@@ -1,0 +1,37 @@
+# Cross-dataset (2026-10-25): the XD-Violence fine-tune evaluated on the 290 UCF-Crime test videos with the V1 prompt;
+# the same windows as the zero-shot and UCF fine-tune runs.
+name: ucf_from_xd_v1_d3nano_eval
+
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 140
+  n_normal: 150
+  max_duration_s: 1000000000
+  seed: 0
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+input_form:
+  name: frames
+
+backbone:
+  name: d3
+  asset: d3-nano
+  memory_cap_gb: 40
+  adapter: results/pro6000/ft_xd_v1_d3nano/20261024-133734
+
+answer_head:
+  name: option_logits
+
+decision_rules:
+  - name: threshold
+    start: 0.0
+    stop: 1.0
+    step: 0.01

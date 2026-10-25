@@ -1,0 +1,22 @@
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   2%|▏         | 12/617 [00:00<00:05, 116.72it/s]Loading weights:  10%|▉         | 61/617 [00:00<00:01, 326.86it/s]Loading weights:  16%|█▌        | 99/617 [00:00<00:01, 348.04it/s]Loading weights:  24%|██▍       | 148/617 [00:00<00:01, 394.26it/s]Loading weights:  31%|███▏      | 194/617 [00:00<00:01, 412.43it/s]Loading weights:  39%|███▊      | 238/617 [00:00<00:00, 414.65it/s]Loading weights:  47%|████▋     | 291/617 [00:00<00:00, 442.68it/s]Loading weights:  58%|█████▊    | 356/617 [00:00<00:00, 506.41it/s]Loading weights:  78%|███████▊  | 482/617 [00:00<00:00, 733.60it/s]Loading weights:  99%|█████████▉| 611/617 [00:01<00:00, 896.12it/s]Loading weights: 100%|██████████| 617/617 [00:01<00:00, 596.52it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+200/2000
+400/2000
+600/2000
+800/2000
+1000/2000
+1200/2000
+1400/2000
+1600/2000
+1800/2000
+2000/2000
+{
+ "records": 2000,
+ "adapter": "results/pro6000/ft_ucf_v1_d3nano_hard/20261023-200623",
+ "window_auc": 0.872113827291304,
+ "soft_nll": 0.4346035045095943,
+ "mean_p_y0": 0.23619270667086353,
+ "mean_p_y1": 0.6522095803055624,
+ "mean_p_partial": null,
+ "frac_p_ge_0.5": 0.496
+}

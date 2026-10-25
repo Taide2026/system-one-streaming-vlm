@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   2%|▏         | 15/617 [00:00<00:04, 149.93it/s]Loading weights:  11%|█         | 68/617 [00:00<00:01, 372.95it/s]Loading weights:  19%|█▉        | 120/617 [00:00<00:01, 426.28it/s]Loading weights:  28%|██▊       | 171/617 [00:00<00:00, 454.95it/s]Loading weights:  36%|███▋      | 225/617 [00:00<00:00, 483.91it/s]Loading weights:  45%|████▍     | 277/617 [00:00<00:00, 485.15it/s]Loading weights:  55%|█████▍    | 338/617 [00:00<00:00, 523.31it/s]Loading weights:  82%|████████▏ | 507/617 [00:00<00:00, 886.23it/s]Loading weights: 100%|██████████| 617/617 [00:00<00:00, 685.41it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+200/2000
+400/2000
+600/2000
+800/2000
+1000/2000
+1200/2000
+1400/2000
+1600/2000
+1800/2000
+2000/2000
+{
+ "records": 2000,
+ "adapter": "results/pro6000/ft_ucf_v1_d3nano/20261023-181033",
+ "window_auc": 0.872211710688968,
+ "soft_nll": 0.46470757192185835,
+ "mean_p_y0": 0.15505562547012233,
+ "mean_p_y1": 0.5364418262672936,
+ "mean_p_partial": 0.5340895293733559,
+ "frac_p_ge_0.5": 0.4005
+}
+VALSCORE D3 DONE

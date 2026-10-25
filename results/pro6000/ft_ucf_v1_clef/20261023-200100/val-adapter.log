@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights:   0%|          | 1/760 [00:00<03:33,  3.56it/s]Loading weights:   0%|          | 2/760 [00:00<04:15,  2.97it/s]Loading weights:   3%|▎         | 23/760 [00:00<00:17, 43.27it/s]Loading weights:   5%|▌         | 38/760 [00:00<00:10, 66.01it/s]Loading weights:   7%|▋         | 50/760 [00:01<00:09, 72.14it/s]Loading weights:   9%|▉         | 67/760 [00:01<00:07, 94.98it/s]Loading weights:  11%|█         | 81/760 [00:01<00:06, 103.69it/s]Loading weights:  13%|█▎        | 96/760 [00:01<00:05, 112.85it/s]Loading weights:  15%|█▍        | 113/760 [00:01<00:05, 124.56it/s]Loading weights:  17%|█▋        | 132/760 [00:01<00:04, 126.35it/s]Loading weights:  19%|█▉        | 148/760 [00:01<00:04, 133.96it/s]Loading weights:  21%|██▏       | 163/760 [00:01<00:04, 129.80it/s]Loading weights:  23%|██▎       | 177/760 [00:01<00:04, 129.61it/s]Loading weights:  25%|██▌       | 191/760 [00:02<00:04, 129.73it/s]Loading weights:  27%|██▋       | 205/760 [00:02<00:04, 131.26it/s]Loading weights:  30%|██▉       | 225/760 [00:02<00:03, 144.05it/s]Loading weights:  32%|███▏      | 240/760 [00:02<00:03, 139.04it/s]Loading weights:  33%|███▎      | 254/760 [00:02<00:03, 139.25it/s]Loading weights:  35%|███▌      | 268/760 [00:02<00:03, 133.28it/s]Loading weights:  37%|███▋      | 282/760 [00:02<00:03, 131.45it/s]Loading weights:  40%|███▉      | 302/760 [00:02<00:03, 145.63it/s]Loading weights:  42%|████▏     | 317/760 [00:02<00:03, 131.11it/s]Loading weights:  44%|████▎     | 332/760 [00:03<00:03, 133.84it/s]Loading weights:  46%|████▌     | 346/760 [00:03<00:03, 123.14it/s]Loading weights:  48%|████▊     | 363/760 [00:03<00:03, 123.00it/s]Loading weights:  51%|█████     | 385/760 [00:03<00:02, 141.31it/s]Loading weights:  53%|█████▎    | 400/760 [00:03<00:02, 140.16it/s]Loading weights:  55%|█████▍    | 417/760 [00:03<00:02, 146.08it/s]Loading weights:  60%|██████    | 459/760 [00:03<00:01, 220.06it/s]Loading weights:  78%|███████▊  | 590/760 [00:03<00:00, 519.14it/s]Loading weights:  91%|█████████▏| 695/760 [00:03<00:00, 669.25it/s]Loading weights: 100%|██████████| 760/760 [00:04<00:00, 188.59it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+200/2000
+400/2000
+600/2000
+800/2000
+1000/2000
+1200/2000
+1400/2000
+1600/2000
+1800/2000
+2000/2000
+{
+ "records": 2000,
+ "adapter": "results/pro6000/ft_ucf_v1_clef/20261023-200100",
+ "window_auc": 0.881623148918994,
+ "soft_nll": 0.4362121662804894,
+ "mean_p_y0": 0.1578136660589371,
+ "mean_p_y1": 0.5963221784812496,
+ "mean_p_partial": 0.5662508557223388,
+ "frac_p_ge_0.5": 0.439
+}
+VALSCORE CLEF DONE

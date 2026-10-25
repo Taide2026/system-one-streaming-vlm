@@ -1,0 +1,76 @@
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:00<01:08,  9.00it/s]Loading weights:   7%|▋         | 46/617 [00:00<00:02, 252.09it/s]Loading weights:  16%|█▌        | 99/617 [00:00<00:01, 367.20it/s]Loading weights:  25%|██▍       | 152/617 [00:00<00:01, 423.10it/s]Loading weights:  32%|███▏      | 200/617 [00:00<00:00, 435.31it/s]Loading weights:  42%|████▏     | 258/617 [00:00<00:00, 478.29it/s]Loading weights:  52%|█████▏    | 321/617 [00:00<00:00, 526.13it/s]Loading weights:  78%|███████▊  | 483/617 [00:00<00:00, 866.81it/s]Loading weights: 100%|██████████| 617/617 [00:00<00:00, 674.38it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+Abuse030_x264.mp4: 25 windows
+Arrest030_x264.mp4: 144 windows
+Arson010_x264.mp4: 52 windows
+Arson022_x264.mp4: 144 windows
+Assault010_x264.mp4: 269 windows
+Burglary018_x264.mp4: 18 windows
+Burglary033_x264.mp4: 20 windows
+Burglary076_x264.mp4: 215 windows
+Explosion004_x264.mp4: 31 windows
+Explosion011_x264.mp4: 26 windows
+Explosion020_x264.mp4: 21 windows
+Explosion027_x264.mp4: 12 windows
+Explosion035_x264.mp4: 47 windows
+Fighting003_x264.mp4: 51 windows
+Fighting047_x264.mp4: 74 windows
+RoadAccidents009_x264.mp4: 15 windows
+RoadAccidents016_x264.mp4: 36 windows
+RoadAccidents021_x264.mp4: 2 windows
+RoadAccidents123_x264.mp4: 16 windows
+RoadAccidents128_x264.mp4: 9 windows
+Robbery048_x264.mp4: 23 windows
+Robbery137_x264.mp4: 36 windows
+Shooting008_x264.mp4: 27 windows
+Shooting015_x264.mp4: 28 windows
+Shooting022_x264.mp4: 75 windows
+Shooting032_x264.mp4: 361 windows
+Shooting043_x264.mp4: 31 windows
+Shoplifting001_x264.mp4: 72 windows
+Shoplifting010_x264.mp4: 45 windows
+Shoplifting020_x264.mp4: 96 windows
+Shoplifting028_x264.mp4: 22 windows
+Shoplifting034_x264.mp4: 198 windows
+Shoplifting049_x264.mp4: 35 windows
+Stealing062_x264.mp4: 26 windows
+Vandalism017_x264.mp4: 16 windows
+Normal_Videos_006_x264.mp4: 7 windows
+Normal_Videos_018_x264.mp4: 19 windows
+Normal_Videos_027_x264.mp4: 82 windows
+Normal_Videos_042_x264.mp4: 52 windows
+Normal_Videos_056_x264.mp4: 26 windows
+Normal_Videos_070_x264.mp4: 16 windows
+Normal_Videos_168_x264.mp4: 29 windows
+Normal_Videos_196_x264.mp4: 33 windows
+Normal_Videos_224_x264.mp4: 115 windows
+Normal_Videos_251_x264.mp4: 6 windows
+Normal_Videos_317_x264.mp4: 15 windows
+Normal_Videos_365_x264.mp4: 110 windows
+Normal_Videos_452_x264.mp4: 7 windows
+Normal_Videos_597_x264.mp4: 37 windows
+Normal_Videos_634_x264.mp4: 224 windows
+Normal_Videos_696_x264.mp4: 60 windows
+Normal_Videos_717_x264.mp4: 20 windows
+Normal_Videos_758_x264.mp4: 26 windows
+Normal_Videos_782_x264.mp4: 92 windows
+Normal_Videos_828_x264.mp4: 15 windows
+Normal_Videos_868_x264.mp4: 40 windows
+Normal_Videos_872_x264.mp4: 8 windows
+Normal_Videos_876_x264.mp4: 5 windows
+Normal_Videos_880_x264.mp4: 300 windows
+Normal_Videos_884_x264.mp4: 150 windows
+Normal_Videos_888_x264.mp4: 9 windows
+Normal_Videos_892_x264.mp4: 29 windows
+Normal_Videos_896_x264.mp4: 38 windows
+Normal_Videos_900_x264.mp4: 24 windows
+Normal_Videos_904_x264.mp4: 15 windows
+Normal_Videos_908_x264.mp4: 14 windows
+Normal_Videos_912_x264.mp4: 12 windows
+Normal_Videos_923_x264.mp4: 303 windows
+Normal_Videos_927_x264.mp4: 27 windows
+Normal_Videos_931_x264.mp4: 29 windows
+Normal_Videos_935_x264.mp4: 1799 windows
+Normal_Videos_939_x264.mp4: 13 windows
+Normal_Videos_944_x264.mp4: 119 windows
+results/pro6000/ft_ucf_v1_d3nano_p10_eval/20261024-025936-shards/shard1

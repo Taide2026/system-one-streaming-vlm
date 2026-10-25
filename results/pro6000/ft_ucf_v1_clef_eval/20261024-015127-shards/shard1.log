@@ -1,0 +1,100 @@
+Loading weights:   0%|          | 0/760 [00:00<?, ?it/s]Loading weights:   0%|          | 1/760 [00:00<03:16,  3.85it/s]Loading weights:   0%|          | 2/760 [00:00<03:57,  3.19it/s]Loading weights:   2%|▏         | 17/760 [00:00<00:21, 34.21it/s]Loading weights:   4%|▍         | 34/760 [00:00<00:11, 65.07it/s]Loading weights:   6%|▌         | 47/760 [00:00<00:09, 76.75it/s]Loading weights:   9%|▉         | 67/760 [00:01<00:06, 102.83it/s]Loading weights:  11%|█         | 81/760 [00:01<00:06, 110.20it/s]Loading weights:  12%|█▎        | 95/760 [00:01<00:05, 116.41it/s]Loading weights:  14%|█▍        | 108/760 [00:01<00:05, 118.52it/s]Loading weights:  17%|█▋        | 129/760 [00:01<00:04, 132.58it/s]Loading weights:  20%|█▉        | 149/760 [00:01<00:04, 143.93it/s]Loading weights:  23%|██▎       | 172/760 [00:01<00:03, 159.17it/s]Loading weights:  25%|██▍       | 189/760 [00:01<00:03, 157.93it/s]Loading weights:  27%|██▋       | 205/760 [00:01<00:03, 156.34it/s]Loading weights:  30%|██▉       | 225/760 [00:02<00:03, 162.91it/s]Loading weights:  32%|███▏      | 242/760 [00:02<00:03, 144.37it/s]Loading weights:  34%|███▍      | 258/760 [00:02<00:03, 146.83it/s]Loading weights:  37%|███▋      | 279/760 [00:02<00:03, 158.35it/s]Loading weights:  39%|███▉      | 296/760 [00:02<00:02, 161.48it/s]Loading weights:  41%|████      | 313/760 [00:02<00:03, 148.25it/s]Loading weights:  44%|████▍     | 333/760 [00:02<00:02, 160.12it/s]Loading weights:  46%|████▌     | 350/760 [00:02<00:02, 158.16it/s]Loading weights:  48%|████▊     | 367/760 [00:03<00:03, 127.40it/s]Loading weights:  51%|█████     | 386/760 [00:03<00:02, 137.38it/s]Loading weights:  53%|█████▎    | 401/760 [00:03<00:02, 138.34it/s]Loading weights:  55%|█████▍    | 416/760 [00:03<00:02, 138.37it/s]Loading weights:  57%|█████▋    | 431/760 [00:03<00:02, 139.70it/s]Loading weights:  71%|███████▏  | 543/760 [00:03<00:00, 404.50it/s]Loading weights:  85%|████████▌ | 649/760 [00:03<00:00, 586.91it/s]Loading weights:  99%|█████████▉| 753/760 [00:03<00:00, 710.88it/s]Loading weights: 100%|██████████| 760/760 [00:03<00:00, 198.11it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+Abuse030_x264.mp4: 25 windows
+Arrest024_x264.mp4: 60 windows
+Arson007_x264.mp4: 104 windows
+Arson011_x264.mp4: 21 windows
+Arson022_x264.mp4: 144 windows
+Assault006_x264.mp4: 134 windows
+Burglary005_x264.mp4: 128 windows
+Burglary021_x264.mp4: 25 windows
+Burglary033_x264.mp4: 20 windows
+Burglary061_x264.mp4: 149 windows
+Burglary092_x264.mp4: 10 windows
+Explosion007_x264.mp4: 271 windows
+Explosion011_x264.mp4: 26 windows
+Explosion017_x264.mp4: 27 windows
+Explosion022_x264.mp4: 59 windows
+Explosion028_x264.mp4: 28 windows
+Explosion035_x264.mp4: 47 windows
+Explosion043_x264.mp4: 127 windows
+Fighting033_x264.mp4: 18 windows
+RoadAccidents001_x264.mp4: 22 windows
+RoadAccidents009_x264.mp4: 15 windows
+RoadAccidents012_x264.mp4: 7 windows
+RoadAccidents019_x264.mp4: 21 windows
+RoadAccidents022_x264.mp4: 11 windows
+RoadAccidents123_x264.mp4: 16 windows
+RoadAccidents127_x264.mp4: 43 windows
+RoadAccidents132_x264.mp4: 31 windows
+Robbery050_x264.mp4: 28 windows
+Robbery137_x264.mp4: 36 windows
+Shooting007_x264.mp4: 23 windows
+Shooting011_x264.mp4: 66 windows
+Shooting018_x264.mp4: 29 windows
+Shooting022_x264.mp4: 75 windows
+Shooting028_x264.mp4: 31 windows
+Shooting034_x264.mp4: 23 windows
+Shooting046_x264.mp4: 84 windows
+Shoplifting001_x264.mp4: 72 windows
+Shoplifting007_x264.mp4: 85 windows
+Shoplifting016_x264.mp4: 24 windows
+Shoplifting021_x264.mp4: 59 windows
+Shoplifting028_x264.mp4: 22 windows
+Shoplifting033_x264.mp4: 14 windows
+Shoplifting039_x264.mp4: 46 windows
+Stealing019_x264.mp4: 81 windows
+Stealing062_x264.mp4: 26 windows
+Vandalism015_x264.mp4: 49 windows
+Vandalism036_x264.mp4: 24 windows
+Normal_Videos_010_x264.mp4: 17 windows
+Normal_Videos_018_x264.mp4: 19 windows
+Normal_Videos_025_x264.mp4: 10 windows
+Normal_Videos_034_x264.mp4: 21 windows
+Normal_Videos_048_x264.mp4: 27 windows
+Normal_Videos_056_x264.mp4: 26 windows
+Normal_Videos_067_x264.mp4: 17 windows
+Normal_Videos_129_x264.mp4: 7 windows
+Normal_Videos_175_x264.mp4: 147 windows
+Normal_Videos_196_x264.mp4: 33 windows
+Normal_Videos_217_x264.mp4: 30 windows
+Normal_Videos_247_x264.mp4: 136 windows
+Normal_Videos_289_x264.mp4: 14 windows
+Normal_Videos_317_x264.mp4: 15 windows
+Normal_Videos_360_x264.mp4: 16 windows
+Normal_Videos_417_x264.mp4: 17 windows
+Normal_Videos_453_x264.mp4: 88 windows
+Normal_Videos_597_x264.mp4: 37 windows
+Normal_Videos_621_x264.mp4: 80 windows
+Normal_Videos_656_x264.mp4: 30 windows
+Normal_Videos_702_x264.mp4: 42 windows
+Normal_Videos_717_x264.mp4: 20 windows
+Normal_Videos_745_x264.mp4: 5 windows
+Normal_Videos_780_x264.mp4: 33 windows
+Normal_Videos_783_x264.mp4: 159 windows
+Normal_Videos_828_x264.mp4: 15 windows
+Normal_Videos_867_x264.mp4: 10 windows
+Normal_Videos_870_x264.mp4: 10 windows
+Normal_Videos_873_x264.mp4: 29 windows
+Normal_Videos_876_x264.mp4: 5 windows
+Normal_Videos_879_x264.mp4: 19 windows
+Normal_Videos_882_x264.mp4: 27 windows
+Normal_Videos_885_x264.mp4: 7 windows
+Normal_Videos_888_x264.mp4: 9 windows
+Normal_Videos_891_x264.mp4: 30 windows
+Normal_Videos_894_x264.mp4: 42 windows
+Normal_Videos_897_x264.mp4: 14 windows
+Normal_Videos_900_x264.mp4: 24 windows
+Normal_Videos_903_x264.mp4: 13 windows
+Normal_Videos_906_x264.mp4: 11 windows
+Normal_Videos_909_x264.mp4: 14 windows
+Normal_Videos_912_x264.mp4: 12 windows
+Normal_Videos_915_x264.mp4: 20 windows
+Normal_Videos_925_x264.mp4: 128 windows
+Normal_Videos_928_x264.mp4: 15 windows
+Normal_Videos_931_x264.mp4: 29 windows
+Normal_Videos_934_x264.mp4: 29 windows
+Normal_Videos_937_x264.mp4: 19 windows
+Normal_Videos_940_x264.mp4: 600 windows
+Normal_Videos_944_x264.mp4: 119 windows
+results/pro6000/ft_ucf_v1_clef_eval/20261024-015127-shards/shard1

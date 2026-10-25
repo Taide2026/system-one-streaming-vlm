@@ -1,0 +1,111 @@
+name: ft_ucf_v1_d3nano_f4_eval
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  names:
+  - Arrest007_x264.mp4
+  - Arson007_x264.mp4
+  - Arson016_x264.mp4
+  - Arson041_x264.mp4
+  - Burglary005_x264.mp4
+  - Burglary024_x264.mp4
+  - Burglary037_x264.mp4
+  - Burglary092_x264.mp4
+  - Explosion008_x264.mp4
+  - Explosion016_x264.mp4
+  - Explosion022_x264.mp4
+  - Explosion029_x264.mp4
+  - Explosion039_x264.mp4
+  - Fighting033_x264.mp4
+  - RoadAccidents002_x264.mp4
+  - RoadAccidents011_x264.mp4
+  - RoadAccidents019_x264.mp4
+  - RoadAccidents121_x264.mp4
+  - RoadAccidents125_x264.mp4
+  - RoadAccidents132_x264.mp4
+  - Robbery102_x264.mp4
+  - Shooting004_x264.mp4
+  - Shooting011_x264.mp4
+  - Shooting019_x264.mp4
+  - Shooting026_x264.mp4
+  - Shooting034_x264.mp4
+  - Shooting047_x264.mp4
+  - Shoplifting005_x264.mp4
+  - Shoplifting016_x264.mp4
+  - Shoplifting022_x264.mp4
+  - Shoplifting031_x264.mp4
+  - Shoplifting039_x264.mp4
+  - Stealing036_x264.mp4
+  - Vandalism007_x264.mp4
+  - Vandalism036_x264.mp4
+  - Normal_Videos_014_x264.mp4
+  - Normal_Videos_024_x264.mp4
+  - Normal_Videos_034_x264.mp4
+  - Normal_Videos_050_x264.mp4
+  - Normal_Videos_063_x264.mp4
+  - Normal_Videos_129_x264.mp4
+  - Normal_Videos_182_x264.mp4
+  - Normal_Videos_210_x264.mp4
+  - Normal_Videos_247_x264.mp4
+  - Normal_Videos_310_x264.mp4
+  - Normal_Videos_352_x264.mp4
+  - Normal_Videos_417_x264.mp4
+  - Normal_Videos_478_x264.mp4
+  - Normal_Videos_606_x264.mp4
+  - Normal_Videos_656_x264.mp4
+  - Normal_Videos_704_x264.mp4
+  - Normal_Videos_725_x264.mp4
+  - Normal_Videos_780_x264.mp4
+  - Normal_Videos_798_x264.mp4
+  - Normal_Videos_866_x264.mp4
+  - Normal_Videos_870_x264.mp4
+  - Normal_Videos_874_x264.mp4
+  - Normal_Videos_878_x264.mp4
+  - Normal_Videos_882_x264.mp4
+  - Normal_Videos_886_x264.mp4
+  - Normal_Videos_890_x264.mp4
+  - Normal_Videos_894_x264.mp4
+  - Normal_Videos_898_x264.mp4
+  - Normal_Videos_902_x264.mp4
+  - Normal_Videos_906_x264.mp4
+  - Normal_Videos_910_x264.mp4
+  - Normal_Videos_914_x264.mp4
+  - Normal_Videos_925_x264.mp4
+  - Normal_Videos_929_x264.mp4
+  - Normal_Videos_933_x264.mp4
+  - Normal_Videos_937_x264.mp4
+  - Normal_Videos_941_x264.mp4
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 4
+question:
+  prompt: v1
+  state: Surveillance camera footage, 2 seconds.
+  text: If you were a law enforcement agency, would you rate this scene as a scene
+    involving suspicious activities such as abuse (intentionally harming or mistreating
+    others), arrest (legally detaining someone), arson (deliberately setting fire),
+    assault (physical attack on someone), burglary (illegally entering with the intent
+    to commit a crime), disorderly conduct (disruptive or destructive behavior), explosion
+    (violent release of energy), fighting (violent confrontation), robbery (unlawfully
+    taking property), shooting (firing a gun), shoplifting (stealing from a retail
+    store), theft (taking someone else's property without permission), or vandalism
+    (deliberate destruction of property), rather than a standard scene?
+  options:
+  - 'Yes'
+  - 'No'
+  positive: 'Yes'
+input_form:
+  name: frames
+backbone:
+  name: d3
+  asset: d3-nano
+  memory_cap_gb: 40
+  adapter: results/pro6000/ft_ucf_v1_d3nano_f4/20261024-040833
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01
