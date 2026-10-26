@@ -1,0 +1,26 @@
+{
+ "name": "ft_xd_v1_qwen2b",
+ "backbone": "qwen_first_token",
+ "machine": "pro6000",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "started": "2026-10-25T16:27:35.975122+00:00",
+ "finished": "2026-10-25T19:20:09.925774+00:00",
+ "train_seconds": 10105.187010696158,
+ "steps": 1250,
+ "total_steps": 1250,
+ "train_windows": 40000,
+ "val_windows": 2000,
+ "limit_steps": null,
+ "trainable": {
+  "lora": 62521344,
+  "readout": 0
+ },
+ "peak_gpu_gb": 13.092916488647461,
+ "calibration": {
+  "temperature": 1.094263374805012,
+  "val_nll_before": 0.23803602159023285,
+  "val_nll_after": 0.2371864914894104,
+  "val_window_auc": 0.9631195273911091,
+  "val_windows": 2000
+ }
+}

@@ -1,0 +1,35 @@
+# Small control (2026-10-25): Qwen3.5-2B zero-shot, no adapter; the same windows as ft_xd_v1_qwen2b_eval.
+name: zs_xd_v1_qwen2b_eval
+
+dataset:
+  name: xd_violence
+  asset: xd-violence
+  n_violent: 500
+  n_normal: 300
+  max_duration_s: 4000
+  seed: 20261009
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1_xd
+
+input_form:
+  name: frames
+
+backbone:
+  name: qwen_first_token
+  asset: qwen3.5-2b
+  memory_cap_gb: 40
+
+answer_head:
+  name: option_logits
+
+decision_rules:
+  - name: threshold
+    start: 0.0
+    stop: 1.0
+    step: 0.01

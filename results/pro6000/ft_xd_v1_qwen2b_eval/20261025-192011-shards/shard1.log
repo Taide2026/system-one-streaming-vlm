@@ -1,0 +1,330 @@
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x308d9c40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x308d9c40] Referenced QT chapter track not found
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights: 100%|██████████| 617/617 [00:00<00:00, 9050.35it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+Black.Hawk.Down.2001__#01-32-40_01-34-00_label_B4-0-0.mp4: 40 windows
+Bullet.in.the.Head.1990__#02-02-00_02-05-22_label_B2-B6-G.mp4: 101 windows
+Deadpool.2.2018__#0-50-30_0-51-20_label_B1-0-0.mp4: 25 windows
+Fast.Furious.2009__#01-18-00_01-19-00_label_B2-B6-0.mp4: 30 windows
+Haywire.2011__#00-03-51_00-05-12_label_B1-B2-0.mp4: 40 windows
+Kill.Bill.Vol.1.2003__#01-17-20_01-20-20_label_B1-0-0.mp4: 90 windows
+Mission.Impossible.Fallout.2018__#00-39-18_00-40-36_label_B1-0-0.mp4: 39 windows
+Mission.Impossible.V.Rogue.Nation.2015__#00-14-40_00-17-12_label_B1-0-0.mp4: 76 windows
+Rush.Hour.1998.BluRay__#00-08-08_00-09-15_label_B2-B6-G.mp4: 33 windows
+Saving.Private.Ryan.1998__#02-24-18_02-25-42_label_B1-0-0.mp4: 42 windows
+Skyfall.2012__#01-55-44_01-56-57_label_B2-G-0.mp4: 36 windows
+Taken.3.2014__#01-04-50_01-05-05_label_B1-0-0.mp4: 7 windows
+The.Fast.and.the.Furious.2001__#01-14-04_01-15-20_label_B1-0-0.mp4: 38 windows
+Young.And.Dangerous.I.1996__#0-20-50_0-22-15_label_B1-0-0.mp4: 42 windows
+v=15wDrZJQpsw__#00-05-20_00-06-20_label_B6-0-0.mp4: 30 windows
+v=3wxWNAM8Cso__#1_label_G-0-0.mp4: 126 windows
+v=7rDRFFSUrPI__#00-01-50_00-02-32_label_G-0-0.mp4: 21 windows
+v=BXR3d22BhHs__#00-06-00_00-07-00_label_B4-0-0.mp4: 30 windows
+v=Dh-3BlhAOnE__#00-00-00_00-13-36_label_B4-0-0.mp4: 408 windows
+v=HSisjzLESak__#00-00-00_00-00-51_label_B6-0-0.mp4: 25 windows
+v=Lt9M_tSij_4__#00-00-00_00-04-24_label_B6-0-0.mp4: 132 windows
+v=Q8K7roZu3WU__#1_label_B1-0-0.mp4: 26 windows
+v=UK2w9Sh47fM__#1_label_G-0-0.mp4: 24 windows
+v=ZCjNPgNu42g__#1_label_B4-0-0.mp4: 72 windows
+v=bfOlheR5nUQ__#00-04-33_00-06-02_label_B4-0-0.mp4: 44 windows
+v=hAHXCMRvY_I__#1_label_G-0-0.mp4: 10 windows
+v=m5zK-tzYCQM__#1_label_B4-0-0.mp4: 36 windows
+v=q_DhkdHGXos__#1_label_B1-0-0.mp4: 96 windows
+v=tT-SrQC6Ddw__#00-04-00_00-05-15_label_B6-0-0.mp4: 37 windows
+v=vhACO_m5pH0__#00-14-42_00-15-40_label_B6-0-0.mp4: 29 windows
+v=wnd3IYH7x1o__#1_label_G-0-0.mp4: 23 windows
+A.Beautiful.Mind.2001__#00-25-20_00-29-20_label_A.mp4: 120 windows
+Before.Sunrise.1995__#00-23-50_00-24-31_label_A.mp4: 20 windows
+Deadpool.2.2018__#0-02-35_0-03-12_label_A.mp4: 18 windows
+Gladiator.2000__#02-43-00_02-43-59_label_A.mp4: 29 windows
+Ip.Man.2008__#00-02-56_00-05-24_label_A.mp4: 74 windows
+Love.Actually.2003__#01-39-05_01-46-40_label_A.mp4: 227 windows
+Quantum.Of.Solace.2008__#00-47-29_00-50-52_label_A.mp4: 101 windows
+Taken.3.2014__#00-36-03_00-36-48_label_A.mp4: 22 windows
+The.Intouchables.2011__#00-58-18_01-02-30_label_A.mp4: 126 windows
+Tropa.de.Elite.2.2010__#01-30-51_01-32-30_label_A.mp4: 49 windows
+v=1202rYvw7go__#1_label_A.mp4: 82 windows
+v=9eME1y6V-T4__#01-00-00_01-06-00_label_A.mp4: 180 windows
+v=H12BVHrNiXs__#1_label_A.mp4: 99 windows
+v=LYzmr5ORvCg__#1_label_A.mp4: 81 windows
+v=S1meRf5BsEw__#1_label_A.mp4: 85 windows
+v=a0TQkX_zLt0__#1_label_A.mp4: 245 windows
+v=gGlqujwrhbI__#00-12-00_00-15-00_label_A.mp4: 90 windows
+v=qV4YYnXdQCc__#00-03-00_00-06-00_label_A.mp4: 90 windows
+v=vFPQ_NiDBIU__#02-42-00_02-48-00_label_A.mp4: 180 windows
+Black.Hawk.Down.2001__#01-42-58_01-43-58_label_G-0-0.mp4: 30 windows
+Casino.Royale.2006__#00-18-30_00-19-20_label_G-B2-0.mp4: 25 windows
+Deadpool.2.2018__#01-03-09_01-03-54_label_B4-0-0.mp4: 22 windows
+Fast.Furious.2009__#01-29-10_01-29-55_label_B2-0-0.mp4: 22 windows
+Haywire.2011__#00-16-07_00-16-49_label_B1-0-0.mp4: 21 windows
+Kill.Bill.Vol.1.2003__#01-21-39_01-26-55_label_B1-0-0.mp4: 158 windows
+Mission.Impossible.Fallout.2018__#02-03-50_02-04-35_label_B1-0-0.mp4: 22 windows
+Mission.Impossible.V.Rogue.Nation.2015__#00-17-27_00-17-55_label_B2-0-0.mp4: 14 windows
+Rush.Hour.1998.BluRay__#00-11-05_00-12-10_label_B2-B1-0.mp4: 32 windows
+Saving.Private.Ryan.1998__#02-25-42_02-26-03_label_B2-0-0.mp4: 10 windows
+Skyfall.2012__#01-57-40_01-58-00_label_B2-0-0.mp4: 10 windows
+Taken.3.2014__#01-09-26_01-09-54_label_G-0-0.mp4: 14 windows
+The.Fast.and.the.Furious.2001__#01-24-18_01-25-05_label_B6-0-0.mp4: 23 windows
+Young.And.Dangerous.I.1996__#0-46-25_0-46-55_label_B6-0-0.mp4: 15 windows
+v=15wDrZJQpsw__#00-09-00_00-10-55_label_B6-0-0.mp4: 57 windows
+v=3xWiBCIxjIk__#1_label_B4-0-0.mp4: 78 windows
+v=7xQr5wYwNPg__#1_label_B4-0-0.mp4: 23 windows
+v=BXR3d22BhHs__#00-07-00_00-08-00_label_B4-0-0.mp4: 30 windows
+v=Dn_SDu22WpM__#00-08-35_00-10-05_label_B6-0-0.mp4: 45 windows
+v=HSisjzLESak__#00-01-00_00-02-45_label_B6-0-0.mp4: 52 windows
+v=MJLylzPRvyw__#1_label_B4-0-0.mp4: 74 windows
+v=Q9Re4CnFJRg__#00-01-21_00-01-47_label_G-0-0.mp4: 13 windows
+v=UYFR-XbyZQc__#00-01-19_00-02-42_label_G-0-0.mp4: 41 windows
+v=ZkUciDD55kA__#00-00-00_00-00-30_label_G-0-0.mp4: 15 windows
+v=bhZs3ALdL7Y__#1_label_G-0-0.mp4: 1 windows
+v=hxyhulJYz5I__#00-06-09_00-07-00_label_B6-0-0.mp4: 25 windows
+v=m8EkFsaGPzU__#1_label_B4-0-0.mp4: 118 windows
+v=qmsQ-obL1Z4__#00-03-26_00-04-04_label_B6-0-0.mp4: 19 windows
+v=tivXK3PGByk__#1_label_B1-0-0.mp4: 76 windows
+v=vhACO_m5pH0__#00-17-42_00-18-40_label_B6-0-0.mp4: 29 windows
+v=xbPWQKZspfU__#1_label_B1-0-0.mp4: 104 windows
+A.Beautiful.Mind.2001__#00-40-52_00-42-01_label_A.mp4: 34 windows
+Before.Sunrise.1995__#00-40-52_00-42-01_label_A.mp4: 34 windows
+Deadpool.2016__#0-18-35_0-18-55_label_A.mp4: 10 windows
+God.Bless.America.2011__#00-51-00_00-52-00_label_A.mp4: 30 windows
+Ip.Man.2008__#00-40-25_00-40-45_label_A.mp4: 10 windows
+Love.Death.and.Robots.S01E02__#00-03-15_00-04-20_label_A.mp4: 32 windows
+Rush.Hour.3.2007.BluRay__#01-00-40_01-04-00_label_A.mp4: 100 windows
+Taken.3.2014__#01-20-10_01-21-30_label_A.mp4: 40 windows
+The.Notebook.2004__#00-08-55_00-10-50_label_A.mp4: 57 windows
+Tropa.de.Elite.2.2010__#01-33-31_01-34-20_label_A.mp4: 24 windows
+v=1EvRIhdsX1s__#1_label_A.mp4: 17 windows
+v=9eME1y6V-T4__#01-06-00_01-12-00_label_A.mp4: 180 windows
+v=H9Y5_X1sEEA__#00-03-00_00-06-00_label_A.mp4: 90 windows
+v=MyM5G7fo7Gg__#00-06-00_00-09-00_label_A.mp4: 90 windows
+v=SdYFFo_tsfk__#00-00-00_00-06-00_label_A.mp4: 180 windows
+v=aBsrZKrRtqU__#1_label_A.mp4: 25 windows
+v=gxrLosPS27c__#1_label_A.mp4: 46 windows
+v=qhUItxoTrmg__#1_label_A.mp4: 95 windows
+v=vHnAmx0UYbM__#1_label_A.mp4: 417 windows
+Black.Hawk.Down.2001__#02-00-12_02-01-29_label_B2-0-0.mp4: 38 windows
+Casino.Royale.2006__#00-50-05_00-51-16_label_B1-B2-B6.mp4: 35 windows
+Deadpool.2016__#0-18-58_0-19-20_label_B1-0-0.mp4: 11 windows
+Fast.Furious.6.2013__#00-45-40_00-47-13_label_B2-0-0.mp4: 46 windows
+Haywire.2011__#00-39-07_00-41-48_label_B1-B2-0.mp4: 80 windows
+Kill.Bill.Vol.1.2003__#01-26-56_01-28-18_label_B1-0-0.mp4: 41 windows
+Mission.Impossible.Ghost.Protocol.2011__#00-01-18_00-01-40_label_B2-0-0.mp4: 11 windows
+Mission.Impossible.V.Rogue.Nation.2015__#01-15-52_01-16-48_label_B6-B2-0.mp4: 28 windows
+Rush.Hour.1998.BluRay__#01-20-28_01-21-38_label_B2-0-0.mp4: 35 windows
+Shoot.Em.Up.2007__#00-32-40_00-35-10_label_B2-0-0.mp4: 75 windows
+Skyfall.2012__#02-08-44_02-09-17_label_B1-0-0.mp4: 16 windows
+Taken.3.2014__#01-12-48_01-14-30_label_B2-B1-0.mp4: 51 windows
+The.Fast.and.the.Furious.2001__#01-37-40_01-38-30_label_B6-0-0.mp4: 25 windows
+Young.And.Dangerous.I.1996__#0-46-57_0-48-57_label_B1-0-0.mp4: 60 windows
+v=1GFBuaGCeTo__#1_label_G-0-0.mp4: 26 windows
+v=3xkwZk44VQs__#1_label_B4-0-0.mp4: 52 windows
+v=7zEFHKKBA0g__#1_label_B4-0-0.mp4: 92 windows
+v=BpargJW29Wo__#00-00-50_00-01-30_label_B1-0-0.mp4: 20 windows
+v=DtxU8UYiFws__#1_label_G-0-0.mp4: 30 windows
+v=HSisjzLESak__#00-07-40_00-08-50_label_B6-0-0.mp4: 35 windows
+v=MqrNCb2N5to__#1_label_B1-0-0.mp4: 52 windows
+v=QWwDsPSe7iM__#1_label_B4-0-0.mp4: 48 windows
+v=UzxuX79xq4s__#1_label_B4-0-0.mp4: 110 windows
+v=ZnFlL84K7HE__#00-27-53_00-34-45_label_B4-0-0.mp4: 206 windows
+v=cEOM18n8fhU__#1_label_G-0-0.mp4: 58 windows
+v=iHuggczItBk__#00-01-00_00-02-45_label_B6-0-0.mp4: 52 windows
+v=nLAapCIlr-o__#00-07-22_00-08-19_label_B6-0-0.mp4: 28 windows
+v=qqsd-cZr01k__#00-01-00_00-02-45_label_B6-0-0.mp4: 52 windows
+v=tv0rI-5ycBU__#1_label_B4-0-0.mp4: 67 windows
+v=vhACO_m5pH0__#00-20-42_00-22-40_label_B6-0-0.mp4: 59 windows
+v=xe4ee56aHSg__#1_label_G-0-0.mp4: 11 windows
+A.Beautiful.Mind.2001__#00-50-26_00-55-16_label_A.mp4: 145 windows
+Before.Sunrise.1995__#00-42-52_00-45-31_label_A.mp4: 79 windows
+Death.Proof.2007__#00-02-04_00-05-00_label_A.mp4: 88 windows
+God.Bless.America.2011__#00-58-09_01-04-00_label_A.mp4: 175 windows[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f096405a4c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a8281300] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f096405a4c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a8281300] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a8281300] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f096405a4c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f096405a4c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a8281300] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f096405a4c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a88f9900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0964346200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a88f9900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a88f9900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0964346200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a88f9900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0964346200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a88f9900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0964346200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a88f9900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0964346200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a88f9900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0964346200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a88f9900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0964346200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a88f9900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0964346200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07a88f9900] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f081000cb40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07c80531c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0964346200] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0940391f40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0940391f40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0940391f40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0940391f40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0940391f40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0940391f40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f094104c2c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f094104c2c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f094104c2c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f094104c2c0] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0940391f40] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f09400a2600] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f09400a2600] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f09409add00] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f09405ada80] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f09409add00] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0948328100] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec0ca240] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0940121880] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f094a11a040] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f07ec069800] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f0940121880] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f077ff93540] Referenced QT chapter track not found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x7f094a11a040] Referenced QT chapter track not found
+
+Ip.Man.2008__#01-04-27_01-06-22_label_A.mp4: 57 windows
+Love.Death.and.Robots.S01E04__#00-14-28_00-15-27_label_A.mp4: 29 windows
+Salt.2010__#00-02-10_00-03-57_label_A.mp4: 53 windows
+The.Attorney.2013__#00-47-00_00-49-30_label_A.mp4: 75 windows
+The.Notebook.2004__#00-11-00_00-15-08_label_A.mp4: 124 windows
+Tropa.de.Elite.2007__#00-10-30_00-12-08_label_A.mp4: 49 windows
+v=2JJ9d97sd64__#1_label_A.mp4: 65 windows
+v=9eME1y6V-T4__#01-18-00_01-24-00_label_A.mp4: 180 windows
+v=H9Y5_X1sEEA__#00-30-00_00-33-00_label_A.mp4: 90 windows
+v=MyM5G7fo7Gg__#00-18-00_00-21-00_label_A.mp4: 90 windows
+v=SdYFFo_tsfk__#00-18-00_00-24-00_label_A.mp4: 180 windows
+v=ajnl7P9bf78__#1_label_A.mp4: 33 windows
+v=hdy5kZ5dwj8__#1_label_A.mp4: 97 windows
+v=rJgg00ic1G8__#1_label_A.mp4: 117 windows
+v=vQ9AwVrM9pU__#1_label_A.mp4: 65 windows
+Braveheart.1995__#00-56-30_00-57-20_label_B1-0-0.mp4: 25 windows
+Casino.Royale.2006__#00-51-16_00-52-41_label_B1-B6-0.mp4: 42 windows
+Death.Proof.2007__#00-45-05_00-47-36_label_B5-0-0.mp4: 75 windows
+Fast.Furious.6.2013__#01-03-25_01-04-59_label_B1-0-0.mp4: 47 windows
+Haywire.2011__#01-20-20_01-21-57_label_B1-0-0.mp4: 48 windows
+Kill.Bill.Vol.2.2004__#0-25-20_0-26-20_label_B2-0-0.mp4: 30 windows
+Mission.Impossible.Ghost.Protocol.2011__#01-12-38_01-13-43_label_B1-0-0.mp4: 32 windows
+Mission.Impossible.V.Rogue.Nation.2015__#01-19-48_01-20-20_label_B6-0-0.mp4: 16 windows
+Rush.Hour.1998.BluRay__#01-25-21_01-25-46_label_B2-0-0.mp4: 12 windows
+Shoot.Em.Up.2007__#00-53-25_00-56-47_label_B2-0-0.mp4: 101 windows
+Spectre.2015__#00-44-05_00-44-40_label_B1-B2-0.mp4: 17 windows
+Taken.3.2014__#01-19-13_01-19-30_label_B1-0-0.mp4: 8 windows
+The.Hurt.Locker.2008__#0-08-45_0-09-57_label_G-0-0.mp4: 36 windows
+Young.And.Dangerous.III.1996__#00-23-00_00-25-54_label_B4-0-0.mp4: 87 windows
+v=1djrJ0wxlYo__#1_label_B4-0-0.mp4: 32 windows
+v=3y2OOc6WTrg__#1_label_B1-0-0.mp4: 90 windows
+v=8ewWXhYRUNs__#1_label_B1-0-0.mp4: 28 windows
+v=BzwNU2xmT64__#00-01-00_00-02-45_label_B6-0-0.mp4: 52 windows
+v=EH_QB6cm6BE__#1_label_G-0-0.mp4: 13 windows
+v=HUL83wCQATc__#1_label_B1-0-0.mp4: 43 windows
+v=NnmqkS1e88s__#1_label_B4-0-0.mp4: 36 windows
+v=Qc3pAEeK16A__#1_label_B1-0-0.mp4: 29 windows
+v=V7FtjJStY1M__#1_label_G-0-0.mp4: 7 windows
+v=ZoS8gm5OcOM__#00-06-20_00-07-30_label_B6-0-0.mp4: 35 windows
+v=cO1UefhG7AY__#1_label_G-0-0.mp4: 95 windows
+v=iHuggczItBk__#00-03-00_00-03-55_label_B6-0-0.mp4: 27 windows
+v=nLAapCIlr-o__#00-08-35_00-10-25_label_B6-0-0.mp4: 55 windows
+v=qqsd-cZr01k__#00-06-10_00-07-19_label_B6-0-0.mp4: 34 windows
+v=u0Tnw01PNxc__#1_label_B4-0-0.mp4: 28 windows
+v=vv-MFJPi4Qs__#1_label_G-0-0.mp4: 20 windows
+v=y1z12D5bx7c__#1_label_B4-0-0.mp4: 101 windows
+A.Beautiful.Mind.2001__#01-14-30_01-16-59_label_A.mp4: 74 windows
+Before.Sunrise.1995__#01-36-45_01-38-10_label_A.mp4: 42 windows
+Desperado.1995__#00-19-00_00-20-31_label_A.mp4: 45 windows
+God.Bless.America.2011__#01-23-13_01-25-31_label_A.mp4: 69 windows
+Jason.Bourne.2016__#0-51-37_0-53-20_label_A.mp4: 51 windows
+Love.Me.If.You.Dare.2003__#00-11-20_00-15-08_label_A.mp4: 114 windows
+Salt.2010__#00-13-45_00-16-10_label_A.mp4: 72 windows
+The.Bourne.Identity.2002__#0-29-16_0-32-00_label_A.mp4: 82 windows
+The.Notebook.2004__#00-20-35_00-23-06_label_A.mp4: 75 windows
+Tropa.de.Elite.2007__#00-52-33_00-54-35_label_A.mp4: 61 windows
+v=3MUqt3OkxIo__#1_label_A.mp4: 52 windows
+v=9eME1y6V-T4__#01-36-00_01-42-00_label_A.mp4: 180 windows
+v=H9Y5_X1sEEA__#00-36-00_00-39-00_label_A.mp4: 90 windows
+v=NbNFfnVSIn8__#1_label_A.mp4: 95 windows
+v=SmFpAAHmoII__#1_label_A.mp4: 82 windows
+v=bU86SW6L7Tc__#1_label_A.mp4: 88 windows
+v=hgoGZZSMhMQ__#1_label_A.mp4: 3 windows
+v=rmDBn5Rpd3s__#1_label_A.mp4: 14 windows
+v=vp_W8CqtCug__#1_label_A.mp4: 79 windows
+results/pro6000/ft_xd_v1_qwen2b_eval/20261025-192011-shards/shard1

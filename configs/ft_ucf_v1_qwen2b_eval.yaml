@@ -1,0 +1,36 @@
+# Small control (2026-10-25): as ft_ucf_v1_qwen_eval.yaml with the 2B asset.
+name: ft_ucf_v1_qwen2b_eval
+
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 140
+  n_normal: 150
+  max_duration_s: 1000000000
+  seed: 0
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+input_form:
+  name: frames
+
+backbone:
+  name: qwen_first_token
+  asset: qwen3.5-2b
+  memory_cap_gb: 40
+  adapter: ADAPTER_RUN_DIR
+
+answer_head:
+  name: option_logits
+
+decision_rules:
+  - name: threshold
+    start: 0.0
+    stop: 1.0
+    step: 0.01

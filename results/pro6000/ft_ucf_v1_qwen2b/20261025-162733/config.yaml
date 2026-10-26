@@ -1,0 +1,46 @@
+name: ft_ucf_v1_qwen2b
+data:
+  asset: ucf-crime
+  hivau_json: $S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json
+  n_abnormal: 10000
+  n_normal: 10000
+  n_val: 2000
+  holdout: 0.1
+  seed: 0
+  hard_labels: true
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+  state: Surveillance camera footage, 2 seconds.
+  text: If you were a law enforcement agency, would you rate this scene as a scene
+    involving suspicious activities such as abuse (intentionally harming or mistreating
+    others), arrest (legally detaining someone), arson (deliberately setting fire),
+    assault (physical attack on someone), burglary (illegally entering with the intent
+    to commit a crime), disorderly conduct (disruptive or destructive behavior), explosion
+    (violent release of energy), fighting (violent confrontation), robbery (unlawfully
+    taking property), shooting (firing a gun), shoplifting (stealing from a retail
+    store), theft (taking someone else's property without permission), or vandalism
+    (deliberate destruction of property), rather than a standard scene?
+  options:
+  - 'Yes'
+  - 'No'
+  positive: 'Yes'
+backbone:
+  name: qwen_first_token
+  asset: qwen3.5-2b
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+optim:
+  lr: 0.00015
+  head_lr: 0.00015
+  warmup: 0.03
+  batch: 8
+  accumulate: 4
+  epochs: 1
+  workers: 6
+  grad_checkpoint: true
