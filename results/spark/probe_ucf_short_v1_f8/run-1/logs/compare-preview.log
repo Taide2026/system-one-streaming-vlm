@@ -1,0 +1,10 @@
+Uninstalled 1 package in 0.52ms
+Installed 1 package in 1ms
+A: loaded in 0.01s
+B: loaded in 0.01s
+C: loaded in 0.01s
+A-B: CKA in 27.83s
+C-B: CKA in 25.57s
+C-A: CKA in 26.31s
+<scratchpad>/compare-preview/compare.json
+compare wall 134.19 s, max rss 1798948 KB

@@ -96,6 +96,8 @@ When `assets.yaml` gets a new asset after `git pull`, run `fetch` for that name 
 | `h2o-lightning-4b-image` | `h2oai/h2o-lightning-4b` @ `ac0b458` (branch image-preview) | 9.3 GB | `h2o_lightning_4b_*` |
 | `laya` | `convaiinnovations/laya` @ `7b928d8` | 2.3 GB | none yet |
 | `clm-8b` | `Contrastive-LM/CLM-v0.1-8B` @ `e939398` (heads only; needs Qwen3-8B) | 73 MB | none yet |
+| `qwen3.5-9b` | `Qwen/Qwen3.5-9B` @ `c202236` (base model of `d3-flash`) | 19 GB | probing conditions A and B |
+| `holmes-vau-ucf-train` | `ucf_database_train.json` of `pipixin321/HolmesVAU` @ `e6a89b1` (UCF-Crime train events, seconds) | 6.7 MB | probing (Holmes head labels) |
 
 Sizes are the full Hugging Face snapshot at that revision. `fetch` downloads the full snapshot.
 

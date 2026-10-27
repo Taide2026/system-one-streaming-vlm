@@ -5,6 +5,7 @@ description = "Streaming System One experiments: dataset, windowing, input form,
 requires-python = ">=3.12"
 dependencies = [
     "accelerate>=1.15.0",
+    "matplotlib>=3.11.2",
     "numpy>=2.5.3",
     "opencv-python-headless>=5.0.0.93",
     # imajev-4b ships a PEFT LoRA adapter (saved with peft 0.21.0).
@@ -12,6 +13,7 @@ dependencies = [
     "pillow>=12.3.0",
     "pyyaml>=6.0",
     "safetensors",
+    "scikit-learn>=1.9.1",
     # The startlux backbone runs StartLux-Decision through its release package (transformers engine), at this commit.
     "startlux-decide @ git+https://github.com/StartLuxLabs/StartLux-Decision@83fe6c7d61a687a6e17f118b4f7d8f429f5d3a01",
     "torch>=2.14.1",

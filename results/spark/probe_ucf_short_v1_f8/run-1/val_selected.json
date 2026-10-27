@@ -1,0 +1,164 @@
+{
+ "A/mil/last": {
+  "val_state": 6,
+  "validation": 0.04937140643596649,
+  "test_frame_auc": 0.7962540275621697,
+  "low": 0.737839451569197,
+  "high": 0.8568508241160631,
+  "test_peak_state": 31,
+  "test_peak_auc": 0.8499857444264065
+ },
+ "A/mil/visual": {
+  "val_state": 7,
+  "validation": 0.08997831493616104,
+  "test_frame_auc": 0.8285253298665805,
+  "low": 0.7816903649956554,
+  "high": 0.8781783074403978,
+  "test_peak_state": 21,
+  "test_peak_auc": 0.8466785264556748
+ },
+ "A/holmes/last": {
+  "val_state": 14,
+  "validation": 0.8155196801441861,
+  "test_frame_auc": 0.7940695621039157,
+  "low": 0.7336700999608512,
+  "high": 0.8517766782739601,
+  "test_peak_state": 28,
+  "test_peak_auc": 0.8463432138057864
+ },
+ "A/holmes/visual": {
+  "val_state": 12,
+  "validation": 0.8088208453821102,
+  "test_frame_auc": 0.7925789891385355,
+  "low": 0.7337322355036646,
+  "high": 0.8471651964300817,
+  "test_peak_state": 16,
+  "test_peak_auc": 0.815321124153551
+ },
+ "A/knn/last": {
+  "val_state": 30,
+  "validation": 0.9092702169625246,
+  "test_frame_auc": 0.7191346215200065,
+  "low": 0.6485481886558883,
+  "high": 0.7884449916473029,
+  "test_peak_state": 31,
+  "test_peak_auc": 0.7243623769310905
+ },
+ "A/knn/visual": {
+  "val_state": 25,
+  "validation": 0.8369493754109139,
+  "test_frame_auc": 0.7340910088600441,
+  "low": 0.6657034454773795,
+  "high": 0.7939747395517976,
+  "test_peak_state": 22,
+  "test_peak_auc": 0.7557741920677044
+ },
+ "B/mil/last": {
+  "val_state": 6,
+  "validation": 0.05592810735106468,
+  "test_frame_auc": 0.7944499365328404,
+  "low": 0.7362150815037161,
+  "high": 0.855364293397603,
+  "test_peak_state": 31,
+  "test_peak_auc": 0.8466618859947888
+ },
+ "B/mil/visual": {
+  "val_state": 8,
+  "validation": 0.07596205174922943,
+  "test_frame_auc": 0.8328154763001329,
+  "low": 0.7869872338172228,
+  "high": 0.8810269094977532,
+  "test_peak_state": 19,
+  "test_peak_auc": 0.8508847342812181
+ },
+ "B/holmes/last": {
+  "val_state": 14,
+  "validation": 0.8334773482994827,
+  "test_frame_auc": 0.816860072264073,
+  "low": 0.7596977010290529,
+  "high": 0.8691106883619919,
+  "test_peak_state": 26,
+  "test_peak_auc": 0.8676132570752553
+ },
+ "B/holmes/visual": {
+  "val_state": 11,
+  "validation": 0.814678404599353,
+  "test_frame_auc": 0.7635029498456656,
+  "low": 0.6967357553180674,
+  "high": 0.8261142133941981,
+  "test_peak_state": 32,
+  "test_peak_auc": 0.8083668104800091
+ },
+ "B/knn/last": {
+  "val_state": 30,
+  "validation": 0.9224194608809995,
+  "test_frame_auc": 0.7310876265611974,
+  "low": 0.6569640935342879,
+  "high": 0.8032953049371904,
+  "test_peak_state": 31,
+  "test_peak_auc": 0.7410078446814135
+ },
+ "B/knn/visual": {
+  "val_state": 25,
+  "validation": 0.834319526627219,
+  "test_frame_auc": 0.7353190895995013,
+  "low": 0.670733793686018,
+  "high": 0.7963003757863825,
+  "test_peak_state": 22,
+  "test_peak_auc": 0.7517012551899647
+ },
+ "C/mil/last": {
+  "val_state": 14,
+  "validation": 0.0414188951253891,
+  "test_frame_auc": 0.8487390720215787,
+  "low": 0.8072039438674619,
+  "high": 0.8917521851532656,
+  "test_peak_state": 22,
+  "test_peak_auc": 0.8526646009227975
+ },
+ "C/mil/visual": {
+  "val_state": 8,
+  "validation": 0.06923078745603561,
+  "test_frame_auc": 0.8297852925510096,
+  "low": 0.7834310219157397,
+  "high": 0.8785461158689171,
+  "test_peak_state": 18,
+  "test_peak_auc": 0.8557926394175732
+ },
+ "C/holmes/last": {
+  "val_state": 29,
+  "validation": 0.8405511923298485,
+  "test_frame_auc": 0.8220373172496358,
+  "low": 0.7681758015390088,
+  "high": 0.8775617070792255,
+  "test_peak_state": 23,
+  "test_peak_auc": 0.873538071084603
+ },
+ "C/holmes/visual": {
+  "val_state": 22,
+  "validation": 0.8147439955740351,
+  "test_frame_auc": 0.7671101010793135,
+  "low": 0.6913891227908322,
+  "high": 0.8374602182197707,
+  "test_peak_state": 19,
+  "test_peak_auc": 0.8038512815209169
+ },
+ "C/knn/last": {
+  "val_state": 23,
+  "validation": 0.967784352399737,
+  "test_frame_auc": 0.8446545751776483,
+  "low": 0.7973196671970357,
+  "high": 0.8877429178168156,
+  "test_peak_state": 21,
+  "test_peak_auc": 0.8456530764611654
+ },
+ "C/knn/visual": {
+  "val_state": 18,
+  "validation": 0.8731097961867194,
+  "test_frame_auc": 0.7778877447173053,
+  "low": 0.7059210150673483,
+  "high": 0.8435658025114481,
+  "test_peak_state": 22,
+  "test_peak_auc": 0.7887452772936213
+ }
+}

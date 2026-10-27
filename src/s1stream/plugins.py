@@ -9,6 +9,7 @@ import s1stream.backbones.jev_omni  # noqa: F401
 import s1stream.backbones.qwen_first_token  # noqa: F401
 import s1stream.backbones.startlux  # noqa: F401
 import s1stream.datasets.ucf_crime  # noqa: F401
+import s1stream.datasets.ucf_crime_train  # noqa: F401
 import s1stream.datasets.xd_violence  # noqa: F401
 import s1stream.heads.generated_answer  # noqa: F401
 import s1stream.heads.option_logits  # noqa: F401

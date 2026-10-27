@@ -1,0 +1,17 @@
+Uninstalled 1 package in 0.63ms
+Installed 1 package in 2ms
+vit/mil/max          image @19 0.817 [0.765, 0.864] | video @17 0.819 [0.768, 0.870] | peak diff +0.002 [-0.017, +0.022] | video - P(Yes) -0.042 [-0.088, +0.006]
+vit/mil/mean         image @27 0.825 [0.776, 0.875] | video @26 0.820 [0.772, 0.871] | peak diff -0.005 [-0.017, +0.008] | video - P(Yes) -0.040 [-0.077, +0.003]
+vit/holmes/max       image @26 0.794 [0.740, 0.849] | video @19 0.813 [0.752, 0.864] | peak diff +0.018 [-0.032, +0.068] | video - P(Yes) -0.048 [-0.102, -0.001]
+vit/holmes/mean      image @27 0.819 [0.767, 0.871] | video @27 0.820 [0.767, 0.871] | peak diff +0.001 [-0.012, +0.015] | video - P(Yes) -0.040 [-0.086, +0.005]
+vit/knn/max          image @ 5 0.676 [0.596, 0.745] | video @ 3 0.672 [0.589, 0.744] | peak diff -0.004 [-0.046, +0.038] | video - P(Yes) -0.188 [-0.269, -0.117]
+vit/knn/mean         image @12 0.666 [0.593, 0.735] | video @10 0.652 [0.576, 0.722] | peak diff -0.014 [-0.042, +0.012] | video - P(Yes) -0.208 [-0.279, -0.140]
+merger/mil/max       image @ 0 0.819 [0.766, 0.870] | video @ 0 0.816 [0.762, 0.867] | peak diff -0.003 [-0.014, +0.009] | video - P(Yes) -0.044 [-0.086, -0.001]
+merger/mil/mean      image @ 0 0.819 [0.770, 0.869] | video @ 0 0.805 [0.754, 0.857] | peak diff -0.014 [-0.029, -0.000] | video - P(Yes) -0.055 [-0.096, -0.010]
+merger/holmes/max    image @ 0 0.723 [0.646, 0.795] | video @ 0 0.721 [0.645, 0.792] | peak diff -0.003 [-0.037, +0.037] | video - P(Yes) -0.140 [-0.207, -0.085]
+merger/holmes/mean   image @ 0 0.744 [0.672, 0.812] | video @ 0 0.750 [0.680, 0.817] | peak diff +0.006 [-0.012, +0.024] | video - P(Yes) -0.110 [-0.176, -0.049]
+merger/knn/max       image @ 0 0.569 [0.489, 0.645] | video @ 0 0.530 [0.454, 0.607] | peak diff -0.039 [-0.078, +0.005] | video - P(Yes) -0.331 [-0.409, -0.255]
+merger/knn/mean      image @ 0 0.499 [0.403, 0.595] | video @ 0 0.482 [0.397, 0.570] | peak diff -0.017 [-0.054, +0.019] | video - P(Yes) -0.378 [-0.473, -0.285]
+vit/mil/mean state 27 video - image -0.011 [-0.024, +0.000]
+vit/holmes/mean state 27 video - image +0.001 [-0.012, +0.015]
+vit/knn/mean state 27 video - image +0.017 [-0.018, +0.055]
