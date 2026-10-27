@@ -1,0 +1,148 @@
+Uninstalled 1 package in 0.55ms
+Installed 1 package in 2ms
+
+Loading weights:   0%|          | 0/759 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/759 [00:11<2:27:16, 11.66s/it]
+Loading weights:   1%|          | 9/759 [00:11<11:58,  1.04it/s]  
+Loading weights:   2%|▏         | 14/759 [00:13<08:27,  1.47it/s]
+Loading weights:   3%|▎         | 22/759 [00:14<04:33,  2.69it/s]
+Loading weights:   3%|▎         | 25/759 [00:14<03:43,  3.28it/s]
+Loading weights:   4%|▎         | 27/759 [00:21<10:19,  1.18it/s]
+Loading weights:   4%|▍         | 29/759 [00:21<08:59,  1.35it/s]
+Loading weights:   9%|▊         | 65/759 [00:22<01:34,  7.32it/s]
+Loading weights:   9%|▉         | 68/759 [00:24<02:15,  5.08it/s]
+Loading weights:  12%|█▏        | 89/759 [00:25<01:14,  8.95it/s]
+Loading weights:  12%|█▏        | 93/759 [00:26<01:23,  7.96it/s]
+Loading weights:  13%|█▎        | 96/759 [00:27<01:40,  6.57it/s]
+Loading weights:  13%|█▎        | 98/759 [00:27<01:48,  6.09it/s]
+Loading weights:  13%|█▎        | 100/759 [00:28<02:19,  4.72it/s]
+Loading weights:  14%|█▎        | 104/759 [00:29<01:52,  5.83it/s]
+Loading weights:  14%|█▍        | 106/759 [00:29<01:54,  5.72it/s]
+Loading weights:  15%|█▌        | 114/759 [00:29<01:13,  8.74it/s]
+Loading weights:  15%|█▌        | 116/759 [00:31<02:12,  4.84it/s]
+Loading weights:  16%|█▌        | 120/759 [00:32<02:01,  5.26it/s]
+Loading weights:  17%|█▋        | 128/759 [00:32<01:19,  7.97it/s]
+Loading weights:  17%|█▋        | 130/759 [00:33<02:15,  4.63it/s]
+Loading weights:  17%|█▋        | 132/759 [00:34<02:22,  4.42it/s]
+Loading weights:  19%|█▊        | 142/759 [00:35<01:24,  7.29it/s]
+Loading weights:  19%|█▉        | 145/759 [00:35<01:15,  8.16it/s]
+Loading weights:  19%|█▉        | 147/759 [00:36<01:58,  5.16it/s]
+Loading weights:  19%|█▉        | 148/759 [00:37<02:19,  4.37it/s]
+Loading weights:  20%|█▉        | 151/759 [00:37<02:11,  4.62it/s]
+Loading weights:  20%|██        | 152/759 [00:38<03:26,  2.95it/s]
+Loading weights:  20%|██        | 153/759 [00:39<03:42,  2.72it/s]
+Loading weights:  22%|██▏       | 167/759 [00:39<01:13,  8.04it/s]
+Loading weights:  22%|██▏       | 170/759 [00:40<01:05,  8.94it/s]
+Loading weights:  23%|██▎       | 172/759 [00:41<01:45,  5.56it/s]
+Loading weights:  23%|██▎       | 173/759 [00:41<02:08,  4.58it/s]
+Loading weights:  24%|██▎       | 179/759 [00:44<02:55,  3.30it/s]
+Loading weights:  24%|██▍       | 182/759 [00:44<02:21,  4.07it/s]
+Loading weights:  26%|██▌       | 195/759 [00:44<01:06,  8.53it/s]
+Loading weights:  26%|██▌       | 197/759 [00:45<01:05,  8.62it/s]
+Loading weights:  26%|██▌       | 199/759 [00:49<03:32,  2.63it/s]
+Loading weights:  26%|██▋       | 201/759 [00:49<03:22,  2.75it/s]
+Loading weights:  29%|██▊       | 218/759 [00:52<01:59,  4.54it/s]
+Loading weights:  31%|███       | 234/759 [00:54<01:38,  5.31it/s]
+Loading weights:  33%|███▎      | 248/759 [00:55<01:05,  7.76it/s]
+Loading weights:  33%|███▎      | 250/759 [00:55<01:04,  7.88it/s]
+Loading weights:  33%|███▎      | 252/759 [00:56<01:17,  6.58it/s]
+Loading weights:  33%|███▎      | 254/759 [01:01<03:50,  2.19it/s]
+Loading weights:  37%|███▋      | 284/759 [01:04<01:32,  5.16it/s]
+Loading weights:  38%|███▊      | 285/759 [01:04<01:38,  4.82it/s]
+Loading weights:  40%|████      | 304/759 [01:05<00:52,  8.73it/s]
+Loading weights:  41%|████      | 308/759 [01:06<01:09,  6.46it/s]
+Loading weights:  41%|████      | 311/759 [01:11<02:25,  3.07it/s]
+Loading weights:  47%|████▋     | 354/759 [01:11<00:41,  9.85it/s]
+Loading weights:  47%|████▋     | 359/759 [01:15<01:05,  6.09it/s]
+Loading weights:  49%|████▉     | 371/759 [01:15<00:49,  7.79it/s]
+Loading weights:  49%|████▉     | 375/759 [01:16<00:51,  7.41it/s]
+Loading weights:  50%|█████     | 383/759 [01:18<00:57,  6.59it/s]
+Loading weights:  52%|█████▏    | 393/759 [01:18<00:42,  8.55it/s]
+Loading weights:  52%|█████▏    | 396/759 [01:25<02:16,  2.67it/s]
+Loading weights:  58%|█████▊    | 439/759 [01:25<00:36,  8.74it/s]
+Loading weights:  60%|█████▉    | 452/759 [01:25<00:27, 11.07it/s]
+Loading weights:  62%|██████▏   | 470/759 [01:26<00:18, 15.58it/s]
+Loading weights:  64%|██████▎   | 482/759 [01:26<00:14, 19.33it/s]
+Loading weights:  65%|██████▍   | 493/759 [01:26<00:14, 18.88it/s]
+Loading weights:  71%|███████   | 538/759 [01:26<00:05, 41.14it/s]
+Loading weights:  73%|███████▎  | 554/759 [01:27<00:04, 48.83it/s]
+Loading weights:  75%|███████▍  | 569/759 [01:27<00:03, 56.24it/s]
+Loading weights:  77%|███████▋  | 583/759 [01:27<00:03, 53.72it/s]
+Loading weights:  79%|███████▊  | 597/759 [01:27<00:03, 51.58it/s]
+Loading weights:  82%|████████▏ | 621/759 [01:27<00:01, 72.25it/s]
+Loading weights:  84%|████████▍ | 638/759 [01:28<00:01, 83.52it/s]
+Loading weights:  86%|████████▌ | 651/759 [01:28<00:01, 85.81it/s]
+Loading weights:  87%|████████▋ | 663/759 [01:28<00:01, 88.56it/s]
+Loading weights:  89%|████████▉ | 675/759 [01:28<00:00, 90.14it/s]
+Loading weights:  90%|█████████ | 686/759 [01:28<00:01, 67.45it/s]
+Loading weights:  94%|█████████▎| 710/759 [01:28<00:00, 93.13it/s]
+Loading weights:  95%|█████████▌| 722/759 [01:29<00:00, 92.02it/s]
+Loading weights:  97%|█████████▋| 733/759 [01:29<00:00, 38.57it/s]
+Loading weights: 100%|██████████| 759/759 [01:29<00:00,  8.45it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+train_anomaly: 200/5818 windows
+train_anomaly: 400/5818 windows
+train_anomaly: 600/5818 windows
+train_anomaly: 800/5818 windows
+train_anomaly: 1000/5818 windows
+train_anomaly: 1200/5818 windows
+train_anomaly: 1400/5818 windows
+train_anomaly: 1600/5818 windows
+train_anomaly: 1800/5818 windows
+train_anomaly: 2000/5818 windows
+train_anomaly: 2200/5818 windows
+train_anomaly: 2400/5818 windows
+train_anomaly: 2600/5818 windows
+train_anomaly: 2800/5818 windows
+train_anomaly: 3000/5818 windows
+train_anomaly: 3200/5818 windows
+train_anomaly: 3400/5818 windows
+train_anomaly: 3600/5818 windows
+train_anomaly: 3800/5818 windows
+train_anomaly: 4000/5818 windows
+train_anomaly: 4200/5818 windows
+train_anomaly: 4400/5818 windows
+train_anomaly: 4600/5818 windows
+train_anomaly: 4800/5818 windows
+train_anomaly: 5000/5818 windows
+train_anomaly: 5200/5818 windows
+train_anomaly: 5400/5818 windows
+train_anomaly: 5600/5818 windows
+train_anomaly: 5800/5818 windows
+train_normal: 200/5270 windows
+train_normal: 400/5270 windows
+train_normal: 600/5270 windows
+train_normal: 800/5270 windows
+train_normal: 1000/5270 windows
+train_normal: 1200/5270 windows
+train_normal: 1400/5270 windows
+train_normal: 1600/5270 windows
+train_normal: 1800/5270 windows
+train_normal: 2000/5270 windows
+train_normal: 2200/5270 windows
+train_normal: 2400/5270 windows
+train_normal: 2600/5270 windows
+train_normal: 2800/5270 windows
+train_normal: 3000/5270 windows
+train_normal: 3200/5270 windows
+train_normal: 3400/5270 windows
+train_normal: 3600/5270 windows
+train_normal: 3800/5270 windows
+train_normal: 4000/5270 windows
+train_normal: 4200/5270 windows
+train_normal: 4400/5270 windows
+train_normal: 4600/5270 windows
+train_normal: 4800/5270 windows
+train_normal: 5000/5270 windows
+train_normal: 5200/5270 windows
+test: 200/1684 windows
+test: 400/1684 windows
+test: 600/1684 windows
+test: 800/1684 windows
+test: 1000/1684 windows
+test: 1200/1684 windows
+test: 1400/1684 windows
+test: 1600/1684 windows
+$S1_FEATURES/probe_ucf_short_v1_f8/C/run-1
+C wall 8710.40 s, max rss 17488200 KB

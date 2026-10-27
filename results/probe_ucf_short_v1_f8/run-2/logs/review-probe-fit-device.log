@@ -1,0 +1,24 @@
+No problems.
+
+### 1. Does each test match an item in the test list? List the tests that do not.
+
+No. Not every test matches an item in the test list.
+
+The four tests in [tests/test_probe_fit_device.py](tests/test_probe_fit_device.py) match items 1 through 4 in order:
+- `test_fit_condition_cpu_device_keeps_outputs` matches item 1.
+- `test_choices_record_losses` matches item 2.
+- `test_heads_converge_without_oscillation` matches item 3.
+- `test_knn_scores_do_not_depend_on_heads` matches item 4.
+
+These tests in the diff do not match any item in the test list:
+- `test_probe_fit_passes_device` in [tests/test_probe_fit_cli.py](tests/test_probe_fit_cli.py): It tests CLI flag wiring, which is not in the test list.
+- `test_fit_mil_finds_positive_instance` in [tests/test_probe_fit.py](tests/test_probe_fit.py): It is an existing test updated for the `Fitted.head` return type.
+
+### 2. Does any test depend on implementation details instead of behavior?
+
+Yes. `test_probe_fit_passes_device` in [tests/test_probe_fit_cli.py](tests/test_probe_fit_cli.py) depends on implementation details.
+
+It monkeypatches `fit.fit_condition` and asserts on internal call keyword arguments. It does not verify observable CLI behavior or outputs.
+
+The tests in [tests/test_probe_fit_device.py](tests/test_probe_fit_device.py) test observable outputs and public function contracts, not implementation details.
+

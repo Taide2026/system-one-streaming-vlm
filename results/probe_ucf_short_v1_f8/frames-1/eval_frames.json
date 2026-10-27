@@ -1,0 +1,233 @@
+{
+ "n_boot": 1000,
+ "seed": 20261022,
+ "p_yes_C": {
+  "value": 0.8602,
+  "low": 0.8176,
+  "high": 0.8979
+ },
+ "results": {
+  "ViT 27/mil": {
+   "frame_average": {
+    "value": 0.825,
+    "low": 0.7765,
+    "high": 0.8751
+   },
+   "concat": {
+    "value": 0.8199,
+    "low": 0.7701,
+    "high": 0.8737
+   },
+   "concat_minus_average": {
+    "value": -0.0051,
+    "low": -0.0147,
+    "high": 0.0033
+   },
+   "concat_minus_p_yes": {
+    "value": -0.0403,
+    "low": -0.0852,
+    "high": 0.0084
+   },
+   "meanstd": {
+    "value": 0.8257,
+    "low": 0.776,
+    "high": 0.8771
+   },
+   "meanstd_minus_average": {
+    "value": 0.0006,
+    "low": -0.0061,
+    "high": 0.0081
+   },
+   "meanstd_minus_p_yes": {
+    "value": -0.0345,
+    "low": -0.0761,
+    "high": 0.0091
+   }
+  },
+  "ViT 27/holmes": {
+   "frame_average": {
+    "value": 0.8186,
+    "low": 0.7671,
+    "high": 0.8707
+   },
+   "concat": {
+    "value": 0.7817,
+    "low": 0.725,
+    "high": 0.8331
+   },
+   "concat_minus_average": {
+    "value": -0.0369,
+    "low": -0.0607,
+    "high": -0.0169
+   },
+   "concat_minus_p_yes": {
+    "value": -0.0786,
+    "low": -0.1313,
+    "high": -0.0314
+   },
+   "meanstd": {
+    "value": 0.8142,
+    "low": 0.7602,
+    "high": 0.8646
+   },
+   "meanstd_minus_average": {
+    "value": -0.0044,
+    "low": -0.0155,
+    "high": 0.0085
+   },
+   "meanstd_minus_p_yes": {
+    "value": -0.0461,
+    "low": -0.0906,
+    "high": -0.0035
+   }
+  },
+  "ViT 27/knn": {
+   "frame_average": {
+    "value": 0.4675,
+    "low": 0.3908,
+    "high": 0.5548
+   },
+   "concat": {
+    "value": 0.6133,
+    "low": 0.5265,
+    "high": 0.7049
+   },
+   "concat_minus_average": {
+    "value": 0.1458,
+    "low": 0.0208,
+    "high": 0.2676
+   },
+   "concat_minus_p_yes": {
+    "value": -0.2469,
+    "low": -0.339,
+    "high": -0.1602
+   },
+   "meanstd": {
+    "value": 0.545,
+    "low": 0.4647,
+    "high": 0.6309
+   },
+   "meanstd_minus_average": {
+    "value": 0.0774,
+    "low": -0.0139,
+    "high": 0.1776
+   },
+   "meanstd_minus_p_yes": {
+    "value": -0.3153,
+    "low": -0.403,
+    "high": -0.233
+   }
+  },
+  "merger/mil": {
+   "frame_average": {
+    "value": 0.8192,
+    "low": 0.7702,
+    "high": 0.8692
+   },
+   "concat": {
+    "value": 0.8197,
+    "low": 0.7693,
+    "high": 0.8686
+   },
+   "concat_minus_average": {
+    "value": 0.0005,
+    "low": -0.0037,
+    "high": 0.005
+   },
+   "concat_minus_p_yes": {
+    "value": -0.0405,
+    "low": -0.0783,
+    "high": -0.0008
+   },
+   "meanstd": {
+    "value": 0.8223,
+    "low": 0.7727,
+    "high": 0.873
+   },
+   "meanstd_minus_average": {
+    "value": 0.0031,
+    "low": -0.0035,
+    "high": 0.0094
+   },
+   "meanstd_minus_p_yes": {
+    "value": -0.0379,
+    "low": -0.0756,
+    "high": 0.0011
+   }
+  },
+  "merger/holmes": {
+   "frame_average": {
+    "value": 0.7443,
+    "low": 0.6724,
+    "high": 0.8117
+   },
+   "concat": {
+    "value": 0.6823,
+    "low": 0.5922,
+    "high": 0.7597
+   },
+   "concat_minus_average": {
+    "value": -0.062,
+    "low": -0.0986,
+    "high": -0.0275
+   },
+   "concat_minus_p_yes": {
+    "value": -0.1779,
+    "low": -0.2604,
+    "high": -0.1068
+   },
+   "meanstd": {
+    "value": 0.7289,
+    "low": 0.6659,
+    "high": 0.7886
+   },
+   "meanstd_minus_average": {
+    "value": -0.0154,
+    "low": -0.0486,
+    "high": 0.0136
+   },
+   "meanstd_minus_p_yes": {
+    "value": -0.1313,
+    "low": -0.1897,
+    "high": -0.0823
+   }
+  },
+  "merger/knn": {
+   "frame_average": {
+    "value": 0.4991,
+    "low": 0.4025,
+    "high": 0.5949
+   },
+   "concat": {
+    "value": 0.5417,
+    "low": 0.452,
+    "high": 0.6326
+   },
+   "concat_minus_average": {
+    "value": 0.0426,
+    "low": 0.0085,
+    "high": 0.0827
+   },
+   "concat_minus_p_yes": {
+    "value": -0.3185,
+    "low": -0.4186,
+    "high": -0.2271
+   },
+   "meanstd": {
+    "value": 0.5317,
+    "low": 0.4437,
+    "high": 0.6239
+   },
+   "meanstd_minus_average": {
+    "value": 0.0326,
+    "low": 0.0088,
+    "high": 0.0598
+   },
+   "meanstd_minus_p_yes": {
+    "value": -0.3285,
+    "low": -0.4316,
+    "high": -0.2365
+   }
+  }
+ }
+}

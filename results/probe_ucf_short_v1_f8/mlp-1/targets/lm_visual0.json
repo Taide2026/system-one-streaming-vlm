@@ -1,0 +1,21 @@
+{
+ "features": "$S1_FEATURES/probe_ucf_short_v1_f8/C/run-1",
+ "kind": "visual",
+ "state": 0,
+ "hidden": 256,
+ "dropout": 0.1,
+ "lr": 0.001,
+ "steps": 1000,
+ "mil": {
+  "k": "frac8",
+  "wd": 0.1,
+  "validation_bce": 0.2633669078350067,
+  "final_loss": 9.233675882569514e-06
+ },
+ "holmes": {
+  "wd": 0.01,
+  "validation_auc": 0.8232337491230772,
+  "final_loss": 0.003877357579767704
+ },
+ "seconds": 68.92057912098244
+}

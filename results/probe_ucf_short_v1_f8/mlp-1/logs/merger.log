@@ -1,0 +1,5 @@
+Uninstalled 1 package in 0.31ms
+Installed 1 package in 2ms
+merger: mil k=3 wd=0.1 val bce 0.2615; holmes wd=0.1 val auc 0.8295; 68 s
+peak GPU 0.49 GiB
+wall 70.77 s, RSS 2670872 KB

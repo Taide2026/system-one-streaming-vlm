@@ -1,0 +1,160 @@
+Uninstalled 1 package in 0.36ms
+Installed 1 package in 1ms
+
+Loading weights:   0%|          | 0/759 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/759 [00:12<2:32:55, 12.10s/it]
+Loading weights:   1%|          | 7/759 [00:12<16:54,  1.35s/it]  
+Loading weights:   1%|▏         | 10/759 [00:13<11:13,  1.11it/s]
+Loading weights:   1%|▏         | 11/759 [00:13<09:47,  1.27it/s]
+Loading weights:   2%|▏         | 13/759 [00:14<07:51,  1.58it/s]
+Loading weights:   2%|▏         | 14/759 [00:14<07:44,  1.60it/s]
+Loading weights:   3%|▎         | 21/759 [00:14<03:08,  3.91it/s]
+Loading weights:   3%|▎         | 23/759 [00:15<02:57,  4.16it/s]
+Loading weights:   3%|▎         | 26/759 [00:15<02:47,  4.38it/s]
+Loading weights:   4%|▎         | 27/759 [00:16<03:19,  3.67it/s]
+Loading weights:   4%|▎         | 28/759 [00:17<03:54,  3.12it/s]
+Loading weights:   4%|▍         | 34/759 [00:24<09:57,  1.21it/s]
+Loading weights:  10%|▉         | 75/759 [00:24<01:31,  7.44it/s]
+Loading weights:  10%|█         | 79/759 [00:25<01:40,  6.77it/s]
+Loading weights:  11%|█         | 82/759 [00:26<01:57,  5.75it/s]
+Loading weights:  12%|█▏        | 89/759 [00:27<01:36,  6.95it/s]
+Loading weights:  12%|█▏        | 91/759 [00:27<01:38,  6.79it/s]
+Loading weights:  12%|█▏        | 93/759 [00:29<02:16,  4.89it/s]
+Loading weights:  13%|█▎        | 95/759 [00:29<02:21,  4.68it/s]
+Loading weights:  13%|█▎        | 98/759 [00:30<02:16,  4.85it/s]
+Loading weights:  13%|█▎        | 99/759 [00:30<02:38,  4.17it/s]
+Loading weights:  13%|█▎        | 100/759 [00:31<03:05,  3.54it/s]
+Loading weights:  14%|█▎        | 104/759 [00:31<02:02,  5.35it/s]
+Loading weights:  14%|█▍        | 106/759 [00:31<02:00,  5.40it/s]
+Loading weights:  15%|█▌        | 114/759 [00:34<02:41,  3.99it/s]
+Loading weights:  17%|█▋        | 127/759 [00:34<01:13,  8.62it/s]
+Loading weights:  17%|█▋        | 130/759 [00:34<01:13,  8.60it/s]
+Loading weights:  18%|█▊        | 133/759 [00:36<01:48,  5.76it/s]
+Loading weights:  18%|█▊        | 135/759 [00:36<01:57,  5.30it/s]
+Loading weights:  19%|█▊        | 141/759 [00:40<03:44,  2.75it/s]
+Loading weights:  19%|█▊        | 142/759 [00:43<05:43,  1.79it/s]
+Loading weights:  21%|██        | 159/759 [00:43<02:05,  4.77it/s]
+Loading weights:  24%|██▍       | 181/759 [00:44<00:59,  9.72it/s]
+Loading weights:  24%|██▍       | 184/759 [00:46<01:32,  6.22it/s]
+Loading weights:  26%|██▌       | 194/759 [00:46<01:12,  7.84it/s]
+Loading weights:  26%|██▌       | 198/759 [00:46<01:04,  8.70it/s]
+Loading weights:  26%|██▋       | 200/759 [00:48<01:28,  6.32it/s]
+Loading weights:  27%|██▋       | 202/759 [00:48<01:36,  5.77it/s]
+Loading weights:  27%|██▋       | 204/759 [00:49<02:08,  4.31it/s]
+Loading weights:  27%|██▋       | 205/759 [00:50<02:25,  3.81it/s]
+Loading weights:  28%|██▊       | 210/759 [00:50<01:52,  4.88it/s]
+Loading weights:  29%|██▉       | 220/759 [00:51<01:02,  8.59it/s]
+Loading weights:  29%|██▉       | 222/759 [00:51<01:06,  8.03it/s]
+Loading weights:  30%|██▉       | 224/759 [00:52<01:19,  6.73it/s]
+Loading weights:  30%|██▉       | 225/759 [00:52<01:42,  5.22it/s]
+Loading weights:  30%|██▉       | 226/759 [00:53<02:06,  4.22it/s]
+Loading weights:  30%|███       | 230/759 [00:53<01:32,  5.75it/s]
+Loading weights:  31%|███       | 235/759 [00:53<01:00,  8.71it/s]
+Loading weights:  31%|███       | 237/759 [00:55<02:21,  3.69it/s]
+Loading weights:  32%|███▏      | 246/759 [01:00<03:27,  2.47it/s]
+Loading weights:  36%|███▌      | 273/759 [01:00<01:02,  7.78it/s]
+Loading weights:  36%|███▋      | 276/759 [01:00<01:02,  7.75it/s]
+Loading weights:  37%|███▋      | 279/759 [01:02<01:27,  5.48it/s]
+Loading weights:  37%|███▋      | 283/759 [01:05<02:14,  3.55it/s]
+Loading weights:  40%|███▉      | 302/759 [01:05<00:58,  7.87it/s]
+Loading weights:  40%|████      | 307/759 [01:07<01:16,  5.88it/s]
+Loading weights:  41%|████      | 310/759 [01:08<01:16,  5.83it/s]
+Loading weights:  41%|████      | 313/759 [01:09<01:30,  4.93it/s]
+Loading weights:  42%|████▏     | 316/759 [01:09<01:19,  5.55it/s]
+Loading weights:  42%|████▏     | 318/759 [01:09<01:19,  5.57it/s]
+Loading weights:  43%|████▎     | 326/759 [01:10<00:51,  8.49it/s]
+Loading weights:  43%|████▎     | 328/759 [01:10<01:07,  6.36it/s]
+Loading weights:  43%|████▎     | 330/759 [01:14<02:55,  2.44it/s]
+Loading weights:  47%|████▋     | 354/759 [01:14<00:49,  8.19it/s]
+Loading weights:  47%|████▋     | 357/759 [01:16<01:03,  6.30it/s]
+Loading weights:  47%|████▋     | 360/759 [01:16<01:04,  6.17it/s]
+Loading weights:  48%|████▊     | 362/759 [01:22<03:22,  1.96it/s]
+Loading weights:  48%|████▊     | 363/759 [01:23<03:41,  1.78it/s]
+Loading weights:  54%|█████▎    | 407/759 [01:24<00:35,  9.89it/s]
+Loading weights:  54%|█████▍    | 411/759 [01:27<00:59,  5.86it/s]
+Loading weights:  55%|█████▌    | 418/759 [01:28<00:52,  6.55it/s]
+Loading weights:  56%|█████▌    | 422/759 [01:28<00:47,  7.17it/s]
+Loading weights:  56%|█████▌    | 425/759 [01:28<00:46,  7.15it/s]
+Loading weights:  57%|█████▋    | 430/759 [01:29<00:40,  8.09it/s]
+Loading weights:  61%|██████▏   | 466/759 [01:29<00:11, 26.13it/s]
+Loading weights:  63%|██████▎   | 478/759 [01:29<00:10, 27.41it/s]
+Loading weights:  66%|██████▌   | 498/759 [01:29<00:06, 38.69it/s]
+Loading weights:  67%|██████▋   | 508/759 [01:29<00:06, 40.84it/s]
+Loading weights:  69%|██████▉   | 524/759 [01:30<00:04, 50.56it/s]
+Loading weights:  72%|███████▏  | 544/759 [01:30<00:03, 69.70it/s]
+Loading weights:  73%|███████▎  | 557/759 [01:30<00:05, 37.77it/s]
+Loading weights:  81%|████████  | 614/759 [01:31<00:01, 84.77it/s]
+Loading weights:  83%|████████▎ | 632/759 [01:31<00:01, 92.61it/s]
+Loading weights:  86%|████████▌ | 649/759 [01:31<00:01, 59.46it/s]
+Loading weights:  89%|████████▉ | 678/759 [01:32<00:01, 75.03it/s]
+Loading weights:  93%|█████████▎| 706/759 [01:32<00:00, 96.98it/s]
+Loading weights:  95%|█████████▌| 723/759 [01:32<00:00, 75.28it/s]
+Loading weights:  98%|█████████▊| 741/759 [01:33<00:00, 52.75it/s]
+Loading weights: 100%|██████████| 759/759 [01:33<00:00,  8.14it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+train_anomaly: 200/5818 windows
+train_anomaly: 400/5818 windows
+train_anomaly: 600/5818 windows
+train_anomaly: 800/5818 windows
+train_anomaly: 1000/5818 windows
+train_anomaly: 1200/5818 windows
+train_anomaly: 1400/5818 windows
+train_anomaly: 1600/5818 windows
+train_anomaly: 1800/5818 windows
+train_anomaly: 2000/5818 windows
+train_anomaly: 2200/5818 windows
+train_anomaly: 2400/5818 windows
+train_anomaly: 2600/5818 windows
+train_anomaly: 2800/5818 windows
+train_anomaly: 3000/5818 windows
+train_anomaly: 3200/5818 windows
+train_anomaly: 3400/5818 windows
+train_anomaly: 3600/5818 windows
+train_anomaly: 3800/5818 windows
+train_anomaly: 4000/5818 windows
+train_anomaly: 4200/5818 windows
+train_anomaly: 4400/5818 windows
+train_anomaly: 4600/5818 windows
+train_anomaly: 4800/5818 windows
+train_anomaly: 5000/5818 windows
+train_anomaly: 5200/5818 windows
+train_anomaly: 5400/5818 windows
+train_anomaly: 5600/5818 windows
+train_anomaly: 5800/5818 windows
+train_normal: 200/5270 windows
+train_normal: 400/5270 windows
+train_normal: 600/5270 windows
+train_normal: 800/5270 windows
+train_normal: 1000/5270 windows
+train_normal: 1200/5270 windows
+train_normal: 1400/5270 windows
+train_normal: 1600/5270 windows
+train_normal: 1800/5270 windows
+train_normal: 2000/5270 windows
+train_normal: 2200/5270 windows
+train_normal: 2400/5270 windows
+train_normal: 2600/5270 windows
+train_normal: 2800/5270 windows
+train_normal: 3000/5270 windows
+train_normal: 3200/5270 windows
+train_normal: 3400/5270 windows
+train_normal: 3600/5270 windows
+train_normal: 3800/5270 windows
+train_normal: 4000/5270 windows
+train_normal: 4200/5270 windows
+train_normal: 4400/5270 windows
+train_normal: 4600/5270 windows
+train_normal: 4800/5270 windows
+train_normal: 5000/5270 windows
+train_normal: 5200/5270 windows
+test: 200/1684 windows
+test: 400/1684 windows
+test: 600/1684 windows
+test: 800/1684 windows
+test: 1000/1684 windows
+test: 1200/1684 windows
+test: 1400/1684 windows
+test: 1600/1684 windows
+$S1_FEATURES/probe_ucf_short_v1_f8/A/run-1
+A wall 8865.26 s, max rss 19676388 KB

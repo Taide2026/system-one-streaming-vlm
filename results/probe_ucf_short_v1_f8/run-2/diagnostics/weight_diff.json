@@ -1,0 +1,142 @@
+{
+ "embed_tokens.weight": {
+  "rel_change": 0.006452106024153553,
+  "tensors": 1
+ },
+ "layer00": {
+  "rel_change": 0.009881672674277173,
+  "tensors": 14
+ },
+ "layer01": {
+  "rel_change": 0.01007067026111775,
+  "tensors": 14
+ },
+ "layer02": {
+  "rel_change": 0.010122204176986156,
+  "tensors": 14
+ },
+ "layer03": {
+  "rel_change": 0.010057333726900113,
+  "tensors": 11
+ },
+ "layer04": {
+  "rel_change": 0.010113153903501013,
+  "tensors": 14
+ },
+ "layer05": {
+  "rel_change": 0.010418301805883757,
+  "tensors": 14
+ },
+ "layer06": {
+  "rel_change": 0.01062292345437381,
+  "tensors": 14
+ },
+ "layer07": {
+  "rel_change": 0.01095925600089465,
+  "tensors": 11
+ },
+ "layer08": {
+  "rel_change": 0.010643361709739724,
+  "tensors": 14
+ },
+ "layer09": {
+  "rel_change": 0.01067426745545755,
+  "tensors": 14
+ },
+ "layer10": {
+  "rel_change": 0.010671225452526256,
+  "tensors": 14
+ },
+ "layer11": {
+  "rel_change": 0.010990410398491206,
+  "tensors": 11
+ },
+ "layer12": {
+  "rel_change": 0.010587621077719694,
+  "tensors": 14
+ },
+ "layer13": {
+  "rel_change": 0.010566445643796153,
+  "tensors": 14
+ },
+ "layer14": {
+  "rel_change": 0.010527864970340792,
+  "tensors": 14
+ },
+ "layer15": {
+  "rel_change": 0.01076339232922044,
+  "tensors": 11
+ },
+ "layer16": {
+  "rel_change": 0.010202250907373065,
+  "tensors": 14
+ },
+ "layer17": {
+  "rel_change": 0.009935027165637829,
+  "tensors": 14
+ },
+ "layer18": {
+  "rel_change": 0.009874139415162974,
+  "tensors": 14
+ },
+ "layer19": {
+  "rel_change": 0.010109757820862358,
+  "tensors": 11
+ },
+ "layer20": {
+  "rel_change": 0.009579367993210786,
+  "tensors": 14
+ },
+ "layer21": {
+  "rel_change": 0.009473115186714854,
+  "tensors": 14
+ },
+ "layer22": {
+  "rel_change": 0.009297975526641763,
+  "tensors": 14
+ },
+ "layer23": {
+  "rel_change": 0.00970941736565959,
+  "tensors": 11
+ },
+ "layer24": {
+  "rel_change": 0.009475441815698668,
+  "tensors": 14
+ },
+ "layer25": {
+  "rel_change": 0.009396520622753014,
+  "tensors": 14
+ },
+ "layer26": {
+  "rel_change": 0.00928381964321462,
+  "tensors": 14
+ },
+ "layer27": {
+  "rel_change": 0.008876656706372882,
+  "tensors": 11
+ },
+ "layer28": {
+  "rel_change": 0.007818848483518246,
+  "tensors": 14
+ },
+ "layer29": {
+  "rel_change": 0.007126289366226951,
+  "tensors": 14
+ },
+ "layer30": {
+  "rel_change": 0.006467021385536831,
+  "tensors": 14
+ },
+ "layer31": {
+  "rel_change": 0.005757191522733755,
+  "tensors": 11
+ },
+ "norm.weight": {
+  "rel_change": 4.1516698360832196e-07,
+  "tensors": 1
+ },
+ "visual": {
+  "rel_change": 0.0,
+  "tensors": 333
+ }
+}

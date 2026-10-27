@@ -1,0 +1,7 @@
+Uninstalled 1 package in 0.34ms
+Installed 1 package in 2ms
+last state 0: 43.75s
+visual state 0: 39.74s
+results/probe_ucf_short_v1_f8/vit-1/fit-M
+exit 0, wall 84.4 s, peak GPU 0.23 GiB
+wall 86.64 s, RSS 3409052 KB

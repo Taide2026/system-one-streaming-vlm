@@ -1,0 +1,9 @@
+Uninstalled 1 package in 10ms
+Installed 1 package in 2ms
+vit12: mil k=1 wd=0.1 val bce 0.2243; holmes wd=0.1 val auc 0.7747; 44 s
+vit27: mil k=3 wd=0.1 val bce 0.2351; holmes wd=0.1 val auc 0.8125; 36 s
+lm_visual0: mil k=frac8 wd=0.1 val bce 0.2634; holmes wd=0.01 val auc 0.8232; 69 s
+lm_visual18: mil k=3 wd=0.1 val bce 0.2255; holmes wd=0.0001 val auc 0.8155; 64 s
+lm_last23: mil k=3 wd=0.1 val bce 0.3531; holmes wd=0.1 val auc 0.8133; 64 s
+peak GPU 0.49 GiB
+wall 279.49 s, RSS 3548304 KB

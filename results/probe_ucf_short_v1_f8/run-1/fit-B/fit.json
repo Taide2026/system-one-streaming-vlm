@@ -1,0 +1,1415 @@
+{
+  "methods": [
+    "mil",
+    "holmes",
+    "knn"
+  ],
+  "kinds": [
+    "last",
+    "visual"
+  ],
+  "n_states": 33,
+  "features": "$S1_FEATURES/probe_ucf_short_v1_f8/B/run-1",
+  "val_videos": [
+    "Abuse011_x264.mp4",
+    "Abuse026_x264.mp4",
+    "Abuse033_x264.mp4",
+    "Arrest013_x264.mp4",
+    "Arrest025_x264.mp4",
+    "Arrest028_x264.mp4",
+    "Arson024_x264.mp4",
+    "Arson037_x264.mp4",
+    "Arson038_x264.mp4",
+    "Assault013_x264.mp4",
+    "Assault026_x264.mp4",
+    "Assault032_x264.mp4",
+    "Burglary027_x264.mp4",
+    "Burglary067_x264.mp4",
+    "Burglary070_x264.mp4",
+    "Explosion019_x264.mp4",
+    "Explosion038_x264.mp4",
+    "Explosion042_x264.mp4",
+    "Fighting017_x264.mp4",
+    "Fighting026_x264.mp4",
+    "Fighting028_x264.mp4",
+    "Normal_Videos002_x264.mp4",
+    "Normal_Videos004_x264.mp4",
+    "Normal_Videos039_x264.mp4",
+    "Normal_Videos043_x264.mp4",
+    "Normal_Videos053_x264.mp4",
+    "Normal_Videos094_x264.mp4",
+    "Normal_Videos098_x264.mp4",
+    "Normal_Videos110_x264.mp4",
+    "Normal_Videos117_x264.mp4",
+    "Normal_Videos124_x264.mp4",
+    "Normal_Videos132_x264.mp4",
+    "Normal_Videos162_x264.mp4",
+    "Normal_Videos200_x264.mp4",
+    "Normal_Videos204_x264.mp4",
+    "Normal_Videos232_x264.mp4",
+    "Normal_Videos252_x264.mp4",
+    "Normal_Videos258_x264.mp4",
+    "Normal_Videos260_x264.mp4",
+    "Normal_Videos311_x264.mp4",
+    "Normal_Videos358_x264.mp4",
+    "Normal_Videos399_x264.mp4",
+    "Normal_Videos402_x264.mp4",
+    "Normal_Videos416_x264.mp4",
+    "Normal_Videos505_x264.mp4",
+    "Normal_Videos555_x264.mp4",
+    "Normal_Videos628_x264.mp4",
+    "Normal_Videos661_x264.mp4",
+    "Normal_Videos692_x264.mp4",
+    "Normal_Videos698_x264.mp4",
+    "Normal_Videos699_x264.mp4",
+    "Normal_Videos705_x264.mp4",
+    "Normal_Videos735_x264.mp4",
+    "Normal_Videos751_x264.mp4",
+    "Normal_Videos763_x264.mp4",
+    "Normal_Videos766_x264.mp4",
+    "Normal_Videos773_x264.mp4",
+    "Normal_Videos810_x264.mp4",
+    "Normal_Videos818_x264.mp4",
+    "Normal_Videos822_x264.mp4",
+    "RoadAccidents042_x264.mp4",
+    "RoadAccidents056_x264.mp4",
+    "RoadAccidents071_x264.mp4",
+    "Robbery041_x264.mp4",
+    "Robbery065_x264.mp4",
+    "Robbery099_x264.mp4",
+    "Shooting029_x264.mp4",
+    "Shooting040_x264.mp4",
+    "Shooting041_x264.mp4",
+    "Shoplifting025_x264.mp4",
+    "Shoplifting045_x264.mp4",
+    "Shoplifting047_x264.mp4",
+    "Stealing024_x264.mp4",
+    "Stealing069_x264.mp4",
+    "Stealing073_x264.mp4",
+    "Vandalism012_x264.mp4",
+    "Vandalism031_x264.mp4",
+    "Vandalism033_x264.mp4"
+  ],
+  "choices": {
+    "mil/last/0": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.2721274793148041
+    },
+    "holmes/last/0": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7752311368912159
+    },
+    "knn/last/0": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6081525312294542
+    },
+    "mil/last/1": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.24496306478977203
+    },
+    "holmes/last/1": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7330917874396135
+    },
+    "knn/last/1": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6061801446416831
+    },
+    "mil/last/2": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.20592132210731506
+    },
+    "holmes/last/2": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7635644987423644
+    },
+    "knn/last/2": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.5687047994740303
+    },
+    "mil/last/3": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.15065015852451324
+    },
+    "holmes/last/3": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7735656964905978
+    },
+    "knn/last/3": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.5969756738987508
+    },
+    "mil/last/4": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.14013053476810455
+    },
+    "holmes/last/4": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7970658020065134
+    },
+    "knn/last/4": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6009204470742933
+    },
+    "mil/last/5": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.10560507327318192
+    },
+    "holmes/last/5": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7897909073798403
+    },
+    "knn/last/5": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6206443129520053
+    },
+    "mil/last/6": {
+      "setting": {
+        "k": "3",
+        "lam": 0.001
+      },
+      "validation": 0.05592810735106468
+    },
+    "holmes/last/6": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7969403236201656
+    },
+    "knn/last/6": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6331360946745562
+    },
+    "mil/last/7": {
+      "setting": {
+        "k": "1",
+        "lam": 0.001
+      },
+      "validation": 0.05768311396241188
+    },
+    "holmes/last/7": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7905337964626503
+    },
+    "knn/last/7": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6620644312952005
+    },
+    "mil/last/8": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.06742651015520096
+    },
+    "holmes/last/8": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.805545574320278
+    },
+    "knn/last/8": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6600920447074294
+    },
+    "mil/last/9": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.06751753389835358
+    },
+    "holmes/last/9": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8053388201609546
+    },
+    "knn/last/9": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6706114398422091
+    },
+    "mil/last/10": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.06546295434236526
+    },
+    "holmes/last/10": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8014860633437709
+    },
+    "knn/last/10": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6646942800788954
+    },
+    "mil/last/11": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.07976943999528885
+    },
+    "holmes/last/11": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8185254578535213
+    },
+    "knn/last/11": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6706114398422091
+    },
+    "mil/last/12": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.08499661833047867
+    },
+    "holmes/last/12": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8262594893029674
+    },
+    "knn/last/12": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6679815910585141
+    },
+    "mil/last/13": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.07739315181970596
+    },
+    "holmes/last/13": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8284753235346122
+    },
+    "knn/last/13": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6614069690992768
+    },
+    "mil/last/14": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.07123246788978577
+    },
+    "holmes/last/14": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8334773482994827
+    },
+    "knn/last/14": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6870479947403024
+    },
+    "mil/last/15": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.06827710568904877
+    },
+    "holmes/last/15": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8250574633973844
+    },
+    "knn/last/15": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6988823142669296
+    },
+    "mil/last/16": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.05743188038468361
+    },
+    "holmes/last/16": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8303318332962601
+    },
+    "knn/last/16": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6909927679158449
+    },
+    "mil/last/17": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.059199124574661255
+    },
+    "holmes/last/17": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8264662434622909
+    },
+    "knn/last/17": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6870479947403025
+    },
+    "mil/last/18": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.0718379095196724
+    },
+    "holmes/last/18": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8048654244306418
+    },
+    "knn/last/18": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7179487179487181
+    },
+    "mil/last/19": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.07227542996406555
+    },
+    "holmes/last/19": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8069743168557397
+    },
+    "knn/last/19": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7567389875082183
+    },
+    "mil/last/20": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.07049714028835297
+    },
+    "holmes/last/20": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8134863599290477
+    },
+    "knn/last/20": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7718606180144642
+    },
+    "mil/last/21": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.08444090187549591
+    },
+    "holmes/last/21": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8200069583468794
+    },
+    "knn/last/21": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7712031558185404
+    },
+    "mil/last/22": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.09122472256422043
+    },
+    "holmes/last/22": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8214171643025397
+    },
+    "knn/last/22": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8474687705456936
+    },
+    "mil/last/23": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.09526663273572922
+    },
+    "holmes/last/23": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8245584016335004
+    },
+    "knn/last/23": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8606180144641683
+    },
+    "mil/last/24": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.10919749736785889
+    },
+    "holmes/last/24": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8265318344369729
+    },
+    "knn/last/24": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8586456278763971
+    },
+    "mil/last/25": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.10636062175035477
+    },
+    "holmes/last/25": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8174574656788097
+    },
+    "knn/last/25": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8671926364234057
+    },
+    "mil/last/26": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.1130429282784462
+    },
+    "holmes/last/26": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8196547633306526
+    },
+    "knn/last/26": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8658777120315582
+    },
+    "mil/last/27": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.09492416679859161
+    },
+    "holmes/last/27": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.804574542716835
+    },
+    "knn/last/27": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8777120315581854
+    },
+    "mil/last/28": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.14451931416988373
+    },
+    "holmes/last/28": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8054001334633747
+    },
+    "knn/last/28": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.9046679815910585
+    },
+    "mil/last/29": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.13839168846607208
+    },
+    "holmes/last/29": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8121816698891797
+    },
+    "knn/last/29": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.9066403681788296
+    },
+    "mil/last/30": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.13054317235946655
+    },
+    "holmes/last/30": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7992673773306185
+    },
+    "knn/last/30": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.9224194608809995
+    },
+    "mil/last/31": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.13633625209331512
+    },
+    "holmes/last/31": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7927268164422315
+    },
+    "knn/last/31": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.9112426035502958
+    },
+    "mil/last/32": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.11219089478254318
+    },
+    "holmes/last/32": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7968961210067929
+    },
+    "knn/last/32": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7922419460881
+    },
+    "mil/visual/0": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.1372523009777069
+    },
+    "holmes/visual/0": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7619675010979359
+    },
+    "knn/visual/0": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.4812623274161736
+    },
+    "mil/visual/1": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.12835189700126648
+    },
+    "holmes/visual/1": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7603933177055707
+    },
+    "knn/visual/1": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.4536489151873767
+    },
+    "mil/visual/2": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.1230154037475586
+    },
+    "holmes/visual/2": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7695846095055581
+    },
+    "knn/visual/2": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.4569362261669954
+    },
+    "mil/visual/3": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.10963220149278641
+    },
+    "holmes/visual/3": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7732234827096488
+    },
+    "knn/visual/3": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.45759368836291914
+    },
+    "mil/visual/4": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.09960329532623291
+    },
+    "holmes/visual/4": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7486411261114818
+    },
+    "knn/visual/4": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.4799474030243261
+    },
+    "mil/visual/5": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.10612941533327103
+    },
+    "holmes/visual/5": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7717234456364892
+    },
+    "knn/visual/5": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.5378040762656147
+    },
+    "mil/visual/6": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.11347111314535141
+    },
+    "holmes/visual/6": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7856658054286513
+    },
+    "knn/visual/6": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6305062458908613
+    },
+    "mil/visual/7": {
+      "setting": {
+        "k": "1",
+        "lam": 0.001
+      },
+      "validation": 0.07847574353218079
+    },
+    "holmes/visual/7": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7870489194599868
+    },
+    "knn/visual/7": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6712689020381328
+    },
+    "mil/visual/8": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.07596205174922943
+    },
+    "holmes/visual/8": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7728313627523115
+    },
+    "knn/visual/8": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7041420118343196
+    },
+    "mil/visual/9": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.09451252222061157
+    },
+    "holmes/visual/9": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7979327435849175
+    },
+    "knn/visual/9": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7205785667324129
+    },
+    "mil/visual/10": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.10958608239889145
+    },
+    "holmes/visual/10": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7995824991872422
+    },
+    "knn/visual/10": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7521367521367521
+    },
+    "mil/visual/11": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.11614672094583511
+    },
+    "holmes/visual/11": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.814678404599353
+    },
+    "knn/visual/11": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7731755424063117
+    },
+    "mil/visual/12": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.11744648218154907
+    },
+    "holmes/visual/12": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8137893617142629
+    },
+    "knn/visual/12": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7909270216962525
+    },
+    "mil/visual/13": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.11760226637125015
+    },
+    "holmes/visual/13": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8005677896982244
+    },
+    "knn/visual/13": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7830374753451677
+    },
+    "mil/visual/14": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.14571329951286316
+    },
+    "holmes/visual/14": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7917942838891456
+    },
+    "knn/visual/14": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.779750164365549
+    },
+    "mil/visual/15": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.12757760286331177
+    },
+    "holmes/visual/15": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7799793531018828
+    },
+    "knn/visual/15": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.814595660749507
+    },
+    "mil/visual/16": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.13311778008937836
+    },
+    "holmes/visual/16": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.78086910893235
+    },
+    "knn/visual/16": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7889546351084813
+    },
+    "mil/visual/17": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.16732443869113922
+    },
+    "holmes/visual/17": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7772573276525846
+    },
+    "knn/visual/17": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7915844838921762
+    },
+    "mil/visual/18": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.15033648908138275
+    },
+    "holmes/visual/18": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7870788631658197
+    },
+    "knn/visual/18": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7981591058514136
+    },
+    "mil/visual/19": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.1991543471813202
+    },
+    "holmes/visual/19": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.8034024605170851
+    },
+    "knn/visual/19": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8257725180802103
+    },
+    "mil/visual/20": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.20769962668418884
+    },
+    "holmes/visual/20": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7934811126510731
+    },
+    "knn/visual/20": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8277449046679817
+    },
+    "mil/visual/21": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.20948761701583862
+    },
+    "holmes/visual/21": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7810958255622287
+    },
+    "knn/visual/21": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8270874424720578
+    },
+    "mil/visual/22": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.17896321415901184
+    },
+    "holmes/visual/22": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7811970638057595
+    },
+    "knn/visual/22": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8238001314924392
+    },
+    "mil/visual/23": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.1954513043165207
+    },
+    "holmes/visual/23": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7883293693570373
+    },
+    "knn/visual/23": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.821827744904668
+    },
+    "mil/visual/24": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.19520798325538635
+    },
+    "holmes/visual/24": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7910371358987959
+    },
+    "knn/visual/24": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8336620644312952
+    },
+    "mil/visual/25": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.2011665403842926
+    },
+    "holmes/visual/25": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7934754090880572
+    },
+    "knn/visual/25": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.834319526627219
+    },
+    "mil/visual/26": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.1889413744211197
+    },
+    "holmes/visual/26": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7897538342202375
+    },
+    "knn/visual/26": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.831689677843524
+    },
+    "mil/visual/27": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.19947360455989838
+    },
+    "holmes/visual/27": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7877675683999794
+    },
+    "knn/visual/27": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.814595660749507
+    },
+    "mil/visual/28": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.21317458152770996
+    },
+    "holmes/visual/28": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7917044527716466
+    },
+    "knn/visual/28": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8277449046679816
+    },
+    "mil/visual/29": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.20771007239818573
+    },
+    "holmes/visual/29": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7848359370098501
+    },
+    "knn/visual/29": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8264299802761341
+    },
+    "mil/visual/30": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.20815742015838623
+    },
+    "holmes/visual/30": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7869933097205823
+    },
+    "knn/visual/30": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8244575936883629
+    },
+    "mil/visual/31": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.2571932375431061
+    },
+    "holmes/visual/31": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7807379269829862
+    },
+    "knn/visual/31": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.8047337278106509
+    },
+    "mil/visual/32": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.25030380487442017
+    },
+    "holmes/visual/32": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7808548500248105
+    },
+    "knn/visual/32": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7975016436554898
+    }
+  }
+}

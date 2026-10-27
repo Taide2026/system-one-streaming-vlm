@@ -1,0 +1,62 @@
+{
+ "name": "probe_ucf_short_v1_f8",
+ "condition": "B",
+ "git_commit": "692144af15f1ddfc4a714bd270edeb79cbb4c327",
+ "git_dirty": false,
+ "versions": {
+  "python": "3.12.3",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.17.0"
+ },
+ "assets": {
+  "d3-flash": {
+   "revision": "8b35c853b90e777595ec36bacae820fe08ea077a",
+   "sha256": {
+    "MODEL_MANIFEST.json": "abdafb9f4a3e39595a54b7ca977e6bd7a3279c57745231319e3a171a43976e65",
+    "config.json": "9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb",
+    "d3_runtime.py": "adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917",
+    "decision_config.json": "0269c72ac055d8149a7a778c477780af361f4c1cde3fd0e5ba9af791453ece18",
+    "readout.safetensors": "8bbc9a9df4e1b7df85a80a1091977092b938d8d2d2869dfaeb8fd36063cf322f"
+   }
+  },
+  "holmes-vau-ucf-train": {
+   "revision": null,
+   "sha256": {
+    "ucf_database_train.json": "eef3357ccb5bfe446e3b7a88d8aedd18b32b2706fab928dfecf1cd81183b0369"
+   }
+  },
+  "qwen3.5-9b": {
+   "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+   "sha256": {
+    "config.json": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05",
+    "model.safetensors.index.json": "26d3539b516be613f39563617cb9d33b3f83d401298125be392c80cefb8f7fe5",
+    "model.safetensors-00001-of-00004.safetensors": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e",
+    "model.safetensors-00002-of-00004.safetensors": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330",
+    "model.safetensors-00003-of-00004.safetensors": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec",
+    "model.safetensors-00004-of-00004.safetensors": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6"
+   }
+  },
+  "ucf-crime": {
+   "revision": null,
+   "sha256": {
+    "annotations/Temporal_Anomaly_Annotation_for_Testing_Videos.txt": "3b9542413f2ed9e94f73bf0488c151b3d7d595a8d2ad30f524e9243a2ae2a17c",
+    "splits/Anomaly_Test.txt": "afcb2a6bffe7286607e08c864425964d8784cbd5b1f263e03b76025e11548de7",
+    "splits/Anomaly_Train.txt": "ea91e03de7581bfa6b139e663ebb7511ab1651c33427f85741d3f497a2027744",
+    "splits/Action_Regnition_splits/ClassIDs.txt": "4e2af08c8fdeb3466494f276e1e877e837317a001eca9d826f933be73e6e7fd8",
+    "ReadMe-Anomaly-Detection.txt": "90e6c08923ef91c31e7b2ebf455b7ff82b8de31c79a7334a7b76f4cd2562098b"
+   }
+  }
+ },
+ "started": "2026-10-22T10:35:14.397288+00:00",
+ "finished": "2026-10-22T13:04:43.314061+00:00",
+ "free_memory_gb": 108.28532028198242,
+ "peak_gpu_gb": 17.990800380706787,
+ "load_s": 194.91915056901053,
+ "windows": {
+  "train_anomaly": 5818,
+  "train_normal": 5270,
+  "test": 1684
+ },
+ "limit_windows": null,
+ "visual_weights_equal": true
+}

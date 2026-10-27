@@ -1,0 +1,21 @@
+{
+ "features": "$S1_FEATURES/probe_ucf_short_v1_f8/V/vit-1",
+ "kind": "visual",
+ "state": 27,
+ "hidden": 256,
+ "dropout": 0.1,
+ "lr": 0.001,
+ "steps": 1000,
+ "mil": {
+  "k": "3",
+  "wd": 0.1,
+  "validation_bce": 0.2351452261209488,
+  "final_loss": 0.00011339937191223726
+ },
+ "holmes": {
+  "wd": 0.1,
+  "validation_auc": 0.8125039211995735,
+  "final_loss": 0.1884807050228119
+ },
+ "seconds": 35.91482708696276
+}

@@ -1,0 +1,82 @@
+{
+ "C/24/lr0.01x200": {
+  "lam": 0.01,
+  "final_loss": 1.3634968996047974,
+  "min_loss": 0.5920906662940979,
+  "steps_where_loss_rose_5pct": 33,
+  "train_auc": 0.8458095580000675,
+  "test_window_auc": 0.7261819013514761
+ },
+ "C/24/lr0.001x1000": {
+  "lam": 0.01,
+  "final_loss": 0.5807254314422607,
+  "min_loss": 0.5807254314422607,
+  "steps_where_loss_rose_5pct": 2,
+  "train_auc": 0.9366525681505433,
+  "test_window_auc": 0.8569292583097504
+ },
+ "C/27/lr0.01x200": {
+  "lam": 0.001,
+  "final_loss": 0.5650574564933777,
+  "min_loss": 0.5530313849449158,
+  "steps_where_loss_rose_5pct": 25,
+  "train_auc": 0.8541803684234417,
+  "test_window_auc": 0.7319783299594795
+ },
+ "C/27/lr0.001x1000": {
+  "lam": 0.001,
+  "final_loss": 0.517721951007843,
+  "min_loss": 0.517721951007843,
+  "steps_where_loss_rose_5pct": 2,
+  "train_auc": 0.9468522457131855,
+  "test_window_auc": 0.8227207712185814
+ },
+ "C/31/lr0.01x200": {
+  "lam": 0.001,
+  "final_loss": 0.7389195561408997,
+  "min_loss": 0.5399322509765625,
+  "steps_where_loss_rose_5pct": 20,
+  "train_auc": 0.6367819908081724,
+  "test_window_auc": 0.48702630923161483
+ },
+ "C/31/lr0.001x1000": {
+  "lam": 0.001,
+  "final_loss": 0.5059078931808472,
+  "min_loss": 0.5059078931808472,
+  "steps_where_loss_rose_5pct": 2,
+  "train_auc": 0.950609213011164,
+  "test_window_auc": 0.8164020495734607
+ },
+ "C/23/lr0.01x200": {
+  "lam": 0.0001,
+  "final_loss": 1.066635012626648,
+  "min_loss": 0.5524755120277405,
+  "steps_where_loss_rose_5pct": 23,
+  "train_auc": 0.8560826887246208,
+  "test_window_auc": 0.8673614643321647
+ },
+ "C/23/lr0.001x1000": {
+  "lam": 0.0001,
+  "final_loss": 0.5153821706771851,
+  "min_loss": 0.5153821706771851,
+  "steps_where_loss_rose_5pct": 2,
+  "train_auc": 0.9442663316822478,
+  "test_window_auc": 0.8476577034809294
+ },
+ "B/31/lr0.01x200": {
+  "lam": 0.01,
+  "final_loss": 0.4681008756160736,
+  "min_loss": 0.4681008756160736,
+  "steps_where_loss_rose_5pct": 8,
+  "train_auc": 0.961991473525874,
+  "test_window_auc": 0.8362696670637916
+ },
+ "B/31/lr0.001x1000": {
+  "lam": 0.01,
+  "final_loss": 0.49214601516723633,
+  "min_loss": 0.49214601516723633,
+  "steps_where_loss_rose_5pct": 1,
+  "train_auc": 0.9661402428395215,
+  "test_window_auc": 0.829671023660216
+ }
+}

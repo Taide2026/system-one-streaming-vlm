@@ -1,0 +1,7 @@
+Uninstalled 1 package in 0.32ms
+Installed 1 package in 2ms
+last state 0: 178.90s
+visual state 0: 61.75s
+results/probe_ucf_short_v1_f8/frames-1/fit-FM
+exit 0, wall 241.1 s, peak GPU 1.42 GiB
+wall 242.55 s, RSS 10019552 KB
