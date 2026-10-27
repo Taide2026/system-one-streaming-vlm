@@ -1,7 +1,0 @@
-Uninstalled 1 package in 0.72ms
-Installed 1 package in 2ms
-last state 0: 43.85s
-visual state 0: 41.05s
-results/probe_ucf_short_v1_f8/video-1/fit-VM
-exit 0, wall 85.8 s, peak GPU 0.23 GiB
-wall 87.57 s, RSS 3405512 KB

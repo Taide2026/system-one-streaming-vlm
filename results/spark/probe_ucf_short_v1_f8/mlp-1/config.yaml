@@ -1,0 +1,89 @@
+# Config of results/spark/probe_ucf_short_v1_f8/mlp-1 (written 2026-10-27).
+# Part 1: configs/probe_ucf_short_v1_f8.yaml, unchanged (data, windows, frames, prompt, model, conditions).
+# Part 2 (`run:`): the settings of this run. The scripts hard-code these values; this file records them.
+
+# Probing (finetune-layer-probing): does decision fine-tune change the layers that carry anomaly information?
+# Conditions: A = Qwen3.5-9B weights, causal; B = Qwen3.5-9B weights, 8 full-attention layers non-causal;
+# C = d3-flash. All three run through the d3-flash runtime, so the input tokens are the same.
+# Train: UCF-Crime train videos <= 128 s with Holmes-VAU events, 13 classes x 15 + 195 normal (5,818 + 5,270 windows).
+# Test: the 117 UCF-Crime test videos <= 49.9 s (49 anomaly + 68 normal, 1,684 windows).
+# Run: uv run s1stream probe-extract configs/probe_ucf_short_v1_f8.yaml --condition A --run <name> [--limit-windows 5]
+name: probe_ucf_short_v1_f8
+
+train:
+  name: ucf_crime_train
+  asset: ucf-crime
+  holmes_asset: holmes-vau-ucf-train
+  max_duration_s: 128.0
+  per_class: 15
+  n_normal: 195
+  seed: 20261022
+
+test:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 49
+  n_normal: 68
+  max_duration_s: 49.9
+  seed: 20261009
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+input_form:
+  name: frames
+
+runtime: d3-flash
+memory_cap_gb: 40
+
+conditions:
+  A:
+    weights: qwen3.5-9b
+    attention: causal
+  B:
+    weights: qwen3.5-9b
+    attention: noncausal
+  C:
+    weights: null
+    attention: noncausal
+
+run:
+  description: MLP probe vs linear probe on the same features
+  script: scripts/mlp_probe.py
+  head: Linear(d, 256) -> GELU -> Dropout(0.1) -> Linear(256, 1)
+  optimizer: AdamW
+  lr: 0.001
+  steps: 1000
+  weight_decay:
+  - 0.0001
+  - 0.01
+  - 0.1
+  mil_top_k:
+  - '1'
+  - '3'
+  - frac8
+  methods:
+  - mil
+  - holmes
+  split_seed: 20261022
+  val_share: 0.2
+  device: cuda
+  gpu_cap_gb: 4
+  targets:
+    vit12: V/vit-1 visual 12
+    vit27: V/vit-1 visual 27
+    merger: M/vit-1 visual 0
+    lm_visual0: C/run-1 visual 0
+    lm_visual18: C/run-1 visual 18
+    lm_last23: C/run-1 last 23
+  bootstrap:
+    n_boot: 1000
+    seed: 20261022
+    unit: test video
+    interval: 2.5 / 97.5 percentile
+  compared_with: linear probe of the same target (vit-1/fit-V, vit-1/fit-M, run-2/fit-C)
