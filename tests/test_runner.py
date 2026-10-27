@@ -81,7 +81,7 @@ def test_run_writes_config_manifest_and_run_data(tmp_path, config):
     assert [m["name"] for m in manifest] == ["a.mp4", "n.mp4"]
     assert manifest[0]["events"] == [[60, 119]]
     data = json.loads((out / "run.json").read_text())
-    for key in ("free_memory_gb", "peak_gpu_gb", "load_s", "versions", "git_commit", "git_dirty", "assets"):
+    for key in ("machine", "gpu", "free_memory_gb", "peak_gpu_gb", "load_s", "versions", "git_commit", "git_dirty", "assets"):
         assert key in data
     assert "torch" in data["versions"]
 

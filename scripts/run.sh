@@ -3,13 +3,15 @@
 #
 #   scripts/run.sh setup              install uv when missing, uv sync, CPU tests
 #   scripts/run.sh assets             jev-omni with `s1stream fetch`; ucf-crime built from the ucf-clips download
+#   scripts/run.sh ucf                ucf-crime only, built from the ucf-clips download (UCF_CLIPS)
 #   scripts/run.sh smoke  [config]    5 windows into results/smoke/<time>, then report
-#   scripts/run.sh run    [config]    full run into results/<config name>/<time>, then report
+#   scripts/run.sh run    [config]    full run into results/<machine>/<config name>/<time>, then report
 #   scripts/run.sh report <run dir>   metrics only, no GPU
 #   scripts/run.sh all    [config]    setup, assets, smoke, run
 #
 # Environment:
 #   S1_ASSETS  asset root (default ~/s1-assets)
+#   S1_MACHINE the machine name of results/<machine>/ (spark, pro6000; default: the host name)
 #   UCF_CLIPS  extracted bear7011/ucf-clips: labels.csv, short/, medium/, long/ (default ~/datasets/ucf-clips)
 # A full run takes a while: start it inside tmux.
 set -euo pipefail
@@ -113,10 +115,11 @@ shift || true
 case "$command" in
     setup)  setup ;;
     assets) assets ;;
+    ucf)    ucf_crime ;;
     smoke)  experiment "${1:-$DEFAULT_CONFIG}" "results/smoke/$(date +%Y%m%d-%H%M%S)" --limit-windows 5 ;;
     run)
         config="${1:-$DEFAULT_CONFIG}"
-        experiment "$config" "results/$(sed -n 's/^name: *//p' "$config")/$(date +%Y%m%d-%H%M%S)" ;;
+        experiment "$config" "results/${S1_MACHINE:-$(hostname)}/$(sed -n 's/^name: *//p' "$config")/$(date +%Y%m%d-%H%M%S)" ;;
     report) report "${1:?usage: scripts/run.sh report <run dir>}" ;;
     all)    setup; assets; "$0" smoke "${1:-$DEFAULT_CONFIG}"; "$0" run "${1:-$DEFAULT_CONFIG}" ;;
     *)      sed -n '2,14p' "$0" | sed 's/^# \{0,1\}//'; exit 1 ;;

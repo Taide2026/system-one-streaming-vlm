@@ -1,0 +1,41 @@
+name: h2o_lightning_4b_xd_test_v1_f8
+dataset:
+  name: xd_violence
+  asset: xd-violence
+  n_violent: 500
+  n_normal: 300
+  max_duration_s: 4000
+  seed: 20261009
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1_xd
+  state: Video footage, 2 seconds.
+  text: Would you rate this scene as a scene involving suspicious or potential criminal
+    activities, such as abuse (inflicting improper harm or misconduct on others),
+    car accident (collision events involving motor vehicles on roads that may cause
+    property damage or personal injury), explosion (phenomenon where substances release
+    energy violently due to chemical reactions or physical processes), fighting (physical
+    conflicts between two or more parties due to disputes, revenge, or other reasons),
+    riot (a group of people protesting or resisting against the government or other
+    organizations in a violent manner), or shooting (act of firing with firearms,
+    possibly involving murder or assault), rather than a normal scene?
+  options:
+  - 'Yes'
+  - 'No'
+  positive: 'Yes'
+input_form:
+  name: frames
+backbone:
+  name: h2o_lightning
+  asset: h2o-lightning-4b-image
+  memory_cap_gb: 40
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01

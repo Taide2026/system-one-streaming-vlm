@@ -1,6 +1,6 @@
 # 14-class prompt: the question lists the 13 UCF-Crime anomaly classes + Normal; score = 1 - p(Normal).
 # The UCF-Crime test videos above 49.9 s: 91 anomaly + 82 normal = 173. With the 117 short ones of
-# clef_flash_ucf_short_c14_f8 they make all 290 (scripts/merge-c14-290.py -> results/clef_flash_ucf_test_c14_f8).
+# clef_flash_ucf_short_c14_f8 they make all 290 (scripts/merge-c14-290.py -> results/spark/clef_flash_ucf_test_c14_f8).
 # Run: scripts/run.sh run configs/clef_flash_ucf_long_c14_f8.yaml
 name: clef_flash_ucf_long_c14_f8
 

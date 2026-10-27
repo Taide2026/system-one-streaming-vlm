@@ -1,7 +1,7 @@
 """Command line: s1stream run | report | fetch.
 
   s1stream run <config.yaml> [--out <dir>] [--limit-windows N]
-      default --out: results/<config name>/<YYYYmmdd-HHMMSS>
+      default --out: results/<machine>/<config name>/<YYYYmmdd-HHMMSS> (machine: S1_MACHINE, else the host name)
   s1stream report <run dir>
   s1stream fetch [--check] <asset> [<asset> ...]
   s1stream probe-extract <probe config.yaml> --condition <name> --run <name> [--limit-windows N]
@@ -24,7 +24,7 @@ from s1stream import assets
 from s1stream.config import ConfigError, load_config
 from s1stream.datasets.ucf_crime import DatasetError
 from s1stream.report import report
-from s1stream.runner import run
+from s1stream.runner import machine, run
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -61,7 +61,7 @@ def main(argv: list[str] | None = None) -> int:
             config = load_config(args.config)
             out_dir = args.out
             if out_dir is None:
-                out_dir = Path("results") / config.name / datetime.now().strftime("%Y%m%d-%H%M%S")
+                out_dir = Path("results") / machine() / config.name / datetime.now().strftime("%Y%m%d-%H%M%S")
             print(run(config, out_dir, limit_windows=args.limit_windows))
         elif args.command == "probe-extract":
             import s1stream.plugins  # noqa: F401  Register the dataset and input-form plugins.

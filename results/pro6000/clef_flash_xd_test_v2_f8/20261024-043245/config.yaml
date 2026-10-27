@@ -1,0 +1,74 @@
+name: clef_flash_xd_test_v2_f8
+dataset:
+  name: xd_violence
+  asset: xd-violence
+  n_violent: 500
+  n_normal: 300
+  max_duration_s: 4000
+  seed: 20261009
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v2_xd
+  state: Video footage, 2 seconds.
+  text: 'Which defined event happens in these 2 seconds? Answer with its option, or
+    None if no defined event happens.
+
+    An event counts from its first act (the first blow, shot, blast or contact) until
+    it stops.
+
+
+    | Option | Counts | Does not count |
+
+    |---|---|---|
+
+    | A | inflicting improper harm or misconduct on others | play, care, or both sides
+    hitting (D) |
+
+    | B | collision events involving motor vehicles on roads that may cause property
+    damage or personal injury | heavy traffic, a near miss without contact |
+
+    | C | phenomenon where substances release energy violently due to chemical reactions
+    or physical processes | smoke or fire without a blast |
+
+    | D | physical conflicts between two or more parties due to disputes, revenge,
+    or other reasons | sports, play fighting |
+
+    | E | a group of people protesting or resisting against the government or other
+    organizations in a violent manner | peaceful protests, marches, cheering crowds
+    |
+
+    | F | act of firing with firearms, possibly involving murder or assault | holding
+    or showing a gun without firing |
+
+    | None | no defined event: people, vehicles and scenes as usual | |'
+  options:
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - None
+  positive:
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+input_form:
+  name: frames
+backbone:
+  name: clef_flash
+  asset: clef-flash
+  memory_cap_gb: 40
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01

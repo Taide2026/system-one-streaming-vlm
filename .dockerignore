@@ -1,0 +1,5 @@
+# Only .python-version, pyproject.toml and uv.lock go into the image (docker/Dockerfile); the repository is mounted at run time.
+*
+!.python-version
+!pyproject.toml
+!uv.lock

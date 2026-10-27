@@ -8,13 +8,16 @@ Writes into a new run folder:
                  {video, window, start_s, end_s, label, score, probabilities, seconds}
                  score = question.score(probabilities); seconds = wall time of input form + backbone + head.
                  A backbone that decodes adds text, its answer.
-  run.json       {name, started, finished, free_memory_gb, peak_gpu_gb, load_s, windows, limit_windows,
+  run.json       {name, machine, gpu, started, finished, free_memory_gb, peak_gpu_gb, load_s, windows, limit_windows,
                   versions: {python, torch, transformers}, git_commit, git_dirty, assets: {name: {revision, sha256}}}
+                 machine: S1_MACHINE (e.g. spark, pro6000), else the host name; gpu: the CUDA device's name.
 """
 from __future__ import annotations
 
 import json
+import os
 import platform
+import socket
 import subprocess
 import time
 from datetime import datetime, timezone
@@ -28,6 +31,12 @@ from s1stream.assets import LOCK_FILE, load_lock
 from s1stream.config import ExperimentConfig
 from s1stream.registry import ANSWER_HEADS, BACKBONES, DATASETS, INPUT_FORMS
 from s1stream.windows import plan_windows
+
+
+def machine() -> str:
+    """The machine a run is on: S1_MACHINE (spark, pro6000, ...) when set, else the host name. Run folders go under
+    results/<machine>/."""
+    return os.environ.get("S1_MACHINE") or socket.gethostname()
 
 
 def free_memory_gb() -> float | None:
@@ -133,7 +142,8 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
         assets = {name: {"revision": lock[name].revision, "sha256": lock[name].sha256}
                   for name in sorted(asset_names)}
     commit, dirty = git_commit(Path(__file__).resolve().parents[2])
-    data = {"name": config.name, "started": started, "finished": datetime.now(timezone.utc).isoformat(),
+    data = {"name": config.name, "machine": machine(), "gpu": torch.cuda.get_device_name() if cuda else None,
+            "started": started, "finished": datetime.now(timezone.utc).isoformat(),
             "free_memory_gb": memory, "peak_gpu_gb": torch.cuda.max_memory_allocated() / 2**30 if cuda else None,
             "load_s": load_s, "windows": count, "limit_windows": limit_windows,
             "versions": {"python": platform.python_version(), "torch": torch.__version__,

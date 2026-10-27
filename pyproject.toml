@@ -14,6 +14,8 @@ dependencies = [
     "pyyaml>=6.0",
     "safetensors",
     "scikit-learn>=1.9.1",
+    # The startlux backbone runs StartLux-Decision through its release package (transformers engine), at this commit.
+    "startlux-decide @ git+https://github.com/StartLuxLabs/StartLux-Decision@83fe6c7d61a687a6e17f118b4f7d8f429f5d3a01",
     "torch>=2.14.1",
     "torchvision>=0.29.1",
     # Pinned to the version in the Jev-Omni requirements.txt (revision 5addda8).
@@ -31,6 +33,10 @@ dev = ["pytest>=8"]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+# startlux-decide is pinned to a git commit (no release on PyPI).
+allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/s1stream"]

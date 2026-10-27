@@ -1,11 +1,11 @@
 """Join a 14-class run on the 117 short UCF-Crime test videos with one on the 173 long ones into a run on all 290.
 
 Usage (repo root): uv run python scripts/merge-c14-290.py <model>   e.g. d3_nano
-  short: latest results/<model>_ucf_short_c14_f8/<time>   (117 videos, <= 49.9 s)
-  long:  latest results/<model>_ucf_long_c14_f8/<time>    (173 videos, > 49.9 s)
-  grid:  latest results/<model>_ucf_test_f8/<time>        (Yes / No on all 290): its (video, window, start_s, end_s)
+  short: latest results/spark/<model>_ucf_short_c14_f8/<time>   (117 videos, <= 49.9 s)
+  long:  latest results/spark/<model>_ucf_long_c14_f8/<time>    (173 videos, > 49.9 s)
+  grid:  latest results/spark/<model>_ucf_test_f8/<time>        (Yes / No on all 290): its (video, window, start_s, end_s)
          must equal the joined rows', so the 290 run sees the same windows as the Yes / No one.
-Writes results/<model>_ucf_test_c14_f8/<time of the long run>/ with config.yaml (the long config, renamed, dataset of
+Writes results/spark/<model>_ucf_test_c14_f8/<time of the long run>/ with config.yaml (the long config, renamed, dataset of
 all 290), manifest.json and scores.jsonl in the Yes / No run's video order, run.json (merged_from, peak_gpu_gb the
 larger one, load_s of the long run); then s1stream.report writes report.json.
 """
@@ -19,7 +19,7 @@ from s1stream.report import report
 
 
 def latest(config: str) -> Path:
-    runs = sorted(d for d in Path("results", config).iterdir() if (d / "run.json").exists())
+    runs = sorted(d for d in Path("results", "spark", config).iterdir() if (d / "run.json").exists())
     if not runs:
         sys.exit(f"no finished run of {config}")
     return runs[-1]
@@ -42,7 +42,7 @@ rows = [row for name in order for row in sorted(by_video[name], key=lambda row: 
 key = lambda row: (row["video"], row["window"], row["start_s"], row["end_s"])
 assert [key(row) for row in rows] == [key(row) for row in rows_of(grid)], "window grid differs from the Yes / No run"
 
-out = Path("results", f"{model}_ucf_test_c14_f8", long.name)
+out = Path("results", "spark", f"{model}_ucf_test_c14_f8", long.name)
 out.mkdir(parents=True, exist_ok=False)
 config = yaml.safe_load((long / "config.yaml").read_text())
 config["name"] = f"{model}_ucf_test_c14_f8"

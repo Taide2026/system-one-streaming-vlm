@@ -1,7 +1,7 @@
 # 14-class prompt: the question lists the 13 UCF-Crime anomaly classes + Normal; score = 1 - p(Normal).
 # Gemma 4 E4B, structured prompt, constrained decoding (one of the 14 options; probabilities from their first-token logits).
 # The UCF-Crime test videos above 49.9 s: 91 anomaly + 82 normal = 173. With the 117 short ones of
-# gemma4_e4b_constrained_ucf_short_c14_f8 they make all 290 (scripts/merge-c14-290.py -> results/gemma4_e4b_constrained_ucf_test_c14_f8).
+# gemma4_e4b_constrained_ucf_short_c14_f8 they make all 290 (scripts/merge-c14-290.py -> results/spark/gemma4_e4b_constrained_ucf_test_c14_f8).
 # Run: scripts/run.sh run configs/gemma4_e4b_constrained_ucf_long_c14_f8.yaml
 name: gemma4_e4b_constrained_ucf_long_c14_f8
 
