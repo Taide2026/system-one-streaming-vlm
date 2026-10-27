@@ -343,3 +343,45 @@ h2o-lightning-4b-image:
     tokenizer_config.json: 316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8
     video_preprocessor_config.json: 7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13
     vocab.json: ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003
+
+# encoder-probing (2026-10-28): frozen vision encoders probed on the probe_ucf_short_v1_f8 windows.
+# InternVL3-2B (transformers-native "-hf" release): only its InternViT-300M vision tower and projector are used.
+internvl3-2b-hf:
+  kind: hf_model
+  source: OpenGVLab/InternVL3-2B-hf
+  revision: cb57a075cb75a2e6d1b668b128d48bb00ae321d2
+  sha256:
+    config.json: 5e937511160b956a0be409ddc4185b8167a9855e26c263aa11e36205802e4c38
+    model.safetensors: 8e2c302719a13916a4d276e60fad4fb1c92a57b39dd2ad51af5a63dcf7a16f4a
+    preprocessor_config.json: af09ffbe57900d5ae07f93f4c20693559a272e32fa6c5f816132cb71985aac98
+    processor_config.json: 3511f4ae65c2fa5c1ab6a0fb2bb2fe767d6f0ee53ba412953b33acc892327c2a
+
+# SigLIP2 so400m, fixed resolution 384: image-text contrastive; only the vision tower is used.
+siglip2-so400m-patch14-384:
+  kind: hf_model
+  source: google/siglip2-so400m-patch14-384
+  revision: e8e487298228002f3d8a82e0cd5c8ea9c567f57f
+  sha256:
+    config.json: 73477b47ae9a395f008f993ebd8fb5c16ce0b5e8419ffdf2f5b2183b260f9cff
+    model.safetensors: 9f4f4a49f908ef0c979bce8ff5a5c0e88882dc6c5dc4304387cbbd152558e2c2
+    preprocessor_config.json: fb2817d3523ca3b666c859f15320c7138416bc38ffc515e2963f78c868c51c90
+
+# DINOv3 ViT-L/16 (LVD-1689M): image self-supervised. Gated on Hugging Face (DINOv3 license, accepted by Eric).
+dinov3-vitl16:
+  kind: hf_model
+  source: facebook/dinov3-vitl16-pretrain-lvd1689m
+  revision: ea8dc2863c51be0a264bab82070e3e8836b02d51
+  sha256:
+    config.json: 135ecd23e34a70b6fbed8b083fdecb319b7e3a54e3d849258bbe4ddcf1783bb5
+    model.safetensors: dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179
+    preprocessor_config.json: 960c41d1f3a7778b936365769a2d90550b318a6c0a53a0296957adacfe5e0dd7
+
+# V-JEPA 2 ViT-L (64 frames per clip, 256 px): video masked prediction; only the encoder is used.
+vjepa2-vitl-fpc64-256:
+  kind: hf_model
+  source: facebook/vjepa2-vitl-fpc64-256
+  revision: b3c1679b7c34d3255ef3547f27c7b226aefab26f
+  sha256:
+    config.json: 3dec96fe962e94e569182d3a7b9ef0dd74b6b8c89c337a428e43e10d593e70c9
+    model.safetensors: 25466aef85727d16546c6cf8c99f12fcfad9cbca8225d45f23685e2e025b786b
+    video_preprocessor_config.json: d2fab4418fc0390b62c4cd72ade56908a7929f80c62288adbe10dd8d23421227
