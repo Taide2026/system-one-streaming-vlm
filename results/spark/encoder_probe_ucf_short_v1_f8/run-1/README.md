@@ -79,6 +79,10 @@ Script `scripts/per_category_auc.py` (logs `logs/per-category-{mil,holmes,knn}.l
 - So the ceiling is localization in time, and it is the same for image-text (SigLIP2, InternViT), image self-supervised
   (DINOv3) and video self-supervised (V-JEPA 2) encoders. Per-window pooled features follow the scene, not the event.
 - Small categories: Abuse has 1 test video, Fighting and Robbery 2 each. Do not read single category values.
+- Per video (`scripts/per_video_auc.py`, `per_video_qwen35-vit_patch_mean_mil.json`, `logs/per-video-qwen35-vit-patch_mean-mil.log`;
+  `qwen35-vit` `patch_mean` MIL, state 18): 49 anomaly videos have an in-video AUC. Median 0.686; 14 videos below 0.5.
+  Best with 10 or more windows: `Shooting034` 0.996. Worst: `Burglary092` 0.195. The lowest `Burglary092` window score (8.3)
+  is higher than the highest `Shooting034` window score (5.7): each video has its own score level.
 
 ## Notes
 
