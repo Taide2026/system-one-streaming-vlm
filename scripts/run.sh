@@ -99,7 +99,8 @@ print(f"AUC frame {fmt(auc['frame'])}, window {fmt(auc['window'])}; AP frame {fm
       f"specificity {fmt(decision['specificity'])}")
 for row in data["classification"]:
     if round(row["threshold"], 2) in (0.1, 0.3, 0.5, 0.7, 0.9):
-        print(f"threshold {row['threshold']:.1f}: accuracy {row['accuracy']:.1%}, recall {row['recall']:.1%}, FNR {row['fnr']:.1%}")
+        pct = lambda v: "n/a" if v is None else f"{v:.1%}"  # no abnormal windows (e.g. ucf101): recall / FNR are None
+        print(f"threshold {row['threshold']:.1f}: accuracy {pct(row['accuracy'])}, recall {pct(row['recall'])}, FNR {pct(row['fnr'])}")
 print(f"full report: {sys.argv[1]}")
 EOF
 }
