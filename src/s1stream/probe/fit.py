@@ -155,12 +155,17 @@ def split(videos: list[str], category: dict[str, str], seed: int = SEED) -> set[
 
 
 def read_kinds(features: Path) -> tuple[str, ...]:
-    """The token kinds of a features run: features/run.json "kinds" when it is a list of str, else KINDS.
+    """Return run.json token kinds when they are a list of strings, else KINDS.
 
-    A missing run.json, a run.json without "kinds", or "kinds" as a dict (the vit-1 format:
-    {"visual": "token mean", "last": "token max"}) all give KINDS.
+    A missing run.json, a run.json without "kinds", or kinds as a dict uses KINDS.
     """
-    raise NotImplementedError
+    run_path = features / "run.json"
+    if not run_path.exists():
+        return KINDS
+    kinds = json.loads(run_path.read_text()).get("kinds")
+    if isinstance(kinds, list) and all(isinstance(kind, str) for kind in kinds):
+        return tuple(kinds)
+    return KINDS
 
 
 def fit_condition(features: Path, out: Path, seed: int = SEED, log: Callable[[str], None] = print,
@@ -194,12 +199,15 @@ def fit_condition(features: Path, out: Path, seed: int = SEED, log: Callable[[st
     val_videos = [video for video, keep in zip(videos, is_val, strict=True) if keep]
     bce = torch.nn.BCEWithLogitsLoss()
     arrays = {kind: {name: np.load(features / name / f"{kind}.npy", mmap_mode="r") for name in SETS}
-              for kind in KINDS}
-    n_states = arrays[KINDS[0]]["test"].shape[1]
+              for kind in kinds}
+    n_states = arrays[kinds[0]]["test"].shape[1]
+    for kind in kinds[1:]:
+        if arrays[kind]["test"].shape[1] != n_states:
+            raise ValueError(f"{kind} has a different state count")
     n_test = len(meta["test"])
-    scores = np.empty((len(METHODS), len(KINDS), n_states, n_test), dtype=np.float32)
+    scores = np.empty((len(METHODS), len(kinds), n_states, n_test), dtype=np.float32)
     choices: dict[str, dict] = {}
-    for kind_i, kind in enumerate(KINDS):
+    for kind_i, kind in enumerate(kinds):
         for state in range(n_states):
             started = time.monotonic()
             train = np.concatenate([np.asarray(arrays[kind][name][:, state], dtype=np.float32)
@@ -253,6 +261,6 @@ def fit_condition(features: Path, out: Path, seed: int = SEED, log: Callable[[st
     out.mkdir(parents=True, exist_ok=True)
     np.save(out / "test_scores.npy", scores)
     (out / "test_meta.jsonl").write_text(meta_text["test"])
-    result = {"methods": METHODS, "kinds": KINDS, "n_states": n_states, "features": str(features),
+    result = {"methods": METHODS, "kinds": list(kinds), "n_states": n_states, "features": str(features),
               "val_videos": sorted(val), "choices": choices}
     (out / "fit.json").write_text(json.dumps(result, indent=2) + "\n")
