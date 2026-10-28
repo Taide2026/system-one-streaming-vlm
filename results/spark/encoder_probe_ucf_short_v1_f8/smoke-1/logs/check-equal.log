@@ -1,9 +1,7 @@
-Uninstalled 1 package in 0.63ms
-Installed 1 package in 2ms
-train_anomaly patch_mean vs visual: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 25.23, max abs 3693, ratio 6.83e-03, worst state ratio 6.83e-03 (state 27) -> FAIL
-train_anomaly patch_max vs last: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 64, max abs 1.242e+04, ratio 5.15e-03, worst state ratio 7.63e-03 (state 16) -> FAIL
-train_normal patch_mean vs visual: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 6.998, max abs 4292, ratio 1.63e-03, worst state ratio 1.84e-03 (state 11) -> FAIL
-train_normal patch_max vs last: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 2, max abs 1.318e+04, ratio 1.52e-04, worst state ratio 1.22e-02 (state 9) -> ok
-test patch_mean vs visual: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 19.99, max abs 3505, ratio 5.70e-03, worst state ratio 5.70e-03 (state 27) -> FAIL
-test patch_max vs last: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 128, max abs 1.318e+04, ratio 9.71e-03, worst state ratio 1.18e-02 (state 26) -> FAIL
-decision 9 check: FAIL
+train_anomaly patch_mean vs visual: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 25.23, max abs 3693, ratio 6.83e-03, worst state ratio 6.83e-03 (state 27), min cosine 0.999995 -> ok
+train_anomaly patch_max vs last: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 64, max abs 1.242e+04, ratio 5.15e-03, worst state ratio 7.63e-03 (state 16), min cosine 0.999955 -> ok
+train_normal patch_mean vs visual: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 6.998, max abs 4292, ratio 1.63e-03, worst state ratio 1.84e-03 (state 11), min cosine 0.999998 -> ok
+train_normal patch_max vs last: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 2, max abs 1.318e+04, ratio 1.52e-04, worst state ratio 1.22e-02 (state 9), min cosine 0.999980 -> ok
+test patch_mean vs visual: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 19.99, max abs 3505, ratio 5.70e-03, worst state ratio 5.70e-03 (state 27), min cosine 0.999994 -> ok
+test patch_max vs last: shape (5, 28, 1152) vs (5, 28, 1152), max abs diff 128, max abs 1.318e+04, ratio 9.71e-03, worst state ratio 1.18e-02 (state 26), min cosine 0.999952 -> ok
+decision 9 check: passed

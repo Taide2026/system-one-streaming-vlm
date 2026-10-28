@@ -44,4 +44,5 @@ run:
   encoders: [qwen35-vit, internvit-300m, siglip2-so400m, dinov3-vitl, vjepa2-vitl]
   decision_9_check:
     reference: $S1_FEATURES/probe_ucf_short_v1_f8/V/vit-1 (visual = patch_mean, last = patch_max)
-    threshold: max abs difference <= 1e-3 x max abs value
+    first_threshold: max abs difference <= 1e-3 x max abs value (failed: below the bfloat16 step)
+    threshold: cosine >= 0.9999 per window and state, and max abs difference <= 2e-2 x max abs value

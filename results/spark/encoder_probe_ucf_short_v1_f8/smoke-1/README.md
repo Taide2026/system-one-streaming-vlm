@@ -5,7 +5,7 @@ Config: `config.yaml` (the encoder config plus a `run:` section). Features: `$S1
 ## Steps
 
 1. `uv run s1stream encoder-extract configs/encoder_probe_ucf_short_v1_f8.yaml --encoder <name> --run smoke-1 --limit-windows 5`, one encoder at a time, `timeout 900`. Logs: `logs/extract-<encoder>.log`.
-2. `uv run python results/spark/encoder_probe_ucf_short_v1_f8/smoke-1/scripts/check_equal.py smoke-1`: decision 9 check against vit-1. Log: `logs/check-equal.log`.
+2. `uv run python results/spark/encoder_probe_ucf_short_v1_f8/smoke-1/scripts/check_equal.py smoke-1`: decision 9 check against vit-1. Logs: `logs/check-equal-threshold-1e-3.log` (first threshold), `logs/check-equal.log` (new criterion).
 3. `uv run python results/spark/encoder_probe_ucf_short_v1_f8/smoke-1/scripts/attention_backend.py`: why step 2 failed. Log: `logs/attention-backend.log`.
 
 ## Resources (5 windows per set, GB10, bfloat16)
@@ -21,7 +21,7 @@ Config: `config.yaml` (the encoder config plus a `run:` section). Features: `$S1
 All peaks are far below the expected 10 GiB and the 24 GiB cap. 12,772 windows x about 0.25 s is about 55 minutes per encoder.
 Before the GPU runs, every model tensor of the 5 loaded encoders was compared with its checkpoint tensor on the CPU: 0 differences.
 
-## Decision 9 check: failed as written
+## Decision 9 check: failed with the first threshold, passed with the new one
 
 `qwen35-vit` through `encoder-extract` against vit-1 (first 5 windows of each set): max abs difference / max abs value is
 1.5e-4 to 9.7e-3 (threshold 1e-3). Shapes and the window plan are equal.
@@ -36,4 +36,6 @@ Cause (step 3, 5 test windows):
 
 - The attention backend is not the cause: the default backend and the d3 runtime setting (no cuDNN) give equal features (difference 0).
 - The difference to vit-1 equals the bfloat16 rounding of the same code (bfloat16 vs float32). bfloat16 has a relative step of 2^-8 = 3.9e-3, so a threshold of 1e-3 cannot pass.
-- The threshold in decision 9 is wrong, not the code path. Status: waiting for Eric's decision on a new criterion.
+- The threshold in decision 9 is wrong, not the code path.
+- New criterion (Eric, 2026-10-28): cosine >= 0.9999 for every window and state, and max abs difference <= 2e-2 x max abs value.
+  Result: passed. Min cosine 0.999952 to 0.999998; ratio 1.5e-4 to 9.7e-3 (`logs/check-equal.log`).
