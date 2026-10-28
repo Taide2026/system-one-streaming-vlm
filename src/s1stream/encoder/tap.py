@@ -19,25 +19,42 @@ class StateTap:
     n_states: int  # len(blocks) + 1, set in __init__
 
     def __init__(self, blocks: Sequence[torch.nn.Module]) -> None:
-        raise NotImplementedError
+        self.n_states = len(blocks) + 1
+        self._states: list[torch.Tensor] = []
+        self._hooks = []
+        if blocks:
+            self._hooks.append(blocks[0].register_forward_pre_hook(self._pre, with_kwargs=True))
+            self._hooks.extend(block.register_forward_hook(self._block) for block in blocks)
+
+    def _pre(self, module: torch.nn.Module, args: tuple[Any, ...], kwargs: dict[str, Any]) -> None:
+        hidden = args[0] if args else kwargs["hidden_states"]
+        self._states.append(hidden.detach())
+
+    def _block(self, module: torch.nn.Module, args: tuple[Any, ...], output: Any) -> None:
+        hidden = output[0] if isinstance(output, tuple) else output
+        self._states.append(hidden.detach())
 
     def states(self) -> list[torch.Tensor]:
         """The recorded states in order. Raise RuntimeError naming both counts when the count is not n_states."""
-        raise NotImplementedError
+        if len(self._states) != self.n_states:
+            raise RuntimeError(f"expected {self.n_states} states, got {len(self._states)}")
+        return list(self._states)
 
     def clear(self) -> None:
         """Forget the recorded states."""
-        raise NotImplementedError
+        self._states.clear()
 
     def close(self) -> None:
         """Remove all hooks."""
-        raise NotImplementedError
+        for hook in self._hooks:
+            hook.remove()
+        self._hooks.clear()
 
     def __enter__(self) -> StateTap:
-        raise NotImplementedError
+        return self
 
-    def __exit__(self, *exc: Any) -> None:
-        raise NotImplementedError
+    def __exit__(self, exc_type: Any, exc_value: Any, traceback: Any) -> None:
+        self.close()
 
 
 def pool(states: Sequence[torch.Tensor], prefix: int, cls: bool) -> dict[str, torch.Tensor]:
@@ -49,4 +66,16 @@ def pool(states: Sequence[torch.Tensor], prefix: int, cls: bool) -> dict[str, to
     plus "cls_mean" (mean over frames of token 0) when cls is True.
     Each value: float32 CPU tensor of shape (len(states), dims), without grad_fn.
     """
-    raise NotImplementedError
+    pooled: dict[str, list[torch.Tensor]] = {"patch_mean": [], "patch_max": []}
+    if cls:
+        pooled["cls_mean"] = []
+    for state in states:
+        hidden = state.detach().to(dtype=torch.float32)
+        if hidden.ndim == 2:
+            hidden = hidden.unsqueeze(0)
+        patches = hidden[:, prefix:, :]
+        pooled["patch_mean"].append(patches.mean(dim=(0, 1)).cpu())
+        pooled["patch_max"].append(patches.amax(dim=(0, 1)).cpu())
+        if cls:
+            pooled["cls_mean"].append(hidden[:, 0, :].mean(dim=0).cpu())
+    return {key: torch.stack(values) for key, values in pooled.items()}
