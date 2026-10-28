@@ -56,15 +56,14 @@ def main() -> None:
     ap.add_argument("--results", type=Path, default=Path("results"))
     args = ap.parse_args()
     api = HfApi()
-    user = api.whoami()["name"]
-    repo = args.repo or f"{user}/system-one-streaming-vlm-weights"
     runs = sorted(d for d in args.results.glob("*/ft_*/*") if (d / "adapter").is_dir() or list(d.glob("*.safetensors")))
     total = sum(f.stat().st_size for d in runs for f in d.rglob("*") if f.is_file()) / 1e9
-    print(f"{repo}: {len(runs)} runs, {total:.1f} GB")
+    print(f"{len(runs)} runs, {total:.1f} GB")
     for d in runs:
         print(" ", d)
     if args.dry_run:
         return
+    repo = args.repo or f"{api.whoami()['name']}/system-one-streaming-vlm-weights"
     api.create_repo(repo, repo_type="model", private=not args.public, exist_ok=True)
     api.upload_file(path_or_fileobj=README.encode(), path_in_repo="README.md", repo_id=repo, repo_type="model")
     for d in runs:
