@@ -176,7 +176,7 @@ def run_encoder_extract(config_path: Path, encoder: str, run_name: str, limit_wi
                     arrays[group][kind].append(array)
                     dims[group] = array.shape[-1]
             if (i + 1) % 500 == 0:
-                print(f"{name}: {i + 1} windows, {time.perf_counter() - begun:.1f} seconds")
+                print(f"{name}: {i + 1} windows, {time.perf_counter() - begun:.1f} seconds", flush=True)
         for folder, group, kinds in folders:
             set_dir = folder / name
             set_dir.mkdir(exist_ok=True)

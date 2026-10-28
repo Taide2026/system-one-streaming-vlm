@@ -155,9 +155,10 @@ def split(videos: list[str], category: dict[str, str], seed: int = SEED) -> set[
 
 
 def read_kinds(features: Path) -> tuple[str, ...]:
-    """Return run.json token kinds when they are a list of strings, else KINDS.
+    """The token kinds of a features run: features/run.json "kinds" when it is a list of str, else KINDS.
 
-    A missing run.json, a run.json without "kinds", or kinds as a dict uses KINDS.
+    A missing run.json, a run.json without "kinds", or "kinds" as a dict (the vit-1 format:
+    {"visual": "token mean", "last": "token max"}) all give KINDS.
     """
     run_path = features / "run.json"
     if not run_path.exists():
