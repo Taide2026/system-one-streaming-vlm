@@ -1,0 +1,48 @@
+# Encoder probing (encoder-probing): which frozen vision encoder carries the anomaly information?
+# Same windows as probe_ucf_short_v1_f8: 390 train videos (13 classes x 15 + 195 normal), 117 test videos <= 49.9 s,
+# 2 s windows, 8 frames. Each encoder uses its own processor (proposal decision 3).
+# Run: uv run s1stream encoder-extract configs/encoder_probe_ucf_short_v1_f8.yaml --encoder <name> --run <name> [--limit-windows 5]
+name: encoder_probe_ucf_short_v1_f8
+
+train:
+  name: ucf_crime_train
+  asset: ucf-crime
+  holmes_asset: holmes-vau-ucf-train
+  max_duration_s: 128.0
+  per_class: 15
+  n_normal: 195
+  seed: 20261022
+
+test:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 49
+  n_normal: 68
+  max_duration_s: 49.9
+  seed: 20261009
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+input_form:
+  name: frames
+
+memory_cap_gb: 24
+
+encoders:
+  qwen35-vit: qwen3.5-9b
+  internvit-300m: internvl3-2b-hf
+  siglip2-so400m: siglip2-so400m-patch14-384
+  dinov3-vitl: dinov3-vitl16
+  vjepa2-vitl: vjepa2-vitl-fpc64-256
+
+# run-1: the full encoder probing run (2026-10-28).
+run:
+  encoders: [qwen35-vit, internvit-300m, siglip2-so400m, dinov3-vitl, vjepa2-vitl]
+  feature_folders: [qwen35-vit, internvit-300m, internvit-300m-head, siglip2-so400m, siglip2-so400m-head, dinov3-vitl, vjepa2-vitl]
+  dtype: bfloat16 on cuda
+  decision_9_check: cosine >= 0.9999 per window and state, and max abs difference <= 2e-2 x max abs value, on all qwen35-vit windows
+  probe_fit: s1stream probe-fit, device cuda; methods, grids, validation split and refit as probe_ucf_short_v1_f8
+  compare: s1stream encoder-compare, 1,000 video resamples, seed 20261022, baseline qwen35-vit patch_mean
