@@ -1,0 +1,846 @@
+[
+ {
+  "name": "Abuse028_x264.mp4",
+  "category": "Abuse",
+  "fps": 30.0,
+  "n_frames": 1412,
+  "duration_s": 47.06666666666667,
+  "events": [
+   [
+    165,
+    240
+   ]
+  ],
+  "path": "videos/Abuse/Abuse028_x264.mp4"
+ },
+ {
+  "name": "Arrest024_x264.mp4",
+  "category": "Arrest",
+  "fps": 30.0,
+  "n_frames": 3629,
+  "duration_s": 120.96666666666667,
+  "events": [
+   [
+    1005,
+    3105
+   ]
+  ],
+  "path": "videos/Arrest/Arrest024_x264.mp4"
+ },
+ {
+  "name": "Arson009_x264.mp4",
+  "category": "Arson",
+  "fps": 30.0,
+  "n_frames": 743,
+  "duration_s": 24.766666666666666,
+  "events": [
+   [
+    220,
+    315
+   ]
+  ],
+  "path": "videos/Arson/Arson009_x264.mp4"
+ },
+ {
+  "name": "Arson018_x264.mp4",
+  "category": "Arson",
+  "fps": 30.0,
+  "n_frames": 842,
+  "duration_s": 28.066666666666666,
+  "events": [
+   [
+    270,
+    600
+   ]
+  ],
+  "path": "videos/Arson/Arson018_x264.mp4"
+ },
+ {
+  "name": "Assault006_x264.mp4",
+  "category": "Assault",
+  "fps": 30.0,
+  "n_frames": 8096,
+  "duration_s": 269.8666666666667,
+  "events": [
+   [
+    1185,
+    8096
+   ]
+  ],
+  "path": "videos/Assault/Assault006_x264.mp4"
+ },
+ {
+  "name": "Burglary017_x264.mp4",
+  "category": "Burglary",
+  "fps": 30.0,
+  "n_frames": 2113,
+  "duration_s": 70.43333333333334,
+  "events": [
+   [
+    150,
+    600
+   ]
+  ],
+  "path": "videos/Burglary/Burglary017_x264.mp4"
+ },
+ {
+  "name": "Burglary032_x264.mp4",
+  "category": "Burglary",
+  "fps": 30.0,
+  "n_frames": 15795,
+  "duration_s": 526.5,
+  "events": [
+   [
+    1290,
+    3690
+   ]
+  ],
+  "path": "videos/Burglary/Burglary032_x264.mp4"
+ },
+ {
+  "name": "Burglary061_x264.mp4",
+  "category": "Burglary",
+  "fps": 30.0,
+  "n_frames": 8990,
+  "duration_s": 299.6666666666667,
+  "events": [
+   [
+    4200,
+    5700
+   ]
+  ],
+  "path": "videos/Burglary/Burglary061_x264.mp4"
+ },
+ {
+  "name": "Explosion002_x264.mp4",
+  "category": "Explosion",
+  "fps": 30.0,
+  "n_frames": 4013,
+  "duration_s": 133.76666666666668,
+  "events": [
+   [
+    1500,
+    2100
+   ]
+  ],
+  "path": "videos/Explosion/Explosion002_x264.mp4"
+ },
+ {
+  "name": "Explosion010_x264.mp4",
+  "category": "Explosion",
+  "fps": 30.0,
+  "n_frames": 2498,
+  "duration_s": 83.26666666666667,
+  "events": [
+   [
+    285,
+    1080
+   ]
+  ],
+  "path": "videos/Explosion/Explosion010_x264.mp4"
+ },
+ {
+  "name": "Explosion017_x264.mp4",
+  "category": "Explosion",
+  "fps": 30.0,
+  "n_frames": 1643,
+  "duration_s": 54.766666666666666,
+  "events": [
+   [
+    990,
+    1440
+   ]
+  ],
+  "path": "videos/Explosion/Explosion017_x264.mp4"
+ },
+ {
+  "name": "Explosion025_x264.mp4",
+  "category": "Explosion",
+  "fps": 30.0,
+  "n_frames": 505,
+  "duration_s": 16.833333333333332,
+  "events": [
+   [
+    260,
+    420
+   ]
+  ],
+  "path": "videos/Explosion/Explosion025_x264.mp4"
+ },
+ {
+  "name": "Explosion033_x264.mp4",
+  "category": "Explosion",
+  "fps": 30.0,
+  "n_frames": 3154,
+  "duration_s": 105.13333333333334,
+  "events": [
+   [
+    970,
+    1350
+   ],
+   [
+    1550,
+    3156
+   ]
+  ],
+  "path": "videos/Explosion/Explosion033_x264.mp4"
+ },
+ {
+  "name": "Explosion043_x264.mp4",
+  "category": "Explosion",
+  "fps": 30.0,
+  "n_frames": 7646,
+  "duration_s": 254.86666666666667,
+  "events": [
+   [
+    4460,
+    4600
+   ]
+  ],
+  "path": "videos/Explosion/Explosion043_x264.mp4"
+ },
+ {
+  "name": "Fighting042_x264.mp4",
+  "category": "Fighting",
+  "fps": 30.0,
+  "n_frames": 2237,
+  "duration_s": 74.56666666666666,
+  "events": [
+   [
+    290,
+    1200
+   ]
+  ],
+  "path": "videos/Fighting/Fighting042_x264.mp4"
+ },
+ {
+  "name": "RoadAccidents004_x264.mp4",
+  "category": "RoadAccidents",
+  "fps": 30.0,
+  "n_frames": 389,
+  "duration_s": 12.966666666666667,
+  "events": [
+   [
+    140,
+    189
+   ]
+  ],
+  "path": "videos/RoadAccidents/RoadAccidents004_x264.mp4"
+ },
+ {
+  "name": "RoadAccidents012_x264.mp4",
+  "category": "RoadAccidents",
+  "fps": 30.0,
+  "n_frames": 468,
+  "duration_s": 15.6,
+  "events": [
+   [
+    250,
+    390
+   ]
+  ],
+  "path": "videos/RoadAccidents/RoadAccidents012_x264.mp4"
+ },
+ {
+  "name": "RoadAccidents020_x264.mp4",
+  "category": "RoadAccidents",
+  "fps": 30.0,
+  "n_frames": 1773,
+  "duration_s": 59.1,
+  "events": [
+   [
+    610,
+    730
+   ]
+  ],
+  "path": "videos/RoadAccidents/RoadAccidents020_x264.mp4"
+ },
+ {
+  "name": "RoadAccidents122_x264.mp4",
+  "category": "RoadAccidents",
+  "fps": 30.0,
+  "n_frames": 647,
+  "duration_s": 21.566666666666666,
+  "events": [
+   [
+    300,
+    360
+   ]
+  ],
+  "path": "videos/RoadAccidents/RoadAccidents122_x264.mp4"
+ },
+ {
+  "name": "RoadAccidents127_x264.mp4",
+  "category": "RoadAccidents",
+  "fps": 30.0,
+  "n_frames": 2580,
+  "duration_s": 86.0,
+  "events": [
+   [
+    2160,
+    2300
+   ]
+  ],
+  "path": "videos/RoadAccidents/RoadAccidents127_x264.mp4"
+ },
+ {
+  "name": "RoadAccidents133_x264.mp4",
+  "category": "RoadAccidents",
+  "fps": 30.0,
+  "n_frames": 673,
+  "duration_s": 22.433333333333334,
+  "events": [
+   [
+    270,
+    450
+   ]
+  ],
+  "path": "videos/RoadAccidents/RoadAccidents133_x264.mp4"
+ },
+ {
+  "name": "Robbery106_x264.mp4",
+  "category": "Robbery",
+  "fps": 30.0,
+  "n_frames": 1197,
+  "duration_s": 39.9,
+  "events": [
+   [
+    480,
+    600
+   ]
+  ],
+  "path": "videos/Robbery/Robbery106_x264.mp4"
+ },
+ {
+  "name": "Shooting007_x264.mp4",
+  "category": "Shooting",
+  "fps": 30.0,
+  "n_frames": 1430,
+  "duration_s": 47.666666666666664,
+  "events": [
+   [
+    45,
+    165
+   ]
+  ],
+  "path": "videos/Shooting/Shooting007_x264.mp4"
+ },
+ {
+  "name": "Shooting013_x264.mp4",
+  "category": "Shooting",
+  "fps": 30.0,
+  "n_frames": 1073,
+  "duration_s": 35.766666666666666,
+  "events": [
+   [
+    860,
+    945
+   ]
+  ],
+  "path": "videos/Shooting/Shooting013_x264.mp4"
+ },
+ {
+  "name": "Shooting021_x264.mp4",
+  "category": "Shooting",
+  "fps": 30.0,
+  "n_frames": 1275,
+  "duration_s": 42.5,
+  "events": [
+   [
+    480,
+    630
+   ]
+  ],
+  "path": "videos/Shooting/Shooting021_x264.mp4"
+ },
+ {
+  "name": "Shooting028_x264.mp4",
+  "category": "Shooting",
+  "fps": 30.0,
+  "n_frames": 1898,
+  "duration_s": 63.266666666666666,
+  "events": [
+   [
+    285,
+    555
+   ]
+  ],
+  "path": "videos/Shooting/Shooting028_x264.mp4"
+ },
+ {
+  "name": "Shooting037_x264.mp4",
+  "category": "Shooting",
+  "fps": 30.0,
+  "n_frames": 305,
+  "duration_s": 10.166666666666666,
+  "events": [
+   [
+    140,
+    260
+   ]
+  ],
+  "path": "videos/Shooting/Shooting037_x264.mp4"
+ },
+ {
+  "name": "Shooting048_x264.mp4",
+  "category": "Shooting",
+  "fps": 30.0,
+  "n_frames": 2741,
+  "duration_s": 91.36666666666666,
+  "events": [
+   [
+    1410,
+    1730
+   ]
+  ],
+  "path": "videos/Shooting/Shooting048_x264.mp4"
+ },
+ {
+  "name": "Shoplifting007_x264.mp4",
+  "category": "Shoplifting",
+  "fps": 30.0,
+  "n_frames": 5124,
+  "duration_s": 170.8,
+  "events": [
+   [
+    550,
+    760
+   ],
+   [
+    4630,
+    4920
+   ]
+  ],
+  "path": "videos/Shoplifting/Shoplifting007_x264.mp4"
+ },
+ {
+  "name": "Shoplifting017_x264.mp4",
+  "category": "Shoplifting",
+  "fps": 30.0,
+  "n_frames": 457,
+  "duration_s": 15.233333333333333,
+  "events": [
+   [
+    360,
+    420
+   ]
+  ],
+  "path": "videos/Shoplifting/Shoplifting017_x264.mp4"
+ },
+ {
+  "name": "Shoplifting027_x264.mp4",
+  "category": "Shoplifting",
+  "fps": 30.0,
+  "n_frames": 1873,
+  "duration_s": 62.43333333333333,
+  "events": [
+   [
+    1080,
+    1160
+   ],
+   [
+    1470,
+    1710
+   ]
+  ],
+  "path": "videos/Shoplifting/Shoplifting027_x264.mp4"
+ },
+ {
+  "name": "Shoplifting033_x264.mp4",
+  "category": "Shoplifting",
+  "fps": 30.0,
+  "n_frames": 899,
+  "duration_s": 29.966666666666665,
+  "events": [
+   [
+    630,
+    750
+   ]
+  ],
+  "path": "videos/Shoplifting/Shoplifting033_x264.mp4"
+ },
+ {
+  "name": "Shoplifting044_x264.mp4",
+  "category": "Shoplifting",
+  "fps": 30.0,
+  "n_frames": 14555,
+  "duration_s": 485.1666666666667,
+  "events": [
+   [
+    11070,
+    11250
+   ]
+  ],
+  "path": "videos/Shoplifting/Shoplifting044_x264.mp4"
+ },
+ {
+  "name": "Stealing058_x264.mp4",
+  "category": "Stealing",
+  "fps": 30.0,
+  "n_frames": 4991,
+  "duration_s": 166.36666666666667,
+  "events": [
+   [
+    570,
+    3660
+   ]
+  ],
+  "path": "videos/Stealing/Stealing058_x264.mp4"
+ },
+ {
+  "name": "Vandalism015_x264.mp4",
+  "category": "Vandalism",
+  "fps": 30.0,
+  "n_frames": 2982,
+  "duration_s": 99.4,
+  "events": [
+   [
+    2010,
+    2700
+   ]
+  ],
+  "path": "videos/Vandalism/Vandalism015_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_003_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 2822,
+  "duration_s": 94.06666666666666,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_003_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_015_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 480,
+  "duration_s": 16.0,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_015_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_025_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 602,
+  "duration_s": 20.066666666666666,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_025_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_041_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1269,
+  "duration_s": 42.3,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_041_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_051_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 2358,
+  "duration_s": 78.6,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_051_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_067_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1068,
+  "duration_s": 35.6,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_067_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_150_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 864,
+  "duration_s": 28.8,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_150_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_189_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 737,
+  "duration_s": 24.566666666666666,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_189_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_217_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1817,
+  "duration_s": 60.56666666666667,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_217_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_248_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1140,
+  "duration_s": 38.0,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_248_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_312_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1261,
+  "duration_s": 42.03333333333333,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_312_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_360_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 984,
+  "duration_s": 32.8,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_360_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_439_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 4226,
+  "duration_s": 140.86666666666667,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_439_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_576_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 11275,
+  "duration_s": 375.8333333333333,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_576_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_621_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 4802,
+  "duration_s": 160.06666666666666,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_621_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_686_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 2410,
+  "duration_s": 80.33333333333333,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_686_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_710_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1797,
+  "duration_s": 59.9,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_710_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_745_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 305,
+  "duration_s": 10.166666666666666,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_745_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_781_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 3975,
+  "duration_s": 132.5,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_781_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_801_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 2744,
+  "duration_s": 91.46666666666667,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_801_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_867_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 624,
+  "duration_s": 20.8,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_867_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_871_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 4358,
+  "duration_s": 145.26666666666668,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_871_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_875_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 2565,
+  "duration_s": 85.5,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_875_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_879_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1143,
+  "duration_s": 38.1,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_879_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_883_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 326,
+  "duration_s": 10.866666666666667,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_883_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_887_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 7630,
+  "duration_s": 254.33333333333334,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_887_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_891_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1800,
+  "duration_s": 60.0,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_891_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_895_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 3030,
+  "duration_s": 101.0,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_895_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_899_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1380,
+  "duration_s": 46.0,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_899_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_903_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 790,
+  "duration_s": 26.333333333333332,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_903_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_907_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 598,
+  "duration_s": 19.933333333333334,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_907_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_911_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 776,
+  "duration_s": 25.866666666666667,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_911_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_915_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1245,
+  "duration_s": 41.5,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_915_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_926_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1796,
+  "duration_s": 59.86666666666667,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_926_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_930_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 3187,
+  "duration_s": 106.23333333333333,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_930_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_934_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1765,
+  "duration_s": 58.833333333333336,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_934_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_938_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 4827,
+  "duration_s": 160.9,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_938_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_943_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 1020,
+  "duration_s": 34.0,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_943_x264.mp4"
+ }
+]

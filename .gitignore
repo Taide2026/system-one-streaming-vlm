@@ -2,3 +2,7 @@
 __pycache__/
 .work/
 results/smoke/
+
+# trained weights stay on the machine (GitHub: 100 MB per file); configs, logs, scores and reports are tracked
+results/**/adapter/
+results/**/*.safetensors

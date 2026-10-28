@@ -1,0 +1,136 @@
+name: ucf_from_xd_v1_d3nano_eval
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  names:
+  - Abuse030_x264.mp4
+  - Arrest024_x264.mp4
+  - Arson007_x264.mp4
+  - Arson011_x264.mp4
+  - Arson022_x264.mp4
+  - Assault006_x264.mp4
+  - Burglary005_x264.mp4
+  - Burglary021_x264.mp4
+  - Burglary033_x264.mp4
+  - Burglary061_x264.mp4
+  - Burglary092_x264.mp4
+  - Explosion007_x264.mp4
+  - Explosion011_x264.mp4
+  - Explosion017_x264.mp4
+  - Explosion022_x264.mp4
+  - Explosion028_x264.mp4
+  - Explosion035_x264.mp4
+  - Explosion043_x264.mp4
+  - Fighting033_x264.mp4
+  - RoadAccidents001_x264.mp4
+  - RoadAccidents009_x264.mp4
+  - RoadAccidents012_x264.mp4
+  - RoadAccidents019_x264.mp4
+  - RoadAccidents022_x264.mp4
+  - RoadAccidents123_x264.mp4
+  - RoadAccidents127_x264.mp4
+  - RoadAccidents132_x264.mp4
+  - Robbery050_x264.mp4
+  - Robbery137_x264.mp4
+  - Shooting007_x264.mp4
+  - Shooting011_x264.mp4
+  - Shooting018_x264.mp4
+  - Shooting022_x264.mp4
+  - Shooting028_x264.mp4
+  - Shooting034_x264.mp4
+  - Shooting046_x264.mp4
+  - Shoplifting001_x264.mp4
+  - Shoplifting007_x264.mp4
+  - Shoplifting016_x264.mp4
+  - Shoplifting021_x264.mp4
+  - Shoplifting028_x264.mp4
+  - Shoplifting033_x264.mp4
+  - Shoplifting039_x264.mp4
+  - Stealing019_x264.mp4
+  - Stealing062_x264.mp4
+  - Vandalism015_x264.mp4
+  - Vandalism036_x264.mp4
+  - Normal_Videos_010_x264.mp4
+  - Normal_Videos_018_x264.mp4
+  - Normal_Videos_025_x264.mp4
+  - Normal_Videos_034_x264.mp4
+  - Normal_Videos_048_x264.mp4
+  - Normal_Videos_056_x264.mp4
+  - Normal_Videos_067_x264.mp4
+  - Normal_Videos_129_x264.mp4
+  - Normal_Videos_175_x264.mp4
+  - Normal_Videos_196_x264.mp4
+  - Normal_Videos_217_x264.mp4
+  - Normal_Videos_247_x264.mp4
+  - Normal_Videos_289_x264.mp4
+  - Normal_Videos_317_x264.mp4
+  - Normal_Videos_360_x264.mp4
+  - Normal_Videos_417_x264.mp4
+  - Normal_Videos_453_x264.mp4
+  - Normal_Videos_597_x264.mp4
+  - Normal_Videos_621_x264.mp4
+  - Normal_Videos_656_x264.mp4
+  - Normal_Videos_702_x264.mp4
+  - Normal_Videos_717_x264.mp4
+  - Normal_Videos_745_x264.mp4
+  - Normal_Videos_780_x264.mp4
+  - Normal_Videos_783_x264.mp4
+  - Normal_Videos_828_x264.mp4
+  - Normal_Videos_867_x264.mp4
+  - Normal_Videos_870_x264.mp4
+  - Normal_Videos_873_x264.mp4
+  - Normal_Videos_876_x264.mp4
+  - Normal_Videos_879_x264.mp4
+  - Normal_Videos_882_x264.mp4
+  - Normal_Videos_885_x264.mp4
+  - Normal_Videos_888_x264.mp4
+  - Normal_Videos_891_x264.mp4
+  - Normal_Videos_894_x264.mp4
+  - Normal_Videos_897_x264.mp4
+  - Normal_Videos_900_x264.mp4
+  - Normal_Videos_903_x264.mp4
+  - Normal_Videos_906_x264.mp4
+  - Normal_Videos_909_x264.mp4
+  - Normal_Videos_912_x264.mp4
+  - Normal_Videos_915_x264.mp4
+  - Normal_Videos_925_x264.mp4
+  - Normal_Videos_928_x264.mp4
+  - Normal_Videos_931_x264.mp4
+  - Normal_Videos_934_x264.mp4
+  - Normal_Videos_937_x264.mp4
+  - Normal_Videos_940_x264.mp4
+  - Normal_Videos_944_x264.mp4
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+  state: Surveillance camera footage, 2 seconds.
+  text: If you were a law enforcement agency, would you rate this scene as a scene
+    involving suspicious activities such as abuse (intentionally harming or mistreating
+    others), arrest (legally detaining someone), arson (deliberately setting fire),
+    assault (physical attack on someone), burglary (illegally entering with the intent
+    to commit a crime), disorderly conduct (disruptive or destructive behavior), explosion
+    (violent release of energy), fighting (violent confrontation), robbery (unlawfully
+    taking property), shooting (firing a gun), shoplifting (stealing from a retail
+    store), theft (taking someone else's property without permission), or vandalism
+    (deliberate destruction of property), rather than a standard scene?
+  options:
+  - 'Yes'
+  - 'No'
+  positive: 'Yes'
+input_form:
+  name: frames
+backbone:
+  name: d3
+  asset: d3-nano
+  memory_cap_gb: 40
+  adapter: results/pro6000/ft_xd_v1_d3nano/20261024-133734
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01

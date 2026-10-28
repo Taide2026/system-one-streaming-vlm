@@ -1,0 +1,117 @@
+[
+ {
+  "name": "RoadAccidents010_x264.mp4",
+  "category": "RoadAccidents",
+  "fps": 30.0,
+  "n_frames": 528,
+  "duration_s": 17.6,
+  "events": [
+   [
+    230,
+    270
+   ]
+  ],
+  "path": "videos/RoadAccidents/RoadAccidents010_x264.mp4"
+ },
+ {
+  "name": "RoadAccidents004_x264.mp4",
+  "category": "RoadAccidents",
+  "fps": 30.0,
+  "n_frames": 389,
+  "duration_s": 12.966666666666667,
+  "events": [
+   [
+    140,
+    189
+   ]
+  ],
+  "path": "videos/RoadAccidents/RoadAccidents004_x264.mp4"
+ },
+ {
+  "name": "RoadAccidents011_x264.mp4",
+  "category": "RoadAccidents",
+  "fps": 30.0,
+  "n_frames": 2159,
+  "duration_s": 71.96666666666667,
+  "events": [
+   [
+    260,
+    300
+   ]
+  ],
+  "path": "videos/RoadAccidents/RoadAccidents011_x264.mp4"
+ },
+ {
+  "name": "RoadAccidents122_x264.mp4",
+  "category": "RoadAccidents",
+  "fps": 30.0,
+  "n_frames": 647,
+  "duration_s": 21.566666666666666,
+  "events": [
+   [
+    300,
+    360
+   ]
+  ],
+  "path": "videos/RoadAccidents/RoadAccidents122_x264.mp4"
+ },
+ {
+  "name": "Shoplifting037_x264.mp4",
+  "category": "Shoplifting",
+  "fps": 30.0,
+  "n_frames": 1386,
+  "duration_s": 46.2,
+  "events": [
+   [
+    1140,
+    1200
+   ]
+  ],
+  "path": "videos/Shoplifting/Shoplifting037_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_345_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 209,
+  "duration_s": 6.966666666666667,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_345_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_881_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 224,
+  "duration_s": 7.466666666666667,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_881_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_878_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 265,
+  "duration_s": 8.833333333333334,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_878_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_745_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 305,
+  "duration_s": 10.166666666666666,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_745_x264.mp4"
+ },
+ {
+  "name": "Normal_Videos_889_x264.mp4",
+  "category": "Normal",
+  "fps": 30.0,
+  "n_frames": 314,
+  "duration_s": 10.466666666666667,
+  "events": [],
+  "path": "videos/Testing_Normal_Videos_Anomaly/Normal_Videos_889_x264.mp4"
+ }
+]

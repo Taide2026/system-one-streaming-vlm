@@ -1,0 +1,3230 @@
+[
+ {
+  "name": "Brick.Mansions.2014__#00-16-26_00-17-12_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 1104,
+  "duration_s": 46.0,
+  "events": [
+   [
+    30,
+    1100
+   ]
+  ],
+  "path": "videos/Brick.Mansions.2014__#00-16-26_00-17-12_label_B1-0-0.mp4"
+ },
+ {
+  "name": "City.Of.Men.2007__#01-17-27_01-17-59_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 769,
+  "duration_s": 32.041666666666664,
+  "events": [
+   [
+    197,
+    394
+   ]
+  ],
+  "path": "videos/City.Of.Men.2007__#01-17-27_01-17-59_label_B2-0-0.mp4"
+ },
+ {
+  "name": "Election.2005__#00-47-57_00-50-54_label_B5-0-0.mp4",
+  "category": "Abuse",
+  "fps": 24.0,
+  "n_frames": 4248,
+  "duration_s": 177.0,
+  "events": [
+   [
+    170,
+    480
+   ],
+   [
+    1219,
+    1620
+   ],
+   [
+    2063,
+    2150
+   ]
+  ],
+  "path": "videos/Election.2005__#00-47-57_00-50-54_label_B5-0-0.mp4"
+ },
+ {
+  "name": "God.Bless.America.2011__#00-12-40_00-13-12_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 769,
+  "duration_s": 32.041666666666664,
+  "events": [
+   [
+    122,
+    322
+   ]
+  ],
+  "path": "videos/God.Bless.America.2011__#00-12-40_00-13-12_label_B2-0-0.mp4"
+ },
+ {
+  "name": "Ip.Man.2008__#01-14-31_01-15-24_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 1274,
+  "duration_s": 53.083333333333336,
+  "events": [
+   [
+    177,
+    462
+   ]
+  ],
+  "path": "videos/Ip.Man.2008__#01-14-31_01-15-24_label_B1-0-0.mp4"
+ },
+ {
+  "name": "Law.Abiding.Citizen.2009__#01-26-34_01-27-25_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 1225,
+  "duration_s": 51.041666666666664,
+  "events": [
+   [
+    626,
+    990
+   ]
+  ],
+  "path": "videos/Law.Abiding.Citizen.2009__#01-26-34_01-27-25_label_B2-0-0.mp4"
+ },
+ {
+  "name": "Mission.Impossible.II.2000__#01-29-30_01-29-44_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 337,
+  "duration_s": 14.041666666666666,
+  "events": [
+   [
+    136,
+    280
+   ]
+  ],
+  "path": "videos/Mission.Impossible.II.2000__#01-29-30_01-29-44_label_B1-0-0.mp4"
+ },
+ {
+  "name": "Operation.Red.Sea.2018__#0-16-06_0-16-46_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 960,
+  "duration_s": 40.0,
+  "events": [
+   [
+    630,
+    774
+   ]
+  ],
+  "path": "videos/Operation.Red.Sea.2018__#0-16-06_0-16-46_label_G-0-0.mp4"
+ },
+ {
+  "name": "Salt.2010__#00-17-40_00-18-16_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 865,
+  "duration_s": 36.041666666666664,
+  "events": [
+   [
+    530,
+    864
+   ]
+  ],
+  "path": "videos/Salt.2010__#00-17-40_00-18-16_label_B1-0-0.mp4"
+ },
+ {
+  "name": "Sin.City.2005__#0-29-34_0-29-56_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 529,
+  "duration_s": 22.041666666666668,
+  "events": [
+   [
+    355,
+    425
+   ],
+   [
+    470,
+    510
+   ]
+  ],
+  "path": "videos/Sin.City.2005__#0-29-34_0-29-56_label_B2-0-0.mp4"
+ },
+ {
+  "name": "Spectre.2015__#02-15-30_02-16-05_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 842,
+  "duration_s": 35.083333333333336,
+  "events": [
+   [
+    430,
+    571
+   ]
+  ],
+  "path": "videos/Spectre.2015__#02-15-30_02-16-05_label_G-0-0.mp4"
+ },
+ {
+  "name": "The.Bourne.Identity.2002__#01-27-39_01-29-19_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 2400,
+  "duration_s": 100.0,
+  "events": [
+   [
+    530,
+    560
+   ],
+   [
+    1455,
+    1514
+   ],
+   [
+    1794,
+    1830
+   ]
+  ],
+  "path": "videos/The.Bourne.Identity.2002__#01-27-39_01-29-19_label_B2-0-0.mp4"
+ },
+ {
+  "name": "The.World.Is.Not.Enough.1999__#00-10-22_00-10-40_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 433,
+  "duration_s": 18.041666666666668,
+  "events": [
+   [
+    6,
+    65
+   ]
+  ],
+  "path": "videos/The.World.Is.Not.Enough.1999__#00-10-22_00-10-40_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=-kwNh1lMU-w__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 4081,
+  "duration_s": 170.04166666666666,
+  "events": [
+   [
+    0,
+    837
+   ],
+   [
+    1360,
+    4080
+   ]
+  ],
+  "path": "videos/v=-kwNh1lMU-w__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=2Rr21qkZEDQ__#00-14-10_00-16-09_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 2858,
+  "duration_s": 119.08333333333333,
+  "events": [
+   [
+    482,
+    576
+   ],
+   [
+    922,
+    1032
+   ],
+   [
+    1389,
+    1444
+   ],
+   [
+    2035,
+    2160
+   ],
+   [
+    2472,
+    2670
+   ]
+  ],
+  "path": "videos/v=2Rr21qkZEDQ__#00-14-10_00-16-09_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=6KQFxxHmVMc__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 3654,
+  "duration_s": 152.25,
+  "events": [
+   [
+    144,
+    590
+   ],
+   [
+    1991,
+    2100
+   ],
+   [
+    2220,
+    2340
+   ],
+   [
+    2479,
+    2640
+   ]
+  ],
+  "path": "videos/v=6KQFxxHmVMc__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "v=9CWJd1SezkA__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 700,
+  "duration_s": 29.166666666666668,
+  "events": [
+   [
+    464,
+    614
+   ]
+  ],
+  "path": "videos/v=9CWJd1SezkA__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=CcD-YNlkMPY__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 1996,
+  "duration_s": 83.16666666666667,
+  "events": [
+   [
+    1300,
+    1356
+   ]
+  ],
+  "path": "videos/v=CcD-YNlkMPY__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=FRj2K0ulD8Q__#00-06-05_00-08-25_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 3339,
+  "duration_s": 139.125,
+  "events": [
+   [
+    0,
+    2547
+   ],
+   [
+    2765,
+    3329
+   ]
+  ],
+  "path": "videos/v=FRj2K0ulD8Q__#00-06-05_00-08-25_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=Ia9ATKNeUbY__#00-04-19_00-05-11_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 1250,
+  "duration_s": 52.083333333333336,
+  "events": [
+   [
+    27,
+    133
+   ],
+   [
+    274,
+    510
+   ],
+   [
+    1137,
+    1170
+   ]
+  ],
+  "path": "videos/v=Ia9ATKNeUbY__#00-04-19_00-05-11_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=ONsmJAyFAAw__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 1563,
+  "duration_s": 65.125,
+  "events": [
+   [
+    0,
+    1523
+   ]
+  ],
+  "path": "videos/v=ONsmJAyFAAw__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=SE5fxK7SasU__#00-03-23_00-04-08_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1082,
+  "duration_s": 45.083333333333336,
+  "events": [
+   [
+    0,
+    1081
+   ]
+  ],
+  "path": "videos/v=SE5fxK7SasU__#00-03-23_00-04-08_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=X6Tbn8_X-Os__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 4899,
+  "duration_s": 204.125,
+  "events": [
+   [
+    200,
+    914
+   ],
+   [
+    1790,
+    3450
+   ]
+  ],
+  "path": "videos/v=X6Tbn8_X-Os__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "v=_tsSKAsVZfo__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 2534,
+  "duration_s": 105.58333333333333,
+  "events": [
+   [
+    153,
+    1090
+   ],
+   [
+    1170,
+    2480
+   ]
+  ],
+  "path": "videos/v=_tsSKAsVZfo__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=fIlmgvc-bUk__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1415,
+  "duration_s": 58.958333333333336,
+  "events": [
+   [
+    123,
+    1370
+   ]
+  ],
+  "path": "videos/v=fIlmgvc-bUk__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=k7R_Qo-BiAw__#00-10-30_00-10-51_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 506,
+  "duration_s": 21.083333333333332,
+  "events": [
+   [
+    0,
+    150
+   ],
+   [
+    296,
+    505
+   ]
+  ],
+  "path": "videos/v=k7R_Qo-BiAw__#00-10-30_00-10-51_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=osjdmjNJUdg__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 2320,
+  "duration_s": 96.66666666666667,
+  "events": [
+   [
+    191,
+    856
+   ],
+   [
+    1380,
+    1985
+   ]
+  ],
+  "path": "videos/v=osjdmjNJUdg__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "v=rKpXqwE2rg8__#00-01-57_00-03-06_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1658,
+  "duration_s": 69.08333333333333,
+  "events": [
+   [
+    0,
+    1657
+   ]
+  ],
+  "path": "videos/v=rKpXqwE2rg8__#00-01-57_00-03-06_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=uQY15O3LKI0__#1_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 3970,
+  "duration_s": 165.41666666666666,
+  "events": [
+   [
+    297,
+    336
+   ],
+   [
+    600,
+    750
+   ],
+   [
+    811,
+    912
+   ],
+   [
+    1068,
+    1208
+   ],
+   [
+    1320,
+    1350
+   ],
+   [
+    1425,
+    1470
+   ],
+   [
+    1593,
+    1640
+   ],
+   [
+    1742,
+    1860
+   ],
+   [
+    1949,
+    2020
+   ],
+   [
+    2140,
+    2350
+   ],
+   [
+    2550,
+    2700
+   ],
+   [
+    2867,
+    2980
+   ],
+   [
+    3073,
+    3120
+   ],
+   [
+    3255,
+    3350
+   ],
+   [
+    3489,
+    3526
+   ],
+   [
+    3623,
+    3700
+   ],
+   [
+    3804,
+    3965
+   ]
+  ],
+  "path": "videos/v=uQY15O3LKI0__#1_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=wVey5JDRf_g__#00-00-00_00-01-20_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 1922,
+  "duration_s": 80.08333333333333,
+  "events": [
+   [
+    51,
+    210
+   ],
+   [
+    273,
+    410
+   ],
+   [
+    544,
+    720
+   ],
+   [
+    828,
+    970
+   ],
+   [
+    1135,
+    1270
+   ],
+   [
+    1413,
+    1500
+   ],
+   [
+    1618,
+    1710
+   ],
+   [
+    1822,
+    1920
+   ]
+  ],
+  "path": "videos/v=wVey5JDRf_g__#00-00-00_00-01-20_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=yy-KIWDcBr4__#00-16-10_00-17-19_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 1658,
+  "duration_s": 69.08333333333333,
+  "events": [
+   [
+    0,
+    90
+   ],
+   [
+    350,
+    424
+   ],
+   [
+    514,
+    550
+   ],
+   [
+    856,
+    956
+   ],
+   [
+    1040,
+    1103
+   ],
+   [
+    1576,
+    1657
+   ]
+  ],
+  "path": "videos/v=yy-KIWDcBr4__#00-16-10_00-17-19_label_B6-0-0.mp4"
+ },
+ {
+  "name": "Bad.Boys.II.2003__#01-11-16_01-14-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 3937,
+  "duration_s": 164.04166666666666,
+  "events": [],
+  "path": "videos/Bad.Boys.II.2003__#01-11-16_01-14-00_label_A.mp4"
+ },
+ {
+  "name": "Brick.Mansions.2014__#00-08-37_00-10-04_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2088,
+  "duration_s": 87.0,
+  "events": [],
+  "path": "videos/Brick.Mansions.2014__#00-08-37_00-10-04_label_A.mp4"
+ },
+ {
+  "name": "Fast.Furious.6.2013__#01-37-00_01-38-05_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1561,
+  "duration_s": 65.04166666666667,
+  "events": [],
+  "path": "videos/Fast.Furious.6.2013__#01-37-00_01-38-05_label_A.mp4"
+ },
+ {
+  "name": "Good.Will.Hunting.1997__#00-58-18_01-02-30_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 6049,
+  "duration_s": 252.04166666666666,
+  "events": [],
+  "path": "videos/Good.Will.Hunting.1997__#00-58-18_01-02-30_label_A.mp4"
+ },
+ {
+  "name": "Kingsman.The.Golden.Circle.2017__#02-09-30_02-10-45_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1801,
+  "duration_s": 75.04166666666667,
+  "events": [],
+  "path": "videos/Kingsman.The.Golden.Circle.2017__#02-09-30_02-10-45_label_A.mp4"
+ },
+ {
+  "name": "Mission.Impossible.Ghost.Protocol.2011__#01-24-59_01-28-30_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 5064,
+  "duration_s": 211.0,
+  "events": [],
+  "path": "videos/Mission.Impossible.Ghost.Protocol.2011__#01-24-59_01-28-30_label_A.mp4"
+ },
+ {
+  "name": "Sin.City.2005__#01-43-21_01-44-21_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1441,
+  "duration_s": 60.041666666666664,
+  "events": [],
+  "path": "videos/Sin.City.2005__#01-43-21_01-44-21_label_A.mp4"
+ },
+ {
+  "name": "The.Bourne.Ultimatum.2007__#0-55-55_0-56-10_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 361,
+  "duration_s": 15.041666666666666,
+  "events": [],
+  "path": "videos/The.Bourne.Ultimatum.2007__#0-55-55_0-56-10_label_A.mp4"
+ },
+ {
+  "name": "The.Pursuit.of.Happyness.2006__#00-30-50_00-32-31_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2425,
+  "duration_s": 101.04166666666667,
+  "events": [],
+  "path": "videos/The.Pursuit.of.Happyness.2006__#00-30-50_00-32-31_label_A.mp4"
+ },
+ {
+  "name": "Young.And.Dangerous.IV.1997__#0-10-35_0-11-50_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1801,
+  "duration_s": 75.04166666666667,
+  "events": [],
+  "path": "videos/Young.And.Dangerous.IV.1997__#0-10-35_0-11-50_label_A.mp4"
+ },
+ {
+  "name": "v=5NZxPmTpV6Y__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2807,
+  "duration_s": 116.95833333333333,
+  "events": [],
+  "path": "videos/v=5NZxPmTpV6Y__#1_label_A.mp4"
+ },
+ {
+  "name": "v=BL8ppFg7NKI__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 5470,
+  "duration_s": 227.91666666666666,
+  "events": [],
+  "path": "videos/v=BL8ppFg7NKI__#1_label_A.mp4"
+ },
+ {
+  "name": "v=HksDvkX6Bjk__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 15435,
+  "duration_s": 643.125,
+  "events": [],
+  "path": "videos/v=HksDvkX6Bjk__#1_label_A.mp4"
+ },
+ {
+  "name": "v=Pf7WtK-YPDA__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1954,
+  "duration_s": 81.41666666666667,
+  "events": [],
+  "path": "videos/v=Pf7WtK-YPDA__#1_label_A.mp4"
+ },
+ {
+  "name": "v=W5qLlC9il3s__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1385,
+  "duration_s": 57.708333333333336,
+  "events": [],
+  "path": "videos/v=W5qLlC9il3s__#1_label_A.mp4"
+ },
+ {
+  "name": "v=enYITYwvPAQ__#00-27-00_00-30-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 4321,
+  "duration_s": 180.04166666666666,
+  "events": [],
+  "path": "videos/v=enYITYwvPAQ__#00-27-00_00-30-00_label_A.mp4"
+ },
+ {
+  "name": "v=lyZxvgPD4gM__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 5529,
+  "duration_s": 230.375,
+  "events": [],
+  "path": "videos/v=lyZxvgPD4gM__#1_label_A.mp4"
+ },
+ {
+  "name": "v=tlFJIG9mTGQ__#00-15-00_00-18-36_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 5187,
+  "duration_s": 216.125,
+  "events": [],
+  "path": "videos/v=tlFJIG9mTGQ__#00-15-00_00-18-36_label_A.mp4"
+ },
+ {
+  "name": "v=y7vIfdKwHDk__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 4182,
+  "duration_s": 174.25,
+  "events": [],
+  "path": "videos/v=y7vIfdKwHDk__#1_label_A.mp4"
+ },
+ {
+  "name": "Brick.Mansions.2014__#00-41-25_00-42-36_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 1704,
+  "duration_s": 71.0,
+  "events": [
+   [
+    523,
+    610
+   ],
+   [
+    900,
+    1700
+   ]
+  ],
+  "path": "videos/Brick.Mansions.2014__#00-41-25_00-42-36_label_B1-0-0.mp4"
+ },
+ {
+  "name": "City.Of.Men.2007__#01-35-30_01-36-00_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 721,
+  "duration_s": 30.041666666666668,
+  "events": [
+   [
+    135,
+    265
+   ]
+  ],
+  "path": "videos/City.Of.Men.2007__#01-35-30_01-36-00_label_B2-0-0.mp4"
+ },
+ {
+  "name": "Fast.Five.2011__#00-01-41_00-01-57_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 385,
+  "duration_s": 16.041666666666668,
+  "events": [
+   [
+    70,
+    310
+   ]
+  ],
+  "path": "videos/Fast.Five.2011__#00-01-41_00-01-57_label_B6-0-0.mp4"
+ },
+ {
+  "name": "God.Bless.America.2011__#00-38-25_00-39-37_label_B2-B5-0.mp4",
+  "category": "Shooting+Abuse",
+  "fps": 24.0,
+  "n_frames": 1729,
+  "duration_s": 72.04166666666667,
+  "events": [
+   [
+    110,
+    160
+   ],
+   [
+    300,
+    560
+   ],
+   [
+    810,
+    1150
+   ]
+  ],
+  "path": "videos/God.Bless.America.2011__#00-38-25_00-39-37_label_B2-B5-0.mp4"
+ },
+ {
+  "name": "Ip.Man.2008__#01-40-37_01-42-07_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 2161,
+  "duration_s": 90.04166666666667,
+  "events": [
+   [
+    105,
+    1482
+   ]
+  ],
+  "path": "videos/Ip.Man.2008__#01-40-37_01-42-07_label_B4-0-0.mp4"
+ },
+ {
+  "name": "Lord.of.War__#00-50-10_00-50-50_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 961,
+  "duration_s": 40.041666666666664,
+  "events": [
+   [
+    119,
+    230
+   ]
+  ],
+  "path": "videos/Lord.of.War__#00-50-10_00-50-50_label_G-0-0.mp4"
+ },
+ {
+  "name": "Mission.Impossible.II.2000__#01-32-56_01-33-25_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 697,
+  "duration_s": 29.041666666666668,
+  "events": [
+   [
+    460,
+    600
+   ]
+  ],
+  "path": "videos/Mission.Impossible.II.2000__#01-32-56_01-33-25_label_B1-0-0.mp4"
+ },
+ {
+  "name": "Operation.Red.Sea.2018__#0-25-36_0-26-03_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 648,
+  "duration_s": 27.0,
+  "events": [
+   [
+    585,
+    620
+   ]
+  ],
+  "path": "videos/Operation.Red.Sea.2018__#0-25-36_0-26-03_label_G-0-0.mp4"
+ },
+ {
+  "name": "Salt.2010__#01-06-27_01-07-07_label_G-B2-0.mp4",
+  "category": "Explosion+Shooting",
+  "fps": 24.0,
+  "n_frames": 962,
+  "duration_s": 40.083333333333336,
+  "events": [
+   [
+    25,
+    92
+   ],
+   [
+    119,
+    137
+   ],
+   [
+    190,
+    270
+   ],
+   [
+    319,
+    526
+   ],
+   [
+    690,
+    730
+   ]
+  ],
+  "path": "videos/Salt.2010__#01-06-27_01-07-07_label_G-B2-0.mp4"
+ },
+ {
+  "name": "Sin.City.2005__#0-32-00_0-32-16_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 384,
+  "duration_s": 16.0,
+  "events": [
+   [
+    125,
+    159
+   ],
+   [
+    280,
+    320
+   ]
+  ],
+  "path": "videos/Sin.City.2005__#0-32-00_0-32-16_label_B2-0-0.mp4"
+ },
+ {
+  "name": "Taken.2.UNRATED.EXTENDED.2012__#00-13-42_00-14-16_label_B5-0-0.mp4",
+  "category": "Abuse",
+  "fps": 24.0,
+  "n_frames": 818,
+  "duration_s": 34.083333333333336,
+  "events": [
+   [
+    40,
+    424
+   ]
+  ],
+  "path": "videos/Taken.2.UNRATED.EXTENDED.2012__#00-13-42_00-14-16_label_B5-0-0.mp4"
+ },
+ {
+  "name": "The.Bourne.Identity.2002__#01-45-00_01-45-46_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 1104,
+  "duration_s": 46.0,
+  "events": [
+   [
+    240,
+    296
+   ],
+   [
+    525,
+    559
+   ],
+   [
+    1045,
+    1086
+   ]
+  ],
+  "path": "videos/The.Bourne.Identity.2002__#01-45-00_01-45-46_label_B1-0-0.mp4"
+ },
+ {
+  "name": "Tropa.de.Elite.2.2010__#00-13-41_00-14-56_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1801,
+  "duration_s": 75.04166666666667,
+  "events": [
+   [
+    0,
+    535
+   ],
+   [
+    1677,
+    1735
+   ]
+  ],
+  "path": "videos/Tropa.de.Elite.2.2010__#00-13-41_00-14-56_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=0N0PbzjEg0U__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1518,
+  "duration_s": 63.25,
+  "events": [
+   [
+    0,
+    550
+   ]
+  ],
+  "path": "videos/v=0N0PbzjEg0U__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=2WkuPNLfl5s__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1242,
+  "duration_s": 51.75,
+  "events": [
+   [
+    225,
+    1008
+   ]
+  ],
+  "path": "videos/v=2WkuPNLfl5s__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=6TR2rcgHm4g__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1621,
+  "duration_s": 67.54166666666667,
+  "events": [
+   [
+    0,
+    344
+   ],
+   [
+    497,
+    790
+   ],
+   [
+    1025,
+    1195
+   ],
+   [
+    1246,
+    1590
+   ]
+  ],
+  "path": "videos/v=6TR2rcgHm4g__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=9Jk2sIp5MRQ__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 568,
+  "duration_s": 23.666666666666668,
+  "events": [
+   [
+    175,
+    215
+   ],
+   [
+    273,
+    567
+   ]
+  ],
+  "path": "videos/v=9Jk2sIp5MRQ__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=CczYDDDf22A__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 679,
+  "duration_s": 28.291666666666668,
+  "events": [
+   [
+    190,
+    240
+   ]
+  ],
+  "path": "videos/v=CczYDDDf22A__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=FW_qbiPH7UA__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 3283,
+  "duration_s": 136.79166666666666,
+  "events": [
+   [
+    1654,
+    2080
+   ],
+   [
+    2367,
+    2745
+   ]
+  ],
+  "path": "videos/v=FW_qbiPH7UA__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "v=Ia9ATKNeUbY__#00-05-19_00-06-09_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 1202,
+  "duration_s": 50.083333333333336,
+  "events": [
+   [
+    120,
+    180
+   ],
+   [
+    800,
+    855
+   ],
+   [
+    1112,
+    1185
+   ]
+  ],
+  "path": "videos/v=Ia9ATKNeUbY__#00-05-19_00-06-09_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=OOjjPGN8jSU__#1_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 5918,
+  "duration_s": 246.58333333333334,
+  "events": [
+   [
+    884,
+    911
+   ],
+   [
+    994,
+    1030
+   ],
+   [
+    1083,
+    1102
+   ],
+   [
+    1235,
+    1266
+   ],
+   [
+    1375,
+    1483
+   ],
+   [
+    1680,
+    1745
+   ],
+   [
+    1830,
+    1890
+   ],
+   [
+    2070,
+    2250
+   ],
+   [
+    2320,
+    2520
+   ],
+   [
+    2557,
+    2650
+   ],
+   [
+    2798,
+    3030
+   ],
+   [
+    3175,
+    3265
+   ],
+   [
+    3622,
+    3670
+   ],
+   [
+    3935,
+    3999
+   ],
+   [
+    4089,
+    4150
+   ],
+   [
+    4435,
+    4515
+   ],
+   [
+    4590,
+    4687
+   ]
+  ],
+  "path": "videos/v=OOjjPGN8jSU__#1_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=SMy2_qNO2Y0__#00-01-50_00-03-13_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 1994,
+  "duration_s": 83.08333333333333,
+  "events": [
+   [
+    257,
+    310
+   ],
+   [
+    1040,
+    1300
+   ]
+  ],
+  "path": "videos/v=SMy2_qNO2Y0__#00-01-50_00-03-13_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=Y1hxr1MWLjM__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 3071,
+  "duration_s": 127.95833333333333,
+  "events": [
+   [
+    1920,
+    2483
+   ]
+  ],
+  "path": "videos/v=Y1hxr1MWLjM__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "v=aQ3qMpgZjwg__#00-00-00_00-01-48_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 2593,
+  "duration_s": 108.04166666666667,
+  "events": [
+   [
+    637,
+    1530
+   ],
+   [
+    1800,
+    2100
+   ]
+  ],
+  "path": "videos/v=aQ3qMpgZjwg__#00-00-00_00-01-48_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=fQQzg2VfJME__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1348,
+  "duration_s": 56.166666666666664,
+  "events": [
+   [
+    117,
+    1300
+   ]
+  ],
+  "path": "videos/v=fQQzg2VfJME__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=k98yVPXiYoU__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 736,
+  "duration_s": 30.666666666666668,
+  "events": [
+   [
+    64,
+    252
+   ]
+  ],
+  "path": "videos/v=k98yVPXiYoU__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=ovQ1VTJ_IUI__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 1688,
+  "duration_s": 70.33333333333333,
+  "events": [
+   [
+    140,
+    370
+   ],
+   [
+    660,
+    861
+   ]
+  ],
+  "path": "videos/v=ovQ1VTJ_IUI__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "v=rXWOpZ7W2fA__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 2796,
+  "duration_s": 116.5,
+  "events": [
+   [
+    1500,
+    1570
+   ],
+   [
+    1665,
+    1800
+   ],
+   [
+    1957,
+    2137
+   ]
+  ],
+  "path": "videos/v=rXWOpZ7W2fA__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "v=uprb6aBzymw__#00-03-03_00-05-13_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 3121,
+  "duration_s": 130.04166666666666,
+  "events": [
+   [
+    0,
+    125
+   ],
+   [
+    530,
+    790
+   ],
+   [
+    2045,
+    2887
+   ]
+  ],
+  "path": "videos/v=uprb6aBzymw__#00-03-03_00-05-13_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=wVey5JDRf_g__#00-01-30_00-02-41_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 1706,
+  "duration_s": 71.08333333333333,
+  "events": [
+   [
+    142,
+    296
+   ],
+   [
+    447,
+    508
+   ],
+   [
+    606,
+    710
+   ],
+   [
+    800,
+    870
+   ],
+   [
+    1000,
+    1185
+   ],
+   [
+    1414,
+    1550
+   ],
+   [
+    1635,
+    1700
+   ]
+  ],
+  "path": "videos/v=wVey5JDRf_g__#00-01-30_00-02-41_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=zI0q5UDP47g__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 3603,
+  "duration_s": 150.125,
+  "events": [
+   [
+    66,
+    3560
+   ]
+  ],
+  "path": "videos/v=zI0q5UDP47g__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "Be.with.You.2018__#00-04-20_00-05-35_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1801,
+  "duration_s": 75.04166666666667,
+  "events": [],
+  "path": "videos/Be.with.You.2018__#00-04-20_00-05-35_label_A.mp4"
+ },
+ {
+  "name": "Bullet.in.the.Head.1990__#00-03-59_00-04-40_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 985,
+  "duration_s": 41.041666666666664,
+  "events": [],
+  "path": "videos/Bullet.in.the.Head.1990__#00-03-59_00-04-40_label_A.mp4"
+ },
+ {
+  "name": "Flipped.2010__#00-08-55_00-10-50_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2762,
+  "duration_s": 115.08333333333333,
+  "events": [],
+  "path": "videos/Flipped.2010__#00-08-55_00-10-50_label_A.mp4"
+ },
+ {
+  "name": "Haywire.2011__#00-02-06_00-03-29_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1993,
+  "duration_s": 83.04166666666667,
+  "events": [],
+  "path": "videos/Haywire.2011__#00-02-06_00-03-29_label_A.mp4"
+ },
+ {
+  "name": "Kingsman.The.Secret.Service.2014__#00-25-29_00-26-24_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1321,
+  "duration_s": 55.041666666666664,
+  "events": [],
+  "path": "videos/Kingsman.The.Secret.Service.2014__#00-25-29_00-26-24_label_A.mp4"
+ },
+ {
+  "name": "Mission.Impossible.II.2000__#00-11-37_00-15-46_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 693,
+  "duration_s": 28.875,
+  "events": [],
+  "path": "videos/Mission.Impossible.II.2000__#00-11-37_00-15-46_label_A.mp4"
+ },
+ {
+  "name": "Skyfall.2012__#02-14-50_02-16-25_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2281,
+  "duration_s": 95.04166666666667,
+  "events": [],
+  "path": "videos/Skyfall.2012__#02-14-50_02-16-25_label_A.mp4"
+ },
+ {
+  "name": "The.Bourne.Ultimatum.2007__#01-32-57_01-33-53_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1345,
+  "duration_s": 56.041666666666664,
+  "events": [],
+  "path": "videos/The.Bourne.Ultimatum.2007__#01-32-57_01-33-53_label_A.mp4"
+ },
+ {
+  "name": "The.Pursuit.of.Happyness.2006__#01-34-18_01-38-11_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 5593,
+  "duration_s": 233.04166666666666,
+  "events": [],
+  "path": "videos/The.Pursuit.of.Happyness.2006__#01-34-18_01-38-11_label_A.mp4"
+ },
+ {
+  "name": "Your.Name.2016__#00-05-52_00-08-22_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 3601,
+  "duration_s": 150.04166666666666,
+  "events": [],
+  "path": "videos/Your.Name.2016__#00-05-52_00-08-22_label_A.mp4"
+ },
+ {
+  "name": "v=5l-nbDl0qvg__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 13124,
+  "duration_s": 546.8333333333334,
+  "events": [],
+  "path": "videos/v=5l-nbDl0qvg__#1_label_A.mp4"
+ },
+ {
+  "name": "v=DdIA1Owbcdc__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1064,
+  "duration_s": 44.333333333333336,
+  "events": [],
+  "path": "videos/v=DdIA1Owbcdc__#1_label_A.mp4"
+ },
+ {
+  "name": "v=I7oSupyExVY__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 4825,
+  "duration_s": 201.04166666666666,
+  "events": [],
+  "path": "videos/v=I7oSupyExVY__#1_label_A.mp4"
+ },
+ {
+  "name": "v=Q8b0XbtpFsA__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 4633,
+  "duration_s": 193.04166666666666,
+  "events": [],
+  "path": "videos/v=Q8b0XbtpFsA__#1_label_A.mp4"
+ },
+ {
+  "name": "v=Wc2QW06H48M__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1554,
+  "duration_s": 64.75,
+  "events": [],
+  "path": "videos/v=Wc2QW06H48M__#1_label_A.mp4"
+ },
+ {
+  "name": "v=es97CGK_5XQ__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1633,
+  "duration_s": 68.04166666666667,
+  "events": [],
+  "path": "videos/v=es97CGK_5XQ__#1_label_A.mp4"
+ },
+ {
+  "name": "v=mfFYGFJhBI4__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 255,
+  "duration_s": 10.625,
+  "events": [],
+  "path": "videos/v=mfFYGFJhBI4__#1_label_A.mp4"
+ },
+ {
+  "name": "v=usAvzbDq6-c__#00-03-00_00-06-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 4322,
+  "duration_s": 180.08333333333334,
+  "events": [],
+  "path": "videos/v=usAvzbDq6-c__#00-03-00_00-06-00_label_A.mp4"
+ },
+ {
+  "name": "v=yZ2wlTAN49g__#00-03-00_00-06-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 4322,
+  "duration_s": 180.08333333333334,
+  "events": [],
+  "path": "videos/v=yZ2wlTAN49g__#00-03-00_00-06-00_label_A.mp4"
+ },
+ {
+  "name": "Brick.Mansions.2014__#01-02-00_01-02-43_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 1032,
+  "duration_s": 43.0,
+  "events": [
+   [
+    280,
+    550
+   ]
+  ],
+  "path": "videos/Brick.Mansions.2014__#01-02-00_01-02-43_label_B2-0-0.mp4"
+ },
+ {
+  "name": "City.of.God.2002__#00-37-20_00-38-02_label_B5-0-0.mp4",
+  "category": "Abuse",
+  "fps": 24.0,
+  "n_frames": 1009,
+  "duration_s": 42.041666666666664,
+  "events": [
+   [
+    530,
+    750
+   ]
+  ],
+  "path": "videos/City.of.God.2002__#00-37-20_00-38-02_label_B5-0-0.mp4"
+ },
+ {
+  "name": "Fast.Five.2011__#00-32-05_00-32-24_label_B1-B2-0.mp4",
+  "category": "Fighting+Shooting",
+  "fps": 24.0,
+  "n_frames": 457,
+  "duration_s": 19.041666666666668,
+  "events": [
+   [
+    104,
+    155
+   ],
+   [
+    194,
+    360
+   ]
+  ],
+  "path": "videos/Fast.Five.2011__#00-32-05_00-32-24_label_B1-B2-0.mp4"
+ },
+ {
+  "name": "God.Bless.America.2011__#01-32-00_01-32-50_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 1201,
+  "duration_s": 50.041666666666664,
+  "events": [
+   [
+    122,
+    180
+   ]
+  ],
+  "path": "videos/God.Bless.America.2011__#01-32-00_01-32-50_label_B2-0-0.mp4"
+ },
+ {
+  "name": "Ip.Man.3.2015__#00-17-51_00-18-51_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 1440,
+  "duration_s": 60.0,
+  "events": [
+   [
+    0,
+    145
+   ],
+   [
+    305,
+    470
+   ]
+  ],
+  "path": "videos/Ip.Man.3.2015__#00-17-51_00-18-51_label_B1-0-0.mp4"
+ },
+ {
+  "name": "Lord.of.War__#01-41-04_01-41-53_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 1177,
+  "duration_s": 49.041666666666664,
+  "events": [
+   [
+    295,
+    318
+   ],
+   [
+    433,
+    467
+   ]
+  ],
+  "path": "videos/Lord.of.War__#01-41-04_01-41-53_label_B1-0-0.mp4"
+ },
+ {
+  "name": "Mission.Impossible.II.2000__#01-38-25_01-38-41_label_B2-B5-0.mp4",
+  "category": "Shooting+Abuse",
+  "fps": 24.0,
+  "n_frames": 385,
+  "duration_s": 16.041666666666668,
+  "events": [
+   [
+    130,
+    165
+   ],
+   [
+    260,
+    295
+   ]
+  ],
+  "path": "videos/Mission.Impossible.II.2000__#01-38-25_01-38-41_label_B2-B5-0.mp4"
+ },
+ {
+  "name": "Operation.Red.Sea.2018__#0-29-36_0-30-20_label_B2-G-0.mp4",
+  "category": "Shooting+Explosion",
+  "fps": 24.0,
+  "n_frames": 1056,
+  "duration_s": 44.0,
+  "events": [
+   [
+    222,
+    450
+   ],
+   [
+    460,
+    533
+   ]
+  ],
+  "path": "videos/Operation.Red.Sea.2018__#0-29-36_0-30-20_label_B2-G-0.mp4"
+ },
+ {
+  "name": "Salt.2010__#01-12-05_01-12-32_label_B2-G-0.mp4",
+  "category": "Shooting+Explosion",
+  "fps": 24.0,
+  "n_frames": 649,
+  "duration_s": 27.041666666666668,
+  "events": [
+   [
+    123,
+    296
+   ],
+   [
+    340,
+    456
+   ]
+  ],
+  "path": "videos/Salt.2010__#01-12-05_01-12-32_label_B2-G-0.mp4"
+ },
+ {
+  "name": "Sin.City.2005__#0-43-45_0-44-01_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 385,
+  "duration_s": 16.041666666666668,
+  "events": [
+   [
+    52,
+    148
+   ]
+  ],
+  "path": "videos/Sin.City.2005__#0-43-45_0-44-01_label_B2-0-0.mp4"
+ },
+ {
+  "name": "Taken.2.UNRATED.EXTENDED.2012__#00-45-50_00-46-20_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 722,
+  "duration_s": 30.083333333333332,
+  "events": [
+   [
+    374,
+    418
+   ]
+  ],
+  "path": "videos/Taken.2.UNRATED.EXTENDED.2012__#00-45-50_00-46-20_label_G-0-0.mp4"
+ },
+ {
+  "name": "The.Bourne.Legacy.2012__#0-39-56_0-40-15_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 457,
+  "duration_s": 19.041666666666668,
+  "events": [
+   [
+    24,
+    119
+   ]
+  ],
+  "path": "videos/The.Bourne.Legacy.2012__#0-39-56_0-40-15_label_G-0-0.mp4"
+ },
+ {
+  "name": "Tropa.de.Elite.2.2010__#00-42-00_00-43-00_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 1441,
+  "duration_s": 60.041666666666664,
+  "events": [
+   [
+    777,
+    900
+   ]
+  ],
+  "path": "videos/Tropa.de.Elite.2.2010__#00-42-00_00-43-00_label_B2-0-0.mp4"
+ },
+ {
+  "name": "v=0W8LohxH9nI__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 1413,
+  "duration_s": 58.875,
+  "events": [
+   [
+    933,
+    1250
+   ]
+  ],
+  "path": "videos/v=0W8LohxH9nI__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "v=2al4t5inObA__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 3582,
+  "duration_s": 149.25,
+  "events": [
+   [
+    0,
+    3322
+   ]
+  ],
+  "path": "videos/v=2al4t5inObA__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=6nfo9c7a5pE__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 1235,
+  "duration_s": 51.458333333333336,
+  "events": [
+   [
+    0,
+    150
+   ],
+   [
+    295,
+    700
+   ]
+  ],
+  "path": "videos/v=6nfo9c7a5pE__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "v=9Ydg5IeZpFI__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 4621,
+  "duration_s": 192.54166666666666,
+  "events": [
+   [
+    55,
+    660
+   ],
+   [
+    1131,
+    1710
+   ],
+   [
+    2231,
+    2475
+   ],
+   [
+    2799,
+    3291
+   ],
+   [
+    3830,
+    4489
+   ]
+  ],
+  "path": "videos/v=9Ydg5IeZpFI__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "v=CoxsDkB-rWU__#00-07-06_00-10-30_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 4898,
+  "duration_s": 204.08333333333334,
+  "events": [
+   [
+    0,
+    4896
+   ]
+  ],
+  "path": "videos/v=CoxsDkB-rWU__#00-07-06_00-10-30_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=FfrXebzAwOg__#00-06-10_00-07-19_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 1658,
+  "duration_s": 69.08333333333333,
+  "events": [
+   [
+    165,
+    202
+   ],
+   [
+    341,
+    410
+   ],
+   [
+    599,
+    700
+   ],
+   [
+    780,
+    852
+   ],
+   [
+    996,
+    1022
+   ],
+   [
+    1117,
+    1181
+   ],
+   [
+    1442,
+    1516
+   ]
+  ],
+  "path": "videos/v=FfrXebzAwOg__#00-06-10_00-07-19_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=Ia9ATKNeUbY__#00-06-19_00-06-50_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 746,
+  "duration_s": 31.083333333333332,
+  "events": [
+   [
+    246,
+    290
+   ],
+   [
+    427,
+    527
+   ],
+   [
+    687,
+    744
+   ]
+  ],
+  "path": "videos/v=Ia9ATKNeUbY__#00-06-19_00-06-50_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=PRH5rYUHoVU__#00-00-25_00-02-50_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 3480,
+  "duration_s": 145.0,
+  "events": [
+   [
+    27,
+    144
+   ],
+   [
+    230,
+    440
+   ],
+   [
+    527,
+    600
+   ],
+   [
+    715,
+    905
+   ],
+   [
+    958,
+    1072
+   ],
+   [
+    1235,
+    1290
+   ],
+   [
+    1485,
+    1565
+   ],
+   [
+    1820,
+    1910
+   ],
+   [
+    2020,
+    3030
+   ],
+   [
+    3061,
+    3160
+   ],
+   [
+    3255,
+    3387
+   ]
+  ],
+  "path": "videos/v=PRH5rYUHoVU__#00-00-25_00-02-50_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=T-LH8Gv5zzY__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 2426,
+  "duration_s": 101.08333333333333,
+  "events": [
+   [
+    0,
+    2425
+   ]
+  ],
+  "path": "videos/v=T-LH8Gv5zzY__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=Y43UkfAe_bc__#00-00-00_00-01-40_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 2402,
+  "duration_s": 100.08333333333333,
+  "events": [
+   [
+    0,
+    2400
+   ]
+  ],
+  "path": "videos/v=Y43UkfAe_bc__#00-00-00_00-01-40_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=aWPWHU8x6kE__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 4829,
+  "duration_s": 201.20833333333334,
+  "events": [
+   [
+    3368,
+    4698
+   ]
+  ],
+  "path": "videos/v=aWPWHU8x6kE__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=fhiAyxpDQMU__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 3985,
+  "duration_s": 166.04166666666666,
+  "events": [
+   [
+    0,
+    3975
+   ]
+  ],
+  "path": "videos/v=fhiAyxpDQMU__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=kPWdgckIhLI__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 793,
+  "duration_s": 33.041666666666664,
+  "events": [
+   [
+    0,
+    558
+   ]
+  ],
+  "path": "videos/v=kPWdgckIhLI__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=p7kvQ4OpDgU__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1889,
+  "duration_s": 78.70833333333333,
+  "events": [
+   [
+    270,
+    1370
+   ]
+  ],
+  "path": "videos/v=p7kvQ4OpDgU__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=sE-DC2trBkI__#00-01-00_00-02-45_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 2522,
+  "duration_s": 105.08333333333333,
+  "events": [
+   [
+    225,
+    322
+   ],
+   [
+    640,
+    760
+   ],
+   [
+    991,
+    1160
+   ],
+   [
+    1450,
+    1550
+   ],
+   [
+    1815,
+    1883
+   ],
+   [
+    2205,
+    2245
+   ]
+  ],
+  "path": "videos/v=sE-DC2trBkI__#00-01-00_00-02-45_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=utQ5AvXtNLA__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1076,
+  "duration_s": 44.833333333333336,
+  "events": [
+   [
+    0,
+    893
+   ]
+  ],
+  "path": "videos/v=utQ5AvXtNLA__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=wVey5JDRf_g__#00-04-09_00-05-06_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 1371,
+  "duration_s": 57.125,
+  "events": [
+   [
+    85,
+    200
+   ],
+   [
+    352,
+    438
+   ],
+   [
+    547,
+    690
+   ],
+   [
+    777,
+    833
+   ],
+   [
+    918,
+    952
+   ],
+   [
+    1055,
+    1170
+   ],
+   [
+    1314,
+    1365
+   ]
+  ],
+  "path": "videos/v=wVey5JDRf_g__#00-04-09_00-05-06_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=zQbnQBCTSiA__#1_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 5695,
+  "duration_s": 237.29166666666666,
+  "events": [
+   [
+    663,
+    1530
+   ],
+   [
+    2020,
+    2553
+   ],
+   [
+    3319,
+    3710
+   ],
+   [
+    4157,
+    4478
+   ],
+   [
+    4597,
+    4930
+   ]
+  ],
+  "path": "videos/v=zQbnQBCTSiA__#1_label_B1-0-0.mp4"
+ },
+ {
+  "name": "Be.with.You.2018__#00-16-18_00-18-09_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2665,
+  "duration_s": 111.04166666666667,
+  "events": [],
+  "path": "videos/Be.with.You.2018__#00-16-18_00-18-09_label_A.mp4"
+ },
+ {
+  "name": "Bullet.in.the.Head.1990__#00-25-11_00-26-15_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1537,
+  "duration_s": 64.04166666666667,
+  "events": [],
+  "path": "videos/Bullet.in.the.Head.1990__#00-25-11_00-26-15_label_A.mp4"
+ },
+ {
+  "name": "Flipped.2010__#00-42-52_00-45-31_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 3817,
+  "duration_s": 159.04166666666666,
+  "events": [],
+  "path": "videos/Flipped.2010__#00-42-52_00-45-31_label_A.mp4"
+ },
+ {
+  "name": "Hear.Me.2009__#00-30-50_00-32-31_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2425,
+  "duration_s": 101.04166666666667,
+  "events": [],
+  "path": "videos/Hear.Me.2009__#00-30-50_00-32-31_label_A.mp4"
+ },
+ {
+  "name": "Law.Abiding.Citizen.2009__#00-00-35_00-01-31_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1345,
+  "duration_s": 56.041666666666664,
+  "events": [],
+  "path": "videos/Law.Abiding.Citizen.2009__#00-00-35_00-01-31_label_A.mp4"
+ },
+ {
+  "name": "Mission.Impossible.II.2000__#00-24-30_00-30-10_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 8160,
+  "duration_s": 340.0,
+  "events": [],
+  "path": "videos/Mission.Impossible.II.2000__#00-24-30_00-30-10_label_A.mp4"
+ },
+ {
+  "name": "Spectre.2015__#00-16-41_00-18-55_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 3216,
+  "duration_s": 134.0,
+  "events": [],
+  "path": "videos/Spectre.2015__#00-16-41_00-18-55_label_A.mp4"
+ },
+ {
+  "name": "The.Fast.and.the.Furious.2001__#00-26-09_00-26-52_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1033,
+  "duration_s": 43.041666666666664,
+  "events": [],
+  "path": "videos/The.Fast.and.the.Furious.2001__#00-26-09_00-26-52_label_A.mp4"
+ },
+ {
+  "name": "The.Secret.Life.of.Walter.Mitty.2013__#00-08-55_00-10-50_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2762,
+  "duration_s": 115.08333333333333,
+  "events": [],
+  "path": "videos/The.Secret.Life.of.Walter.Mitty.2013__#00-08-55_00-10-50_label_A.mp4"
+ },
+ {
+  "name": "Your.Name.2016__#01-01-20_01-04-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 3841,
+  "duration_s": 160.04166666666666,
+  "events": [],
+  "path": "videos/Your.Name.2016__#01-01-20_01-04-00_label_A.mp4"
+ },
+ {
+  "name": "v=6cvZOGzfqWU__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 5594,
+  "duration_s": 233.08333333333334,
+  "events": [],
+  "path": "videos/v=6cvZOGzfqWU__#1_label_A.mp4"
+ },
+ {
+  "name": "v=EToznHwS0OA__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 3730,
+  "duration_s": 155.41666666666666,
+  "events": [],
+  "path": "videos/v=EToznHwS0OA__#1_label_A.mp4"
+ },
+ {
+  "name": "v=JHsfKFF9Oag__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2699,
+  "duration_s": 112.45833333333333,
+  "events": [],
+  "path": "videos/v=JHsfKFF9Oag__#1_label_A.mp4"
+ },
+ {
+  "name": "v=QBfO3qfo7zg__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 4661,
+  "duration_s": 194.20833333333334,
+  "events": [],
+  "path": "videos/v=QBfO3qfo7zg__#1_label_A.mp4"
+ },
+ {
+  "name": "v=Wp6gzFUaci8__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2780,
+  "duration_s": 115.83333333333333,
+  "events": [],
+  "path": "videos/v=Wp6gzFUaci8__#1_label_A.mp4"
+ },
+ {
+  "name": "v=f6j3YWgVBto__#00-01-50_00-02-30_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 960,
+  "duration_s": 40.0,
+  "events": [],
+  "path": "videos/v=f6j3YWgVBto__#00-01-50_00-02-30_label_A.mp4"
+ },
+ {
+  "name": "v=n0AhGnEjako__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2376,
+  "duration_s": 99.0,
+  "events": [],
+  "path": "videos/v=n0AhGnEjako__#1_label_A.mp4"
+ },
+ {
+  "name": "v=usAvzbDq6-c__#00-18-00_00-21-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 4322,
+  "duration_s": 180.08333333333334,
+  "events": [],
+  "path": "videos/v=usAvzbDq6-c__#00-18-00_00-21-00_label_A.mp4"
+ },
+ {
+  "name": "v=yviKz5J-pEA__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 3731,
+  "duration_s": 155.45833333333334,
+  "events": [],
+  "path": "videos/v=yviKz5J-pEA__#1_label_A.mp4"
+ },
+ {
+  "name": "Bullet.in.the.Head.1990__#00-17-20_00-18-55_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 2281,
+  "duration_s": 95.04166666666667,
+  "events": [
+   [
+    138,
+    280
+   ],
+   [
+    546,
+    1915
+   ]
+  ],
+  "path": "videos/Bullet.in.the.Head.1990__#00-17-20_00-18-55_label_B1-0-0.mp4"
+ },
+ {
+  "name": "City.of.God.2002__#00-40-16_00-41-30_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 1778,
+  "duration_s": 74.08333333333333,
+  "events": [
+   [
+    460,
+    490
+   ],
+   [
+    858,
+    910
+   ],
+   [
+    1142,
+    1330
+   ]
+  ],
+  "path": "videos/City.of.God.2002__#00-40-16_00-41-30_label_B2-0-0.mp4"
+ },
+ {
+  "name": "Fast.Five.2011__#00-32-56_00-33-26_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 721,
+  "duration_s": 30.041666666666668,
+  "events": [
+   [
+    155,
+    300
+   ],
+   [
+    450,
+    686
+   ]
+  ],
+  "path": "videos/Fast.Five.2011__#00-32-56_00-33-26_label_B2-0-0.mp4"
+ },
+ {
+  "name": "GoldenEye.1995__#00-10-00_00-10-40_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 961,
+  "duration_s": 40.041666666666664,
+  "events": [
+   [
+    621,
+    920
+   ]
+  ],
+  "path": "videos/GoldenEye.1995__#00-10-00_00-10-40_label_G-0-0.mp4"
+ },
+ {
+  "name": "Ip.Man.3.2015__#00-44-45_00-45-08_label_B1-0-0.mp4",
+  "category": "Fighting",
+  "fps": 24.0,
+  "n_frames": 552,
+  "duration_s": 23.0,
+  "events": [
+   [
+    193,
+    365
+   ]
+  ],
+  "path": "videos/Ip.Man.3.2015__#00-44-45_00-45-08_label_B1-0-0.mp4"
+ },
+ {
+  "name": "Love.Death.and.Robots.S01E10__#0-01-00_0-02-13_label_B2-G-0.mp4",
+  "category": "Shooting+Explosion",
+  "fps": 24.0,
+  "n_frames": 1752,
+  "duration_s": 73.0,
+  "events": [
+   [
+    560,
+    600
+   ],
+   [
+    846,
+    905
+   ],
+   [
+    1050,
+    1295
+   ]
+  ],
+  "path": "videos/Love.Death.and.Robots.S01E10__#0-01-00_0-02-13_label_B2-G-0.mp4"
+ },
+ {
+  "name": "Mission.Impossible.II.2000__#01-46-20_01-47-11_label_B2-B6-0.mp4",
+  "category": "Shooting+Car accident",
+  "fps": 24.0,
+  "n_frames": 1225,
+  "duration_s": 51.041666666666664,
+  "events": [
+   [
+    10,
+    56
+   ],
+   [
+    84,
+    135
+   ],
+   [
+    184,
+    413
+   ],
+   [
+    608,
+    919
+   ]
+  ],
+  "path": "videos/Mission.Impossible.II.2000__#01-46-20_01-47-11_label_B2-B6-0.mp4"
+ },
+ {
+  "name": "Operation.Red.Sea.2018__#0-56-26_0-57-10_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 1056,
+  "duration_s": 44.0,
+  "events": [
+   [
+    330,
+    430
+   ],
+   [
+    504,
+    533
+   ],
+   [
+    1038,
+    1055
+   ]
+  ],
+  "path": "videos/Operation.Red.Sea.2018__#0-56-26_0-57-10_label_G-0-0.mp4"
+ },
+ {
+  "name": "Saving.Private.Ryan.1998__#00-47-50_00-49-35_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 2521,
+  "duration_s": 105.04166666666667,
+  "events": [
+   [
+    483,
+    670
+   ],
+   [
+    801,
+    887
+   ],
+   [
+    1211,
+    1431
+   ]
+  ],
+  "path": "videos/Saving.Private.Ryan.1998__#00-47-50_00-49-35_label_B2-0-0.mp4"
+ },
+ {
+  "name": "Sin.City.2005__#01-19-08_01-19-23_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 361,
+  "duration_s": 15.041666666666666,
+  "events": [
+   [
+    75,
+    150
+   ]
+  ],
+  "path": "videos/Sin.City.2005__#01-19-08_01-19-23_label_G-0-0.mp4"
+ },
+ {
+  "name": "Taken.2.UNRATED.EXTENDED.2012__#01-00-00_01-00-16_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 385,
+  "duration_s": 16.041666666666668,
+  "events": [
+   [
+    327,
+    368
+   ]
+  ],
+  "path": "videos/Taken.2.UNRATED.EXTENDED.2012__#01-00-00_01-00-16_label_B2-0-0.mp4"
+ },
+ {
+  "name": "The.Bourne.Legacy.2012__#0-59-18_01-01-52_label_B2-B1-0.mp4",
+  "category": "Shooting+Fighting",
+  "fps": 24.0,
+  "n_frames": 3697,
+  "duration_s": 154.04166666666666,
+  "events": [
+   [
+    46,
+    879
+   ],
+   [
+    946,
+    1018
+   ],
+   [
+    1111,
+    1160
+   ],
+   [
+    1212,
+    1354
+   ],
+   [
+    1426,
+    1660
+   ],
+   [
+    3300,
+    3330
+   ],
+   [
+    3340,
+    3610
+   ]
+  ],
+  "path": "videos/The.Bourne.Legacy.2012__#0-59-18_01-01-52_label_B2-B1-0.mp4"
+ },
+ {
+  "name": "Tropa.de.Elite.2.2010__#00-46-11_00-46-50_label_B2-0-0.mp4",
+  "category": "Shooting",
+  "fps": 24.0,
+  "n_frames": 937,
+  "duration_s": 39.041666666666664,
+  "events": [
+   [
+    109,
+    265
+   ]
+  ],
+  "path": "videos/Tropa.de.Elite.2.2010__#00-46-11_00-46-50_label_B2-0-0.mp4"
+ },
+ {
+  "name": "v=0qtIjyt-7wg__#00-00-00_00-00-51_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 1226,
+  "duration_s": 51.083333333333336,
+  "events": [
+   [
+    205,
+    270
+   ],
+   [
+    537,
+    610
+   ],
+   [
+    1028,
+    1115
+   ]
+  ],
+  "path": "videos/v=0qtIjyt-7wg__#00-00-00_00-00-51_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=2jwO15SMyuo__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 2376,
+  "duration_s": 99.0,
+  "events": [
+   [
+    0,
+    2374
+   ]
+  ],
+  "path": "videos/v=2jwO15SMyuo__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=73uRcX0Dvfc__#00-00-00_00-01-51_label_B6-G-0.mp4",
+  "category": "Car accident+Explosion",
+  "fps": 24.0,
+  "n_frames": 2666,
+  "duration_s": 111.08333333333333,
+  "events": [
+   [
+    177,
+    217
+   ],
+   [
+    450,
+    540
+   ],
+   [
+    958,
+    1260
+   ],
+   [
+    1507,
+    1670
+   ],
+   [
+    2053,
+    2180
+   ],
+   [
+    2460,
+    2589
+   ]
+  ],
+  "path": "videos/v=73uRcX0Dvfc__#00-00-00_00-01-51_label_B6-G-0.mp4"
+ },
+ {
+  "name": "v=ADQNFs9bfFk__#00-00-00_00-00-58_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1394,
+  "duration_s": 58.083333333333336,
+  "events": [
+   [
+    0,
+    350
+   ],
+   [
+    465,
+    1379
+   ]
+  ],
+  "path": "videos/v=ADQNFs9bfFk__#00-00-00_00-00-58_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=CvMpD1yqfxI__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 873,
+  "duration_s": 36.375,
+  "events": [
+   [
+    194,
+    338
+   ],
+   [
+    560,
+    720
+   ]
+  ],
+  "path": "videos/v=CvMpD1yqfxI__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=GI49YSCruwY__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 3032,
+  "duration_s": 126.33333333333333,
+  "events": [
+   [
+    0,
+    1410
+   ],
+   [
+    1795,
+    1965
+   ],
+   [
+    2320,
+    2980
+   ]
+  ],
+  "path": "videos/v=GI49YSCruwY__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=J67oj92maC0__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 4673,
+  "duration_s": 194.70833333333334,
+  "events": [
+   [
+    293,
+    740
+   ],
+   [
+    806,
+    1200
+   ],
+   [
+    1346,
+    1650
+   ],
+   [
+    1698,
+    2086
+   ],
+   [
+    2213,
+    2830
+   ],
+   [
+    3260,
+    3960
+   ],
+   [
+    4058,
+    4670
+   ]
+  ],
+  "path": "videos/v=J67oj92maC0__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=PWBZiM-rkoE__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 2711,
+  "duration_s": 112.95833333333333,
+  "events": [
+   [
+    2050,
+    2300
+   ],
+   [
+    2499,
+    2550
+   ]
+  ],
+  "path": "videos/v=PWBZiM-rkoE__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=TOEVc-pOEwM__#00-08-40_00-10-40_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 2883,
+  "duration_s": 120.125,
+  "events": [
+   [
+    40,
+    95
+   ],
+   [
+    350,
+    530
+   ],
+   [
+    796,
+    1224
+   ],
+   [
+    1512,
+    1658
+   ],
+   [
+    1983,
+    2166
+   ],
+   [
+    2444,
+    2532
+   ],
+   [
+    2845,
+    2880
+   ]
+  ],
+  "path": "videos/v=TOEVc-pOEwM__#00-08-40_00-10-40_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=YANmwpkuWRo__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 1080,
+  "duration_s": 45.0,
+  "events": [
+   [
+    968,
+    1072
+   ]
+  ],
+  "path": "videos/v=YANmwpkuWRo__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=abATVcjFumY__#1_label_G-0-0.mp4",
+  "category": "Explosion",
+  "fps": 24.0,
+  "n_frames": 1835,
+  "duration_s": 76.45833333333333,
+  "events": [
+   [
+    143,
+    450
+   ],
+   [
+    1560,
+    1830
+   ]
+  ],
+  "path": "videos/v=abATVcjFumY__#1_label_G-0-0.mp4"
+ },
+ {
+  "name": "v=g2v3EkBj9Zc__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 764,
+  "duration_s": 31.833333333333332,
+  "events": [
+   [
+    0,
+    530
+   ]
+  ],
+  "path": "videos/v=g2v3EkBj9Zc__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=kVl-6-A9ZO4__#00-08-01_00-09-35_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 2259,
+  "duration_s": 94.125,
+  "events": [
+   [
+    65,
+    140
+   ],
+   [
+    428,
+    500
+   ],
+   [
+    693,
+    800
+   ],
+   [
+    986,
+    1117
+   ],
+   [
+    1550,
+    1700
+   ],
+   [
+    2038,
+    2218
+   ]
+  ],
+  "path": "videos/v=kVl-6-A9ZO4__#00-08-01_00-09-35_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=pFamvR9CpYw__#00-00-00_00-06-36_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 9506,
+  "duration_s": 396.0833333333333,
+  "events": [
+   [
+    135,
+    1300
+   ],
+   [
+    1830,
+    2580
+   ],
+   [
+    3120,
+    3220
+   ],
+   [
+    3680,
+    7050
+   ],
+   [
+    7720,
+    9500
+   ]
+  ],
+  "path": "videos/v=pFamvR9CpYw__#00-00-00_00-06-36_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=sE-DC2trBkI__#00-03-00_00-04-09_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 1658,
+  "duration_s": 69.08333333333333,
+  "events": [
+   [
+    258,
+    410
+   ],
+   [
+    700,
+    802
+   ],
+   [
+    942,
+    1215
+   ],
+   [
+    1435,
+    1540
+   ]
+  ],
+  "path": "videos/v=sE-DC2trBkI__#00-03-00_00-04-09_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=v-Plzx73K68__#1_label_B4-0-0.mp4",
+  "category": "Riot",
+  "fps": 24.0,
+  "n_frames": 1016,
+  "duration_s": 42.333333333333336,
+  "events": [
+   [
+    316,
+    921
+   ]
+  ],
+  "path": "videos/v=v-Plzx73K68__#1_label_B4-0-0.mp4"
+ },
+ {
+  "name": "v=waIS8TaJxts__#00-00-00_00-00-51_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 1226,
+  "duration_s": 51.083333333333336,
+  "events": [
+   [
+    490,
+    625
+   ],
+   [
+    990,
+    1075
+   ],
+   [
+    1113,
+    1220
+   ]
+  ],
+  "path": "videos/v=waIS8TaJxts__#00-00-00_00-00-51_label_B6-0-0.mp4"
+ },
+ {
+  "name": "v=zoIn2hOrUIM__#00-01-00_00-02-45_label_B6-0-0.mp4",
+  "category": "Car accident",
+  "fps": 24.0,
+  "n_frames": 2522,
+  "duration_s": 105.08333333333333,
+  "events": [
+   [
+    156,
+    240
+   ],
+   [
+    521,
+    580
+   ],
+   [
+    1315,
+    1370
+   ],
+   [
+    1694,
+    1766
+   ],
+   [
+    2067,
+    2146
+   ],
+   [
+    2460,
+    2521
+   ]
+  ],
+  "path": "videos/v=zoIn2hOrUIM__#00-01-00_00-02-45_label_B6-0-0.mp4"
+ },
+ {
+  "name": "Be.with.You.2018__#00-23-50_00-24-31_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 985,
+  "duration_s": 41.041666666666664,
+  "events": [],
+  "path": "videos/Be.with.You.2018__#00-23-50_00-24-31_label_A.mp4"
+ },
+ {
+  "name": "Bullet.in.the.Head.1990__#00-51-46_00-52-50_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1537,
+  "duration_s": 64.04166666666667,
+  "events": [],
+  "path": "videos/Bullet.in.the.Head.1990__#00-51-46_00-52-50_label_A.mp4"
+ },
+ {
+  "name": "Flipped.2010__#00-45-40_00-47-30_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2641,
+  "duration_s": 110.04166666666667,
+  "events": [],
+  "path": "videos/Flipped.2010__#00-45-40_00-47-30_label_A.mp4"
+ },
+ {
+  "name": "Hear.Me.2009__#00-49-48_00-51-12_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2017,
+  "duration_s": 84.04166666666667,
+  "events": [],
+  "path": "videos/Hear.Me.2009__#00-49-48_00-51-12_label_A.mp4"
+ },
+ {
+  "name": "Lord.of.War__#00-59-20_01-00-35_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1801,
+  "duration_s": 75.04166666666667,
+  "events": [],
+  "path": "videos/Lord.of.War__#00-59-20_01-00-35_label_A.mp4"
+ },
+ {
+  "name": "Mission.Impossible.V.Rogue.Nation.2015__#01-29-39_01-33-39_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 5762,
+  "duration_s": 240.08333333333334,
+  "events": [],
+  "path": "videos/Mission.Impossible.V.Rogue.Nation.2015__#01-29-39_01-33-39_label_A.mp4"
+ },
+ {
+  "name": "Spectre.2015__#01-17-22_01-18-53_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2184,
+  "duration_s": 91.0,
+  "events": [],
+  "path": "videos/Spectre.2015__#01-17-22_01-18-53_label_A.mp4"
+ },
+ {
+  "name": "The.Fast.and.the.Furious.2001__#01-38-50_01-39-59_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1657,
+  "duration_s": 69.04166666666667,
+  "events": [],
+  "path": "videos/The.Fast.and.the.Furious.2001__#01-38-50_01-39-59_label_A.mp4"
+ },
+ {
+  "name": "The.Secret.Life.of.Walter.Mitty.2013__#00-36-52_00-41-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 5953,
+  "duration_s": 248.04166666666666,
+  "events": [],
+  "path": "videos/The.Secret.Life.of.Walter.Mitty.2013__#00-36-52_00-41-00_label_A.mp4"
+ },
+ {
+  "name": "v=-5RWxUUJ7lQ__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 19123,
+  "duration_s": 796.7916666666666,
+  "events": [],
+  "path": "videos/v=-5RWxUUJ7lQ__#1_label_A.mp4"
+ },
+ {
+  "name": "v=7smETZfN0XA__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 3020,
+  "duration_s": 125.83333333333333,
+  "events": [],
+  "path": "videos/v=7smETZfN0XA__#1_label_A.mp4"
+ },
+ {
+  "name": "v=EeUTpfyb0qo__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 18143,
+  "duration_s": 755.9583333333334,
+  "events": [],
+  "path": "videos/v=EeUTpfyb0qo__#1_label_A.mp4"
+ },
+ {
+  "name": "v=JzrpCC7XmyE__#00-06-00_00-12-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 8642,
+  "duration_s": 360.0833333333333,
+  "events": [],
+  "path": "videos/v=JzrpCC7XmyE__#00-06-00_00-12-00_label_A.mp4"
+ },
+ {
+  "name": "v=QUlWIIHMIEQ__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1106,
+  "duration_s": 46.083333333333336,
+  "events": [],
+  "path": "videos/v=QUlWIIHMIEQ__#1_label_A.mp4"
+ },
+ {
+  "name": "v=X60PecZRLGE__#1_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 2644,
+  "duration_s": 110.16666666666667,
+  "events": [],
+  "path": "videos/v=X60PecZRLGE__#1_label_A.mp4"
+ },
+ {
+  "name": "v=fkps18H3SXY__#00-00-00_00-06-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 8642,
+  "duration_s": 360.0833333333333,
+  "events": [],
+  "path": "videos/v=fkps18H3SXY__#00-00-00_00-06-00_label_A.mp4"
+ },
+ {
+  "name": "v=p2ggHwtb-Zg__#00-21-00_00-24-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 4323,
+  "duration_s": 180.125,
+  "events": [],
+  "path": "videos/v=p2ggHwtb-Zg__#00-21-00_00-24-00_label_A.mp4"
+ },
+ {
+  "name": "v=usAvzbDq6-c__#00-21-00_00-24-00_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 4322,
+  "duration_s": 180.08333333333334,
+  "events": [],
+  "path": "videos/v=usAvzbDq6-c__#00-21-00_00-24-00_label_A.mp4"
+ },
+ {
+  "name": "wangted.2008__#0-27-17_0-28-07_label_A.mp4",
+  "category": "Normal",
+  "fps": 24.0,
+  "n_frames": 1200,
+  "duration_s": 50.0,
+  "events": [],
+  "path": "videos/wangted.2008__#0-27-17_0-28-07_label_A.mp4"
+ }
+]

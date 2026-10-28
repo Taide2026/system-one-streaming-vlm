@@ -1,0 +1,48 @@
+# Stride pilot (2026-10-28): the KV pilot's 10 videos (5 split events + 5 normal) with d3-nano, 2 s windows at stride 1.0 s (zs_s1).
+# Pilot: KV cache across windows (2026-10-23), S0 today: each window alone.
+# 10 UCF-Crime test videos: 5 events shorter than 4 s that cross a 2 s window boundary and were missed by Clef-Flash
+# (V1 prompt, p(Yes) < 0.5 in both windows: RoadAccidents010 0.26 / 0.20, 004 0.01 / 0.01, 011 0.03 / 0.02,
+# 122 0.03 / 0.09, Shoplifting037 0.23 / 0.09) and the 5 shortest normal test videos. Same frames, prompt and label
+# in every pilot config; only `context` differs. Run: scripts/run.sh run configs/pilot_ucf_v1_s0.yaml
+name: pilot_stride_d3nano_zs_s1
+
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  names:
+    - RoadAccidents010_x264.mp4
+    - RoadAccidents004_x264.mp4
+    - RoadAccidents011_x264.mp4
+    - RoadAccidents122_x264.mp4
+    - Shoplifting037_x264.mp4
+    - Normal_Videos_345_x264.mp4
+    - Normal_Videos_881_x264.mp4
+    - Normal_Videos_878_x264.mp4
+    - Normal_Videos_745_x264.mp4
+    - Normal_Videos_889_x264.mp4
+
+window:
+  length_s: 2.0
+  stride_s: 1.0
+  frames: 8
+
+question:
+  prompt: v1
+
+input_form:
+  name: frames
+
+backbone:
+  name: d3
+  asset: d3-nano
+
+  memory_cap_gb: 40
+
+answer_head:
+  name: option_logits
+
+decision_rules:
+  - name: threshold
+    start: 0.0
+    stop: 1.0
+    step: 0.01

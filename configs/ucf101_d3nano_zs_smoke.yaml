@@ -1,0 +1,35 @@
+# Generalization test (2026-10-28): d3-nano on the UCF101 test split (official split 1), 101-way in one pass; accuracy
+# from scripts/ucf101-accuracy.py. Variant: zs (zs = zero-shot, ucfft = the UCF-Crime hard-label LoRA, probe = read-out only).
+name: ucf101_d3nano_zs_smoke
+
+dataset:
+  name: ucf101
+  path: /data/kidflash7011/datasets/ucf101-smoke
+  split: testlist01.txt
+  n_videos: 6
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: ucf101
+
+input_form:
+  name: frames
+
+backbone:
+  name: d3
+  asset: d3-nano
+  memory_cap_gb: 40
+
+
+answer_head:
+  name: option_logits
+
+decision_rules:
+  - name: threshold
+    start: 0.0
+    stop: 1.0
+    step: 0.01
