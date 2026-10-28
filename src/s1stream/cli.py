@@ -85,7 +85,11 @@ def main(argv: list[str] | None = None) -> int:
 
             print(run_extract(args.config, args.condition, args.run, limit_windows=args.limit_windows))
         elif args.command == "encoder-extract":
-            raise NotImplementedError
+            import s1stream.plugins  # noqa: F401  Register the dataset and input-form plugins.
+            from s1stream.encoder import extract
+
+            print(extract.run_encoder_extract(args.config, args.encoder, args.run,
+                                              limit_windows=args.limit_windows))
         elif args.command == "probe-fit":
             from s1stream.probe.fit import fit_condition
 
