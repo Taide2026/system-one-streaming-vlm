@@ -106,7 +106,10 @@ def main(argv: list[str] | None = None) -> int:
 
             print(run_compare(args.config, args.run_dir))
         elif args.command == "encoder-compare":
-            raise NotImplementedError
+            import s1stream.plugins  # noqa: F401  Register the dataset plugins.
+            from s1stream.encoder import compare
+
+            print(compare.run_encoder_compare(args.config, args.run_dir))
         elif args.command == "report":
             report(args.run_dir)
         else:
