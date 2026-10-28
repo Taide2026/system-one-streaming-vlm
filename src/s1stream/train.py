@@ -251,7 +251,7 @@ class D3Trainee:
     def save(self, out_dir: Path) -> None:
         from safetensors.torch import save_file
 
-        if hasattr(self.peft, "save_pretrained"):  # a probe (lora r 0) has no adapter to save
+        if hasattr(self.peft, "peft_config"):  # a probe (lora r 0) is the plain backbone: no adapter to save
             self.peft.save_pretrained(out_dir / "adapter")
         save_file({"weight": self.readout.detach().cpu().contiguous()}, out_dir / "readout.safetensors")
 
