@@ -1,0 +1,8 @@
+Uninstalled 1 package in 0.51ms
+Installed 1 package in 2ms
+train_anomaly patch_mean: pairs below 0.9999 4 / 162904 (0.002%), windows 1 / 5818, below 0.999 0, median cosine 0.9999991, states with misses [16, 17, 18, 19]
+train_anomaly patch_max: pairs below 0.9999 195 / 162904 (0.120%), windows 58 / 5818, below 0.999 6, median cosine 0.9999948, states with misses [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+train_normal patch_mean: pairs below 0.9999 0 / 147560 (0.000%), windows 0 / 5270, below 0.999 0, median cosine 0.9999991, states with misses []
+train_normal patch_max: pairs below 0.9999 242 / 147560 (0.164%), windows 56 / 5270, below 0.999 7, median cosine 0.9999947, states with misses [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+test patch_mean: pairs below 0.9999 5 / 47152 (0.011%), windows 1 / 1684, below 0.999 0, median cosine 0.9999991, states with misses [15, 16, 17, 18, 19]
+test patch_max: pairs below 0.9999 82 / 47152 (0.174%), windows 20 / 1684, below 0.999 0, median cosine 0.9999944, states with misses [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]

@@ -1,0 +1,58 @@
+Uninstalled 1 package in 0.50ms
+Installed 1 package in 2ms
+Loading weights:   0%|          | 0/448 [00:00<?, ?it/s]Loading weights:  75%|███████▌  | 337/448 [00:00<00:00, 2851.20it/s]Loading weights: 100%|██████████| 448/448 [00:00<00:00, 1812.86it/s]
+[transformers] [1mSiglipVisionModel LOAD REPORT[0m from: $S1_ASSETS/siglip2-so400m-patch14-384
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...26}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+text_model.head.bias                                         | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.head.weight                                       | UNEXPECTED |  | 
+logit_bias                                                   | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+train_anomaly: 500 windows, 157.8 seconds
+train_anomaly: 1000 windows, 316.8 seconds
+train_anomaly: 1500 windows, 468.7 seconds
+train_anomaly: 2000 windows, 624.6 seconds
+train_anomaly: 2500 windows, 782.4 seconds
+train_anomaly: 3000 windows, 943.1 seconds
+train_anomaly: 3500 windows, 1105.2 seconds
+train_anomaly: 4000 windows, 1267.6 seconds
+train_anomaly: 4500 windows, 1424.6 seconds
+train_anomaly: 5000 windows, 1588.2 seconds
+train_anomaly: 5500 windows, 1745.2 seconds
+train_normal: 500 windows, 159.7 seconds
+train_normal: 1000 windows, 321.4 seconds
+train_normal: 1500 windows, 489.1 seconds
+train_normal: 2000 windows, 651.2 seconds
+train_normal: 2500 windows, 810.3 seconds
+train_normal: 3000 windows, 973.6 seconds
+train_normal: 3500 windows, 1132.8 seconds
+train_normal: 4000 windows, 1293.5 seconds
+train_normal: 4500 windows, 1453.8 seconds
+train_normal: 5000 windows, 1611.1 seconds
+test: 500 windows, 156.0 seconds
+test: 1000 windows, 316.0 seconds
+test: 1500 windows, 476.9 seconds
+$S1_FEATURES/encoder_probe_ucf_short_v1_f8/siglip2-so400m/run-1

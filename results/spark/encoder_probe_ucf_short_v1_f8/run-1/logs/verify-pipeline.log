@@ -1,0 +1,53 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+windows [0, 1, 905, 1177, 1301] min patch_max cosine run-1 vs vit-1 [0.99998, 0.999952, 0.999684, 0.999258, 0.999263]
+attn_implementation (encoder-extract): sdpa
+vision config keys that differ: {}
+rotary inv_freq equal: True
+patch embeddings linearized: 1
+
+window 0 (Abuse028_x264.mp4 w0), grid_thw [1, 16, 20]
+  A vs stored run-1: max abs diff patch_mean 0, patch_max 0
+  A encoder-extract (qwen config, bf16 first): pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 20, patch_max 2, min cosine patch_max 0.999980
+  B qwen config, float32 into the call: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 20, patch_max 2, min cosine patch_max 0.999980
+  C d3 config, float32 into the call: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 20, patch_max 2, min cosine patch_max 0.999980
+  D C + d3 processor size: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 20, patch_max 2, min cosine patch_max 0.999980
+  E D + linear patch embedding: pixel_values equal to A True; vs A max abs diff patch_mean 20, patch_max 2; vs vit-1 max abs diff patch_mean 0, patch_max 0, min cosine patch_max 1.000000
+  F E + d3 sdpa_backends (= vit-1 path): pixel_values equal to A True; vs A max abs diff patch_mean 20, patch_max 2; vs vit-1 max abs diff patch_mean 0, patch_max 0, min cosine patch_max 1.000000
+
+window 1 (Abuse028_x264.mp4 w1), grid_thw [1, 16, 20]
+  A vs stored run-1: max abs diff patch_mean 0, patch_max 0
+  A encoder-extract (qwen config, bf16 first): pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 7.55, patch_max 1.05, min cosine patch_max 0.999952
+  B qwen config, float32 into the call: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 7.55, patch_max 1.05, min cosine patch_max 0.999952
+  C d3 config, float32 into the call: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 7.55, patch_max 1.05, min cosine patch_max 0.999952
+  D C + d3 processor size: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 7.55, patch_max 1.05, min cosine patch_max 0.999952
+  E D + linear patch embedding: pixel_values equal to A True; vs A max abs diff patch_mean 7.55, patch_max 1.05; vs vit-1 max abs diff patch_mean 0, patch_max 0, min cosine patch_max 1.000000
+  F E + d3 sdpa_backends (= vit-1 path): pixel_values equal to A True; vs A max abs diff patch_mean 7.55, patch_max 1.05; vs vit-1 max abs diff patch_mean 0, patch_max 0, min cosine patch_max 1.000000
+
+window 905 (Normal_Videos_067_x264.mp4 w11), grid_thw [1, 16, 20]
+  A vs stored run-1: max abs diff patch_mean 0, patch_max 0
+  A encoder-extract (qwen config, bf16 first): pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 5.03, patch_max 10, min cosine patch_max 0.999684
+  B qwen config, float32 into the call: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 5.03, patch_max 10, min cosine patch_max 0.999684
+  C d3 config, float32 into the call: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 5.03, patch_max 10, min cosine patch_max 0.999684
+  D C + d3 processor size: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 5.03, patch_max 10, min cosine patch_max 0.999684
+  E D + linear patch embedding: pixel_values equal to A True; vs A max abs diff patch_mean 5.03, patch_max 10; vs vit-1 max abs diff patch_mean 0, patch_max 0, min cosine patch_max 1.000000
+  F E + d3 sdpa_backends (= vit-1 path): pixel_values equal to A True; vs A max abs diff patch_mean 5.03, patch_max 10; vs vit-1 max abs diff patch_mean 0, patch_max 0, min cosine patch_max 1.000000
+
+window 1177 (Normal_Videos_828_x264.mp4 w8), grid_thw [1, 16, 20]
+  A vs stored run-1: max abs diff patch_mean 0, patch_max 0
+  A encoder-extract (qwen config, bf16 first): pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 4.74, patch_max 28, min cosine patch_max 0.999258
+  B qwen config, float32 into the call: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 4.74, patch_max 28, min cosine patch_max 0.999258
+  C d3 config, float32 into the call: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 4.74, patch_max 28, min cosine patch_max 0.999258
+  D C + d3 processor size: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 4.74, patch_max 28, min cosine patch_max 0.999258
+  E D + linear patch embedding: pixel_values equal to A True; vs A max abs diff patch_mean 4.74, patch_max 28; vs vit-1 max abs diff patch_mean 0, patch_max 0, min cosine patch_max 1.000000
+  F E + d3 sdpa_backends (= vit-1 path): pixel_values equal to A True; vs A max abs diff patch_mean 4.74, patch_max 28; vs vit-1 max abs diff patch_mean 0, patch_max 0, min cosine patch_max 1.000000
+
+window 1301 (Normal_Videos_897_x264.mp4 w6), grid_thw [1, 16, 20]
+  A vs stored run-1: max abs diff patch_mean 0, patch_max 0
+  A encoder-extract (qwen config, bf16 first): pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 7.51, patch_max 15, min cosine patch_max 0.999263
+  B qwen config, float32 into the call: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 7.51, patch_max 15, min cosine patch_max 0.999263
+  C d3 config, float32 into the call: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 7.51, patch_max 15, min cosine patch_max 0.999263
+  D C + d3 processor size: pixel_values equal to A True; vs A max abs diff patch_mean 0, patch_max 0; vs vit-1 max abs diff patch_mean 7.51, patch_max 15, min cosine patch_max 0.999263
+  E D + linear patch embedding: pixel_values equal to A True; vs A max abs diff patch_mean 7.51, patch_max 15; vs vit-1 max abs diff patch_mean 0, patch_max 0, min cosine patch_max 1.000000
+  F E + d3 sdpa_backends (= vit-1 path): pixel_values equal to A True; vs A max abs diff patch_mean 7.51, patch_max 15; vs vit-1 max abs diff patch_mean 0, patch_max 0, min cosine patch_max 1.000000
+
+peak GPU 2.89 GiB

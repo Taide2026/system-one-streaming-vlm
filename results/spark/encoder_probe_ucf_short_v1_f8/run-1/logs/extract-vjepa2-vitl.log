@@ -1,0 +1,28 @@
+Uninstalled 1 package in 0.50ms
+Installed 1 package in 1ms
+Loading weights:   0%|          | 0/587 [00:00<?, ?it/s]Loading weights:  92%|█████████▏| 540/587 [00:00<00:00, 5396.70it/s]Loading weights: 100%|██████████| 587/587 [00:00<00:00, 5508.05it/s]
+train_anomaly: 500 windows, 111.3 seconds
+train_anomaly: 1000 windows, 224.7 seconds
+train_anomaly: 1500 windows, 330.0 seconds
+train_anomaly: 2000 windows, 441.9 seconds
+train_anomaly: 2500 windows, 555.1 seconds
+train_anomaly: 3000 windows, 669.9 seconds
+train_anomaly: 3500 windows, 785.2 seconds
+train_anomaly: 4000 windows, 901.6 seconds
+train_anomaly: 4500 windows, 1012.3 seconds
+train_anomaly: 5000 windows, 1129.6 seconds
+train_anomaly: 5500 windows, 1240.4 seconds
+train_normal: 500 windows, 113.9 seconds
+train_normal: 1000 windows, 229.6 seconds
+train_normal: 1500 windows, 353.6 seconds
+train_normal: 2000 windows, 470.2 seconds
+train_normal: 2500 windows, 584.5 seconds
+train_normal: 3000 windows, 702.5 seconds
+train_normal: 3500 windows, 814.2 seconds
+train_normal: 4000 windows, 928.9 seconds
+train_normal: 4500 windows, 1043.0 seconds
+train_normal: 5000 windows, 1154.5 seconds
+test: 500 windows, 111.1 seconds
+test: 1000 windows, 224.6 seconds
+test: 1500 windows, 340.7 seconds
+$S1_FEATURES/encoder_probe_ucf_short_v1_f8/vjepa2-vitl/run-1

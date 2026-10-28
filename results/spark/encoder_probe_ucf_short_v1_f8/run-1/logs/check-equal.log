@@ -1,0 +1,9 @@
+Uninstalled 1 package in 0.34ms
+Installed 1 package in 1ms
+train_anomaly patch_mean vs visual: shape (5818, 28, 1152) vs (5818, 28, 1152), max abs diff 55.66, max abs 5770, ratio 9.65e-03, worst state ratio 2.02e-02 (state 13), min cosine 0.999831 -> FAIL
+train_anomaly patch_max vs last: shape (5818, 28, 1152) vs (5818, 28, 1152), max abs diff 896, max abs 1.376e+04, ratio 6.51e-02, worst state ratio 6.51e-02 (state 27), min cosine 0.998464 -> FAIL
+train_normal patch_mean vs visual: shape (5270, 28, 1152) vs (5270, 28, 1152), max abs diff 120.9, max abs 5632, ratio 2.15e-02, worst state ratio 2.15e-02 (state 27), min cosine 0.999911 -> FAIL
+train_normal patch_max vs last: shape (5270, 28, 1152) vs (5270, 28, 1152), max abs diff 960, max abs 1.382e+04, ratio 6.94e-02, worst state ratio 6.94e-02 (state 27), min cosine 0.998354 -> FAIL
+test patch_mean vs visual: shape (1684, 28, 1152) vs (1684, 28, 1152), max abs diff 57.59, max abs 5323, ratio 1.08e-02, worst state ratio 1.21e-02 (state 13), min cosine 0.999884 -> FAIL
+test patch_max vs last: shape (1684, 28, 1152) vs (1684, 28, 1152), max abs diff 1152, max abs 1.37e+04, ratio 8.41e-02, worst state ratio 8.41e-02 (state 27), min cosine 0.999258 -> FAIL
+decision 9 check: FAIL

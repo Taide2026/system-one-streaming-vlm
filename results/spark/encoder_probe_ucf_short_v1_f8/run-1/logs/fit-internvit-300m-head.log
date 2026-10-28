@@ -1,0 +1,5 @@
+Uninstalled 1 package in 0.63ms
+Installed 1 package in 2ms
+patch_mean state 0: 30.19s
+patch_max state 0: 31.14s
+results/spark/encoder_probe_ucf_short_v1_f8/run-1/fit-internvit-300m-head

@@ -1,0 +1,28 @@
+2026-10-28T07:19:19Z extract qwen35-vit: start, free 107 GiB
+2026-10-28T08:16:25Z extract qwen35-vit: done
+2026-10-28T08:16:25Z extract internvit-300m: start, free 107 GiB
+2026-10-28T09:21:49Z extract internvit-300m: done
+2026-10-28T09:21:49Z extract siglip2-so400m: start, free 107 GiB
+2026-10-28T10:29:54Z extract siglip2-so400m: done
+2026-10-28T10:29:54Z extract dinov3-vitl: start, free 107 GiB
+2026-10-28T11:15:37Z extract dinov3-vitl: done
+2026-10-28T11:15:37Z extract vjepa2-vitl: start, free 107 GiB
+2026-10-28T12:04:13Z extract vjepa2-vitl: done
+2026-10-28T12:04:13Z decision 9 check
+2026-10-28T13:18:25Z decision 9 check: FAIL, accepted by Eric (see logs/verify-pipeline.log)
+2026-10-28T13:18:25Z fit qwen35-vit: start, free 107 GiB
+2026-10-28T13:45:44Z fit qwen35-vit: done
+2026-10-28T13:45:44Z fit internvit-300m: start, free 107 GiB
+2026-10-28T14:22:04Z fit internvit-300m: done
+2026-10-28T14:22:04Z fit internvit-300m-head: start, free 107 GiB
+2026-10-28T14:23:07Z fit internvit-300m-head: done
+2026-10-28T14:23:07Z fit siglip2-so400m: start, free 107 GiB
+2026-10-28T14:49:49Z fit siglip2-so400m: done
+2026-10-28T14:49:49Z fit siglip2-so400m-head: start, free 106 GiB
+2026-10-28T14:50:21Z fit siglip2-so400m-head: done
+2026-10-28T14:50:21Z fit dinov3-vitl: start, free 106 GiB
+2026-10-28T15:26:33Z fit dinov3-vitl: done
+2026-10-28T15:26:33Z fit vjepa2-vitl: start, free 106 GiB
+2026-10-28T15:50:43Z fit vjepa2-vitl: done
+2026-10-28T15:50:43Z compare: start
+2026-10-28T15:51:26Z compare: done

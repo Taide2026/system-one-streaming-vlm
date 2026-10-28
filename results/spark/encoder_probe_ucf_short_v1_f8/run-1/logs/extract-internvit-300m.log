@@ -1,0 +1,35 @@
+Uninstalled 1 package in 0.53ms
+Installed 1 package in 1ms
+Loading weights:   0%|          | 0/780 [00:00<?, ?it/s]Loading weights: 100%|██████████| 780/780 [00:00<00:00, 9733.01it/s]
+[transformers] [1mInternVLModel LOAD REPORT[0m from: $S1_ASSETS/internvl3-2b-hf
+Key                           | Status     |  | 
+------------------------------+------------+--+-
+language_model.lm_head.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+train_anomaly: 500 windows, 150.8 seconds
+train_anomaly: 1000 windows, 303.4 seconds
+train_anomaly: 1500 windows, 447.8 seconds
+train_anomaly: 2000 windows, 597.4 seconds
+train_anomaly: 2500 windows, 748.4 seconds
+train_anomaly: 3000 windows, 901.9 seconds
+train_anomaly: 3500 windows, 1056.3 seconds
+train_anomaly: 4000 windows, 1211.4 seconds
+train_anomaly: 4500 windows, 1360.7 seconds
+train_anomaly: 5000 windows, 1516.9 seconds
+train_anomaly: 5500 windows, 1666.9 seconds
+train_normal: 500 windows, 154.1 seconds
+train_normal: 1000 windows, 309.6 seconds
+train_normal: 1500 windows, 471.0 seconds
+train_normal: 2000 windows, 627.2 seconds
+train_normal: 2500 windows, 780.1 seconds
+train_normal: 3000 windows, 937.9 seconds
+train_normal: 3500 windows, 1091.2 seconds
+train_normal: 4000 windows, 1244.5 seconds
+train_normal: 4500 windows, 1397.4 seconds
+train_normal: 5000 windows, 1548.0 seconds
+test: 500 windows, 151.0 seconds
+test: 1000 windows, 306.2 seconds
+test: 1500 windows, 461.5 seconds
+$S1_FEATURES/encoder_probe_ucf_short_v1_f8/internvit-300m/run-1

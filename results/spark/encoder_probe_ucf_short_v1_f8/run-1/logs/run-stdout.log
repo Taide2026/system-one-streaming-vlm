@@ -1,0 +1,11 @@
+2026-10-28T07:19:19Z extract qwen35-vit: start, free 107 GiB
+2026-10-28T08:16:25Z extract qwen35-vit: done
+2026-10-28T08:16:25Z extract internvit-300m: start, free 107 GiB
+2026-10-28T09:21:49Z extract internvit-300m: done
+2026-10-28T09:21:49Z extract siglip2-so400m: start, free 107 GiB
+2026-10-28T10:29:54Z extract siglip2-so400m: done
+2026-10-28T10:29:54Z extract dinov3-vitl: start, free 107 GiB
+2026-10-28T11:15:37Z extract dinov3-vitl: done
+2026-10-28T11:15:37Z extract vjepa2-vitl: start, free 107 GiB
+2026-10-28T12:04:13Z extract vjepa2-vitl: done
+2026-10-28T12:04:13Z decision 9 check
