@@ -14,6 +14,10 @@
       s1stream.probe.fit.fit_condition (device default cpu); default --out: results/<machine>/<config name>/<run name>/fit-<condition>
   s1stream probe-compare <probe config.yaml> <results run dir>
       s1stream.probe.compare.run_compare; reads fit-<condition>/ in the run dir, writes compare.json and PNG files
+  s1stream encoder-compare <encoder config.yaml> <results run dir>
+      imports s1stream.plugins, calls s1stream.encoder.compare.run_encoder_compare(args.config, args.run_dir)
+      (looked up on the module at call time) and prints the result; reads fit-*/ in the run dir, writes
+      encoder_compare.json and PNG files
 fetch: assets.fetch(lock[name], asset_root() / name); --check: assets.check only.
 Exit code 0 on success, 1 on an AssetError, ConfigError, DatasetError or FileExistsError (message on stderr).
 """
@@ -61,6 +65,9 @@ def main(argv: list[str] | None = None) -> int:
     compare_parser = commands.add_parser("probe-compare")
     compare_parser.add_argument("config", type=Path)
     compare_parser.add_argument("run_dir", type=Path)
+    encoder_compare_parser = commands.add_parser("encoder-compare")
+    encoder_compare_parser.add_argument("config", type=Path)
+    encoder_compare_parser.add_argument("run_dir", type=Path)
     args = parser.parse_args(argv)
 
     try:
@@ -94,6 +101,8 @@ def main(argv: list[str] | None = None) -> int:
             from s1stream.probe.compare import run_compare
 
             print(run_compare(args.config, args.run_dir))
+        elif args.command == "encoder-compare":
+            raise NotImplementedError
         elif args.command == "report":
             report(args.run_dir)
         else:
