@@ -6,6 +6,10 @@
   s1stream fetch [--check] <asset> [<asset> ...]
   s1stream probe-extract <probe config.yaml> --condition <name> --run <name> [--limit-windows N]
       s1stream.probe.extract.run_extract; output $S1_FEATURES/<config name>/<condition>/<run name>
+  s1stream encoder-extract <encoder config.yaml> --encoder <name> --run <name> [--limit-windows N]
+      imports s1stream.plugins, calls s1stream.encoder.extract.run_encoder_extract(args.config, args.encoder,
+      args.run, limit_windows=args.limit_windows) (looked up on the module at call time) and prints the result;
+      output $S1_FEATURES/<config name>/<encoder>/<run name>
   s1stream probe-fit <features run dir> [--out <dir>] [--device cpu|cuda]
       s1stream.probe.fit.fit_condition (device default cpu); default --out: results/<machine>/<config name>/<run name>/fit-<condition>
   s1stream probe-compare <probe config.yaml> <results run dir>
@@ -45,6 +49,11 @@ def main(argv: list[str] | None = None) -> int:
     extract_parser.add_argument("--condition", required=True)
     extract_parser.add_argument("--run", required=True)
     extract_parser.add_argument("--limit-windows", type=int)
+    encoder_extract_parser = commands.add_parser("encoder-extract")
+    encoder_extract_parser.add_argument("config", type=Path)
+    encoder_extract_parser.add_argument("--encoder", required=True)
+    encoder_extract_parser.add_argument("--run", required=True)
+    encoder_extract_parser.add_argument("--limit-windows", type=int)
     fit_parser = commands.add_parser("probe-fit")
     fit_parser.add_argument("features", type=Path)
     fit_parser.add_argument("--out", type=Path)
@@ -68,6 +77,8 @@ def main(argv: list[str] | None = None) -> int:
             from s1stream.probe.extract import run_extract
 
             print(run_extract(args.config, args.condition, args.run, limit_windows=args.limit_windows))
+        elif args.command == "encoder-extract":
+            raise NotImplementedError
         elif args.command == "probe-fit":
             from s1stream.probe.fit import fit_condition
 
