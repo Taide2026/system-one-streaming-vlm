@@ -1,8 +1,8 @@
 """Probe stage of probing: `s1stream probe-fit` (finetune-layer-probing decision 10).
 
-Input: one features run of probe-extract (<set>/last.npy, <set>/visual.npy, <set>/meta.jsonl for train_anomaly,
-train_normal and test). For every token kind (KINDS) and state (0 .. n_states - 1) three probes give one score per
-test window:
+Input: one features run of probe-extract (<set>/<kind>.npy and <set>/meta.jsonl for train_anomaly, train_normal and
+test, with token kinds from read_kinds). For every token kind and state (0 .. n_states - 1) three probes give one score
+per test window:
   mil:    standardized features -> Linear(hidden, 1); video score = mean of the top-k window scores; BCE on the video
           labels + lam * |w|^2. k in KS, lam in LAMS; the pair with the lowest validation video BCE is chosen.
   holmes: the same head trained per window on the Holmes labels (BCE with pos_weight = negatives / positives);
@@ -16,11 +16,11 @@ mil and holmes heads train on `device` ("cpu" or "cuda"): Adam lr LR, STEPS full
 used lr 1e-2 and 200 steps, which oscillated on condition C). knn always runs on the CPU with scikit-learn.
 
 Writes into out:
-  fit.json          {"methods": METHODS, "kinds": KINDS, "n_states": S, "features": <features dir>,
+  fit.json          {"methods": METHODS, "kinds": list(kinds), "n_states": S, "features": <features dir>,
                      "val_videos": [...], "choices": {"<method>/<kind>/<state>": {"setting": {...}, "validation": x}}}
                     mil and holmes choices also hold "final_loss" and "min_loss": the training loss of the last
                     step (before its update) and the lowest training loss over all steps of the head refit on all train windows
-  test_scores.npy   float32 (len(METHODS), len(KINDS), S, n_test), in METHODS and KINDS order
+  test_scores.npy   float32 (len(METHODS), len(kinds), S, n_test), in METHODS and kinds order
   test_meta.jsonl   the test meta.jsonl of the features run, unchanged
 """
 from __future__ import annotations
@@ -154,14 +154,26 @@ def split(videos: list[str], category: dict[str, str], seed: int = SEED) -> set[
     return val
 
 
+def read_kinds(features: Path) -> tuple[str, ...]:
+    """The token kinds of a features run: features/run.json "kinds" when it is a list of str, else KINDS.
+
+    A missing run.json, a run.json without "kinds", or "kinds" as a dict (the vit-1 format:
+    {"visual": "token mean", "last": "token max"}) all give KINDS.
+    """
+    raise NotImplementedError
+
+
 def fit_condition(features: Path, out: Path, seed: int = SEED, log: Callable[[str], None] = print,
                   device: str = "cpu") -> None:
-    """Fit every method, kind and state on one features run and write fit.json, test_scores.npy and test_meta.jsonl
-    into out (see the module docstring). Raise FileExistsError when out/fit.json exists. Load one state at a time
-    (np.load with mmap_mode="r") and cast it to float32. mil and holmes heads train on device (fit_mil, fit_window);
-    test scores are float32 numpy arrays on the CPU. knn does not depend on device."""
+    """Fit every method, kind (from read_kinds) and state on one features run and write fit.json, test_scores.npy and
+    test_meta.jsonl into out (see the module docstring); fit.json "kinds" and the kind axis of test_scores.npy follow
+    that list. Raise FileExistsError when out/fit.json exists. A kind whose state count differs from the first kind
+    raises ValueError naming that kind. Load one state at a time (np.load with mmap_mode="r") and cast it to float32.
+    mil and holmes heads train on device (fit_mil, fit_window); test scores are float32 numpy arrays on the CPU. knn
+    does not depend on device."""
     if (out / "fit.json").exists():
         raise FileExistsError(out / "fit.json")
+    kinds = read_kinds(features)
     meta_text = {name: (features / name / "meta.jsonl").read_text() for name in SETS}
     meta = {name: [json.loads(line) for line in text.splitlines()] for name, text in meta_text.items()}
     train_meta = meta["train_anomaly"] + meta["train_normal"]
