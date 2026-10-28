@@ -104,8 +104,9 @@ class ClefFlash:
         from peft import PeftModel
         from safetensors.torch import load_file
 
-        merged = PeftModel.from_pretrained(self.model.language_model, run_dir / "adapter").merge_and_unload()
-        self.model.language_model = merged
+        if (run_dir / "adapter").is_dir():  # a linear probe (lora r 0) ships the head only
+            merged = PeftModel.from_pretrained(self.model.language_model, run_dir / "adapter").merge_and_unload()
+            self.model.language_model = merged
         head_dtype = next(self.model.head.parameters()).dtype
         state = {k: v.to(head_dtype) for k, v in load_file(run_dir / "head.safetensors").items()}
         self.model.head.load_state_dict(state, strict=True)

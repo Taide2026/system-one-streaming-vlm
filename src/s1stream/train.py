@@ -14,6 +14,7 @@ Config (configs/ft_ucf_v1_<model>.yaml):
   window: {length_s,
   stride_s, frames}, question: {prompt: v1}, backbone: {name: clef_flash | d3, asset}, lora: {r, alpha, dropout},
   optim: {lr, head_lr, warmup, batch, accumulate, epochs, workers, grad_checkpoint}
+  lora.r = 0: a linear probe, the backbone frozen and only the read-out trained (d3, Clef); no adapter/ is written.
 
 Run folder (--out, default results/<machine>/<name>/<time>):
   config.yaml, records.jsonl, val.jsonl, train.log (one JSON line per optimizer step), adapter/ (peft),
@@ -125,9 +126,11 @@ def window_auc(logits: torch.Tensor, target: torch.Tensor, pos: int) -> float | 
 def lora_wrap(backbone: torch.nn.Module, r: int, alpha: int, dropout: float, grad_checkpoint: bool):
     """Freeze backbone, enable gradient checkpointing, and inject a LoRA on LORA_TARGETS. Returns the peft model
     (the backbone's modules are modified in place, so references to its layers stay valid)."""
+    backbone.requires_grad_(False)
+    if r <= 0:  # linear probe (2026-10-28): no adapter, the read-out alone trains on frozen features
+        return backbone
     from peft import LoraConfig, get_peft_model
 
-    backbone.requires_grad_(False)
     if grad_checkpoint:
         backbone.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
         backbone.enable_input_require_grads()
@@ -190,7 +193,8 @@ class ClefTrainee:
     def save(self, out_dir: Path) -> None:
         from safetensors.torch import save_file
 
-        self.clef.language_model.save_pretrained(out_dir / "adapter")
+        if hasattr(self.clef.language_model, "save_pretrained") and hasattr(self.clef.language_model, "peft_config"):
+            self.clef.language_model.save_pretrained(out_dir / "adapter")  # not for a probe (lora r 0)
         save_file({k: v.detach().cpu().contiguous() for k, v in self.clef.head.state_dict().items()},
                   out_dir / "head.safetensors")
 
@@ -247,7 +251,8 @@ class D3Trainee:
     def save(self, out_dir: Path) -> None:
         from safetensors.torch import save_file
 
-        self.peft.save_pretrained(out_dir / "adapter")
+        if hasattr(self.peft, "save_pretrained"):  # a probe (lora r 0) has no adapter to save
+            self.peft.save_pretrained(out_dir / "adapter")
         save_file({"weight": self.readout.detach().cpu().contiguous()}, out_dir / "readout.safetensors")
 
 
@@ -380,6 +385,8 @@ def train(config_path: Path, out_dir: Path, limit_steps: int | None = None) -> P
     trainee = TRAINEES[spec["name"]](path, device, question, lora, bool(optim.get("grad_checkpoint", True)))
     trainee.train(True)
     lora_params, head_params = trainee.parameters()
+    if not lora_params and not head_params:
+        raise ConfigError("Nothing to train: lora.r is 0 and this backbone has no read-out head (a probe needs d3 or Clef)")
     n_lora, n_head = sum(p.numel() for p in lora_params), sum(p.numel() for p in head_params)
     print(f"trainable: LoRA {n_lora / 1e6:.1f} M, read-out {n_head / 1e6:.1f} M; load {time.perf_counter() - load_start:.0f} s",
           flush=True)
@@ -390,7 +397,7 @@ def train(config_path: Path, out_dir: Path, limit_steps: int | None = None) -> P
     total_steps = math.ceil(len(loader) / accumulate) * epochs
     warmup = int(round(total_steps * float(optim.get("warmup", 0.03))))
     base_lr, head_lr = float(optim["lr"]), float(optim.get("head_lr", optim["lr"]))
-    groups = [{"params": lora_params, "lr": base_lr}]
+    groups = [{"params": lora_params, "lr": base_lr}] if lora_params else []
     if head_params:
         groups.append({"params": head_params, "lr": head_lr})
     optimizer = torch.optim.AdamW(groups, weight_decay=0.0, betas=(0.9, 0.999))

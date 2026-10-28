@@ -65,7 +65,8 @@ def load_adapter(runtime: Any, run_dir: Path) -> None:
     from peft import PeftModel
     from safetensors.torch import load_file
 
-    PeftModel.from_pretrained(runtime.backbone, run_dir / "adapter").merge_and_unload()
+    if (run_dir / "adapter").is_dir():  # a linear probe (lora r 0) ships the read-out only
+        PeftModel.from_pretrained(runtime.backbone, run_dir / "adapter").merge_and_unload()
     weight = load_file(run_dir / "readout.safetensors")["weight"]
     runtime.readout = weight.to(runtime.readout.device, runtime.readout.dtype)
     calibration = run_dir / "calibration.json"
