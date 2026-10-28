@@ -1,0 +1,17 @@
+test videos: {np.str_('Abuse'): 1, np.str_('Arson'): 4, np.str_('Burglary'): 3, np.str_('Explosion'): 6, np.str_('Fighting'): 2, np.str_('RoadAccidents'): 15, np.str_('Robbery'): 2, np.str_('Shooting'): 7, np.str_('Shoplifting'): 6, np.str_('Vandalism'): 3}
+encoder/kind                     st   all  in_vid  Abuse  Arson Burgla Explos Fighti RoadAc Robber Shooti Shopli Vandal
+dinov3-vitl/patch_mean           17 0.798 0.544   0.952  0.974  0.943  0.913  0.939  0.909  0.909  0.950  0.947  0.963
+dinov3-vitl/patch_max            14 0.768 0.494   0.929  0.958  0.890  0.840  0.948  0.887  0.925  0.952  0.892  0.980
+dinov3-vitl/cls_mean             23 0.782 0.524   0.973  0.970  0.935  0.898  0.725  0.919  0.944  0.961  0.904  0.987
+internvit-300m/patch_mean        14 0.793 0.526   0.964  0.975  0.985  0.873  0.969  0.909  0.931  0.968  0.905  0.983
+internvit-300m/patch_max         13 0.797 0.536   0.979  0.963  0.970  0.908  0.985  0.914  0.904  0.967  0.909  0.975
+internvit-300m/cls_mean          23 0.804 0.540   0.954  0.971  0.971  0.948  0.986  0.926  0.952  0.966  0.905  0.976
+internvit-300m-head/patch_mean    0 0.809 0.559   0.973  0.964  0.988  0.880  0.978  0.927  0.962  0.954  0.914  0.980
+internvit-300m-head/patch_max     0 0.800 0.570   0.991  0.976  0.960  0.807  0.995  0.911  0.883  0.951  0.862  0.979
+qwen35-vit/patch_mean            18 0.807 0.566   0.844  0.967  0.964  0.942  0.936  0.924  0.923  0.950  0.897  0.966
+qwen35-vit/patch_max             26 0.816 0.579   0.866  0.968  0.987  0.939  0.983  0.925  0.962  0.947  0.859  0.982
+siglip2-so400m/patch_mean        21 0.818 0.584   0.968  0.978  0.968  0.946  0.981  0.919  0.888  0.957  0.887  0.973
+siglip2-so400m/patch_max         24 0.827 0.599   0.981  0.978  0.983  0.929  0.989  0.927  0.975  0.955  0.881  0.979
+siglip2-so400m-head/pooler_mean   0 0.820 0.569   0.995  0.978  0.978  0.902  0.989  0.927  0.992  0.936  0.965  0.987
+vjepa2-vitl/patch_mean           15 0.805 0.559   0.986  0.978  0.989  0.817  0.996  0.936  0.985  0.954  0.874  0.980
+vjepa2-vitl/patch_max            13 0.759 0.498   0.531  0.945  0.966  0.908  0.980  0.880  0.890  0.929  0.839  0.843

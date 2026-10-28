@@ -66,6 +66,20 @@ Main findings:
   kNN `internvit-300m` `patch_max` (-0.079) and `internvit-300m-head` `patch_mean` (-0.098).
 - `qwen35-vit` `patch_mean` at the last state gives MIL 0.825, the vit-1 value. The validation choice (state 18) gives 0.807.
 
+## Analysis after the run (2026-10-29): per category and in video
+
+Script `scripts/per_category_auc.py` (logs `logs/per-category-{mil,holmes,knn}.log`). Same scores and selected states as
+`encoder_compare.json`; frame-weighted AUC.
+
+- Per category (that category's test videos + the 68 normal test videos): MIL 0.82-0.99 for almost every encoder and category.
+- In video (anomaly test videos only: event frames against the other frames of the same videos): MIL 0.49-0.60 for every encoder.
+  Best: `siglip2-so400m` `patch_max` 0.599, `qwen35-vit` `patch_max` 0.579, `qwen35-vit` `patch_mean` 0.566.
+- Reading: every encoder separates anomaly videos from normal videos. No encoder finds the event inside an anomaly video.
+  The overall 0.8 comes from the normal frames of the anomaly videos, which score as high as the event frames.
+- So the ceiling is localization in time, and it is the same for image-text (SigLIP2, InternViT), image self-supervised
+  (DINOv3) and video self-supervised (V-JEPA 2) encoders. Per-window pooled features follow the scene, not the event.
+- Small categories: Abuse has 1 test video, Fighting and Robbery 2 each. Do not read single category values.
+
 ## Notes
 
 - State 0 `cls_mean` of `dinov3-vitl` and `internvit-300m` is the same for every window (the learned CLS embedding,
