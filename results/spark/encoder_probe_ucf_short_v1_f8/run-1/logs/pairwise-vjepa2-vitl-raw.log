@@ -1,0 +1,30 @@
+Uninstalled 1 package in 0.59ms
+Installed 1 package in 2ms
+state 0 done
+state 1 done
+state 2 done
+state 3 done
+state 4 done
+state 5 done
+state 6 done
+state 7 done
+state 8 done
+state 9 done
+state 10 done
+state 11 done
+state 12 done
+state 13 done
+state 14 done
+state 15 done
+state 16 done
+state 17 done
+state 18 done
+state 19 done
+state 20 done
+state 21 done
+state 22 done
+state 23 done
+state 24 done
+vjepa2-vitl-raw/patch_mean/pair_a0 state 18: all 0.813  in_video 0.668  per-video median 0.890  below 0.5 5/49
+vjepa2-vitl-raw/patch_mean/pair_a1 state 18: all 0.785  in_video 0.664  per-video median 0.864  below 0.5 6/49
+vjepa2-vitl-raw/patch_mean/pair_a4 state 18: all 0.762  in_video 0.660  per-video median 0.862  below 0.5 6/49

@@ -1,0 +1,20 @@
+2026-10-29T14:09:12Z vjepa2-vitl raw start
+2026-10-29T14:09:12Z qwen35-vit raw start
+2026-10-29T14:18:56Z vjepa2-vitl raw exit 0
+vjepa2-vitl-raw/patch_mean/pair_a0 state 18: all 0.813  in_video 0.668  per-video median 0.890  below 0.5 5/49
+vjepa2-vitl-raw/patch_mean/pair_a1 state 18: all 0.785  in_video 0.664  per-video median 0.864  below 0.5 6/49
+vjepa2-vitl-raw/patch_mean/pair_a4 state 18: all 0.762  in_video 0.660  per-video median 0.862  below 0.5 6/49
+2026-10-29T14:18:56Z vjepa2-vitl residual-past10 start
+2026-10-29T14:19:58Z qwen35-vit raw exit 0
+qwen35-vit-raw/patch_mean/pair_a0 state 27: all 0.803  in_video 0.622  per-video median 0.743  below 0.5 8/49
+qwen35-vit-raw/patch_mean/pair_a1 state  4: all 0.788  in_video 0.596  per-video median 0.669  below 0.5 16/49
+qwen35-vit-raw/patch_mean/pair_a4 state  4: all 0.770  in_video 0.605  per-video median 0.663  below 0.5 13/49
+2026-10-29T14:19:58Z qwen35-vit residual-past10 start
+2026-10-29T14:31:24Z vjepa2-vitl residual-past10 exit 0
+vjepa2-vitl-residual-past10/patch_mean/pair_a0 state  9: all 0.796  in_video 0.608  per-video median 0.771  below 0.5 10/49
+vjepa2-vitl-residual-past10/patch_mean/pair_a1 state 18: all 0.793  in_video 0.674  per-video median 0.848  below 0.5 5/49
+vjepa2-vitl-residual-past10/patch_mean/pair_a4 state 18: all 0.768  in_video 0.667  per-video median 0.785  below 0.5 10/49
+2026-10-29T14:34:03Z qwen35-vit residual-past10 exit 0
+qwen35-vit-residual-past10/patch_mean/pair_a0 state 27: all 0.816  in_video 0.652  per-video median 0.829  below 0.5 9/49
+qwen35-vit-residual-past10/patch_mean/pair_a1 state 27: all 0.815  in_video 0.657  per-video median 0.829  below 0.5 10/49
+qwen35-vit-residual-past10/patch_mean/pair_a4 state 26: all 0.698  in_video 0.590  per-video median 0.752  below 0.5 14/49

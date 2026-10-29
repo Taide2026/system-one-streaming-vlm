@@ -1,0 +1,682 @@
+{
+  "methods": [
+    "pair_a0",
+    "pair_a1",
+    "pair_a4"
+  ],
+  "kinds": [
+    "patch_mean"
+  ],
+  "n_states": 28,
+  "features": "/home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8_residual_past10/qwen35-vit/run-1",
+  "val_videos": [
+    "Abuse011_x264.mp4",
+    "Abuse026_x264.mp4",
+    "Abuse033_x264.mp4",
+    "Arrest013_x264.mp4",
+    "Arrest025_x264.mp4",
+    "Arrest028_x264.mp4",
+    "Arson024_x264.mp4",
+    "Arson037_x264.mp4",
+    "Arson038_x264.mp4",
+    "Assault013_x264.mp4",
+    "Assault026_x264.mp4",
+    "Assault032_x264.mp4",
+    "Burglary027_x264.mp4",
+    "Burglary067_x264.mp4",
+    "Burglary070_x264.mp4",
+    "Explosion019_x264.mp4",
+    "Explosion038_x264.mp4",
+    "Explosion042_x264.mp4",
+    "Fighting017_x264.mp4",
+    "Fighting026_x264.mp4",
+    "Fighting028_x264.mp4",
+    "Normal_Videos002_x264.mp4",
+    "Normal_Videos004_x264.mp4",
+    "Normal_Videos039_x264.mp4",
+    "Normal_Videos043_x264.mp4",
+    "Normal_Videos053_x264.mp4",
+    "Normal_Videos094_x264.mp4",
+    "Normal_Videos098_x264.mp4",
+    "Normal_Videos110_x264.mp4",
+    "Normal_Videos117_x264.mp4",
+    "Normal_Videos124_x264.mp4",
+    "Normal_Videos132_x264.mp4",
+    "Normal_Videos162_x264.mp4",
+    "Normal_Videos200_x264.mp4",
+    "Normal_Videos204_x264.mp4",
+    "Normal_Videos232_x264.mp4",
+    "Normal_Videos252_x264.mp4",
+    "Normal_Videos258_x264.mp4",
+    "Normal_Videos260_x264.mp4",
+    "Normal_Videos311_x264.mp4",
+    "Normal_Videos358_x264.mp4",
+    "Normal_Videos399_x264.mp4",
+    "Normal_Videos402_x264.mp4",
+    "Normal_Videos416_x264.mp4",
+    "Normal_Videos505_x264.mp4",
+    "Normal_Videos555_x264.mp4",
+    "Normal_Videos628_x264.mp4",
+    "Normal_Videos661_x264.mp4",
+    "Normal_Videos692_x264.mp4",
+    "Normal_Videos698_x264.mp4",
+    "Normal_Videos699_x264.mp4",
+    "Normal_Videos705_x264.mp4",
+    "Normal_Videos735_x264.mp4",
+    "Normal_Videos751_x264.mp4",
+    "Normal_Videos763_x264.mp4",
+    "Normal_Videos766_x264.mp4",
+    "Normal_Videos773_x264.mp4",
+    "Normal_Videos810_x264.mp4",
+    "Normal_Videos818_x264.mp4",
+    "Normal_Videos822_x264.mp4",
+    "RoadAccidents042_x264.mp4",
+    "RoadAccidents056_x264.mp4",
+    "RoadAccidents071_x264.mp4",
+    "Robbery041_x264.mp4",
+    "Robbery065_x264.mp4",
+    "Robbery099_x264.mp4",
+    "Shooting029_x264.mp4",
+    "Shooting040_x264.mp4",
+    "Shooting041_x264.mp4",
+    "Shoplifting025_x264.mp4",
+    "Shoplifting045_x264.mp4",
+    "Shoplifting047_x264.mp4",
+    "Stealing024_x264.mp4",
+    "Stealing069_x264.mp4",
+    "Stealing073_x264.mp4",
+    "Vandalism012_x264.mp4",
+    "Vandalism031_x264.mp4",
+    "Vandalism033_x264.mp4"
+  ],
+  "choices": {
+    "pair_a0/patch_mean/0": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.47830610575023985
+    },
+    "pair_a1/patch_mean/0": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.47376699960498847
+    },
+    "pair_a4/patch_mean/0": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.471971813103098
+    },
+    "pair_a0/patch_mean/1": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.0001
+      },
+      "validation": 0.49897367530049097
+    },
+    "pair_a1/patch_mean/1": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5073535635686472
+    },
+    "pair_a4/patch_mean/1": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5114623892556853
+    },
+    "pair_a0/patch_mean/2": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5535699170475707
+    },
+    "pair_a1/patch_mean/2": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.5507836747361887
+    },
+    "pair_a4/patch_mean/2": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5481984650979065
+    },
+    "pair_a0/patch_mean/3": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5295447491676541
+    },
+    "pair_a1/patch_mean/3": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5419417640088031
+    },
+    "pair_a4/patch_mean/3": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5477152813046668
+    },
+    "pair_a0/patch_mean/4": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5268748941933299
+    },
+    "pair_a1/patch_mean/4": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5490696066813385
+    },
+    "pair_a4/patch_mean/4": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5583947012019638
+    },
+    "pair_a0/patch_mean/5": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5039148467919419
+    },
+    "pair_a1/patch_mean/5": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5150492353704644
+    },
+    "pair_a4/patch_mean/5": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5220994864849613
+    },
+    "pair_a0/patch_mean/6": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5318724959088087
+    },
+    "pair_a1/patch_mean/6": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5489426386772756
+    },
+    "pair_a4/patch_mean/6": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5593575418994413
+    },
+    "pair_a0/patch_mean/7": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5219055075898651
+    },
+    "pair_a1/patch_mean/7": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5228260256193217
+    },
+    "pair_a4/patch_mean/7": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5169220134303933
+    },
+    "pair_a0/patch_mean/8": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5393424468145139
+    },
+    "pair_a1/patch_mean/8": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5393724253710287
+    },
+    "pair_a4/patch_mean/8": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5326872072682128
+    },
+    "pair_a0/patch_mean/9": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.001
+      },
+      "validation": 0.5230411658484284
+    },
+    "pair_a1/patch_mean/9": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5241380283279724
+    },
+    "pair_a4/patch_mean/9": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5195142768466791
+    },
+    "pair_a0/patch_mean/10": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.001
+      },
+      "validation": 0.5388592630212742
+    },
+    "pair_a1/patch_mean/10": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.5410071384233396
+    },
+    "pair_a4/patch_mean/10": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5412998702104848
+    },
+    "pair_a0/patch_mean/11": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5394517803735681
+    },
+    "pair_a1/patch_mean/11": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5420052480108346
+    },
+    "pair_a4/patch_mean/11": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5407426217482083
+    },
+    "pair_a0/patch_mean/12": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5200256757519327
+    },
+    "pair_a1/patch_mean/12": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.510496021669206
+    },
+    "pair_a4/patch_mean/12": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5068421646633937
+    },
+    "pair_a0/patch_mean/13": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5314880650076181
+    },
+    "pair_a1/patch_mean/13": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5172993905535805
+    },
+    "pair_a4/patch_mean/13": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5185055865921787
+    },
+    "pair_a0/patch_mean/14": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5509741267422832
+    },
+    "pair_a1/patch_mean/14": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5486992833361549
+    },
+    "pair_a4/patch_mean/14": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5470663337283449
+    },
+    "pair_a0/patch_mean/15": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5185091134811805
+    },
+    "pair_a1/patch_mean/15": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5152396873765589
+    },
+    "pair_a4/patch_mean/15": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5108416567913775
+    },
+    "pair_a0/patch_mean/16": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5271041419784436
+    },
+    "pair_a1/patch_mean/16": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5230905422944528
+    },
+    "pair_a4/patch_mean/16": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5179377574628972
+    },
+    "pair_a0/patch_mean/17": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5275485299926641
+    },
+    "pair_a1/patch_mean/17": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5300385136278991
+    },
+    "pair_a4/patch_mean/17": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5293825122735737
+    },
+    "pair_a0/patch_mean/18": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5561374922408442
+    },
+    "pair_a1/patch_mean/18": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5585428305400373
+    },
+    "pair_a4/patch_mean/18": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5606765983860955
+    },
+    "pair_a0/patch_mean/19": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5611245132893178
+    },
+    "pair_a1/patch_mean/19": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5605672648270413
+    },
+    "pair_a4/patch_mean/19": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.562626968004063
+    },
+    "pair_a0/patch_mean/20": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5454898143445629
+    },
+    "pair_a1/patch_mean/20": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5500183398228091
+    },
+    "pair_a4/patch_mean/20": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5507766209581851
+    },
+    "pair_a0/patch_mean/21": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5449325658822866
+    },
+    "pair_a1/patch_mean/21": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5432572936064556
+    },
+    "pair_a4/patch_mean/21": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5424743242480672
+    },
+    "pair_a0/patch_mean/22": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5527199367981491
+    },
+    "pair_a1/patch_mean/22": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5541306923988487
+    },
+    "pair_a4/patch_mean/22": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.55574600756165
+    },
+    "pair_a0/patch_mean/23": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5567934935951696
+    },
+    "pair_a1/patch_mean/23": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5601299305908245
+    },
+    "pair_a4/patch_mean/23": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5611703628463405
+    },
+    "pair_a0/patch_mean/24": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5697936064556176
+    },
+    "pair_a1/patch_mean/24": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5754718977484341
+    },
+    "pair_a4/patch_mean/24": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5761843293267874
+    },
+    "pair_a0/patch_mean/25": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5624647311099825
+    },
+    "pair_a1/patch_mean/25": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5689259917611873
+    },
+    "pair_a4/patch_mean/25": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5680971728457762
+    },
+    "pair_a0/patch_mean/26": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.573532108797472
+    },
+    "pair_a1/patch_mean/26": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5854671011793917
+    },
+    "pair_a4/patch_mean/26": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5893925286383387
+    },
+    "pair_a0/patch_mean/27": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5903694768918233
+    },
+    "pair_a1/patch_mean/27": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.593455504768354
+    },
+    "pair_a4/patch_mean/27": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5893854748603352
+    }
+  }
+}
