@@ -72,7 +72,10 @@ def main() -> None:
     ap.add_argument("--n-train", type=int, default=200); ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--pool", choices=["attn", "all"], default="all", help="candidate heads: attention only, or DeltaNet too")
     args = ap.parse_args()
-    tr, te = np.load(args.train), np.load(args.test)
+    # np.load on an .npz is lazy and decompresses an array on every access: read each array once
+    tr = {k: v for k, v in np.load(args.train).items()}
+    te = {k: v for k, v in np.load(args.test).items()}
+    print(f"loaded {args.train.name} {tr['attn'].shape} and {args.test.name} {te['attn'].shape}", flush=True)
     manifest = {v["name"]: v for v in json.loads(args.manifest.read_text())}
     rng = np.random.default_rng(args.seed)
     ytr_all = tr["label"].astype(int); yte = te["label"].astype(int)
