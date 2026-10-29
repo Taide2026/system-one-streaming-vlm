@@ -1,0 +1,103 @@
+Uninstalled 1 package in 0.75ms
+Installed 1 package in 2ms
+source                             smoother   all    vs_normal in_video  per-video median  below 0.5
+p(yes) d3-flash                    none      0.850  0.946     0.709     0.784             8/49
+p(yes) d3-flash                    gauss1    0.854  0.960     0.698     0.804             8/49
+p(yes) d3-flash                    gauss1.5  0.850  0.961     0.686     0.719             7/49
+p(yes) d3-flash                    gauss2    0.845  0.961     0.676     0.674             11/49
+p(yes) d3-flash                    mean2     0.839  0.947     0.682     0.718             10/49
+p(yes) d3-flash                    mean3     0.828  0.946     0.656     0.648             12/49
+p(yes) d3-flash                    mean5     0.811  0.944     0.615     0.638             18/49
+p(yes) d3-flash                    ema0.5    0.836  0.949     0.670     0.674             11/49
+p(yes) d3-flash                    ema0.3    0.822  0.948     0.636     0.638             16/49
+
+Qwen ViT patch_mean mil            none      0.807  0.971     0.566     0.686             14/49
+Qwen ViT patch_mean mil            gauss1    0.803  0.971     0.556     0.687             15/49
+Qwen ViT patch_mean mil            gauss1.5  0.799  0.970     0.549     0.588             18/49
+Qwen ViT patch_mean mil            gauss2    0.796  0.968     0.542     0.564             19/49
+Qwen ViT patch_mean mil            mean2     0.795  0.971     0.537     0.570             20/49
+Qwen ViT patch_mean mil            mean3     0.788  0.970     0.520     0.523             23/49
+Qwen ViT patch_mean mil            mean5     0.776  0.968     0.493     0.435             29/49
+Qwen ViT patch_mean mil            ema0.5    0.792  0.971     0.527     0.555             23/49
+Qwen ViT patch_mean mil            ema0.3    0.777  0.968     0.496     0.468             26/49
+
+Qwen ViT patch_mean holmes         none      0.790  0.930     0.584     0.665             18/49
+Qwen ViT patch_mean holmes         gauss1    0.789  0.933     0.578     0.711             14/49
+Qwen ViT patch_mean holmes         gauss1.5  0.787  0.933     0.573     0.624             19/49
+Qwen ViT patch_mean holmes         gauss2    0.786  0.933     0.568     0.648             20/49
+Qwen ViT patch_mean holmes         mean2     0.784  0.928     0.571     0.652             15/49
+Qwen ViT patch_mean holmes         mean3     0.778  0.926     0.559     0.591             16/49
+Qwen ViT patch_mean holmes         mean5     0.771  0.924     0.545     0.535             22/49
+Qwen ViT patch_mean holmes         ema0.5    0.781  0.928     0.565     0.622             17/49
+Qwen ViT patch_mean holmes         ema0.3    0.772  0.925     0.548     0.612             18/49
+
+V-JEPA 2 patch_mean mil            none      0.805  0.972     0.559     0.686             10/49
+V-JEPA 2 patch_mean mil            gauss1    0.801  0.972     0.548     0.815             12/49
+V-JEPA 2 patch_mean mil            gauss1.5  0.796  0.972     0.537     0.773             12/49
+V-JEPA 2 patch_mean mil            gauss2    0.791  0.971     0.527     0.713             13/49
+V-JEPA 2 patch_mean mil            mean2     0.795  0.972     0.535     0.685             12/49
+V-JEPA 2 patch_mean mil            mean3     0.785  0.972     0.509     0.622             18/49
+V-JEPA 2 patch_mean mil            mean5     0.773  0.972     0.480     0.527             21/49
+V-JEPA 2 patch_mean mil            ema0.5    0.789  0.972     0.520     0.667             16/49
+V-JEPA 2 patch_mean mil            ema0.3    0.777  0.972     0.489     0.559             19/49
+
+V-JEPA 2 patch_mean holmes         none      0.813  0.912     0.668     0.890             5/49
+V-JEPA 2 patch_mean holmes         gauss1    0.811  0.921     0.650     0.913             9/49
+V-JEPA 2 patch_mean holmes         gauss1.5  0.807  0.922     0.636     0.887             10/49
+V-JEPA 2 patch_mean holmes         gauss2    0.802  0.924     0.621     0.877             11/49
+V-JEPA 2 patch_mean holmes         mean2     0.799  0.910     0.635     0.790             10/49
+V-JEPA 2 patch_mean holmes         mean3     0.784  0.905     0.605     0.720             13/49
+V-JEPA 2 patch_mean holmes         mean5     0.764  0.899     0.564     0.665             17/49
+V-JEPA 2 patch_mean holmes         ema0.5    0.793  0.911     0.620     0.825             10/49
+V-JEPA 2 patch_mean holmes         ema0.3    0.770  0.906     0.571     0.704             15/49
+
+Qwen ViT centered full mil         none      0.340  0.330     0.354     0.284             34/49
+Qwen ViT centered full mil         gauss1    0.348  0.332     0.370     0.348             31/49
+Qwen ViT centered full mil         gauss1.5  0.367  0.354     0.387     0.436             29/49
+Qwen ViT centered full mil         gauss2    0.386  0.376     0.401     0.436             26/49
+Qwen ViT centered full mil         mean2     0.388  0.377     0.405     0.456             28/49
+Qwen ViT centered full mil         mean3     0.425  0.411     0.445     0.477             25/49
+Qwen ViT centered full mil         mean5     0.480  0.475     0.486     0.519             23/49
+Qwen ViT centered full mil         ema0.5    0.401  0.391     0.417     0.477             25/49
+Qwen ViT centered full mil         ema0.3    0.449  0.445     0.455     0.508             23/49
+
+Qwen ViT centered full holmes      none      0.707  0.704     0.712     0.832             7/49
+Qwen ViT centered full holmes      gauss1    0.694  0.691     0.699     0.735             13/49
+Qwen ViT centered full holmes      gauss1.5  0.676  0.674     0.680     0.704             15/49
+Qwen ViT centered full holmes      gauss2    0.659  0.656     0.664     0.732             17/49
+Qwen ViT centered full holmes      mean2     0.682  0.677     0.688     0.742             15/49
+Qwen ViT centered full holmes      mean3     0.653  0.649     0.659     0.720             16/49
+Qwen ViT centered full holmes      mean5     0.595  0.591     0.600     0.631             20/49
+Qwen ViT centered full holmes      ema0.5    0.668  0.664     0.673     0.710             16/49
+Qwen ViT centered full holmes      ema0.3    0.612  0.606     0.620     0.668             20/49
+
+V-JEPA 2 centered full mil         none      0.312  0.306     0.320     0.290             35/49
+V-JEPA 2 centered full mil         gauss1    0.296  0.286     0.310     0.291             34/49
+V-JEPA 2 centered full mil         gauss1.5  0.315  0.305     0.330     0.392             32/49
+V-JEPA 2 centered full mil         gauss2    0.343  0.336     0.354     0.465             29/49
+V-JEPA 2 centered full mil         mean2     0.341  0.331     0.354     0.415             32/49
+V-JEPA 2 centered full mil         mean3     0.407  0.399     0.418     0.477             25/49
+V-JEPA 2 centered full mil         mean5     0.500  0.497     0.504     0.508             23/49
+V-JEPA 2 centered full mil         ema0.5    0.373  0.364     0.385     0.480             26/49
+V-JEPA 2 centered full mil         ema0.3    0.459  0.454     0.468     0.545             22/49
+
+V-JEPA 2 centered full holmes      none      0.749  0.739     0.763     0.864             5/49
+V-JEPA 2 centered full holmes      gauss1    0.753  0.746     0.764     0.882             10/49
+V-JEPA 2 centered full holmes      gauss1.5  0.731  0.722     0.743     0.864             12/49
+V-JEPA 2 centered full holmes      gauss2    0.708  0.698     0.722     0.808             14/49
+V-JEPA 2 centered full holmes      mean2     0.722  0.712     0.736     0.783             10/49
+V-JEPA 2 centered full holmes      mean3     0.682  0.671     0.697     0.718             12/49
+V-JEPA 2 centered full holmes      mean5     0.619  0.606     0.639     0.684             14/49
+V-JEPA 2 centered full holmes      ema0.5    0.710  0.700     0.725     0.826             10/49
+V-JEPA 2 centered full holmes      ema0.3    0.638  0.621     0.663     0.733             16/49
+
+d3-flash LLM last holmes           none      0.847  0.940     0.711     0.825             10/49
+d3-flash LLM last holmes           gauss1    0.850  0.952     0.701     0.895             10/49
+d3-flash LLM last holmes           gauss1.5  0.845  0.952     0.686     0.817             13/49
+d3-flash LLM last holmes           gauss2    0.838  0.952     0.671     0.798             14/49
+d3-flash LLM last holmes           mean2     0.840  0.945     0.686     0.816             14/49
+d3-flash LLM last holmes           mean3     0.827  0.945     0.652     0.732             16/49
+d3-flash LLM last holmes           mean5     0.809  0.945     0.608     0.668             16/49
+d3-flash LLM last holmes           ema0.5    0.837  0.947     0.675     0.800             12/49
+d3-flash LLM last holmes           ema0.3    0.817  0.945     0.629     0.680             16/49
+

@@ -1,0 +1,12 @@
+run                           all    vs_normal in_video  per-video median  below 0.5  in_video short-49
+zero-shot qwen3_5_9b         0.824  0.880     0.728     0.811              13/140    0.682
+zero-shot d3_flash           0.856  0.927     0.733     0.815              18/140    0.708
+zero-shot clef_flash         0.841  0.907     0.725     0.771              15/140    0.684
+fine-tune qwen               0.895  0.989     0.734     0.830              12/140    0.739
+fine-tune d3flash            0.892  0.986     0.730     0.858              17/140    0.738
+fine-tune clef               0.877  0.981     0.699     0.812              16/140    0.679
+fine-tune clef_hard          0.888  0.986     0.719     0.843              10/140    0.741
+fine-tune d3nano             0.877  0.984     0.694     0.765              19/140    0.663
+fine-tune d3nano_full        0.880  0.982     0.703     0.781              18/140    0.652
+fine-tune d3nano_hard        0.889  0.987     0.721     0.793              21/140    0.669
+fine-tune d3nano_hardneg     0.869  0.966     0.701     0.770              19/140    0.670
