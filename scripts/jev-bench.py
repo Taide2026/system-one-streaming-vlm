@@ -76,8 +76,8 @@ def main() -> None:
                 elif kind == "choice":
                     pred = ans["choice"]; ok = pred == label
                     probs.append(float(ans["probabilities"][pred])); correct.append(ok)
-                else:  # score: levels in option order
-                    keys = list(ans["probabilities"]); pred = ans["choice"]; ok = pred == label
+                else:  # score: {"score": expected level, "probabilities": {level key: p}}; the prediction is the argmax level
+                    keys = list(ans["probabilities"]); pred = max(keys, key=lambda k: ans["probabilities"][k]); ok = pred == label
                     probs.append(float(ans["probabilities"][pred])); correct.append(ok)
                     if label in keys:
                         errs.append(abs(keys.index(pred) - keys.index(label)))
