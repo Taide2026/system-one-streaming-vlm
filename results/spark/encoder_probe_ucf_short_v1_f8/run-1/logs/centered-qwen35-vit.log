@@ -1,0 +1,33 @@
+Uninstalled 1 package in 0.45ms
+Installed 1 package in 2ms
+patch_mean state 0: 30.14s
+patch_mean state 1: 26.73s
+patch_mean state 2: 28.72s
+patch_mean state 3: 28.05s
+patch_mean state 4: 28.18s
+patch_mean state 5: 29.22s
+patch_mean state 6: 28.15s
+patch_mean state 7: 27.19s
+patch_mean state 8: 29.41s
+patch_mean state 9: 27.85s
+patch_mean state 10: 28.63s
+patch_mean state 11: 26.80s
+patch_mean state 12: 27.86s
+patch_mean state 13: 27.29s
+patch_mean state 14: 28.20s
+patch_mean state 15: 28.69s
+patch_mean state 16: 28.51s
+patch_mean state 17: 29.46s
+patch_mean state 18: 28.11s
+patch_mean state 19: 29.66s
+patch_mean state 20: 28.44s
+patch_mean state 21: 28.41s
+patch_mean state 22: 27.63s
+patch_mean state 23: 26.57s
+patch_mean state 24: 26.81s
+patch_mean state 25: 27.05s
+patch_mean state 26: 30.06s
+patch_mean state 27: 28.13s
+fit-qwen35-vit/patch_mean/mil state 27: all 0.340  in_video 0.354  per-video median 0.284  below 0.5 34/49
+fit-qwen35-vit/patch_mean/holmes state 27: all 0.707  in_video 0.712  per-video median 0.832  below 0.5 7/49
+fit-qwen35-vit/patch_mean/knn state 20: all 0.668  in_video 0.552  per-video median 0.505  below 0.5 24/49

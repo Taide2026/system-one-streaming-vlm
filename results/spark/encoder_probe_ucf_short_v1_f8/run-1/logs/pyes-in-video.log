@@ -1,0 +1,19 @@
+Uninstalled 1 package in 0.54ms
+Installed 1 package in 2ms
+run                                             all   vs_normal  in_video  per-video median  below 0.5
+clef_flash_ucf_short_f8/20261015-014150        0.839  0.923      0.715     0.807             9/49
+d3_edge_ucf_short_f8/20261016-110236           0.839  0.936      0.696     0.793             8/49
+d3_flash_ucf_short_f8/20261016-133125          0.850  0.946      0.709     0.784             8/49
+d3_lite_ucf_short_f8/20261016-113018           0.808  0.881      0.699     0.806             10/49
+d3_mini_ucf_short_f8/20261016-123937           0.848  0.940      0.713     0.827             10/49
+d3_nano_ucf_short_f8/20261016-120209           0.841  0.931      0.710     0.806             7/49
+d3_ucf_short_f8/20261016-143515                0.851  0.943      0.716     0.793             8/49
+gemma4_e4b_constrained_ucf_short_f8/20261017-2 0.823  0.929      0.667     0.823             10/49
+gemma4_e4b_k417k_constrained_ucf_short_f8/2026 0.701  0.735      0.651     0.792             10/49
+gemma4_e4b_k417k_pure_prob_ucf_short_f8/202610 0.690  0.728      0.635     0.709             13/49
+gemma4_e4b_k54k_fall_constrained_ucf_short_f8/ 0.848  0.945      0.706     0.827             6/49
+gemma4_e4b_k54k_fall_pure_prob_ucf_short_f8/20 0.847  0.942      0.707     0.821             9/49
+gemma4_e4b_pure_prob_ucf_short_f8/20261018-010 0.814  0.916      0.663     0.818             12/49
+gemma4_e4b_pure_ucf_short_f8/20261015-143615   0.675  0.731      0.592     0.570             10/49
+imajev_4b_ucf_short_f8/20261015-024724         0.832  0.912      0.713     0.762             6/49
+jev_omni_ucf_short_f8/20261014-224642          0.787  0.899      0.621     0.765             15/49

@@ -1,0 +1,13 @@
+avail 104
+2026-10-29T05:16:00Z centered qwen35-vit start
+2026-10-29T05:29:15Z centered qwen35-vit exit 0
+fit-qwen35-vit/patch_mean/mil state 27: all 0.340  in_video 0.354  per-video median 0.284  below 0.5 34/49
+fit-qwen35-vit/patch_mean/holmes state 27: all 0.707  in_video 0.712  per-video median 0.832  below 0.5 7/49
+fit-qwen35-vit/patch_mean/knn state 20: all 0.668  in_video 0.552  per-video median 0.505  below 0.5 24/49
+2026-10-29T05:29:15Z centered vjepa2-vitl start
+2026-10-29T05:41:08Z centered vjepa2-vitl exit 0
+fit-vjepa2-vitl/patch_mean/mil state 14: all 0.312  in_video 0.320  per-video median 0.290  below 0.5 35/49
+fit-vjepa2-vitl/patch_mean/holmes state 19: all 0.749  in_video 0.763  per-video median 0.864  below 0.5 5/49
+fit-vjepa2-vitl/patch_mean/knn state 14: all 0.679  in_video 0.583  per-video median 0.527  below 0.5 22/49
+
+[exited with code 0]

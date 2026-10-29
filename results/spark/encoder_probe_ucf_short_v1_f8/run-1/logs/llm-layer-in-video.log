@@ -1,0 +1,21 @@
+Uninstalled 1 package in 0.57ms
+Installed 1 package in 2ms
+condition/kind/method    state  all   vs_normal  in_video  per-video median  below 0.5
+A/last/mil                  17  0.819  0.962      0.608     0.710             13/49
+A/last/holmes               17  0.810  0.912      0.660     0.820             6/49
+A/last/knn                  30  0.719  0.802      0.597     0.647             13/49
+A/visual/mil                 8  0.831  0.988      0.601     0.675             13/49
+A/visual/holmes             12  0.779  0.863      0.656     0.770             9/49
+A/visual/knn                25  0.734  0.829      0.594     0.629             16/49
+B/last/mil                   7  0.799  0.952      0.573     0.656             15/49
+B/last/holmes               14  0.810  0.905      0.669     0.820             7/49
+B/last/knn                  30  0.731  0.811      0.613     0.692             18/49
+B/visual/mil                 8  0.833  0.986      0.607     0.688             11/49
+B/visual/holmes             11  0.750  0.823      0.642     0.789             9/49
+B/visual/knn                25  0.735  0.827      0.601     0.663             19/49
+C/last/mil                  14  0.842  0.979      0.639     0.748             10/49
+C/last/holmes               28  0.847  0.940      0.711     0.825             10/49
+C/last/knn                  23  0.845  0.945      0.697     0.760             8/49
+C/visual/mil                 8  0.830  0.985      0.602     0.674             12/49
+C/visual/holmes             16  0.785  0.880      0.645     0.757             12/49
+C/visual/knn                18  0.778  0.872      0.640     0.714             10/49
