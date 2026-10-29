@@ -54,8 +54,24 @@ def main() -> None:
     args.out.mkdir(parents=True, exist_ok=True)
     summary = {}
     for cfg in configs:
+        if (args.out / "summary.json").is_file() and cfg in json.loads((args.out / "summary.json").read_text()):
+            summary = json.loads((args.out / "summary.json").read_text()); summary.pop("_mean", None)
+            print(f"{cfg:26s} done already, skipped", flush=True)
+            continue
         path = hf_hub_download(REPO, f"data/{cfg}/{args.split}.jsonl", repo_type="dataset")
-        rows = [json.loads(l) for l in Path(path).read_text().splitlines() if l.strip()]
+        rows, bad = [], 0
+        for l in Path(path).read_text(errors="replace").splitlines():
+            if not l.strip():
+                continue
+            try:
+                rows.append(json.loads(l))
+            except json.JSONDecodeError:
+                bad += 1
+        if bad:
+            print(f"{cfg}: {bad} unparsable lines skipped", flush=True)
+        if not rows:
+            print(f"{cfg}: no records, skipped", flush=True)
+            continue
         if args.limit:
             rows = rows[:args.limit]
         kind = rows[0]["primitive"]
@@ -83,7 +99,7 @@ def main() -> None:
                         errs.append(abs(keys.index(pred) - keys.index(label)))
                 f.write(json.dumps({"id": r["id"], "label": label, "pred": pred, "p": probs[-1], "correct": bool(ok)}) + "\n")
         c = np.array(correct, float); p = np.array(probs, float)
-        summary[cfg] = {"primitive": kind, "n": int(len(rows)), "errors": n_err, "accuracy": 100 * float(c.mean()) if len(c) else None,
+        summary[cfg] = {"primitive": kind, "n": int(len(rows)), "errors": n_err, "bad_lines": bad, "accuracy": 100 * float(c.mean()) if len(c) else None,
                         "ece": ece(p, c) if len(c) else None, "mae_levels": float(np.mean(errs)) if errs else None,
                         "s_per_item": (time.perf_counter() - t0) / max(len(rows), 1)}
         print(f"{cfg:26s} {kind:6s} n {len(rows):5d}  acc {summary[cfg]['accuracy']:5.1f}  ECE {summary[cfg]['ece']:.3f}"
