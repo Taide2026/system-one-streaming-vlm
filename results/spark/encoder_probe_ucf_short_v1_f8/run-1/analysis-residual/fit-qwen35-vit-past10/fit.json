@@ -1,0 +1,766 @@
+{
+  "methods": [
+    "mil",
+    "holmes",
+    "knn"
+  ],
+  "kinds": [
+    "patch_mean"
+  ],
+  "n_states": 28,
+  "features": "/home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8_residual_past10/qwen35-vit/run-1",
+  "val_videos": [
+    "Abuse011_x264.mp4",
+    "Abuse026_x264.mp4",
+    "Abuse033_x264.mp4",
+    "Arrest013_x264.mp4",
+    "Arrest025_x264.mp4",
+    "Arrest028_x264.mp4",
+    "Arson024_x264.mp4",
+    "Arson037_x264.mp4",
+    "Arson038_x264.mp4",
+    "Assault013_x264.mp4",
+    "Assault026_x264.mp4",
+    "Assault032_x264.mp4",
+    "Burglary027_x264.mp4",
+    "Burglary067_x264.mp4",
+    "Burglary070_x264.mp4",
+    "Explosion019_x264.mp4",
+    "Explosion038_x264.mp4",
+    "Explosion042_x264.mp4",
+    "Fighting017_x264.mp4",
+    "Fighting026_x264.mp4",
+    "Fighting028_x264.mp4",
+    "Normal_Videos002_x264.mp4",
+    "Normal_Videos004_x264.mp4",
+    "Normal_Videos039_x264.mp4",
+    "Normal_Videos043_x264.mp4",
+    "Normal_Videos053_x264.mp4",
+    "Normal_Videos094_x264.mp4",
+    "Normal_Videos098_x264.mp4",
+    "Normal_Videos110_x264.mp4",
+    "Normal_Videos117_x264.mp4",
+    "Normal_Videos124_x264.mp4",
+    "Normal_Videos132_x264.mp4",
+    "Normal_Videos162_x264.mp4",
+    "Normal_Videos200_x264.mp4",
+    "Normal_Videos204_x264.mp4",
+    "Normal_Videos232_x264.mp4",
+    "Normal_Videos252_x264.mp4",
+    "Normal_Videos258_x264.mp4",
+    "Normal_Videos260_x264.mp4",
+    "Normal_Videos311_x264.mp4",
+    "Normal_Videos358_x264.mp4",
+    "Normal_Videos399_x264.mp4",
+    "Normal_Videos402_x264.mp4",
+    "Normal_Videos416_x264.mp4",
+    "Normal_Videos505_x264.mp4",
+    "Normal_Videos555_x264.mp4",
+    "Normal_Videos628_x264.mp4",
+    "Normal_Videos661_x264.mp4",
+    "Normal_Videos692_x264.mp4",
+    "Normal_Videos698_x264.mp4",
+    "Normal_Videos699_x264.mp4",
+    "Normal_Videos705_x264.mp4",
+    "Normal_Videos735_x264.mp4",
+    "Normal_Videos751_x264.mp4",
+    "Normal_Videos763_x264.mp4",
+    "Normal_Videos766_x264.mp4",
+    "Normal_Videos773_x264.mp4",
+    "Normal_Videos810_x264.mp4",
+    "Normal_Videos818_x264.mp4",
+    "Normal_Videos822_x264.mp4",
+    "RoadAccidents042_x264.mp4",
+    "RoadAccidents056_x264.mp4",
+    "RoadAccidents071_x264.mp4",
+    "Robbery041_x264.mp4",
+    "Robbery065_x264.mp4",
+    "Robbery099_x264.mp4",
+    "Shooting029_x264.mp4",
+    "Shooting040_x264.mp4",
+    "Shooting041_x264.mp4",
+    "Shoplifting025_x264.mp4",
+    "Shoplifting045_x264.mp4",
+    "Shoplifting047_x264.mp4",
+    "Stealing024_x264.mp4",
+    "Stealing069_x264.mp4",
+    "Stealing073_x264.mp4",
+    "Vandalism012_x264.mp4",
+    "Vandalism031_x264.mp4",
+    "Vandalism033_x264.mp4"
+  ],
+  "choices": {
+    "mil/patch_mean/0": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.8699933290481567,
+      "final_loss": 0.44526949524879456,
+      "min_loss": 0.44436925649642944
+    },
+    "holmes/patch_mean/0": {
+      "setting": {
+        "lam": 0.0001
+      },
+      "validation": 0.5282568770711062,
+      "final_loss": 0.8430790305137634,
+      "min_loss": 0.8430790305137634
+    },
+    "knn/patch_mean/0": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.63379355687048
+    },
+    "mil/patch_mean/1": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.5694376230239868,
+      "final_loss": 0.1398015320301056,
+      "min_loss": 0.13940204679965973
+    },
+    "holmes/patch_mean/1": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6807929663660889,
+      "final_loss": 0.6795085072517395,
+      "min_loss": 0.6795085072517395
+    },
+    "knn/patch_mean/1": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6561472715318869
+    },
+    "mil/patch_mean/2": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.37900564074516296,
+      "final_loss": 0.0892212986946106,
+      "min_loss": 0.0892212986946106
+    },
+    "holmes/patch_mean/2": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7447598514792189,
+      "final_loss": 0.6194216012954712,
+      "min_loss": 0.6194216012954712
+    },
+    "knn/patch_mean/2": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7166337935568705
+    },
+    "mil/patch_mean/3": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.3363344371318817,
+      "final_loss": 0.0683627724647522,
+      "min_loss": 0.06836092472076416
+    },
+    "holmes/patch_mean/3": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7258938909136537,
+      "final_loss": 0.5934058427810669,
+      "min_loss": 0.5934058427810669
+    },
+    "knn/patch_mean/3": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7107166337935569
+    },
+    "mil/patch_mean/4": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.2798152267932892,
+      "final_loss": 0.059649404138326645,
+      "min_loss": 0.059649404138326645
+    },
+    "holmes/patch_mean/4": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7303569289735298,
+      "final_loss": 0.5717155337333679,
+      "min_loss": 0.5717155337333679
+    },
+    "knn/patch_mean/4": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7238658777120315
+    },
+    "mil/patch_mean/5": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.28812143206596375,
+      "final_loss": 0.05736412853002548,
+      "min_loss": 0.05734676122665405
+    },
+    "holmes/patch_mean/5": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7113911560551878,
+      "final_loss": 0.5638681650161743,
+      "min_loss": 0.5638681650161743
+    },
+    "knn/patch_mean/5": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7330703484549639
+    },
+    "mil/patch_mean/6": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.24899905920028687,
+      "final_loss": 0.052758459001779556,
+      "min_loss": 0.052758459001779556
+    },
+    "holmes/patch_mean/6": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7526849522896955,
+      "final_loss": 0.5508251190185547,
+      "min_loss": 0.5508251190185547
+    },
+    "knn/patch_mean/6": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7442472057856673
+    },
+    "mil/patch_mean/7": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.22413845360279083,
+      "final_loss": 0.04924553632736206,
+      "min_loss": 0.049241140484809875
+    },
+    "holmes/patch_mean/7": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7383019922545614,
+      "final_loss": 0.5496588945388794,
+      "min_loss": 0.5496588945388794
+    },
+    "knn/patch_mean/7": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7495069033530571
+    },
+    "mil/patch_mean/8": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.180304154753685,
+      "final_loss": 0.04660037159919739,
+      "min_loss": 0.04659690707921982
+    },
+    "holmes/patch_mean/8": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7397792150756578,
+      "final_loss": 0.5419682860374451,
+      "min_loss": 0.5419682860374451
+    },
+    "knn/patch_mean/8": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7495069033530573
+    },
+    "mil/patch_mean/9": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.15138289332389832,
+      "final_loss": 0.04544364660978317,
+      "min_loss": 0.04544364660978317
+    },
+    "holmes/patch_mean/9": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.726846385937295,
+      "final_loss": 0.5360884070396423,
+      "min_loss": 0.5360884070396423
+    },
+    "knn/patch_mean/9": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7613412228796844
+    },
+    "mil/patch_mean/10": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.20211197435855865,
+      "final_loss": 0.04541121795773506,
+      "min_loss": 0.04540884867310524
+    },
+    "holmes/patch_mean/10": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7438829286655374,
+      "final_loss": 0.5276812314987183,
+      "min_loss": 0.5276812314987183
+    },
+    "knn/patch_mean/10": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7646285338593031
+    },
+    "mil/patch_mean/11": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.21720100939273834,
+      "final_loss": 0.044149234890937805,
+      "min_loss": 0.044149234890937805
+    },
+    "holmes/patch_mean/11": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7254547165614359,
+      "final_loss": 0.5302547812461853,
+      "min_loss": 0.5302547812461853
+    },
+    "knn/patch_mean/11": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7744904667981591
+    },
+    "mil/patch_mean/12": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.15052852034568787,
+      "final_loss": 0.04308024048805237,
+      "min_loss": 0.04308024048805237
+    },
+    "holmes/patch_mean/12": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7326911121377525,
+      "final_loss": 0.5262478590011597,
+      "min_loss": 0.5262478590011597
+    },
+    "knn/patch_mean/12": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7672583826429981
+    },
+    "mil/patch_mean/13": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.15690000355243683,
+      "final_loss": 0.04444820433855057,
+      "min_loss": 0.04444820433855057
+    },
+    "holmes/patch_mean/13": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7241699889921233,
+      "final_loss": 0.5163639783859253,
+      "min_loss": 0.5163639783859253
+    },
+    "knn/patch_mean/13": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7508218277449047
+    },
+    "mil/patch_mean/14": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.1269674301147461,
+      "final_loss": 0.04617903381586075,
+      "min_loss": 0.04617903381586075
+    },
+    "holmes/patch_mean/14": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7438487072874426,
+      "final_loss": 0.5212286710739136,
+      "min_loss": 0.5212286710739136
+    },
+    "knn/patch_mean/14": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7383300460223537
+    },
+    "mil/patch_mean/15": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.16368171572685242,
+      "final_loss": 0.04431590437889099,
+      "min_loss": 0.04431590437889099
+    },
+    "holmes/patch_mean/15": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6931967900347347,
+      "final_loss": 0.5119829177856445,
+      "min_loss": 0.5119829177856445
+    },
+    "knn/patch_mean/15": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7370151216305063
+    },
+    "mil/patch_mean/16": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.158761665225029,
+      "final_loss": 0.04440246522426605,
+      "min_loss": 0.04440246522426605
+    },
+    "holmes/patch_mean/16": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6889547650417215,
+      "final_loss": 0.5052621364593506,
+      "min_loss": 0.5052621364593506
+    },
+    "knn/patch_mean/16": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.727810650887574
+    },
+    "mil/patch_mean/17": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.01
+      },
+      "validation": 0.12247846275568008,
+      "final_loss": 0.04268268495798111,
+      "min_loss": 0.04268249124288559
+    },
+    "holmes/patch_mean/17": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6819023093726652,
+      "final_loss": 0.5012657046318054,
+      "min_loss": 0.5012657046318054
+    },
+    "knn/patch_mean/17": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7403024326101248
+    },
+    "mil/patch_mean/18": {
+      "setting": {
+        "k": "frac8",
+        "lam": 0.001
+      },
+      "validation": 0.11189096421003342,
+      "final_loss": 0.009453563019633293,
+      "min_loss": 0.009453563019633293
+    },
+    "holmes/patch_mean/18": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.682431314842382,
+      "final_loss": 0.48943188786506653,
+      "min_loss": 0.48943188786506653
+    },
+    "knn/patch_mean/18": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7403024326101248
+    },
+    "mil/patch_mean/19": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.11694694310426712,
+      "final_loss": 0.03796713799238205,
+      "min_loss": 0.03796713799238205
+    },
+    "holmes/patch_mean/19": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6706748455760314,
+      "final_loss": 0.48587730526924133,
+      "min_loss": 0.48587730526924133
+    },
+    "knn/patch_mean/19": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7310979618671927
+    },
+    "mil/patch_mean/20": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.13741077482700348,
+      "final_loss": 0.03971885144710541,
+      "min_loss": 0.03971885144710541
+    },
+    "holmes/patch_mean/20": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6827364554637282,
+      "final_loss": 0.48700058460235596,
+      "min_loss": 0.48700058460235596
+    },
+    "knn/patch_mean/20": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.715318869165023
+    },
+    "mil/patch_mean/21": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.14192931354045868,
+      "final_loss": 0.037334341555833817,
+      "min_loss": 0.037334341555833817
+    },
+    "holmes/patch_mean/21": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6657184493152872,
+      "final_loss": 0.486009418964386,
+      "min_loss": 0.486009418964386
+    },
+    "knn/patch_mean/21": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.7133464825772519
+    },
+    "mil/patch_mean/22": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.15825027227401733,
+      "final_loss": 0.03968273848295212,
+      "min_loss": 0.03968273848295212
+    },
+    "holmes/patch_mean/22": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6780110535051247,
+      "final_loss": 0.4876343011856079,
+      "min_loss": 0.4876343011856079
+    },
+    "knn/patch_mean/22": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6909927679158449
+    },
+    "mil/patch_mean/23": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.15137001872062683,
+      "final_loss": 0.038324713706970215,
+      "min_loss": 0.038324713706970215
+    },
+    "holmes/patch_mean/23": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6783689520843671,
+      "final_loss": 0.49065718054771423,
+      "min_loss": 0.49065718054771423
+    },
+    "knn/patch_mean/23": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.68836291913215
+    },
+    "mil/patch_mean/24": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.16451498866081238,
+      "final_loss": 0.039057403802871704,
+      "min_loss": 0.039057403802871704
+    },
+    "holmes/patch_mean/24": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6840454231758579,
+      "final_loss": 0.49025779962539673,
+      "min_loss": 0.49025779962539673
+    },
+    "knn/patch_mean/24": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6765285996055227
+    },
+    "mil/patch_mean/25": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.17197123169898987,
+      "final_loss": 0.037898652255535126,
+      "min_loss": 0.037898652255535126
+    },
+    "holmes/patch_mean/25": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6774007722624322,
+      "final_loss": 0.4928460419178009,
+      "min_loss": 0.4928460419178009
+    },
+    "knn/patch_mean/25": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6804733727810651
+    },
+    "mil/patch_mean/26": {
+      "setting": {
+        "k": "1",
+        "lam": 0.01
+      },
+      "validation": 0.16503384709358215,
+      "final_loss": 0.036442842334508896,
+      "min_loss": 0.036442842334508896
+    },
+    "holmes/patch_mean/26": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.6928873717411267,
+      "final_loss": 0.49585264921188354,
+      "min_loss": 0.49585264921188354
+    },
+    "knn/patch_mean/26": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6863905325443787
+    },
+    "mil/patch_mean/27": {
+      "setting": {
+        "k": "3",
+        "lam": 0.01
+      },
+      "validation": 0.16570712625980377,
+      "final_loss": 0.08744879812002182,
+      "min_loss": 0.08744709193706512
+    },
+    "holmes/patch_mean/27": {
+      "setting": {
+        "lam": 0.01
+      },
+      "validation": 0.7633064125158986,
+      "final_loss": 0.6105877161026001,
+      "min_loss": 0.6105877161026001
+    },
+    "knn/patch_mean/27": {
+      "setting": {
+        "k_neighbors": 5,
+        "pca_dim": 256
+      },
+      "validation": 0.6226166995397765
+    }
+  }
+}

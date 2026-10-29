@@ -1,0 +1,13 @@
+== 1. report() on the original Qwen ViT fit (expect mil all 0.807, in_video 0.566)
+fit-qwen35-vit/patch_mean/mil state 18: all 0.807  in_video 0.566  per-video median 0.686  below 0.5 14/49
+fit-qwen35-vit/patch_mean/holmes state  4: all 0.790  in_video 0.584  per-video median 0.665  below 0.5 18/49
+fit-qwen35-vit/patch_mean/knn state 11: all 0.663  in_video 0.478  per-video median 0.454  below 0.5 26/49
+== 2. centered features of vjepa2-vitl vs direct recomputation (test set, 5 videos)
+  full     max abs difference 0.00e+00
+  pastall  max abs difference 0.00e+00
+== 3. validation at the chosen state (MIL: video BCE, ln 2 = 0.693; Holmes: window AUC)
+  original MIL state 15 BCE 0.159 (range over states 0.159-0.799)   Holmes state 18 AUC 0.822
+  full     MIL state 14 BCE 0.485 (range over states 0.485-0.700)   Holmes state 19 AUC 0.684
+  past10   MIL state 19 BCE 0.488 (range over states 0.488-0.713)   Holmes state  8 AUC 0.598
+  past20   MIL state 16 BCE 0.479 (range over states 0.479-0.706)   Holmes state  7 AUC 0.638
+  pastall  MIL state 18 BCE 0.458 (range over states 0.458-0.738)   Holmes state  7 AUC 0.670
