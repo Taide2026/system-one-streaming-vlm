@@ -91,7 +91,11 @@ def videomme_items(root: Path, subset: str | None):
     for r in t:
         if subset and r["duration"] != subset:
             continue
-        opts = [o.split(". ", 1)[1] if ". " in o[:4] else o for o in r["options"]]  # "A. text" -> text
+        raw = r["options"]
+        if isinstance(raw, str):  # the hub parquet stores the list as its repr
+            import ast
+            raw = ast.literal_eval(raw)
+        opts = [o.split(". ", 1)[1] if ". " in o[:4] else o for o in raw]  # "A. text" -> text
         ans = r["answer"].strip()
         answer = opts["ABCD".index(ans)] if ans in "ABCD" and len(ans) == 1 else ans
         yield {"task": r["duration"], "id": r["question_id"], "path": root / "videos" / f"{r['videoID']}.mp4", "kind": "video",
