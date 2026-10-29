@@ -10,7 +10,7 @@ Event windows: Holmes label > 0.5; non-event windows: Holmes label 0; only train
 For each state and alpha in ALPHAS, lam in probe.fit.LAMS is chosen on the validation videos (probe.fit.split) by the
 validation in-video AUC (anomaly videos only, Holmes labels); then the head is refit on all train windows. Each alpha
 is one "method" pair_a<alpha> in fit.json, so alpha 0 is the BCE-only head under the same selection rule.
-Usage: uv run python <this file> <features run dir> <out name>
+Usage: uv run python <this file> <features run dir> <out name> [kind]   (default patch_mean)
 Writes run-1/analysis-pairwise/<out name>/ (fit.json, test_scores.npy, test_meta.jsonl in the probe.fit format) and
 prints the report of centered_fit.
 """
@@ -28,7 +28,6 @@ from s1stream.probe.fit import LAMS, LR, SEED, SETS, STEPS, bags, split, standar
 
 RUN = Path(__file__).resolve().parents[1]
 ALPHAS = (0.0, 1.0, 4.0)
-KIND = "patch_mean"
 
 
 def read_meta(features: Path) -> dict[str, list[dict]]:
@@ -84,11 +83,11 @@ def in_video_auc(scores: np.ndarray, labels: np.ndarray, anomaly: np.ndarray) ->
     return float(roc_auc_score(labels[anomaly] > 0.5, scores[anomaly]))
 
 
-def main(features: str, name: str, device: str = "cuda") -> None:
+def main(features: str, name: str, kind: str = "patch_mean", device: str = "cuda") -> None:
     features_dir = Path(features)
     out = RUN / "analysis-pairwise" / name
     if (out / "fit.json").exists():
-        report(out, KIND)
+        report(out, kind)
         return
     torch.cuda.set_per_process_memory_fraction(0.2)
     meta = read_meta(features_dir)
@@ -103,7 +102,7 @@ def main(features: str, name: str, device: str = "cuda") -> None:
     fit_pairs = pair_masks(fit_videos, labels[~is_val], anomaly[~is_val])
     all_pairs = pair_masks(videos, labels, anomaly)
 
-    arrays = {set_name: np.load(features_dir / set_name / f"{KIND}.npy", mmap_mode="r") for set_name in SETS}
+    arrays = {set_name: np.load(features_dir / set_name / f"{kind}.npy", mmap_mode="r") for set_name in SETS}
     n_states = arrays["test"].shape[1]
     scores = np.empty((len(ALPHAS), 1, n_states, len(meta["test"])), dtype=np.float32)
     choices = {}
@@ -120,7 +119,7 @@ def main(features: str, name: str, device: str = "cuda") -> None:
                 with torch.no_grad():
                     value = in_video_auc(head(val_x).squeeze(1).numpy(), labels[is_val], anomaly[is_val])
                 best = max(best, (value, lam))
-            choices[f"pair_a{alpha:g}/{KIND}/{state}"] = {"setting": {"alpha": alpha, "lam": best[1]},
+            choices[f"pair_a{alpha:g}/{kind}/{state}"] = {"setting": {"alpha": alpha, "lam": best[1]},
                                                          "validation": best[0]}
             head = fit_head(all_x, y, all_pairs, alpha, best[1], device)
             with torch.no_grad():
@@ -130,10 +129,10 @@ def main(features: str, name: str, device: str = "cuda") -> None:
     out.mkdir(parents=True, exist_ok=True)
     np.save(out / "test_scores.npy", scores)
     (out / "test_meta.jsonl").write_text((features_dir / "test" / "meta.jsonl").read_text())
-    fit = {"methods": [f"pair_a{alpha:g}" for alpha in ALPHAS], "kinds": [KIND], "n_states": n_states,
+    fit = {"methods": [f"pair_a{alpha:g}" for alpha in ALPHAS], "kinds": [kind], "n_states": n_states,
            "features": str(features_dir), "val_videos": sorted(val), "choices": choices}
     (out / "fit.json").write_text(json.dumps(fit, indent=2) + "\n")
-    report(out, KIND)
+    report(out, kind)
 
 
 if __name__ == "__main__":

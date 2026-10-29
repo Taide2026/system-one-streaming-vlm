@@ -1,0 +1,787 @@
+{
+  "methods": [
+    "pair_a0",
+    "pair_a1",
+    "pair_a4"
+  ],
+  "kinds": [
+    "visual"
+  ],
+  "n_states": 33,
+  "features": "/home/cctsai/s1-features/probe_ucf_short_v1_f8/A/run-1",
+  "val_videos": [
+    "Abuse011_x264.mp4",
+    "Abuse026_x264.mp4",
+    "Abuse033_x264.mp4",
+    "Arrest013_x264.mp4",
+    "Arrest025_x264.mp4",
+    "Arrest028_x264.mp4",
+    "Arson024_x264.mp4",
+    "Arson037_x264.mp4",
+    "Arson038_x264.mp4",
+    "Assault013_x264.mp4",
+    "Assault026_x264.mp4",
+    "Assault032_x264.mp4",
+    "Burglary027_x264.mp4",
+    "Burglary067_x264.mp4",
+    "Burglary070_x264.mp4",
+    "Explosion019_x264.mp4",
+    "Explosion038_x264.mp4",
+    "Explosion042_x264.mp4",
+    "Fighting017_x264.mp4",
+    "Fighting026_x264.mp4",
+    "Fighting028_x264.mp4",
+    "Normal_Videos002_x264.mp4",
+    "Normal_Videos004_x264.mp4",
+    "Normal_Videos039_x264.mp4",
+    "Normal_Videos043_x264.mp4",
+    "Normal_Videos053_x264.mp4",
+    "Normal_Videos094_x264.mp4",
+    "Normal_Videos098_x264.mp4",
+    "Normal_Videos110_x264.mp4",
+    "Normal_Videos117_x264.mp4",
+    "Normal_Videos124_x264.mp4",
+    "Normal_Videos132_x264.mp4",
+    "Normal_Videos162_x264.mp4",
+    "Normal_Videos200_x264.mp4",
+    "Normal_Videos204_x264.mp4",
+    "Normal_Videos232_x264.mp4",
+    "Normal_Videos252_x264.mp4",
+    "Normal_Videos258_x264.mp4",
+    "Normal_Videos260_x264.mp4",
+    "Normal_Videos311_x264.mp4",
+    "Normal_Videos358_x264.mp4",
+    "Normal_Videos399_x264.mp4",
+    "Normal_Videos402_x264.mp4",
+    "Normal_Videos416_x264.mp4",
+    "Normal_Videos505_x264.mp4",
+    "Normal_Videos555_x264.mp4",
+    "Normal_Videos628_x264.mp4",
+    "Normal_Videos661_x264.mp4",
+    "Normal_Videos692_x264.mp4",
+    "Normal_Videos698_x264.mp4",
+    "Normal_Videos699_x264.mp4",
+    "Normal_Videos705_x264.mp4",
+    "Normal_Videos735_x264.mp4",
+    "Normal_Videos751_x264.mp4",
+    "Normal_Videos763_x264.mp4",
+    "Normal_Videos766_x264.mp4",
+    "Normal_Videos773_x264.mp4",
+    "Normal_Videos810_x264.mp4",
+    "Normal_Videos818_x264.mp4",
+    "Normal_Videos822_x264.mp4",
+    "RoadAccidents042_x264.mp4",
+    "RoadAccidents056_x264.mp4",
+    "RoadAccidents071_x264.mp4",
+    "Robbery041_x264.mp4",
+    "Robbery065_x264.mp4",
+    "Robbery099_x264.mp4",
+    "Shooting029_x264.mp4",
+    "Shooting040_x264.mp4",
+    "Shooting041_x264.mp4",
+    "Shoplifting025_x264.mp4",
+    "Shoplifting045_x264.mp4",
+    "Shoplifting047_x264.mp4",
+    "Stealing024_x264.mp4",
+    "Stealing069_x264.mp4",
+    "Stealing073_x264.mp4",
+    "Vandalism012_x264.mp4",
+    "Vandalism031_x264.mp4",
+    "Vandalism033_x264.mp4"
+  ],
+  "choices": {
+    "pair_a0/visual/0": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6021880819366852
+    },
+    "pair_a1/visual/0": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5979946109136054
+    },
+    "pair_a4/visual/0": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5896817335364821
+    },
+    "pair_a0/visual/1": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6065578974098528
+    },
+    "pair_a1/visual/1": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6061276169516393
+    },
+    "pair_a4/visual/1": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5989398171660741
+    },
+    "pair_a0/visual/2": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6029886857400824
+    },
+    "pair_a1/visual/2": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5956950792844647
+    },
+    "pair_a4/visual/2": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.582663224423001
+    },
+    "pair_a0/visual/3": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6194839456012641
+    },
+    "pair_a1/visual/3": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6102681846396931
+    },
+    "pair_a4/visual/3": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5948521528130466
+    },
+    "pair_a0/visual/4": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6278320918684048
+    },
+    "pair_a1/visual/4": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6145039783307941
+    },
+    "pair_a4/visual/4": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5993524631792788
+    },
+    "pair_a0/visual/5": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6464293775746289
+    },
+    "pair_a1/visual/5": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6343921054116585
+    },
+    "pair_a4/visual/5": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6219351334574799
+    },
+    "pair_a0/visual/6": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6508309350488122
+    },
+    "pair_a1/visual/6": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6426273912307432
+    },
+    "pair_a4/visual/6": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6376544777382767
+    },
+    "pair_a0/visual/7": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6466762598047514
+    },
+    "pair_a1/visual/7": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6320819931155127
+    },
+    "pair_a4/visual/7": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6155126685852943
+    },
+    "pair_a0/visual/8": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.640098611816489
+    },
+    "pair_a1/visual/8": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.624873031995937
+    },
+    "pair_a4/visual/8": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.611590768015349
+    },
+    "pair_a0/visual/9": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6519419050843631
+    },
+    "pair_a1/visual/9": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6368186050448621
+    },
+    "pair_a4/visual/9": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6240195248575137
+    },
+    "pair_a0/visual/10": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6620781840753908
+    },
+    "pair_a1/visual/10": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.651508097737148
+    },
+    "pair_a4/visual/10": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6400527622594662
+    },
+    "pair_a0/visual/11": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6720416455053326
+    },
+    "pair_a1/visual/11": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6619970656283507
+    },
+    "pair_a4/visual/11": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6531727893459737
+    },
+    "pair_a0/visual/12": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6626354325376672
+    },
+    "pair_a1/visual/12": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6546293945036962
+    },
+    "pair_a4/visual/12": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6497834490152926
+    },
+    "pair_a0/visual/13": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6650196095028498
+    },
+    "pair_a1/visual/13": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6542167484904915
+    },
+    "pair_a4/visual/13": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.646034366006433
+    },
+    "pair_a0/visual/14": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.648118757406467
+    },
+    "pair_a1/visual/14": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6356053552282603
+    },
+    "pair_a4/visual/14": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6276980700863383
+    },
+    "pair_a0/visual/15": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6406064838327409
+    },
+    "pair_a1/visual/15": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.630769990406862
+    },
+    "pair_a4/visual/15": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.622284295468653
+    },
+    "pair_a0/visual/16": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6451420630889905
+    },
+    "pair_a1/visual/16": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6358804525703967
+    },
+    "pair_a4/visual/16": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6274723491902263
+    },
+    "pair_a0/visual/17": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6565198070086338
+    },
+    "pair_a1/visual/17": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6457769031093054
+    },
+    "pair_a4/visual/17": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.633725523390328
+    },
+    "pair_a0/visual/18": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6503477512555724
+    },
+    "pair_a1/visual/18": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6412871734100785
+    },
+    "pair_a4/visual/18": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6319691326674566
+    },
+    "pair_a0/visual/19": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6527530895547655
+    },
+    "pair_a1/visual/19": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6291969979120817
+    },
+    "pair_a4/visual/19": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6132907285141922
+    },
+    "pair_a0/visual/20": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6432093279160318
+    },
+    "pair_a1/visual/20": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.624901247107951
+    },
+    "pair_a4/visual/20": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6116648326843858
+    },
+    "pair_a0/visual/21": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6449904068619152
+    },
+    "pair_a1/visual/21": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6265518311607696
+    },
+    "pair_a4/visual/21": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6139361492015123
+    },
+    "pair_a0/visual/22": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6494201794481125
+    },
+    "pair_a1/visual/22": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6300575588285086
+    },
+    "pair_a4/visual/22": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6163238530556967
+    },
+    "pair_a0/visual/23": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.639463771796174
+    },
+    "pair_a1/visual/23": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.619177106258112
+    },
+    "pair_a4/visual/23": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6019764685965804
+    },
+    "pair_a0/visual/24": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6394955137971898
+    },
+    "pair_a1/visual/24": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6252715704531348
+    },
+    "pair_a4/visual/24": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6150506461260651
+    },
+    "pair_a0/visual/25": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6292181592460923
+    },
+    "pair_a1/visual/25": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6214484227752384
+    },
+    "pair_a4/visual/25": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6149871621240337
+    },
+    "pair_a0/visual/26": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6279520060944642
+    },
+    "pair_a1/visual/26": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6135905140793407
+    },
+    "pair_a4/visual/26": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6040714406636194
+    },
+    "pair_a0/visual/27": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6284986738897353
+    },
+    "pair_a1/visual/27": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6105397550928278
+    },
+    "pair_a4/visual/27": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5980686755826421
+    },
+    "pair_a0/visual/28": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6339794593984538
+    },
+    "pair_a1/visual/28": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6158583037074656
+    },
+    "pair_a4/visual/28": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6035318266463519
+    },
+    "pair_a0/visual/29": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6343497827436374
+    },
+    "pair_a1/visual/29": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6184964166807742
+    },
+    "pair_a4/visual/29": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6076723943344056
+    },
+    "pair_a0/visual/30": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6432128548050337
+    },
+    "pair_a1/visual/30": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6321172620055302
+    },
+    "pair_a4/visual/30": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6221890694656058
+    },
+    "pair_a0/visual/31": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6362613565825858
+    },
+    "pair_a1/visual/31": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6237162124033633
+    },
+    "pair_a4/visual/31": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6099472377405339
+    },
+    "pair_a0/visual/32": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.639379126460132
+    },
+    "pair_a1/visual/32": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6243087297556572
+    },
+    "pair_a4/visual/32": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6098520117374865
+    }
+  }
+}

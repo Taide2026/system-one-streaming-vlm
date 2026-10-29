@@ -1,0 +1,787 @@
+{
+  "methods": [
+    "pair_a0",
+    "pair_a1",
+    "pair_a4"
+  ],
+  "kinds": [
+    "last"
+  ],
+  "n_states": 33,
+  "features": "/home/cctsai/s1-features/probe_ucf_short_v1_f8_residual_past10/A-last/run-1",
+  "val_videos": [
+    "Abuse011_x264.mp4",
+    "Abuse026_x264.mp4",
+    "Abuse033_x264.mp4",
+    "Arrest013_x264.mp4",
+    "Arrest025_x264.mp4",
+    "Arrest028_x264.mp4",
+    "Arson024_x264.mp4",
+    "Arson037_x264.mp4",
+    "Arson038_x264.mp4",
+    "Assault013_x264.mp4",
+    "Assault026_x264.mp4",
+    "Assault032_x264.mp4",
+    "Burglary027_x264.mp4",
+    "Burglary067_x264.mp4",
+    "Burglary070_x264.mp4",
+    "Explosion019_x264.mp4",
+    "Explosion038_x264.mp4",
+    "Explosion042_x264.mp4",
+    "Fighting017_x264.mp4",
+    "Fighting026_x264.mp4",
+    "Fighting028_x264.mp4",
+    "Normal_Videos002_x264.mp4",
+    "Normal_Videos004_x264.mp4",
+    "Normal_Videos039_x264.mp4",
+    "Normal_Videos043_x264.mp4",
+    "Normal_Videos053_x264.mp4",
+    "Normal_Videos094_x264.mp4",
+    "Normal_Videos098_x264.mp4",
+    "Normal_Videos110_x264.mp4",
+    "Normal_Videos117_x264.mp4",
+    "Normal_Videos124_x264.mp4",
+    "Normal_Videos132_x264.mp4",
+    "Normal_Videos162_x264.mp4",
+    "Normal_Videos200_x264.mp4",
+    "Normal_Videos204_x264.mp4",
+    "Normal_Videos232_x264.mp4",
+    "Normal_Videos252_x264.mp4",
+    "Normal_Videos258_x264.mp4",
+    "Normal_Videos260_x264.mp4",
+    "Normal_Videos311_x264.mp4",
+    "Normal_Videos358_x264.mp4",
+    "Normal_Videos399_x264.mp4",
+    "Normal_Videos402_x264.mp4",
+    "Normal_Videos416_x264.mp4",
+    "Normal_Videos505_x264.mp4",
+    "Normal_Videos555_x264.mp4",
+    "Normal_Videos628_x264.mp4",
+    "Normal_Videos661_x264.mp4",
+    "Normal_Videos692_x264.mp4",
+    "Normal_Videos698_x264.mp4",
+    "Normal_Videos699_x264.mp4",
+    "Normal_Videos705_x264.mp4",
+    "Normal_Videos735_x264.mp4",
+    "Normal_Videos751_x264.mp4",
+    "Normal_Videos763_x264.mp4",
+    "Normal_Videos766_x264.mp4",
+    "Normal_Videos773_x264.mp4",
+    "Normal_Videos810_x264.mp4",
+    "Normal_Videos818_x264.mp4",
+    "Normal_Videos822_x264.mp4",
+    "RoadAccidents042_x264.mp4",
+    "RoadAccidents056_x264.mp4",
+    "RoadAccidents071_x264.mp4",
+    "Robbery041_x264.mp4",
+    "Robbery065_x264.mp4",
+    "Robbery099_x264.mp4",
+    "Shooting029_x264.mp4",
+    "Shooting040_x264.mp4",
+    "Shooting041_x264.mp4",
+    "Shoplifting025_x264.mp4",
+    "Shoplifting045_x264.mp4",
+    "Shoplifting047_x264.mp4",
+    "Stealing024_x264.mp4",
+    "Stealing069_x264.mp4",
+    "Stealing073_x264.mp4",
+    "Vandalism012_x264.mp4",
+    "Vandalism031_x264.mp4",
+    "Vandalism033_x264.mp4"
+  ],
+  "choices": {
+    "pair_a0/last/0": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.0001
+      },
+      "validation": 0.527915326448846
+    },
+    "pair_a1/last/0": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.5243461147790757
+    },
+    "pair_a4/last/0": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5188053721573275
+    },
+    "pair_a0/last/1": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.49523517295863667
+    },
+    "pair_a1/last/1": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.49609926076406524
+    },
+    "pair_a4/last/1": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5000599571130298
+    },
+    "pair_a0/last/2": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5486181648891146
+    },
+    "pair_a1/last/2": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5473237966254726
+    },
+    "pair_a4/last/2": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5492530049094294
+    },
+    "pair_a0/last/3": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5542823486259241
+    },
+    "pair_a1/last/3": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5575059251735229
+    },
+    "pair_a4/last/3": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.55909302522431
+    },
+    "pair_a0/last/4": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.001
+      },
+      "validation": 0.5778560747136167
+    },
+    "pair_a1/last/4": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.5782193442807967
+    },
+    "pair_a4/last/4": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5790728514192202
+    },
+    "pair_a0/last/5": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.001
+      },
+      "validation": 0.5897311099825067
+    },
+    "pair_a1/last/5": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5917026409344845
+    },
+    "pair_a4/last/5": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5926125782969359
+    },
+    "pair_a0/last/6": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.0001
+      },
+      "validation": 0.6107478415439309
+    },
+    "pair_a1/last/6": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.6083460301337397
+    },
+    "pair_a4/last/6": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.6022339314937081
+    },
+    "pair_a0/last/7": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.001
+      },
+      "validation": 0.6196497093843463
+    },
+    "pair_a1/last/7": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.6192758591501608
+    },
+    "pair_a4/last/7": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.6153186896901981
+    },
+    "pair_a0/last/8": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.001
+      },
+      "validation": 0.6454489024321426
+    },
+    "pair_a1/last/8": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.6414353027481519
+    },
+    "pair_a4/last/8": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.6340288358444783
+    },
+    "pair_a0/last/9": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.001
+      },
+      "validation": 0.6296942892613283
+    },
+    "pair_a1/last/9": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.628615061226793
+    },
+    "pair_a4/last/9": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.6253667964561819
+    },
+    "pair_a0/last/10": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6233176739461656
+    },
+    "pair_a1/last/10": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6180238135545398
+    },
+    "pair_a4/last/10": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.6133330511822132
+    },
+    "pair_a0/last/11": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6205420123017888
+    },
+    "pair_a1/last/11": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6188843744709667
+    },
+    "pair_a4/last/11": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6167329721798995
+    },
+    "pair_a0/last/12": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6166747785113706
+    },
+    "pair_a1/last/12": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6129909429490434
+    },
+    "pair_a4/last/12": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6097003555104114
+    },
+    "pair_a0/last/13": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6106244004288697
+    },
+    "pair_a1/last/13": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.604977851137069
+    },
+    "pair_a4/last/13": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6015056289148468
+    },
+    "pair_a0/last/14": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6143135263246995
+    },
+    "pair_a1/last/14": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6090831499351053
+    },
+    "pair_a4/last/14": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6057608204954574
+    },
+    "pair_a0/last/15": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5920729642796682
+    },
+    "pair_a1/last/15": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5837671406805485
+    },
+    "pair_a4/last/15": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5776938378195362
+    },
+    "pair_a0/last/16": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5900203148806501
+    },
+    "pair_a1/last/16": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.583576688674454
+    },
+    "pair_a4/last/16": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5836542802324926
+    },
+    "pair_a0/last/17": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5988798600530444
+    },
+    "pair_a1/last/17": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.5926055245189323
+    },
+    "pair_a4/last/17": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5962664353027483
+    },
+    "pair_a0/last/18": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.001
+      },
+      "validation": 0.5981497940296823
+    },
+    "pair_a1/last/18": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5918190282715422
+    },
+    "pair_a4/last/18": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5885072794988997
+    },
+    "pair_a0/last/19": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5986999887139552
+    },
+    "pair_a1/last/19": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5885531290559224
+    },
+    "pair_a4/last/19": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.001
+      },
+      "validation": 0.5830617628801986
+    },
+    "pair_a0/last/20": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5896323570904576
+    },
+    "pair_a1/last/20": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5774822244794311
+    },
+    "pair_a4/last/20": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5723364934258788
+    },
+    "pair_a0/last/21": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5922422549517522
+    },
+    "pair_a1/last/21": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.5792915185373286
+    },
+    "pair_a4/last/21": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.001
+      },
+      "validation": 0.5717968794086112
+    },
+    "pair_a0/last/22": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6018600812595226
+    },
+    "pair_a1/last/22": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5927395463009988
+    },
+    "pair_a4/last/22": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5820989221827211
+    },
+    "pair_a0/last/23": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6109770893290446
+    },
+    "pair_a1/last/23": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.601137069014164
+    },
+    "pair_a4/last/23": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.001
+      },
+      "validation": 0.5940656565656566
+    },
+    "pair_a0/last/24": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6039268382145477
+    },
+    "pair_a1/last/24": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5934449241013487
+    },
+    "pair_a4/last/24": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.001
+      },
+      "validation": 0.5857951018565544
+    },
+    "pair_a0/last/25": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.0001
+      },
+      "validation": 0.6054998307093279
+    },
+    "pair_a1/last/25": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5985977089329045
+    },
+    "pair_a4/last/25": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.0001
+      },
+      "validation": 0.5924221262908413
+    },
+    "pair_a0/last/26": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.0001
+      },
+      "validation": 0.599504119406354
+    },
+    "pair_a1/last/26": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.001
+      },
+      "validation": 0.5879218159246092
+    },
+    "pair_a4/last/26": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5789388296371537
+    },
+    "pair_a0/last/27": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.5871741154562383
+    },
+    "pair_a1/last/27": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5755106935274533
+    },
+    "pair_a4/last/27": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5677691721686134
+    },
+    "pair_a0/last/28": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6016273065854072
+    },
+    "pair_a1/last/28": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5918155013825405
+    },
+    "pair_a4/last/28": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5845007335929123
+    },
+    "pair_a0/last/29": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6060500253936008
+    },
+    "pair_a1/last/29": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.5929758478641161
+    },
+    "pair_a4/last/29": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5826173748659782
+    },
+    "pair_a0/last/30": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6091007843801141
+    },
+    "pair_a1/last/30": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6022621466057221
+    },
+    "pair_a4/last/30": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.5955892726144123
+    },
+    "pair_a0/last/31": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6225488121437841
+    },
+    "pair_a1/last/31": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6112028102251567
+    },
+    "pair_a4/last/31": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6018671350375261
+    },
+    "pair_a0/last/32": {
+      "setting": {
+        "alpha": 0.0,
+        "lam": 0.01
+      },
+      "validation": 0.6253950115681959
+    },
+    "pair_a1/last/32": {
+      "setting": {
+        "alpha": 1.0,
+        "lam": 0.01
+      },
+      "validation": 0.6139220416455053
+    },
+    "pair_a4/last/32": {
+      "setting": {
+        "alpha": 4.0,
+        "lam": 0.01
+      },
+      "validation": 0.6044241295637943
+    }
+  }
+}

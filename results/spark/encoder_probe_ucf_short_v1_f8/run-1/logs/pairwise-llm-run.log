@@ -1,0 +1,22 @@
+2026-10-29T14:37:25Z qwen35-9b-A visual raw start
+2026-10-29T14:37:25Z qwen35-9b-A last raw start
+2026-10-29T15:03:06Z qwen35-9b-A visual raw exit 0
+2026-10-29T15:03:06Z qwen35-9b-A visual residual features start
+2026-10-29T15:03:08Z qwen35-9b-A last raw exit 0
+2026-10-29T15:03:08Z qwen35-9b-A last residual features start
+2026-10-29T15:03:25Z qwen35-9b-A visual residual features exit 0
+2026-10-29T15:03:29Z qwen35-9b-A last residual features exit 0
+2026-10-29T15:47:20Z qwen35-9b-A last residual exit 0
+qwen35-9b-A-last-residual-past10/last/pair_a0 state  8: all 0.724  in_video 0.618  per-video median 0.811  below 0.5 10/49
+qwen35-9b-A-last-residual-past10/last/pair_a1 state  8: all 0.714  in_video 0.614  per-video median 0.790  below 0.5 12/49
+qwen35-9b-A-last-residual-past10/last/pair_a4 state  8: all 0.700  in_video 0.609  per-video median 0.800  below 0.5 12/49
+qwen35-9b-A-last-raw/last/pair_a0 state 17: all 0.772  in_video 0.650  per-video median 0.770  below 0.5 8/49
+qwen35-9b-A-last-raw/last/pair_a1 state 32: all 0.799  in_video 0.684  per-video median 0.805  below 0.5 10/49
+qwen35-9b-A-last-raw/last/pair_a4 state 32: all 0.770  in_video 0.665  per-video median 0.776  below 0.5 12/49
+2026-10-29T15:47:36Z qwen35-9b-A visual residual exit 0
+qwen35-9b-A-visual-residual-past10/visual/pair_a0 state 13: all 0.767  in_video 0.658  per-video median 0.591  below 0.5 16/49
+qwen35-9b-A-visual-residual-past10/visual/pair_a1 state 13: all 0.753  in_video 0.654  per-video median 0.688  below 0.5 16/49
+qwen35-9b-A-visual-residual-past10/visual/pair_a4 state 13: all 0.738  in_video 0.650  per-video median 0.690  below 0.5 18/49
+qwen35-9b-A-visual-raw/visual/pair_a0 state 11: all 0.749  in_video 0.639  per-video median 0.733  below 0.5 10/49
+qwen35-9b-A-visual-raw/visual/pair_a1 state 11: all 0.708  in_video 0.621  per-video median 0.765  below 0.5 11/49
+qwen35-9b-A-visual-raw/visual/pair_a4 state 11: all 0.669  in_video 0.605  per-video median 0.733  below 0.5 11/49
