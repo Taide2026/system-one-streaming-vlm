@@ -1,0 +1,32 @@
+2026-10-29T06:28:38Z qwen35-vit past10 start
+2026-10-29T06:48:45Z qwen35-vit past10 exit 0
+fit-qwen35-vit-past10/patch_mean/mil state 27: all 0.718  in_video 0.712  per-video median 0.808  below 0.5 8/49
+fit-qwen35-vit-past10/patch_mean/holmes state 10: all 0.609  in_video 0.602  per-video median 0.672  below 0.5 16/49
+fit-qwen35-vit-past10/patch_mean/knn state 12: all 0.696  in_video 0.633  per-video median 0.725  below 0.5 12/49
+2026-10-29T06:48:45Z qwen35-vit past20 start
+2026-10-29T07:10:58Z qwen35-vit past20 exit 0
+fit-qwen35-vit-past20/patch_mean/mil state 27: all 0.744  in_video 0.718  per-video median 0.845  below 0.5 6/49
+fit-qwen35-vit-past20/patch_mean/holmes state 10: all 0.620  in_video 0.599  per-video median 0.670  below 0.5 16/49
+fit-qwen35-vit-past20/patch_mean/knn state 15: all 0.702  in_video 0.631  per-video median 0.707  below 0.5 16/49
+2026-10-29T07:10:58Z qwen35-vit pastall start
+2026-10-29T07:30:22Z qwen35-vit pastall exit 0
+fit-qwen35-vit-pastall/patch_mean/mil state 27: all 0.725  in_video 0.686  per-video median 0.825  below 0.5 10/49
+fit-qwen35-vit-pastall/patch_mean/holmes state 27: all 0.724  in_video 0.699  per-video median 0.814  below 0.5 12/49
+fit-qwen35-vit-pastall/patch_mean/knn state 16: all 0.700  in_video 0.619  per-video median 0.696  below 0.5 14/49
+2026-10-29T06:28:33Z vjepa2-vitl past10 start
+2026-10-29T06:46:37Z vjepa2-vitl past10 exit 0
+fit-vjepa2-vitl-past10/patch_mean/mil state 19: all 0.771  in_video 0.763  per-video median 0.842  below 0.5 6/49
+fit-vjepa2-vitl-past10/patch_mean/holmes state  8: all 0.624  in_video 0.609  per-video median 0.667  below 0.5 11/49
+fit-vjepa2-vitl-past10/patch_mean/knn state 14: all 0.696  in_video 0.639  per-video median 0.658  below 0.5 12/49
+2026-10-29T06:46:37Z vjepa2-vitl past20 start
+2026-10-29T07:06:49Z vjepa2-vitl past20 exit 0
+fit-vjepa2-vitl-past20/patch_mean/mil state 16: all 0.453  in_video 0.444  per-video median 0.317  below 0.5 32/49
+fit-vjepa2-vitl-past20/patch_mean/holmes state  7: all 0.655  in_video 0.635  per-video median 0.771  below 0.5 7/49
+fit-vjepa2-vitl-past20/patch_mean/knn state 15: all 0.710  in_video 0.647  per-video median 0.692  below 0.5 12/49
+2026-10-29T07:06:49Z vjepa2-vitl pastall start
+2026-10-29T07:26:03Z vjepa2-vitl pastall exit 0
+fit-vjepa2-vitl-pastall/patch_mean/mil state 18: all 0.813  in_video 0.782  per-video median 0.879  below 0.5 7/49
+fit-vjepa2-vitl-pastall/patch_mean/holmes state  7: all 0.668  in_video 0.640  per-video median 0.752  below 0.5 9/49
+fit-vjepa2-vitl-pastall/patch_mean/knn state 15: all 0.708  in_video 0.642  per-video median 0.665  below 0.5 11/49
+
+[exited with code 0]

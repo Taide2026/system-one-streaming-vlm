@@ -1,0 +1,30 @@
+Uninstalled 1 package in 0.65ms
+Installed 1 package in 2ms
+patch_mean state 0: 43.02s
+patch_mean state 1: 42.34s
+patch_mean state 2: 44.56s
+patch_mean state 3: 44.71s
+patch_mean state 4: 43.52s
+patch_mean state 5: 41.67s
+patch_mean state 6: 43.96s
+patch_mean state 7: 41.85s
+patch_mean state 8: 44.02s
+patch_mean state 9: 42.20s
+patch_mean state 10: 41.86s
+patch_mean state 11: 43.80s
+patch_mean state 12: 45.19s
+patch_mean state 13: 42.14s
+patch_mean state 14: 44.22s
+patch_mean state 15: 41.73s
+patch_mean state 16: 39.03s
+patch_mean state 17: 40.42s
+patch_mean state 18: 37.01s
+patch_mean state 19: 43.84s
+patch_mean state 20: 44.43s
+patch_mean state 21: 44.60s
+patch_mean state 22: 40.53s
+patch_mean state 23: 47.46s
+patch_mean state 24: 48.30s
+fit-vjepa2-vitl-past10/patch_mean/mil state 19: all 0.771  in_video 0.763  per-video median 0.842  below 0.5 6/49
+fit-vjepa2-vitl-past10/patch_mean/holmes state  8: all 0.624  in_video 0.609  per-video median 0.667  below 0.5 11/49
+fit-vjepa2-vitl-past10/patch_mean/knn state 14: all 0.696  in_video 0.639  per-video median 0.658  below 0.5 12/49
