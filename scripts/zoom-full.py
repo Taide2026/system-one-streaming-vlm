@@ -36,6 +36,7 @@ def main() -> None:
     ap.add_argument("--asset", default="d3-nano")
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--frac", type=float, default=1 / 3, help="crop box side as a fraction of the frame (1/3 or 1/2)")
+    ap.add_argument("--mode", choices=["tgm", "center"], default="tgm", help="box at the TGM peak, or fixed at the frame centre")
     args = ap.parse_args()
     man = {v["name"]: v for v in json.loads((args.run / "manifest.json").read_text())}
     rows = [json.loads(l) for l in (args.run / "scores.jsonl").read_text().splitlines() if l.strip()]
@@ -76,10 +77,13 @@ def main() -> None:
                 continue
             g = [cv2.GaussianBlur(cv2.cvtColor(x, cv2.COLOR_RGB2GRAY), (5, 5), 0).astype(np.float32) for x in frames]
             heat = cv2.GaussianBlur(np.sum([np.abs(a - b) for a, b in zip(g[1:], g[:-1])], axis=0), (31, 31), 0)
-            y, x = np.unravel_index(int(heat.argmax()), heat.shape)
             H, W = heat.shape
             h, w = int(H * args.frac), int(W * args.frac)
-            y0, x0 = min(max(y - h // 2, 0), H - h), min(max(x - w // 2, 0), W - w)
+            if args.mode == "center":
+                y0, x0 = (H - h) // 2, (W - w) // 2
+            else:
+                y, x = np.unravel_index(int(heat.argmax()), heat.shape)
+                y0, x0 = min(max(y - h // 2, 0), H - h), min(max(x - w // 2, 0), W - w)
             images = [Image.fromarray(cv2.resize(fr[y0:y0 + h, x0:x0 + w], (w * 2, h * 2), interpolation=cv2.INTER_CUBIC))
                       for fr in frames]
             with torch.inference_mode():
