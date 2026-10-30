@@ -223,16 +223,19 @@ class QwenFloor:
         self.base.processor.tokenizer.padding_side = "left"
         texts = [t for t, _, _ in encoded]
         images = [im for _, imgs, _ in encoded for im in imgs]
-        proc = self.base.processor(text=texts, images=images or None, padding=True, return_tensors="pt")
-        return {**dict(proc), "_token_ids": torch.tensor(encoded[0][2])}
+        if images:
+            proc = self.base.processor(text=texts, images=images, padding=True, return_tensors="pt")
+        else:
+            proc = self.base.processor.tokenizer(texts, padding=True, return_tensors="pt")
+        return {**dict(proc), "_token_ids": torch.tensor([e[2] for e in encoded])}
 
     def forward(self, batch: dict[str, Any], reference: bool = False) -> torch.Tensor:
-        token_ids = batch["_token_ids"].to(self.device)
+        token_ids = batch["_token_ids"].to(self.device)  # (batch, options): per-item first tokens
         inputs = {k: v.to(self.device) for k, v in batch.items() if k != "_token_ids"}
         ctx = self.base.peft.disable_adapter() if reference else nullcontext()
         with ctx:
             logits = self.base.peft(**inputs, use_cache=False, logits_to_keep=1).logits[:, -1]
-        return logits.float()[:, token_ids]
+        return logits.float().gather(1, token_ids)
 
     def parameters(self):
         return self.base.parameters()
@@ -263,9 +266,13 @@ class FloorDataset(torch.utils.data.Dataset):
 
 
 def homogeneous_batches(items, batch: int, seed: int):
-    by: dict[str, list[int]] = {}
+    """Batches homogeneous in task AND option count (replay items differ per config)."""
+    def key(it):
+        return (it[0], len(it[2]["options"])) if it[0] == "replay" else (it[0], 0)
+
+    by: dict[tuple, list[int]] = {}
     for i, it in enumerate(items):
-        by.setdefault(it[0], []).append(i)
+        by.setdefault(key(it), []).append(i)
     rng = random.Random(seed)
     chunks = []
     for task, idx in by.items():
