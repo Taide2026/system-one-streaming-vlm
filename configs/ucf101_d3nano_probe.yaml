@@ -22,7 +22,7 @@ backbone:
   name: d3
   asset: d3-nano
   memory_cap_gb: 40
-  adapter: results/pro6000/ft_ucf_v1_d3nano_probe/RUN
+  adapter: results/pro6000/ft_ucf_v1_d3nano_probe/20261028-032555
 
 answer_head:
   name: option_logits

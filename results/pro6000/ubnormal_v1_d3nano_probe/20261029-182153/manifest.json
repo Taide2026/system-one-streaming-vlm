@@ -1,0 +1,2859 @@
+[
+ {
+  "name": "abnormal_scene_10_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene10/abnormal_scene_10_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_10_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 491,
+  "duration_s": 16.366666666666667,
+  "events": [
+   [
+    90,
+    270
+   ],
+   [
+    320,
+    490
+   ]
+  ],
+  "path": "Scene10/abnormal_scene_10_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_10_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    240
+   ],
+   [
+    242,
+    450
+   ]
+  ],
+  "path": "Scene10/abnormal_scene_10_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_10_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    272
+   ]
+  ],
+  "path": "Scene10/abnormal_scene_10_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_10_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 501,
+  "duration_s": 16.7,
+  "events": [
+   [
+    0,
+    500
+   ]
+  ],
+  "path": "Scene10/abnormal_scene_10_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_10_scenario_7",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 501,
+  "duration_s": 16.7,
+  "events": [
+   [
+    100,
+    205
+   ],
+   [
+    300,
+    398
+   ]
+  ],
+  "path": "Scene10/abnormal_scene_10_scenario_7.mp4"
+ },
+ {
+  "name": "abnormal_scene_10_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    189,
+    450
+   ]
+  ],
+  "path": "Scene10/abnormal_scene_10_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_11_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    69
+   ],
+   [
+    109,
+    450
+   ]
+  ],
+  "path": "Scene11/abnormal_scene_11_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_11_scenario_1_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    51,
+    450
+   ]
+  ],
+  "path": "Scene11/abnormal_scene_11_scenario_1_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_11_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    27,
+    103
+   ],
+   [
+    111,
+    172
+   ]
+  ],
+  "path": "Scene11/abnormal_scene_11_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_11_scenario_2_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    8,
+    45
+   ],
+   [
+    114,
+    170
+   ]
+  ],
+  "path": "Scene11/abnormal_scene_11_scenario_2_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_11_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    125,
+    339
+   ]
+  ],
+  "path": "Scene11/abnormal_scene_11_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_11_scenario_9",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    93,
+    302
+   ]
+  ],
+  "path": "Scene11/abnormal_scene_11_scenario_9.mp4"
+ },
+ {
+  "name": "abnormal_scene_12_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    229
+   ]
+  ],
+  "path": "Scene12/abnormal_scene_12_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_12_scenario_1_smoke",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene12/abnormal_scene_12_scenario_1_smoke.mp4"
+ },
+ {
+  "name": "abnormal_scene_12_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    80,
+    263
+   ],
+   [
+    310,
+    450
+   ]
+  ],
+  "path": "Scene12/abnormal_scene_12_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_12_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    37,
+    200
+   ],
+   [
+    333,
+    450
+   ]
+  ],
+  "path": "Scene12/abnormal_scene_12_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_12_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    203
+   ],
+   [
+    237,
+    450
+   ]
+  ],
+  "path": "Scene12/abnormal_scene_12_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_12_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    138,
+    450
+   ]
+  ],
+  "path": "Scene12/abnormal_scene_12_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_12_scenario_9",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 461,
+  "duration_s": 15.366666666666667,
+  "events": [
+   [
+    168,
+    460
+   ]
+  ],
+  "path": "Scene12/abnormal_scene_12_scenario_9.mp4"
+ },
+ {
+  "name": "abnormal_scene_13_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    40,
+    450
+   ]
+  ],
+  "path": "Scene13/abnormal_scene_13_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_13_scenario_1_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    68,
+    450
+   ]
+  ],
+  "path": "Scene13/abnormal_scene_13_scenario_1_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_13_scenario_2_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene13/abnormal_scene_13_scenario_2_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_13_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene13/abnormal_scene_13_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_13_scenario_3_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene13/abnormal_scene_13_scenario_3_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_13_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene13/abnormal_scene_13_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_13_scenario_4_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    230
+   ]
+  ],
+  "path": "Scene13/abnormal_scene_13_scenario_4_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_13_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    183
+   ]
+  ],
+  "path": "Scene13/abnormal_scene_13_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_13_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    40,
+    175
+   ],
+   [
+    235,
+    355
+   ]
+  ],
+  "path": "Scene13/abnormal_scene_13_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_13_scenario_9",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene13/abnormal_scene_13_scenario_9.mp4"
+ },
+ {
+  "name": "abnormal_scene_14_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    47,
+    450
+   ]
+  ],
+  "path": "Scene14/abnormal_scene_14_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_14_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene14/abnormal_scene_14_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_14_scenario_7",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene14/abnormal_scene_14_scenario_7.mp4"
+ },
+ {
+  "name": "abnormal_scene_14_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    436
+   ]
+  ],
+  "path": "Scene14/abnormal_scene_14_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_15_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    12,
+    146
+   ]
+  ],
+  "path": "Scene15/abnormal_scene_15_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_15_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    238,
+    354
+   ],
+   [
+    415,
+    450
+   ]
+  ],
+  "path": "Scene15/abnormal_scene_15_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_15_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    6,
+    233
+   ]
+  ],
+  "path": "Scene15/abnormal_scene_15_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_15_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 501,
+  "duration_s": 16.7,
+  "events": [
+   [
+    175,
+    208
+   ]
+  ],
+  "path": "Scene15/abnormal_scene_15_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_15_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    194,
+    301
+   ],
+   [
+    388,
+    450
+   ]
+  ],
+  "path": "Scene15/abnormal_scene_15_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_15_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    173,
+    450
+   ]
+  ],
+  "path": "Scene15/abnormal_scene_15_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_15_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    370
+   ]
+  ],
+  "path": "Scene15/abnormal_scene_15_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_15_scenario_9",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene15/abnormal_scene_15_scenario_9.mp4"
+ },
+ {
+  "name": "abnormal_scene_16_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    56,
+    111
+   ],
+   [
+    251,
+    450
+   ]
+  ],
+  "path": "Scene16/abnormal_scene_16_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_16_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    31,
+    208
+   ],
+   [
+    255,
+    430
+   ]
+  ],
+  "path": "Scene16/abnormal_scene_16_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_16_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    26
+   ],
+   [
+    30,
+    450
+   ]
+  ],
+  "path": "Scene16/abnormal_scene_16_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_17_scenario_1_smoke",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene17/abnormal_scene_17_scenario_1_smoke.mp4"
+ },
+ {
+  "name": "abnormal_scene_17_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    28,
+    105
+   ]
+  ],
+  "path": "Scene17/abnormal_scene_17_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_17_scenario_2_fire",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene17/abnormal_scene_17_scenario_2_fire.mp4"
+ },
+ {
+  "name": "abnormal_scene_17_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    72,
+    450
+   ]
+  ],
+  "path": "Scene17/abnormal_scene_17_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_17_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene17/abnormal_scene_17_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_17_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene17/abnormal_scene_17_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_17_scenario_7",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene17/abnormal_scene_17_scenario_7.mp4"
+ },
+ {
+  "name": "abnormal_scene_17_scenario_9",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    41
+   ],
+   [
+    210,
+    450
+   ]
+  ],
+  "path": "Scene17/abnormal_scene_17_scenario_9.mp4"
+ },
+ {
+  "name": "abnormal_scene_18_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    203
+   ],
+   [
+    289,
+    398
+   ]
+  ],
+  "path": "Scene18/abnormal_scene_18_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_18_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    270
+   ]
+  ],
+  "path": "Scene18/abnormal_scene_18_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_18_scenario_7",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene18/abnormal_scene_18_scenario_7.mp4"
+ },
+ {
+  "name": "abnormal_scene_19_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    25,
+    100
+   ]
+  ],
+  "path": "Scene19/abnormal_scene_19_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_19_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    150,
+    450
+   ]
+  ],
+  "path": "Scene19/abnormal_scene_19_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_19_scenario_7",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    245
+   ]
+  ],
+  "path": "Scene19/abnormal_scene_19_scenario_7.mp4"
+ },
+ {
+  "name": "abnormal_scene_19_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    390
+   ]
+  ],
+  "path": "Scene19/abnormal_scene_19_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_1_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 131,
+  "duration_s": 4.366666666666666,
+  "events": [
+   [
+    41,
+    109
+   ]
+  ],
+  "path": "Scene1/abnormal_scene_1_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_1_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 151,
+  "duration_s": 5.033333333333333,
+  "events": [
+   [
+    45,
+    120
+   ]
+  ],
+  "path": "Scene1/abnormal_scene_1_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_1_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    57,
+    192
+   ]
+  ],
+  "path": "Scene1/abnormal_scene_1_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_1_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    58,
+    125
+   ]
+  ],
+  "path": "Scene1/abnormal_scene_1_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_1_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 151,
+  "duration_s": 5.033333333333333,
+  "events": [
+   [
+    31,
+    90
+   ]
+  ],
+  "path": "Scene1/abnormal_scene_1_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_1_scenario_7",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 151,
+  "duration_s": 5.033333333333333,
+  "events": [
+   [
+    29,
+    76
+   ]
+  ],
+  "path": "Scene1/abnormal_scene_1_scenario_7.mp4"
+ },
+ {
+  "name": "abnormal_scene_1_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 201,
+  "duration_s": 6.7,
+  "events": [
+   [
+    29,
+    82
+   ],
+   [
+    84,
+    138
+   ]
+  ],
+  "path": "Scene1/abnormal_scene_1_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_1_scenario_9",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    175,
+    228
+   ]
+  ],
+  "path": "Scene1/abnormal_scene_1_scenario_9.mp4"
+ },
+ {
+  "name": "abnormal_scene_20_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    78
+   ]
+  ],
+  "path": "Scene20/abnormal_scene_20_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_20_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    314
+   ],
+   [
+    404,
+    450
+   ]
+  ],
+  "path": "Scene20/abnormal_scene_20_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_20_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    230
+   ],
+   [
+    280,
+    450
+   ]
+  ],
+  "path": "Scene20/abnormal_scene_20_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_20_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    20,
+    47
+   ],
+   [
+    144,
+    358
+   ]
+  ],
+  "path": "Scene20/abnormal_scene_20_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_21_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    35,
+    136
+   ],
+   [
+    160,
+    450
+   ]
+  ],
+  "path": "Scene21/abnormal_scene_21_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_21_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 446,
+  "duration_s": 14.866666666666667,
+  "events": [
+   [
+    0,
+    445
+   ]
+  ],
+  "path": "Scene21/abnormal_scene_21_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_21_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene21/abnormal_scene_21_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_22_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    273
+   ]
+  ],
+  "path": "Scene22/abnormal_scene_22_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_22_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    91,
+    450
+   ]
+  ],
+  "path": "Scene22/abnormal_scene_22_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_22_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene22/abnormal_scene_22_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_22_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    271
+   ],
+   [
+    284,
+    284
+   ],
+   [
+    294,
+    450
+   ]
+  ],
+  "path": "Scene22/abnormal_scene_22_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_23_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    266,
+    450
+   ]
+  ],
+  "path": "Scene23/abnormal_scene_23_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_23_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    98,
+    198
+   ],
+   [
+    294,
+    373
+   ],
+   [
+    383,
+    392
+   ]
+  ],
+  "path": "Scene23/abnormal_scene_23_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_23_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    48,
+    450
+   ]
+  ],
+  "path": "Scene23/abnormal_scene_23_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_23_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    254,
+    450
+   ]
+  ],
+  "path": "Scene23/abnormal_scene_23_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_24_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene24/abnormal_scene_24_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_24_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    180,
+    450
+   ]
+  ],
+  "path": "Scene24/abnormal_scene_24_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_24_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    43,
+    189
+   ],
+   [
+    365,
+    450
+   ]
+  ],
+  "path": "Scene24/abnormal_scene_24_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_24_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    365,
+    450
+   ]
+  ],
+  "path": "Scene24/abnormal_scene_24_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_25_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 446,
+  "duration_s": 14.866666666666667,
+  "events": [
+   [
+    33,
+    205
+   ],
+   [
+    265,
+    445
+   ]
+  ],
+  "path": "Scene25/abnormal_scene_25_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_25_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene25/abnormal_scene_25_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_25_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene25/abnormal_scene_25_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_26_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    272
+   ]
+  ],
+  "path": "Scene26/abnormal_scene_26_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_26_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene26/abnormal_scene_26_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_26_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    72,
+    250
+   ],
+   [
+    289,
+    450
+   ]
+  ],
+  "path": "Scene26/abnormal_scene_26_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_26_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    202
+   ]
+  ],
+  "path": "Scene26/abnormal_scene_26_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_27_scenario_1_smoke",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene27/abnormal_scene_27_scenario_1_smoke.mp4"
+ },
+ {
+  "name": "abnormal_scene_27_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene27/abnormal_scene_27_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_27_scenario_2_fire",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene27/abnormal_scene_27_scenario_2_fire.mp4"
+ },
+ {
+  "name": "abnormal_scene_27_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    289,
+    450
+   ]
+  ],
+  "path": "Scene27/abnormal_scene_27_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_27_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    165
+   ],
+   [
+    185,
+    450
+   ]
+  ],
+  "path": "Scene27/abnormal_scene_27_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_28_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    59
+   ],
+   [
+    356,
+    450
+   ]
+  ],
+  "path": "Scene28/abnormal_scene_28_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_28_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    95,
+    202
+   ],
+   [
+    207,
+    312
+   ],
+   [
+    405,
+    450
+   ]
+  ],
+  "path": "Scene28/abnormal_scene_28_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_28_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    125,
+    198
+   ],
+   [
+    270,
+    450
+   ]
+  ],
+  "path": "Scene28/abnormal_scene_28_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_28_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    175,
+    450
+   ]
+  ],
+  "path": "Scene28/abnormal_scene_28_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_29_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    278,
+    450
+   ]
+  ],
+  "path": "Scene29/abnormal_scene_29_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_29_scenario_1_smoke",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene29/abnormal_scene_29_scenario_1_smoke.mp4"
+ },
+ {
+  "name": "abnormal_scene_29_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    93,
+    264
+   ],
+   [
+    323,
+    450
+   ]
+  ],
+  "path": "Scene29/abnormal_scene_29_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_29_scenario_2_smoke",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    168,
+    450
+   ]
+  ],
+  "path": "Scene29/abnormal_scene_29_scenario_2_smoke.mp4"
+ },
+ {
+  "name": "abnormal_scene_29_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    241
+   ],
+   [
+    269,
+    450
+   ]
+  ],
+  "path": "Scene29/abnormal_scene_29_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_29_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    192,
+    450
+   ]
+  ],
+  "path": "Scene29/abnormal_scene_29_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_2_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 201,
+  "duration_s": 6.7,
+  "events": [
+   [
+    40,
+    193
+   ]
+  ],
+  "path": "Scene2/abnormal_scene_2_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_2_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene2/abnormal_scene_2_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_2_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 461,
+  "duration_s": 15.366666666666667,
+  "events": [
+   [
+    0,
+    460
+   ]
+  ],
+  "path": "Scene2/abnormal_scene_2_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_2_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 445,
+  "duration_s": 14.833333333333334,
+  "events": [
+   [
+    165,
+    444
+   ]
+  ],
+  "path": "Scene2/abnormal_scene_2_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_3_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 266,
+  "duration_s": 8.866666666666667,
+  "events": [
+   [
+    34,
+    154
+   ]
+  ],
+  "path": "Scene3/abnormal_scene_3_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_3_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 216,
+  "duration_s": 7.2,
+  "events": [
+   [
+    29,
+    145
+   ]
+  ],
+  "path": "Scene3/abnormal_scene_3_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_3_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    166,
+    450
+   ]
+  ],
+  "path": "Scene3/abnormal_scene_3_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_4_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 217,
+  "duration_s": 7.233333333333333,
+  "events": [
+   [
+    44,
+    216
+   ]
+  ],
+  "path": "Scene4/abnormal_scene_4_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_4_scenario_1_fire",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene4/abnormal_scene_4_scenario_1_fire.mp4"
+ },
+ {
+  "name": "abnormal_scene_4_scenario_2_fire",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene4/abnormal_scene_4_scenario_2_fire.mp4"
+ },
+ {
+  "name": "abnormal_scene_4_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    97,
+    263
+   ],
+   [
+    324,
+    450
+   ]
+  ],
+  "path": "Scene4/abnormal_scene_4_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_4_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene4/abnormal_scene_4_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_5_scenario_1_smoke",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene5/abnormal_scene_5_scenario_1_smoke.mp4"
+ },
+ {
+  "name": "abnormal_scene_5_scenario_2_smoke",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene5/abnormal_scene_5_scenario_2_smoke.mp4"
+ },
+ {
+  "name": "abnormal_scene_5_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 461,
+  "duration_s": 15.366666666666667,
+  "events": [
+   [
+    0,
+    460
+   ]
+  ],
+  "path": "Scene5/abnormal_scene_5_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_5_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 491,
+  "duration_s": 16.366666666666667,
+  "events": [
+   [
+    174,
+    490
+   ]
+  ],
+  "path": "Scene5/abnormal_scene_5_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_5_scenario_7",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 461,
+  "duration_s": 15.366666666666667,
+  "events": [
+   [
+    0,
+    460
+   ]
+  ],
+  "path": "Scene5/abnormal_scene_5_scenario_7.mp4"
+ },
+ {
+  "name": "abnormal_scene_5_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 481,
+  "duration_s": 16.033333333333335,
+  "events": [
+   [
+    290,
+    480
+   ]
+  ],
+  "path": "Scene5/abnormal_scene_5_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_6_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 266,
+  "duration_s": 8.866666666666667,
+  "events": [
+   [
+    36,
+    265
+   ]
+  ],
+  "path": "Scene6/abnormal_scene_6_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_6_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    168,
+    450
+   ]
+  ],
+  "path": "Scene6/abnormal_scene_6_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_6_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    169,
+    450
+   ]
+  ],
+  "path": "Scene6/abnormal_scene_6_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 445,
+  "duration_s": 14.833333333333334,
+  "events": [
+   [
+    51,
+    430
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_10",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_10.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_1_fire",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_1_fire.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_1_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    177,
+    450
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_1_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    65,
+    450
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_2_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    56,
+    320
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_2_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_2_smoke",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_2_smoke.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_3_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_3_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    90,
+    450
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_4_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    121,
+    450
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_4_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_6",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    205
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_6.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_7",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    31,
+    203
+   ],
+   [
+    291,
+    394
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_7.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    28,
+    116
+   ],
+   [
+    272,
+    349
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_8.mp4"
+ },
+ {
+  "name": "abnormal_scene_7_scenario_9",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    178,
+    378
+   ]
+  ],
+  "path": "Scene7/abnormal_scene_7_scenario_9.mp4"
+ },
+ {
+  "name": "abnormal_scene_8_scenario_1",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 446,
+  "duration_s": 14.866666666666667,
+  "events": [
+   [
+    35,
+    100
+   ],
+   [
+    190,
+    445
+   ]
+  ],
+  "path": "Scene8/abnormal_scene_8_scenario_1.mp4"
+ },
+ {
+  "name": "abnormal_scene_8_scenario_1_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 446,
+  "duration_s": 14.866666666666667,
+  "events": [
+   [
+    169,
+    445
+   ]
+  ],
+  "path": "Scene8/abnormal_scene_8_scenario_1_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_8_scenario_2",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 461,
+  "duration_s": 15.366666666666667,
+  "events": [
+   [
+    31,
+    141
+   ]
+  ],
+  "path": "Scene8/abnormal_scene_8_scenario_2.mp4"
+ },
+ {
+  "name": "abnormal_scene_8_scenario_2_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 461,
+  "duration_s": 15.366666666666667,
+  "events": [
+   [
+    10,
+    460
+   ]
+  ],
+  "path": "Scene8/abnormal_scene_8_scenario_2_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_8_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 501,
+  "duration_s": 16.7,
+  "events": [
+   [
+    0,
+    321
+   ]
+  ],
+  "path": "Scene8/abnormal_scene_8_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_8_scenario_4",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    125,
+    450
+   ]
+  ],
+  "path": "Scene8/abnormal_scene_8_scenario_4.mp4"
+ },
+ {
+  "name": "abnormal_scene_8_scenario_5",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 461,
+  "duration_s": 15.366666666666667,
+  "events": [
+   [
+    0,
+    460
+   ]
+  ],
+  "path": "Scene8/abnormal_scene_8_scenario_5.mp4"
+ },
+ {
+  "name": "abnormal_scene_9_scenario_2_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    390
+   ]
+  ],
+  "path": "Scene9/abnormal_scene_9_scenario_2_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_9_scenario_3",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene9/abnormal_scene_9_scenario_3.mp4"
+ },
+ {
+  "name": "abnormal_scene_9_scenario_4_fog",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    94,
+    208
+   ],
+   [
+    294,
+    400
+   ]
+  ],
+  "path": "Scene9/abnormal_scene_9_scenario_4_fog.mp4"
+ },
+ {
+  "name": "abnormal_scene_9_scenario_7",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    0,
+    450
+   ]
+  ],
+  "path": "Scene9/abnormal_scene_9_scenario_7.mp4"
+ },
+ {
+  "name": "abnormal_scene_9_scenario_8",
+  "category": "abnormal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [
+   [
+    96,
+    200
+   ],
+   [
+    292,
+    382
+   ]
+  ],
+  "path": "Scene9/abnormal_scene_9_scenario_8.mp4"
+ },
+ {
+  "name": "normal_scene_10_scenario_2",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene10/normal_scene_10_scenario_2.mp4"
+ },
+ {
+  "name": "normal_scene_10_scenario_3",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene10/normal_scene_10_scenario_3.mp4"
+ },
+ {
+  "name": "normal_scene_10_scenario_8",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene10/normal_scene_10_scenario_8.mp4"
+ },
+ {
+  "name": "normal_scene_10_scenario_9",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 431,
+  "duration_s": 14.366666666666667,
+  "events": [],
+  "path": "Scene10/normal_scene_10_scenario_9.mp4"
+ },
+ {
+  "name": "normal_scene_11_scenario_2_fog",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene11/normal_scene_11_scenario_2_fog.mp4"
+ },
+ {
+  "name": "normal_scene_11_scenario_4_fog",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene11/normal_scene_11_scenario_4_fog.mp4"
+ },
+ {
+  "name": "normal_scene_12_scenario_2",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene12/normal_scene_12_scenario_2.mp4"
+ },
+ {
+  "name": "normal_scene_13_scenario_1_fog",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene13/normal_scene_13_scenario_1_fog.mp4"
+ },
+ {
+  "name": "normal_scene_14_scenario_2",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene14/normal_scene_14_scenario_2.mp4"
+ },
+ {
+  "name": "normal_scene_14_scenario_4",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene14/normal_scene_14_scenario_4.mp4"
+ },
+ {
+  "name": "normal_scene_15_scenario_6",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene15/normal_scene_15_scenario_6.mp4"
+ },
+ {
+  "name": "normal_scene_17_scenario_2",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene17/normal_scene_17_scenario_2.mp4"
+ },
+ {
+  "name": "normal_scene_17_scenario_3_1",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene17/normal_scene_17_scenario_3_1.mp4"
+ },
+ {
+  "name": "normal_scene_17_scenario_4",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene17/normal_scene_17_scenario_4.mp4"
+ },
+ {
+  "name": "normal_scene_18_scenario_1",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 441,
+  "duration_s": 14.7,
+  "events": [],
+  "path": "Scene18/normal_scene_18_scenario_1.mp4"
+ },
+ {
+  "name": "normal_scene_18_scenario_4",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene18/normal_scene_18_scenario_4.mp4"
+ },
+ {
+  "name": "normal_scene_1_scenario1_10",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 251,
+  "duration_s": 8.366666666666667,
+  "events": [],
+  "path": "Scene1/normal_scene_1_scenario1_10.mp4"
+ },
+ {
+  "name": "normal_scene_20_scenario_2",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 471,
+  "duration_s": 15.7,
+  "events": [],
+  "path": "Scene20/normal_scene_20_scenario_2.mp4"
+ },
+ {
+  "name": "normal_scene_20_scenario_4",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene20/normal_scene_20_scenario_4.mp4"
+ },
+ {
+  "name": "normal_scene_20_scenario_9",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene20/normal_scene_20_scenario_9.mp4"
+ },
+ {
+  "name": "normal_scene_21_scenario_2",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene21/normal_scene_21_scenario_2.mp4"
+ },
+ {
+  "name": "normal_scene_21_scenario_3",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene21/normal_scene_21_scenario_3.mp4"
+ },
+ {
+  "name": "normal_scene_21_scenario_5",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene21/normal_scene_21_scenario_5.mp4"
+ },
+ {
+  "name": "normal_scene_22_scenario_5",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene22/normal_scene_22_scenario_5.mp4"
+ },
+ {
+  "name": "normal_scene_23_scenario_4",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene23/normal_scene_23_scenario_4.mp4"
+ },
+ {
+  "name": "normal_scene_23_scenario_5",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene23/normal_scene_23_scenario_5.mp4"
+ },
+ {
+  "name": "normal_scene_23_scenario_7",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene23/normal_scene_23_scenario_7.mp4"
+ },
+ {
+  "name": "normal_scene_24_scenario_1",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene24/normal_scene_24_scenario_1.mp4"
+ },
+ {
+  "name": "normal_scene_24_scenario_6",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene24/normal_scene_24_scenario_6.mp4"
+ },
+ {
+  "name": "normal_scene_25_scenario_4",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene25/normal_scene_25_scenario_4.mp4"
+ },
+ {
+  "name": "normal_scene_25_scenario_7",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene25/normal_scene_25_scenario_7.mp4"
+ },
+ {
+  "name": "normal_scene_26_scenario_4",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene26/normal_scene_26_scenario_4.mp4"
+ },
+ {
+  "name": "normal_scene_26_scenario_8",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene26/normal_scene_26_scenario_8.mp4"
+ },
+ {
+  "name": "normal_scene_27_scenario_4",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene27/normal_scene_27_scenario_4.mp4"
+ },
+ {
+  "name": "normal_scene_28_scenario_2",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene28/normal_scene_28_scenario_2.mp4"
+ },
+ {
+  "name": "normal_scene_29_scenario_1",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene29/normal_scene_29_scenario_1.mp4"
+ },
+ {
+  "name": "normal_scene_29_scenario_6",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene29/normal_scene_29_scenario_6.mp4"
+ },
+ {
+  "name": "normal_scene_3_scenario_1",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 266,
+  "duration_s": 8.866666666666667,
+  "events": [],
+  "path": "Scene3/normal_scene_3_scenario_1.mp4"
+ },
+ {
+  "name": "normal_scene_3_scenario_5",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene3/normal_scene_3_scenario_5.mp4"
+ },
+ {
+  "name": "normal_scene_3_scenario_7",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene3/normal_scene_3_scenario_7.mp4"
+ },
+ {
+  "name": "normal_scene_4_scenario_1",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 445,
+  "duration_s": 14.833333333333334,
+  "events": [],
+  "path": "Scene4/normal_scene_4_scenario_1.mp4"
+ },
+ {
+  "name": "normal_scene_4_scenario_5",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene4/normal_scene_4_scenario_5.mp4"
+ },
+ {
+  "name": "normal_scene_4_scenario_8",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene4/normal_scene_4_scenario_8.mp4"
+ },
+ {
+  "name": "normal_scene_5_scenario_8",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 482,
+  "duration_s": 16.066666666666666,
+  "events": [],
+  "path": "Scene5/normal_scene_5_scenario_8.mp4"
+ },
+ {
+  "name": "normal_scene_7_scenario_3",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene7/normal_scene_7_scenario_3.mp4"
+ },
+ {
+  "name": "normal_scene_7_scenario_3_fog",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene7/normal_scene_7_scenario_3_fog.mp4"
+ },
+ {
+  "name": "normal_scene_7_scenario_4_fog",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene7/normal_scene_7_scenario_4_fog.mp4"
+ },
+ {
+  "name": "normal_scene_8_scenario_2_fog",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 461,
+  "duration_s": 15.366666666666667,
+  "events": [],
+  "path": "Scene8/normal_scene_8_scenario_2_fog.mp4"
+ },
+ {
+  "name": "normal_scene_8_scenario_7",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 501,
+  "duration_s": 16.7,
+  "events": [],
+  "path": "Scene8/normal_scene_8_scenario_7.mp4"
+ },
+ {
+  "name": "normal_scene_9_scenario_1",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene9/normal_scene_9_scenario_1.mp4"
+ },
+ {
+  "name": "normal_scene_9_scenario_4_fog",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene9/normal_scene_9_scenario_4_fog.mp4"
+ },
+ {
+  "name": "normal_scene_9_scenario_6",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene9/normal_scene_9_scenario_6.mp4"
+ },
+ {
+  "name": "normal_scene_9_scenario_8",
+  "category": "normal",
+  "fps": 30.0,
+  "n_frames": 451,
+  "duration_s": 15.033333333333333,
+  "events": [],
+  "path": "Scene9/normal_scene_9_scenario_8.mp4"
+ }
+]

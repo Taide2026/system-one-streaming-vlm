@@ -1,0 +1,83 @@
+{
+ "n": 3786,
+ "skipped": 214,
+ "overall": 57.078711040676176,
+ "per_task": {
+  "action_sequence": {
+   "n": 188,
+   "acc": 76.59574468085107
+  },
+  "action_prediction": {
+   "n": 200,
+   "acc": 61.5
+  },
+  "action_antonym": {
+   "n": 200,
+   "acc": 57.99999999999999
+  },
+  "fine_grained_action": {
+   "n": 200,
+   "acc": 46.0
+  },
+  "unexpected_action": {
+   "n": 200,
+   "acc": 73.0
+  },
+  "object_existence": {
+   "n": 198,
+   "acc": 58.58585858585859
+  },
+  "object_interaction": {
+   "n": 200,
+   "acc": 77.5
+  },
+  "object_shuffle": {
+   "n": 200,
+   "acc": 38.5
+  },
+  "moving_direction": {
+   "n": 200,
+   "acc": 37.0
+  },
+  "action_localization": {
+   "n": 200,
+   "acc": 56.99999999999999
+  },
+  "scene_transition": {
+   "n": 200,
+   "acc": 87.5
+  },
+  "action_count": {
+   "n": 200,
+   "acc": 36.0
+  },
+  "moving_count": {
+   "n": 200,
+   "acc": 42.5
+  },
+  "moving_attribute": {
+   "n": 200,
+   "acc": 73.0
+  },
+  "state_change": {
+   "n": 200,
+   "acc": 40.5
+  },
+  "character_order": {
+   "n": 200,
+   "acc": 76.5
+  },
+  "egocentric_navigation": {
+   "n": 200,
+   "acc": 36.0
+  },
+  "episodic_reasoning": {
+   "n": 200,
+   "acc": 49.5
+  },
+  "counterfactual_inference": {
+   "n": 200,
+   "acc": 60.5
+  }
+ }
+}

@@ -1,0 +1,1000 @@
+{"id": "ledgar/test/5093", "label": "Titles", "pred": "Titles", "p": 0.6755501684625365, "correct": true}
+{"id": "ledgar/test/2106", "label": "Assignments", "pred": "Assignments", "p": 0.9709252279357397, "correct": true}
+{"id": "ledgar/test/2568", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.999292724111119, "correct": true}
+{"id": "ledgar/test/685", "label": "Notices", "pred": "Notices", "p": 0.9998736770638688, "correct": true}
+{"id": "ledgar/test/2136", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9999643636010149, "correct": true}
+{"id": "ledgar/test/4475", "label": "Jurisdictions", "pred": "Submission To Jurisdiction", "p": 0.6675690517120874, "correct": false}
+{"id": "ledgar/test/424", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999788752940951, "correct": true}
+{"id": "ledgar/test/3695", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999696804302713, "correct": true}
+{"id": "ledgar/test/9934", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.8299087091054681, "correct": true}
+{"id": "ledgar/test/2944", "label": "Payments", "pred": "Payments", "p": 0.9996777847450374, "correct": true}
+{"id": "ledgar/test/4755", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.9849996890214752, "correct": true}
+{"id": "ledgar/test/498", "label": "No Defaults", "pred": "No Defaults", "p": 0.9999855939277906, "correct": true}
+{"id": "ledgar/test/8209", "label": "Binding Effects", "pred": "Assignments", "p": 0.9530265865120526, "correct": false}
+{"id": "ledgar/test/5132", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.995783702854439, "correct": true}
+{"id": "ledgar/test/5995", "label": "Duties", "pred": "Duties", "p": 0.9447954560900882, "correct": true}
+{"id": "ledgar/test/4519", "label": "Indemnifications", "pred": "Indemnity", "p": 0.5049920369138502, "correct": false}
+{"id": "ledgar/test/4560", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999778263357734, "correct": true}
+{"id": "ledgar/test/8161", "label": "Terminations", "pred": "Terminations", "p": 0.41535245961227346, "correct": true}
+{"id": "ledgar/test/9868", "label": "Notices", "pred": "Payments", "p": 0.8642892664660746, "correct": false}
+{"id": "ledgar/test/9713", "label": "Expenses", "pred": "Expenses", "p": 0.994948442801462, "correct": true}
+{"id": "ledgar/test/4423", "label": "Subsidiaries", "pred": "Subsidiaries", "p": 0.9999308845447294, "correct": true}
+{"id": "ledgar/test/5514", "label": "Financial Statements", "pred": "Financial Statements", "p": 0.9998489563885546, "correct": true}
+{"id": "ledgar/test/4540", "label": "Payments", "pred": "Payments", "p": 0.9942817034625298, "correct": true}
+{"id": "ledgar/test/7913", "label": "Terms", "pred": "Construction", "p": 0.5394409660850579, "correct": false}
+{"id": "ledgar/test/6647", "label": "Amendments", "pred": "Amendments", "p": 0.9980143552711399, "correct": true}
+{"id": "ledgar/test/5111", "label": "Notices", "pred": "Notices", "p": 0.9999712021560869, "correct": true}
+{"id": "ledgar/test/8301", "label": "Notices", "pred": "Notices", "p": 0.99991426869233, "correct": true}
+{"id": "ledgar/test/7327", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.6742531855405304, "correct": false}
+{"id": "ledgar/test/9099", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9933162765776401, "correct": true}
+{"id": "ledgar/test/8897", "label": "Agreements", "pred": "Closings", "p": 0.9410343816590997, "correct": false}
+{"id": "ledgar/test/5825", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9999768639066413, "correct": true}
+{"id": "ledgar/test/624", "label": "No Waivers", "pred": "No Waivers", "p": 0.720466479418489, "correct": true}
+{"id": "ledgar/test/8013", "label": "No Waivers", "pred": "No Waivers", "p": 0.990890116839294, "correct": true}
+{"id": "ledgar/test/9314", "label": "Publicity", "pred": "Publicity", "p": 0.9774442554496878, "correct": true}
+{"id": "ledgar/test/2210", "label": "Sales", "pred": "Sales", "p": 0.9869334165276261, "correct": true}
+{"id": "ledgar/test/5516", "label": "Effectiveness", "pred": "Releases", "p": 0.6340554271919386, "correct": false}
+{"id": "ledgar/test/2559", "label": "Forfeitures", "pred": "Forfeitures", "p": 0.4506995334899391, "correct": true}
+{"id": "ledgar/test/6160", "label": "Construction", "pred": "Construction", "p": 0.7376590224653642, "correct": true}
+{"id": "ledgar/test/9149", "label": "Closings", "pred": "Closings", "p": 0.9446549107384238, "correct": true}
+{"id": "ledgar/test/3880", "label": "Counterparts", "pred": "Counterparts", "p": 0.9993684489487017, "correct": true}
+{"id": "ledgar/test/8552", "label": "Taxes", "pred": "Taxes", "p": 0.999981739923335, "correct": true}
+{"id": "ledgar/test/113", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.7233447729900967, "correct": true}
+{"id": "ledgar/test/2277", "label": "Change In Control", "pred": "Change In Control", "p": 0.9977969203185304, "correct": true}
+{"id": "ledgar/test/2578", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9344817557008637, "correct": true}
+{"id": "ledgar/test/9222", "label": "Authorizations", "pred": "Authorizations", "p": 0.44239042197855416, "correct": true}
+{"id": "ledgar/test/9375", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.969747702250949, "correct": true}
+{"id": "ledgar/test/9255", "label": "Duties", "pred": "Duties", "p": 0.9451738234286239, "correct": true}
+{"id": "ledgar/test/7020", "label": "No Waivers", "pred": "No Waivers", "p": 0.972747830083926, "correct": true}
+{"id": "ledgar/test/4189", "label": "Successors", "pred": "Assignments", "p": 0.7699635633918795, "correct": false}
+{"id": "ledgar/test/462", "label": "Binding Effects", "pred": "Assignments", "p": 0.8987088893990877, "correct": false}
+{"id": "ledgar/test/9025", "label": "Effective Dates", "pred": "Consents", "p": 0.32120066338547776, "correct": false}
+{"id": "ledgar/test/3948", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.8944724587814639, "correct": true}
+{"id": "ledgar/test/3942", "label": "Intellectual Property", "pred": "Intellectual Property", "p": 0.9994372034499805, "correct": true}
+{"id": "ledgar/test/4466", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.975558438071435, "correct": true}
+{"id": "ledgar/test/8923", "label": "Insurances", "pred": "Insurances", "p": 0.9997983281367715, "correct": true}
+{"id": "ledgar/test/7372", "label": "Modifications", "pred": "Entire Agreements", "p": 0.9032405388046015, "correct": false}
+{"id": "ledgar/test/6524", "label": "Taxes", "pred": "Tax Withholdings", "p": 0.7815698718242753, "correct": false}
+{"id": "ledgar/test/825", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9995764669114712, "correct": true}
+{"id": "ledgar/test/1636", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9749860087296448, "correct": true}
+{"id": "ledgar/test/2897", "label": "Expenses", "pred": "Expenses", "p": 0.9731287112760202, "correct": true}
+{"id": "ledgar/test/8227", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9990620653921698, "correct": true}
+{"id": "ledgar/test/6584", "label": "Capitalization", "pred": "Capitalization", "p": 0.9999468717494366, "correct": true}
+{"id": "ledgar/test/7126", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9920290158289091, "correct": true}
+{"id": "ledgar/test/9137", "label": "Waivers", "pred": "No Waivers", "p": 0.9603114217492905, "correct": false}
+{"id": "ledgar/test/4157", "label": "Taxes", "pred": "Taxes", "p": 0.9989558711223786, "correct": true}
+{"id": "ledgar/test/4278", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9935782038752774, "correct": true}
+{"id": "ledgar/test/6557", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.991607566608638, "correct": true}
+{"id": "ledgar/test/2010", "label": "Subsidiaries", "pred": "Subsidiaries", "p": 0.9999226234165521, "correct": true}
+{"id": "ledgar/test/3572", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.7035311308569144, "correct": false}
+{"id": "ledgar/test/3760", "label": "Taxes", "pred": "Tax Withholdings", "p": 0.6978545863869577, "correct": false}
+{"id": "ledgar/test/4089", "label": "Payments", "pred": "Payments", "p": 0.9845518538699914, "correct": true}
+{"id": "ledgar/test/2483", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.9531267831037356, "correct": true}
+{"id": "ledgar/test/7753", "label": "Agreements", "pred": "General", "p": 0.1704226940638498, "correct": false}
+{"id": "ledgar/test/8609", "label": "Counterparts", "pred": "Counterparts", "p": 0.9998221165442641, "correct": true}
+{"id": "ledgar/test/6452", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.9999476469283747, "correct": true}
+{"id": "ledgar/test/520", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9999723132802142, "correct": true}
+{"id": "ledgar/test/3991", "label": "Venues", "pred": "Submission To Jurisdiction", "p": 0.35514858177481384, "correct": false}
+{"id": "ledgar/test/3013", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9981521623898734, "correct": true}
+{"id": "ledgar/test/6479", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.9992823576826485, "correct": true}
+{"id": "ledgar/test/7411", "label": "Withholdings", "pred": "Withholdings", "p": 0.5586462072466978, "correct": true}
+{"id": "ledgar/test/5536", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9954884277270217, "correct": true}
+{"id": "ledgar/test/2172", "label": "Warranties", "pred": "Warranties", "p": 0.5419211710924481, "correct": true}
+{"id": "ledgar/test/6540", "label": "Headings", "pred": "Headings", "p": 0.9705397923291031, "correct": true}
+{"id": "ledgar/test/238", "label": "Base Salary", "pred": "Base Salary", "p": 0.999981668480986, "correct": true}
+{"id": "ledgar/test/8212", "label": "Financial Statements", "pred": "Financial Statements", "p": 0.9999698002265117, "correct": true}
+{"id": "ledgar/test/6070", "label": "Definitions", "pred": "Definitions", "p": 0.575800116147737, "correct": true}
+{"id": "ledgar/test/1271", "label": "Indemnifications", "pred": "Taxes", "p": 0.7578078244145611, "correct": false}
+{"id": "ledgar/test/5564", "label": "General", "pred": "Benefits", "p": 0.7288783498851339, "correct": false}
+{"id": "ledgar/test/4263", "label": "Submission To Jurisdiction", "pred": "Submission To Jurisdiction", "p": 0.6826011969940393, "correct": true}
+{"id": "ledgar/test/525", "label": "Authorizations", "pred": "Authorizations", "p": 0.744292109240622, "correct": true}
+{"id": "ledgar/test/306", "label": "Notices", "pred": "Notices", "p": 0.9997670002687046, "correct": true}
+{"id": "ledgar/test/3899", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9286850142261082, "correct": true}
+{"id": "ledgar/test/9932", "label": "Withholdings", "pred": "Withholdings", "p": 0.7710184512032154, "correct": true}
+{"id": "ledgar/test/7007", "label": "Expenses", "pred": "Expenses", "p": 0.9804808550008812, "correct": true}
+{"id": "ledgar/test/5058", "label": "Warranties", "pred": "Warranties", "p": 0.6885338886047594, "correct": true}
+{"id": "ledgar/test/8717", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9704447103811055, "correct": true}
+{"id": "ledgar/test/8574", "label": "Notices", "pred": "Notices", "p": 0.9999668976711134, "correct": true}
+{"id": "ledgar/test/3825", "label": "Interpretations", "pred": "Interpretations", "p": 0.5482220931173474, "correct": true}
+{"id": "ledgar/test/8752", "label": "Remedies", "pred": "Enforcements", "p": 0.8884431217547881, "correct": false}
+{"id": "ledgar/test/6085", "label": "Taxes", "pred": "Taxes", "p": 0.9998692748921293, "correct": true}
+{"id": "ledgar/test/7441", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.9999007443541293, "correct": true}
+{"id": "ledgar/test/3834", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9731357784401563, "correct": true}
+{"id": "ledgar/test/3698", "label": "Liens", "pred": "Liens", "p": 0.9999355683018963, "correct": true}
+{"id": "ledgar/test/5986", "label": "General", "pred": "Terminations", "p": 0.989923964899453, "correct": false}
+{"id": "ledgar/test/5668", "label": "Brokers", "pred": "Brokers", "p": 0.9995689332028853, "correct": true}
+{"id": "ledgar/test/7850", "label": "Payments", "pred": "Payments", "p": 0.9781593845256712, "correct": true}
+{"id": "ledgar/test/5092", "label": "Terminations", "pred": "Terminations", "p": 0.8120550822039201, "correct": true}
+{"id": "ledgar/test/5488", "label": "General", "pred": "Definitions", "p": 0.9098839930219779, "correct": false}
+{"id": "ledgar/test/1992", "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p": 0.9972196428993805, "correct": true}
+{"id": "ledgar/test/2321", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9976381807695798, "correct": true}
+{"id": "ledgar/test/5911", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.8806008065088177, "correct": true}
+{"id": "ledgar/test/2341", "label": "General", "pred": "Binding Effects", "p": 0.4515050441166637, "correct": false}
+{"id": "ledgar/test/4803", "label": "Construction", "pred": "Interpretations", "p": 0.5528702729696752, "correct": false}
+{"id": "ledgar/test/6957", "label": "Notices", "pred": "Notices", "p": 0.9998572226081829, "correct": true}
+{"id": "ledgar/test/43", "label": "Waivers", "pred": "No Waivers", "p": 0.9802186675648695, "correct": false}
+{"id": "ledgar/test/204", "label": "Interpretations", "pred": "Taxes", "p": 0.28276375060352726, "correct": false}
+{"id": "ledgar/test/5231", "label": "Adjustments", "pred": "Adjustments", "p": 0.8760120346765132, "correct": true}
+{"id": "ledgar/test/8689", "label": "Terms", "pred": "Terms", "p": 0.9998440652445045, "correct": true}
+{"id": "ledgar/test/86", "label": "Taxes", "pred": "Taxes", "p": 0.9998914784971592, "correct": true}
+{"id": "ledgar/test/1332", "label": "Transactions With Affiliates", "pred": "Transactions With Affiliates", "p": 0.9999865074441596, "correct": true}
+{"id": "ledgar/test/500", "label": "Notices", "pred": "Notices", "p": 0.9955357105200691, "correct": true}
+{"id": "ledgar/test/5411", "label": "Releases", "pred": "Releases", "p": 0.999892859542756, "correct": true}
+{"id": "ledgar/test/1720", "label": "Severability", "pred": "Severability", "p": 0.9942467712403223, "correct": true}
+{"id": "ledgar/test/5197", "label": "Notices", "pred": "Notices", "p": 0.9999639449362803, "correct": true}
+{"id": "ledgar/test/6707", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9978083435713159, "correct": true}
+{"id": "ledgar/test/58", "label": "Liens", "pred": "Liens", "p": 0.9868731243099119, "correct": true}
+{"id": "ledgar/test/1290", "label": "Subsidiaries", "pred": "Subsidiaries", "p": 0.9999977269066604, "correct": true}
+{"id": "ledgar/test/6337", "label": "Capitalization", "pred": "Capitalization", "p": 0.9996734015317468, "correct": true}
+{"id": "ledgar/test/6917", "label": "Base Salary", "pred": "Base Salary", "p": 0.9998923320504478, "correct": true}
+{"id": "ledgar/test/1003", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9886470868422222, "correct": true}
+{"id": "ledgar/test/3121", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9580911736316792, "correct": true}
+{"id": "ledgar/test/1262", "label": "Effective Dates", "pred": "Effective Dates", "p": 0.8261527275136294, "correct": true}
+{"id": "ledgar/test/9294", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.9999573703431834, "correct": true}
+{"id": "ledgar/test/8940", "label": "Survival", "pred": "Survival", "p": 0.9999663860096014, "correct": true}
+{"id": "ledgar/test/4392", "label": "Terms", "pred": "Terms", "p": 0.9925568380521078, "correct": true}
+{"id": "ledgar/test/1937", "label": "Litigations", "pred": "Litigations", "p": 0.9988295014335873, "correct": true}
+{"id": "ledgar/test/8780", "label": "Payments", "pred": "Payments", "p": 0.9741371587627718, "correct": true}
+{"id": "ledgar/test/992", "label": "Adjustments", "pred": "Adjustments", "p": 0.9411714859177219, "correct": true}
+{"id": "ledgar/test/2266", "label": "Change In Control", "pred": "Change In Control", "p": 0.95163306469701, "correct": true}
+{"id": "ledgar/test/8006", "label": "Adjustments", "pred": "Adjustments", "p": 0.9965875133614971, "correct": true}
+{"id": "ledgar/test/5162", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.5332230237783345, "correct": true}
+{"id": "ledgar/test/1111", "label": "Survival", "pred": "Survival", "p": 0.9999729379115726, "correct": true}
+{"id": "ledgar/test/3638", "label": "Intellectual Property", "pred": "Intellectual Property", "p": 0.999932698702483, "correct": true}
+{"id": "ledgar/test/9463", "label": "Severability", "pred": "Severability", "p": 0.99559643074141, "correct": true}
+{"id": "ledgar/test/8683", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9742337940970758, "correct": true}
+{"id": "ledgar/test/2005", "label": "Forfeitures", "pred": "General", "p": 0.8074340163213337, "correct": false}
+{"id": "ledgar/test/7175", "label": "Approvals", "pred": "Consents", "p": 0.46211805433998154, "correct": false}
+{"id": "ledgar/test/4018", "label": "Subsidiaries", "pred": "Subsidiaries", "p": 0.9980049209189183, "correct": true}
+{"id": "ledgar/test/9789", "label": "Change In Control", "pred": "Change In Control", "p": 0.99323887610114, "correct": true}
+{"id": "ledgar/test/2233", "label": "Remedies", "pred": "Specific Performance", "p": 0.6922472053312554, "correct": false}
+{"id": "ledgar/test/3574", "label": "Brokers", "pred": "Brokers", "p": 0.9996888817227947, "correct": true}
+{"id": "ledgar/test/5158", "label": "Survival", "pred": "Survival", "p": 0.6737875366302417, "correct": true}
+{"id": "ledgar/test/8491", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9967644217661135, "correct": true}
+{"id": "ledgar/test/100", "label": "Survival", "pred": "Survival", "p": 0.8994744182873727, "correct": true}
+{"id": "ledgar/test/2056", "label": "Consents", "pred": "Authorizations", "p": 0.5263612711330451, "correct": false}
+{"id": "ledgar/test/7629", "label": "Governing Laws", "pred": "Miscellaneous", "p": 0.2055759828197152, "correct": false}
+{"id": "ledgar/test/6212", "label": "Notices", "pred": "Amendments", "p": 0.943585959990438, "correct": false}
+{"id": "ledgar/test/8796", "label": "Intellectual Property", "pred": "Intellectual Property", "p": 0.9901359872132169, "correct": true}
+{"id": "ledgar/test/9952", "label": "Counterparts", "pred": "Counterparts", "p": 0.9778873447157377, "correct": true}
+{"id": "ledgar/test/2032", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9833753120475623, "correct": true}
+{"id": "ledgar/test/6909", "label": "Taxes", "pred": "Taxes", "p": 0.4928530654232658, "correct": true}
+{"id": "ledgar/test/3788", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999807329571765, "correct": true}
+{"id": "ledgar/test/8067", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9030113977834723, "correct": true}
+{"id": "ledgar/test/8354", "label": "Authorizations", "pred": "Authorizations", "p": 0.6189276126007904, "correct": true}
+{"id": "ledgar/test/4923", "label": "Employment", "pred": "Terminations", "p": 0.9754687436495599, "correct": false}
+{"id": "ledgar/test/7595", "label": "Sales", "pred": "Sales", "p": 0.8710225009614477, "correct": true}
+{"id": "ledgar/test/2447", "label": "Amendments", "pred": "Amendments", "p": 0.9993496660618728, "correct": true}
+{"id": "ledgar/test/9674", "label": "Severability", "pred": "Severability", "p": 0.9994782833865633, "correct": true}
+{"id": "ledgar/test/6848", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999585285019312, "correct": true}
+{"id": "ledgar/test/795", "label": "Terminations", "pred": "Terminations", "p": 0.860243430185712, "correct": true}
+{"id": "ledgar/test/4186", "label": "Erisa", "pred": "Erisa", "p": 0.9999168797840956, "correct": true}
+{"id": "ledgar/test/3870", "label": "Amendments", "pred": "Amendments", "p": 0.9888160684778073, "correct": true}
+{"id": "ledgar/test/6046", "label": "Existence", "pred": "Existence", "p": 0.5709967153310025, "correct": true}
+{"id": "ledgar/test/9154", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9892550083358064, "correct": true}
+{"id": "ledgar/test/6652", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9991276070933699, "correct": true}
+{"id": "ledgar/test/8680", "label": "Closings", "pred": "Closings", "p": 0.9643248452233314, "correct": true}
+{"id": "ledgar/test/1216", "label": "Tax Withholdings", "pred": "Tax Withholdings", "p": 0.9289062425814681, "correct": true}
+{"id": "ledgar/test/2487", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9996788438426482, "correct": true}
+{"id": "ledgar/test/2230", "label": "Vesting", "pred": "Vesting", "p": 0.982917032970941, "correct": true}
+{"id": "ledgar/test/1512", "label": "Enforcements", "pred": "Authorizations", "p": 0.7691817653537184, "correct": false}
+{"id": "ledgar/test/2497", "label": "Notices", "pred": "Notices", "p": 0.9999457001631813, "correct": true}
+{"id": "ledgar/test/5993", "label": "Vesting", "pred": "Vesting", "p": 0.8985128811829196, "correct": true}
+{"id": "ledgar/test/7688", "label": "Publicity", "pred": "Publicity", "p": 0.9670051485315235, "correct": true}
+{"id": "ledgar/test/9020", "label": "Positions", "pred": "Duties", "p": 0.8192422060717687, "correct": false}
+{"id": "ledgar/test/576", "label": "Subsidiaries", "pred": "Subsidiaries", "p": 0.9997336131907851, "correct": true}
+{"id": "ledgar/test/6149", "label": "Notices", "pred": "Notices", "p": 0.9999719624904119, "correct": true}
+{"id": "ledgar/test/5753", "label": "Benefits", "pred": "Benefits", "p": 0.9955568103508063, "correct": true}
+{"id": "ledgar/test/7811", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.9533437454063219, "correct": true}
+{"id": "ledgar/test/9273", "label": "Severability", "pred": "Severability", "p": 0.999926687807632, "correct": true}
+{"id": "ledgar/test/2702", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9898673901426969, "correct": true}
+{"id": "ledgar/test/802", "label": "Terminations", "pred": "Payments", "p": 0.6634803134434767, "correct": false}
+{"id": "ledgar/test/3977", "label": "Waivers", "pred": "No Waivers", "p": 0.9640805586429523, "correct": false}
+{"id": "ledgar/test/9905", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999771572686804, "correct": true}
+{"id": "ledgar/test/1613", "label": "Tax Withholdings", "pred": "Tax Withholdings", "p": 0.8876925503053804, "correct": true}
+{"id": "ledgar/test/1352", "label": "Litigations", "pred": "Litigations", "p": 0.9999588298422156, "correct": true}
+{"id": "ledgar/test/7851", "label": "Notices", "pred": "Notices", "p": 0.9999244380311808, "correct": true}
+{"id": "ledgar/test/5650", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9943256671342895, "correct": true}
+{"id": "ledgar/test/6858", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9886212754062809, "correct": true}
+{"id": "ledgar/test/4316", "label": "Severability", "pred": "Severability", "p": 0.9678762266637395, "correct": true}
+{"id": "ledgar/test/2082", "label": "Submission To Jurisdiction", "pred": "Submission To Jurisdiction", "p": 0.7081341076842589, "correct": true}
+{"id": "ledgar/test/2127", "label": "Tax Withholdings", "pred": "Tax Withholdings", "p": 0.9673399603617394, "correct": true}
+{"id": "ledgar/test/364", "label": "Counterparts", "pred": "Counterparts", "p": 0.9992851302235132, "correct": true}
+{"id": "ledgar/test/4821", "label": "Amendments", "pred": "Amendments", "p": 0.9993946731223173, "correct": true}
+{"id": "ledgar/test/8450", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9996197343719447, "correct": true}
+{"id": "ledgar/test/1213", "label": "Waivers", "pred": "No Waivers", "p": 0.9396446636781075, "correct": false}
+{"id": "ledgar/test/4762", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9942852386015544, "correct": true}
+{"id": "ledgar/test/3200", "label": "Counterparts", "pred": "Counterparts", "p": 0.9998530702698636, "correct": true}
+{"id": "ledgar/test/2633", "label": "Financial Statements", "pred": "Financial Statements", "p": 0.9995493816380515, "correct": true}
+{"id": "ledgar/test/236", "label": "Representations", "pred": "Authorizations", "p": 0.6404579790866267, "correct": false}
+{"id": "ledgar/test/3678", "label": "Base Salary", "pred": "Base Salary", "p": 0.9999650484992235, "correct": true}
+{"id": "ledgar/test/910", "label": "Counterparts", "pred": "Counterparts", "p": 0.999983361412321, "correct": true}
+{"id": "ledgar/test/3170", "label": "Solvency", "pred": "Solvency", "p": 0.9653955450789711, "correct": true}
+{"id": "ledgar/test/5309", "label": "Severability", "pred": "Severability", "p": 0.8302658381977452, "correct": true}
+{"id": "ledgar/test/2711", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9996457134381658, "correct": true}
+{"id": "ledgar/test/2381", "label": "Waivers", "pred": "No Waivers", "p": 0.9365648640582506, "correct": false}
+{"id": "ledgar/test/7531", "label": "Cooperation", "pred": "Cooperation", "p": 0.9550353352316439, "correct": true}
+{"id": "ledgar/test/1976", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.9981094193121259, "correct": true}
+{"id": "ledgar/test/4320", "label": "Adjustments", "pred": "Adjustments", "p": 0.9969212773986691, "correct": true}
+{"id": "ledgar/test/5420", "label": "Notices", "pred": "Notices", "p": 0.9999387639601309, "correct": true}
+{"id": "ledgar/test/4306", "label": "Duties", "pred": "Positions", "p": 0.7802746311205402, "correct": false}
+{"id": "ledgar/test/5022", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9889594865588097, "correct": true}
+{"id": "ledgar/test/5985", "label": "Interpretations", "pred": "Interpretations", "p": 0.5122848911995477, "correct": true}
+{"id": "ledgar/test/607", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9929709663714413, "correct": true}
+{"id": "ledgar/test/8678", "label": "Assignments", "pred": "Assignments", "p": 0.9155196420311643, "correct": true}
+{"id": "ledgar/test/834", "label": "Capitalization", "pred": "Capitalization", "p": 0.9999327114538712, "correct": true}
+{"id": "ledgar/test/104", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999222890904236, "correct": true}
+{"id": "ledgar/test/9732", "label": "Organizations", "pred": "Organizations", "p": 0.8818403230132971, "correct": true}
+{"id": "ledgar/test/2947", "label": "Liens", "pred": "Liens", "p": 0.9999202656321924, "correct": true}
+{"id": "ledgar/test/1733", "label": "Authorizations", "pred": "Authorizations", "p": 0.5091497226956929, "correct": true}
+{"id": "ledgar/test/3637", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.9990602628775143, "correct": true}
+{"id": "ledgar/test/9080", "label": "Vesting", "pred": "Vesting", "p": 0.995800730596641, "correct": true}
+{"id": "ledgar/test/7966", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9827132023422591, "correct": true}
+{"id": "ledgar/test/720", "label": "Insurances", "pred": "Insurances", "p": 0.9999379494590032, "correct": true}
+{"id": "ledgar/test/7456", "label": "Expenses", "pred": "Expenses", "p": 0.9104041467351833, "correct": true}
+{"id": "ledgar/test/6661", "label": "Survival", "pred": "Survival", "p": 0.991790947261105, "correct": true}
+{"id": "ledgar/test/8021", "label": "Waivers", "pred": "No Waivers", "p": 0.8812547176959338, "correct": false}
+{"id": "ledgar/test/758", "label": "General", "pred": "Payments", "p": 0.9997795780515104, "correct": false}
+{"id": "ledgar/test/9847", "label": "Base Salary", "pred": "Base Salary", "p": 0.9999704889252251, "correct": true}
+{"id": "ledgar/test/1849", "label": "Expenses", "pred": "Expenses", "p": 0.9998119365283621, "correct": true}
+{"id": "ledgar/test/9977", "label": "Adjustments", "pred": "Adjustments", "p": 0.9856311808405226, "correct": true}
+{"id": "ledgar/test/1679", "label": "Records", "pred": "Records", "p": 0.9276362164114702, "correct": true}
+{"id": "ledgar/test/3778", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9994425646987168, "correct": true}
+{"id": "ledgar/test/6983", "label": "Assignments", "pred": "Assignments", "p": 0.9987543163234707, "correct": true}
+{"id": "ledgar/test/9700", "label": "Integration", "pred": "Integration", "p": 0.9807924327078471, "correct": true}
+{"id": "ledgar/test/4239", "label": "Vesting", "pred": "Vesting", "p": 0.9001329935729783, "correct": true}
+{"id": "ledgar/test/6439", "label": "Warranties", "pred": "Warranties", "p": 0.7267389079111903, "correct": true}
+{"id": "ledgar/test/9689", "label": "Litigations", "pred": "Litigations", "p": 0.9999568404458524, "correct": true}
+{"id": "ledgar/test/7510", "label": "Subsidiaries", "pred": "Subsidiaries", "p": 0.9998629766069587, "correct": true}
+{"id": "ledgar/test/6249", "label": "Severability", "pred": "Severability", "p": 0.9994604801929503, "correct": true}
+{"id": "ledgar/test/506", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9329441483106149, "correct": true}
+{"id": "ledgar/test/6805", "label": "Capitalization", "pred": "Capitalization", "p": 0.9992302713232332, "correct": true}
+{"id": "ledgar/test/1535", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999702393806672, "correct": true}
+{"id": "ledgar/test/1877", "label": "Interpretations", "pred": "Interpretations", "p": 0.5487030369349029, "correct": true}
+{"id": "ledgar/test/9837", "label": "Jurisdictions", "pred": "Consent To Jurisdiction", "p": 0.5289710005188647, "correct": false}
+{"id": "ledgar/test/6504", "label": "Counterparts", "pred": "Counterparts", "p": 0.9998685986329389, "correct": true}
+{"id": "ledgar/test/2910", "label": "Successors", "pred": "Assignments", "p": 0.9339551449739938, "correct": false}
+{"id": "ledgar/test/892", "label": "Venues", "pred": "Venues", "p": 0.8123087649604523, "correct": true}
+{"id": "ledgar/test/9547", "label": "Consents", "pred": "Approvals", "p": 0.835312808094611, "correct": false}
+{"id": "ledgar/test/8600", "label": "Counterparts", "pred": "Counterparts", "p": 0.999978650647402, "correct": true}
+{"id": "ledgar/test/7202", "label": "Amendments", "pred": "Amendments", "p": 0.9796300307683775, "correct": true}
+{"id": "ledgar/test/1693", "label": "Cooperation", "pred": "Further Assurances", "p": 0.9938262235297874, "correct": false}
+{"id": "ledgar/test/9468", "label": "No Defaults", "pred": "No Defaults", "p": 0.9978930134863127, "correct": true}
+{"id": "ledgar/test/4667", "label": "Positions", "pred": "Duties", "p": 0.6050468390494899, "correct": false}
+{"id": "ledgar/test/4469", "label": "Warranties", "pred": "Warranties", "p": 0.9881206175323979, "correct": true}
+{"id": "ledgar/test/5237", "label": "Counterparts", "pred": "Counterparts", "p": 0.999854533354113, "correct": true}
+{"id": "ledgar/test/1654", "label": "Remedies", "pred": "Remedies", "p": 0.9654180150666578, "correct": true}
+{"id": "ledgar/test/9916", "label": "Waivers", "pred": "Waivers", "p": 0.6444649653324999, "correct": true}
+{"id": "ledgar/test/1374", "label": "Survival", "pred": "Survival", "p": 0.9998235719029398, "correct": true}
+{"id": "ledgar/test/6082", "label": "Disclosures", "pred": "Financial Statements", "p": 0.763819911992508, "correct": false}
+{"id": "ledgar/test/8546", "label": "Miscellaneous", "pred": "Headings", "p": 0.8017410287700815, "correct": false}
+{"id": "ledgar/test/5912", "label": "Notices", "pred": "Notices", "p": 0.9999819962646286, "correct": true}
+{"id": "ledgar/test/7026", "label": "General", "pred": "Assignments", "p": 0.8486926308058962, "correct": false}
+{"id": "ledgar/test/4031", "label": "Modifications", "pred": "Entire Agreements", "p": 0.9530117451098502, "correct": false}
+{"id": "ledgar/test/8725", "label": "Severability", "pred": "Severability", "p": 0.9997071729752162, "correct": true}
+{"id": "ledgar/test/272", "label": "Survival", "pred": "Survival", "p": 0.9980268764939847, "correct": true}
+{"id": "ledgar/test/8229", "label": "General", "pred": "Taxes", "p": 0.9821309671701876, "correct": false}
+{"id": "ledgar/test/3794", "label": "Base Salary", "pred": "Base Salary", "p": 0.9998903159273648, "correct": true}
+{"id": "ledgar/test/2017", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9981207309306003, "correct": true}
+{"id": "ledgar/test/4763", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.999962343739236, "correct": true}
+{"id": "ledgar/test/3798", "label": "Definitions", "pred": "Definitions", "p": 0.7595512448523964, "correct": true}
+{"id": "ledgar/test/2304", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.48853480972881175, "correct": false}
+{"id": "ledgar/test/2150", "label": "Cooperation", "pred": "Cooperation", "p": 0.9992077035290784, "correct": true}
+{"id": "ledgar/test/200", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999290549170876, "correct": true}
+{"id": "ledgar/test/6975", "label": "Participations", "pred": "Participations", "p": 0.9959124182022545, "correct": true}
+{"id": "ledgar/test/1299", "label": "Interpretations", "pred": "Interpretations", "p": 0.5967712402297595, "correct": true}
+{"id": "ledgar/test/9871", "label": "Taxes", "pred": "Tax Withholdings", "p": 0.47699381179056566, "correct": false}
+{"id": "ledgar/test/9297", "label": "Assignments", "pred": "Assignments", "p": 0.9998170799507605, "correct": true}
+{"id": "ledgar/test/7808", "label": "Expenses", "pred": "Expenses", "p": 0.9983266990221716, "correct": true}
+{"id": "ledgar/test/7200", "label": "Definitions", "pred": "Definitions", "p": 0.8039715001476129, "correct": true}
+{"id": "ledgar/test/6733", "label": "Severability", "pred": "Severability", "p": 0.9997425273036712, "correct": true}
+{"id": "ledgar/test/9354", "label": "Counterparts", "pred": "Counterparts", "p": 0.9998377473731167, "correct": true}
+{"id": "ledgar/test/1692", "label": "Solvency", "pred": "Solvency", "p": 0.9998713219298145, "correct": true}
+{"id": "ledgar/test/976", "label": "Headings", "pred": "Headings", "p": 0.999616990365653, "correct": true}
+{"id": "ledgar/test/7438", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.5050229393116966, "correct": true}
+{"id": "ledgar/test/641", "label": "Closings", "pred": "Closings", "p": 0.9999863021989079, "correct": true}
+{"id": "ledgar/test/1465", "label": "Erisa", "pred": "Erisa", "p": 0.99950679756165, "correct": true}
+{"id": "ledgar/test/3597", "label": "Authorizations", "pred": "Authorizations", "p": 0.7320494055301023, "correct": true}
+{"id": "ledgar/test/2020", "label": "Expenses", "pred": "Expenses", "p": 0.9366890334899456, "correct": true}
+{"id": "ledgar/test/7115", "label": "Existence", "pred": "Further Assurances", "p": 0.503201821578348, "correct": false}
+{"id": "ledgar/test/2986", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9896335212834427, "correct": true}
+{"id": "ledgar/test/6998", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999140563875557, "correct": true}
+{"id": "ledgar/test/6237", "label": "Interpretations", "pred": "Interpretations", "p": 0.9859017002065581, "correct": true}
+{"id": "ledgar/test/385", "label": "Representations", "pred": "Warranties", "p": 0.6255887675535216, "correct": false}
+{"id": "ledgar/test/1018", "label": "No Defaults", "pred": "No Defaults", "p": 0.9997081559631591, "correct": true}
+{"id": "ledgar/test/769", "label": "Cooperation", "pred": "Cooperation", "p": 0.8361459206590581, "correct": true}
+{"id": "ledgar/test/3809", "label": "Cooperation", "pred": "Cooperation", "p": 0.9898526398984792, "correct": true}
+{"id": "ledgar/test/1376", "label": "Capitalization", "pred": "Capitalization", "p": 0.9990366800056918, "correct": true}
+{"id": "ledgar/test/2959", "label": "Severability", "pred": "Severability", "p": 0.9979582416422212, "correct": true}
+{"id": "ledgar/test/6511", "label": "Subsidiaries", "pred": "Subsidiaries", "p": 0.9998447366405914, "correct": true}
+{"id": "ledgar/test/9458", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9719021140725479, "correct": true}
+{"id": "ledgar/test/8153", "label": "Financial Statements", "pred": "Financial Statements", "p": 0.9999968133571865, "correct": true}
+{"id": "ledgar/test/7148", "label": "Withholdings", "pred": "Withholdings", "p": 0.9366582762968243, "correct": true}
+{"id": "ledgar/test/4059", "label": "Cooperation", "pred": "Further Assurances", "p": 0.9999977547573231, "correct": false}
+{"id": "ledgar/test/3363", "label": "No Defaults", "pred": "No Defaults", "p": 0.9999882479473207, "correct": true}
+{"id": "ledgar/test/2374", "label": "Vesting", "pred": "Vesting", "p": 0.9995292550742723, "correct": true}
+{"id": "ledgar/test/8646", "label": "Litigations", "pred": "Litigations", "p": 0.9996454359790172, "correct": true}
+{"id": "ledgar/test/3268", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9956005737681571, "correct": true}
+{"id": "ledgar/test/2879", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.8312249669607161, "correct": false}
+{"id": "ledgar/test/7512", "label": "Assignments", "pred": "Assignments", "p": 0.9998692098053473, "correct": true}
+{"id": "ledgar/test/6776", "label": "Benefits", "pred": "Benefits", "p": 0.8222507871012565, "correct": true}
+{"id": "ledgar/test/1618", "label": "Enforceability", "pred": "Enforceability", "p": 0.7399028832990787, "correct": true}
+{"id": "ledgar/test/6321", "label": "Remedies", "pred": "Specific Performance", "p": 0.9950026753933886, "correct": false}
+{"id": "ledgar/test/8288", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9994173923014796, "correct": true}
+{"id": "ledgar/test/1755", "label": "Duties", "pred": "Duties", "p": 0.9951213739985629, "correct": true}
+{"id": "ledgar/test/3647", "label": "Severability", "pred": "Severability", "p": 0.9949241886581637, "correct": true}
+{"id": "ledgar/test/5088", "label": "Remedies", "pred": "Remedies", "p": 0.9851702984746556, "correct": true}
+{"id": "ledgar/test/971", "label": "Base Salary", "pred": "Base Salary", "p": 0.9996012482262112, "correct": true}
+{"id": "ledgar/test/4285", "label": "Closings", "pred": "Closings", "p": 0.9999555960229997, "correct": true}
+{"id": "ledgar/test/4242", "label": "Binding Effects", "pred": "Binding Effects", "p": 0.7012079440897211, "correct": true}
+{"id": "ledgar/test/8873", "label": "Enforceability", "pred": "Enforceability", "p": 0.9956494406847285, "correct": true}
+{"id": "ledgar/test/4845", "label": "Notices", "pred": "Notices", "p": 0.9999744576073587, "correct": true}
+{"id": "ledgar/test/7604", "label": "Survival", "pred": "Survival", "p": 0.9999935089071067, "correct": true}
+{"id": "ledgar/test/1433", "label": "Headings", "pred": "Headings", "p": 0.9897363672414777, "correct": true}
+{"id": "ledgar/test/44", "label": "Liens", "pred": "Liens", "p": 0.9146617871666911, "correct": true}
+{"id": "ledgar/test/6060", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999120573703665, "correct": true}
+{"id": "ledgar/test/6637", "label": "Integration", "pred": "Entire Agreements", "p": 0.9915533026642503, "correct": false}
+{"id": "ledgar/test/1967", "label": "Effective Dates", "pred": "Terms", "p": 0.7890798046853919, "correct": false}
+{"id": "ledgar/test/9189", "label": "Counterparts", "pred": "Counterparts", "p": 0.9998411473410028, "correct": true}
+{"id": "ledgar/test/7375", "label": "Brokers", "pred": "Brokers", "p": 0.9827550371804826, "correct": true}
+{"id": "ledgar/test/5489", "label": "Financial Statements", "pred": "Financial Statements", "p": 0.981237575345811, "correct": true}
+{"id": "ledgar/test/5321", "label": "Terms", "pred": "Change In Control", "p": 0.3551375007236208, "correct": false}
+{"id": "ledgar/test/831", "label": "Arbitration", "pred": "Arbitration", "p": 0.9979231374168828, "correct": true}
+{"id": "ledgar/test/6015", "label": "Terms", "pred": "Terms", "p": 0.9990528088144616, "correct": true}
+{"id": "ledgar/test/6377", "label": "Insurances", "pred": "Insurances", "p": 0.9999947363976207, "correct": true}
+{"id": "ledgar/test/6345", "label": "Costs", "pred": "Expenses", "p": 0.9712950216710765, "correct": false}
+{"id": "ledgar/test/5941", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999570769104568, "correct": true}
+{"id": "ledgar/test/182", "label": "Vacations", "pred": "Vacations", "p": 0.9936038840910902, "correct": true}
+{"id": "ledgar/test/5511", "label": "Expenses", "pred": "Expenses", "p": 0.8470288913756154, "correct": true}
+{"id": "ledgar/test/2546", "label": "Definitions", "pred": "Construction", "p": 0.4110320892569122, "correct": false}
+{"id": "ledgar/test/4307", "label": "Fees", "pred": "Fees", "p": 0.9869698073693085, "correct": true}
+{"id": "ledgar/test/2480", "label": "Indemnity", "pred": "Indemnifications", "p": 0.9397136911925227, "correct": false}
+{"id": "ledgar/test/267", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9998569741802547, "correct": true}
+{"id": "ledgar/test/1300", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9992774212005279, "correct": true}
+{"id": "ledgar/test/5312", "label": "Waivers", "pred": "No Waivers", "p": 0.9668903829456914, "correct": false}
+{"id": "ledgar/test/6201", "label": "Counterparts", "pred": "Counterparts", "p": 0.7185255958371997, "correct": true}
+{"id": "ledgar/test/14", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.995766118533868, "correct": true}
+{"id": "ledgar/test/7707", "label": "Existence", "pred": "Existence", "p": 0.8185159443044157, "correct": true}
+{"id": "ledgar/test/9358", "label": "Organizations", "pred": "Authority", "p": 0.9395787534765506, "correct": false}
+{"id": "ledgar/test/231", "label": "Applicable Laws", "pred": "Compliance With Laws", "p": 0.9541233872697433, "correct": false}
+{"id": "ledgar/test/2358", "label": "Organizations", "pred": "Organizations", "p": 0.8931620378891092, "correct": true}
+{"id": "ledgar/test/7093", "label": "Survival", "pred": "Survival", "p": 0.9520539205758826, "correct": true}
+{"id": "ledgar/test/109", "label": "Consents", "pred": "Consents", "p": 0.7005644000586578, "correct": true}
+{"id": "ledgar/test/3797", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.9948598129540471, "correct": true}
+{"id": "ledgar/test/2242", "label": "Expenses", "pred": "Expenses", "p": 0.9852941877767994, "correct": true}
+{"id": "ledgar/test/2604", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9997183677184177, "correct": true}
+{"id": "ledgar/test/2827", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9870398878456265, "correct": true}
+{"id": "ledgar/test/1993", "label": "Vesting", "pred": "Vesting", "p": 0.9999129738942878, "correct": true}
+{"id": "ledgar/test/8565", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.5974735121323229, "correct": true}
+{"id": "ledgar/test/9563", "label": "Litigations", "pred": "Litigations", "p": 0.9997514852658833, "correct": true}
+{"id": "ledgar/test/5606", "label": "Notices", "pred": "Notices", "p": 0.9998467635277991, "correct": true}
+{"id": "ledgar/test/7138", "label": "Titles", "pred": "Titles", "p": 0.786663368497367, "correct": true}
+{"id": "ledgar/test/2577", "label": "Submission To Jurisdiction", "pred": "Submission To Jurisdiction", "p": 0.5555352440137816, "correct": true}
+{"id": "ledgar/test/2705", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9293945439537944, "correct": true}
+{"id": "ledgar/test/8667", "label": "Consents", "pred": "Consents", "p": 0.998680546482652, "correct": true}
+{"id": "ledgar/test/1437", "label": "Employment", "pred": "Employment", "p": 0.9969982052439196, "correct": true}
+{"id": "ledgar/test/2656", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.569548553610701, "correct": false}
+{"id": "ledgar/test/9652", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9709834973659028, "correct": true}
+{"id": "ledgar/test/3381", "label": "Participations", "pred": "Participations", "p": 0.6583377724770071, "correct": true}
+{"id": "ledgar/test/4194", "label": "General", "pred": "Taxes", "p": 0.7750939255950542, "correct": false}
+{"id": "ledgar/test/3513", "label": "Solvency", "pred": "Solvency", "p": 0.9998596698123164, "correct": true}
+{"id": "ledgar/test/7504", "label": "Financial Statements", "pred": "Financial Statements", "p": 0.9476588836785488, "correct": true}
+{"id": "ledgar/test/8797", "label": "Assignments", "pred": "Assignments", "p": 0.9951379060642759, "correct": true}
+{"id": "ledgar/test/3355", "label": "Notices", "pred": "Intellectual Property", "p": 0.5213186597999452, "correct": false}
+{"id": "ledgar/test/7820", "label": "Insurances", "pred": "Insurances", "p": 0.999670798366268, "correct": true}
+{"id": "ledgar/test/9848", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.8956039640229295, "correct": true}
+{"id": "ledgar/test/5343", "label": "Counterparts", "pred": "Counterparts", "p": 0.87244114548431, "correct": true}
+{"id": "ledgar/test/6432", "label": "Subsidiaries", "pred": "Subsidiaries", "p": 0.9999962158452345, "correct": true}
+{"id": "ledgar/test/9493", "label": "Participations", "pred": "Participations", "p": 0.9999415216137783, "correct": true}
+{"id": "ledgar/test/2045", "label": "Severability", "pred": "Severability", "p": 0.992411174100565, "correct": true}
+{"id": "ledgar/test/5945", "label": "Miscellaneous", "pred": "Adjustments", "p": 0.7902364834670541, "correct": false}
+{"id": "ledgar/test/5894", "label": "Vacations", "pred": "Vacations", "p": 0.9982367474338467, "correct": true}
+{"id": "ledgar/test/8788", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.8824111940453139, "correct": true}
+{"id": "ledgar/test/1233", "label": "Financial Statements", "pred": "Financial Statements", "p": 0.9614138974544532, "correct": true}
+{"id": "ledgar/test/1729", "label": "Cooperation", "pred": "Cooperation", "p": 0.9693075105798424, "correct": true}
+{"id": "ledgar/test/1685", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9783844885022369, "correct": true}
+{"id": "ledgar/test/6279", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.9574244103048765, "correct": true}
+{"id": "ledgar/test/9633", "label": "Sales", "pred": "Assignments", "p": 0.985798230006128, "correct": false}
+{"id": "ledgar/test/5984", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.9988572456683521, "correct": true}
+{"id": "ledgar/test/9387", "label": "Terms", "pred": "Terms", "p": 0.9932005967551287, "correct": true}
+{"id": "ledgar/test/8900", "label": "Enforceability", "pred": "Severability", "p": 0.9987957411660302, "correct": false}
+{"id": "ledgar/test/3358", "label": "Severability", "pred": "Severability", "p": 0.8318597801310907, "correct": true}
+{"id": "ledgar/test/3693", "label": "Waivers", "pred": "No Waivers", "p": 0.9708721643476083, "correct": false}
+{"id": "ledgar/test/5073", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.6096207513045132, "correct": false}
+{"id": "ledgar/test/1903", "label": "Forfeitures", "pred": "Vesting", "p": 0.7349577141141009, "correct": false}
+{"id": "ledgar/test/2836", "label": "Counterparts", "pred": "Counterparts", "p": 0.999903391377333, "correct": true}
+{"id": "ledgar/test/473", "label": "Headings", "pred": "Headings", "p": 0.8232227973064524, "correct": true}
+{"id": "ledgar/test/3397", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9893134148894092, "correct": true}
+{"id": "ledgar/test/4918", "label": "Benefits", "pred": "Benefits", "p": 0.9891849021384659, "correct": true}
+{"id": "ledgar/test/1754", "label": "Amendments", "pred": "Amendments", "p": 0.986518966761293, "correct": true}
+{"id": "ledgar/test/9177", "label": "Assignments", "pred": "Assignments", "p": 0.9973433065226894, "correct": true}
+{"id": "ledgar/test/6194", "label": "Publicity", "pred": "Publicity", "p": 0.9635458132857507, "correct": true}
+{"id": "ledgar/test/5812", "label": "Indemnity", "pred": "Indemnifications", "p": 0.8894608315746287, "correct": false}
+{"id": "ledgar/test/7486", "label": "Change In Control", "pred": "Change In Control", "p": 0.9997750265193291, "correct": true}
+{"id": "ledgar/test/5118", "label": "Waivers", "pred": "No Waivers", "p": 0.9896171482295085, "correct": false}
+{"id": "ledgar/test/8175", "label": "Solvency", "pred": "Solvency", "p": 0.9527757298915135, "correct": true}
+{"id": "ledgar/test/35", "label": "Headings", "pred": "Headings", "p": 0.9998607857614359, "correct": true}
+{"id": "ledgar/test/1137", "label": "Miscellaneous", "pred": "Adjustments", "p": 0.3983284004486, "correct": false}
+{"id": "ledgar/test/6304", "label": "Waivers", "pred": "No Waivers", "p": 0.9403353853732753, "correct": false}
+{"id": "ledgar/test/9523", "label": "Litigations", "pred": "Litigations", "p": 0.9999651776271253, "correct": true}
+{"id": "ledgar/test/5895", "label": "Tax Withholdings", "pred": "Tax Withholdings", "p": 0.7067715555253529, "correct": true}
+{"id": "ledgar/test/1382", "label": "Titles", "pred": "Positions", "p": 0.6430143147199243, "correct": false}
+{"id": "ledgar/test/4699", "label": "Publicity", "pred": "Publicity", "p": 0.9975563509570752, "correct": true}
+{"id": "ledgar/test/1660", "label": "Death", "pred": "Death", "p": 0.9988319984089217, "correct": true}
+{"id": "ledgar/test/7548", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999686940948841, "correct": true}
+{"id": "ledgar/test/6036", "label": "Insurances", "pred": "Insurances", "p": 0.9998477925336949, "correct": true}
+{"id": "ledgar/test/9901", "label": "General", "pred": "Consents", "p": 0.6680083811990902, "correct": false}
+{"id": "ledgar/test/6697", "label": "Litigations", "pred": "Litigations", "p": 0.9999438813702941, "correct": true}
+{"id": "ledgar/test/7861", "label": "Disclosures", "pred": "Disclosures", "p": 0.8434231015154187, "correct": true}
+{"id": "ledgar/test/3466", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999324781882, "correct": true}
+{"id": "ledgar/test/9639", "label": "Notices", "pred": "Notices", "p": 0.9995338030952473, "correct": true}
+{"id": "ledgar/test/9678", "label": "Organizations", "pred": "Organizations", "p": 0.5542149929664941, "correct": true}
+{"id": "ledgar/test/8753", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9122915054715172, "correct": true}
+{"id": "ledgar/test/9139", "label": "Indemnity", "pred": "Indemnifications", "p": 0.9131802092413804, "correct": false}
+{"id": "ledgar/test/662", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9832047547023027, "correct": true}
+{"id": "ledgar/test/9716", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9904220579816587, "correct": true}
+{"id": "ledgar/test/9801", "label": "Terminations", "pred": "Terminations", "p": 0.461046260100218, "correct": true}
+{"id": "ledgar/test/3236", "label": "Warranties", "pred": "Warranties", "p": 0.5755947638665055, "correct": true}
+{"id": "ledgar/test/2057", "label": "Adjustments", "pred": "Adjustments", "p": 0.9888355537076029, "correct": true}
+{"id": "ledgar/test/8151", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.978552033992648, "correct": true}
+{"id": "ledgar/test/2661", "label": "Waivers", "pred": "Waivers", "p": 0.8054807425531394, "correct": true}
+{"id": "ledgar/test/1539", "label": "Successors", "pred": "Assignments", "p": 0.9436429175077012, "correct": false}
+{"id": "ledgar/test/499", "label": "Expenses", "pred": "Expenses", "p": 0.8004501626628882, "correct": true}
+{"id": "ledgar/test/8111", "label": "Amendments", "pred": "Entire Agreements", "p": 0.8570186366521927, "correct": false}
+{"id": "ledgar/test/1048", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.7411976894846126, "correct": true}
+{"id": "ledgar/test/4856", "label": "Interpretations", "pred": "Severability", "p": 0.5019514131522418, "correct": false}
+{"id": "ledgar/test/5296", "label": "General", "pred": "Taxes", "p": 0.9982706425189581, "correct": false}
+{"id": "ledgar/test/2895", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.8902706621260597, "correct": true}
+{"id": "ledgar/test/1975", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.977396575593385, "correct": true}
+{"id": "ledgar/test/3653", "label": "Waivers", "pred": "No Waivers", "p": 0.9585695228006682, "correct": false}
+{"id": "ledgar/test/4327", "label": "Capitalization", "pred": "Capitalization", "p": 0.9996010274078825, "correct": true}
+{"id": "ledgar/test/3869", "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p": 0.9980844869065828, "correct": true}
+{"id": "ledgar/test/4447", "label": "Liens", "pred": "Liens", "p": 0.7676956776441155, "correct": true}
+{"id": "ledgar/test/5068", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9989070804277728, "correct": true}
+{"id": "ledgar/test/4945", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9651542384454305, "correct": true}
+{"id": "ledgar/test/8763", "label": "Change In Control", "pred": "Definitions", "p": 0.6454246062100503, "correct": false}
+{"id": "ledgar/test/9114", "label": "Severability", "pred": "Severability", "p": 0.9999520445770933, "correct": true}
+{"id": "ledgar/test/1409", "label": "Modifications", "pred": "Amendments", "p": 0.7887752315809378, "correct": false}
+{"id": "ledgar/test/6978", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9910182099022378, "correct": true}
+{"id": "ledgar/test/1731", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999833590099231, "correct": true}
+{"id": "ledgar/test/2510", "label": "Notices", "pred": "Notices", "p": 0.7366933338557236, "correct": true}
+{"id": "ledgar/test/4524", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9472666508059079, "correct": true}
+{"id": "ledgar/test/7384", "label": "General", "pred": "Notices", "p": 0.9653197325313082, "correct": false}
+{"id": "ledgar/test/7855", "label": "Notices", "pred": "Notices", "p": 0.998771700456559, "correct": true}
+{"id": "ledgar/test/1843", "label": "Jurisdictions", "pred": "Governing Laws", "p": 0.9916056062517528, "correct": false}
+{"id": "ledgar/test/1804", "label": "Subsidiaries", "pred": "Subsidiaries", "p": 0.9999566607582211, "correct": true}
+{"id": "ledgar/test/8758", "label": "Benefits", "pred": "Benefits", "p": 0.9973851494370618, "correct": true}
+{"id": "ledgar/test/1407", "label": "Assignments", "pred": "Assignments", "p": 0.986790095612898, "correct": true}
+{"id": "ledgar/test/5204", "label": "Construction", "pred": "Construction", "p": 0.8837775841755237, "correct": true}
+{"id": "ledgar/test/9068", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9893310339454315, "correct": true}
+{"id": "ledgar/test/7577", "label": "Expenses", "pred": "Expenses", "p": 0.9545346147742702, "correct": true}
+{"id": "ledgar/test/4785", "label": "Organizations", "pred": "Authorizations", "p": 0.5970569997168333, "correct": false}
+{"id": "ledgar/test/5431", "label": "Waivers", "pred": "No Waivers", "p": 0.9498421898031624, "correct": false}
+{"id": "ledgar/test/338", "label": "Insurances", "pred": "Insurances", "p": 0.9999159954717012, "correct": true}
+{"id": "ledgar/test/980", "label": "Headings", "pred": "Headings", "p": 0.9592802864473322, "correct": true}
+{"id": "ledgar/test/9950", "label": "Expenses", "pred": "Expenses", "p": 0.9978143685137998, "correct": true}
+{"id": "ledgar/test/8418", "label": "Successors", "pred": "Assignments", "p": 0.9611045710075984, "correct": false}
+{"id": "ledgar/test/1659", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9976850324560692, "correct": true}
+{"id": "ledgar/test/6653", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9364726532826853, "correct": true}
+{"id": "ledgar/test/1513", "label": "Intellectual Property", "pred": "Intellectual Property", "p": 0.9978741447819929, "correct": true}
+{"id": "ledgar/test/3148", "label": "Notices", "pred": "Notices", "p": 0.9999485467128965, "correct": true}
+{"id": "ledgar/test/6700", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9782194878672827, "correct": true}
+{"id": "ledgar/test/2220", "label": "Assignments", "pred": "Assignments", "p": 0.99971201488634, "correct": true}
+{"id": "ledgar/test/7250", "label": "Definitions", "pred": "Definitions", "p": 0.7552099927369337, "correct": true}
+{"id": "ledgar/test/2168", "label": "Use Of Proceeds", "pred": "Sanctions", "p": 0.9574357510870432, "correct": false}
+{"id": "ledgar/test/2576", "label": "General", "pred": "Vesting", "p": 0.9692302044881593, "correct": false}
+{"id": "ledgar/test/1814", "label": "Interpretations", "pred": "Interpretations", "p": 0.5249979454898199, "correct": true}
+{"id": "ledgar/test/2800", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9988896348618508, "correct": true}
+{"id": "ledgar/test/8848", "label": "Assignments", "pred": "Assignments", "p": 0.995424132538281, "correct": true}
+{"id": "ledgar/test/9865", "label": "Capitalization", "pred": "Capitalization", "p": 0.99972197489847, "correct": true}
+{"id": "ledgar/test/9622", "label": "Waivers", "pred": "Waivers", "p": 0.9416353156046069, "correct": true}
+{"id": "ledgar/test/228", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9926821576086055, "correct": true}
+{"id": "ledgar/test/1942", "label": "Base Salary", "pred": "Base Salary", "p": 0.999638925845913, "correct": true}
+{"id": "ledgar/test/7562", "label": "Expenses", "pred": "Expenses", "p": 0.9965164775433937, "correct": true}
+{"id": "ledgar/test/4368", "label": "Closings", "pred": "Closings", "p": 0.9642074693843212, "correct": true}
+{"id": "ledgar/test/9839", "label": "Terms", "pred": "Terms", "p": 0.9817299296582299, "correct": true}
+{"id": "ledgar/test/8875", "label": "Definitions", "pred": "Definitions", "p": 0.6538599285340279, "correct": true}
+{"id": "ledgar/test/3566", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9925754885822995, "correct": true}
+{"id": "ledgar/test/5356", "label": "Headings", "pred": "Headings", "p": 0.9995910548091073, "correct": true}
+{"id": "ledgar/test/9067", "label": "Change In Control", "pred": "Change In Control", "p": 0.9991484951245987, "correct": true}
+{"id": "ledgar/test/4112", "label": "Subsidiaries", "pred": "Organizations", "p": 0.9221302308618958, "correct": false}
+{"id": "ledgar/test/939", "label": "Duties", "pred": "Duties", "p": 0.9922159058664912, "correct": true}
+{"id": "ledgar/test/1154", "label": "Base Salary", "pred": "Base Salary", "p": 0.9999724359763675, "correct": true}
+{"id": "ledgar/test/9451", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.8386675041830652, "correct": false}
+{"id": "ledgar/test/2565", "label": "Agreements", "pred": "Sales", "p": 0.9924773830095803, "correct": false}
+{"id": "ledgar/test/4558", "label": "Headings", "pred": "Headings", "p": 0.9979910683856351, "correct": true}
+{"id": "ledgar/test/5096", "label": "Assignments", "pred": "Assignments", "p": 0.9724712856260265, "correct": true}
+{"id": "ledgar/test/2803", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9993055460224887, "correct": true}
+{"id": "ledgar/test/6346", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9997926008783152, "correct": true}
+{"id": "ledgar/test/6421", "label": "Base Salary", "pred": "Base Salary", "p": 0.9999868360834901, "correct": true}
+{"id": "ledgar/test/354", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9963101457144251, "correct": true}
+{"id": "ledgar/test/4106", "label": "Effectiveness", "pred": "Counterparts", "p": 0.9984621995493448, "correct": false}
+{"id": "ledgar/test/9038", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.8900241658627673, "correct": true}
+{"id": "ledgar/test/7936", "label": "Tax Withholdings", "pred": "Tax Withholdings", "p": 0.7580252429999838, "correct": true}
+{"id": "ledgar/test/2268", "label": "Change In Control", "pred": "Change In Control", "p": 0.8962587181963513, "correct": true}
+{"id": "ledgar/test/5780", "label": "Adjustments", "pred": "Adjustments", "p": 0.9844591511864051, "correct": true}
+{"id": "ledgar/test/5460", "label": "Interests", "pred": "Interests", "p": 0.9972719642523793, "correct": true}
+{"id": "ledgar/test/2332", "label": "Financial Statements", "pred": "Financial Statements", "p": 0.9984431897862415, "correct": true}
+{"id": "ledgar/test/7930", "label": "Withholdings", "pred": "Taxes", "p": 0.5522719700203119, "correct": false}
+{"id": "ledgar/test/8935", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9118278696148683, "correct": true}
+{"id": "ledgar/test/5274", "label": "Miscellaneous", "pred": "Entire Agreements", "p": 0.7077400363733165, "correct": false}
+{"id": "ledgar/test/6272", "label": "Closings", "pred": "Closings", "p": 0.9999800611610044, "correct": true}
+{"id": "ledgar/test/1413", "label": "Indemnifications", "pred": "Expenses", "p": 0.9072290530057443, "correct": false}
+{"id": "ledgar/test/6994", "label": "Counterparts", "pred": "Counterparts", "p": 0.9998228718341685, "correct": true}
+{"id": "ledgar/test/4548", "label": "Severability", "pred": "Severability", "p": 0.9883644849830078, "correct": true}
+{"id": "ledgar/test/6528", "label": "Positions", "pred": "Employment", "p": 0.6822039537107317, "correct": false}
+{"id": "ledgar/test/3933", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.988521884409535, "correct": true}
+{"id": "ledgar/test/8892", "label": "Defined Terms", "pred": "Definitions", "p": 0.5716590749997359, "correct": false}
+{"id": "ledgar/test/8821", "label": "Amendments", "pred": "Amendments", "p": 0.7347311296590211, "correct": true}
+{"id": "ledgar/test/9442", "label": "Effectiveness", "pred": "Effective Dates", "p": 0.6784024634782903, "correct": false}
+{"id": "ledgar/test/7927", "label": "Liens", "pred": "Liens", "p": 0.9884584287552884, "correct": true}
+{"id": "ledgar/test/6526", "label": "Assignments", "pred": "Assignments", "p": 0.9764063804398668, "correct": true}
+{"id": "ledgar/test/8707", "label": "Indemnity", "pred": "Indemnifications", "p": 0.720151228067279, "correct": false}
+{"id": "ledgar/test/888", "label": "Terms", "pred": "Terms", "p": 0.9541115193193732, "correct": true}
+{"id": "ledgar/test/7896", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999439469980714, "correct": true}
+{"id": "ledgar/test/3726", "label": "Expenses", "pred": "Fees", "p": 0.9142102137451042, "correct": false}
+{"id": "ledgar/test/3753", "label": "Terms", "pred": "Modifications", "p": 0.9450605916690525, "correct": false}
+{"id": "ledgar/test/8338", "label": "Headings", "pred": "Headings", "p": 0.9855346868186203, "correct": true}
+{"id": "ledgar/test/7041", "label": "Insurances", "pred": "Insurances", "p": 0.9998614680846963, "correct": true}
+{"id": "ledgar/test/6422", "label": "Applicable Laws", "pred": "Governing Laws", "p": 0.9759340807496344, "correct": false}
+{"id": "ledgar/test/2360", "label": "General", "pred": "Amendments", "p": 0.7213069912383389, "correct": false}
+{"id": "ledgar/test/20", "label": "Solvency", "pred": "Solvency", "p": 0.9999537041197814, "correct": true}
+{"id": "ledgar/test/8094", "label": "Payments", "pred": "Payments", "p": 0.9827926106065217, "correct": true}
+{"id": "ledgar/test/6742", "label": "Severability", "pred": "Severability", "p": 0.9999689440718936, "correct": true}
+{"id": "ledgar/test/8963", "label": "Brokers", "pred": "Brokers", "p": 0.9980492328957311, "correct": true}
+{"id": "ledgar/test/6735", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9999845654274556, "correct": true}
+{"id": "ledgar/test/1138", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9711008803327329, "correct": true}
+{"id": "ledgar/test/8041", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999690069888192, "correct": true}
+{"id": "ledgar/test/8556", "label": "Non-Disparagement", "pred": "Non-Disparagement", "p": 0.9998476823274071, "correct": true}
+{"id": "ledgar/test/666", "label": "Publicity", "pred": "Publicity", "p": 0.8910022040456963, "correct": true}
+{"id": "ledgar/test/2159", "label": "Survival", "pred": "Survival", "p": 0.9999899256933287, "correct": true}
+{"id": "ledgar/test/9197", "label": "Binding Effects", "pred": "Assignments", "p": 0.5454645215968731, "correct": false}
+{"id": "ledgar/test/3543", "label": "Integration", "pred": "Entire Agreements", "p": 0.9573923819556269, "correct": false}
+{"id": "ledgar/test/2611", "label": "Change In Control", "pred": "Change In Control", "p": 0.9845552615067675, "correct": true}
+{"id": "ledgar/test/3686", "label": "Modifications", "pred": "Amendments", "p": 0.8436513247094607, "correct": false}
+{"id": "ledgar/test/5616", "label": "Titles", "pred": "Titles", "p": 0.8463825913868245, "correct": true}
+{"id": "ledgar/test/1016", "label": "Integration", "pred": "Entire Agreements", "p": 0.9933998726046112, "correct": false}
+{"id": "ledgar/test/8132", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9999400794781226, "correct": true}
+{"id": "ledgar/test/1560", "label": "Counterparts", "pred": "Counterparts", "p": 0.999969003395143, "correct": true}
+{"id": "ledgar/test/4974", "label": "Severability", "pred": "Severability", "p": 0.987447976600545, "correct": true}
+{"id": "ledgar/test/8390", "label": "Employment", "pred": "Employment", "p": 0.8324416143923709, "correct": true}
+{"id": "ledgar/test/9243", "label": "Headings", "pred": "Headings", "p": 0.990134329522876, "correct": true}
+{"id": "ledgar/test/8160", "label": "Counterparts", "pred": "Counterparts", "p": 0.9995166689535802, "correct": true}
+{"id": "ledgar/test/2176", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9996297443854398, "correct": true}
+{"id": "ledgar/test/4426", "label": "Powers", "pred": "Authority", "p": 0.9535328975266605, "correct": false}
+{"id": "ledgar/test/7487", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999563073040447, "correct": true}
+{"id": "ledgar/test/6409", "label": "Waivers", "pred": "No Waivers", "p": 0.9766902079824347, "correct": false}
+{"id": "ledgar/test/3761", "label": "Assignments", "pred": "Assignments", "p": 0.9963102599194213, "correct": true}
+{"id": "ledgar/test/7314", "label": "Expenses", "pred": "Expenses", "p": 0.9315568038176417, "correct": true}
+{"id": "ledgar/test/470", "label": "Severability", "pred": "Severability", "p": 0.9999790088737309, "correct": true}
+{"id": "ledgar/test/8537", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999783856048525, "correct": true}
+{"id": "ledgar/test/6024", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9863343498144385, "correct": true}
+{"id": "ledgar/test/9116", "label": "Definitions", "pred": "Definitions", "p": 0.6227226514932261, "correct": true}
+{"id": "ledgar/test/9608", "label": "Assignments", "pred": "Assignments", "p": 0.9974479660524997, "correct": true}
+{"id": "ledgar/test/8251", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9978682846121298, "correct": true}
+{"id": "ledgar/test/8076", "label": "Terms", "pred": "Vesting", "p": 0.9962804608910165, "correct": false}
+{"id": "ledgar/test/4123", "label": "Effectiveness", "pred": "Effective Dates", "p": 0.6861607260547856, "correct": false}
+{"id": "ledgar/test/6588", "label": "Effectiveness", "pred": "Effectiveness", "p": 0.71710411570267, "correct": true}
+{"id": "ledgar/test/4240", "label": "Authorizations", "pred": "No Conflicts", "p": 0.874756331952925, "correct": false}
+{"id": "ledgar/test/6881", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9764285611910904, "correct": true}
+{"id": "ledgar/test/2333", "label": "Closings", "pred": "Closings", "p": 0.9994793157140591, "correct": true}
+{"id": "ledgar/test/6811", "label": "Miscellaneous", "pred": "Counterparts", "p": 0.9943268755090068, "correct": false}
+{"id": "ledgar/test/38", "label": "Litigations", "pred": "Litigations", "p": 0.9770841836823722, "correct": true}
+{"id": "ledgar/test/6980", "label": "Terms", "pred": "Survival", "p": 0.997764608363421, "correct": false}
+{"id": "ledgar/test/6441", "label": "Adjustments", "pred": "Adjustments", "p": 0.9957665804736864, "correct": true}
+{"id": "ledgar/test/3960", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999358823538986, "correct": true}
+{"id": "ledgar/test/4149", "label": "Capitalization", "pred": "Capitalization", "p": 0.9996729047798107, "correct": true}
+{"id": "ledgar/test/134", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.9999523919261725, "correct": true}
+{"id": "ledgar/test/9205", "label": "Cooperation", "pred": "Cooperation", "p": 0.9983310453178051, "correct": true}
+{"id": "ledgar/test/4204", "label": "Organizations", "pred": "Organizations", "p": 0.97730116758212, "correct": true}
+{"id": "ledgar/test/1579", "label": "Notices", "pred": "Notices", "p": 0.9003190514460843, "correct": true}
+{"id": "ledgar/test/2567", "label": "Benefits", "pred": "Assignments", "p": 0.8572857778029599, "correct": false}
+{"id": "ledgar/test/8014", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.5864088861093465, "correct": true}
+{"id": "ledgar/test/6078", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9870716156333867, "correct": true}
+{"id": "ledgar/test/881", "label": "Authority", "pred": "Authorizations", "p": 0.5730340628577301, "correct": false}
+{"id": "ledgar/test/973", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.9753399229325236, "correct": true}
+{"id": "ledgar/test/6977", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9968098392974379, "correct": true}
+{"id": "ledgar/test/6187", "label": "Binding Effects", "pred": "Successors", "p": 0.6374014457274664, "correct": false}
+{"id": "ledgar/test/3975", "label": "Liens", "pred": "Liens", "p": 0.9998815592724796, "correct": true}
+{"id": "ledgar/test/8461", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9729794780983534, "correct": true}
+{"id": "ledgar/test/4422", "label": "Survival", "pred": "Warranties", "p": 0.7535636403711412, "correct": false}
+{"id": "ledgar/test/6671", "label": "Taxes", "pred": "Taxes", "p": 0.99953248657381, "correct": true}
+{"id": "ledgar/test/9941", "label": "Transactions With Affiliates", "pred": "Transactions With Affiliates", "p": 0.9999006134406531, "correct": true}
+{"id": "ledgar/test/9040", "label": "Specific Performance", "pred": "Specific Performance", "p": 0.9675655901234725, "correct": true}
+{"id": "ledgar/test/1196", "label": "Participations", "pred": "Participations", "p": 0.924617697245378, "correct": true}
+{"id": "ledgar/test/7634", "label": "Notices", "pred": "Notices", "p": 0.9999435984610201, "correct": true}
+{"id": "ledgar/test/4935", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9626922497788151, "correct": true}
+{"id": "ledgar/test/4063", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999407316482593, "correct": true}
+{"id": "ledgar/test/9086", "label": "Successors", "pred": "Assignments", "p": 0.7524111960271118, "correct": false}
+{"id": "ledgar/test/170", "label": "Intellectual Property", "pred": "Intellectual Property", "p": 0.9996851642672594, "correct": true}
+{"id": "ledgar/test/4707", "label": "Remedies", "pred": "Specific Performance", "p": 0.665804996559921, "correct": false}
+{"id": "ledgar/test/548", "label": "Transactions With Affiliates", "pred": "Transactions With Affiliates", "p": 0.9871867737496162, "correct": true}
+{"id": "ledgar/test/6401", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9922912953372605, "correct": true}
+{"id": "ledgar/test/8947", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999659508475135, "correct": true}
+{"id": "ledgar/test/2090", "label": "Transactions With Affiliates", "pred": "Transactions With Affiliates", "p": 0.9999910518032167, "correct": true}
+{"id": "ledgar/test/6582", "label": "Payments", "pred": "Payments", "p": 0.8093731100531307, "correct": true}
+{"id": "ledgar/test/7759", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9999400820775188, "correct": true}
+{"id": "ledgar/test/7647", "label": "Releases", "pred": "Releases", "p": 0.9979954100637745, "correct": true}
+{"id": "ledgar/test/4708", "label": "Amendments", "pred": "Amendments", "p": 0.9433061461224459, "correct": true}
+{"id": "ledgar/test/1860", "label": "Headings", "pred": "Headings", "p": 0.9996984506633086, "correct": true}
+{"id": "ledgar/test/8697", "label": "Closings", "pred": "Closings", "p": 0.9996379120081468, "correct": true}
+{"id": "ledgar/test/5367", "label": "Severability", "pred": "Severability", "p": 0.9999637755528392, "correct": true}
+{"id": "ledgar/test/4703", "label": "Enforcements", "pred": "Specific Performance", "p": 0.9887864932161267, "correct": false}
+{"id": "ledgar/test/3448", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9995120798144189, "correct": true}
+{"id": "ledgar/test/2355", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.973789935036384, "correct": true}
+{"id": "ledgar/test/9818", "label": "Survival", "pred": "Survival", "p": 0.9998644028495186, "correct": true}
+{"id": "ledgar/test/2929", "label": "Effectiveness", "pred": "Effectiveness", "p": 0.7742389300397522, "correct": true}
+{"id": "ledgar/test/3828", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.9673492339782503, "correct": true}
+{"id": "ledgar/test/9571", "label": "Payments", "pred": "Payments", "p": 0.9944023821799284, "correct": true}
+{"id": "ledgar/test/6505", "label": "Severability", "pred": "Severability", "p": 0.9998189806443373, "correct": true}
+{"id": "ledgar/test/5659", "label": "Headings", "pred": "Headings", "p": 0.993953713925148, "correct": true}
+{"id": "ledgar/test/6094", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9774580245042843, "correct": true}
+{"id": "ledgar/test/3888", "label": "Financial Statements", "pred": "Financial Statements", "p": 0.9954192841394939, "correct": true}
+{"id": "ledgar/test/8985", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9785988073371966, "correct": true}
+{"id": "ledgar/test/7330", "label": "Headings", "pred": "Headings", "p": 0.9997127434967468, "correct": true}
+{"id": "ledgar/test/7403", "label": "Death", "pred": "Death", "p": 0.9993029609720802, "correct": true}
+{"id": "ledgar/test/8991", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9999835966058294, "correct": true}
+{"id": "ledgar/test/9490", "label": "Amendments", "pred": "Amendments", "p": 0.9994418562160172, "correct": true}
+{"id": "ledgar/test/7163", "label": "Insurances", "pred": "Insurances", "p": 0.9999892654798925, "correct": true}
+{"id": "ledgar/test/6908", "label": "Taxes", "pred": "Taxes", "p": 0.9999432256648756, "correct": true}
+{"id": "ledgar/test/1370", "label": "Sales", "pred": "Sales", "p": 0.9637430349515642, "correct": true}
+{"id": "ledgar/test/9741", "label": "Representations", "pred": "Representations", "p": 0.5158528887602164, "correct": true}
+{"id": "ledgar/test/7583", "label": "Erisa", "pred": "Erisa", "p": 0.9537095154528511, "correct": true}
+{"id": "ledgar/test/5573", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.8882477900456008, "correct": true}
+{"id": "ledgar/test/4626", "label": "Assignments", "pred": "Assignments", "p": 0.9655087242410891, "correct": true}
+{"id": "ledgar/test/92", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999320088212209, "correct": true}
+{"id": "ledgar/test/5512", "label": "Forfeitures", "pred": "Forfeitures", "p": 0.9443390621521655, "correct": true}
+{"id": "ledgar/test/1361", "label": "Adjustments", "pred": "Adjustments", "p": 0.7585715964335017, "correct": true}
+{"id": "ledgar/test/3094", "label": "No Defaults", "pred": "No Defaults", "p": 0.9999468792358548, "correct": true}
+{"id": "ledgar/test/1381", "label": "Integration", "pred": "Indemnifications", "p": 0.5035116750694733, "correct": false}
+{"id": "ledgar/test/4348", "label": "Disclosures", "pred": "Publicity", "p": 0.9626360123509297, "correct": false}
+{"id": "ledgar/test/8065", "label": "Notices", "pred": "Notices", "p": 0.9997141243026326, "correct": true}
+{"id": "ledgar/test/5761", "label": "Amendments", "pred": "Amendments", "p": 0.9988139130234386, "correct": true}
+{"id": "ledgar/test/7303", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999487271245325, "correct": true}
+{"id": "ledgar/test/2133", "label": "Liens", "pred": "Liens", "p": 0.5954318355147615, "correct": true}
+{"id": "ledgar/test/2587", "label": "Fees", "pred": "Fees", "p": 0.9967591599804531, "correct": true}
+{"id": "ledgar/test/2271", "label": "Severability", "pred": "Severability", "p": 0.9999087702333695, "correct": true}
+{"id": "ledgar/test/1274", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.9913662515776173, "correct": true}
+{"id": "ledgar/test/7321", "label": "Terminations", "pred": "Amendments", "p": 0.9536823991798172, "correct": false}
+{"id": "ledgar/test/844", "label": "Disclosures", "pred": "Disclosures", "p": 0.6473466437777935, "correct": true}
+{"id": "ledgar/test/5069", "label": "Notices", "pred": "Notices", "p": 0.9999664795393319, "correct": true}
+{"id": "ledgar/test/8688", "label": "Defined Terms", "pred": "Definitions", "p": 0.8559892544030948, "correct": false}
+{"id": "ledgar/test/6196", "label": "Fees", "pred": "Fees", "p": 0.5388921781007326, "correct": true}
+{"id": "ledgar/test/1358", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9973458248333309, "correct": true}
+{"id": "ledgar/test/3139", "label": "Terms", "pred": "Terms", "p": 0.9927353622184756, "correct": true}
+{"id": "ledgar/test/7225", "label": "Positions", "pred": "Duties", "p": 0.5823139117257652, "correct": false}
+{"id": "ledgar/test/7367", "label": "Terms", "pred": "Construction", "p": 0.3711925394469407, "correct": false}
+{"id": "ledgar/test/1839", "label": "Remedies", "pred": "Specific Performance", "p": 0.9032666125809458, "correct": false}
+{"id": "ledgar/test/3305", "label": "No Waivers", "pred": "No Waivers", "p": 0.861144107690368, "correct": true}
+{"id": "ledgar/test/5633", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.6649211992373292, "correct": false}
+{"id": "ledgar/test/505", "label": "Miscellaneous", "pred": "Waivers", "p": 0.3858837955948956, "correct": false}
+{"id": "ledgar/test/127", "label": "Terms", "pred": "Terms", "p": 0.9998120611496426, "correct": true}
+{"id": "ledgar/test/1562", "label": "Enforceability", "pred": "Severability", "p": 0.999525199510526, "correct": false}
+{"id": "ledgar/test/8823", "label": "Disclosures", "pred": "Disclosures", "p": 0.9991769826400693, "correct": true}
+{"id": "ledgar/test/4547", "label": "Taxes", "pred": "Taxes", "p": 0.9999713149459319, "correct": true}
+{"id": "ledgar/test/9024", "label": "Interpretations", "pred": "Construction", "p": 0.5711925414868501, "correct": false}
+{"id": "ledgar/test/7300", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9824774429355188, "correct": true}
+{"id": "ledgar/test/2023", "label": "No Defaults", "pred": "No Defaults", "p": 0.9994477120827846, "correct": true}
+{"id": "ledgar/test/485", "label": "General", "pred": "Vesting", "p": 0.3420937010578518, "correct": false}
+{"id": "ledgar/test/8748", "label": "Authorizations", "pred": "No Conflicts", "p": 0.8275295714795448, "correct": false}
+{"id": "ledgar/test/9438", "label": "Severability", "pred": "Severability", "p": 0.9999898925116194, "correct": true}
+{"id": "ledgar/test/7306", "label": "Binding Effects", "pred": "Enforceability", "p": 0.8553004387254421, "correct": false}
+{"id": "ledgar/test/6073", "label": "Taxes", "pred": "Taxes", "p": 0.999946611003981, "correct": true}
+{"id": "ledgar/test/7990", "label": "Disability", "pred": "Disability", "p": 0.9890040439765698, "correct": true}
+{"id": "ledgar/test/8279", "label": "Closings", "pred": "Closings", "p": 0.9939203871477539, "correct": true}
+{"id": "ledgar/test/5533", "label": "Enforcements", "pred": "Authorizations", "p": 0.7579620241441907, "correct": false}
+{"id": "ledgar/test/6185", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9699852664762058, "correct": true}
+{"id": "ledgar/test/6868", "label": "Withholdings", "pred": "Withholdings", "p": 0.5297240447067171, "correct": true}
+{"id": "ledgar/test/1601", "label": "Construction", "pred": "Governing Laws", "p": 0.594730484832574, "correct": false}
+{"id": "ledgar/test/554", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9982376026192286, "correct": true}
+{"id": "ledgar/test/2075", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.9719109587659926, "correct": true}
+{"id": "ledgar/test/6725", "label": "Taxes", "pred": "Taxes", "p": 0.9729640105619466, "correct": true}
+{"id": "ledgar/test/5847", "label": "Terms", "pred": "Headings", "p": 0.8456871424548834, "correct": false}
+{"id": "ledgar/test/6564", "label": "Agreements", "pred": "Authority", "p": 0.4739306056199338, "correct": false}
+{"id": "ledgar/test/5148", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999700174011635, "correct": true}
+{"id": "ledgar/test/6390", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9950434926105614, "correct": true}
+{"id": "ledgar/test/4973", "label": "Effectiveness", "pred": "Effective Dates", "p": 0.9184730219031324, "correct": false}
+{"id": "ledgar/test/6522", "label": "Specific Performance", "pred": "Specific Performance", "p": 0.9663327579290647, "correct": true}
+{"id": "ledgar/test/3910", "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p": 0.9999208246122774, "correct": true}
+{"id": "ledgar/test/9953", "label": "Severability", "pred": "Severability", "p": 0.9998092789018759, "correct": true}
+{"id": "ledgar/test/514", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9966408781138716, "correct": true}
+{"id": "ledgar/test/767", "label": "Insurances", "pred": "Duties", "p": 0.7534740401753177, "correct": false}
+{"id": "ledgar/test/81", "label": "Expenses", "pred": "Expenses", "p": 0.9080547441554201, "correct": true}
+{"id": "ledgar/test/6815", "label": "Arbitration", "pred": "Arbitration", "p": 0.9704323697414666, "correct": true}
+{"id": "ledgar/test/9970", "label": "Terms", "pred": "Terms", "p": 0.8702659906861915, "correct": true}
+{"id": "ledgar/test/6854", "label": "Employment", "pred": "Employment", "p": 0.6472518111251607, "correct": true}
+{"id": "ledgar/test/4896", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.9210498269742907, "correct": true}
+{"id": "ledgar/test/9641", "label": "Consents", "pred": "Approvals", "p": 0.8666675270879589, "correct": false}
+{"id": "ledgar/test/8669", "label": "Closings", "pred": "Closings", "p": 0.9999141301928552, "correct": true}
+{"id": "ledgar/test/3138", "label": "Closings", "pred": "Closings", "p": 0.9987326972786095, "correct": true}
+{"id": "ledgar/test/3465", "label": "Vesting", "pred": "Vesting", "p": 0.9998185920406562, "correct": true}
+{"id": "ledgar/test/2430", "label": "Severability", "pred": "Severability", "p": 0.9999815345092727, "correct": true}
+{"id": "ledgar/test/2885", "label": "Liens", "pred": "Liens", "p": 0.9998751232681561, "correct": true}
+{"id": "ledgar/test/1629", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999384374923392, "correct": true}
+{"id": "ledgar/test/428", "label": "Notices", "pred": "Notices", "p": 0.9999560668467353, "correct": true}
+{"id": "ledgar/test/2973", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9999357003652104, "correct": true}
+{"id": "ledgar/test/9178", "label": "Survival", "pred": "Survival", "p": 0.5634025085080819, "correct": true}
+{"id": "ledgar/test/283", "label": "Effective Dates", "pred": "Effective Dates", "p": 0.9321764676088058, "correct": true}
+{"id": "ledgar/test/5905", "label": "Headings", "pred": "Headings", "p": 0.9998471165229711, "correct": true}
+{"id": "ledgar/test/1773", "label": "Headings", "pred": "Headings", "p": 0.9952354670477715, "correct": true}
+{"id": "ledgar/test/2815", "label": "Successors", "pred": "Successors", "p": 0.8502131068851053, "correct": true}
+{"id": "ledgar/test/4309", "label": "Terminations", "pred": "Terms", "p": 0.6200455787357873, "correct": false}
+{"id": "ledgar/test/2528", "label": "Duties", "pred": "Duties", "p": 0.7751770720846785, "correct": true}
+{"id": "ledgar/test/711", "label": "Base Salary", "pred": "Base Salary", "p": 0.999973104478254, "correct": true}
+{"id": "ledgar/test/7257", "label": "Notices", "pred": "Notices", "p": 0.9998687808311755, "correct": true}
+{"id": "ledgar/test/7402", "label": "Notices", "pred": "Notices", "p": 0.9999874002364522, "correct": true}
+{"id": "ledgar/test/8348", "label": "Notices", "pred": "Notices", "p": 0.9999354976102406, "correct": true}
+{"id": "ledgar/test/4886", "label": "Cooperation", "pred": "Costs", "p": 0.35183396734436523, "correct": false}
+{"id": "ledgar/test/7490", "label": "Terms", "pred": "Terms", "p": 0.9998088373656362, "correct": true}
+{"id": "ledgar/test/7391", "label": "Remedies", "pred": "Specific Performance", "p": 0.9975903640349993, "correct": false}
+{"id": "ledgar/test/2105", "label": "Taxes", "pred": "Taxes", "p": 0.9999855753647493, "correct": true}
+{"id": "ledgar/test/9873", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9677647504427472, "correct": true}
+{"id": "ledgar/test/9272", "label": "Fees", "pred": "Fees", "p": 0.563566943859199, "correct": true}
+{"id": "ledgar/test/8110", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9961637274597169, "correct": true}
+{"id": "ledgar/test/3639", "label": "Headings", "pred": "Headings", "p": 0.9837103878287686, "correct": true}
+{"id": "ledgar/test/8908", "label": "Waivers", "pred": "No Waivers", "p": 0.9524527870087369, "correct": false}
+{"id": "ledgar/test/3406", "label": "Authority", "pred": "Authorizations", "p": 0.6196146584460814, "correct": false}
+{"id": "ledgar/test/3223", "label": "Notices", "pred": "Notices", "p": 0.9964027222656862, "correct": true}
+{"id": "ledgar/test/754", "label": "Specific Performance", "pred": "Specific Performance", "p": 0.9925837199133916, "correct": true}
+{"id": "ledgar/test/2085", "label": "Submission To Jurisdiction", "pred": "Submission To Jurisdiction", "p": 0.78059632181007, "correct": true}
+{"id": "ledgar/test/2877", "label": "Closings", "pred": "Closings", "p": 0.9951816917575862, "correct": true}
+{"id": "ledgar/test/5221", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.9995547571320288, "correct": true}
+{"id": "ledgar/test/4566", "label": "General", "pred": "Terminations", "p": 0.8960350110941883, "correct": false}
+{"id": "ledgar/test/3087", "label": "Notices", "pred": "Notices", "p": 0.9974040971849631, "correct": true}
+{"id": "ledgar/test/8598", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9699027276150554, "correct": true}
+{"id": "ledgar/test/7954", "label": "Vesting", "pred": "Vesting", "p": 0.9973452595678468, "correct": true}
+{"id": "ledgar/test/7451", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9855738745669753, "correct": true}
+{"id": "ledgar/test/1936", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.8536071070202151, "correct": false}
+{"id": "ledgar/test/1350", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.597146810209749, "correct": false}
+{"id": "ledgar/test/1364", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.832519426751917, "correct": true}
+{"id": "ledgar/test/1343", "label": "Litigations", "pred": "Litigations", "p": 0.9997229978786035, "correct": true}
+{"id": "ledgar/test/3640", "label": "Fees", "pred": "Fees", "p": 0.9960932987826665, "correct": true}
+{"id": "ledgar/test/142", "label": "Binding Effects", "pred": "Enforceability", "p": 0.9597062543849887, "correct": false}
+{"id": "ledgar/test/5830", "label": "Effective Dates", "pred": "Assignments", "p": 0.9723107571013826, "correct": false}
+{"id": "ledgar/test/8413", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.95735090624478, "correct": true}
+{"id": "ledgar/test/39", "label": "Applicable Laws", "pred": "Governing Laws", "p": 0.9740406843712144, "correct": false}
+{"id": "ledgar/test/6863", "label": "No Waivers", "pred": "No Waivers", "p": 0.9557653078540621, "correct": true}
+{"id": "ledgar/test/1342", "label": "Construction", "pred": "Severability", "p": 0.9834117632568148, "correct": false}
+{"id": "ledgar/test/3376", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999400466275339, "correct": true}
+{"id": "ledgar/test/9759", "label": "Severability", "pred": "Severability", "p": 0.9999833434599593, "correct": true}
+{"id": "ledgar/test/6081", "label": "Assignments", "pred": "Assignments", "p": 0.9934007372094796, "correct": true}
+{"id": "ledgar/test/5749", "label": "Expenses", "pred": "Expenses", "p": 0.9124045532211192, "correct": true}
+{"id": "ledgar/test/9997", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999635531515917, "correct": true}
+{"id": "ledgar/test/9557", "label": "Assignments", "pred": "Assignments", "p": 0.9959778815035847, "correct": true}
+{"id": "ledgar/test/9057", "label": "Enforcements", "pred": "Expenses", "p": 0.9405692070279915, "correct": false}
+{"id": "ledgar/test/9538", "label": "Intellectual Property", "pred": "Intellectual Property", "p": 0.999831852794374, "correct": true}
+{"id": "ledgar/test/8127", "label": "Representations", "pred": "No Defaults", "p": 0.7926681331970805, "correct": false}
+{"id": "ledgar/test/9869", "label": "Enforceability", "pred": "Authorizations", "p": 0.6017949541609944, "correct": false}
+{"id": "ledgar/test/1313", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.8575625482769803, "correct": false}
+{"id": "ledgar/test/3003", "label": "Expenses", "pred": "Expenses", "p": 0.8597811323802531, "correct": true}
+{"id": "ledgar/test/2502", "label": "Records", "pred": "Records", "p": 0.9609101480085706, "correct": true}
+{"id": "ledgar/test/4999", "label": "Fees", "pred": "Fees", "p": 0.9805599535527314, "correct": true}
+{"id": "ledgar/test/6284", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9406597061536534, "correct": true}
+{"id": "ledgar/test/6568", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9979545852720084, "correct": true}
+{"id": "ledgar/test/629", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9097787798399523, "correct": true}
+{"id": "ledgar/test/4461", "label": "Powers", "pred": "Organizations", "p": 0.8280143947314119, "correct": false}
+{"id": "ledgar/test/3048", "label": "Cooperation", "pred": "Cooperation", "p": 0.9897632742995608, "correct": true}
+{"id": "ledgar/test/1031", "label": "Construction", "pred": "Construction", "p": 0.8472835667878882, "correct": true}
+{"id": "ledgar/test/2222", "label": "Specific Performance", "pred": "Remedies", "p": 0.6852750420321723, "correct": false}
+{"id": "ledgar/test/2463", "label": "Disability", "pred": "Disability", "p": 0.7658455133211508, "correct": true}
+{"id": "ledgar/test/2498", "label": "Cooperation", "pred": "Cooperation", "p": 0.9552286642035405, "correct": true}
+{"id": "ledgar/test/3325", "label": "Taxes", "pred": "Taxes", "p": 0.9998040884379324, "correct": true}
+{"id": "ledgar/test/5461", "label": "Taxes", "pred": "Taxes", "p": 0.999971026643084, "correct": true}
+{"id": "ledgar/test/7473", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.5979762123994515, "correct": true}
+{"id": "ledgar/test/8077", "label": "Authorizations", "pred": "Authority", "p": 0.5825736795431757, "correct": false}
+{"id": "ledgar/test/5563", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.9999583384539509, "correct": true}
+{"id": "ledgar/test/3490", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9993860068221672, "correct": true}
+{"id": "ledgar/test/2324", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999352983734316, "correct": true}
+{"id": "ledgar/test/8059", "label": "Survival", "pred": "Survival", "p": 0.9903759382129678, "correct": true}
+{"id": "ledgar/test/1041", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9995124625902332, "correct": true}
+{"id": "ledgar/test/5783", "label": "Notices", "pred": "Notices", "p": 0.9994932472003374, "correct": true}
+{"id": "ledgar/test/6862", "label": "Effectiveness", "pred": "Effective Dates", "p": 0.7079485516652141, "correct": false}
+{"id": "ledgar/test/2274", "label": "Severability", "pred": "Severability", "p": 0.9875071547453004, "correct": true}
+{"id": "ledgar/test/4905", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999569238920258, "correct": true}
+{"id": "ledgar/test/6841", "label": "Severability", "pred": "Severability", "p": 0.9995123248856711, "correct": true}
+{"id": "ledgar/test/5545", "label": "Subsidiaries", "pred": "Subsidiaries", "p": 0.9999671427999988, "correct": true}
+{"id": "ledgar/test/9988", "label": "Fees", "pred": "Fees", "p": 0.7815332917222484, "correct": true}
+{"id": "ledgar/test/1943", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.5623097819154688, "correct": true}
+{"id": "ledgar/test/8879", "label": "Remedies", "pred": "Remedies", "p": 0.9566639336392929, "correct": true}
+{"id": "ledgar/test/857", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999606125758183, "correct": true}
+{"id": "ledgar/test/792", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999606773196421, "correct": true}
+{"id": "ledgar/test/818", "label": "Waivers", "pred": "Releases", "p": 0.9997263235869355, "correct": false}
+{"id": "ledgar/test/3165", "label": "Benefits", "pred": "Benefits", "p": 0.9720826467677401, "correct": true}
+{"id": "ledgar/test/9558", "label": "No Waivers", "pred": "No Waivers", "p": 0.9619497453507051, "correct": true}
+{"id": "ledgar/test/6239", "label": "Titles", "pred": "Construction", "p": 0.7754321055789735, "correct": false}
+{"id": "ledgar/test/2966", "label": "Interpretations", "pred": "Interpretations", "p": 0.6381481745350375, "correct": true}
+{"id": "ledgar/test/1317", "label": "Amendments", "pred": "Amendments", "p": 0.9789275586922009, "correct": true}
+{"id": "ledgar/test/7190", "label": "Headings", "pred": "Headings", "p": 0.9937991390092202, "correct": true}
+{"id": "ledgar/test/2500", "label": "Participations", "pred": "Notices", "p": 0.9867339477167427, "correct": false}
+{"id": "ledgar/test/1458", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.6371416126778169, "correct": true}
+{"id": "ledgar/test/3694", "label": "Consents", "pred": "Consents", "p": 0.9898904638886171, "correct": true}
+{"id": "ledgar/test/8192", "label": "Duties", "pred": "Duties", "p": 0.9362472761488412, "correct": true}
+{"id": "ledgar/test/4531", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9159393462777549, "correct": true}
+{"id": "ledgar/test/3587", "label": "Base Salary", "pred": "Base Salary", "p": 0.9999801879647833, "correct": true}
+{"id": "ledgar/test/324", "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p": 0.9943122854360823, "correct": true}
+{"id": "ledgar/test/8200", "label": "Severability", "pred": "Severability", "p": 0.99986879206481, "correct": true}
+{"id": "ledgar/test/3183", "label": "Notices", "pred": "Notices", "p": 0.9998392461419949, "correct": true}
+{"id": "ledgar/test/5135", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.7864529206906097, "correct": true}
+{"id": "ledgar/test/1554", "label": "Terms", "pred": "Terms", "p": 0.986083888530093, "correct": true}
+{"id": "ledgar/test/2720", "label": "Severability", "pred": "Severability", "p": 0.999984670869802, "correct": true}
+{"id": "ledgar/test/9729", "label": "Counterparts", "pred": "Counterparts", "p": 0.9997728064042258, "correct": true}
+{"id": "ledgar/test/7558", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9971795437209392, "correct": true}
+{"id": "ledgar/test/6631", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999737747989385, "correct": true}
+{"id": "ledgar/test/6949", "label": "Sales", "pred": "Construction", "p": 0.4820122338064396, "correct": false}
+{"id": "ledgar/test/3827", "label": "Insurances", "pred": "Insurances", "p": 0.9999405094729545, "correct": true}
+{"id": "ledgar/test/1859", "label": "Brokers", "pred": "Brokers", "p": 0.9988036738561535, "correct": true}
+{"id": "ledgar/test/1505", "label": "Intellectual Property", "pred": "Intellectual Property", "p": 0.992528220179356, "correct": true}
+{"id": "ledgar/test/220", "label": "General", "pred": "Indemnifications", "p": 0.8988104102466372, "correct": false}
+{"id": "ledgar/test/7964", "label": "Defined Terms", "pred": "Definitions", "p": 0.4909419683691634, "correct": false}
+{"id": "ledgar/test/6473", "label": "Duties", "pred": "Duties", "p": 0.999488143610134, "correct": true}
+{"id": "ledgar/test/9481", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.996120639949476, "correct": true}
+{"id": "ledgar/test/6259", "label": "Arbitration", "pred": "Arbitration", "p": 0.999109212202594, "correct": true}
+{"id": "ledgar/test/8135", "label": "Change In Control", "pred": "Change In Control", "p": 0.999664368068727, "correct": true}
+{"id": "ledgar/test/1954", "label": "Payments", "pred": "Payments", "p": 0.9088284270700167, "correct": true}
+{"id": "ledgar/test/7996", "label": "Severability", "pred": "Severability", "p": 0.9921291515626078, "correct": true}
+{"id": "ledgar/test/7396", "label": "Disclosures", "pred": "Disclosures", "p": 0.929010930229414, "correct": true}
+{"id": "ledgar/test/7841", "label": "Solvency", "pred": "Solvency", "p": 0.999834099796801, "correct": true}
+{"id": "ledgar/test/537", "label": "Tax Withholdings", "pred": "Benefits", "p": 0.3310230838892875, "correct": false}
+{"id": "ledgar/test/5808", "label": "Construction", "pred": "Severability", "p": 0.6296630477554727, "correct": false}
+{"id": "ledgar/test/436", "label": "No Defaults", "pred": "No Conflicts", "p": 0.782988323265702, "correct": false}
+{"id": "ledgar/test/5467", "label": "Vacations", "pred": "Vacations", "p": 0.9992530458506051, "correct": true}
+{"id": "ledgar/test/6352", "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p": 0.9981739614977424, "correct": true}
+{"id": "ledgar/test/2384", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.8616902582477516, "correct": true}
+{"id": "ledgar/test/4651", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.9820188321330413, "correct": true}
+{"id": "ledgar/test/5937", "label": "Death", "pred": "Death", "p": 0.4924524101331462, "correct": true}
+{"id": "ledgar/test/5589", "label": "General", "pred": "Effective Dates", "p": 0.888335085632772, "correct": false}
+{"id": "ledgar/test/6353", "label": "Expenses", "pred": "Expenses", "p": 0.9999953715626391, "correct": true}
+{"id": "ledgar/test/300", "label": "Expenses", "pred": "Expenses", "p": 0.8003363338599598, "correct": true}
+{"id": "ledgar/test/7786", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999762374315941, "correct": true}
+{"id": "ledgar/test/3134", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999854554851608, "correct": true}
+{"id": "ledgar/test/4424", "label": "Participations", "pred": "Participations", "p": 0.9965524176206486, "correct": true}
+{"id": "ledgar/test/9593", "label": "Authority", "pred": "Authority", "p": 0.6099853429759842, "correct": true}
+{"id": "ledgar/test/5742", "label": "Counterparts", "pred": "Counterparts", "p": 0.9995249835360523, "correct": true}
+{"id": "ledgar/test/699", "label": "Fees", "pred": "Fees", "p": 0.9910607966669527, "correct": true}
+{"id": "ledgar/test/7167", "label": "Notices", "pred": "Notices", "p": 0.727822686662305, "correct": true}
+{"id": "ledgar/test/8412", "label": "Taxes", "pred": "Taxes", "p": 0.9840428899430592, "correct": true}
+{"id": "ledgar/test/72", "label": "Taxes", "pred": "Taxes", "p": 0.9987210897099617, "correct": true}
+{"id": "ledgar/test/865", "label": "Miscellaneous", "pred": "Governing Laws", "p": 0.38942014441860845, "correct": false}
+{"id": "ledgar/test/2307", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.6535425095688222, "correct": false}
+{"id": "ledgar/test/2115", "label": "Applicable Laws", "pred": "Governing Laws", "p": 0.6196402222689888, "correct": false}
+{"id": "ledgar/test/6738", "label": "Titles", "pred": "Titles", "p": 0.9910730751166386, "correct": true}
+{"id": "ledgar/test/8281", "label": "Interpretations", "pred": "Interpretations", "p": 0.933088888463801, "correct": true}
+{"id": "ledgar/test/4074", "label": "Capitalization", "pred": "Capitalization", "p": 0.8999578335219948, "correct": true}
+{"id": "ledgar/test/7495", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.8418198128608019, "correct": true}
+{"id": "ledgar/test/6925", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9157982492974112, "correct": true}
+{"id": "ledgar/test/983", "label": "Remedies", "pred": "Remedies", "p": 0.72394065562539, "correct": true}
+{"id": "ledgar/test/2385", "label": "Arbitration", "pred": "Arbitration", "p": 0.9997881003644651, "correct": true}
+{"id": "ledgar/test/3756", "label": "Counterparts", "pred": "Counterparts", "p": 0.9998093766865116, "correct": true}
+{"id": "ledgar/test/8840", "label": "Existence", "pred": "Existence", "p": 0.8697263062054986, "correct": true}
+{"id": "ledgar/test/8660", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999592401353629, "correct": true}
+{"id": "ledgar/test/8315", "label": "General", "pred": "General", "p": 0.923174379862195, "correct": true}
+{"id": "ledgar/test/2258", "label": "Erisa", "pred": "Erisa", "p": 0.997059688907625, "correct": true}
+{"id": "ledgar/test/6828", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999669172546861, "correct": true}
+{"id": "ledgar/test/1226", "label": "Tax Withholdings", "pred": "Tax Withholdings", "p": 0.9322025092258216, "correct": true}
+{"id": "ledgar/test/6169", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9985461798545476, "correct": true}
+{"id": "ledgar/test/8827", "label": "Anti-Corruption Laws", "pred": "Anti-Corruption Laws", "p": 0.9827163851721438, "correct": true}
+{"id": "ledgar/test/5338", "label": "Construction", "pred": "Taxes", "p": 0.8696026118728645, "correct": false}
+{"id": "ledgar/test/2300", "label": "Consents", "pred": "Consents", "p": 0.9725767310942283, "correct": true}
+{"id": "ledgar/test/5619", "label": "Headings", "pred": "Headings", "p": 0.9897725487292705, "correct": true}
+{"id": "ledgar/test/2678", "label": "Definitions", "pred": "Definitions", "p": 0.5759621577852578, "correct": true}
+{"id": "ledgar/test/7571", "label": "Warranties", "pred": "Survival", "p": 0.5285913324295687, "correct": false}
+{"id": "ledgar/test/9664", "label": "Sales", "pred": "Sales", "p": 0.6514418643684902, "correct": true}
+{"id": "ledgar/test/5126", "label": "Assignments", "pred": "Assignments", "p": 0.9950211731690711, "correct": true}
+{"id": "ledgar/test/4721", "label": "Severability", "pred": "Severability", "p": 0.9999438967432784, "correct": true}
+{"id": "ledgar/test/2631", "label": "Authorizations", "pred": "No Conflicts", "p": 0.9062880606266686, "correct": false}
+{"id": "ledgar/test/9437", "label": "Headings", "pred": "Headings", "p": 0.9997236706092064, "correct": true}
+{"id": "ledgar/test/259", "label": "Adjustments", "pred": "Adjustments", "p": 0.9915188384252833, "correct": true}
+{"id": "ledgar/test/2783", "label": "Duties", "pred": "Duties", "p": 0.704830689091142, "correct": true}
+{"id": "ledgar/test/9478", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9935830295873416, "correct": true}
+{"id": "ledgar/test/568", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9998572556834848, "correct": true}
+{"id": "ledgar/test/55", "label": "Amendments", "pred": "Amendments", "p": 0.9954616672947898, "correct": true}
+{"id": "ledgar/test/5350", "label": "Indemnifications", "pred": "Expenses", "p": 0.7551440634095238, "correct": false}
+{"id": "ledgar/test/229", "label": "Disclosures", "pred": "Disclosures", "p": 0.9987108081950383, "correct": true}
+{"id": "ledgar/test/3368", "label": "Litigations", "pred": "Litigations", "p": 0.99764775633603, "correct": true}
+{"id": "ledgar/test/8783", "label": "Remedies", "pred": "Remedies", "p": 0.5319120222804985, "correct": true}
+{"id": "ledgar/test/9917", "label": "Duties", "pred": "Duties", "p": 0.929602835426892, "correct": true}
+{"id": "ledgar/test/2978", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9773028939151612, "correct": true}
+{"id": "ledgar/test/5816", "label": "Warranties", "pred": "Warranties", "p": 0.5797077044052286, "correct": true}
+{"id": "ledgar/test/9105", "label": "Remedies", "pred": "Specific Performance", "p": 0.9188991932334555, "correct": false}
+{"id": "ledgar/test/880", "label": "Change In Control", "pred": "Change In Control", "p": 0.9263778817870092, "correct": true}
+{"id": "ledgar/test/9520", "label": "Benefits", "pred": "Benefits", "p": 0.9957058219796114, "correct": true}
+{"id": "ledgar/test/3331", "label": "Severability", "pred": "Severability", "p": 0.9999815375005027, "correct": true}
+{"id": "ledgar/test/4846", "label": "Counterparts", "pred": "Counterparts", "p": 0.9914660636746164, "correct": true}
+{"id": "ledgar/test/5718", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999708323229594, "correct": true}
+{"id": "ledgar/test/7256", "label": "Base Salary", "pred": "Base Salary", "p": 0.9999538530380506, "correct": true}
+{"id": "ledgar/test/1499", "label": "Capitalization", "pred": "Capitalization", "p": 0.9995203560318194, "correct": true}
+{"id": "ledgar/test/913", "label": "Employment", "pred": "Duties", "p": 0.8429723953044739, "correct": false}
+{"id": "ledgar/test/3898", "label": "Severability", "pred": "Severability", "p": 0.9999883868698374, "correct": true}
+{"id": "ledgar/test/3074", "label": "Enforceability", "pred": "Enforceability", "p": 0.9759814290356467, "correct": true}
+{"id": "ledgar/test/862", "label": "Disclosures", "pred": "Disclosures", "p": 0.999741467440525, "correct": true}
+{"id": "ledgar/test/7027", "label": "Severability", "pred": "Severability", "p": 0.9989402509866858, "correct": true}
+{"id": "ledgar/test/5280", "label": "Expenses", "pred": "Expenses", "p": 0.9940352674896072, "correct": true}
+{"id": "ledgar/test/8138", "label": "Consents", "pred": "Consents", "p": 0.8982126907438631, "correct": true}
+{"id": "ledgar/test/2120", "label": "Withholdings", "pred": "Tax Withholdings", "p": 0.8369967141756831, "correct": false}
+{"id": "ledgar/test/1666", "label": "Vesting", "pred": "Vesting", "p": 0.9998523963327529, "correct": true}
+{"id": "ledgar/test/7715", "label": "Effective Dates", "pred": "Effective Dates", "p": 0.9925915374153429, "correct": true}
+{"id": "ledgar/test/9793", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9986578246996332, "correct": true}
+{"id": "ledgar/test/7278", "label": "No Conflicts", "pred": "No Conflicts", "p": 0.9991618909133682, "correct": true}
+{"id": "ledgar/test/4929", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999819784843832, "correct": true}
+{"id": "ledgar/test/3920", "label": "Representations", "pred": "Survival", "p": 0.5734095805902699, "correct": false}
+{"id": "ledgar/test/5428", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9301474884955707, "correct": true}
+{"id": "ledgar/test/5920", "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p": 0.9975032390946923, "correct": true}
+{"id": "ledgar/test/2531", "label": "Taxes", "pred": "Taxes", "p": 0.9999846337632656, "correct": true}
+{"id": "ledgar/test/7204", "label": "Venues", "pred": "Governing Laws", "p": 0.9826219402965397, "correct": false}
+{"id": "ledgar/test/7042", "label": "Terms", "pred": "Terms", "p": 0.9995931334962241, "correct": true}
+{"id": "ledgar/test/1095", "label": "Effective Dates", "pred": "Terms", "p": 0.80067593647069, "correct": false}
+{"id": "ledgar/test/7677", "label": "Survival", "pred": "Survival", "p": 0.9933382128446718, "correct": true}
+{"id": "ledgar/test/8929", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9967944551869514, "correct": true}
+{"id": "ledgar/test/4508", "label": "No Waivers", "pred": "No Waivers", "p": 0.7264372547801964, "correct": true}
+{"id": "ledgar/test/2368", "label": "Notices", "pred": "Notices", "p": 0.9999861397626824, "correct": true}
+{"id": "ledgar/test/8031", "label": "Binding Effects", "pred": "Assignments", "p": 0.5574106940063969, "correct": false}
+{"id": "ledgar/test/899", "label": "Survival", "pred": "Survival", "p": 0.9999881432419344, "correct": true}
+{"id": "ledgar/test/6761", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.984354059969645, "correct": true}
+{"id": "ledgar/test/8657", "label": "Survival", "pred": "Survival", "p": 0.9996479643948762, "correct": true}
+{"id": "ledgar/test/6253", "label": "Assignments", "pred": "Assignments", "p": 0.9998768582597957, "correct": true}
+{"id": "ledgar/test/6425", "label": "Powers", "pred": "Powers", "p": 0.9922188665951651, "correct": true}
+{"id": "ledgar/test/9007", "label": "Organizations", "pred": "Organizations", "p": 0.8326371544644577, "correct": true}
+{"id": "ledgar/test/5219", "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p": 0.9999648855997262, "correct": true}
+{"id": "ledgar/test/9603", "label": "Solvency", "pred": "Solvency", "p": 0.9692789202896296, "correct": true}
+{"id": "ledgar/test/7189", "label": "Indemnity", "pred": "Indemnity", "p": 0.5653149298473821, "correct": true}
+{"id": "ledgar/test/3598", "label": "Solvency", "pred": "Solvency", "p": 0.9999171043204359, "correct": true}
+{"id": "ledgar/test/9318", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9997021567816966, "correct": true}
+{"id": "ledgar/test/5574", "label": "Tax Withholdings", "pred": "Withholdings", "p": 0.9961632847427725, "correct": false}
+{"id": "ledgar/test/8829", "label": "Adjustments", "pred": "Adjustments", "p": 0.9984587189527147, "correct": true}
+{"id": "ledgar/test/4225", "label": "Notices", "pred": "Notices", "p": 0.9999670939285542, "correct": true}
+{"id": "ledgar/test/9279", "label": "Effectiveness", "pred": "Effectiveness", "p": 0.5063363571578718, "correct": true}
+{"id": "ledgar/test/6748", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.9562451419990771, "correct": true}
+{"id": "ledgar/test/9207", "label": "Erisa", "pred": "Erisa", "p": 0.9997455983744523, "correct": true}
+{"id": "ledgar/test/5861", "label": "Remedies", "pred": "Specific Performance", "p": 0.5669659607514238, "correct": false}
+{"id": "ledgar/test/5896", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9997182341073202, "correct": true}
+{"id": "ledgar/test/4715", "label": "Amendments", "pred": "Amendments", "p": 0.9998901884268752, "correct": true}
+{"id": "ledgar/test/2747", "label": "Litigations", "pred": "Litigations", "p": 0.9994652119699827, "correct": true}
+{"id": "ledgar/test/3979", "label": "Assignments", "pred": "Assignments", "p": 0.9942150135615511, "correct": true}
+{"id": "ledgar/test/4140", "label": "General", "pred": "Assignments", "p": 0.9482485341870732, "correct": false}
+{"id": "ledgar/test/5285", "label": "Participations", "pred": "Participations", "p": 0.9978118997648018, "correct": true}
+{"id": "ledgar/test/5800", "label": "Remedies", "pred": "Remedies", "p": 0.5825663086028448, "correct": true}
+{"id": "ledgar/test/427", "label": "Organizations", "pred": "Organizations", "p": 0.8415420761785191, "correct": true}
+{"id": "ledgar/test/1371", "label": "Entire Agreements", "pred": "Entire Agreements", "p": 0.8960862609391382, "correct": true}
+{"id": "ledgar/test/6301", "label": "Definitions", "pred": "Definitions", "p": 0.7961896961585406, "correct": true}
+{"id": "ledgar/test/3471", "label": "Terminations", "pred": "Amendments", "p": 0.7889056984368397, "correct": false}
+{"id": "ledgar/test/5180", "label": "Authorizations", "pred": "Authority", "p": 0.768425134225999, "correct": false}
+{"id": "ledgar/test/5971", "label": "Miscellaneous", "pred": "Adjustments", "p": 0.21475359830758103, "correct": false}
+{"id": "ledgar/test/9819", "label": "Base Salary", "pred": "Base Salary", "p": 0.9999879110846401, "correct": true}
+{"id": "ledgar/test/4835", "label": "Solvency", "pred": "Solvency", "p": 0.929067160699524, "correct": true}
+{"id": "ledgar/test/5717", "label": "Assignments", "pred": "Assignments", "p": 0.9848479881844823, "correct": true}
+{"id": "ledgar/test/1934", "label": "Existence", "pred": "Compliance With Laws", "p": 0.9744533952588535, "correct": false}
+{"id": "ledgar/test/1349", "label": "Amendments", "pred": "Amendments", "p": 0.9972197038495809, "correct": true}
+{"id": "ledgar/test/5306", "label": "Assignments", "pred": "Assignments", "p": 0.9997209323376546, "correct": true}
+{"id": "ledgar/test/5669", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9982449130426891, "correct": true}
+{"id": "ledgar/test/8018", "label": "Organizations", "pred": "Organizations", "p": 0.8834770254325465, "correct": true}
+{"id": "ledgar/test/59", "label": "Indemnifications", "pred": "Indemnifications", "p": 0.9458354480649094, "correct": true}
+{"id": "ledgar/test/5977", "label": "Litigations", "pred": "Litigations", "p": 0.9999046450327359, "correct": true}
+{"id": "ledgar/test/1713", "label": "Waivers", "pred": "No Waivers", "p": 0.9500639258100302, "correct": false}
+{"id": "ledgar/test/9751", "label": "Governing Laws", "pred": "Governing Laws", "p": 0.9850455592816361, "correct": true}
+{"id": "ledgar/test/1606", "label": "Headings", "pred": "Headings", "p": 0.9935995694960789, "correct": true}
+{"id": "ledgar/test/5236", "label": "Brokers", "pred": "Brokers", "p": 0.9979420093088327, "correct": true}
+{"id": "ledgar/test/8665", "label": "General", "pred": "Powers", "p": 0.44316618137442104, "correct": false}
+{"id": "ledgar/test/2570", "label": "Transactions With Affiliates", "pred": "Transactions With Affiliates", "p": 0.9999773094729186, "correct": true}
+{"id": "ledgar/test/5597", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999514373335205, "correct": true}
+{"id": "ledgar/test/3963", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.9991772782903381, "correct": true}
+{"id": "ledgar/test/9946", "label": "Confidentiality", "pred": "Confidentiality", "p": 0.9999316664880348, "correct": true}
+{"id": "ledgar/test/9053", "label": "Assignments", "pred": "Binding Effects", "p": 0.7894862687133217, "correct": false}
+{"id": "ledgar/test/5233", "label": "Severability", "pred": "Severability", "p": 0.9954348859271192, "correct": true}
+{"id": "ledgar/test/4217", "label": "Compliance With Laws", "pred": "Compliance With Laws", "p": 0.999735539858638, "correct": true}
+{"id": "ledgar/test/325", "label": "Taxes", "pred": "Taxes", "p": 0.9997286018601524, "correct": true}
+{"id": "ledgar/test/5019", "label": "Counterparts", "pred": "Counterparts", "p": 0.9999812491992237, "correct": true}
+{"id": "ledgar/test/9893", "label": "Further Assurances", "pred": "Further Assurances", "p": 0.9997050966965688, "correct": true}
+{"id": "ledgar/test/1265", "label": "Agreements", "pred": "Compliance With Laws", "p": 0.3761226115354005, "correct": false}
+{"id": "ledgar/test/2692", "label": "Taxes", "pred": "Taxes", "p": 0.9999191449669845, "correct": true}
+{"id": "ledgar/test/3118", "label": "Costs", "pred": "Costs", "p": 0.7540505943679804, "correct": true}
+{"id": "ledgar/test/8771", "label": "Survival", "pred": "Survival", "p": 0.9678596606780531, "correct": true}
+{"id": "ledgar/test/2900", "label": "Cooperation", "pred": "Cooperation", "p": 0.9308544668042077, "correct": true}
+{"id": "ledgar/test/5817", "label": "Solvency", "pred": "Solvency", "p": 0.9896357820682802, "correct": true}
+{"id": "ledgar/test/9075", "label": "Existence", "pred": "Existence", "p": 0.772036045303189, "correct": true}
+{"id": "ledgar/test/8960", "label": "Adjustments", "pred": "Adjustments", "p": 0.9981523578826782, "correct": true}
+{"id": "ledgar/test/630", "label": "Participations", "pred": "Assignments", "p": 0.8085192229106032, "correct": false}
+{"id": "ledgar/test/3298", "label": "Agreements", "pred": "Authorizations", "p": 0.7001327069896597, "correct": false}
+{"id": "ledgar/test/4925", "label": "Survival", "pred": "Indemnifications", "p": 0.4350511868078737, "correct": false}
+{"id": "ledgar/test/8314", "label": "Counterparts", "pred": "Counterparts", "p": 0.9996551758816925, "correct": true}
+{"id": "ledgar/test/9056", "label": "Base Salary", "pred": "Base Salary", "p": 0.9999759998200908, "correct": true}
+{"id": "ledgar/test/3501", "label": "Terms", "pred": "Terms", "p": 0.9998632202766041, "correct": true}

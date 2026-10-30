@@ -1,0 +1,219 @@
+{
+ "arc_challenge": {
+  "primitive": "choice",
+  "n": 1000,
+  "errors": 0,
+  "accuracy": 88.5,
+  "ece": 0.05114211408790144,
+  "mae_levels": null,
+  "s_per_item": 0.03073250163253397
+ },
+ "banking77": {
+  "primitive": "choice",
+  "n": 1000,
+  "errors": 0,
+  "accuracy": 91.3,
+  "ece": 0.025764921487766917,
+  "mae_levels": null,
+  "s_per_item": 0.04801876633334905
+ },
+ "boolq": {
+  "primitive": "noul",
+  "n": 1000,
+  "errors": 0,
+  "accuracy": 89.8,
+  "ece": 0.027198347326540223,
+  "mae_levels": null,
+  "s_per_item": 0.02936957026924938
+ },
+ "chaosnli": {
+  "primitive": "choice",
+  "n": 1599,
+  "errors": 0,
+  "accuracy": 64.97811131957474,
+  "ece": 0.14726108565786336,
+  "mae_levels": null,
+  "s_per_item": 0.027497878536964074
+ },
+ "civil_comments": {
+  "primitive": "noul",
+  "n": 2000,
+  "errors": 0,
+  "accuracy": 90.3,
+  "ece": 0.026299587178450788,
+  "mae_levels": null,
+  "s_per_item": 0.027241089868824928
+ },
+ "clinc150": {
+  "primitive": "choice",
+  "n": 1000,
+  "errors": 0,
+  "accuracy": 93.7,
+  "ece": 0.017318010256195986,
+  "mae_levels": null,
+  "s_per_item": 0.058445241280831395
+ },
+ "fever_evidence": {
+  "primitive": "noul",
+  "n": 1000,
+  "errors": 0,
+  "accuracy": 95.5,
+  "ece": 0.02507616379844626,
+  "mae_levels": null,
+  "s_per_item": 0.027347358032129704
+ },
+ "go_emotions": {
+  "primitive": "choice",
+  "n": 1000,
+  "errors": 0,
+  "accuracy": 57.199999999999996,
+  "ece": 0.045132639724890566,
+  "mae_levels": null,
+  "s_per_item": 0.028873987074941397
+ },
+ "helpsteer2_helpfulness": {
+  "primitive": "score",
+  "n": 998,
+  "errors": 0,
+  "bad_lines": 8,
+  "accuracy": 39.278557114228455,
+  "ece": 0.10492322515194556,
+  "mae_levels": 0.9589178356713427,
+  "s_per_item": 0.045171811761435324
+ },
+ "helpsteer2_verbosity": {
+  "primitive": "score",
+  "n": 998,
+  "errors": 0,
+  "bad_lines": 8,
+  "accuracy": 53.807615230460925,
+  "ece": 0.103384153627063,
+  "mae_levels": 0.6342685370741483,
+  "s_per_item": 0.042530919310407256
+ },
+ "ledgar": {
+  "primitive": "choice",
+  "n": 1000,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 78.8,
+  "ece": 0.06776447230303087,
+  "mae_levels": null,
+  "s_per_item": 0.05159906431194395
+ },
+ "massive": {
+  "primitive": "choice",
+  "n": 1000,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 82.89999999999999,
+  "ece": 0.041926773622762974,
+  "mae_levels": null,
+  "s_per_item": 0.05440630979463458
+ },
+ "measuring_hate_speech": {
+  "primitive": "score",
+  "n": 1000,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 49.8,
+  "ece": 0.14579842706436127,
+  "mae_levels": 0.833,
+  "s_per_item": 0.029019457074813546
+ },
+ "mmlu": {
+  "primitive": "choice",
+  "n": 1000,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 66.0,
+  "ece": 0.12964766470971983,
+  "mae_levels": null,
+  "s_per_item": 0.03550504730083048
+ },
+ "mnli": {
+  "primitive": "choice",
+  "n": 1000,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 88.7,
+  "ece": 0.016955859184412732,
+  "mae_levels": null,
+  "s_per_item": 0.042859828499145804
+ },
+ "paws": {
+  "primitive": "noul",
+  "n": 1000,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 86.2,
+  "ece": 0.04894502271999483,
+  "mae_levels": null,
+  "s_per_item": 0.0317024492546916
+ },
+ "sms_spam": {
+  "primitive": "noul",
+  "n": 800,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 96.5,
+  "ece": 0.009388755768230957,
+  "mae_levels": null,
+  "s_per_item": 0.030616884718183426
+ },
+ "sst5": {
+  "primitive": "score",
+  "n": 1000,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 51.4,
+  "ece": 0.0818180257182219,
+  "mae_levels": 0.546,
+  "s_per_item": 0.03300393998809159
+ },
+ "strategyqa_closed": {
+  "primitive": "noul",
+  "n": 687,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 58.22416302765647,
+  "ece": 0.221189297697149,
+  "mae_levels": null,
+  "s_per_item": 0.030537970388495244
+ },
+ "strategyqa_grounded": {
+  "primitive": "noul",
+  "n": 687,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 90.97525473071325,
+  "ece": 0.028542152353532645,
+  "mae_levels": null,
+  "s_per_item": 0.032216611508079404
+ },
+ "stsb": {
+  "primitive": "score",
+  "n": 1000,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 56.10000000000001,
+  "ece": 0.051351097531412856,
+  "mae_levels": 0.481,
+  "s_per_item": 0.03357384497392923
+ },
+ "yelp5": {
+  "primitive": "score",
+  "n": 1000,
+  "errors": 0,
+  "bad_lines": 0,
+  "accuracy": 61.4,
+  "ece": 0.12670521325400375,
+  "mae_levels": 0.421,
+  "s_per_item": 0.036593022734858094
+ },
+ "_mean": {
+  "accuracy": 74.15289551921063,
+  "ece": 0.07016059137381356,
+  "configs": 22
+ }
+}

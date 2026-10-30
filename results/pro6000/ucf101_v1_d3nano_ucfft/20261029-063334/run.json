@@ -1,0 +1,32 @@
+{
+ "name": "ucf101_v1_d3nano_ucfft",
+ "machine": "pro6000",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "started": "2026-10-29T06:33:35.464634+00:00",
+ "finished": "2026-10-29T07:14:49.054942+00:00",
+ "free_memory_gb": 975.4051628112793,
+ "peak_gpu_gb": 4.282632827758789,
+ "load_s": 6.616226623766124,
+ "windows": 12227,
+ "limit_windows": null,
+ "prefetch": 0,
+ "versions": {
+  "python": "3.12.12",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.17.0"
+ },
+ "git_commit": "567975b9c50dfd5e9e1bcbf16f5a6e17abf8bcce",
+ "git_dirty": true,
+ "assets": {
+  "d3-nano": {
+   "revision": "aeb70d4dd53ed25b855c3b0a66394b8fe265db7f",
+   "sha256": {
+    "MODEL_MANIFEST.json": "db2139c5b5b7060f8f95150ec70ca2fe7e69e6bf4249e5766df5388bf35977f2",
+    "config.json": "9caa6ab8956c859c3852328dda6322893a18b30826d3916db91d938d6c74ac4f",
+    "d3_runtime.py": "adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917",
+    "decision_config.json": "9175a0f42d5886def9c8429fdf8b0be58a3c97d106b94520e2ac38fe326302bf",
+    "readout.safetensors": "662e8a26d8016b2d479f1ca66bf64944603316c2b5e074ab7ac3304b8ae045e9"
+   }
+  }
+ }
+}
