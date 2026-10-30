@@ -123,8 +123,8 @@ class D3Floor:
     def encode(self, task: str, record, images, payload) -> Any:
         if task == "replay":  # text prompt via the release's own render (d3_format.render: system + user turn)
             normalized = self.code.normalize_question(payload["question"])
-            text = self.code.render(self.runtime.processor.tokenizer, payload["state"], normalized.rendered,
-                                    self.runtime.codes)
+            text = self.code.render(self.runtime.processor.tokenizer, self.runtime.prompt, payload["state"],
+                                    normalized.rendered, self.runtime.codes)
             return text, [], len(payload["options"])
         text = self.runtime.image_text(self.states[task], self.tables[task][0], len(images))
         return text, images, len(self.tables[task][1])
