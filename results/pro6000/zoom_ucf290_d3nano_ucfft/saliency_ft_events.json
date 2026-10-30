@@ -1,0 +1,42 @@
+{
+ "RoadAccidents010_x264.mp4": {
+  "p_draft": 0.6945143342018127,
+  "p_saliency_crop": 0.3310425579547882,
+  "peak": [
+   0.9375,
+   0.15
+  ]
+ },
+ "RoadAccidents004_x264.mp4": {
+  "p_draft": 0.14335258305072784,
+  "p_saliency_crop": 0.5976294875144958,
+  "peak": [
+   0.9375,
+   0.05
+  ]
+ },
+ "RoadAccidents011_x264.mp4": {
+  "p_draft": 0.14309290051460266,
+  "p_saliency_crop": 0.7199041843414307,
+  "peak": [
+   0.1875,
+   0.95
+  ]
+ },
+ "RoadAccidents122_x264.mp4": {
+  "p_draft": 0.2916688919067383,
+  "p_saliency_crop": 0.5103520750999451,
+  "peak": [
+   0.5625,
+   0.95
+  ]
+ },
+ "Shoplifting037_x264.mp4": {
+  "p_draft": 0.6725756525993347,
+  "p_saliency_crop": 0.45765483379364014,
+  "peak": [
+   0.0625,
+   0.85
+  ]
+ }
+}
