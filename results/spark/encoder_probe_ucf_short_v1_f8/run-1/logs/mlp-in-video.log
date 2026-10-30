@@ -1,0 +1,10 @@
+Uninstalled 1 package in 0.45ms
+Installed 1 package in 2ms
+vjepa2-vitl-raw {'state': 18, 'weight_decay': 0.0, 'steps': 1000, 'train': 1.0, 'val': 0.646, 'test': 0.629, 'oracle_cv': 0.605}
+vjepa2-vitl-residual-past10 {'state': 9, 'weight_decay': 0.001, 'steps': 500, 'train': 1.0, 'val': 0.622, 'test': 0.658, 'oracle_cv': 0.539}
+qwen35-vit-raw {'state': 27, 'weight_decay': 0.01, 'steps': 250, 'train': 0.894, 'val': 0.629, 'test': 0.581, 'oracle_cv': 0.603}
+qwen35-vit-residual-past10 {'state': 27, 'weight_decay': 0.01, 'steps': 500, 'train': 0.999, 'val': 0.579, 'test': 0.598, 'oracle_cv': 0.615}
+qwen35-9b-A-last-raw {'state': 17, 'weight_decay': 0.0, 'steps': 500, 'train': 1.0, 'val': 0.608, 'test': 0.647, 'oracle_cv': 0.614}
+qwen35-9b-A-last-residual-past10 {'state': 8, 'weight_decay': 0.001, 'steps': 1000, 'train': 1.0, 'val': 0.616, 'test': 0.619, 'oracle_cv': 0.669}
+qwen35-9b-A-visual-raw {'state': 11, 'weight_decay': 0.001, 'steps': 500, 'train': 1.0, 'val': 0.66, 'test': 0.649, 'oracle_cv': 0.648}
+qwen35-9b-A-visual-residual-past10 {'state': 13, 'weight_decay': 0.01, 'steps': 1000, 'train': 1.0, 'val': 0.664, 'test': 0.662, 'oracle_cv': 0.678}
