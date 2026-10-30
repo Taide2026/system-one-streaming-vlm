@@ -1,0 +1,53 @@
+# Training floor arm D (2026-10-31, deck p. 61): multi-task mix on qwen3.5-2b. B = mix, C = +KL anchor, D = DPO.
+# Run: scripts/train-floor.py configs/floor_qwen2b_d.yaml
+name: floor_qwen2b_d
+
+data:
+  asset: ucf-crime
+  hivau_json: $S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json
+  n_abnormal: 5000
+  n_normal: 5000
+  n_val: 2000
+  holdout: 0.1
+  seed: 0
+
+tasks:
+  v1:
+    n: 10000
+  c14:
+    n: 5000
+  replay:
+    n: 5000
+    split: train
+    per_config: 400
+
+dpo:
+  beta: 0.1
+
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+backbone:
+  name: qwen_first_token
+  asset: qwen3.5-2b
+
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+
+optim:
+  lr: 1.5e-4
+  head_lr: 1.5e-4
+  warmup: 0.03
+  batch: 8
+  accumulate: 4
+  epochs: 1
+  workers: 6
+  grad_checkpoint: true
