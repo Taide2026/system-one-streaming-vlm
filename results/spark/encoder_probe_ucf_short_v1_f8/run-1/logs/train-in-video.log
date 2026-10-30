@@ -1,0 +1,18 @@
+Uninstalled 1 package in 0.54ms
+Installed 1 package in 2ms
+vjepa2-vitl-raw a0 {'state': 18, 'lam': 0.01, 'train': 0.833, 'val': 0.64, 'test': 0.675, 'oracle': 0.983, 'oracle_cv': 0.609}
+vjepa2-vitl-raw a1 {'state': 18, 'lam': 0.01, 'train': 0.84, 'val': 0.656, 'test': 0.676, 'oracle': 0.993, 'oracle_cv': 0.596}
+vjepa2-vitl-residual-past10 a0 {'state': 9, 'lam': 0.01, 'train': 0.87, 'val': 0.618, 'test': 0.625, 'oracle': 0.999, 'oracle_cv': 0.53}
+vjepa2-vitl-residual-past10 a1 {'state': 18, 'lam': 0.01, 'train': 0.904, 'val': 0.624, 'test': 0.689, 'oracle': 1.0, 'oracle_cv': 0.611}
+qwen35-vit-raw a0 {'state': 27, 'lam': 0.0, 'train': 0.807, 'val': 0.596, 'test': 0.603, 'oracle': 0.949, 'oracle_cv': 0.58}
+qwen35-vit-raw a1 {'state': 4, 'lam': 0.01, 'train': 0.817, 'val': 0.608, 'test': 0.589, 'oracle': 0.973, 'oracle_cv': 0.465}
+qwen35-vit-residual-past10 a0 {'state': 27, 'lam': 0.0, 'train': 0.879, 'val': 0.59, 'test': 0.641, 'oracle': 0.996, 'oracle_cv': 0.596}
+qwen35-vit-residual-past10 a1 {'state': 27, 'lam': 0.0, 'train': 0.865, 'val': 0.593, 'test': 0.642, 'oracle': 0.998, 'oracle_cv': 0.605}
+qwen35-9b-A-last-raw a0 {'state': 17, 'lam': 0.0, 'train': 0.942, 'val': 0.625, 'test': 0.642, 'oracle': 1.0, 'oracle_cv': 0.631}
+qwen35-9b-A-last-raw a1 {'state': 32, 'lam': 0.01, 'train': 0.939, 'val': 0.619, 'test': 0.682, 'oracle': 1.0, 'oracle_cv': 0.603}
+qwen35-9b-A-last-residual-past10 a0 {'state': 8, 'lam': 0.001, 'train': 0.991, 'val': 0.645, 'test': 0.611, 'oracle': 1.0, 'oracle_cv': 0.663}
+qwen35-9b-A-last-residual-past10 a1 {'state': 8, 'lam': 0.001, 'train': 0.994, 'val': 0.641, 'test': 0.605, 'oracle': 1.0, 'oracle_cv': 0.655}
+qwen35-9b-A-visual-raw a0 {'state': 11, 'lam': 0.01, 'train': 0.945, 'val': 0.672, 'test': 0.634, 'oracle': 1.0, 'oracle_cv': 0.645}
+qwen35-9b-A-visual-raw a1 {'state': 11, 'lam': 0.01, 'train': 0.964, 'val': 0.662, 'test': 0.614, 'oracle': 1.0, 'oracle_cv': 0.646}
+qwen35-9b-A-visual-residual-past10 a0 {'state': 13, 'lam': 0.01, 'train': 0.991, 'val': 0.673, 'test': 0.641, 'oracle': 1.0, 'oracle_cv': 0.695}
+qwen35-9b-A-visual-residual-past10 a1 {'state': 13, 'lam': 0.01, 'train': 0.997, 'val': 0.669, 'test': 0.635, 'oracle': 1.0, 'oracle_cv': 0.695}
