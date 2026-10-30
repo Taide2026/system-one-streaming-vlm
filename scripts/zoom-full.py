@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Zoom second pass over every window of an eval run (2026-10-30), so any trigger policy can be scored offline:
+--frac picks the crop size (1/3 default, 1/2 for the wider box).
 
   uv run --frozen python scripts/zoom-full.py --run <eval run dir> --root <ucf-crime asset> --adapter <ft run> --out <jsonl>
 
@@ -34,6 +35,7 @@ def main() -> None:
     ap.add_argument("--adapter", default=None)
     ap.add_argument("--asset", default="d3-nano")
     ap.add_argument("--out", type=Path, required=True)
+    ap.add_argument("--frac", type=float, default=1 / 3, help="crop box side as a fraction of the frame (1/3 or 1/2)")
     args = ap.parse_args()
     man = {v["name"]: v for v in json.loads((args.run / "manifest.json").read_text())}
     rows = [json.loads(l) for l in (args.run / "scores.jsonl").read_text().splitlines() if l.strip()]
@@ -76,7 +78,7 @@ def main() -> None:
             heat = cv2.GaussianBlur(np.sum([np.abs(a - b) for a, b in zip(g[1:], g[:-1])], axis=0), (31, 31), 0)
             y, x = np.unravel_index(int(heat.argmax()), heat.shape)
             H, W = heat.shape
-            h, w = H // 3, W // 3
+            h, w = int(H * args.frac), int(W * args.frac)
             y0, x0 = min(max(y - h // 2, 0), H - h), min(max(x - w // 2, 0), W - w)
             images = [Image.fromarray(cv2.resize(fr[y0:y0 + h, x0:x0 + w], (w * 2, h * 2), interpolation=cv2.INTER_CUBIC))
                       for fr in frames]
