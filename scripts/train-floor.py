@@ -121,9 +121,10 @@ class D3Floor:
         self.option_ids = self.base.option_ids  # v1, for validation
 
     def encode(self, task: str, record, images, payload) -> Any:
-        if task == "replay":
+        if task == "replay":  # text prompt via the release's own render (d3_format.render: system + user turn)
             normalized = self.code.normalize_question(payload["question"])
-            text = self.runtime.image_text(payload["state"], normalized.rendered, 0)
+            text = self.code.render(self.runtime.processor.tokenizer, payload["state"], normalized.rendered,
+                                    self.runtime.codes)
             return text, [], len(payload["options"])
         text = self.runtime.image_text(self.states[task], self.tables[task][0], len(images))
         return text, images, len(self.tables[task][1])
@@ -131,7 +132,11 @@ class D3Floor:
     def collate(self, encoded: list) -> dict[str, Any]:
         texts = [t for t, _, _ in encoded]
         images = [im for _, imgs, _ in encoded for im in imgs]
-        proc = self.runtime.processor(text=texts, images=images or None, padding=True, return_tensors="pt")
+        self.runtime.processor.tokenizer.padding_side = "left"
+        if images:
+            proc = self.runtime.processor(text=texts, images=images, padding=True, return_tensors="pt")
+        else:  # replay: text only, tokenizer alone (the processor insists on images)
+            proc = self.runtime.processor.tokenizer(texts, padding=True, return_tensors="pt")
         return {**dict(proc), "_n_options": encoded[0][2]}
 
     def forward(self, batch: dict[str, Any], reference: bool = False) -> torch.Tensor:
