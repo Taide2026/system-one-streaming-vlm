@@ -1,0 +1,33 @@
+Uninstalled 1 package in 1ms
+Installed 1 package in 2ms
+windows without a previous window: train 390, test 117
+state 0 done
+state 1 done
+state 2 done
+state 3 done
+state 4 done
+state 5 done
+state 6 done
+state 7 done
+state 8 done
+state 9 done
+state 10 done
+state 11 done
+state 12 done
+state 13 done
+state 14 done
+state 15 done
+state 16 done
+state 17 done
+state 18 done
+state 19 done
+state 20 done
+state 21 done
+state 22 done
+state 23 done
+state 24 done
+vjepa2-vitl/x state 18 val 0.640         all 0.813  in_video 0.668  per-video median 0.890  before 0.823  during 0.914  after 0.844  gap 0.091
+vjepa2-vitl/diff state 8 val 0.532       all 0.561  in_video 0.562  per-video median 0.582  before 0.504  during 0.556  after 0.485  gap 0.051
+vjepa2-vitl/x_diff state 18 val 0.655    all 0.737  in_video 0.615  per-video median 0.796  before 0.693  during 0.829  after 0.750  gap 0.136
+vjepa2-vitl/change_l2 state 0 val 0.588  all 0.653  in_video 0.639  per-video median 0.671  before 0.473  during 0.662  after 0.521  gap 0.189
+vjepa2-vitl/change_cos state 0 val 0.617 all 0.609  in_video 0.621  per-video median 0.704  before 0.428  during 0.599  after 0.496  gap 0.171

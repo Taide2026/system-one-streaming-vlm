@@ -1,0 +1,81 @@
+{
+  "features": "/home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8/vjepa2-vitl/run-1",
+  "kind": "patch_mean",
+  "results": {
+    "x": {
+      "state": 18,
+      "lam": 0.01,
+      "validation_in_video": 0.6402714293775746,
+      "all": 0.81303755223356,
+      "in_video": 0.6678205118545267,
+      "per_video_median": 0.8899208206762611,
+      "per_video_below_half": 5,
+      "phase": {
+        "before": 0.8233701868089973,
+        "during": 0.9139330393054285,
+        "after": 0.8437701299171281
+      },
+      "during_minus_before": 0.09056285249643115
+    },
+    "diff": {
+      "state": 8,
+      "lam": 0.0001,
+      "validation_in_video": 0.5321617008069521,
+      "all": 0.5608811878013994,
+      "in_video": 0.5621874126753822,
+      "per_video_median": 0.5816345041837684,
+      "per_video_below_half": 16,
+      "phase": {
+        "before": 0.5043546405727115,
+        "during": 0.5555795955729383,
+        "after": 0.48516266782470235
+      },
+      "during_minus_before": 0.051224955000226835
+    },
+    "x_diff": {
+      "state": 18,
+      "lam": 0.0001,
+      "validation_in_video": 0.6547052226172337,
+      "all": 0.7368533989974756,
+      "in_video": 0.6145979261107382,
+      "per_video_median": 0.7964743589743589,
+      "per_video_below_half": 10,
+      "phase": {
+        "before": 0.693387554538908,
+        "during": 0.8291365010679316,
+        "after": 0.7504614048420367
+      },
+      "during_minus_before": 0.13574894652902358
+    },
+    "change_l2": {
+      "state": 0,
+      "lam": null,
+      "validation_in_video": 0.5881616443767281,
+      "all": 0.6525045962646465,
+      "in_video": 0.6388623627707907,
+      "per_video_median": 0.6708228475558606,
+      "per_video_below_half": 10,
+      "phase": {
+        "before": 0.4729021053077477,
+        "during": 0.6617070261573882,
+        "after": 0.5207505518763796
+      },
+      "during_minus_before": 0.1888049208496405
+    },
+    "change_cos": {
+      "state": 0,
+      "lam": null,
+      "validation_in_video": 0.6173572315332092,
+      "all": 0.6087030744341216,
+      "in_video": 0.6211643915720216,
+      "per_video_median": 0.7041202041202042,
+      "per_video_below_half": 10,
+      "phase": {
+        "before": 0.4275575041301309,
+        "during": 0.5989847715736041,
+        "after": 0.4959975391741758
+      },
+      "during_minus_before": 0.1714272674434732
+    }
+  }
+}

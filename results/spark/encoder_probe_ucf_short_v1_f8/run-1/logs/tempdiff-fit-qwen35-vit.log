@@ -1,0 +1,36 @@
+Uninstalled 1 package in 0.52ms
+Installed 1 package in 2ms
+windows without a previous window: train 390, test 117
+state 0 done
+state 1 done
+state 2 done
+state 3 done
+state 4 done
+state 5 done
+state 6 done
+state 7 done
+state 8 done
+state 9 done
+state 10 done
+state 11 done
+state 12 done
+state 13 done
+state 14 done
+state 15 done
+state 16 done
+state 17 done
+state 18 done
+state 19 done
+state 20 done
+state 21 done
+state 22 done
+state 23 done
+state 24 done
+state 25 done
+state 26 done
+state 27 done
+qwen35-vit/x state 27 val 0.596          all 0.803  in_video 0.622  per-video median 0.743  before 0.855  during 0.918  after 0.885  gap 0.063
+qwen35-vit/diff state 27 val 0.531       all 0.591  in_video 0.591  per-video median 0.617  before 0.494  during 0.590  after 0.492  gap 0.095
+qwen35-vit/x_diff state 27 val 0.599     all 0.806  in_video 0.624  per-video median 0.764  before 0.856  during 0.923  after 0.881  gap 0.068
+qwen35-vit/change_l2 state 17 val 0.592  all 0.690  in_video 0.643  per-video median 0.649  before 0.510  during 0.728  after 0.611  gap 0.218
+qwen35-vit/change_cos state 21 val 0.601 all 0.688  in_video 0.636  per-video median 0.649  before 0.513  during 0.730  after 0.616  gap 0.217
