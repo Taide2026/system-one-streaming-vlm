@@ -1,0 +1,66 @@
+{
+  "features": "/home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8/vjepa2-vitl/run-1",
+  "kind": "patch_mean",
+  "results": {
+    "bce": {
+      "state": 18,
+      "lam": 0.01,
+      "validation_in_video": 0.6402714293775746,
+      "all": 0.81303755223356,
+      "in_video": 0.6678205118545267,
+      "per_video_median": 0.8899208206762611,
+      "per_video_below_half": 5,
+      "phase": {
+        "before": 0.8233701868089973,
+        "during": 0.9139330393054285,
+        "after": 0.8437701299171281
+      },
+      "during_minus_before": 0.09056285249643115
+    },
+    "poe_c0.5": {
+      "state": 18,
+      "lam": 0.01,
+      "validation_in_video": 0.6632843801139889,
+      "all": 0.7853215392815088,
+      "in_video": 0.6825473758289207,
+      "per_video_median": 0.875020834490805,
+      "per_video_below_half": 6,
+      "phase": {
+        "before": 0.6995848688948193,
+        "during": 0.8585614823444565,
+        "after": 0.7435855679803134
+      },
+      "during_minus_before": 0.1589766134496372
+    },
+    "poe_c1": {
+      "state": 18,
+      "lam": 0.01,
+      "validation_in_video": 0.6650654590598726,
+      "all": 0.6980955566832782,
+      "in_video": 0.683632626204354,
+      "per_video_median": 0.8704733495128277,
+      "per_video_below_half": 6,
+      "phase": {
+        "before": 0.4429406531960859,
+        "during": 0.7076641424648414,
+        "after": 0.5502189411211232
+      },
+      "during_minus_before": 0.26472348926875555
+    },
+    "poe_c2": {
+      "state": 22,
+      "lam": 0.01,
+      "validation_in_video": 0.6591085435359177,
+      "all": 0.4821334463942205,
+      "in_video": 0.623129053286394,
+      "per_video_median": 0.8202928391672386,
+      "per_video_below_half": 7,
+      "phase": {
+        "before": 0.2329775066717499,
+        "during": 0.375501373054839,
+        "after": 0.2822639597582601
+      },
+      "during_minus_before": 0.1425238663830891
+    }
+  }
+}

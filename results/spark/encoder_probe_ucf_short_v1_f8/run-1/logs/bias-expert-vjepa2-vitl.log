@@ -1,0 +1,31 @@
+Uninstalled 1 package in 0.98ms
+Installed 1 package in 3ms
+state 0 done
+state 1 done
+state 2 done
+state 3 done
+state 4 done
+state 5 done
+state 6 done
+state 7 done
+state 8 done
+state 9 done
+state 10 done
+state 11 done
+state 12 done
+state 13 done
+state 14 done
+state 15 done
+state 16 done
+state 17 done
+state 18 done
+state 19 done
+state 20 done
+state 21 done
+state 22 done
+state 23 done
+state 24 done
+vjepa2-vitl/bce state 18 val 0.640       all 0.813  in_video 0.668  per-video median 0.890  before 0.823  during 0.914  after 0.844  gap 0.091
+vjepa2-vitl/poe_c0.5 state 18 val 0.663  all 0.785  in_video 0.683  per-video median 0.875  before 0.700  during 0.859  after 0.744  gap 0.159
+vjepa2-vitl/poe_c1 state 18 val 0.665    all 0.698  in_video 0.684  per-video median 0.870  before 0.443  during 0.708  after 0.550  gap 0.265
+vjepa2-vitl/poe_c2 state 22 val 0.659    all 0.482  in_video 0.623  per-video median 0.820  before 0.233  during 0.376  after 0.282  gap 0.143
