@@ -83,7 +83,10 @@ def replay_items(n_per_config: int, split: str, seed: int) -> list[dict]:
                 except json.JSONDecodeError:
                     pass
             if q["type"] == "noul":
-                options, label = ["Yes", "No"], ("Yes" if str(r["label"]) == "1" else "No")
+                # d3 renders noul itself with the release's fixed option order ("false", "true"): option 0 must be
+                # No and option 1 Yes, or every noul target is inverted (found 2026-10-31: jev-bench binary configs
+                # at 1-12 % after floor B, anti-learned).
+                options, label = ["No", "Yes"], ("Yes" if str(r["label"]) == "1" else "No")
             elif q["type"] == "choice":
                 options = list(q["criteria"])
                 label = str(r["label"])
