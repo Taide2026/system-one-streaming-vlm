@@ -1,0 +1,41 @@
+Uninstalled 1 package in 0.86ms
+Installed 1 package in 3ms
+before windows: 1331 of 5818 anomaly-video windows
+state 0 done
+state 1 done
+state 2 done
+state 3 done
+state 4 done
+state 5 done
+state 6 done
+state 7 done
+state 8 done
+state 9 done
+state 10 done
+state 11 done
+state 12 done
+state 13 done
+state 14 done
+state 15 done
+state 16 done
+state 17 done
+state 18 done
+state 19 done
+state 20 done
+state 21 done
+state 22 done
+state 23 done
+state 24 done
+state 25 done
+state 26 done
+state 27 done
+qwen35-vit-raw/patch_mean/bce state 27: all 0.803  in_video 0.622  per-video median 0.743  below 0.5 8/49
+qwen35-vit-raw/patch_mean/before_a1 state 14: all 0.760  in_video 0.544  per-video median 0.722  below 0.5 15/49
+qwen35-vit-raw/patch_mean/before_a4 state 14: all 0.706  in_video 0.511  per-video median 0.685  below 0.5 16/49
+qwen35-vit-raw/patch_mean/jtt_up5 state 27: all 0.714  in_video 0.585  per-video median 0.708  below 0.5 11/49
+qwen35-vit-raw/patch_mean/jtt_up20 state  9: all 0.486  in_video 0.508  per-video median 0.619  below 0.5 18/49
+qwen35-vit-raw/patch_mean/bce phase vs normal {'before': 0.855, 'during': 0.918, 'after': 0.885}  during-before 0.063
+qwen35-vit-raw/patch_mean/before_a1 phase vs normal {'before': 0.845, 'during': 0.906, 'after': 0.887}  during-before 0.062
+qwen35-vit-raw/patch_mean/before_a4 phase vs normal {'before': 0.784, 'during': 0.839, 'after': 0.841}  during-before 0.055
+qwen35-vit-raw/patch_mean/jtt_up5 phase vs normal {'before': 0.72, 'during': 0.784, 'after': 0.761}  during-before 0.064
+qwen35-vit-raw/patch_mean/jtt_up20 phase vs normal {'before': 0.461, 'during': 0.48, 'after': 0.465}  during-before 0.019

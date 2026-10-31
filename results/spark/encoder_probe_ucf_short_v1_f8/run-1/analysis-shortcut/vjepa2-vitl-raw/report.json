@@ -1,0 +1,112 @@
+{
+  "bce": {
+    "before": {
+      "auc_vs_normal": 0.8233701868089973,
+      "windows": 258,
+      "videos": 47
+    },
+    "during": {
+      "auc_vs_normal": 0.9139330393054285,
+      "windows": 197,
+      "videos": 49
+    },
+    "between": {
+      "auc_vs_normal": 0.8495446265938069,
+      "windows": 12,
+      "videos": 3
+    },
+    "after": {
+      "auc_vs_normal": 0.8437701299171281,
+      "windows": 302,
+      "videos": 41
+    }
+  },
+  "before_a1": {
+    "before": {
+      "auc_vs_normal": 0.7248358537721862,
+      "windows": 258,
+      "videos": 47
+    },
+    "during": {
+      "auc_vs_normal": 0.8681589969765056,
+      "windows": 197,
+      "videos": 49
+    },
+    "between": {
+      "auc_vs_normal": 0.7777777777777778,
+      "windows": 12,
+      "videos": 3
+    },
+    "after": {
+      "auc_vs_normal": 0.7704483769406145,
+      "windows": 302,
+      "videos": 41
+    }
+  },
+  "before_a4": {
+    "before": {
+      "auc_vs_normal": 0.6569788622018893,
+      "windows": 258,
+      "videos": 47
+    },
+    "during": {
+      "auc_vs_normal": 0.8255582369421098,
+      "windows": 197,
+      "videos": 49
+    },
+    "between": {
+      "auc_vs_normal": 0.7224043715846995,
+      "windows": 12,
+      "videos": 3
+    },
+    "after": {
+      "auc_vs_normal": 0.7179386964860854,
+      "windows": 302,
+      "videos": 41
+    }
+  },
+  "jtt_up5": {
+    "before": {
+      "auc_vs_normal": 0.5258143770915407,
+      "windows": 258,
+      "videos": 47
+    },
+    "during": {
+      "auc_vs_normal": 0.6162991317855261,
+      "windows": 197,
+      "videos": 49
+    },
+    "between": {
+      "auc_vs_normal": 0.6724043715846995,
+      "windows": 12,
+      "videos": 3
+    },
+    "after": {
+      "auc_vs_normal": 0.522013534542033,
+      "windows": 302,
+      "videos": 41
+    }
+  },
+  "jtt_up20": {
+    "before": {
+      "auc_vs_normal": 0.332126064302961,
+      "windows": 258,
+      "videos": 47
+    },
+    "during": {
+      "auc_vs_normal": 0.3805997059720951,
+      "windows": 197,
+      "videos": 49
+    },
+    "between": {
+      "auc_vs_normal": 0.31930783242258653,
+      "windows": 12,
+      "videos": 3
+    },
+    "after": {
+      "auc_vs_normal": 0.3631455144211631,
+      "windows": 302,
+      "videos": 41
+    }
+  }
+}

@@ -1,0 +1,38 @@
+Uninstalled 1 package in 0.83ms
+Installed 1 package in 3ms
+before windows: 1331 of 5818 anomaly-video windows
+state 0 done
+state 1 done
+state 2 done
+state 3 done
+state 4 done
+state 5 done
+state 6 done
+state 7 done
+state 8 done
+state 9 done
+state 10 done
+state 11 done
+state 12 done
+state 13 done
+state 14 done
+state 15 done
+state 16 done
+state 17 done
+state 18 done
+state 19 done
+state 20 done
+state 21 done
+state 22 done
+state 23 done
+state 24 done
+vjepa2-vitl-raw/patch_mean/bce state 18: all 0.813  in_video 0.668  per-video median 0.890  below 0.5 5/49
+vjepa2-vitl-raw/patch_mean/before_a1 state 18: all 0.778  in_video 0.656  per-video median 0.864  below 0.5 8/49
+vjepa2-vitl-raw/patch_mean/before_a4 state 18: all 0.743  in_video 0.638  per-video median 0.855  below 0.5 8/49
+vjepa2-vitl-raw/patch_mean/jtt_up5 state 20: all 0.599  in_video 0.581  per-video median 0.752  below 0.5 11/49
+vjepa2-vitl-raw/patch_mean/jtt_up20 state 20: all 0.435  in_video 0.527  per-video median 0.655  below 0.5 16/49
+vjepa2-vitl-raw/patch_mean/bce phase vs normal {'before': 0.823, 'during': 0.914, 'after': 0.844}  during-before 0.091
+vjepa2-vitl-raw/patch_mean/before_a1 phase vs normal {'before': 0.725, 'during': 0.868, 'after': 0.77}  during-before 0.143
+vjepa2-vitl-raw/patch_mean/before_a4 phase vs normal {'before': 0.657, 'during': 0.826, 'after': 0.718}  during-before 0.169
+vjepa2-vitl-raw/patch_mean/jtt_up5 phase vs normal {'before': 0.526, 'during': 0.616, 'after': 0.522}  during-before 0.090
+vjepa2-vitl-raw/patch_mean/jtt_up20 phase vs normal {'before': 0.332, 'during': 0.381, 'after': 0.363}  during-before 0.048
