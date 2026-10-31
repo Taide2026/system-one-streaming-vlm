@@ -1,0 +1,30 @@
+Uninstalled 1 package in 1ms
+Installed 1 package in 4ms
+short videos 117, held-out videos 173
+zero-shot qwen3_5_9b w0                  all 0.822  in_video 0.732  per-video median 0.807  before 0.709  during 0.873  after 0.756  gap 0.164
+zero-shot qwen3_5_9b w0.2                all 0.821  in_video 0.735  per-video median 0.819  before 0.686  during 0.870  after 0.741  gap 0.184
+zero-shot qwen3_5_9b w0.3 (selected)     all 0.818  in_video 0.735  per-video median 0.810  before 0.672  during 0.865  after 0.730  gap 0.194
+zero-shot d3_flash w0                    all 0.854  in_video 0.735  per-video median 0.817  before 0.775  during 0.922  after 0.845  gap 0.146
+zero-shot d3_flash w0.2 (selected)       all 0.854  in_video 0.739  per-video median 0.826  before 0.761  during 0.919  after 0.833  gap 0.157
+zero-shot clef_flash w0                  all 0.840  in_video 0.729  per-video median 0.788  before 0.769  during 0.902  after 0.789  gap 0.133
+zero-shot clef_flash w0.2                all 0.838  in_video 0.735  per-video median 0.811  before 0.745  during 0.896  after 0.765  gap 0.151
+zero-shot clef_flash w0.3 (selected)     all 0.834  in_video 0.735  per-video median 0.814  before 0.729  during 0.890  after 0.752  gap 0.161
+fine-tune qwen w0                        all 0.897  in_video 0.734  per-video median 0.830  before 0.956  during 0.990  after 0.968  gap 0.034
+fine-tune qwen w0.1 (selected)           all 0.897  in_video 0.737  per-video median 0.809  before 0.954  during 0.988  after 0.966  gap 0.035
+fine-tune qwen w0.2                      all 0.893  in_video 0.729  per-video median 0.796  before 0.950  during 0.986  after 0.963  gap 0.036
+fine-tune d3flash w0 (selected)          all 0.894  in_video 0.731  per-video median 0.847  before 0.954  during 0.987  after 0.963  gap 0.032
+fine-tune d3flash w0.2                   all 0.892  in_video 0.731  per-video median 0.815  before 0.947  during 0.983  after 0.957  gap 0.036
+fine-tune clef w0                        all 0.880  in_video 0.702  per-video median 0.820  before 0.946  during 0.981  after 0.958  gap 0.034
+fine-tune clef w0.2 (selected)           all 0.878  in_video 0.703  per-video median 0.808  before 0.938  during 0.977  after 0.954  gap 0.039
+fine-tune clef_hard w0                   all 0.890  in_video 0.718  per-video median 0.805  before 0.945  during 0.986  after 0.960  gap 0.042
+fine-tune clef_hard w0.1 (selected)      all 0.892  in_video 0.727  per-video median 0.802  before 0.935  during 0.985  after 0.954  gap 0.049
+fine-tune clef_hard w0.2                 all 0.889  in_video 0.725  per-video median 0.794  before 0.929  during 0.982  after 0.951  gap 0.054
+fine-tune d3nano w0                      all 0.880  in_video 0.698  per-video median 0.775  before 0.954  during 0.983  after 0.963  gap 0.030
+fine-tune d3nano w0.2 (selected)         all 0.881  in_video 0.705  per-video median 0.784  before 0.949  during 0.980  after 0.959  gap 0.031
+fine-tune d3nano_full w0                 all 0.884  in_video 0.709  per-video median 0.781  before 0.946  during 0.982  after 0.953  gap 0.036
+fine-tune d3nano_full w0.2 (selected)    all 0.882  in_video 0.714  per-video median 0.801  before 0.938  during 0.977  after 0.947  gap 0.039
+fine-tune d3nano_hard w0                 all 0.892  in_video 0.726  per-video median 0.779  before 0.964  during 0.987  after 0.972  gap 0.022
+fine-tune d3nano_hard w0.1 (selected)    all 0.892  in_video 0.727  per-video median 0.777  before 0.962  during 0.985  after 0.970  gap 0.023
+fine-tune d3nano_hard w0.2               all 0.887  in_video 0.718  per-video median 0.787  before 0.957  during 0.982  after 0.966  gap 0.025
+fine-tune d3nano_hardneg w0              all 0.872  in_video 0.706  per-video median 0.801  before 0.914  during 0.965  after 0.918  gap 0.050
+fine-tune d3nano_hardneg w0.2 (selected) all 0.873  in_video 0.714  per-video median 0.800  before 0.908  during 0.962  after 0.914  gap 0.053
