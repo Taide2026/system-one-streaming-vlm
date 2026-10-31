@@ -1,0 +1,13 @@
+Uninstalled 1 package in 0.37ms
+Installed 1 package in 2ms
+train_anomaly: 50/195 videos
+train_anomaly: 100/195 videos
+train_anomaly: 150/195 videos
+train_anomaly: 5818 windows written
+train_normal: 50/195 videos
+train_normal: 100/195 videos
+train_normal: 150/195 videos
+train_normal: 5270 windows written
+test: 50/117 videos
+test: 100/117 videos
+test: 1684 windows written

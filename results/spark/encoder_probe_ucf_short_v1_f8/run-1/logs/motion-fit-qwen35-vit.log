@@ -1,0 +1,36 @@
+Uninstalled 1 package in 0.53ms
+Installed 1 package in 2ms
+state 0 done
+state 1 done
+state 2 done
+state 3 done
+state 4 done
+state 5 done
+state 6 done
+state 7 done
+state 8 done
+state 9 done
+state 10 done
+state 11 done
+state 12 done
+state 13 done
+state 14 done
+state 15 done
+state 16 done
+state 17 done
+state 18 done
+state 19 done
+state 20 done
+state 21 done
+state 22 done
+state 23 done
+state 24 done
+state 25 done
+state 26 done
+state 27 done
+qwen35-vit/flow_mean state None val 0.598 all 0.644  in_video 0.659  per-video median 0.744  before 0.479  during 0.620  after 0.478  gap 0.141
+qwen35-vit/diff_mean state None val 0.598 all 0.642  in_video 0.657  per-video median 0.755  before 0.483  during 0.621  after 0.448  gap 0.138
+qwen35-vit/motion state None val 0.566   all 0.682  in_video 0.634  per-video median 0.673  before 0.589  during 0.705  after 0.605  gap 0.115
+qwen35-vit/d_motion state None val 0.574 all 0.688  in_video 0.633  per-video median 0.709  before 0.599  during 0.721  after 0.622  gap 0.122
+qwen35-vit/x state 27 val 0.596          all 0.803  in_video 0.622  per-video median 0.743  before 0.855  during 0.918  after 0.885  gap 0.063
+qwen35-vit/x_motion state 4 val 0.607    all 0.810  in_video 0.629  per-video median 0.688  before 0.876  during 0.925  after 0.839  gap 0.049

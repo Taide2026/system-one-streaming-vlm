@@ -1,0 +1,97 @@
+{
+  "features": "/home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8/vjepa2-vitl/run-1",
+  "kind": "patch_mean",
+  "motion": "/home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8_motion/run-1",
+  "results": {
+    "flow_mean": {
+      "state": null,
+      "lam": null,
+      "validation_in_video": 0.5976842446814514,
+      "all": 0.6438630429397668,
+      "in_video": 0.658506431951198,
+      "per_video_median": 0.7440326393655151,
+      "per_video_below_half": 9,
+      "phase": {
+        "before": 0.4788579658575846,
+        "during": 0.6196554880585837,
+        "after": 0.47757029638475734
+      },
+      "during_minus_before": 0.14079752220099911
+    },
+    "diff_mean": {
+      "state": null,
+      "lam": null,
+      "validation_in_video": 0.5983755149257942,
+      "all": 0.6416586236545212,
+      "in_video": 0.6571909548903843,
+      "per_video_median": 0.7553079305025913,
+      "per_video_below_half": 5,
+      "phase": {
+        "before": 0.4826915745329775,
+        "during": 0.6210257690494022,
+        "after": 0.4484818875981616
+      },
+      "during_minus_before": 0.1383341945164247
+    },
+    "motion": {
+      "state": null,
+      "lam": 0.01,
+      "validation_in_video": 0.5662138141188421,
+      "all": 0.6817513843574926,
+      "in_video": 0.6335158257459536,
+      "per_video_median": 0.6726763019621486,
+      "per_video_below_half": 17,
+      "phase": {
+        "before": 0.5894649891981192,
+        "during": 0.7045796233114199,
+        "after": 0.6048818441718236
+      },
+      "during_minus_before": 0.1151146341133007
+    },
+    "d_motion": {
+      "state": null,
+      "lam": 0.01,
+      "validation_in_video": 0.5736026465775069,
+      "all": 0.6877298012673935,
+      "in_video": 0.6333680438735988,
+      "per_video_median": 0.7091529306309446,
+      "per_video_below_half": 18,
+      "phase": {
+        "before": 0.5986614139873766,
+        "during": 0.7207067765110537,
+        "after": 0.6216842181449715
+      },
+      "during_minus_before": 0.12204536252367715
+    },
+    "x": {
+      "state": 18,
+      "lam": 0.01,
+      "validation_in_video": 0.6402714293775746,
+      "all": 0.81303755223356,
+      "in_video": 0.6678205118545267,
+      "per_video_median": 0.8899208206762611,
+      "per_video_below_half": 5,
+      "phase": {
+        "before": 0.8233701868089973,
+        "during": 0.9139330393054285,
+        "after": 0.8437701299171281
+      },
+      "during_minus_before": 0.09056285249643115
+    },
+    "x_motion": {
+      "state": 18,
+      "lam": 0.01,
+      "validation_in_video": 0.6376192088482591,
+      "all": 0.8206265595922221,
+      "in_video": 0.6766326429845124,
+      "per_video_median": 0.8601834474701401,
+      "per_video_below_half": 6,
+      "phase": {
+        "before": 0.8200449019358664,
+        "during": 0.9201631022717817,
+        "after": 0.8464118988166323
+      },
+      "during_minus_before": 0.10011820033591523
+    }
+  }
+}
