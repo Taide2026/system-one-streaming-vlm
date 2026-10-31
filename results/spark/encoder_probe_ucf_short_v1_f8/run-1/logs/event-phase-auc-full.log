@@ -1,0 +1,14 @@
+Uninstalled 1 package in 0.72ms
+Installed 1 package in 3ms
+source                                     before           during          between            after   (AUC vs normal, windows)
+zero-shot qwen3_5_9b                 0.716 (2973)     0.879 (1552)     0.650 ( 183)     0.766 (2936)
+zero-shot d3_flash                   0.781 (2973)     0.926 (1552)     0.768 ( 183)     0.851 (2936)
+zero-shot clef_flash                 0.773 (2973)     0.905 (1552)     0.776 ( 183)     0.797 (2936)
+fine-tune qwen                       0.954 (2973)     0.987 (1552)     0.983 ( 183)     0.967 (2936)
+fine-tune d3flash                    0.952 (2973)     0.984 (1552)     0.977 ( 183)     0.962 (2936)
+fine-tune clef                       0.947 (2973)     0.979 (1552)     0.980 ( 183)     0.958 (2936)
+fine-tune clef_hard                  0.943 (2973)     0.984 (1552)     0.987 ( 183)     0.959 (2936)
+fine-tune d3nano                     0.953 (2973)     0.982 (1552)     0.975 ( 183)     0.962 (2936)
+fine-tune d3nano_full                0.945 (2973)     0.981 (1552)     0.969 ( 183)     0.953 (2936)
+fine-tune d3nano_hard                0.963 (2973)     0.986 (1552)     0.980 ( 183)     0.971 (2936)
+fine-tune d3nano_hardneg             0.916 (2973)     0.964 (1552)     0.917 ( 183)     0.921 (2936)

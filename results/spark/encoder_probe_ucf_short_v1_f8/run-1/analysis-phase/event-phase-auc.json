@@ -1,0 +1,112 @@
+{
+  "qwen35-vit/patch_mean/mil": {
+    "before": {
+      "auc_vs_normal": 0.9315203117719321,
+      "windows": 258,
+      "videos": 47
+    },
+    "during": {
+      "auc_vs_normal": 0.9642783834012926,
+      "windows": 197,
+      "videos": 49
+    },
+    "between": {
+      "auc_vs_normal": 0.9900728597449909,
+      "windows": 12,
+      "videos": 3
+    },
+    "after": {
+      "auc_vs_normal": 0.9463720913400644,
+      "windows": 302,
+      "videos": 41
+    }
+  },
+  "qwen35-vit/patch_mean/holmes": {
+    "before": {
+      "auc_vs_normal": 0.8989367560469352,
+      "windows": 258,
+      "videos": 47
+    },
+    "during": {
+      "auc_vs_normal": 0.9245679731491498,
+      "windows": 197,
+      "videos": 49
+    },
+    "between": {
+      "auc_vs_normal": 1.0,
+      "windows": 12,
+      "videos": 3
+    },
+    "after": {
+      "auc_vs_normal": 0.8734809828827851,
+      "windows": 302,
+      "videos": 41
+    }
+  },
+  "vjepa2-vitl/patch_mean/mil": {
+    "before": {
+      "auc_vs_normal": 0.9481128478841022,
+      "windows": 258,
+      "videos": 47
+    },
+    "during": {
+      "auc_vs_normal": 0.9678843860087099,
+      "windows": 197,
+      "videos": 49
+    },
+    "between": {
+      "auc_vs_normal": 0.9997267759562841,
+      "windows": 12,
+      "videos": 3
+    },
+    "after": {
+      "auc_vs_normal": 0.9550392646473419,
+      "windows": 302,
+      "videos": 41
+    }
+  },
+  "vjepa2-vitl/patch_mean/holmes": {
+    "before": {
+      "auc_vs_normal": 0.8233701868089973,
+      "windows": 258,
+      "videos": 47
+    },
+    "during": {
+      "auc_vs_normal": 0.9139330393054285,
+      "windows": 197,
+      "videos": 49
+    },
+    "between": {
+      "auc_vs_normal": 0.8495446265938069,
+      "windows": 12,
+      "videos": 3
+    },
+    "after": {
+      "auc_vs_normal": 0.8437701299171281,
+      "windows": 302,
+      "videos": 41
+    }
+  },
+  "d3-flash/p_yes": {
+    "before": {
+      "auc_vs_normal": 0.7999788198415724,
+      "windows": 258,
+      "videos": 47
+    },
+    "during": {
+      "auc_vs_normal": 0.9378824443149982,
+      "windows": 197,
+      "videos": 49
+    },
+    "between": {
+      "auc_vs_normal": 0.9606557377049181,
+      "windows": 12,
+      "videos": 3
+    },
+    "after": {
+      "auc_vs_normal": 0.8632359859588173,
+      "windows": 302,
+      "videos": 41
+    }
+  }
+}

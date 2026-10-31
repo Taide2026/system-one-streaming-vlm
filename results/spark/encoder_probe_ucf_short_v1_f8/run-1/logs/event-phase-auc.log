@@ -1,0 +1,8 @@
+Uninstalled 1 package in 0.95ms
+Installed 1 package in 2ms
+source                                     before           during          between            after   (AUC vs normal, windows)
+qwen35-vit/patch_mean/mil            0.932 ( 258)     0.964 ( 197)     0.990 (  12)     0.946 ( 302)
+qwen35-vit/patch_mean/holmes         0.899 ( 258)     0.925 ( 197)     1.000 (  12)     0.873 ( 302)
+vjepa2-vitl/patch_mean/mil           0.948 ( 258)     0.968 ( 197)     1.000 (  12)     0.955 ( 302)
+vjepa2-vitl/patch_mean/holmes        0.823 ( 258)     0.914 ( 197)     0.850 (  12)     0.844 ( 302)
+d3-flash/p_yes                       0.800 ( 258)     0.938 ( 197)     0.961 (  12)     0.863 ( 302)
