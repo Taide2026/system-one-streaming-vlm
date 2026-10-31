@@ -1,0 +1,20 @@
+Uninstalled 1 package in 0.83ms
+Installed 1 package in 2ms
+gamma 0.3 done
+gamma 1.0 done
+qwen35-vit/head {} val 0.758             all 0.803  in_video 0.622  per-video median 0.743  before 0.855  during 0.918  after 0.885  gap 0.063
+qwen35-vit/flow {} val 0.599             all 0.644  in_video 0.659  per-video median 0.744  before 0.479  during 0.620  after 0.478  gap 0.141
+qwen35-vit/fusion {'w': 0.0} val 0.758   all 0.803  in_video 0.622  per-video median 0.743  before 0.855  during 0.918  after 0.885  gap 0.063
+qwen35-vit/anchor_dist {'gamma': 0.3} val 0.638 all 0.673  in_video 0.532  per-video median 0.539  before 0.751  during 0.763  after 0.696  gap 0.013
+qwen35-vit/head_anchor {'gamma': 1.0, 'lam': 0.25} val 0.751 all 0.794  in_video 0.604  per-video median 0.727  before 0.866  during 0.915  after 0.874  gap 0.049
+  fusion w 0.0 (test curve) val 0.758    all 0.803  in_video 0.622  per-video median 0.743  before 0.855  during 0.918  after 0.885  gap 0.063
+  fusion w 0.1 (test curve) val 0.756    all 0.807  in_video 0.635  per-video median 0.759  before 0.846  during 0.915  after 0.876  gap 0.069
+  fusion w 0.2 (test curve) val 0.750    all 0.806  in_video 0.644  per-video median 0.759  before 0.831  during 0.908  after 0.862  gap 0.076
+  fusion w 0.3 (test curve) val 0.740    all 0.802  in_video 0.652  per-video median 0.787  before 0.812  during 0.894  after 0.838  gap 0.081
+  fusion w 0.4 (test curve) val 0.724    all 0.791  in_video 0.657  per-video median 0.787  before 0.785  during 0.872  after 0.807  gap 0.087
+  fusion w 0.5 (test curve) val 0.708    all 0.777  in_video 0.660  per-video median 0.808  before 0.752  during 0.845  after 0.770  gap 0.093
+  fusion w 0.6 (test curve) val 0.690    all 0.759  in_video 0.664  per-video median 0.800  before 0.713  during 0.812  after 0.727  gap 0.100
+  fusion w 0.7 (test curve) val 0.668    all 0.739  in_video 0.666  per-video median 0.761  before 0.667  during 0.775  after 0.679  gap 0.108
+  fusion w 0.8 (test curve) val 0.646    all 0.714  in_video 0.668  per-video median 0.744  before 0.616  during 0.731  after 0.623  gap 0.116
+  fusion w 0.9 (test curve) val 0.624    all 0.683  in_video 0.666  per-video median 0.719  before 0.557  during 0.681  after 0.559  gap 0.124
+  fusion w 1.0 (test curve) val 0.599    all 0.644  in_video 0.659  per-video median 0.744  before 0.479  during 0.620  after 0.478  gap 0.141
