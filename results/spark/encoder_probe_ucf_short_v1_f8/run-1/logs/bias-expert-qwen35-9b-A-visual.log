@@ -1,0 +1,39 @@
+Uninstalled 1 package in 0.59ms
+Installed 1 package in 3ms
+state 0 done
+state 1 done
+state 2 done
+state 3 done
+state 4 done
+state 5 done
+state 6 done
+state 7 done
+state 8 done
+state 9 done
+state 10 done
+state 11 done
+state 12 done
+state 13 done
+state 14 done
+state 15 done
+state 16 done
+state 17 done
+state 18 done
+state 19 done
+state 20 done
+state 21 done
+state 22 done
+state 23 done
+state 24 done
+state 25 done
+state 26 done
+state 27 done
+state 28 done
+state 29 done
+state 30 done
+state 31 done
+state 32 done
+qwen35-9b-A-visual/bce state 11 val 0.672 all 0.749  in_video 0.639  per-video median 0.733  before 0.699  during 0.817  after 0.700  gap 0.117
+qwen35-9b-A-visual/poe_c0.5 state 11 val 0.670 all 0.683  in_video 0.642  per-video median 0.733  before 0.541  during 0.701  after 0.554  gap 0.159
+qwen35-9b-A-visual/poe_c1 state 11 val 0.665 all 0.600  in_video 0.641  per-video median 0.737  before 0.389  during 0.556  after 0.409  gap 0.166
+qwen35-9b-A-visual/poe_c2 state 11 val 0.655 all 0.441  in_video 0.637  per-video median 0.717  before 0.178  during 0.293  after 0.207  gap 0.115
