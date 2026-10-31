@@ -7,5 +7,6 @@ import s1stream.datasets.ubnormal  # noqa: F401
 import s1stream.datasets.ucf_crime  # noqa: F401
 import s1stream.datasets.xd_violence  # noqa: F401
 import s1stream.heads.option_logits  # noqa: F401
+import s1stream.input_forms.foveated  # noqa: F401
 import s1stream.input_forms.frames  # noqa: F401
 import s1stream.rules.threshold  # noqa: F401

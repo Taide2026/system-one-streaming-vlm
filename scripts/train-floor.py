@@ -256,8 +256,8 @@ FLOORS = {"d3": D3Floor, "qwen_first_token": QwenFloor}
 class FloorDataset(torch.utils.data.Dataset):
     """items: (task, record_or_None, payload_or_None, target_index_or_y)."""
 
-    def __init__(self, items, floor):
-        self.items, self.floor = items, floor
+    def __init__(self, items, floor, foveate_v1: dict | None = None):
+        self.items, self.floor, self.foveate_v1 = items, floor, foveate_v1
 
     def __len__(self):
         return len(self.items)
@@ -265,6 +265,11 @@ class FloorDataset(torch.utils.data.Dataset):
     def __getitem__(self, i):
         task, record, payload, y = self.items[i]
         images = read_frames(Path(record.path), record.frame_indices) if record is not None else []
+        if task == "v1" and self.foveate_v1 is not None and images:
+            from s1stream.input_forms.foveated import foveate
+
+            images = foveate(images, float(self.foveate_v1.get("frac", 1 / 3)),
+                             int(self.foveate_v1.get("upscale", 2)))
         return self.floor.encode(task, record, images, payload), task, y
 
 
@@ -298,6 +303,8 @@ def main() -> None:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dspec, window, lora, optim = data["data"], data["window"], data["lora"], data["optim"]
     tasks = data.get("tasks", {"v1": {"n": int(dspec.get("n_abnormal", 10000)) + int(dspec.get("n_normal", 10000))}})
+    fov = data.get("input_form") if isinstance(data.get("input_form"), dict) else None
+    fov = fov if fov and fov.get("name") == "foveated" else None
     anchor = float(data.get("anchor", {}).get("kl_lambda", 0.0))
     dpo_beta = float(data.get("dpo", {}).get("beta", 0.0))
     torch.manual_seed(int(dspec.get("seed", 0)))
@@ -355,7 +362,7 @@ def main() -> None:
 
     batch_size, accumulate = int(optim["batch"]), int(optim.get("accumulate", 1))
     chunks = homogeneous_batches(items, batch_size, int(dspec.get("seed", 0)))
-    dataset = FloorDataset(items, floor)
+    dataset = FloorDataset(items, floor, foveate_v1=fov)
 
     def collate(parts):
         encs = [p[0] for p in parts]
@@ -426,7 +433,7 @@ def main() -> None:
     # ---- temperature on the held-out v1 windows
     floor.train(False)
     val_items = [("v1", r, None, float(r.y)) for r in val_records]
-    vl = torch.utils.data.DataLoader(FloorDataset(val_items, floor), batch_sampler=homogeneous_batches(val_items, batch_size, 1),
+    vl = torch.utils.data.DataLoader(FloorDataset(val_items, floor, foveate_v1=fov), batch_sampler=homogeneous_batches(val_items, batch_size, 1),
                                      num_workers=2, collate_fn=collate)
     zs, ys_all = [], []
     with torch.no_grad():

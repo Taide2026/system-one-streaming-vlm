@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Training-floor gate evals (2026-10-31): scripts/floor-eval.sh <d3nano|qwen2b>, run inside that model's container.
+# Training-floor gate evals (2026-10-31): scripts/floor-eval.sh <d3nano|qwen2b> [arms...], run inside a container;
+# arms default to "b c d" and can be split across containers/GPUs (one arm each) for parallel evals.
 # For each floor arm (b = multi-task mix, c = +KL anchor, d = DPO) the chain evaluates the newest
 # results/pro6000/floor_<model>_<arm>/<time> adapter:
 #   d3nano: quick generalization suite first for every arm (jev-bench acc+ECE, MVBench, Video-MME short,
@@ -9,7 +10,9 @@
 # Config-based evals are skipped when a finished run folder already exists, so the script is re-runnable.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-MODEL=${1:?usage: floor-eval.sh <d3nano|qwen2b>}
+MODEL=${1:?usage: floor-eval.sh <d3nano|qwen2b> [arms...]}
+shift || true
+ARMS=${*:-b c d}
 export OMP_NUM_THREADS=${OMP_NUM_THREADS:-8}
 DATA=/data/kidflash7011/datasets
 
@@ -26,7 +29,7 @@ cfg_run() { # run configs/$1.yaml unless a finished run exists (records + report
 }
 
 if [ "$MODEL" = d3nano ]; then
-    for arm in b c d; do
+    for arm in $ARMS; do
         RUN=$(run_dir "$arm"); echo "== quick suite: d3nano $arm -> $RUN"
         uv run --frozen python scripts/jev-bench.py --adapter "$RUN" --out "results/pro6000/jevbench_d3nano_floor$arm"
         uv run --frozen python scripts/video-mc.py --bench mvbench --root "$DATA/mvbench" \
@@ -46,7 +49,7 @@ else
     TPL=ft_ucf_v1_qwen2b_eval
 fi
 
-for arm in b c d; do
+for arm in $ARMS; do
     RUN=$(run_dir "$arm"); echo "== UCF-290: $MODEL $arm -> $RUN"
     mkcfg "$TPL" "floor290_${MODEL}_$arm" "$RUN"
     cfg_run "floor290_${MODEL}_$arm"
