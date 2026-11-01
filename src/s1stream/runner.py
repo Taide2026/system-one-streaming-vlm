@@ -119,8 +119,9 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
                           f"{config.backbone['name']!r} keeps no cache (noncausal or bidirectional prompt?)")
     keep_windows = spec.keep_windows(config.window.stride_s)
     policy = cache_policy(spec, config.window.stride_s) if streaming else None
+    stateful_form = hasattr(input_form, "observe")  # active foveation: the form reads the previous window's p
     prefetch = int(os.environ.get("S1_PREFETCH", "0") or 0)
-    if prefetch and (streaming or spec.strategy == "text"):
+    if prefetch and (streaming or spec.strategy == "text" or stateful_form):
         prefetch = 0  # these build their inputs from the running state
 
     count = 0
@@ -133,6 +134,8 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
             scores_so_far: list[float] = []
             if streaming:
                 backbone.start_video()
+            if stateful_form:
+                input_form.start_video()
             built = None
             if prefetch:
                 from concurrent.futures import ThreadPoolExecutor
@@ -167,6 +170,8 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
                 seconds = time.perf_counter() - start
                 score = question.score(probabilities)
                 scores_so_far.append(score)
+                if stateful_form:
+                    input_form.observe(score)
                 row = {"video": item.name, "window": window.index, "start_s": window.start_s,
                        "end_s": window.end_s, "label": window.label,
                        "score": score,

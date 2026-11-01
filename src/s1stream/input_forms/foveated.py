@@ -62,3 +62,32 @@ class Foveated:
     def build(self, item: VideoItem, window: Window, question: Question) -> ModelInput:
         images = read_frames(item.path, window.frame_indices)
         return ModelInput(images=foveate(images, self.frac, self.upscale, self.max_area), text=None)
+
+
+@INPUT_FORMS.register("foveated_gated")
+class FoveatedGated:
+    """Active foveation, the WHEN gate driven by the model itself (2026-11-02): window t+1 is foveated iff the
+    model's own p at window t fell in the unsure band (band[0] <= p <= band[1]) - "the second look after a first
+    suspicion". The first window of every video is always the full view (causal; no signal yet). max_area still
+    vetoes the crop when the event already fills the frame. Needs the stateful runner hooks (start_video /
+    observe); prefetch is disabled for stateful forms. Config: {name: foveated_gated, band: [0.3, 0.7],
+    frac: 0.333, upscale: 2, max_area: 0.045}."""
+
+    def __init__(self, band: tuple[float, float] = (0.3, 0.7), frac: float = 1 / 3, upscale: int = 2,
+                 max_area: float | None = 0.045) -> None:
+        self.band = (float(band[0]), float(band[1]))
+        self.frac, self.upscale = float(frac), int(upscale)
+        self.max_area = None if max_area is None else float(max_area)
+        self.last_p: float | None = None
+
+    def start_video(self) -> None:
+        self.last_p = None
+
+    def observe(self, score: float) -> None:
+        self.last_p = float(score)
+
+    def build(self, item: VideoItem, window: Window, question: Question) -> ModelInput:
+        images = read_frames(item.path, window.frame_indices)
+        if self.last_p is not None and self.band[0] <= self.last_p <= self.band[1]:
+            images = foveate(images, self.frac, self.upscale, self.max_area)
+        return ModelInput(images=images, text=None)
