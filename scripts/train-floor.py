@@ -345,7 +345,8 @@ class FloorDataset(torch.utils.data.Dataset):
 
             ma = self.foveate_v1.get("max_area")
             images = foveate(images, float(self.foveate_v1.get("frac", 1 / 3)),
-                             int(self.foveate_v1.get("upscale", 2)), None if ma is None else float(ma))
+                             int(self.foveate_v1.get("upscale", 2)), None if ma is None else float(ma),
+                             str(self.foveate_v1.get("mode", "tgm")))
         return self.floor.encode(task, record, images, payload), task, y
 
 

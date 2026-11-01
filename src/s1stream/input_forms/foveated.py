@@ -26,7 +26,8 @@ def tgm_box(arrays: list[np.ndarray], frac: float) -> tuple[int, int, int, int]:
     return min(max(y - h // 2, 0), height - h), min(max(x - w // 2, 0), width - w), h, w
 
 
-def foveate(images: list, frac: float = 1 / 3, upscale: int = 2, max_area: float | None = None) -> list:
+def foveate(images: list, frac: float = 1 / 3, upscale: int = 2, max_area: float | None = None,
+            mode: str = "tgm") -> list:
     """The foveated window: even frames full view, odd frames the TGM crop (up-scaled). Identity below 4 frames.
     max_area: skip foveation (return the frames unchanged) when the TGM hot area (> half peak) already covers at
     least this fraction of the frame - a large event fills the view, a crop only wastes frames (jev-hard large
@@ -40,7 +41,12 @@ def foveate(images: list, frac: float = 1 / 3, upscale: int = 2, max_area: float
         peak = float(heat.max())
         if peak > 0 and float((heat > 0.5 * peak).mean()) >= max_area:
             return images
-    y0, x0, h, w = tgm_box(arrays, frac)
+    if mode == "center":  # WHERE-ablation control: the same 4+4 format with the crop fixed at the frame centre
+        height, width = arrays[0].shape[:2]
+        h, w = int(height * frac), int(width * frac)
+        y0, x0 = (height - h) // 2, (width - w) // 2
+    else:
+        y0, x0, h, w = tgm_box(arrays, frac)
     out = []
     for k, (im, a) in enumerate(zip(images, arrays)):
         if k % 2 == 0:
@@ -55,13 +61,14 @@ def foveate(images: list, frac: float = 1 / 3, upscale: int = 2, max_area: float
 class Foveated:
     """Config: {name: foveated, frac: 0.333, upscale: 2, max_area: null | 0.045}."""
 
-    def __init__(self, frac: float = 1 / 3, upscale: int = 2, max_area: float | None = None) -> None:
-        self.frac, self.upscale = float(frac), int(upscale)
+    def __init__(self, frac: float = 1 / 3, upscale: int = 2, max_area: float | None = None,
+                 mode: str = "tgm") -> None:
+        self.frac, self.upscale, self.mode = float(frac), int(upscale), str(mode)
         self.max_area = None if max_area is None else float(max_area)
 
     def build(self, item: VideoItem, window: Window, question: Question) -> ModelInput:
         images = read_frames(item.path, window.frame_indices)
-        return ModelInput(images=foveate(images, self.frac, self.upscale, self.max_area), text=None)
+        return ModelInput(images=foveate(images, self.frac, self.upscale, self.max_area, self.mode), text=None)
 
 
 @INPUT_FORMS.register("foveated_gated")

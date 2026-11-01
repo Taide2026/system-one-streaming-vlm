@@ -1,0 +1,41 @@
+# Foveated UCF-290 eval (2026-10-31): the fov_d3nano_c adapter with the foveated input form (same windows,
+# same V1 question; 4 full + 4 TGM-crop frames per forward). scripts/floor-eval.sh fills adapter in; or sed.
+name: fovcen_290_d3nano_c
+
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 140
+  n_normal: 150
+  max_duration_s: 1000000000
+  seed: 0
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+input_form:
+  name: foveated
+  frac: 0.333
+  upscale: 2
+  max_area: 0.045
+  mode: center
+
+backbone:
+  name: d3
+  asset: d3-nano
+  memory_cap_gb: 40
+  adapter: ADAPTER_RUN_DIR
+
+answer_head:
+  name: option_logits
+
+decision_rules:
+  - name: threshold
+    start: 0.0
+    stop: 1.0
+    step: 0.01
