@@ -22,7 +22,7 @@ def auc_ap(y: np.ndarray, s: np.ndarray) -> tuple[float, float]:
     y = y[order]
     tp = np.cumsum(y); fp = np.cumsum(1 - y)
     tpr = tp / max(tp[-1], 1); fpr = fp / max(fp[-1], 1)
-    auc = float(np.trapz(tpr, fpr))
+    auc = float(np.trapezoid(tpr, fpr))
     prec = tp / np.arange(1, len(y) + 1)
     ap = float((prec * y).sum() / max(y.sum(), 1))
     return auc, ap
