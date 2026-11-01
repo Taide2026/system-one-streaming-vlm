@@ -39,8 +39,8 @@ from s1stream.assets import resolve  # noqa: E402
 from s1stream.config import ConfigError  # noqa: E402
 from s1stream.input_forms.frames import read_frames  # noqa: E402
 from s1stream.prompt import C14_OPTIONS, PROMPTS  # noqa: E402
-from s1stream.train import (D3Trainee, QwenTrainee, fit_temperature, load_train_config, lr_at,  # noqa: E402
-                            question_of, soft_cross_entropy)
+from s1stream.train import (ClefTrainee, D3Trainee, QwenTrainee, fit_temperature, load_train_config,  # noqa: E402
+                            lr_at, question_of, soft_cross_entropy)
 from s1stream.traindata import Record, read_hivau, sample_records, write_records  # noqa: E402
 from s1stream.types import Question  # noqa: E402
 
@@ -250,7 +250,82 @@ class QwenFloor:
         self.base.save(out_dir)
 
 
-FLOORS = {"d3": D3Floor, "qwen_first_token": QwenFloor}
+
+class ClefFloor:
+    """Clef-Flash multi-task: the release renders every question itself (joint_schema_model.encode_record), so each
+    task / replay item carries a permutation from the release's option order (noul = (true, false), choice = keys
+    sorted, score = index order) back to our option order; forward gathers through it, so logits always come out in
+    the same order the targets use. Reference (arm C / D) = LoRA disabled + a frozen copy of the joint head."""
+
+    NOUL = {"Yes": "true", "No": "false"}
+
+    def __init__(self, path: Path, device, lora: dict, grad_checkpoint: bool):
+        import copy
+
+        self.base = ClefTrainee(path, device, question_of({"question": {"prompt": "v1", **PROMPTS["v1"]}}),
+                                lora, grad_checkpoint)
+        self.device = device
+        self.code, self.processor = self.base.code, self.base.processor
+        self.head0 = copy.deepcopy(self.base.clef.head).float().requires_grad_(False)
+        c14 = c14_question()
+        self.questions = {"v1": self.base.question, "c14": c14}
+        self.perms = {t: self._perm_of_record(self.base.build_record(q, []), tuple(q.options))
+                      for t, q in self.questions.items()}
+        self.option_ids = tuple(self.base.question.options)  # ours: (Yes, No), for validation
+
+    def _perm_of_record(self, record: dict, options: tuple[str, ...]) -> list[int]:
+        probe = self.code.encode_record(self.processor.tokenizer, record)
+        ids = list(probe.questions[0].option_ids)
+        keys = [self.NOUL.get(o, o) for o in options]
+        if sorted(keys) != sorted(ids):  # score questions: release ids are "0".."n-1" in criteria order
+            return list(range(len(options)))
+        return [ids.index(k) for k in keys]
+
+    def encode(self, task: str, record, images, payload) -> Any:
+        if task == "replay":
+            rec = {"state": payload["state"], "images": [], "questions": {"answer": payload["question"]}}
+            perm = self._perm_of_record(rec, tuple(payload["options"]))
+            return self.code.encode_record(self.processor.tokenizer, rec), perm
+        q = self.questions[task]
+        rec = self.base.build_record(q, images)
+        return self.code.encode_record(self.processor.tokenizer, rec, processor=self.processor), self.perms[task]
+
+    def collate(self, encoded: list) -> dict[str, Any]:
+        batch = self.code.collate_records([e for e, _ in encoded], self.processor.tokenizer.pad_token_id,
+                                          torch.device("cpu"))
+        batch["_perm"] = torch.tensor([perm for _, perm in encoded], dtype=torch.long)
+        return batch
+
+    def forward(self, batch: dict[str, Any], reference: bool = False) -> torch.Tensor:
+        perm = batch["_perm"].to(self.device)
+        clef = self.base.clef
+        base = clef.language_model.get_base_model()
+        media = {k: v.to(self.device) for k, v in (batch.get("media") or {}).items()}
+        input_ids, attention_mask = batch["input_ids"].to(self.device), batch["attention_mask"].to(self.device)
+        ctx = clef.language_model.disable_adapter() if reference else nullcontext()
+        with ctx:
+            text_model = base.model
+            if not media and hasattr(text_model, "language_model"):
+                text_model = text_model.language_model
+            outputs = text_model(input_ids=input_ids, attention_mask=attention_mask, use_cache=False,
+                                 return_dict=True, **media)
+            head = self.head0.to(self.device) if reference else clef.head
+            per_record = head(outputs.last_hidden_state.float(), input_ids, attention_mask, batch["records"],
+                              base.get_output_embeddings().weight.float())
+        logits = torch.stack([record_logits[0] for record_logits in per_record])
+        return logits.gather(1, perm)
+
+    def parameters(self):
+        return self.base.parameters()
+
+    def train(self, mode: bool) -> None:
+        self.base.train(mode)
+
+    def save(self, out_dir: Path) -> None:
+        self.base.save(out_dir)
+
+
+FLOORS = {"d3": D3Floor, "qwen_first_token": QwenFloor, "clef_flash": ClefFloor}
 
 
 class FloorDataset(torch.utils.data.Dataset):
