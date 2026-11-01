@@ -343,8 +343,9 @@ class FloorDataset(torch.utils.data.Dataset):
         if task == "v1" and self.foveate_v1 is not None and images:
             from s1stream.input_forms.foveated import foveate
 
+            ma = self.foveate_v1.get("max_area")
             images = foveate(images, float(self.foveate_v1.get("frac", 1 / 3)),
-                             int(self.foveate_v1.get("upscale", 2)))
+                             int(self.foveate_v1.get("upscale", 2)), None if ma is None else float(ma))
         return self.floor.encode(task, record, images, payload), task, y
 
 
