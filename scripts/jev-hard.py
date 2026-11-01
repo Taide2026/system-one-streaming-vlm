@@ -3,10 +3,9 @@
 
   python scripts/jev-hard.py --events results/pro6000/jev-hard-events.jsonl <run dir> [<run dir> ...]
 
-The subset: windows overlapping a small-tercile event (area_frac terciles over the 156 events from tgm-size.py)
-plus every window of every normal video (so false alarms still count). Windows of medium / large events and the
-remaining anomaly-video windows are dropped - the metric asks: can the model separate SMALL events from normal
-footage? Frame AUC / AP weight windows by their frame span as scripts/score-records.py does (uniform windows, so
+Per tier (area_frac terciles over the 156 events from tgm-size.py): positives = the windows inside that tier's
+events; negatives = every negative window of the whole test set (normal videos AND out-of-event anomaly windows -
+the standard frame-AUC convention), so only the positive set changes between tiers. Frame AUC / AP weight windows by their frame span as scripts/score-records.py does (uniform windows, so
 plain window-level AUC / AP equals the frame metric up to the final partial window)."""
 from __future__ import annotations
 
@@ -56,10 +55,12 @@ def main() -> None:
             w0, w1 = r["start_s"] * fps, r["end_s"] * fps
             tiers_here = {t for e0, e1, t in tier.get(r["video"], []) if w0 < e1 + 1 and w1 > e0}
             subsets["all"][0].append(r["label"]); subsets["all"][1].append(r["score"])
-            if r["label"] and tiers_here:
-                for t in tiers_here:
+            if r["label"]:
+                for t in tiers_here:  # positives only in their own tier
                     subsets[t][0].append(1); subsets[t][1].append(r["score"])
-            # anomaly-video windows outside any event are dropped from the tier subsets (boundary ambiguity)
+            else:  # out-of-event anomaly-video windows: negatives in EVERY tier (standard frame-AUC convention)
+                for t in ("small", "medium", "large"):
+                    subsets[t][0].append(0); subsets[t][1].append(r["score"])
         line = [str(run)]
         for k in ("small", "medium", "large", "all"):
             y, s = np.array(subsets[k][0], float), np.array(subsets[k][1], float)
