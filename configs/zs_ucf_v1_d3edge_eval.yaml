@@ -1,0 +1,35 @@
+# d3 family size curve (2026-11-02): zero-shot UCF-290 for the jev-hard scale axis (deck p. 65).
+name: zs_ucf_v1_d3edge_eval
+
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 140
+  n_normal: 150
+  max_duration_s: 1000000000
+  seed: 0
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+input_form:
+  name: frames
+
+backbone:
+  name: d3
+  asset: d3-edge
+  memory_cap_gb: 40
+
+answer_head:
+  name: option_logits
+
+decision_rules:
+  - name: threshold
+    start: 0.0
+    stop: 1.0
+    step: 0.01
