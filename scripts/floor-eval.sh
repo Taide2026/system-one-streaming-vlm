@@ -34,7 +34,7 @@ if [ "$MODEL" = d3nano ]; then
         uv run --frozen python scripts/jev-bench.py --adapter "$RUN" --out "results/pro6000/jevbench_d3nano_floor$arm"
         uv run --frozen python scripts/video-mc.py --bench mvbench --root "$DATA/mvbench" \
             --adapter "$RUN" --out "results/pro6000/mvbench_d3nano_floor$arm"
-        uv run --frozen python scripts/video-mc.py --bench videomme --root "$DATA/videomme" --subset short \
+        uv run --frozen --with pyarrow,pandas python scripts/video-mc.py --bench videomme --root "$DATA/videomme" --subset short \
             --adapter "$RUN" --out "results/pro6000/videomme_short_d3nano_floor$arm"
         mkcfg ucf101_d3nano_ucfft "ucf101_d3nano_floor$arm" "$RUN"
         cfg_run "ucf101_d3nano_floor$arm"
