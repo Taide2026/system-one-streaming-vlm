@@ -56,7 +56,10 @@ def main() -> None:
     ap.add_argument("--results", type=Path, default=Path("results"))
     args = ap.parse_args()
     api = HfApi()
-    runs = sorted(d for d in args.results.glob("*/ft_*/*") if (d / "adapter").is_dir() or list(d.glob("*.safetensors")))
+    patterns = ("ft_*", "floor_*", "fov*", "wise_*")
+    runs = sorted(d for pat in patterns for d in args.results.glob(f"*/{pat}/*")
+                  if (d / "adapter").is_dir() or list(d.glob("*.safetensors")))
+    runs += sorted(d for d in args.results.glob("*/wise_a*") if (d / "adapter").is_dir())
     total = sum(f.stat().st_size for d in runs for f in d.rglob("*") if f.is_file()) / 1e9
     print(f"{len(runs)} runs, {total:.1f} GB")
     for d in runs:
