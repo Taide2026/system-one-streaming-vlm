@@ -39,6 +39,7 @@ def main() -> None:
     ap.add_argument("--root", type=Path, required=True)
     ap.add_argument("--adapter", required=True)
     ap.add_argument("--asset", default="d3-nano")
+    ap.add_argument("--backbone", default="d3")
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--n", type=int, default=2500)
     ap.add_argument("--stride", type=float, default=4.0, help="coarser than 2 s: mining, not evaluation")
@@ -46,7 +47,7 @@ def main() -> None:
     args = ap.parse_args()
     p = PROMPTS["v1"]
     question = Question(state=p["state"], text=p["text"], options=tuple(p["options"]), positive=p["positive"])
-    spec = {"name": "d3", "asset": args.asset, "path": str(resolve(args.asset)), "memory_cap_gb": 40,
+    spec = {"name": args.backbone, "asset": args.asset, "path": str(resolve(args.asset)), "memory_cap_gb": 40,
             "adapter": args.adapter}
     backbone = BACKBONES.build(spec)
     items = [it for it in read_hivau(args.hivau, args.root) if not it.events]
