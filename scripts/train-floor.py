@@ -400,6 +400,13 @@ def main() -> None:
                                                 int(window["frames"]), n_v1 // 2, n_v1 - n_v1 // 2,
                                                 int(dspec.get("n_val", 2000)), float(dspec.get("holdout", 0.1)),
                                                 int(dspec.get("seed", 0)))
+    extra = tasks.get("v1", {}).get("extra_records")
+    if extra:
+        from s1stream.traindata import read_records
+
+        mined = read_records(Path(os.path.expandvars(os.path.expanduser(extra))))
+        train_records = train_records + mined
+        print(f"v1 extra_records: +{len(mined)} mined hard negatives", flush=True)
     write_records(train_records, out_dir / "records.jsonl")
     write_records(val_records, out_dir / "val.jsonl")
 
