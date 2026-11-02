@@ -276,7 +276,11 @@ class ClefFloor:
     def _perm_of_record(self, record: dict, options: tuple[str, ...]) -> list[int]:
         probe = self.code.encode_record(self.processor.tokenizer, record)
         ids = list(probe.questions[0].option_ids)
-        keys = [self.NOUL.get(o, o) for o in options]
+        qtype = next(iter(record["questions"].values())).get("type")
+        # the NOUL id map applies ONLY to noul questions; v1 via build_record is a CHOICE question whose ids are
+        # the option texts sorted ((No, Yes)) - mapping Yes/No to true/false there broke the match and fell back
+        # to the identity perm, inverting every v1 target (found 2026-11-02: Clef floor-C at 17.3 AUC, anti-learned)
+        keys = [self.NOUL.get(o, o) for o in options] if qtype == "noul" else list(options)
         if sorted(keys) != sorted(ids):  # score questions: release ids are "0".."n-1" in criteria order
             return list(range(len(options)))
         return [ids.index(k) for k in keys]
