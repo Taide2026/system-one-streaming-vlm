@@ -11,7 +11,7 @@ HIVAU=$S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json
 ROOT=/data/kidflash7011/s1-assets/ucf-crime
 
 if [ "$M" = d3nano ]; then BB=d3; ASSET=d3-nano; EVTPL=ft_ucf_v1_d3nano_eval; else BB=qwen_first_token; ASSET=qwen3.5-2b; EVTPL=ft_ucf_v1_qwen2b_eval; fi
-FLOOR=$(ls -td results/pro6000/floor_${M}_c/2026103*/ results/pro6000/floor_${M}_c/20261101*/ 2>/dev/null | head -1)
+FLOOR=$(ls -td results/pro6000/floor_${M}_c/*/ 2>/dev/null | grep -v _s[12] | head -1 || true)
 FLOOR=${FLOOR%/}
 [ -d "$FLOOR/adapter" ] || { echo "no floor adapter under $FLOOR"; exit 1; }
 MINED=results/pro6000/hardneg_train_${M}.jsonl
