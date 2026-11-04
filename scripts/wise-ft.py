@@ -31,6 +31,9 @@ def main() -> None:
     ap.add_argument("--run2", type=Path, default=None,
                     help="interpolate toward this run instead of the release (both runs must share the LoRA init, "
                     "e.g. the same data seed; used for the fov2<->fov2h small/medium dial, 2026-11-04)")
+    ap.add_argument("--dare", type=float, default=None,
+                    help="DARE instead of interpolation: randomly drop this fraction of the LoRA delta entries and "
+                    "rescale the rest by 1/(1-p) (Yu et al.; the merging-family baseline reviewers ask for)")
     ap.add_argument("--out", type=Path, required=True)
     args = ap.parse_args()
     a = args.alpha
@@ -41,7 +44,15 @@ def main() -> None:
     for f in src.iterdir():
         if f.suffix == ".safetensors":
             t = load_file(f)
-            if args.run2 is not None:  # elementwise blend of two adapters sharing the init
+            if args.dare is not None:  # DARE: drop-and-rescale the delta (lora_B carries it; A kept intact)
+                import torch
+                g = torch.Generator().manual_seed(0)
+                def dare(v):
+                    mask = (torch.rand(v.shape, generator=g) >= args.dare).to(v.dtype)
+                    return v * mask / (1.0 - args.dare)
+                save_file({k: (dare(v) * a if "lora_B" in k else v).contiguous() for k, v in t.items()},
+                          args.out / "adapter" / f.name)
+            elif args.run2 is not None:  # elementwise blend of two adapters sharing the init
                 t2 = load_file(args.run2 / "adapter" / f.name)
                 save_file({k: (a * v + (1 - a) * t2[k]).contiguous() for k, v in t.items()},
                           args.out / "adapter" / f.name)
