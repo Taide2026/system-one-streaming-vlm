@@ -156,19 +156,24 @@ def frame_scores(videos: Sequence[dict]) -> tuple[np.ndarray, np.ndarray] | None
     scores: list[np.ndarray] = []
     labels: list[np.ndarray] = []
     for video in videos:
-        frame_scores = np.full(video["n_frames"], -np.inf)
-        for first, last, score in video["windows"]:
-            span = slice(max(first, 0), min(last, video["n_frames"] - 1) + 1)
-            frame_scores[span] = np.maximum(frame_scores[span], score)
-        frame_labels = np.zeros(video["n_frames"], dtype=int)
-        for start, end in video["events"]:
-            frame_labels[max(start, 0):min(end, video["n_frames"] - 1) + 1] = 1
-        covered = np.isfinite(frame_scores)
-        scores.append(frame_scores[covered])
-        labels.append(frame_labels[covered])
+        video_score, video_label = _video_frames(video)
+        scores.append(video_score)
+        labels.append(video_label)
     if not scores:
         return None
     return np.concatenate(scores), np.concatenate(labels)
+
+
+def _video_frames(video: dict) -> tuple[np.ndarray, np.ndarray]:
+    frame_scores = np.full(video["n_frames"], -np.inf)
+    for first, last, score in video["windows"]:
+        span = slice(max(first, 0), min(last, video["n_frames"] - 1) + 1)
+        frame_scores[span] = np.maximum(frame_scores[span], score)
+    frame_labels = np.zeros(video["n_frames"], dtype=int)
+    for start, end in video["events"]:
+        frame_labels[max(start, 0):min(end, video["n_frames"] - 1) + 1] = 1
+    covered = np.isfinite(frame_scores)
+    return frame_scores[covered], frame_labels[covered]
 
 
 def frame_auc(videos: Sequence[dict]) -> float | None:
@@ -186,30 +191,52 @@ def frame_ap(videos: Sequence[dict]) -> float | None:
 def video_aucs(videos: Sequence[dict]) -> list[float | None]:
     """Frame-level ROC-AUC inside each video (frame scores as in frame_scores), in input order.
     None for a video whose covered frames all have the same label (a normal video, or one inside the event)."""
-    raise NotImplementedError
+    return [auc(scores.tolist(), labels.tolist()) for scores, labels in (_video_frames(video) for video in videos)]
 
 
 def macro_auc(videos: Sequence[dict]) -> float | None:
     """Mean of the not-None video_aucs (per-video mean, Macro-AUROC). None when there is none."""
-    raise NotImplementedError
+    values = [value for value in video_aucs(videos) if value is not None]
+    return float(np.mean(values)) if values else None
 
 
 def median_video_auc(videos: Sequence[dict]) -> float | None:
     """Median of the not-None video_aucs (per-video median). None when there is none."""
-    raise NotImplementedError
+    values = [value for value in video_aucs(videos) if value is not None]
+    return float(np.median(values)) if values else None
 
 
 def within_auc(videos: Sequence[dict]) -> float | None:
     """ROC-AUC over the (abnormal frame, normal frame) pairs of the same video, pooled over videos:
     sum of video AUC x a x n over sum of a x n (a, n = abnormal and normal covered frames of the video).
     None when no video has both labels."""
-    raise NotImplementedError
+    weighted = []
+    for video, value in zip(videos, video_aucs(videos)):
+        if value is None:
+            continue
+        _, labels = _video_frames(video)
+        abnormal = int(np.count_nonzero(labels == 1))
+        normal = int(labels.size - abnormal)
+        weighted.append((value, abnormal * normal))
+    denominator = sum(weight for _, weight in weighted)
+    if not denominator:
+        return None
+    return float(sum(value * weight for value, weight in weighted) / denominator)
 
 
 def anomaly_auc(videos: Sequence[dict]) -> float | None:
     """AUC_A: frame-level ROC-AUC over the covered frames of the videos with at least one abnormal covered frame,
     pooled across those videos. Normal videos are left out. None when no such frames have both labels."""
-    raise NotImplementedError
+    scores: list[np.ndarray] = []
+    labels: list[np.ndarray] = []
+    for video in videos:
+        video_scores, video_labels = _video_frames(video)
+        if np.any(video_labels == 1):
+            scores.append(video_scores)
+            labels.append(video_labels)
+    if not scores:
+        return None
+    return auc(np.concatenate(scores).tolist(), np.concatenate(labels).tolist())
 
 
 def recall_at_fa_per_hour(videos: Sequence[dict], fps: float, fa_per_hour: float = 1.0) -> float | None:
@@ -219,4 +246,24 @@ def recall_at_fa_per_hour(videos: Sequence[dict], fps: float, fa_per_hour: float
     An event window is a window of a video with events that covers at least one event frame.
     Returns the fraction of event windows with score > threshold.
     None when there is no normal window, no event window, or k >= the number of normal windows."""
-    raise NotImplementedError
+    normal_scores = []
+    event_scores = []
+    hours = 0.0
+    for video in videos:
+        if not video["events"]:
+            hours += video["n_frames"] / fps / 3600
+            normal_scores.extend(score for _, _, score in video["windows"])
+            continue
+        for first, last, score in video["windows"]:
+            start = max(first, 0)
+            end = min(last, video["n_frames"] - 1)
+            if any(max(event_start, 0) <= end and min(event_end, video["n_frames"] - 1) >= start
+                   for event_start, event_end in video["events"]):
+                event_scores.append(score)
+    if not normal_scores or not event_scores:
+        return None
+    k = int(hours * fa_per_hour)
+    if k >= len(normal_scores):
+        return None
+    threshold = sorted(normal_scores, reverse=True)[k]
+    return float(sum(score > threshold for score in event_scores) / len(event_scores))
