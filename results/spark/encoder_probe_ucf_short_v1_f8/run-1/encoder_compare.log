@@ -1,0 +1,11 @@
+Uninstalled 1 package in 0.34ms
+Installed 1 package in 2ms
+dinov3-vitl: loaded
+internvit-300m: loaded
+internvit-300m-head: loaded
+qwen35-vit: loaded
+siglip2-so400m: loaded
+siglip2-so400m-head: loaded
+vjepa2-vitl: loaded
+results/spark/encoder_probe_ucf_short_v1_f8/run-1/encoder_compare.json
+73.35 s 764008 KB
