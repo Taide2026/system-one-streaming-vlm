@@ -27,7 +27,10 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", type=Path, required=True, help="fine-tuned run dir (adapter/ + readout.safetensors)")
     ap.add_argument("--asset", default="d3-nano")
-    ap.add_argument("--alpha", type=float, required=True, help="0 = release, 1 = the fine-tuned run")
+    ap.add_argument("--alpha", type=float, required=True, help="0 = release (or --run2), 1 = the fine-tuned run")
+    ap.add_argument("--run2", type=Path, default=None,
+                    help="interpolate toward this run instead of the release (both runs must share the LoRA init, "
+                    "e.g. the same data seed; used for the fov2<->fov2h small/medium dial, 2026-11-04)")
     ap.add_argument("--out", type=Path, required=True)
     args = ap.parse_args()
     a = args.alpha
@@ -38,17 +41,24 @@ def main() -> None:
     for f in src.iterdir():
         if f.suffix == ".safetensors":
             t = load_file(f)
-            save_file({k: (v * a if "lora_B" in k else v).contiguous() for k, v in t.items()},
-                      args.out / "adapter" / f.name)
+            if args.run2 is not None:  # elementwise blend of two adapters sharing the init
+                t2 = load_file(args.run2 / "adapter" / f.name)
+                save_file({k: (a * v + (1 - a) * t2[k]).contiguous() for k, v in t.items()},
+                          args.out / "adapter" / f.name)
+            else:
+                save_file({k: (v * a if "lora_B" in k else v).contiguous() for k, v in t.items()},
+                          args.out / "adapter" / f.name)
         else:
             shutil.copy(f, args.out / "adapter" / f.name)
 
-    release = load_file(Path(resolve(args.asset)) / "readout.safetensors")["weight"].float()
+    base = load_file((args.run2 / "readout.safetensors") if args.run2 is not None
+                     else Path(resolve(args.asset)) / "readout.safetensors")["weight"].float()
     ft = load_file(args.run / "readout.safetensors")["weight"].float()
-    save_file({"weight": ((1 - a) * release + a * ft).contiguous()}, args.out / "readout.safetensors")
+    save_file({"weight": ((1 - a) * base + a * ft).contiguous()}, args.out / "readout.safetensors")
 
     t_ft = float(json.loads((args.run / "calibration.json").read_text())["temperature"])
-    t = (1 - a) * 1.0 + a * t_ft
+    t0 = float(json.loads((args.run2 / "calibration.json").read_text())["temperature"]) if args.run2 is not None else 1.0
+    t = (1 - a) * t0 + a * t_ft
     (args.out / "calibration.json").write_text(json.dumps({"temperature": t, "wise_ft_alpha": a,
                                                            "source_run": str(args.run)}, indent=1))
     print(f"alpha {a}: adapter lora_B x {a}, readout {1 - a:.2f}*release + {a:.2f}*ft, T {t:.3f} -> {args.out}")
