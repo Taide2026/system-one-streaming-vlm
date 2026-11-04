@@ -15,6 +15,12 @@ AUC (threshold free): ROC-AUC with ties counted as half (the Mann-Whitney U stat
 
 AP (threshold free): average precision, the area under the precision-recall curve as scikit-learn's
 average_precision_score computes it; window and frame as for AUC, on the same frames. XD-Violence's main metric.
+
+In-video metrics: video_aucs computes frame ROC-AUC inside each video. macro_auc and median_video_auc compute the mean
+and median of the defined per-video AUCs. within_auc weights each per-video AUC by its number of abnormal-normal
+covered-frame pairs. anomaly_auc (AUC_A) computes pooled frame ROC-AUC across videos with at least one abnormal covered
+frame. recall_at_fa_per_hour sets the window threshold from the false-alarm budget on normal videos and computes
+event-window recall.
 """
 from __future__ import annotations
 
@@ -175,3 +181,42 @@ def frame_ap(videos: Sequence[dict]) -> float | None:
     """Frame-level average precision over every video, on the frames of frame_auc."""
     frames = frame_scores(videos)
     return None if frames is None else ap(*frames)
+
+
+def video_aucs(videos: Sequence[dict]) -> list[float | None]:
+    """Frame-level ROC-AUC inside each video (frame scores as in frame_scores), in input order.
+    None for a video whose covered frames all have the same label (a normal video, or one inside the event)."""
+    raise NotImplementedError
+
+
+def macro_auc(videos: Sequence[dict]) -> float | None:
+    """Mean of the not-None video_aucs (per-video mean, Macro-AUROC). None when there is none."""
+    raise NotImplementedError
+
+
+def median_video_auc(videos: Sequence[dict]) -> float | None:
+    """Median of the not-None video_aucs (per-video median). None when there is none."""
+    raise NotImplementedError
+
+
+def within_auc(videos: Sequence[dict]) -> float | None:
+    """ROC-AUC over the (abnormal frame, normal frame) pairs of the same video, pooled over videos:
+    sum of video AUC x a x n over sum of a x n (a, n = abnormal and normal covered frames of the video).
+    None when no video has both labels."""
+    raise NotImplementedError
+
+
+def anomaly_auc(videos: Sequence[dict]) -> float | None:
+    """AUC_A: frame-level ROC-AUC over the covered frames of the videos with at least one abnormal covered frame,
+    pooled across those videos. Normal videos are left out. None when no such frames have both labels."""
+    raise NotImplementedError
+
+
+def recall_at_fa_per_hour(videos: Sequence[dict], fps: float, fa_per_hour: float = 1.0) -> float | None:
+    """Window recall at a false-alarm budget.
+    Normal videos = videos without events. Their hours = sum of their n_frames / fps / 3600.
+    k = int(hours x fa_per_hour). The threshold is the (k + 1)-th highest window score of the normal videos.
+    An event window is a window of a video with events that covers at least one event frame.
+    Returns the fraction of event windows with score > threshold.
+    None when there is no normal window, no event window, or k >= the number of normal windows."""
+    raise NotImplementedError
