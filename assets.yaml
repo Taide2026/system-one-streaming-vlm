@@ -143,3 +143,15 @@ qwen3.5-2b:
     tokenizer_config.json: 49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c
     video_preprocessor_config.json: 7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13
     vocab.json: ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003
+
+# d3: Decision 3.0, 27B (Qwen3.8-27B base) - the size-ceiling / lineage probe of the experiment matrix (2026-11-04).
+d3-27b:
+  kind: hf_model
+  source: vllm-sr/d3
+  revision: 62f07e54c6c3a5ff5f695107377edc43e1a86ea8
+  sha256:
+    MODEL_MANIFEST.json: 4959df7ee964c2fad24a8e853df8e3cda9bae61636fa5650cc1a0fed78539677
+    config.json: 7e16284fafd2d54b73c10073c0391bfd6804886ceaf2cbe37fdb62d4c6813dea
+    d3_runtime.py: 2d90e93ac06b9ca4a84e0610ab9acfa2d6793ea4b40eec1b4a3da47577bdea37
+    decision_config.json: 6b80ca11bd6ba481df4b3c187db8a5d1983786563ca05e2edccb0bdac0d2fc4f
+    readout.safetensors: 5319cbf3ccdc5d3ba348b318d7b54acfc3a861d3ff94b578e787852c8726055a
