@@ -165,6 +165,7 @@ def frame_scores(videos: Sequence[dict]) -> tuple[np.ndarray, np.ndarray] | None
 
 
 def _video_frames(video: dict) -> tuple[np.ndarray, np.ndarray]:
+    """The scores and labels of the covered frames of one video (see frame_scores)."""
     frame_scores = np.full(video["n_frames"], -np.inf)
     for first, last, score in video["windows"]:
         span = slice(max(first, 0), min(last, video["n_frames"] - 1) + 1)
@@ -191,7 +192,11 @@ def frame_ap(videos: Sequence[dict]) -> float | None:
 def video_aucs(videos: Sequence[dict]) -> list[float | None]:
     """Frame-level ROC-AUC inside each video (frame scores as in frame_scores), in input order.
     None for a video whose covered frames all have the same label (a normal video, or one inside the event)."""
-    return [auc(scores.tolist(), labels.tolist()) for scores, labels in (_video_frames(video) for video in videos)]
+    values = []
+    for video in videos:
+        scores, labels = _video_frames(video)
+        values.append(auc(scores, labels))
+    return values
 
 
 def macro_auc(videos: Sequence[dict]) -> float | None:
@@ -210,18 +215,20 @@ def within_auc(videos: Sequence[dict]) -> float | None:
     """ROC-AUC over the (abnormal frame, normal frame) pairs of the same video, pooled over videos:
     sum of video AUC x a x n over sum of a x n (a, n = abnormal and normal covered frames of the video).
     None when no video has both labels."""
-    weighted = []
-    for video, value in zip(videos, video_aucs(videos)):
+    weighted_sum = 0.0
+    pairs = 0
+    for video in videos:
+        scores, labels = _video_frames(video)
+        value = auc(scores, labels)
         if value is None:
             continue
-        _, labels = _video_frames(video)
         abnormal = int(np.count_nonzero(labels == 1))
-        normal = int(labels.size - abnormal)
-        weighted.append((value, abnormal * normal))
-    denominator = sum(weight for _, weight in weighted)
-    if not denominator:
+        video_pairs = abnormal * (labels.size - abnormal)
+        weighted_sum += value * video_pairs
+        pairs += video_pairs
+    if not pairs:
         return None
-    return float(sum(value * weight for value, weight in weighted) / denominator)
+    return weighted_sum / pairs
 
 
 def anomaly_auc(videos: Sequence[dict]) -> float | None:
@@ -236,7 +243,17 @@ def anomaly_auc(videos: Sequence[dict]) -> float | None:
             labels.append(video_labels)
     if not scores:
         return None
-    return auc(np.concatenate(scores).tolist(), np.concatenate(labels).tolist())
+    return auc(np.concatenate(scores), np.concatenate(labels))
+
+
+def _covers_event(video: dict, first: int, last: int) -> bool:
+    """True when the window [first, last] (clamped to the video) holds at least one event frame."""
+    start = max(first, 0)
+    end = min(last, video["n_frames"] - 1)
+    for event_start, event_end in video["events"]:
+        if max(event_start, 0) <= end and min(event_end, video["n_frames"] - 1) >= start:
+            return True
+    return False
 
 
 def recall_at_fa_per_hour(videos: Sequence[dict], fps: float, fa_per_hour: float = 1.0) -> float | None:
@@ -255,10 +272,7 @@ def recall_at_fa_per_hour(videos: Sequence[dict], fps: float, fa_per_hour: float
             normal_scores.extend(score for _, _, score in video["windows"])
             continue
         for first, last, score in video["windows"]:
-            start = max(first, 0)
-            end = min(last, video["n_frames"] - 1)
-            if any(max(event_start, 0) <= end and min(event_end, video["n_frames"] - 1) >= start
-                   for event_start, event_end in video["events"]):
+            if _covers_event(video, first, last):
                 event_scores.append(score)
     if not normal_scores or not event_scores:
         return None
