@@ -20,7 +20,103 @@ from collections.abc import Callable, Sequence
 
 import numpy as np
 
+from s1stream import metrics
+
 Metric = Callable[[Sequence[dict]], float | None]
+
+N_BOOT, SEED = 1000, 20261022
+VIDEO_METRICS = ("frame_auc", "frame_ap", "macro_auc", "median_video_auc", "within_auc", "anomaly_auc",
+                 "recall_at_1fa_h")
+
+
+def metric_summary(runs: dict[str, Sequence[dict]], fps: float, baseline: str | None = None, n: int = N_BOOT,
+                   seed: int = SEED) -> dict:
+    """All VIDEO_METRICS of every run with paired_bootstrap intervals (same n, seed and level 0.95).
+
+    recall_at_1fa_h = metrics.recall_at_fa_per_hour(videos, fps, 1.0).
+    Returns {"runs": {name: {metric: {"value", "low", "high"}}},
+             "differences": {name: {metric: {"value", "low", "high"}}}}
+    value = the point value (paired_bootstrap "point" or pair "diff"). differences holds name - baseline for every
+    run except the baseline; it is {} when baseline is None.
+    """
+    if baseline is not None and baseline not in runs:
+        raise ValueError(f"Missing baseline run: {baseline}")
+    cached: dict[str, Sequence[dict]] = {}
+    for name, videos in runs.items():
+        prepared = []
+        for video in videos:
+            frames = metrics._video_frames(video)
+            abnormal = int(np.count_nonzero(frames[1]))
+            prepared.append(dict(video, _cached_frames=frames, _cached_auc=metrics.video_aucs([video])[0],
+                                 _cached_pairs=abnormal * (len(frames[1]) - abnormal)))
+        cached[name] = prepared
+    ordered = cached if baseline is None else {baseline: cached[baseline], **cached}
+    _prepare_histograms(cached)
+    functions = {
+        "frame_auc": lambda videos: _pooled_metric(videos, "auc"),
+        "frame_ap": lambda videos: _pooled_metric(videos, "ap"),
+        "macro_auc": metrics.macro_auc,
+        "median_video_auc": metrics.median_video_auc,
+        "within_auc": metrics.within_auc,
+        "anomaly_auc": lambda videos: _pooled_metric(videos, "anomaly_auc"),
+        "recall_at_1fa_h": lambda videos: metrics.recall_at_fa_per_hour(videos, fps, 1.0),
+    }
+    summary = {"runs": {name: {} for name in runs},
+               "differences": {name: {} for name in runs if baseline is not None and name != baseline}}
+    for metric_name, metric in functions.items():
+        result = paired_bootstrap(ordered, metric, n=n, seed=seed)
+        for name in runs:
+            point = result["runs"][name]
+            summary["runs"][name][metric_name] = {"value": point["point"], "low": point["low"],
+                                                    "high": point["high"]}
+        for name in summary["differences"]:
+            pair = result["pairs"][f"{name} - {baseline}"]
+            summary["differences"][name][metric_name] = {"value": pair["diff"], "low": pair["low"],
+                                                           "high": pair["high"]}
+    return summary
+
+
+def _prepare_histograms(runs: dict[str, Sequence[dict]]) -> None:
+    """Store covered-frame counts at each pooled score once, before resampling videos."""
+    videos = [video for run in runs.values() for video in run]
+    all_scores = [video["_cached_frames"][0] for video in videos]
+    scores = np.unique(np.concatenate(all_scores)) if all_scores else np.array([])
+    for video, frame_scores in zip(videos, all_scores, strict=True):
+        labels = video["_cached_frames"][1]
+        indices = np.searchsorted(scores, frame_scores)
+        count = np.bincount(indices, minlength=len(scores))
+        positive = np.bincount(indices, weights=labels, minlength=len(scores))
+        occupied = np.flatnonzero(count)
+        video["_hist"] = (occupied, count[occupied], positive[occupied])
+        video["_hist_size"] = len(scores)
+
+
+def _pooled_metric(videos: Sequence[dict], kind: str) -> float | None:
+    """Compute pooled frame AUC or AP from score counts instead of sorting repeated frames."""
+    if not videos:
+        return None
+    if kind == "anomaly_auc":
+        videos = [video for video in videos if np.any(video["_cached_frames"][1])]
+        if not videos:
+            return None
+    size = videos[0]["_hist_size"]
+    indices = np.concatenate([video["_hist"][0] for video in videos])
+    count = np.bincount(indices, weights=np.concatenate([video["_hist"][1] for video in videos]), minlength=size)
+    positive = np.bincount(indices, weights=np.concatenate([video["_hist"][2] for video in videos]), minlength=size)
+    n_positive = positive.sum()
+    if not n_positive:
+        return None
+    if kind == "ap":
+        occupied = count[::-1] > 0
+        cumulative_positive = np.cumsum(positive[::-1])[occupied]
+        cumulative_count = np.cumsum(count[::-1])[occupied]
+        return float(np.sum((positive[::-1][occupied] / n_positive) *
+                            (cumulative_positive / cumulative_count)))
+    negative = count - positive
+    n_negative = negative.sum()
+    if not n_negative:
+        return None
+    return float(np.sum(positive * (np.cumsum(negative) - negative / 2)) / (n_positive * n_negative))
 
 
 def paired_bootstrap(runs: dict[str, Sequence[dict]], metric: Metric, n: int = 1000, seed: int = 0,
@@ -59,7 +155,7 @@ def _check_runs(runs: dict[str, Sequence[dict]]) -> None:
     for videos in runs.values():
         if len(videos) != len(reference):
             raise ValueError("runs must contain the same number of videos")
-        for video, expected in zip(videos, reference):
+        for video, expected in zip(videos, reference, strict=True):
             if video["events"] != expected["events"]:
                 raise ValueError("runs must contain the same videos in the same order")
 
@@ -88,7 +184,7 @@ def _interval(values: list[float], level: float) -> dict:
 
 def _pair(point_a: float | None, point_b: float | None, values_a: list, values_b: list, level: float) -> dict:
     """b - a: point difference and the interval of the per-draw differences where both values exist."""
-    differences = [vb - va for va, vb in zip(values_a, values_b) if va is not None and vb is not None]
+    differences = [vb - va for va, vb in zip(values_a, values_b, strict=True) if va is not None and vb is not None]
     diff = None
     if point_a is not None and point_b is not None:
         diff = point_b - point_a

@@ -117,14 +117,9 @@ def auc(scores: Sequence[float], labels: Sequence[int]) -> float | None:
         return None
     order = np.argsort(score_values, kind="mergesort")
     ordered = score_values[order]
-    ranks = np.empty(ordered.size, dtype=float)
-    start = 0
-    while start < ordered.size:  # average rank (1-based) within each run of equal scores
-        end = start
-        while end < ordered.size and ordered[end] == ordered[start]:
-            end += 1
-        ranks[start:end] = (start + end + 1) / 2
-        start = end
+    starts = np.r_[0, np.flatnonzero(ordered[1:] != ordered[:-1]) + 1]
+    ends = np.r_[starts[1:], ordered.size]
+    ranks = np.repeat((starts + ends + 1) / 2, ends - starts)
     rank_sum = float(ranks[actual[order]].sum())
     return (rank_sum - positives * (positives + 1) / 2) / (positives * negatives)
 
@@ -165,7 +160,11 @@ def frame_scores(videos: Sequence[dict]) -> tuple[np.ndarray, np.ndarray] | None
 
 
 def _video_frames(video: dict) -> tuple[np.ndarray, np.ndarray]:
-    """The scores and labels of the covered frames of one video (see frame_scores)."""
+    """The scores and labels of the covered frames of one video (see frame_scores).
+    bootstrap.metric_summary stores them once per video under "_cached_frames" (and the video AUC under
+    "_cached_auc") so that the 1,000 resamples do not rebuild them; the cached values equal the computed ones."""
+    if "_cached_frames" in video:
+        return video["_cached_frames"]
     frame_scores = np.full(video["n_frames"], -np.inf)
     for first, last, score in video["windows"]:
         span = slice(max(first, 0), min(last, video["n_frames"] - 1) + 1)
@@ -195,7 +194,7 @@ def video_aucs(videos: Sequence[dict]) -> list[float | None]:
     values = []
     for video in videos:
         scores, labels = _video_frames(video)
-        values.append(auc(scores, labels))
+        values.append(video["_cached_auc"] if "_cached_auc" in video else auc(scores, labels))
     return values
 
 
@@ -219,11 +218,14 @@ def within_auc(videos: Sequence[dict]) -> float | None:
     pairs = 0
     for video in videos:
         scores, labels = _video_frames(video)
-        value = auc(scores, labels)
+        value = video["_cached_auc"] if "_cached_auc" in video else auc(scores, labels)
         if value is None:
             continue
-        abnormal = int(np.count_nonzero(labels == 1))
-        video_pairs = abnormal * (labels.size - abnormal)
+        if "_cached_pairs" in video:
+            video_pairs = video["_cached_pairs"]
+        else:
+            abnormal = int(np.count_nonzero(labels == 1))
+            video_pairs = abnormal * (labels.size - abnormal)
         weighted_sum += value * video_pairs
         pairs += video_pairs
     if not pairs:

@@ -90,9 +90,10 @@ lat = data["latency"]
 print(f"{data['windows']} windows, {data['videos']} videos, peak GPU {data['peak_gpu_gb']:.1f} GB, load {data['load_s']:.0f} s")
 print(f"latency P50/P95/P99 {lat['p50_ms']:.0f}/{lat['p95_ms']:.0f}/{lat['p99_ms']:.0f} ms, "
       f"{lat['ms_per_frame']:.0f} ms/frame, RTF P95 {lat['rtf_p95']:.2f} (<= 1 meets the {lat['budget_ms']:.0f} ms budget)")
-auc, decision = data["auc"], data["decision"]
+values, decision = data["metrics"], data["decision"]
 fmt = lambda v: "n/a" if v is None else f"{v:.3f}"
-print(f"AUC frame {fmt(auc['frame'])}, window {fmt(auc['window'])}; AP frame {fmt(data['ap']['frame'])}; answer (p >= 0.5): "
+print(f"AUC frame {fmt(values['frame_auc']['value'])}, AP frame {fmt(values['frame_ap']['value'])}, "
+      f"macro AUC {fmt(values['macro_auc']['value'])}; answer (p >= 0.5): "
       f"balanced accuracy {fmt(decision['balanced_accuracy'])}, recall {fmt(decision['recall'])}, "
       f"specificity {fmt(decision['specificity'])}")
 for row in data["classification"]:

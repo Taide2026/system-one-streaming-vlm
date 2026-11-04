@@ -10,9 +10,9 @@ report.json:
                   rule in the config, sorted and without duplicates, or [0.5] when there is none)
   decision: metrics.classification(..., 0.5): the model's own answer (positive option most probable when there
             are 2 options), with balanced_accuracy
-  auc: {frame: metrics.frame_auc (UCF-Crime convention; frame ranges from windows.window_frame_range and the
-        fps, n_frames and events of manifest.json), window: metrics.auc on the window scores and labels}
-  ap: {frame: metrics.frame_ap on the same frames, window: metrics.ap on the window scores and labels}
+  metrics: {metric: {value, low, high}} for every name in bootstrap.VIDEO_METRICS, from bootstrap.metric_summary with
+           one run on frame_videos(rows, manifest) (frame ranges from windows.window_frame_range and the fps,
+           n_frames and events of manifest.json; fps = the fps shared by every manifest video).
 """
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ from typing import Any
 import yaml
 
 import s1stream.rules.threshold  # noqa: F401  Register the offline threshold rule.
-from s1stream import metrics
+from s1stream import bootstrap, metrics
 from s1stream.registry import DECISION_RULES
 from s1stream.windows import window_frame_range
 
@@ -55,8 +55,7 @@ def report(run_dir: Path) -> dict[str, Any]:
         "latency": metrics.latency(seconds, window["frames"], window["stride_s"]),
         "classification": [metrics.classification(scores, labels, threshold) for threshold in thresholds],
         "decision": metrics.classification(scores, labels, 0.5),
-        "auc": {"frame": metrics.frame_auc(frame_videos(rows, manifest)), "window": metrics.auc(scores, labels)},
-        "ap": {"frame": metrics.frame_ap(frame_videos(rows, manifest)), "window": metrics.ap(scores, labels)},
+        "metrics": video_metrics(rows, manifest),
     }
     (run_dir / "report.json").write_text(json.dumps(result, indent=1))
     return result
@@ -71,3 +70,12 @@ def frame_videos(rows: list[dict[str, Any]], manifest: dict[str, dict[str, Any]]
         first, last = window_frame_range(row["start_s"], row["end_s"], item["fps"])
         video["windows"].append((first, last, row["score"]))
     return list(videos.values())
+
+
+def video_metrics(rows: list[dict[str, Any]], manifest: dict[str, dict[str, Any]]) -> dict[str, dict]:
+    """The "metrics" block of report.json (see the module docstring).
+    Raise ValueError when the manifest videos do not all share one fps."""
+    fps_values = {video["fps"] for video in manifest.values()}
+    if len(fps_values) != 1:
+        raise ValueError("Manifest videos must share one fps")
+    return bootstrap.metric_summary({"report": frame_videos(rows, manifest)}, fps_values.pop())["runs"]["report"]

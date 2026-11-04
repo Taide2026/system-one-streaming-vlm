@@ -101,7 +101,7 @@ def test_select_state_direction_and_tie_breaking():
     assert select_state(fit, "knn", "patch_max") == 0
 
 
-def test_run_encoder_compare_reports_selected_last_and_peak(tmp_path):
+def test_run_encoder_compare_reports_curve_and_selected_state(tmp_path):
     items, meta = make_test_set()
     run_dir = write_fits(tmp_path, meta)
     out = run_encoder_compare(Path("unused.yaml"), run_dir, items=items, log=lambda line: None)
@@ -122,18 +122,7 @@ def test_run_encoder_compare_reports_selected_last_and_peak(tmp_path):
                 assert len(curve["value"]) == n_states
                 assert len(curve["low"]) == n_states
                 assert len(curve["high"]) == n_states
-                for key in ("selected", "last", "peak"):
-                    point = entry[key]
-                    assert set(point) == {"state", "value", "low", "high"}
-                    state = point["state"]
-                    assert 0 <= state < n_states
-                    assert point["value"] == pytest.approx(curve["value"][state])
-                    assert point["low"] == pytest.approx(curve["low"][state])
-                    assert point["high"] == pytest.approx(curve["high"][state])
-                    assert point["low"] <= point["value"] <= point["high"]
-                assert entry["selected"]["state"] == select_state(fit_json, method, kind)
-                assert entry["last"]["state"] == n_states - 1
-                assert entry["peak"]["state"] == int(np.argmax(curve["value"]))
+                assert entry["state"] == select_state(fit_json, method, kind)
     for method in METHODS:
         assert (run_dir / f"{method}.png").stat().st_size > 0
 
@@ -147,15 +136,13 @@ def test_difference_against_baseline_matches_selected_states(tmp_path):
     for method in METHODS:
         base_key = f"qwen35-vit/patch_mean/{method}"
         copy_key = f"copy-vit/patch_mean/{method}"
-        copy_diff = results[copy_key]["difference"]
-        assert copy_diff["state"] == results[copy_key]["selected"]["state"]
-        assert copy_diff["baseline_state"] == results[base_key]["selected"]["state"]
+        assert results[copy_key]["baseline_state"] == results[base_key]["state"]
+        copy_diff = results[copy_key]["difference"]["frame_auc"]
         assert (copy_diff["value"], copy_diff["low"], copy_diff["high"]) == (0.0, 0.0, 0.0)
         other_key = f"dinov3-vitl/patch_mean/{method}"
-        diff = results[other_key]["difference"]
-        assert diff["state"] == results[other_key]["selected"]["state"]
-        assert diff["baseline_state"] == results[base_key]["selected"]["state"]
-        expected = results[other_key]["selected"]["value"] - results[base_key]["selected"]["value"]
+        diff = results[other_key]["difference"]["frame_auc"]
+        expected = (results[other_key]["metrics"]["frame_auc"]["value"]
+                    - results[base_key]["metrics"]["frame_auc"]["value"])
         assert diff["value"] == pytest.approx(expected)
         assert diff["low"] <= diff["value"] <= diff["high"]
 
@@ -168,9 +155,8 @@ def test_head_folder_with_one_state_reports_state_zero(tmp_path):
     for method in METHODS:
         entry = results[f"siglip2-so400m-head/pooler_mean/{method}"]
         assert entry["n_states"] == 1
-        for key in ("selected", "last", "peak"):
-            assert entry[key]["state"] == 0
-            assert entry[key]["value"] == pytest.approx(entry["curve"]["value"][0])
+        assert entry["state"] == 0
+        assert entry["metrics"]["frame_auc"]["value"] == pytest.approx(entry["curve"]["value"][0])
 
 
 def test_missing_baseline_fit_raises_value_error(tmp_path):
@@ -191,14 +177,6 @@ def test_mismatched_test_meta_raises_value_error(tmp_path):
         moved.append(updated)
     run_dir = write_fits(tmp_path, meta, {"dinov3-vitl": moved})
     with pytest.raises(ValueError):
-        run_encoder_compare(Path("unused.yaml"), run_dir, items=items, log=lambda line: None)
-
-
-def test_existing_encoder_compare_json_raises_file_exists_error(tmp_path):
-    items, meta = make_test_set()
-    run_dir = write_fits(tmp_path, meta)
-    (run_dir / "encoder_compare.json").write_text("{}")
-    with pytest.raises(FileExistsError):
         run_encoder_compare(Path("unused.yaml"), run_dir, items=items, log=lambda line: None)
 
 

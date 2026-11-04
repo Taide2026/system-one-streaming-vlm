@@ -117,7 +117,7 @@ def test_manifest_paths_are_relative_to_the_dataset_folder(tmp_path):
 
 
 REPORT_KEYS = {"windows", "videos", "frames_per_window", "peak_gpu_gb", "load_s", "latency", "classification",
-               "decision", "auc", "ap"}
+               "decision", "metrics"}
 
 
 def edit_config(run_dir: Path, **changes) -> None:
@@ -179,8 +179,8 @@ def test_report_decision_and_auc_on_perfectly_separated_scores(tmp_path, config)
     result = report(run(config, tmp_path / "run"))
     assert result["decision"]["threshold"] == 0.5
     assert result["decision"]["balanced_accuracy"] == pytest.approx(1.0)
-    assert result["auc"] == pytest.approx({"frame": 1.0, "window": 1.0})
-    assert result["ap"] == pytest.approx({"frame": 1.0, "window": 1.0})
+    assert result["metrics"]["frame_auc"]["value"] == pytest.approx(1.0)
+    assert result["metrics"]["frame_ap"]["value"] == pytest.approx(1.0)
 
 
 def test_run_writes_the_answer_text_of_a_decoding_backbone(tmp_path, config, monkeypatch):
