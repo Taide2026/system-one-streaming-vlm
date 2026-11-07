@@ -1,0 +1,45 @@
+start 2026-11-05T13:40:54Z
+Uninstalled 1 package in 0.50ms
+Installed 1 package in 2ms
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:06<1:02:05,  6.05s/it]Loading weights:   4%|▎         | 22/617 [00:06<02:01,  4.90it/s] Loading weights:   5%|▍         | 29/617 [00:06<01:36,  6.07it/s]Loading weights:   5%|▌         | 33/617 [00:07<01:31,  6.37it/s]Loading weights:   7%|▋         | 42/617 [00:07<00:59,  9.69it/s]Loading weights:   7%|▋         | 46/617 [00:07<00:55, 10.28it/s]Loading weights:   8%|▊         | 49/617 [00:07<00:50, 11.33it/s]Loading weights:   9%|▊         | 53/617 [00:08<00:42, 13.17it/s]Loading weights:  10%|▉         | 59/617 [00:08<00:43, 12.84it/s]Loading weights:  11%|█         | 67/617 [00:08<00:30, 17.89it/s]Loading weights:  12%|█▏        | 72/617 [00:09<00:40, 13.52it/s]Loading weights:  14%|█▍        | 89/617 [00:09<00:19, 26.88it/s]Loading weights:  17%|█▋        | 103/617 [00:09<00:13, 37.41it/s]Loading weights:  18%|█▊        | 110/617 [00:09<00:12, 41.10it/s]Loading weights:  20%|██        | 125/617 [00:09<00:09, 51.60it/s]Loading weights:  21%|██▏       | 132/617 [00:10<00:10, 44.32it/s]Loading weights:  22%|██▏       | 138/617 [00:12<00:43, 11.01it/s]Loading weights:  28%|██▊       | 173/617 [00:12<00:16, 27.23it/s]Loading weights:  29%|██▉       | 182/617 [00:13<00:17, 24.52it/s]Loading weights:  31%|███       | 189/617 [00:13<00:15, 26.88it/s]Loading weights:  32%|███▏      | 196/617 [00:15<00:34, 12.21it/s]Loading weights:  36%|███▋      | 225/617 [00:15<00:15, 24.76it/s]Loading weights:  38%|███▊      | 235/617 [00:15<00:14, 25.69it/s]Loading weights:  39%|███▉      | 243/617 [00:15<00:15, 23.50it/s]Loading weights:  40%|████      | 249/617 [00:17<00:26, 13.64it/s]Loading weights:  44%|████▍     | 273/617 [00:17<00:13, 24.84it/s]Loading weights:  46%|████▌     | 281/617 [00:17<00:15, 22.34it/s]Loading weights:  47%|████▋     | 287/617 [00:18<00:13, 24.26it/s]Loading weights:  47%|████▋     | 293/617 [00:18<00:16, 19.93it/s]Loading weights:  50%|████▉     | 306/617 [00:18<00:11, 27.71it/s]Loading weights:  51%|█████     | 312/617 [00:19<00:14, 20.88it/s]Loading weights:  52%|█████▏    | 318/617 [00:19<00:12, 23.24it/s]Loading weights:  53%|█████▎    | 328/617 [00:19<00:09, 30.32it/s]Loading weights:  55%|█████▍    | 339/617 [00:19<00:07, 38.94it/s]Loading weights:  59%|█████▊    | 361/617 [00:19<00:04, 61.94it/s]Loading weights:  61%|██████    | 374/617 [00:20<00:03, 69.42it/s]Loading weights:  62%|██████▏   | 383/617 [00:20<00:03, 67.46it/s]Loading weights:  65%|██████▍   | 400/617 [00:20<00:02, 82.86it/s]Loading weights:  66%|██████▋   | 410/617 [00:20<00:02, 80.50it/s]Loading weights:  68%|██████▊   | 421/617 [00:20<00:02, 85.44it/s]Loading weights:  70%|██████▉   | 431/617 [00:20<00:02, 86.61it/s]Loading weights:  73%|███████▎  | 448/617 [00:20<00:01, 101.22it/s]Loading weights:  75%|███████▍  | 460/617 [00:20<00:01, 96.24it/s] Loading weights:  76%|███████▌  | 470/617 [00:21<00:01, 87.53it/s]Loading weights:  78%|███████▊  | 484/617 [00:21<00:01, 91.69it/s]Loading weights:  80%|████████  | 496/617 [00:21<00:01, 89.98it/s]Loading weights:  83%|████████▎ | 514/617 [00:21<00:01, 86.23it/s]Loading weights:  86%|████████▌ | 528/617 [00:21<00:01, 88.50it/s]Loading weights:  88%|████████▊ | 544/617 [00:21<00:00, 95.75it/s]Loading weights:  90%|████████▉ | 555/617 [00:22<00:00, 90.21it/s]Loading weights:  92%|█████████▏| 568/617 [00:22<00:00, 91.02it/s]Loading weights:  94%|█████████▎| 578/617 [00:22<00:00, 88.95it/s]Loading weights:  95%|█████████▌| 587/617 [00:22<00:00, 73.99it/s]Loading weights:  97%|█████████▋| 599/617 [00:22<00:00, 77.02it/s]Loading weights:  99%|█████████▉| 610/617 [00:22<00:00, 71.90it/s]Loading weights: 100%|██████████| 617/617 [00:22<00:00, 26.92it/s]
+loaded d3-nano in 27.5 s; layout B; 18390 windows to score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+500 windows, 0.246 s/window
+1000 windows, 0.246 s/window
+1500 windows, 0.247 s/window
+2000 windows, 0.247 s/window
+2500 windows, 0.247 s/window
+3000 windows, 0.246 s/window
+3500 windows, 0.247 s/window
+4000 windows, 0.247 s/window
+4500 windows, 0.247 s/window
+5000 windows, 0.247 s/window
+5500 windows, 0.247 s/window
+6000 windows, 0.247 s/window
+6500 windows, 0.247 s/window
+7000 windows, 0.248 s/window
+7500 windows, 0.248 s/window
+8000 windows, 0.248 s/window
+8500 windows, 0.248 s/window
+9000 windows, 0.248 s/window
+9500 windows, 0.248 s/window
+10000 windows, 0.248 s/window
+10500 windows, 0.247 s/window
+11000 windows, 0.247 s/window
+11500 windows, 0.247 s/window
+12000 windows, 0.247 s/window
+12500 windows, 0.247 s/window
+13000 windows, 0.247 s/window
+13500 windows, 0.247 s/window
+14000 windows, 0.247 s/window
+14500 windows, 0.247 s/window
+15000 windows, 0.247 s/window
+15500 windows, 0.247 s/window
+16000 windows, 0.247 s/window
+16500 windows, 0.247 s/window
+17000 windows, 0.247 s/window
+17500 windows, 0.247 s/window
+18000 windows, 0.247 s/window
+done: 18390 windows in 4544 s; peak GPU 4.27 GB
+exit 0 2026-11-05T14:57:07Z
