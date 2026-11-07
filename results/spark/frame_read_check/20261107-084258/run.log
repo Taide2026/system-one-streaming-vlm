@@ -1,0 +1,5 @@
+Uninstalled 1 package in 0.55ms
+Installed 1 package in 2ms
+sequential {"videos": 290, "windows": 18390, "windows_differ": 0, "max_abs_diff": 0, "ms_per_window": 8.024802308617227}
+shuffled {"videos": 30, "windows": 3065, "windows_differ": 0, "max_abs_diff": 0, "ms_per_window": 25.111162442969217}
+old {"videos": 10, "windows": 420, "windows_differ": 0, "max_abs_diff": 0, "ms_per_window": 151.97994737398056}
