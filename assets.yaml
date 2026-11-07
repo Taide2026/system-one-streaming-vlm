@@ -155,3 +155,12 @@ d3-27b:
     d3_runtime.py: 2d90e93ac06b9ca4a84e0610ab9acfa2d6793ea4b40eec1b4a3da47577bdea37
     decision_config.json: 6b80ca11bd6ba481df4b3c187db8a5d1983786563ca05e2edccb0bdac0d2fc4f
     readout.safetensors: 5319cbf3ccdc5d3ba348b318d7b54acfc3a861d3ff94b578e787852c8726055a
+
+# Real-ESRGAN x2plus (xinntao/Real-ESRGAN release v0.2.1). The HF mirror holds the same file: SHA-256 equals the GitHub
+# release download (checked 2026-11-06). Loaded with spandrel by scripts/sr-frames.py (full-frame-sr proposal).
+realesrgan-x2plus:
+  kind: hf_model
+  source: nateraw/real-esrgan
+  revision: 42efb9c3eeed1f5c0c8a626cf5f7f4481dfbb094
+  sha256:
+    RealESRGAN_x2plus.pth: 49fafd45f8fd7aa8d31ab2a22d14d91b536c34494a5cfe31eb5d89c2fa266abb

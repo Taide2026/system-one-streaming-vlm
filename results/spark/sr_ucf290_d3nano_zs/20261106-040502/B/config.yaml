@@ -1,0 +1,9 @@
+frames_dir: /home/cctsai/s1-features/frames/frames_ucf290_f8/20261105-180529
+index: results/spark/frames_ucf290_f8/20261105-180529/windows.jsonl
+upscale: bicubic2
+out: results/spark/sr_ucf290_d3nano_zs/20261106-040502/B/scores.jsonl
+limit_windows: None
+asset: d3-nano
+memory_cap_gb: '40'
+torch: 2.14.1+cu130
+gpu: NVIDIA GB10

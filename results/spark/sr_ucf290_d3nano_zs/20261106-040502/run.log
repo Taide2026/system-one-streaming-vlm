@@ -1,0 +1,384 @@
+start 2026-11-06T04:05:02Z
+Uninstalled 1 package in 0.55ms
+Installed 1 package in 1ms
+device cuda, half True; 290 videos
+Abuse028_x264.mp4: 184 frames, 65.3 ms/frame
+Abuse030_x264.mp4: 200 frames, 64.5 ms/frame
+Arrest001_x264.mp4: 312 frames, 64.5 ms/frame
+Arrest007_x264.mp4: 416 frames, 64.7 ms/frame
+Arrest024_x264.mp4: 480 frames, 64.7 ms/frame
+Arrest030_x264.mp4: 1152 frames, 64.6 ms/frame
+Arrest039_x264.mp4: 2104 frames, 64.6 ms/frame
+Arson007_x264.mp4: 832 frames, 64.7 ms/frame
+Arson009_x264.mp4: 96 frames, 64.7 ms/frame
+Arson010_x264.mp4: 416 frames, 64.7 ms/frame
+Arson011_x264.mp4: 168 frames, 64.1 ms/frame
+Arson016_x264.mp4: 232 frames, 63.9 ms/frame
+Arson018_x264.mp4: 112 frames, 63.7 ms/frame
+Arson022_x264.mp4: 1152 frames, 63.8 ms/frame
+Arson035_x264.mp4: 184 frames, 63.9 ms/frame
+Arson041_x264.mp4: 496 frames, 63.9 ms/frame
+Assault006_x264.mp4: 1072 frames, 64.0 ms/frame
+Assault010_x264.mp4: 2152 frames, 64.3 ms/frame
+Assault011_x264.mp4: 304 frames, 65.2 ms/frame
+Burglary005_x264.mp4: 1024 frames, 65.2 ms/frame
+Burglary017_x264.mp4: 280 frames, 65.2 ms/frame
+Burglary018_x264.mp4: 144 frames, 64.2 ms/frame
+Burglary021_x264.mp4: 200 frames, 64.6 ms/frame
+Burglary024_x264.mp4: 480 frames, 64.8 ms/frame
+Burglary032_x264.mp4: 2104 frames, 64.4 ms/frame
+Burglary033_x264.mp4: 160 frames, 64.5 ms/frame
+Burglary035_x264.mp4: 536 frames, 64.3 ms/frame
+Burglary037_x264.mp4: 256 frames, 64.1 ms/frame
+Burglary061_x264.mp4: 1192 frames, 64.2 ms/frame
+Burglary076_x264.mp4: 1720 frames, 65.2 ms/frame
+Burglary079_x264.mp4: 1976 frames, 64.9 ms/frame
+Burglary092_x264.mp4: 80 frames, 64.9 ms/frame
+Explosion002_x264.mp4: 528 frames, 64.0 ms/frame
+Explosion004_x264.mp4: 248 frames, 64.5 ms/frame
+Explosion007_x264.mp4: 2168 frames, 65.1 ms/frame
+Explosion008_x264.mp4: 232 frames, 65.4 ms/frame
+Explosion010_x264.mp4: 328 frames, 65.4 ms/frame
+Explosion011_x264.mp4: 208 frames, 65.3 ms/frame
+Explosion013_x264.mp4: 440 frames, 64.6 ms/frame
+Explosion016_x264.mp4: 128 frames, 64.1 ms/frame
+Explosion017_x264.mp4: 216 frames, 64.9 ms/frame
+Explosion020_x264.mp4: 168 frames, 65.4 ms/frame
+Explosion021_x264.mp4: 104 frames, 65.4 ms/frame
+Explosion022_x264.mp4: 472 frames, 65.2 ms/frame
+Explosion025_x264.mp4: 64 frames, 65.3 ms/frame
+Explosion027_x264.mp4: 96 frames, 65.0 ms/frame
+Explosion028_x264.mp4: 224 frames, 65.4 ms/frame
+Explosion029_x264.mp4: 320 frames, 65.6 ms/frame
+Explosion033_x264.mp4: 416 frames, 65.5 ms/frame
+Explosion035_x264.mp4: 376 frames, 65.5 ms/frame
+Explosion036_x264.mp4: 704 frames, 65.3 ms/frame
+Explosion039_x264.mp4: 128 frames, 65.6 ms/frame
+Explosion043_x264.mp4: 1016 frames, 65.1 ms/frame
+Fighting003_x264.mp4: 408 frames, 64.2 ms/frame
+Fighting018_x264.mp4: 184 frames, 64.5 ms/frame
+Fighting033_x264.mp4: 144 frames, 65.7 ms/frame
+Fighting042_x264.mp4: 296 frames, 65.6 ms/frame
+Fighting047_x264.mp4: 592 frames, 65.2 ms/frame
+RoadAccidents001_x264.mp4: 176 frames, 65.4 ms/frame
+RoadAccidents002_x264.mp4: 40 frames, 65.2 ms/frame
+RoadAccidents004_x264.mp4: 48 frames, 66.1 ms/frame
+RoadAccidents009_x264.mp4: 120 frames, 65.0 ms/frame
+RoadAccidents010_x264.mp4: 64 frames, 65.8 ms/frame
+RoadAccidents011_x264.mp4: 280 frames, 64.2 ms/frame
+RoadAccidents012_x264.mp4: 56 frames, 64.2 ms/frame
+RoadAccidents016_x264.mp4: 288 frames, 64.4 ms/frame
+RoadAccidents017_x264.mp4: 32 frames, 64.0 ms/frame
+RoadAccidents019_x264.mp4: 168 frames, 64.6 ms/frame
+RoadAccidents020_x264.mp4: 232 frames, 65.9 ms/frame
+RoadAccidents021_x264.mp4: 16 frames, 64.7 ms/frame
+RoadAccidents022_x264.mp4: 88 frames, 65.0 ms/frame
+RoadAccidents121_x264.mp4: 240 frames, 65.4 ms/frame
+RoadAccidents122_x264.mp4: 80 frames, 65.2 ms/frame
+RoadAccidents123_x264.mp4: 128 frames, 65.5 ms/frame
+RoadAccidents124_x264.mp4: 192 frames, 65.0 ms/frame
+RoadAccidents125_x264.mp4: 232 frames, 65.5 ms/frame
+RoadAccidents127_x264.mp4: 344 frames, 65.6 ms/frame
+RoadAccidents128_x264.mp4: 72 frames, 65.6 ms/frame
+RoadAccidents131_x264.mp4: 200 frames, 65.3 ms/frame
+RoadAccidents132_x264.mp4: 248 frames, 65.7 ms/frame
+RoadAccidents133_x264.mp4: 88 frames, 65.7 ms/frame
+Robbery048_x264.mp4: 184 frames, 65.1 ms/frame
+Robbery050_x264.mp4: 224 frames, 64.4 ms/frame
+Robbery102_x264.mp4: 240 frames, 64.2 ms/frame
+Robbery106_x264.mp4: 152 frames, 64.6 ms/frame
+Robbery137_x264.mp4: 288 frames, 64.4 ms/frame
+Shooting002_x264.mp4: 160 frames, 64.8 ms/frame
+Shooting004_x264.mp4: 232 frames, 64.2 ms/frame
+Shooting007_x264.mp4: 184 frames, 64.2 ms/frame
+Shooting008_x264.mp4: 216 frames, 64.5 ms/frame
+Shooting010_x264.mp4: 352 frames, 64.5 ms/frame
+Shooting011_x264.mp4: 528 frames, 64.2 ms/frame
+Shooting013_x264.mp4: 136 frames, 64.8 ms/frame
+Shooting015_x264.mp4: 224 frames, 65.7 ms/frame
+Shooting018_x264.mp4: 232 frames, 65.3 ms/frame
+Shooting019_x264.mp4: 360 frames, 65.4 ms/frame
+Shooting021_x264.mp4: 168 frames, 65.3 ms/frame
+Shooting022_x264.mp4: 600 frames, 65.3 ms/frame
+Shooting024_x264.mp4: 264 frames, 65.4 ms/frame
+Shooting026_x264.mp4: 184 frames, 65.3 ms/frame
+Shooting028_x264.mp4: 248 frames, 65.5 ms/frame
+Shooting032_x264.mp4: 2888 frames, 64.9 ms/frame
+Shooting033_x264.mp4: 480 frames, 64.7 ms/frame
+Shooting034_x264.mp4: 184 frames, 65.4 ms/frame
+Shooting037_x264.mp4: 40 frames, 65.7 ms/frame
+Shooting043_x264.mp4: 248 frames, 65.5 ms/frame
+Shooting046_x264.mp4: 672 frames, 65.1 ms/frame
+Shooting047_x264.mp4: 1104 frames, 64.7 ms/frame
+Shooting048_x264.mp4: 360 frames, 64.3 ms/frame
+Shoplifting001_x264.mp4: 576 frames, 64.9 ms/frame
+Shoplifting004_x264.mp4: 888 frames, 65.2 ms/frame
+Shoplifting005_x264.mp4: 256 frames, 64.5 ms/frame
+Shoplifting007_x264.mp4: 680 frames, 64.3 ms/frame
+Shoplifting010_x264.mp4: 360 frames, 64.3 ms/frame
+Shoplifting015_x264.mp4: 296 frames, 64.5 ms/frame
+Shoplifting016_x264.mp4: 192 frames, 65.5 ms/frame
+Shoplifting017_x264.mp4: 56 frames, 65.2 ms/frame
+Shoplifting020_x264.mp4: 768 frames, 65.3 ms/frame
+Shoplifting021_x264.mp4: 472 frames, 64.3 ms/frame
+Shoplifting022_x264.mp4: 288 frames, 64.4 ms/frame
+Shoplifting027_x264.mp4: 248 frames, 64.1 ms/frame
+Shoplifting028_x264.mp4: 176 frames, 65.3 ms/frame
+Shoplifting029_x264.mp4: 288 frames, 65.6 ms/frame
+Shoplifting031_x264.mp4: 56 frames, 65.3 ms/frame
+Shoplifting033_x264.mp4: 112 frames, 65.7 ms/frame
+Shoplifting034_x264.mp4: 1584 frames, 64.7 ms/frame
+Shoplifting037_x264.mp4: 184 frames, 65.5 ms/frame
+Shoplifting039_x264.mp4: 368 frames, 65.5 ms/frame
+Shoplifting044_x264.mp4: 1936 frames, 65.4 ms/frame
+Shoplifting049_x264.mp4: 280 frames, 65.5 ms/frame
+Stealing019_x264.mp4: 648 frames, 64.3 ms/frame
+Stealing036_x264.mp4: 328 frames, 64.4 ms/frame
+Stealing058_x264.mp4: 664 frames, 65.1 ms/frame
+Stealing062_x264.mp4: 208 frames, 65.6 ms/frame
+Stealing079_x264.mp4: 776 frames, 64.3 ms/frame
+Vandalism007_x264.mp4: 152 frames, 64.8 ms/frame
+Vandalism015_x264.mp4: 392 frames, 65.4 ms/frame
+Vandalism017_x264.mp4: 128 frames, 65.7 ms/frame
+Vandalism028_x264.mp4: 592 frames, 64.2 ms/frame
+Vandalism036_x264.mp4: 192 frames, 65.1 ms/frame
+Normal_Videos_003_x264.mp4: 376 frames, 64.6 ms/frame
+Normal_Videos_006_x264.mp4: 56 frames, 64.5 ms/frame
+Normal_Videos_010_x264.mp4: 136 frames, 65.3 ms/frame
+Normal_Videos_014_x264.mp4: 192 frames, 64.2 ms/frame
+Normal_Videos_015_x264.mp4: 64 frames, 65.1 ms/frame
+Normal_Videos_018_x264.mp4: 152 frames, 65.4 ms/frame
+Normal_Videos_019_x264.mp4: 376 frames, 65.4 ms/frame
+Normal_Videos_024_x264.mp4: 136 frames, 65.4 ms/frame
+Normal_Videos_025_x264.mp4: 80 frames, 65.6 ms/frame
+Normal_Videos_027_x264.mp4: 656 frames, 65.0 ms/frame
+Normal_Videos_033_x264.mp4: 224 frames, 64.5 ms/frame
+Normal_Videos_034_x264.mp4: 168 frames, 65.5 ms/frame
+Normal_Videos_041_x264.mp4: 168 frames, 65.7 ms/frame
+Normal_Videos_042_x264.mp4: 416 frames, 65.6 ms/frame
+Normal_Videos_048_x264.mp4: 216 frames, 65.8 ms/frame
+Normal_Videos_050_x264.mp4: 552 frames, 65.1 ms/frame
+Normal_Videos_051_x264.mp4: 312 frames, 65.6 ms/frame
+Normal_Videos_056_x264.mp4: 208 frames, 65.5 ms/frame
+Normal_Videos_059_x264.mp4: 240 frames, 65.5 ms/frame
+Normal_Videos_063_x264.mp4: 40 frames, 65.5 ms/frame
+Normal_Videos_067_x264.mp4: 136 frames, 65.8 ms/frame
+Normal_Videos_070_x264.mp4: 128 frames, 65.7 ms/frame
+Normal_Videos_100_x264.mp4: 80 frames, 65.2 ms/frame
+Normal_Videos_129_x264.mp4: 56 frames, 66.1 ms/frame
+Normal_Videos_150_x264.mp4: 112 frames, 65.2 ms/frame
+Normal_Videos_168_x264.mp4: 232 frames, 64.8 ms/frame
+Normal_Videos_175_x264.mp4: 1176 frames, 64.7 ms/frame
+Normal_Videos_182_x264.mp4: 544 frames, 65.4 ms/frame
+Normal_Videos_189_x264.mp4: 96 frames, 64.3 ms/frame
+Normal_Videos_196_x264.mp4: 264 frames, 64.8 ms/frame
+Normal_Videos_203_x264.mp4: 336 frames, 64.5 ms/frame
+Normal_Videos_210_x264.mp4: 720 frames, 64.1 ms/frame
+Normal_Videos_217_x264.mp4: 240 frames, 64.6 ms/frame
+Normal_Videos_224_x264.mp4: 920 frames, 64.2 ms/frame
+Normal_Videos_246_x264.mp4: 664 frames, 64.8 ms/frame
+Normal_Videos_247_x264.mp4: 1088 frames, 65.3 ms/frame
+Normal_Videos_248_x264.mp4: 152 frames, 65.9 ms/frame
+Normal_Videos_251_x264.mp4: 48 frames, 65.5 ms/frame
+Normal_Videos_289_x264.mp4: 112 frames, 65.6 ms/frame
+Normal_Videos_310_x264.mp4: 328 frames, 65.4 ms/frame
+Normal_Videos_312_x264.mp4: 168 frames, 65.9 ms/frame
+Normal_Videos_317_x264.mp4: 120 frames, 65.8 ms/frame
+Normal_Videos_345_x264.mp4: 24 frames, 66.0 ms/frame
+Normal_Videos_352_x264.mp4: 720 frames, 65.4 ms/frame
+Normal_Videos_360_x264.mp4: 128 frames, 65.0 ms/frame
+Normal_Videos_365_x264.mp4: 880 frames, 64.9 ms/frame
+Normal_Videos_401_x264.mp4: 216 frames, 65.6 ms/frame
+Normal_Videos_417_x264.mp4: 136 frames, 65.5 ms/frame
+Normal_Videos_439_x264.mp4: 560 frames, 65.1 ms/frame
+Normal_Videos_452_x264.mp4: 56 frames, 65.9 ms/frame
+Normal_Videos_453_x264.mp4: 704 frames, 65.4 ms/frame
+Normal_Videos_478_x264.mp4: 600 frames, 64.8 ms/frame
+Normal_Videos_576_x264.mp4: 1496 frames, 64.5 ms/frame
+Normal_Videos_597_x264.mp4: 296 frames, 64.5 ms/frame
+Normal_Videos_603_x264.mp4: 432 frames, 64.3 ms/frame
+Normal_Videos_606_x264.mp4: 160 frames, 64.9 ms/frame
+Normal_Videos_621_x264.mp4: 640 frames, 64.6 ms/frame
+Normal_Videos_634_x264.mp4: 1792 frames, 65.3 ms/frame
+Normal_Videos_641_x264.mp4: 480 frames, 65.5 ms/frame
+Normal_Videos_656_x264.mp4: 240 frames, 65.7 ms/frame
+Normal_Videos_686_x264.mp4: 320 frames, 65.4 ms/frame
+Normal_Videos_696_x264.mp4: 480 frames, 65.1 ms/frame
+Normal_Videos_702_x264.mp4: 336 frames, 64.5 ms/frame
+Normal_Videos_704_x264.mp4: 224 frames, 64.8 ms/frame
+Normal_Videos_710_x264.mp4: 232 frames, 65.6 ms/frame
+Normal_Videos_717_x264.mp4: 160 frames, 65.9 ms/frame
+Normal_Videos_722_x264.mp4: 1160 frames, 65.1 ms/frame
+Normal_Videos_725_x264.mp4: 120 frames, 65.1 ms/frame
+Normal_Videos_745_x264.mp4: 40 frames, 64.7 ms/frame
+Normal_Videos_758_x264.mp4: 208 frames, 64.7 ms/frame
+Normal_Videos_778_x264.mp4: 168 frames, 64.9 ms/frame
+Normal_Videos_780_x264.mp4: 264 frames, 64.9 ms/frame
+Normal_Videos_781_x264.mp4: 528 frames, 65.2 ms/frame
+Normal_Videos_782_x264.mp4: 736 frames, 65.4 ms/frame
+Normal_Videos_783_x264.mp4: 1272 frames, 65.2 ms/frame
+Normal_Videos_798_x264.mp4: 800 frames, 65.3 ms/frame
+Normal_Videos_801_x264.mp4: 360 frames, 65.1 ms/frame
+Normal_Videos_828_x264.mp4: 120 frames, 64.4 ms/frame
+Normal_Videos_831_x264.mp4: 56 frames, 64.0 ms/frame
+Normal_Videos_866_x264.mp4: 152 frames, 65.2 ms/frame
+Normal_Videos_867_x264.mp4: 80 frames, 64.2 ms/frame
+Normal_Videos_868_x264.mp4: 320 frames, 65.7 ms/frame
+Normal_Videos_869_x264.mp4: 320 frames, 65.7 ms/frame
+Normal_Videos_870_x264.mp4: 80 frames, 65.5 ms/frame
+Normal_Videos_871_x264.mp4: 576 frames, 65.1 ms/frame
+Normal_Videos_872_x264.mp4: 64 frames, 65.6 ms/frame
+Normal_Videos_873_x264.mp4: 232 frames, 65.5 ms/frame
+Normal_Videos_874_x264.mp4: 560 frames, 64.9 ms/frame
+Normal_Videos_875_x264.mp4: 336 frames, 64.5 ms/frame
+Normal_Videos_876_x264.mp4: 40 frames, 64.3 ms/frame
+Normal_Videos_877_x264.mp4: 1336 frames, 64.3 ms/frame
+Normal_Videos_878_x264.mp4: 32 frames, 64.5 ms/frame
+Normal_Videos_879_x264.mp4: 152 frames, 64.5 ms/frame
+Normal_Videos_880_x264.mp4: 2400 frames, 65.0 ms/frame
+Normal_Videos_881_x264.mp4: 24 frames, 65.1 ms/frame
+Normal_Videos_882_x264.mp4: 216 frames, 65.6 ms/frame
+Normal_Videos_883_x264.mp4: 40 frames, 65.6 ms/frame
+Normal_Videos_884_x264.mp4: 1200 frames, 64.5 ms/frame
+Normal_Videos_885_x264.mp4: 56 frames, 64.3 ms/frame
+Normal_Videos_886_x264.mp4: 360 frames, 64.6 ms/frame
+Normal_Videos_887_x264.mp4: 1016 frames, 64.2 ms/frame
+Normal_Videos_888_x264.mp4: 72 frames, 65.1 ms/frame
+Normal_Videos_889_x264.mp4: 40 frames, 64.2 ms/frame
+Normal_Videos_890_x264.mp4: 472 frames, 64.9 ms/frame
+Normal_Videos_891_x264.mp4: 240 frames, 64.8 ms/frame
+Normal_Videos_892_x264.mp4: 232 frames, 64.7 ms/frame
+Normal_Videos_893_x264.mp4: 848 frames, 64.2 ms/frame
+Normal_Videos_894_x264.mp4: 336 frames, 64.4 ms/frame
+Normal_Videos_895_x264.mp4: 400 frames, 64.6 ms/frame
+Normal_Videos_896_x264.mp4: 304 frames, 64.7 ms/frame
+Normal_Videos_897_x264.mp4: 112 frames, 65.5 ms/frame
+Normal_Videos_898_x264.mp4: 128 frames, 65.8 ms/frame
+Normal_Videos_899_x264.mp4: 184 frames, 65.6 ms/frame
+Normal_Videos_900_x264.mp4: 192 frames, 65.7 ms/frame
+Normal_Videos_901_x264.mp4: 152 frames, 65.7 ms/frame
+Normal_Videos_902_x264.mp4: 184 frames, 65.8 ms/frame
+Normal_Videos_903_x264.mp4: 104 frames, 65.0 ms/frame
+Normal_Videos_904_x264.mp4: 120 frames, 65.5 ms/frame
+Normal_Videos_905_x264.mp4: 152 frames, 65.6 ms/frame
+Normal_Videos_906_x264.mp4: 88 frames, 65.3 ms/frame
+Normal_Videos_907_x264.mp4: 72 frames, 66.1 ms/frame
+Normal_Videos_908_x264.mp4: 112 frames, 65.8 ms/frame
+Normal_Videos_909_x264.mp4: 112 frames, 65.8 ms/frame
+Normal_Videos_910_x264.mp4: 72 frames, 65.5 ms/frame
+Normal_Videos_911_x264.mp4: 96 frames, 65.7 ms/frame
+Normal_Videos_912_x264.mp4: 96 frames, 66.1 ms/frame
+Normal_Videos_913_x264.mp4: 80 frames, 65.6 ms/frame
+Normal_Videos_914_x264.mp4: 112 frames, 66.0 ms/frame
+Normal_Videos_915_x264.mp4: 160 frames, 65.1 ms/frame
+Normal_Videos_923_x264.mp4: 2424 frames, 64.1 ms/frame
+Normal_Videos_924_x264.mp4: 14392 frames, 65.2 ms/frame
+Normal_Videos_925_x264.mp4: 1024 frames, 65.1 ms/frame
+Normal_Videos_926_x264.mp4: 232 frames, 65.7 ms/frame
+Normal_Videos_927_x264.mp4: 216 frames, 65.9 ms/frame
+Normal_Videos_928_x264.mp4: 120 frames, 65.8 ms/frame
+Normal_Videos_929_x264.mp4: 120 frames, 65.8 ms/frame
+Normal_Videos_930_x264.mp4: 424 frames, 65.4 ms/frame
+Normal_Videos_931_x264.mp4: 232 frames, 65.0 ms/frame
+Normal_Videos_932_x264.mp4: 232 frames, 65.4 ms/frame
+Normal_Videos_933_x264.mp4: 232 frames, 65.9 ms/frame
+Normal_Videos_934_x264.mp4: 232 frames, 65.7 ms/frame
+Normal_Videos_935_x264.mp4: 14392 frames, 65.2 ms/frame
+Normal_Videos_936_x264.mp4: 152 frames, 65.1 ms/frame
+Normal_Videos_937_x264.mp4: 152 frames, 65.8 ms/frame
+Normal_Videos_938_x264.mp4: 640 frames, 65.0 ms/frame
+Normal_Videos_939_x264.mp4: 104 frames, 65.3 ms/frame
+Normal_Videos_940_x264.mp4: 4800 frames, 64.7 ms/frame
+Normal_Videos_941_x264.mp4: 264 frames, 65.0 ms/frame
+Normal_Videos_943_x264.mp4: 136 frames, 64.5 ms/frame
+Normal_Videos_944_x264.mp4: 952 frames, 64.4 ms/frame
+done: 147120 frames in 9553 s (64.9 ms/frame); peak GPU 1.21 GB
+sr done 2026-11-06T06:44:19Z
+Uninstalled 1 package in 0.87ms
+Installed 1 package in 2ms
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:06<1:02:38,  6.10s/it]Loading weights:   4%|▎         | 22/617 [00:06<02:03,  4.82it/s] Loading weights:   5%|▍         | 28/617 [00:06<01:43,  5.68it/s]Loading weights:   6%|▌         | 36/617 [00:07<01:11,  8.15it/s]Loading weights:   6%|▋         | 40/617 [00:07<01:02,  9.26it/s]Loading weights:   7%|▋         | 44/617 [00:07<00:58,  9.85it/s]Loading weights:   8%|▊         | 47/617 [00:08<01:02,  9.06it/s]Loading weights:   9%|▊         | 53/617 [00:08<00:45, 12.44it/s]Loading weights:  10%|▉         | 60/617 [00:08<00:49, 11.17it/s]Loading weights:  12%|█▏        | 74/617 [00:09<00:27, 19.68it/s]Loading weights:  13%|█▎        | 79/617 [00:09<00:24, 21.61it/s]Loading weights:  13%|█▎        | 83/617 [00:09<00:23, 22.28it/s]Loading weights:  14%|█▍        | 88/617 [00:09<00:23, 22.88it/s]Loading weights:  16%|█▌        | 99/617 [00:09<00:14, 35.28it/s]Loading weights:  17%|█▋        | 106/617 [00:09<00:13, 37.91it/s]Loading weights:  21%|██        | 128/617 [00:10<00:09, 52.96it/s]Loading weights:  22%|██▏       | 134/617 [00:10<00:14, 33.95it/s]Loading weights:  23%|██▎       | 139/617 [00:10<00:14, 33.71it/s]Loading weights:  24%|██▎       | 146/617 [00:11<00:14, 32.43it/s]Loading weights:  24%|██▍       | 150/617 [00:11<00:18, 25.62it/s]Loading weights:  25%|██▍       | 154/617 [00:11<00:24, 18.70it/s]Loading weights:  26%|██▌       | 159/617 [00:11<00:21, 21.01it/s]Loading weights:  27%|██▋       | 165/617 [00:12<00:18, 24.40it/s]Loading weights:  28%|██▊       | 171/617 [00:12<00:18, 24.27it/s]Loading weights:  28%|██▊       | 174/617 [00:12<00:22, 19.41it/s]Loading weights:  30%|██▉       | 184/617 [00:12<00:14, 30.19it/s]Loading weights:  31%|███       | 189/617 [00:13<00:19, 21.42it/s]Loading weights:  31%|███▏      | 193/617 [00:14<00:46,  9.08it/s]Loading weights:  36%|███▌      | 220/617 [00:14<00:15, 25.89it/s]Loading weights:  37%|███▋      | 228/617 [00:15<00:17, 22.40it/s]Loading weights:  38%|███▊      | 234/617 [00:16<00:23, 15.97it/s]Loading weights:  41%|████      | 252/617 [00:16<00:15, 22.95it/s]Loading weights:  42%|████▏     | 257/617 [00:16<00:16, 22.03it/s]Loading weights:  42%|████▏     | 261/617 [00:16<00:17, 20.14it/s]Loading weights:  43%|████▎     | 264/617 [00:17<00:17, 20.15it/s]Loading weights:  44%|████▍     | 273/617 [00:17<00:12, 26.48it/s]Loading weights:  45%|████▍     | 277/617 [00:17<00:14, 23.31it/s]Loading weights:  45%|████▌     | 280/617 [00:17<00:17, 19.48it/s]Loading weights:  47%|████▋     | 287/617 [00:18<00:15, 21.94it/s]Loading weights:  47%|████▋     | 291/617 [00:18<00:14, 22.92it/s]Loading weights:  48%|████▊     | 294/617 [00:18<00:18, 17.93it/s]Loading weights:  50%|█████     | 310/617 [00:18<00:09, 32.10it/s]Loading weights:  51%|█████     | 314/617 [00:19<00:11, 25.96it/s]Loading weights:  52%|█████▏    | 318/617 [00:19<00:15, 19.61it/s]Loading weights:  56%|█████▋    | 348/617 [00:19<00:04, 53.91it/s]Loading weights:  59%|█████▉    | 364/617 [00:19<00:03, 68.71it/s]Loading weights:  61%|██████    | 376/617 [00:19<00:03, 73.60it/s]Loading weights:  63%|██████▎   | 387/617 [00:20<00:04, 57.15it/s]Loading weights:  66%|██████▋   | 410/617 [00:20<00:02, 80.70it/s]Loading weights:  69%|██████▊   | 424/617 [00:20<00:02, 89.88it/s]Loading weights:  71%|███████   | 436/617 [00:20<00:03, 59.52it/s]Loading weights:  76%|███████▌  | 470/617 [00:20<00:01, 96.46it/s]Loading weights:  78%|███████▊  | 484/617 [00:21<00:01, 90.72it/s]Loading weights:  80%|████████  | 496/617 [00:21<00:01, 90.04it/s]Loading weights:  82%|████████▏ | 508/617 [00:21<00:01, 89.46it/s]Loading weights:  84%|████████▍ | 519/617 [00:21<00:01, 55.79it/s]Loading weights:  89%|████████▉ | 550/617 [00:22<00:00, 71.73it/s]Loading weights:  94%|█████████▎| 578/617 [00:22<00:00, 96.06it/s]Loading weights:  96%|█████████▌| 591/617 [00:22<00:00, 93.66it/s]Loading weights:  98%|█████████▊| 603/617 [00:22<00:00, 85.15it/s]Loading weights:  99%|█████████▉| 613/617 [00:22<00:00, 66.29it/s]Loading weights: 100%|██████████| 617/617 [00:22<00:00, 26.97it/s]
+loaded d3-nano in 27.7 s; upscale bicubic2; 18390 windows to score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+500 windows, 0.710 s/window
+1000 windows, 0.708 s/window
+1500 windows, 0.708 s/window
+2000 windows, 0.707 s/window
+2500 windows, 0.708 s/window
+3000 windows, 0.707 s/window
+3500 windows, 0.707 s/window
+4000 windows, 0.708 s/window
+4500 windows, 0.708 s/window
+5000 windows, 0.707 s/window
+5500 windows, 0.707 s/window
+6000 windows, 0.707 s/window
+6500 windows, 0.707 s/window
+7000 windows, 0.707 s/window
+7500 windows, 0.707 s/window
+8000 windows, 0.707 s/window
+8500 windows, 0.707 s/window
+9000 windows, 0.707 s/window
+9500 windows, 0.707 s/window
+10000 windows, 0.707 s/window
+10500 windows, 0.707 s/window
+11000 windows, 0.707 s/window
+11500 windows, 0.707 s/window
+12000 windows, 0.707 s/window
+12500 windows, 0.707 s/window
+13000 windows, 0.706 s/window
+13500 windows, 0.706 s/window
+14000 windows, 0.706 s/window
+14500 windows, 0.706 s/window
+15000 windows, 0.705 s/window
+15500 windows, 0.705 s/window
+16000 windows, 0.705 s/window
+16500 windows, 0.705 s/window
+17000 windows, 0.705 s/window
+17500 windows, 0.705 s/window
+18000 windows, 0.704 s/window
+done: 18390 windows in 12953 s; peak GPU 4.60 GB
+B done 2026-11-06T10:20:42Z
+Uninstalled 1 package in 0.31ms
+Installed 1 package in 1ms
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:05<59:45,  5.82s/it]Loading weights:   3%|▎         | 21/617 [00:06<02:04,  4.80it/s]Loading weights:   4%|▍         | 26/617 [00:06<01:37,  6.09it/s]Loading weights:   5%|▍         | 30/617 [00:06<01:24,  6.99it/s]Loading weights:   5%|▌         | 33/617 [00:06<01:12,  8.05it/s]Loading weights:   6%|▋         | 39/617 [00:06<00:53, 10.72it/s]Loading weights:   7%|▋         | 42/617 [00:07<00:53, 10.72it/s]Loading weights:   7%|▋         | 45/617 [00:07<00:48, 11.70it/s]Loading weights:   8%|▊         | 47/617 [00:07<00:55, 10.33it/s]Loading weights:   9%|▊         | 53/617 [00:07<00:37, 15.11it/s]Loading weights:  10%|▉         | 60/617 [00:07<00:26, 20.84it/s]Loading weights:  10%|█         | 63/617 [00:08<00:41, 13.44it/s]Loading weights:  12%|█▏        | 75/617 [00:09<00:32, 16.80it/s]Loading weights:  16%|█▌        | 99/617 [00:09<00:13, 38.15it/s]Loading weights:  18%|█▊        | 108/617 [00:09<00:12, 41.79it/s]Loading weights:  20%|██        | 126/617 [00:10<00:15, 32.68it/s]Loading weights:  23%|██▎       | 141/617 [00:10<00:11, 40.80it/s]Loading weights:  24%|██▍       | 148/617 [00:10<00:15, 30.95it/s]Loading weights:  25%|██▍       | 154/617 [00:11<00:18, 25.42it/s]Loading weights:  26%|██▌       | 159/617 [00:11<00:17, 26.51it/s]Loading weights:  27%|██▋       | 164/617 [00:11<00:23, 19.30it/s]Loading weights:  28%|██▊       | 173/617 [00:11<00:17, 25.31it/s]Loading weights:  29%|██▉       | 180/617 [00:12<00:23, 18.42it/s]Loading weights:  31%|███       | 192/617 [00:13<00:31, 13.35it/s]Loading weights:  32%|███▏      | 196/617 [00:14<00:29, 14.28it/s]Loading weights:  36%|███▋      | 224/617 [00:14<00:12, 31.17it/s]Loading weights:  37%|███▋      | 230/617 [00:14<00:13, 28.67it/s]Loading weights:  38%|███▊      | 235/617 [00:15<00:18, 20.35it/s]Loading weights:  39%|███▉      | 241/617 [00:16<00:31, 12.06it/s]Loading weights:  43%|████▎     | 266/617 [00:16<00:13, 25.76it/s]Loading weights:  45%|████▍     | 275/617 [00:17<00:16, 21.19it/s]Loading weights:  46%|████▋     | 286/617 [00:17<00:13, 24.28it/s]Loading weights:  50%|█████     | 310/617 [00:17<00:07, 38.84it/s]Loading weights:  52%|█████▏    | 318/617 [00:18<00:11, 26.44it/s]Loading weights:  58%|█████▊    | 358/617 [00:18<00:04, 55.75it/s]Loading weights:  61%|██████    | 374/617 [00:18<00:03, 63.79it/s]Loading weights:  63%|██████▎   | 389/617 [00:18<00:03, 60.85it/s]Loading weights:  66%|██████▋   | 410/617 [00:19<00:02, 76.09it/s]Loading weights:  69%|██████▊   | 424/617 [00:19<00:02, 81.81it/s]Loading weights:  71%|███████   | 437/617 [00:19<00:02, 84.33it/s]Loading weights:  73%|███████▎  | 449/617 [00:19<00:02, 68.61it/s]Loading weights:  76%|███████▋  | 472/617 [00:19<00:01, 89.84it/s]Loading weights:  78%|███████▊  | 484/617 [00:19<00:01, 88.75it/s]Loading weights:  80%|████████  | 495/617 [00:20<00:01, 79.93it/s]Loading weights:  83%|████████▎ | 514/617 [00:20<00:01, 81.10it/s]Loading weights:  86%|████████▌ | 532/617 [00:20<00:00, 93.12it/s]Loading weights:  88%|████████▊ | 544/617 [00:20<00:00, 91.05it/s]Loading weights:  90%|████████▉ | 554/617 [00:20<00:00, 85.59it/s]Loading weights:  92%|█████████▏| 566/617 [00:20<00:00, 86.78it/s]Loading weights:  94%|█████████▍| 580/617 [00:21<00:00, 90.94it/s]Loading weights:  96%|█████████▌| 590/617 [00:21<00:00, 87.52it/s]Loading weights:  98%|█████████▊| 604/617 [00:21<00:00, 92.15it/s]Loading weights: 100%|█████████▉| 614/617 [00:21<00:00, 65.29it/s]Loading weights: 100%|██████████| 617/617 [00:21<00:00, 28.57it/s]
+loaded d3-nano in 26.3 s; upscale none; 18390 windows to score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+500 windows, 0.711 s/window
+1000 windows, 0.710 s/window
+1500 windows, 0.710 s/window
+2000 windows, 0.710 s/window
+2500 windows, 0.710 s/window
+3000 windows, 0.712 s/window
+3500 windows, 0.711 s/window
+4000 windows, 0.711 s/window
+4500 windows, 0.711 s/window
+5000 windows, 0.711 s/window
+5500 windows, 0.711 s/window
+6000 windows, 0.711 s/window
+6500 windows, 0.711 s/window
+7000 windows, 0.711 s/window
+7500 windows, 0.711 s/window
+8000 windows, 0.711 s/window
+8500 windows, 0.711 s/window
+9000 windows, 0.711 s/window
+9500 windows, 0.711 s/window
+10000 windows, 0.711 s/window
+10500 windows, 0.711 s/window
+11000 windows, 0.711 s/window
+11500 windows, 0.711 s/window
+12000 windows, 0.711 s/window
+12500 windows, 0.711 s/window
+13000 windows, 0.711 s/window
+13500 windows, 0.711 s/window
+14000 windows, 0.712 s/window
+14500 windows, 0.712 s/window
+15000 windows, 0.713 s/window
+15500 windows, 0.713 s/window
+16000 windows, 0.713 s/window
+16500 windows, 0.713 s/window
+17000 windows, 0.713 s/window
+17500 windows, 0.713 s/window
+18000 windows, 0.713 s/window
+done: 18390 windows in 13109 s; peak GPU 4.60 GB
+C done 2026-11-06T13:59:41Z

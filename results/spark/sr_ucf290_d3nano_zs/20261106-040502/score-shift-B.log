@@ -1,0 +1,6 @@
+negatives, all             n= 16838  mean 0.137 -> 0.151  median 0.036 -> 0.035  p99 0.914 -> 0.932  >0.5 9.2% -> 11.3%  higher 47%
+negatives, normal videos   n= 10746  mean 0.080 -> 0.084  median 0.020 -> 0.017  p99 0.768 -> 0.795  >0.5 4.0% -> 5.1%  higher 39%
+negatives, anomaly videos  n=  6092  mean 0.237 -> 0.269  median 0.116 -> 0.137  p99 0.943 -> 0.956  >0.5 18.4% -> 22.2%  higher 60%
+positives, small           n=   733  mean 0.414 -> 0.476  median 0.309 -> 0.446  p99 0.985 -> 0.986  >0.5 38.6% -> 46.2%  higher 62%
+positives, medium          n=   440  mean 0.592 -> 0.645  median 0.706 -> 0.824  p99 0.988 -> 0.991  >0.5 60.5% -> 67.0%  higher 65%
+positives, large           n=   379  mean 0.602 -> 0.625  median 0.653 -> 0.682  p99 0.985 -> 0.988  >0.5 63.9% -> 67.8%  higher 58%

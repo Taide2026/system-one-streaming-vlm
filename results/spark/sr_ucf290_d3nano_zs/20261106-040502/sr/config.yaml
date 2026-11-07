@@ -1,0 +1,10 @@
+frames_dir: /home/cctsai/s1-features/frames/frames_ucf290_f8/20261105-180529
+index: results/spark/frames_ucf290_f8/20261105-180529/windows.jsonl
+out_dir: /home/cctsai/s1-features/frames/frames_ucf290_f8_sr2/20261106-040502
+limit_windows: None
+memory_fraction: '0.5'
+fp32: 'False'
+device: cuda
+half: true
+weights: RealESRGAN_x2plus.pth
+torch: 2.14.1+cu130

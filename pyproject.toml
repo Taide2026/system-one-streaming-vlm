@@ -13,6 +13,7 @@ dependencies = [
     "pyyaml>=6.0",
     "safetensors",
     # The startlux backbone runs StartLux-Decision through its release package (transformers engine), at this commit.
+    "spandrel>=0.4.2",
     "startlux-decide @ git+https://github.com/StartLuxLabs/StartLux-Decision@83fe6c7d61a687a6e17f118b4f7d8f429f5d3a01",
     "torch>=2.14.1",
     "torchvision>=0.29.1",
