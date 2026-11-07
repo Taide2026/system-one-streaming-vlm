@@ -5,8 +5,10 @@ Writes into a new run folder:
   manifest.json  the selected videos: [{name, category, fps, n_frames, duration_s, events, path}]
                  path is relative to the dataset's asset folder, so no machine path leaves the machine
   scores.jsonl   one line per window, written and flushed as it is scored:
-                 {video, window, start_s, end_s, label, score, probabilities, seconds}
+                 {video, window, start_s, end_s, label, score, probabilities, seconds, input_seconds, model_seconds}
                  score = question.score(probabilities); seconds = wall time of input form + backbone + head.
+                 input_seconds = wall time of the input form's build (frame reading); model_seconds = wall time
+                 of backbone + head. Both are parts of seconds (added 2026-11-07).
                  A backbone that decodes adds text, its answer. context recompute adds frames_read, the frames the
                  model saw (past + newest).
 
@@ -19,7 +21,8 @@ is always the newest one.
                   assets: {name: {revision, sha256}}}
                  prefetch: S1_PREFETCH (default 0). > 0: the inputs of the next windows are built in that many
                  background threads while the GPU runs (accuracy runs on a shared, I/O-bound machine); seconds
-                 then covers the backbone and the head only and is not a streaming latency. 0: sequential, as before.
+                 then covers the backbone and the head only and is not a streaming latency, and input_seconds is
+                 measured in the background thread. 0: sequential, as before.
                  machine: S1_MACHINE (e.g. spark, pro6000), else the host name; gpu: the CUDA device's name.
 """
 from __future__ import annotations
@@ -78,6 +81,13 @@ def git_commit(repo: Path) -> tuple[str | None, bool]:
     if head.returncode or status.returncode:
         return None, False
     return head.stdout.strip(), bool(status.stdout.strip())
+
+
+def timed_build(input_form, item, window, question):
+    """(input_form.build(item, window, question), its wall time in seconds)."""
+    start = time.perf_counter()
+    inp = input_form.build(item, window, question)
+    return inp, time.perf_counter() - start
 
 
 def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = None) -> Path:
@@ -142,7 +152,7 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
 
                 pool = ThreadPoolExecutor(max_workers=prefetch)
                 todo = windows if limit_windows is None else windows[:max(0, limit_windows - count)]
-                built = {index: pool.submit(input_form.build, item,
+                built = {index: pool.submit(timed_build, input_form, item,
                                             with_past_frames(windows, index, keep_windows)
                                             if spec.strategy == "recompute" else window, config.question)
                          for index, window in enumerate(todo)}
@@ -150,7 +160,7 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
                 if limit_windows is not None and count >= limit_windows:
                     break
                 if built is not None:
-                    inp = built[index].result()
+                    inp, input_seconds = built[index].result()
                 if cuda:
                     torch.cuda.synchronize()
                 start = time.perf_counter()
@@ -159,7 +169,8 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
                     question = text_state(config.question, scores_so_far, spec.history) if spec.strategy == "text" \
                         else config.question
                     if built is None:
-                        inp = input_form.build(item, seen, question)
+                        inp, input_seconds = timed_build(input_form, item, seen, question)
+                    model_start = time.perf_counter()
                     if streaming:
                         output = backbone.forward_stream(inp, question, policy, window.index)
                     else:
@@ -167,7 +178,8 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
                     probabilities = head.probabilities(output, question)
                 if cuda:
                     torch.cuda.synchronize()
-                seconds = time.perf_counter() - start
+                end = time.perf_counter()
+                seconds, model_seconds = end - start, end - model_start
                 score = question.score(probabilities)
                 scores_so_far.append(score)
                 if stateful_form:
@@ -175,7 +187,8 @@ def run(config: ExperimentConfig, out_dir: Path, limit_windows: int | None = Non
                 row = {"video": item.name, "window": window.index, "start_s": window.start_s,
                        "end_s": window.end_s, "label": window.label,
                        "score": score,
-                       "probabilities": probabilities, "seconds": seconds}
+                       "probabilities": probabilities, "seconds": seconds,
+                       "input_seconds": input_seconds, "model_seconds": model_seconds}
                 if output.text is not None:
                     row["text"] = output.text
                 if spec.strategy == "recompute":

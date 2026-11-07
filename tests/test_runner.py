@@ -72,6 +72,9 @@ def test_run_writes_one_line_per_window(tmp_path, config):
         ("a.mp4", 0, 0.0, 2.0, 0), ("a.mp4", 1, 2.0, 4.0, 1), ("a.mp4", 2, 4.0, 6.0, 0)]
     assert rows[1]["score"] == pytest.approx(0.9)
     assert all(r["seconds"] >= 0 for r in rows)
+    # seconds = the whole window; input_seconds and model_seconds are two parts of it
+    assert all(r["input_seconds"] >= 0 and r["model_seconds"] >= 0 for r in rows)
+    assert all(r["seconds"] >= r["input_seconds"] + r["model_seconds"] - 1e-9 for r in rows)
 
 
 def test_run_writes_config_manifest_and_run_data(tmp_path, config):
@@ -199,3 +202,28 @@ def test_run_with_prefetch_gives_the_same_scores(tmp_path, config, monkeypatch):
     assert [(r["video"], r["window"], r["score"]) for r in plain] == [(r["video"], r["window"], r["score"]) for r in pre]
     assert json.loads((tmp_path / "prefetch" / "run.json").read_text())["prefetch"] == 2
     assert json.loads((tmp_path / "plain" / "run.json").read_text())["prefetch"] == 0
+
+
+def slow_plugins(monkeypatch, input_s: float, model_s: float) -> None:
+    """The fake input form sleeps input_s and the fake backbone sleeps model_s per window."""
+    import time
+
+    build, forward = FakeInput.build, FakeBackbone.forward
+    monkeypatch.setattr(FakeInput, "build", lambda self, *a: (time.sleep(input_s), build(self, *a))[1])
+    monkeypatch.setattr(FakeBackbone, "forward", lambda self, *a: (time.sleep(model_s), forward(self, *a))[1])
+
+
+def test_run_splits_input_and_model_seconds(tmp_path, config, monkeypatch):
+    slow_plugins(monkeypatch, input_s=0.05, model_s=0.01)
+    rows = lines(run(config, tmp_path / "run", limit_windows=2))
+    assert all(r["input_seconds"] >= 0.05 for r in rows)
+    assert all(0.01 <= r["model_seconds"] < 0.05 for r in rows)  # the input time is not in model_seconds
+    assert all(r["seconds"] >= 0.06 for r in rows)
+
+
+def test_run_with_prefetch_keeps_input_seconds_out_of_seconds(tmp_path, config, monkeypatch):
+    slow_plugins(monkeypatch, input_s=0.05, model_s=0.01)
+    monkeypatch.setenv("S1_PREFETCH", "2")
+    rows = lines(run(config, tmp_path / "run", limit_windows=2))
+    assert all(r["input_seconds"] >= 0.05 for r in rows)  # measured in the prefetch thread
+    assert all(r["seconds"] < 0.05 for r in rows)  # as before: backbone and head only
