@@ -1,0 +1,18 @@
+# Previous-window gate for the 2x bicubic up-scale (2026-11-08). Offline: reuses saved per-window scores.
+# Paths are relative to the worktree root; an absolute path is the main checkout (the zero-shot draft is only on main).
+manifest: results/spark/frames_ucf290_f8/20261105-180529/manifest.json
+events: results/spark/tgm_size_ucf290/20261105-200402/jev-hard-events.jsonl
+models:
+  zeroshot:
+    original: /home/cctsai/Eric/VLM/system-one-streaming-vlm/results/spark/d3_nano_ucf_test_v1_f8/20261022-012454/scores.jsonl
+    upscaled: results/spark/sr_ucf290_d3nano_zs/20261106-040502/B/scores.jsonl
+  mixkl:
+    original: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/draft/scores.jsonl
+    upscaled: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/B/scores.jsonl
+# [lo, hi]: up-scale window t when the score used at t-1 is in [lo, hi]. [0.3, 0.7] is foveated_gated's default band.
+gates:
+  - [0.3, 0.7]
+  - [0.1, 1.0]
+  - [0.2, 1.0]
+  - [0.3, 1.0]
+  - [0.5, 1.0]

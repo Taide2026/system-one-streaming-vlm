@@ -1,0 +1,16 @@
+# V-JEPA 2 linear-head gate for the 2x bicubic up-scale (2026-11-08). Offline: reuses saved per-window scores.
+# Paths are relative to the worktree root; absolute paths are the main checkout or the encoder-probing worktree.
+manifest: results/spark/frames_ucf290_f8/20261105-180529/manifest.json
+events: results/spark/tgm_size_ucf290/20261105-200402/jev-hard-events.jsonl
+gate:
+  fit_dir: /home/cctsai/Eric/VLM/system-one-streaming-vlm-wt/encoder-probing/results/spark/encoder_probe_ucf_short_v1_f8/run-1/fit-vjepa2-vitl
+  method: holmes
+  kind: patch_mean
+models:
+  zeroshot:
+    original: /home/cctsai/Eric/VLM/system-one-streaming-vlm/results/spark/d3_nano_ucf_test_v1_f8/20261022-012454/scores.jsonl
+    upscaled: results/spark/sr_ucf290_d3nano_zs/20261106-040502/B/scores.jsonl
+  mixkl:
+    original: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/draft/scores.jsonl
+    upscaled: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/B/scores.jsonl
+upscale_rates: [0.1, 0.2, 0.3, 0.5]

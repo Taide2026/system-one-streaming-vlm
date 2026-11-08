@@ -1,0 +1,71 @@
+{
+ "gate_layer": 18,
+ "zeroshot": {
+  "gate top 10%": {
+   "threshold": 1.3341086626052856,
+   "normal video": 0.007650273224043716,
+   "anomaly video, outside events": 0.1555944055944056,
+   "event, small": 0.3389830508474576,
+   "event, medium": 0.3424657534246575,
+   "event, large": 0.4307692307692308
+  },
+  "gate top 20%": {
+   "threshold": 0.6095701813697817,
+   "normal video": 0.02622950819672131,
+   "anomaly video, outside events": 0.3409090909090909,
+   "event, small": 0.6271186440677966,
+   "event, medium": 0.5753424657534246,
+   "event, large": 0.6
+  },
+  "gate top 30%": {
+   "threshold": 0.056196498870849265,
+   "normal video": 0.06666666666666667,
+   "anomaly video, outside events": 0.5157342657342657,
+   "event, small": 0.7288135593220338,
+   "event, medium": 0.726027397260274,
+   "event, large": 0.8153846153846154
+  },
+  "gate top 50%": {
+   "threshold": -0.9618424773216248,
+   "normal video": 0.2568306010928962,
+   "anomaly video, outside events": 0.7552447552447552,
+   "event, small": 0.8305084745762712,
+   "event, medium": 0.863013698630137,
+   "event, large": 0.9692307692307692
+  }
+ },
+ "mixkl": {
+  "gate top 10%": {
+   "threshold": 1.3341086626052856,
+   "normal video": 0.007650273224043716,
+   "anomaly video, outside events": 0.1555944055944056,
+   "event, small": 0.3389830508474576,
+   "event, medium": 0.3424657534246575,
+   "event, large": 0.4307692307692308
+  },
+  "gate top 20%": {
+   "threshold": 0.6095701813697817,
+   "normal video": 0.02622950819672131,
+   "anomaly video, outside events": 0.3409090909090909,
+   "event, small": 0.6271186440677966,
+   "event, medium": 0.5753424657534246,
+   "event, large": 0.6
+  },
+  "gate top 30%": {
+   "threshold": 0.056196498870849265,
+   "normal video": 0.06666666666666667,
+   "anomaly video, outside events": 0.5157342657342657,
+   "event, small": 0.7288135593220338,
+   "event, medium": 0.726027397260274,
+   "event, large": 0.8153846153846154
+  },
+  "gate top 50%": {
+   "threshold": -0.9618424773216248,
+   "normal video": 0.2568306010928962,
+   "anomaly video, outside events": 0.7552447552447552,
+   "event, small": 0.8305084745762712,
+   "event, medium": 0.863013698630137,
+   "event, large": 0.9692307692307692
+  }
+ }
+}

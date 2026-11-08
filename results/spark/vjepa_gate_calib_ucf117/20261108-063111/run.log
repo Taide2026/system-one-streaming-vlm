@@ -1,0 +1,49 @@
+gate layer 18; 1684 windows
+== zeroshot
+            original  small: 81.1/26.4 dAP[+0.0,+0.0]  medium: 79.5/13.5 dAP[+0.0,+0.0]  large: 90.2/21.0 dAP[+0.0,+0.0]  all: 83.5/39.3 dAP[+0.0,+0.0]
+        upscaled all  small: 83.5/32.9 dAP[-0.1,+18.4]  medium: 82.0/16.0 dAP[-0.9,+8.2]  large: 89.7/19.5 dAP[-5.0,+3.0]  all: 85.0/42.6 dAP[-0.6,+8.5]
+           raw alone  small: 78.3/19.1 dAP[-26.2,+9.0]  medium: 81.3/18.5 dAP[-2.4,+15.6]  large: 86.7/29.4 dAP[-7.1,+23.6]  all: 82.2/41.4 dAP[-6.9,+11.1]
+         raw top 20%  small: 82.7/33.7 dAP[+0.2,+21.2]  medium: 80.3/15.7 dAP[-0.1,+7.1]  large: 90.0/21.2 dAP[-3.0,+4.1]  all: 84.2/43.2 dAP[+0.5,+8.9]
+         raw top 30%  small: 82.5/33.1 dAP[-0.7,+20.4]  medium: 80.2/15.9 dAP[-0.6,+7.7]  large: 90.2/20.7 dAP[-3.8,+3.3]  all: 84.2/42.9 dAP[-0.0,+8.5]
+  minus_mean_5 alone  small: 66.3/16.7 dAP[-23.5,+4.7]  medium: 69.6/18.7 dAP[-2.5,+12.4]  large: 74.8/29.1 dAP[-7.5,+25.3]  all: 70.3/36.8 dAP[-12.6,+7.4]
+minus_mean_5 top 20%  small: 81.6/30.2 dAP[-0.8,+10.9]  medium: 80.4/15.3 dAP[-0.3,+5.9]  large: 90.1/20.7 dAP[-3.8,+3.5]  all: 83.9/41.3 dAP[-0.3,+4.5]
+minus_mean_5 top 30%  small: 81.9/29.7 dAP[-1.2,+10.5]  medium: 81.1/15.4 dAP[+0.1,+5.6]  large: 90.1/20.5 dAP[-4.1,+3.6]  all: 84.3/41.4 dAP[-0.5,+5.1]
+ minus_mean_10 alone  small: 68.1/18.7 dAP[-22.7,+6.8]  medium: 75.7/23.2 dAP[-0.2,+20.3]  large: 76.6/30.4 dAP[-7.3,+26.1]  all: 73.7/40.9 dAP[-9.3,+12.0]
+minus_mean_10 top 20%  small: 82.3/32.4 dAP[-0.3,+16.2]  medium: 80.4/15.6 dAP[-0.2,+6.9]  large: 90.2/21.3 dAP[-3.2,+4.7]  all: 84.2/42.5 dAP[+0.2,+7.0]
+minus_mean_10 top 30%  small: 82.3/31.4 dAP[-0.6,+14.6]  medium: 81.1/16.0 dAP[-0.3,+8.0]  large: 90.2/20.7 dAP[-3.5,+3.8]  all: 84.5/42.3 dAP[-0.0,+7.3]
+minus_mean_all alone  small: 68.4/20.2 dAP[-21.5,+8.1]  medium: 76.1/25.5 dAP[+0.7,+25.5]  large: 76.1/31.6 dAP[-7.1,+28.2]  all: 73.8/42.5 dAP[-8.2,+14.2]
+minus_mean_all top 20%  small: 82.3/31.2 dAP[-0.8,+15.3]  medium: 80.4/15.3 dAP[-0.3,+6.7]  large: 90.1/20.4 dAP[-4.2,+3.1]  all: 84.2/41.8 dAP[-0.3,+6.5]
+minus_mean_all top 30%  small: 82.4/32.5 dAP[-0.7,+18.8]  medium: 81.2/15.9 dAP[-0.2,+7.4]  large: 90.2/20.7 dAP[-3.7,+3.9]  all: 84.5/42.7 dAP[+0.0,+8.4]
+     zscore_10 alone  small: 63.2/7.4 dAP[-34.0,-2.8]  medium: 70.9/11.1 dAP[-10.9,+3.3]  large: 72.5/11.3 dAP[-20.9,-1.4]  all: 69.0/23.3 dAP[-24.3,-7.3]
+   zscore_10 top 20%  small: 81.9/31.7 dAP[-0.1,+14.0]  medium: 80.8/14.9 dAP[+0.1,+3.7]  large: 90.0/21.5 dAP[-2.7,+4.8]  all: 84.2/41.9 dAP[+0.5,+5.7]
+   zscore_10 top 30%  small: 82.4/32.3 dAP[-0.3,+16.3]  medium: 81.4/15.9 dAP[+0.2,+6.4]  large: 90.2/21.1 dAP[-3.3,+4.4]  all: 84.6/42.6 dAP[+0.5,+7.0]
+    zscore_all alone  small: 62.6/7.4 dAP[-34.5,-2.6]  medium: 71.8/11.7 dAP[-10.1,+4.0]  large: 71.4/10.9 dAP[-20.9,-1.8]  all: 68.9/23.5 dAP[-24.2,-7.4]
+  zscore_all top 20%  small: 82.0/31.7 dAP[-0.1,+14.2]  medium: 81.0/15.7 dAP[+0.2,+6.4]  large: 90.0/21.7 dAP[-2.4,+5.2]  all: 84.3/42.5 dAP[+0.9,+6.1]
+  zscore_all top 30%  small: 82.3/31.5 dAP[-0.7,+14.7]  medium: 81.3/15.5 dAP[-0.1,+5.7]  large: 90.2/20.9 dAP[-3.5,+4.1]  all: 84.6/42.2 dAP[+0.1,+6.6]
+== mixkl
+            original  small: 83.0/25.0 dAP[+0.0,+0.0]  medium: 82.6/19.8 dAP[+0.0,+0.0]  large: 92.0/26.4 dAP[+0.0,+0.0]  all: 85.8/44.4 dAP[+0.0,+0.0]
+        upscaled all  small: 86.4/28.4 dAP[-1.5,+9.3]  medium: 84.6/22.5 dAP[-0.2,+6.8]  large: 92.1/25.6 dAP[-3.7,+1.6]  all: 87.6/47.1 dAP[+0.3,+5.9]
+         raw top 20%  small: 86.8/27.9 dAP[-2.0,+9.1]  medium: 83.3/21.6 dAP[-0.5,+5.1]  large: 92.0/26.5 dAP[-2.7,+2.9]  all: 87.2/46.7 dAP[-0.2,+5.6]
+         raw top 30%  small: 86.8/27.9 dAP[-2.8,+9.3]  medium: 83.6/22.2 dAP[-0.3,+6.6]  large: 92.4/26.6 dAP[-2.2,+3.0]  all: 87.5/47.2 dAP[+0.2,+6.1]
+minus_mean_5 top 20%  small: 83.9/28.2 dAP[-1.2,+9.1]  medium: 83.3/22.6 dAP[+0.3,+6.6]  large: 92.6/28.9 dAP[-0.5,+5.2]  all: 86.5/47.4 dAP[+1.2,+4.9]
+minus_mean_5 top 30%  small: 84.1/26.3 dAP[-3.0,+5.8]  medium: 83.9/22.2 dAP[-1.8,+7.3]  large: 92.5/28.4 dAP[-0.7,+4.1]  all: 86.8/46.9 dAP[+0.4,+4.4]
+minus_mean_10 top 20%  small: 85.1/29.6 dAP[-0.2,+10.6]  medium: 83.4/22.6 dAP[+0.3,+6.5]  large: 92.6/29.3 dAP[+0.0,+5.9]  all: 86.9/48.1 dAP[+1.4,+6.2]
+minus_mean_10 top 30%  small: 84.9/27.5 dAP[-2.1,+7.5]  medium: 84.3/22.9 dAP[-1.2,+8.1]  large: 92.6/28.5 dAP[-0.6,+4.3]  all: 87.2/47.9 dAP[+1.0,+6.3]
+minus_mean_all top 20%  small: 85.1/27.7 dAP[-1.8,+7.9]  medium: 83.5/21.9 dAP[-1.8,+6.4]  large: 92.6/27.9 dAP[-1.0,+3.9]  all: 87.0/47.2 dAP[+0.4,+5.7]
+minus_mean_all top 30%  small: 85.1/28.0 dAP[-1.7,+8.7]  medium: 84.4/23.4 dAP[-1.0,+8.6]  large: 92.5/28.2 dAP[-0.9,+4.4]  all: 87.3/48.1 dAP[+1.0,+7.0]
+   zscore_10 top 20%  small: 84.0/28.5 dAP[-0.1,+9.0]  medium: 83.7/22.2 dAP[+0.2,+6.5]  large: 92.4/29.4 dAP[-0.1,+6.0]  all: 86.7/47.3 dAP[+1.1,+5.2]
+   zscore_10 top 30%  small: 85.2/29.8 dAP[+0.1,+10.9]  medium: 84.0/22.9 dAP[+0.5,+6.7]  large: 92.6/29.8 dAP[+0.1,+6.1]  all: 87.2/48.5 dAP[+2.0,+6.4]
+  zscore_all top 20%  small: 84.3/28.7 dAP[+0.1,+9.6]  medium: 84.1/23.1 dAP[+0.5,+8.2]  large: 92.5/29.9 dAP[+0.6,+6.6]  all: 86.9/48.1 dAP[+1.7,+5.8]
+  zscore_all top 30%  small: 85.1/29.5 dAP[-0.1,+10.6]  medium: 84.1/22.7 dAP[+0.5,+6.1]  large: 92.5/29.2 dAP[-0.2,+5.6]  all: 87.2/48.1 dAP[+1.5,+6.0]
+           raw top 20%  up-scaled: normal video 2.6%, anomaly video, outside events 34.1%, event, small 62.7%, event, medium 57.5%, event, large 60.0%, all windows 20.0%
+           raw top 30%  up-scaled: normal video 6.7%, anomaly video, outside events 51.6%, event, small 72.9%, event, medium 72.6%, event, large 81.5%, all windows 30.0%
+  minus_mean_5 top 20%  up-scaled: normal video 16.1%, anomaly video, outside events 16.8%, event, small 40.7%, event, medium 41.1%, event, large 61.5%, all windows 20.0%
+  minus_mean_5 top 30%  up-scaled: normal video 27.5%, anomaly video, outside events 25.0%, event, small 44.1%, event, medium 54.8%, event, large 67.7%, all windows 30.0%
+ minus_mean_10 top 20%  up-scaled: normal video 15.6%, anomaly video, outside events 15.7%, event, small 47.5%, event, medium 49.3%, event, large 61.5%, all windows 20.0%
+ minus_mean_10 top 30%  up-scaled: normal video 26.8%, anomaly video, outside events 23.8%, event, small 50.8%, event, medium 68.5%, event, large 67.7%, all windows 30.0%
+minus_mean_all top 20%  up-scaled: normal video 15.2%, anomaly video, outside events 16.4%, event, small 47.5%, event, medium 49.3%, event, large 61.5%, all windows 20.0%
+minus_mean_all top 30%  up-scaled: normal video 26.2%, anomaly video, outside events 24.5%, event, small 52.5%, event, medium 69.9%, event, large 66.2%, all windows 30.0%
+     zscore_10 top 20%  up-scaled: normal video 19.1%, anomaly video, outside events 14.0%, event, small 35.6%, event, medium 38.4%, event, large 50.8%, all windows 20.0%
+     zscore_10 top 30%  up-scaled: normal video 30.1%, anomaly video, outside events 21.3%, event, small 45.8%, event, medium 54.8%, event, large 63.1%, all windows 30.0%
+    zscore_all top 20%  up-scaled: normal video 19.1%, anomaly video, outside events 13.3%, event, small 37.3%, event, medium 43.8%, event, large 49.2%, all windows 20.0%
+    zscore_all top 30%  up-scaled: normal video 29.3%, anomaly video, outside events 22.0%, event, small 47.5%, event, medium 58.9%, event, large 61.5%, all windows 30.0%

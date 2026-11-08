@@ -1,0 +1,70 @@
+{
+ "zeroshot": {
+  "raw top 20%": {
+   "normal video": 0.03136050623487809,
+   "anomaly video, outside events": 0.3939592908732764,
+   "event, small": 0.5429740791268759,
+   "event, medium": 0.6886363636363636,
+   "event, large": 0.633245382585752,
+   "all windows": 0.2
+  },
+  "raw top 30%": {
+   "normal video": 0.08654383026242322,
+   "anomaly video, outside events": 0.5686145764937623,
+   "event, small": 0.6589358799454298,
+   "event, medium": 0.7931818181818182,
+   "event, large": 0.7678100263852242,
+   "all windows": 0.3
+  },
+  "zscore_all top 20%": {
+   "normal video": 0.16936534524474223,
+   "anomaly video, outside events": 0.21043992120814184,
+   "event, small": 0.3274215552523875,
+   "event, medium": 0.475,
+   "event, large": 0.33509234828496043,
+   "all windows": 0.2
+  },
+  "zscore_all top 30%": {
+   "normal video": 0.26251628512935044,
+   "anomaly video, outside events": 0.3118844386080105,
+   "event, small": 0.48840381991814463,
+   "event, medium": 0.625,
+   "event, large": 0.43007915567282323,
+   "all windows": 0.3
+  }
+ },
+ "mixkl": {
+  "raw top 20%": {
+   "normal video": 0.03136050623487809,
+   "anomaly video, outside events": 0.3939592908732764,
+   "event, small": 0.5429740791268759,
+   "event, medium": 0.6886363636363636,
+   "event, large": 0.633245382585752,
+   "all windows": 0.2
+  },
+  "raw top 30%": {
+   "normal video": 0.08654383026242322,
+   "anomaly video, outside events": 0.5686145764937623,
+   "event, small": 0.6589358799454298,
+   "event, medium": 0.7931818181818182,
+   "event, large": 0.7678100263852242,
+   "all windows": 0.3
+  },
+  "zscore_all top 20%": {
+   "normal video": 0.16936534524474223,
+   "anomaly video, outside events": 0.21043992120814184,
+   "event, small": 0.3274215552523875,
+   "event, medium": 0.475,
+   "event, large": 0.33509234828496043,
+   "all windows": 0.2
+  },
+  "zscore_all top 30%": {
+   "normal video": 0.26251628512935044,
+   "anomaly video, outside events": 0.3118844386080105,
+   "event, small": 0.48840381991814463,
+   "event, medium": 0.625,
+   "event, large": 0.43007915567282323,
+   "all windows": 0.3
+  }
+ }
+}

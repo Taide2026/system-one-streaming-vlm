@@ -1,0 +1,198 @@
+{
+ "zeroshot": {
+  "raw top 20%": {
+   "normal video": 0.02622950819672131,
+   "anomaly video, outside events": 0.3409090909090909,
+   "event, small": 0.6271186440677966,
+   "event, medium": 0.5753424657534246,
+   "event, large": 0.6,
+   "all windows": 0.2001187648456057
+  },
+  "raw top 30%": {
+   "normal video": 0.06666666666666667,
+   "anomaly video, outside events": 0.5157342657342657,
+   "event, small": 0.7288135593220338,
+   "event, medium": 0.726027397260274,
+   "event, large": 0.8153846153846154,
+   "all windows": 0.2998812351543943
+  },
+  "minus_mean_5 top 20%": {
+   "normal video": 0.16065573770491803,
+   "anomaly video, outside events": 0.16783216783216784,
+   "event, small": 0.4067796610169492,
+   "event, medium": 0.410958904109589,
+   "event, large": 0.6153846153846154,
+   "all windows": 0.2001187648456057
+  },
+  "minus_mean_5 top 30%": {
+   "normal video": 0.2754098360655738,
+   "anomaly video, outside events": 0.25,
+   "event, small": 0.4406779661016949,
+   "event, medium": 0.547945205479452,
+   "event, large": 0.676923076923077,
+   "all windows": 0.2998812351543943
+  },
+  "minus_mean_10 top 20%": {
+   "normal video": 0.15628415300546447,
+   "anomaly video, outside events": 0.15734265734265734,
+   "event, small": 0.4745762711864407,
+   "event, medium": 0.4931506849315068,
+   "event, large": 0.6153846153846154,
+   "all windows": 0.2001187648456057
+  },
+  "minus_mean_10 top 30%": {
+   "normal video": 0.2677595628415301,
+   "anomaly video, outside events": 0.23776223776223776,
+   "event, small": 0.5084745762711864,
+   "event, medium": 0.684931506849315,
+   "event, large": 0.676923076923077,
+   "all windows": 0.2998812351543943
+  },
+  "minus_mean_all top 20%": {
+   "normal video": 0.15191256830601094,
+   "anomaly video, outside events": 0.16433566433566432,
+   "event, small": 0.4745762711864407,
+   "event, medium": 0.4931506849315068,
+   "event, large": 0.6153846153846154,
+   "all windows": 0.2001187648456057
+  },
+  "minus_mean_all top 30%": {
+   "normal video": 0.26229508196721313,
+   "anomaly video, outside events": 0.24475524475524477,
+   "event, small": 0.5254237288135594,
+   "event, medium": 0.6986301369863014,
+   "event, large": 0.6615384615384615,
+   "all windows": 0.2998812351543943
+  },
+  "zscore_10 top 20%": {
+   "normal video": 0.1912568306010929,
+   "anomaly video, outside events": 0.13986013986013987,
+   "event, small": 0.3559322033898305,
+   "event, medium": 0.3835616438356164,
+   "event, large": 0.5076923076923077,
+   "all windows": 0.2001187648456057
+  },
+  "zscore_10 top 30%": {
+   "normal video": 0.3005464480874317,
+   "anomaly video, outside events": 0.21328671328671328,
+   "event, small": 0.4576271186440678,
+   "event, medium": 0.547945205479452,
+   "event, large": 0.6307692307692307,
+   "all windows": 0.2998812351543943
+  },
+  "zscore_all top 20%": {
+   "normal video": 0.1912568306010929,
+   "anomaly video, outside events": 0.13286713286713286,
+   "event, small": 0.3728813559322034,
+   "event, medium": 0.4383561643835616,
+   "event, large": 0.49230769230769234,
+   "all windows": 0.2001187648456057
+  },
+  "zscore_all top 30%": {
+   "normal video": 0.292896174863388,
+   "anomaly video, outside events": 0.2202797202797203,
+   "event, small": 0.4745762711864407,
+   "event, medium": 0.589041095890411,
+   "event, large": 0.6153846153846154,
+   "all windows": 0.2998812351543943
+  }
+ },
+ "mixkl": {
+  "raw top 20%": {
+   "normal video": 0.02622950819672131,
+   "anomaly video, outside events": 0.3409090909090909,
+   "event, small": 0.6271186440677966,
+   "event, medium": 0.5753424657534246,
+   "event, large": 0.6,
+   "all windows": 0.2001187648456057
+  },
+  "raw top 30%": {
+   "normal video": 0.06666666666666667,
+   "anomaly video, outside events": 0.5157342657342657,
+   "event, small": 0.7288135593220338,
+   "event, medium": 0.726027397260274,
+   "event, large": 0.8153846153846154,
+   "all windows": 0.2998812351543943
+  },
+  "minus_mean_5 top 20%": {
+   "normal video": 0.16065573770491803,
+   "anomaly video, outside events": 0.16783216783216784,
+   "event, small": 0.4067796610169492,
+   "event, medium": 0.410958904109589,
+   "event, large": 0.6153846153846154,
+   "all windows": 0.2001187648456057
+  },
+  "minus_mean_5 top 30%": {
+   "normal video": 0.2754098360655738,
+   "anomaly video, outside events": 0.25,
+   "event, small": 0.4406779661016949,
+   "event, medium": 0.547945205479452,
+   "event, large": 0.676923076923077,
+   "all windows": 0.2998812351543943
+  },
+  "minus_mean_10 top 20%": {
+   "normal video": 0.15628415300546447,
+   "anomaly video, outside events": 0.15734265734265734,
+   "event, small": 0.4745762711864407,
+   "event, medium": 0.4931506849315068,
+   "event, large": 0.6153846153846154,
+   "all windows": 0.2001187648456057
+  },
+  "minus_mean_10 top 30%": {
+   "normal video": 0.2677595628415301,
+   "anomaly video, outside events": 0.23776223776223776,
+   "event, small": 0.5084745762711864,
+   "event, medium": 0.684931506849315,
+   "event, large": 0.676923076923077,
+   "all windows": 0.2998812351543943
+  },
+  "minus_mean_all top 20%": {
+   "normal video": 0.15191256830601094,
+   "anomaly video, outside events": 0.16433566433566432,
+   "event, small": 0.4745762711864407,
+   "event, medium": 0.4931506849315068,
+   "event, large": 0.6153846153846154,
+   "all windows": 0.2001187648456057
+  },
+  "minus_mean_all top 30%": {
+   "normal video": 0.26229508196721313,
+   "anomaly video, outside events": 0.24475524475524477,
+   "event, small": 0.5254237288135594,
+   "event, medium": 0.6986301369863014,
+   "event, large": 0.6615384615384615,
+   "all windows": 0.2998812351543943
+  },
+  "zscore_10 top 20%": {
+   "normal video": 0.1912568306010929,
+   "anomaly video, outside events": 0.13986013986013987,
+   "event, small": 0.3559322033898305,
+   "event, medium": 0.3835616438356164,
+   "event, large": 0.5076923076923077,
+   "all windows": 0.2001187648456057
+  },
+  "zscore_10 top 30%": {
+   "normal video": 0.3005464480874317,
+   "anomaly video, outside events": 0.21328671328671328,
+   "event, small": 0.4576271186440678,
+   "event, medium": 0.547945205479452,
+   "event, large": 0.6307692307692307,
+   "all windows": 0.2998812351543943
+  },
+  "zscore_all top 20%": {
+   "normal video": 0.1912568306010929,
+   "anomaly video, outside events": 0.13286713286713286,
+   "event, small": 0.3728813559322034,
+   "event, medium": 0.4383561643835616,
+   "event, large": 0.49230769230769234,
+   "all windows": 0.2001187648456057
+  },
+  "zscore_all top 30%": {
+   "normal video": 0.292896174863388,
+   "anomaly video, outside events": 0.2202797202797203,
+   "event, small": 0.4745762711864407,
+   "event, medium": 0.589041095890411,
+   "event, large": 0.6153846153846154,
+   "all windows": 0.2998812351543943
+  }
+ }
+}
