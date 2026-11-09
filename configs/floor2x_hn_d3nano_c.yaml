@@ -1,0 +1,67 @@
+# Mix + KL with 2x inputs and hard negatives (Eric, 2026-11-09): the floor_d3nano_c recipe, plus
+#   - hard_negative_share 0.5: half of the 5,000 v1 negatives come from anomaly videos (outside their events);
+#   - upscale share 0.3: 30 % of the v1 windows of each group (event, anomaly-video negative, normal-video negative)
+#     are bicubic 2x (640x480, as scripts/sr-score.py --upscale bicubic2), so the resolution does not predict the label.
+# Question: does this keep the 2x scores of anomaly-video negatives low (large-tier AP at 2x vs floor_d3nano_c)?
+# Machine with the UCF-Crime videos: scripts/train-floor.py <this>
+# Machine without them (Colab): run --extract-frames <dir> where the videos are, then set data.records_dir and
+# data.frames_cache to the copies and run scripts/train-floor.py <this>
+name: floor2x_hn_d3nano_c
+
+data:
+  asset: ucf-crime
+  hivau_json: $S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json   # as floor_d3nano_c;
+  # the GB10 extraction (results/spark/floor2x_hn_d3nano_c/extract-*) used $S1_ASSETS/holmes-vau-ucf-train/ucf_database_train.json
+  n_abnormal: 5000
+  n_normal: 5000
+  n_val: 2000
+  holdout: 0.1
+  seed: 0
+  hard_negative_share: 0.5
+  # records_dir: <extract run folder>     # Colab
+  # frames_cache: <frame cache folder>    # Colab
+
+tasks:
+  v1:
+    n: 10000
+  c14:
+    n: 5000
+  replay:
+    n: 5000
+    split: train
+    per_config: 400
+
+anchor:
+  kl_lambda: 0.5
+
+
+upscale:
+  share: 0.3
+  seed: 0
+
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+
+question:
+  prompt: v1
+
+backbone:
+  name: d3
+  asset: d3-nano
+
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+
+optim:
+  lr: 1.5e-4
+  head_lr: 1.5e-4
+  warmup: 0.03
+  batch: 8
+  accumulate: 4
+  epochs: 1
+  workers: 6
+  grad_checkpoint: true

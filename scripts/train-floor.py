@@ -30,8 +30,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import cv2
+import numpy as np
 import torch
 import yaml
+from PIL import Image
 
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
@@ -41,7 +44,7 @@ from s1stream.input_forms.frames import read_frames  # noqa: E402
 from s1stream.prompt import C14_OPTIONS, PROMPTS  # noqa: E402
 from s1stream.train import (ClefTrainee, D3Trainee, QwenTrainee, fit_temperature, load_train_config,  # noqa: E402
                             lr_at, question_of, soft_cross_entropy)
-from s1stream.traindata import Record, read_hivau, sample_records, write_records  # noqa: E402
+from s1stream.traindata import Record, read_hivau, read_records, sample_records, write_records  # noqa: E402
 from s1stream.types import Question  # noqa: E402
 
 C14_BY_FOLDER = {"Normal": "Normal", "Abuse": "Abuse", "Arrest": "Police arrest", "Arson": "Arson",
@@ -335,15 +338,25 @@ FLOORS = {"d3": D3Floor, "qwen_first_token": QwenFloor, "clef_flash": ClefFloor}
 class FloorDataset(torch.utils.data.Dataset):
     """items: (task, record_or_None, payload_or_None, target_index_or_y)."""
 
-    def __init__(self, items, floor, foveate_v1: dict | None = None):
+    def __init__(self, items, floor, foveate_v1: dict | None = None, frames_cache: Path | None = None,
+                 upscaled: frozenset[int] = frozenset()):
         self.items, self.floor, self.foveate_v1 = items, floor, foveate_v1
+        self.frames_cache, self.upscaled = frames_cache, upscaled
 
     def __len__(self):
         return len(self.items)
 
+    def images_of(self, record: Record) -> list:
+        """The window's 8 frames: from the pre-extracted cache when set (Colab has no videos), else the video."""
+        if self.frames_cache is None:
+            return read_frames(Path(record.path), record.frame_indices)
+        return [Image.fromarray(frame) for frame in np.load(self.frames_cache / cache_name(record))]
+
     def __getitem__(self, i):
         task, record, payload, y = self.items[i]
-        images = read_frames(Path(record.path), record.frame_indices) if record is not None else []
+        images = self.images_of(record) if record is not None else []
+        if i in self.upscaled:  # v1 items only (see pick_upscaled); the same bicubic 2x as scripts/sr-score.py
+            images = [bicubic2(image) for image in images]
         if task == "v1" and self.foveate_v1 is not None and images:
             from s1stream.input_forms.foveated import foveate
 
@@ -352,6 +365,56 @@ class FloorDataset(torch.utils.data.Dataset):
                              int(self.foveate_v1.get("upscale", 2)), None if ma is None else float(ma),
                              str(self.foveate_v1.get("mode", "tgm")))
         return self.floor.encode(task, record, images, payload), task, y
+
+
+def cache_name(record: Record) -> str:
+    """File of one window in the frames cache: uint8 [8, H, W, 3] RGB, as read by read_frames."""
+    return f"{record.video}-{record.window}.npy"
+
+
+def bicubic2(image: Image.Image) -> Image.Image:
+    """2x bicubic up-scale, equal to scripts/sr-score.py bicubic2 (cv2.INTER_CUBIC on the RGB array)."""
+    pixels = np.asarray(image.convert("RGB"))
+    height, width = pixels.shape[:2]
+    return Image.fromarray(cv2.resize(pixels, (2 * width, 2 * height), interpolation=cv2.INTER_CUBIC))
+
+
+def record_group(record: Record) -> str:
+    """The group of a v1 window for the 2x choice."""
+    if record.y > 0:
+        return "event"  # the window overlaps an event
+    if record.category == "Normal":
+        return "normal video"
+    return "anomaly video"  # a negative window of an anomaly video (outside its events)
+
+
+def pick_upscaled(records: list[Record], share: float, seed: int) -> frozenset[int]:
+    """Indices of the records shown at 2x: the same share inside each group (event, anomaly-video negative,
+    normal-video negative), so the resolution does not predict the label."""
+    groups: dict[str, list[int]] = {"anomaly video": [], "event": [], "normal video": []}
+    for index, record in enumerate(records):
+        groups[record_group(record)].append(index)
+    rng = random.Random(seed)
+    chosen: set[int] = set()
+    for name in sorted(groups):
+        indices = groups[name]
+        rng.shuffle(indices)
+        n_up = round(len(indices) * share)
+        chosen.update(indices[:n_up])
+    return frozenset(chosen)
+
+
+def extract_frames(records: list[Record], out: Path) -> None:
+    """Save the frames of every record to the cache folder (run on the GB10, where the videos are)."""
+    out.mkdir(parents=True, exist_ok=True)
+    t0 = time.perf_counter()
+    for done, record in enumerate(records, 1):
+        path = out / cache_name(record)
+        if not path.exists():
+            images = read_frames(Path(record.path), record.frame_indices)
+            np.save(path, np.stack([np.asarray(image.convert("RGB")) for image in images]))
+        if done % 500 == 0 or done == len(records):
+            print(f"extract {done}/{len(records)} {time.perf_counter() - t0:.0f} s", flush=True)
 
 
 def homogeneous_batches(items, batch: int, seed: int):
@@ -371,26 +434,9 @@ def homogeneous_batches(items, batch: int, seed: int):
     return chunks
 
 
-def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("config", type=Path)
-    ap.add_argument("--out", type=Path, default=None)
-    ap.add_argument("--limit-steps", type=int, default=None)
-    args = ap.parse_args()
-    data = load_train_config(args.config)
-    out_dir = args.out or Path("results") / os.environ.get("S1_MACHINE", "local") / data["name"] / datetime.now().strftime("%Y%m%d-%H%M%S")
-    out_dir.mkdir(parents=True, exist_ok=False)
-    (out_dir / "config.yaml").write_text(yaml.safe_dump(data, sort_keys=False))
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    dspec, window, lora, optim = data["data"], data["window"], data["lora"], data["optim"]
-    tasks = data.get("tasks", {"v1": {"n": int(dspec.get("n_abnormal", 10000)) + int(dspec.get("n_normal", 10000))}})
-    fov = data.get("input_form") if isinstance(data.get("input_form"), dict) else None
-    fov = fov if fov and fov.get("name") == "foveated" else None
-    anchor = float(data.get("anchor", {}).get("kl_lambda", 0.0))
-    dpo_beta = float(data.get("dpo", {}).get("beta", 0.0))
-    torch.manual_seed(int(dspec.get("seed", 0)))
-
-    # ---- records
+def sampled_records(dspec: dict, window: dict, tasks: dict) -> tuple[list[Record], list[Record]]:
+    """(train, val) records drawn from the HIVAU videos; hard_negative_share = the share of the v1 negatives taken
+    from anomaly videos (outside their events), 0 = random negatives as in floor_d3nano_c."""
     root = resolve(dspec["asset"])
     items_v = read_hivau(Path(os.path.expandvars(os.path.expanduser(dspec["hivau_json"]))), root,
                          str(dspec.get("videos_dir", "videos")), bool(dspec.get("flat", False)),
@@ -399,16 +445,60 @@ def main() -> None:
     train_records, val_records = sample_records(items_v, float(window["length_s"]), float(window["stride_s"]),
                                                 int(window["frames"]), n_v1 // 2, n_v1 - n_v1 // 2,
                                                 int(dspec.get("n_val", 2000)), float(dspec.get("holdout", 0.1)),
-                                                int(dspec.get("seed", 0)))
+                                                int(dspec.get("seed", 0)),
+                                                float(dspec.get("hard_negative_share", 0.0)))
     extra = tasks.get("v1", {}).get("extra_records")
     if extra:
-        from s1stream.traindata import read_records
-
         mined = read_records(Path(os.path.expandvars(os.path.expanduser(extra))))
         train_records = train_records + mined
         print(f"v1 extra_records: +{len(mined)} mined hard negatives", flush=True)
+    return train_records, val_records
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("config", type=Path)
+    ap.add_argument("--out", type=Path, default=None)
+    ap.add_argument("--limit-steps", type=int, default=None)
+    ap.add_argument("--extract-frames", type=Path, default=None,
+                    help="sample the records, save their frames to this folder, and stop (no model is loaded)")
+    args = ap.parse_args()
+    data = load_train_config(args.config)
+    out_dir = args.out or Path("results") / os.environ.get("S1_MACHINE", "local") / data["name"] / datetime.now().strftime("%Y%m%d-%H%M%S")
+    out_dir.mkdir(parents=True, exist_ok=False)
+    (out_dir / "config.yaml").write_text(yaml.safe_dump(data, sort_keys=False))
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if device.type == "cuda" and os.environ.get("S1_MEM_FRACTION"):  # GB10 guard (unified memory)
+        torch.cuda.set_per_process_memory_fraction(float(os.environ["S1_MEM_FRACTION"]))
+    dspec, window, lora, optim = data["data"], data["window"], data["lora"], data["optim"]
+    tasks = data.get("tasks", {"v1": {"n": int(dspec.get("n_abnormal", 10000)) + int(dspec.get("n_normal", 10000))}})
+    fov = data.get("input_form") if isinstance(data.get("input_form"), dict) else None
+    fov = fov if fov and fov.get("name") == "foveated" else None
+    anchor = float(data.get("anchor", {}).get("kl_lambda", 0.0))
+    dpo_beta = float(data.get("dpo", {}).get("beta", 0.0))
+    torch.manual_seed(int(dspec.get("seed", 0)))
+
+    # ---- records: sampled from the videos, or read from an earlier --extract-frames run (records_dir, on Colab)
+    records_dir = dspec.get("records_dir")
+    if records_dir:
+        records_dir = Path(os.path.expandvars(os.path.expanduser(records_dir)))
+        train_records, val_records = read_records(records_dir / "records.jsonl"), read_records(records_dir / "val.jsonl")
+        print(f"records from {records_dir}: {len(train_records)} train, {len(val_records)} val", flush=True)
+    else:
+        train_records, val_records = sampled_records(dspec, window, tasks)
     write_records(train_records, out_dir / "records.jsonl")
     write_records(val_records, out_dir / "val.jsonl")
+    if args.extract_frames:
+        extract_frames(train_records + val_records, args.extract_frames)
+        return
+    cache = dspec.get("frames_cache")
+    cache = Path(os.path.expandvars(os.path.expanduser(cache))) if cache else None
+    up = data.get("upscale", {})
+    up_share, up_seed = float(up.get("share", 0.0)), int(up.get("seed", 0))
+    up_train = pick_upscaled(train_records, up_share, up_seed) if up_share else frozenset()
+    up_val = pick_upscaled(val_records, up_share, up_seed + 1) if up_share else frozenset()
+    if up_share:
+        print(f"upscale 2x: {len(up_train)} of {len(train_records)} train, {len(up_val)} of {len(val_records)} val", flush=True)
 
     spec = data["backbone"]
     if spec["name"] not in FLOORS:
@@ -450,7 +540,7 @@ def main() -> None:
 
     batch_size, accumulate = int(optim["batch"]), int(optim.get("accumulate", 1))
     chunks = homogeneous_batches(items, batch_size, int(dspec.get("seed", 0)))
-    dataset = FloorDataset(items, floor, foveate_v1=fov)
+    dataset = FloorDataset(items, floor, foveate_v1=fov, frames_cache=cache, upscaled=up_train)
 
     def collate(parts):
         encs = [p[0] for p in parts]
@@ -521,7 +611,7 @@ def main() -> None:
     # ---- temperature on the held-out v1 windows
     floor.train(False)
     val_items = [("v1", r, None, float(r.y)) for r in val_records]
-    vl = torch.utils.data.DataLoader(FloorDataset(val_items, floor, foveate_v1=fov), batch_sampler=homogeneous_batches(val_items, batch_size, 1),
+    vl = torch.utils.data.DataLoader(FloorDataset(val_items, floor, foveate_v1=fov, frames_cache=cache, upscaled=up_val), batch_sampler=homogeneous_batches(val_items, batch_size, 1),
                                      num_workers=2, collate_fn=collate)
     zs, ys_all = [], []
     with torch.no_grad():
@@ -536,7 +626,8 @@ def main() -> None:
     floor.save(out_dir)
     (out_dir / "run.json").write_text(json.dumps({"name": data["name"], "finished": datetime.now(timezone.utc).isoformat(),
                                                   "steps": step, "arm": "C" if anchor else ("D" if dpo_beta else "B")}, indent=1))
-    print(f"done -> {out_dir}  T={float(t_new):.2f}")
+    peak = torch.cuda.max_memory_allocated() / 2**30 if device.type == "cuda" else 0.0
+    print(f"done -> {out_dir}  T={float(t_new):.2f}  peak GPU {peak:.1f} GB", flush=True)
 
 
 if __name__ == "__main__":
