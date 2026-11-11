@@ -26,6 +26,7 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import s1stream.plugins  # noqa: E402,F401
 from s1stream.assets import resolve  # noqa: E402
+from s1stream.backbones.d3 import QUESTION_ID, build_questions  # noqa: E402
 from s1stream.prompt import PROMPTS  # noqa: E402
 from s1stream.registry import BACKBONES  # noqa: E402
 from s1stream.types import ModelInput, Question  # noqa: E402
@@ -41,13 +42,68 @@ def bicubic2(frame: np.ndarray) -> np.ndarray:
     return cv2.resize(frame, (2 * w, 2 * h), interpolation=cv2.INTER_CUBIC)
 
 
-UPSCALE = {"none": keep, "bicubic2": bicubic2}
+# Scale and interpolation sweep (Eric, 2026-11-10): "<method><factor>", e.g. bicubic1.5, lanczos2.
+# The new size is round(factor * side). bicubic2 keeps its own function, so earlier runs stay comparable.
+INTERPOLATION = {"nearest": cv2.INTER_NEAREST, "bilinear": cv2.INTER_LINEAR,
+                 "bicubic": cv2.INTER_CUBIC, "lanczos": cv2.INTER_LANCZOS4}
+FACTORS = ("1.25", "1.5", "1.75", "2", "3")
+
+
+def resizer(method: str, factor: str):
+    """A function that resizes one frame by factor with the given cv2 interpolation."""
+    def resize(frame: np.ndarray) -> np.ndarray:
+        h, w = frame.shape[:2]
+        size = (round(float(factor) * w), round(float(factor) * h))
+        return cv2.resize(frame, size, interpolation=INTERPOLATION[method])
+    return resize
+
+
+UPSCALE = {"none": keep}
+for _method in INTERPOLATION:
+    for _factor in FACTORS:
+        UPSCALE[f"{_method}{_factor}"] = resizer(_method, _factor)
+UPSCALE["bicubic2"] = bicubic2
+# odd-bicubic2: frames 1, 3, 5, 7 at bicubic 2x, frames 0, 2, 4, 6 unchanged. This is the training input of
+# fovfull2x_d3nano_c (foveate with frac 1.0 and upscale 2: the "crop" is the whole frame). Added 2026-11-09.
+UPSCALE_CHOICES = sorted(UPSCALE) + ["odd-bicubic2"]
 
 
 def window_images(frames: np.ndarray, upscale: str) -> list[Image.Image]:
-    """The model input of one window: frames [8, H, W, 3], each passed through UPSCALE[upscale]."""
-    resize = UPSCALE[upscale]
-    return [Image.fromarray(resize(np.ascontiguousarray(f))) for f in frames]
+    """The model input of one window: frames [8, H, W, 3]."""
+    images = []
+    for index, frame in enumerate(frames):
+        frame = np.ascontiguousarray(frame)
+        if upscale == "odd-bicubic2":
+            frame = bicubic2(frame) if index % 2 == 1 else frame
+        else:
+            frame = UPSCALE[upscale](frame)
+        images.append(Image.fromarray(frame))
+    return images
+
+
+def image_score(backbone, images: list[Image.Image], question: Question) -> tuple[float, dict]:
+    """p(Yes) with the 8 frames sent as 8 separate images (the d3 backbone's images= path)."""
+    logits = backbone.forward(ModelInput(images=images, text=None), question).logits
+    positive = question.options.index(question.positive)
+    return float(logits.detach().float().cpu().softmax(dim=-1)[positive]), {}
+
+
+def video_score(backbone, images: list[Image.Image], question: Question) -> tuple[float, dict]:
+    """p(Yes) with the 8 frames sent as one video (d3 videos= path). Added 2026-11-09.
+
+    The runtime takes the frames as sampled at 2 per second, joins every 2 frames into one token group with a
+    timestamp, and shrinks a frame above 200,704 pixels (0.2 MP) to that size.
+    """
+    result = backbone.model.system_one(state=question.state, videos=[images], questions=build_questions(question))
+    answer = result["answers"][QUESTION_ID]
+    if "error" in answer:
+        raise RuntimeError(f"d3 could not answer: {answer['error']}: {answer.get('message', '')}")
+    probabilities = answer["probabilities"]
+    total = sum(probabilities[option] for option in question.options)
+    return probabilities[question.positive] / total, result.get("usage", {})
+
+
+SCORE = {"images": image_score, "video": video_score}
 
 
 def read_done(path: Path) -> set[tuple[str, int]]:
@@ -63,7 +119,9 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--frames-dir", type=Path, required=True)
     ap.add_argument("--index", type=Path, required=True)
-    ap.add_argument("--upscale", choices=sorted(UPSCALE), required=True)
+    ap.add_argument("--upscale", choices=UPSCALE_CHOICES, required=True)
+    ap.add_argument("--send-as", choices=sorted(SCORE), default="images",
+                    help="images: 8 separate images (all runs before 2026-11-09); video: one 8-frame video")
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--limit-windows", type=int, default=None)
     ap.add_argument("--asset", default="d3-nano")
@@ -82,7 +140,6 @@ def main() -> None:
 
     p = PROMPTS["v1"]
     question = Question(state=p["state"], text=p["text"], options=tuple(p["options"]), positive=p["positive"])
-    positive = question.options.index(question.positive)
     t_load = time.perf_counter()
     spec = {"name": "d3", "asset": args.asset, "path": str(resolve(args.asset)), "memory_cap_gb": args.memory_cap_gb}
     if args.adapter:
@@ -103,13 +160,12 @@ def main() -> None:
             images = window_images(frames[r["window"]], args.upscale)
             t = time.perf_counter()
             with torch.inference_mode():
-                logits = backbone.forward(ModelInput(images=images, text=None), question).logits
-            score = float(logits.detach().float().cpu().softmax(dim=-1)[positive])
+                score, usage = SCORE[args.send_as](backbone, images, question)
             seconds = time.perf_counter() - t
             out.write(json.dumps({"video": r["video"], "window": r["window"], "start_s": r["start_s"],
                                   "end_s": r["end_s"], "label": r["label"], "score": score,
                                   "hot_area": r["hot_area"], "seconds": seconds,
-                                  "size": list(images[0].size)}) + "\n")
+                                  "size": list(images[0].size), "usage": usage}) + "\n")
             n += 1
             if n % 500 == 0:
                 out.flush()
