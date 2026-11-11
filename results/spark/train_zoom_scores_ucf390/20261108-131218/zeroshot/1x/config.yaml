@@ -1,0 +1,10 @@
+frames_dir: /home/cctsai/s1-features/frames/frames_ucf390train_f8/20261108-131218
+index: results/spark/train_zoom_scores_ucf390/20261108-131218/windows.jsonl
+upscale: none
+out: results/spark/train_zoom_scores_ucf390/20261108-131218/zeroshot/1x/scores.jsonl
+limit_windows: None
+asset: d3-nano
+memory_cap_gb: '40'
+adapter: None
+torch: 2.14.1+cu130
+gpu: NVIDIA GB10

@@ -1,0 +1,18 @@
+# V-JEPA 2 linear-head gate for the 2x bicubic up-scale, 290 UCF test videos (2026-11-08). Offline.
+# Paths are relative to the worktree root; absolute paths are the main checkout or the encoder-probing worktree.
+manifest: results/spark/frames_ucf290_f8/20261105-180529/manifest.json
+events: results/spark/tgm_size_ucf290/20261105-200402/jev-hard-events.jsonl
+gate:
+  scores: /home/cctsai/Eric/VLM/system-one-streaming-vlm-wt/encoder-probing/results/spark/encoder_probe_ucf_test_rest_v1_f8/20261108-063724/refit-290/scores.jsonl
+models:
+  zeroshot:
+    original: /home/cctsai/Eric/VLM/system-one-streaming-vlm/results/spark/d3_nano_ucf_test_v1_f8/20261022-012454/scores.jsonl
+    upscaled: results/spark/sr_ucf290_d3nano_zs/20261106-040502/B/scores.jsonl
+  mixkl:
+    original: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/draft/scores.jsonl
+    upscaled: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/B/scores.jsonl
+# Online threshold (2026-11-08): a fixed z-score cutoff c, read from the training videos, never from test.
+train_scores: /home/cctsai/Eric/VLM/system-one-streaming-vlm-wt/encoder-probing/results/spark/encoder_probe_ucf_test_rest_v1_f8/20261108-063724/train-scores/train-scores.jsonl
+train_rate: 0.2          # c = the cutoff that up-scales 20% of the training windows
+fixed_cutoffs: [0.5, 1.0, 1.5]
+# Main setting, fixed before the run: c from the cross-fitted training scores. The rest are references.

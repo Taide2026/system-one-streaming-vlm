@@ -1,0 +1,9 @@
+# Video-level metrics of the up-scale cascade results (Eric, 2026-11-09): Macro AUC, within_auc, AUC_A,
+# recall at 1 FA/h and pooled frame AUC / AP, with paired video bootstrap intervals against "original".
+# The score layouts are rebuilt with the code and config of the score-gate run, so they equal its window AP numbers.
+score_gate_run: results/spark/score_gate_ucf390/20261108-155845      # gates.py + config.yaml
+metrics_code: /home/cctsai/Eric/VLM/system-one-streaming-vlm-wt/encoder-probing/src   # s1stream.metrics, s1stream.bootstrap
+metrics_commit: 196bdae        # HEAD of experiment/encoder-probing when this ran
+manifest: results/spark/frames_ucf290_f8/20261105-180529/manifest.json   # fps, n_frames, events (frame ranges)
+baseline: original
+bootstrap: {n: 1000, seed: 20261022}   # bootstrap.N_BOOT, bootstrap.SEED

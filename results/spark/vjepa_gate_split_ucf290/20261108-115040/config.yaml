@@ -1,0 +1,17 @@
+# V-JEPA 2 linear-head gate for the 2x bicubic up-scale, 290 UCF test videos (2026-11-08). Offline.
+# Paths are relative to the worktree root; absolute paths are the main checkout or the encoder-probing worktree.
+manifest: results/spark/frames_ucf290_f8/20261105-180529/manifest.json
+events: results/spark/tgm_size_ucf290/20261105-200402/jev-hard-events.jsonl
+gate:
+  scores: /home/cctsai/Eric/VLM/system-one-streaming-vlm-wt/encoder-probing/results/spark/encoder_probe_ucf_test_rest_v1_f8/20261108-063724/refit-290/scores.jsonl
+models:
+  zeroshot:
+    original: /home/cctsai/Eric/VLM/system-one-streaming-vlm/results/spark/d3_nano_ucf_test_v1_f8/20261022-012454/scores.jsonl
+    upscaled: results/spark/sr_ucf290_d3nano_zs/20261106-040502/B/scores.jsonl
+  mixkl:
+    original: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/draft/scores.jsonl
+    upscaled: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/B/scores.jsonl
+upscale_rates: [0.2, 0.3]
+# Main setting, fixed before the run: zscore_all top 20%.
+# Split check (2026-11-08): the 117 short videos of encoder_probe_ucf_short_v1_f8 vs the other 173.
+short_videos: /home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8/vjepa2-vitl/run-1/test/meta.jsonl

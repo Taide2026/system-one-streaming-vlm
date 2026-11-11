@@ -1,0 +1,10 @@
+Uninstalled 1 package in 0.42ms
+Installed 1 package in 2ms
+mix1x      frame AUC 88.06  d[+0.00, +0.00]
+mix1x      frame AP  45.16  d[+0.00, +0.00]
+mix2x      frame AUC 89.11  d[+0.07, +2.20]
+mix2x      frame AP  46.54  d[-0.79, +3.66]
+hn1x       frame AUC 87.78  d[-1.62, +1.09]
+hn1x       frame AP  43.97  d[-5.82, +4.15]
+hn2x       frame AUC 89.27  d[-0.28, +2.75]
+hn2x       frame AP  45.28  d[-5.46, +6.07]

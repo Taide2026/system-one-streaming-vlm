@@ -1,0 +1,4 @@
+Uninstalled 1 package in 0.50ms
+Installed 1 package in 2ms
+     odd  small: 85.9/26.3 dAP[-0.2,+3.2]  medium: 91.5/39.2 dAP[-1.9,+3.7]  large: 91.0/16.8 dAP[-11.0,-1.0]  all: 88.7/46.5 dAP[-2.7,+2.0]
+       B  small: 85.7/26.6 dAP[-0.4,+4.2]  medium: 92.0/39.0 dAP[-2.3,+4.1]  large: 91.3/16.4 dAP[-11.9,-0.8]  all: 88.8/46.7 dAP[-3.1,+2.7]

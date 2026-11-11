@@ -1,0 +1,178 @@
+available 106 GB
+Uninstalled 1 package in 0.60ms
+Installed 1 package in 2ms
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:05<58:42,  5.72s/it]Loading weights:   3%|▎         | 20/617 [00:05<02:09,  4.61it/s]Loading weights:   4%|▍         | 25/617 [00:06<01:44,  5.68it/s]Loading weights:   5%|▍         | 28/617 [00:06<01:29,  6.57it/s]Loading weights:   6%|▌         | 35/617 [00:06<01:00,  9.58it/s]Loading weights:   6%|▋         | 40/617 [00:06<00:49, 11.68it/s]Loading weights:   7%|▋         | 43/617 [00:07<00:49, 11.49it/s]Loading weights:   7%|▋         | 46/617 [00:07<00:56, 10.04it/s]Loading weights:   9%|▊         | 53/617 [00:07<00:37, 14.96it/s]Loading weights:  10%|▉         | 61/617 [00:07<00:26, 21.11it/s]Loading weights:  11%|█         | 65/617 [00:08<00:48, 11.33it/s]Loading weights:  13%|█▎        | 80/617 [00:08<00:24, 22.11it/s]Loading weights:  14%|█▍        | 85/617 [00:09<00:23, 22.89it/s]Loading weights:  15%|█▍        | 90/617 [00:09<00:21, 24.17it/s]Loading weights:  17%|█▋        | 104/617 [00:09<00:14, 36.09it/s]Loading weights:  20%|██        | 125/617 [00:09<00:13, 37.62it/s]Loading weights:  22%|██▏       | 134/617 [00:10<00:12, 39.20it/s]Loading weights:  23%|██▎       | 141/617 [00:10<00:16, 28.66it/s]Loading weights:  24%|██▍       | 148/617 [00:10<00:15, 30.48it/s]Loading weights:  25%|██▍       | 152/617 [00:11<00:18, 25.39it/s]Loading weights:  25%|██▌       | 156/617 [00:11<00:18, 25.54it/s]Loading weights:  26%|██▌       | 159/617 [00:11<00:18, 24.80it/s]Loading weights:  26%|██▋       | 162/617 [00:12<00:33, 13.67it/s]Loading weights:  29%|██▉       | 180/617 [00:12<00:15, 28.10it/s]Loading weights:  30%|██▉       | 184/617 [00:12<00:16, 26.71it/s]Loading weights:  30%|███       | 188/617 [00:12<00:18, 23.18it/s]Loading weights:  31%|███▏      | 193/617 [00:12<00:16, 25.39it/s]Loading weights:  32%|███▏      | 196/617 [00:13<00:37, 11.10it/s]Loading weights:  32%|███▏      | 199/617 [00:14<00:33, 12.39it/s]Loading weights:  36%|███▌      | 220/617 [00:14<00:12, 32.37it/s]Loading weights:  37%|███▋      | 227/617 [00:14<00:15, 24.43it/s]Loading weights:  38%|███▊      | 232/617 [00:15<00:22, 16.91it/s]Loading weights:  40%|████      | 248/617 [00:16<00:21, 17.09it/s]Loading weights:  42%|████▏     | 259/617 [00:16<00:16, 22.21it/s]Loading weights:  43%|████▎     | 265/617 [00:16<00:14, 24.56it/s]Loading weights:  44%|████▍     | 270/617 [00:16<00:13, 25.92it/s]Loading weights:  44%|████▍     | 274/617 [00:17<00:16, 20.63it/s]Loading weights:  45%|████▌     | 279/617 [00:17<00:14, 23.05it/s]Loading weights:  47%|████▋     | 287/617 [00:17<00:11, 29.43it/s]Loading weights:  47%|████▋     | 292/617 [00:17<00:12, 26.30it/s]Loading weights:  50%|█████     | 310/617 [00:17<00:06, 44.20it/s]Loading weights:  51%|█████     | 316/617 [00:18<00:08, 33.81it/s]Loading weights:  52%|█████▏    | 322/617 [00:18<00:07, 37.15it/s]Loading weights:  53%|█████▎    | 328/617 [00:18<00:07, 39.79it/s]Loading weights:  55%|█████▌    | 340/617 [00:18<00:05, 52.03it/s]Loading weights:  56%|█████▌    | 347/617 [00:18<00:06, 43.51it/s]Loading weights:  60%|██████    | 372/617 [00:18<00:03, 62.65it/s]Loading weights:  65%|██████▍   | 400/617 [00:19<00:02, 94.79it/s]Loading weights:  67%|██████▋   | 412/617 [00:19<00:02, 92.00it/s]Loading weights:  69%|██████▊   | 424/617 [00:19<00:02, 93.78it/s]Loading weights:  71%|███████   | 436/617 [00:19<00:01, 93.04it/s]Loading weights:  74%|███████▎  | 455/617 [00:19<00:01, 107.14it/s]Loading weights:  76%|███████▌  | 467/617 [00:20<00:02, 58.35it/s] Loading weights:  82%|████████▏ | 508/617 [00:20<00:01, 105.13it/s]Loading weights:  85%|████████▍ | 524/617 [00:20<00:01, 62.88it/s] Loading weights:  92%|█████████▏| 568/617 [00:20<00:00, 102.27it/s]Loading weights:  95%|█████████▍| 586/617 [00:21<00:00, 79.24it/s] Loading weights:  99%|█████████▉| 610/617 [00:21<00:00, 85.52it/s]Loading weights: 100%|██████████| 617/617 [00:21<00:00, 28.42it/s]
+loaded d3-nano in 25.5 s; upscale nearest2; 5 windows to score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+done: 5 windows in 5 s; peak GPU 4.60 GB
+nearest2 smoke ok, start 2026-11-10T22:06:03Z
+Uninstalled 1 package in 0.55ms
+Installed 1 package in 1ms
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:05<57:17,  5.58s/it]Loading weights:   3%|▎         | 20/617 [00:06<02:11,  4.55it/s]Loading weights:   4%|▎         | 23/617 [00:06<02:04,  4.78it/s]Loading weights:   6%|▌         | 38/617 [00:06<01:03,  9.12it/s]Loading weights:   7%|▋         | 45/617 [00:07<00:52, 10.98it/s]Loading weights:   8%|▊         | 48/617 [00:07<00:48, 11.82it/s]Loading weights:   8%|▊         | 51/617 [00:07<00:45, 12.45it/s]Loading weights:  10%|▉         | 61/617 [00:07<00:29, 18.72it/s]Loading weights:  11%|█         | 65/617 [00:07<00:28, 19.25it/s]Loading weights:  11%|█         | 68/617 [00:08<00:32, 16.78it/s]Loading weights:  12%|█▏        | 74/617 [00:08<00:39, 13.76it/s]Loading weights:  14%|█▍        | 89/617 [00:09<00:21, 25.09it/s]Loading weights:  17%|█▋        | 103/617 [00:09<00:14, 34.72it/s]Loading weights:  20%|██        | 125/617 [00:09<00:09, 52.81it/s]Loading weights:  21%|██▏       | 132/617 [00:09<00:10, 46.71it/s]Loading weights:  22%|██▏       | 138/617 [00:09<00:12, 38.42it/s]Loading weights:  23%|██▎       | 143/617 [00:10<00:13, 35.79it/s]Loading weights:  24%|██▍       | 148/617 [00:10<00:19, 24.33it/s]Loading weights:  25%|██▍       | 152/617 [00:10<00:25, 18.46it/s]Loading weights:  25%|██▌       | 155/617 [00:11<00:24, 19.09it/s]Loading weights:  28%|██▊       | 171/617 [00:11<00:13, 31.96it/s]Loading weights:  28%|██▊       | 175/617 [00:11<00:17, 25.97it/s]Loading weights:  29%|██▉       | 179/617 [00:11<00:17, 24.94it/s]Loading weights:  30%|██▉       | 185/617 [00:12<00:16, 26.80it/s]Loading weights:  30%|███       | 188/617 [00:12<00:20, 21.29it/s]Loading weights:  31%|███▏      | 193/617 [00:13<00:44,  9.50it/s]Loading weights:  36%|███▌      | 220/617 [00:13<00:15, 26.24it/s]Loading weights:  36%|███▋      | 225/617 [00:14<00:16, 23.89it/s]Loading weights:  37%|███▋      | 229/617 [00:14<00:15, 24.58it/s]Loading weights:  38%|███▊      | 233/617 [00:14<00:22, 16.75it/s]Loading weights:  40%|████      | 248/617 [00:15<00:23, 15.38it/s]Loading weights:  43%|████▎     | 263/617 [00:16<00:15, 22.96it/s]Loading weights:  44%|████▍     | 273/617 [00:16<00:12, 28.32it/s]Loading weights:  45%|████▌     | 278/617 [00:16<00:14, 23.46it/s]Loading weights:  46%|████▌     | 282/617 [00:16<00:13, 24.10it/s]Loading weights:  47%|████▋     | 287/617 [00:16<00:12, 25.85it/s]Loading weights:  47%|████▋     | 291/617 [00:17<00:13, 23.49it/s]Loading weights:  48%|████▊     | 294/617 [00:17<00:16, 19.49it/s]Loading weights:  50%|█████     | 310/617 [00:17<00:08, 34.32it/s]Loading weights:  51%|█████     | 315/617 [00:18<00:14, 20.98it/s]Loading weights:  55%|█████▌    | 340/617 [00:18<00:06, 44.51it/s]Loading weights:  58%|█████▊    | 357/617 [00:18<00:04, 60.58it/s]Loading weights:  60%|█████▉    | 368/617 [00:18<00:03, 66.04it/s]Loading weights:  61%|██████▏   | 378/617 [00:18<00:03, 67.16it/s]Loading weights:  63%|██████▎   | 388/617 [00:18<00:04, 54.93it/s]Loading weights:  66%|██████▋   | 410/617 [00:19<00:02, 79.24it/s]Loading weights:  68%|██████▊   | 421/617 [00:19<00:02, 79.26it/s]Loading weights:  71%|███████   | 436/617 [00:19<00:02, 88.42it/s]Loading weights:  73%|███████▎  | 452/617 [00:19<00:01, 88.43it/s]Loading weights:  76%|███████▋  | 472/617 [00:19<00:01, 104.17it/s]Loading weights:  78%|███████▊  | 484/617 [00:19<00:01, 101.84it/s]Loading weights:  80%|████████  | 495/617 [00:19<00:01, 95.58it/s] Loading weights:  82%|████████▏ | 508/617 [00:20<00:01, 97.39it/s]Loading weights:  84%|████████▍ | 520/617 [00:20<00:01, 96.55it/s]Loading weights:  86%|████████▌ | 530/617 [00:20<00:00, 89.81it/s]Loading weights:  88%|████████▊ | 543/617 [00:20<00:00, 93.17it/s]Loading weights:  90%|████████▉ | 555/617 [00:20<00:00, 91.43it/s]Loading weights:  92%|█████████▏| 565/617 [00:20<00:00, 84.58it/s]Loading weights:  94%|█████████▍| 580/617 [00:20<00:00, 93.94it/s]Loading weights:  96%|█████████▌| 592/617 [00:21<00:00, 46.23it/s]Loading weights: 100%|██████████| 617/617 [00:21<00:00, 28.76it/s]
+loaded d3-nano in 27.1 s; upscale nearest2; 18390 windows to score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+500 windows, 0.706 s/window
+1000 windows, 0.706 s/window
+1500 windows, 0.706 s/window
+2000 windows, 0.706 s/window
+2500 windows, 0.705 s/window
+3000 windows, 0.705 s/window
+3500 windows, 0.705 s/window
+4000 windows, 0.705 s/window
+4500 windows, 0.705 s/window
+5000 windows, 0.705 s/window
+5500 windows, 0.705 s/window
+6000 windows, 0.705 s/window
+6500 windows, 0.705 s/window
+7000 windows, 0.705 s/window
+7500 windows, 0.705 s/window
+8000 windows, 0.705 s/window
+8500 windows, 0.705 s/window
+9000 windows, 0.705 s/window
+9500 windows, 0.705 s/window
+10000 windows, 0.705 s/window
+10500 windows, 0.705 s/window
+11000 windows, 0.705 s/window
+11500 windows, 0.705 s/window
+12000 windows, 0.705 s/window
+12500 windows, 0.705 s/window
+13000 windows, 0.705 s/window
+13500 windows, 0.705 s/window
+14000 windows, 0.705 s/window
+14500 windows, 0.705 s/window
+15000 windows, 0.705 s/window
+15500 windows, 0.705 s/window
+16000 windows, 0.705 s/window
+16500 windows, 0.705 s/window
+17000 windows, 0.705 s/window
+17500 windows, 0.705 s/window
+18000 windows, 0.705 s/window
+done: 18390 windows in 12961 s; peak GPU 4.60 GB
+nearest2 done 2026-11-11T01:42:33Z
+available 106 GB
+Uninstalled 1 package in 0.39ms
+Installed 1 package in 2ms
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:05<58:39,  5.71s/it]Loading weights:   3%|▎         | 21/617 [00:05<02:02,  4.87it/s]Loading weights:   4%|▍         | 26/617 [00:06<01:40,  5.88it/s]Loading weights:   5%|▍         | 30/617 [00:06<01:21,  7.17it/s]Loading weights:   6%|▌         | 34/617 [00:06<01:09,  8.37it/s]Loading weights:   6%|▋         | 40/617 [00:07<01:18,  7.32it/s]Loading weights:  10%|▉         | 61/617 [00:07<00:30, 18.25it/s]Loading weights:  11%|█         | 67/617 [00:08<00:33, 16.36it/s]Loading weights:  12%|█▏        | 75/617 [00:08<00:26, 20.46it/s]Loading weights:  13%|█▎        | 80/617 [00:08<00:28, 18.58it/s]Loading weights:  14%|█▎        | 84/617 [00:09<00:26, 19.85it/s]Loading weights:  14%|█▍        | 89/617 [00:09<00:23, 22.36it/s]Loading weights:  16%|█▌        | 100/617 [00:09<00:15, 34.42it/s]Loading weights:  17%|█▋        | 106/617 [00:09<00:14, 36.10it/s]Loading weights:  21%|██        | 128/617 [00:09<00:08, 59.21it/s]Loading weights:  22%|██▏       | 136/617 [00:10<00:13, 36.81it/s]Loading weights:  23%|██▎       | 142/617 [00:10<00:12, 37.90it/s]Loading weights:  24%|██▍       | 148/617 [00:10<00:19, 24.36it/s]Loading weights:  25%|██▍       | 152/617 [00:11<00:24, 19.03it/s]Loading weights:  26%|██▌       | 158/617 [00:11<00:20, 22.15it/s]Loading weights:  27%|██▋       | 165/617 [00:11<00:18, 25.07it/s]Loading weights:  28%|██▊       | 170/617 [00:11<00:17, 25.60it/s]Loading weights:  28%|██▊       | 174/617 [00:12<00:20, 21.78it/s]Loading weights:  29%|██▉       | 181/617 [00:12<00:26, 16.34it/s]Loading weights:  31%|███▏      | 194/617 [00:14<00:35, 11.96it/s]Loading weights:  36%|███▋      | 224/617 [00:14<00:14, 27.09it/s]Loading weights:  37%|███▋      | 230/617 [00:14<00:14, 25.98it/s]Loading weights:  38%|███▊      | 235/617 [00:14<00:14, 26.19it/s]Loading weights:  39%|███▊      | 239/617 [00:15<00:18, 20.25it/s]Loading weights:  40%|███▉      | 246/617 [00:15<00:20, 17.87it/s]Loading weights:  41%|████      | 254/617 [00:15<00:16, 21.72it/s]Loading weights:  42%|████▏     | 258/617 [00:16<00:18, 19.82it/s]Loading weights:  42%|████▏     | 261/617 [00:16<00:17, 19.98it/s]Loading weights:  43%|████▎     | 265/617 [00:16<00:16, 21.48it/s]Loading weights:  44%|████▍     | 273/617 [00:16<00:18, 18.63it/s]Loading weights:  45%|████▌     | 279/617 [00:17<00:15, 22.48it/s]Loading weights:  46%|████▌     | 285/617 [00:17<00:13, 24.76it/s]Loading weights:  47%|████▋     | 290/617 [00:17<00:15, 20.93it/s]Loading weights:  47%|████▋     | 293/617 [00:17<00:15, 21.08it/s]Loading weights:  50%|█████     | 310/617 [00:17<00:07, 39.60it/s]Loading weights:  51%|█████     | 315/617 [00:18<00:09, 31.38it/s]Loading weights:  52%|█████▏    | 319/617 [00:18<00:09, 30.74it/s]Loading weights:  53%|█████▎    | 328/617 [00:18<00:07, 38.77it/s]Loading weights:  55%|█████▌    | 340/617 [00:18<00:05, 50.29it/s]Loading weights:  58%|█████▊    | 357/617 [00:18<00:03, 67.94it/s]Loading weights:  61%|██████    | 375/617 [00:18<00:02, 85.90it/s]Loading weights:  63%|██████▎   | 388/617 [00:19<00:02, 89.08it/s]Loading weights:  65%|██████▍   | 398/617 [00:19<00:02, 84.98it/s]Loading weights:  67%|██████▋   | 412/617 [00:19<00:02, 91.68it/s]Loading weights:  68%|██████▊   | 422/617 [00:19<00:02, 86.97it/s]Loading weights:  71%|███████   | 436/617 [00:19<00:01, 92.01it/s]Loading weights:  73%|███████▎  | 448/617 [00:19<00:01, 90.94it/s]Loading weights:  74%|███████▍  | 459/617 [00:19<00:01, 87.58it/s]Loading weights:  76%|███████▌  | 468/617 [00:20<00:02, 61.46it/s]Loading weights:  80%|████████  | 496/617 [00:20<00:01, 98.25it/s]Loading weights:  83%|████████▎ | 514/617 [00:20<00:00, 114.32it/s]Loading weights:  86%|████████▌ | 528/617 [00:20<00:00, 102.57it/s]Loading weights:  88%|████████▊ | 540/617 [00:20<00:00, 97.17it/s] Loading weights:  89%|████████▉ | 551/617 [00:20<00:00, 71.74it/s]Loading weights:  92%|█████████▏| 567/617 [00:21<00:00, 83.74it/s]Loading weights:  94%|█████████▍| 580/617 [00:21<00:00, 86.72it/s]Loading weights:  96%|█████████▌| 591/617 [00:21<00:00, 85.96it/s]Loading weights:  97%|█████████▋| 601/617 [00:21<00:00, 81.73it/s]Loading weights:  99%|█████████▉| 610/617 [00:21<00:00, 68.41it/s]Loading weights: 100%|██████████| 617/617 [00:21<00:00, 28.28it/s]
+loaded d3-nano in 26.3 s; upscale bilinear2; 5 windows to score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+done: 5 windows in 4 s; peak GPU 4.60 GB
+bilinear2 smoke ok, start 2026-11-11T01:43:05Z
+Uninstalled 1 package in 0.31ms
+Installed 1 package in 2ms
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:05<58:50,  5.73s/it]Loading weights:   3%|▎         | 20/617 [00:05<02:08,  4.64it/s]Loading weights:   4%|▍         | 26/617 [00:06<01:34,  6.24it/s]Loading weights:   5%|▍         | 30/617 [00:06<01:23,  7.00it/s]Loading weights:   5%|▌         | 33/617 [00:06<01:12,  8.06it/s]Loading weights:   6%|▌         | 37/617 [00:07<01:30,  6.42it/s]Loading weights:   7%|▋         | 41/617 [00:07<01:10,  8.19it/s]Loading weights:   9%|▉         | 58/617 [00:08<00:38, 14.61it/s]Loading weights:  12%|█▏        | 73/617 [00:08<00:23, 22.98it/s]Loading weights:  13%|█▎        | 79/617 [00:08<00:22, 23.59it/s]Loading weights:  13%|█▎        | 83/617 [00:09<00:25, 21.26it/s]Loading weights:  14%|█▍        | 89/617 [00:09<00:22, 23.13it/s]Loading weights:  17%|█▋        | 104/617 [00:09<00:13, 38.32it/s]Loading weights:  18%|█▊        | 111/617 [00:09<00:11, 42.91it/s]Loading weights:  20%|██        | 126/617 [00:10<00:21, 22.71it/s]Loading weights:  24%|██▍       | 147/617 [00:10<00:12, 37.34it/s]Loading weights:  25%|██▌       | 156/617 [00:11<00:16, 28.15it/s]Loading weights:  27%|██▋       | 166/617 [00:12<00:27, 16.40it/s]Loading weights:  31%|███▏      | 194/617 [00:12<00:14, 29.43it/s]Loading weights:  33%|███▎      | 201/617 [00:13<00:16, 25.45it/s]Loading weights:  34%|███▎      | 207/617 [00:13<00:18, 22.74it/s]Loading weights:  34%|███▍      | 212/617 [00:13<00:16, 23.97it/s]Loading weights:  35%|███▌      | 218/617 [00:14<00:22, 17.70it/s]Loading weights:  38%|███▊      | 234/617 [00:14<00:13, 27.58it/s]Loading weights:  39%|███▊      | 239/617 [00:15<00:17, 22.02it/s]Loading weights:  40%|███▉      | 245/617 [00:15<00:15, 23.71it/s]Loading weights:  41%|████      | 252/617 [00:15<00:13, 26.47it/s]Loading weights:  41%|████▏     | 256/617 [00:15<00:15, 23.15it/s]Loading weights:  42%|████▏     | 259/617 [00:16<00:25, 14.17it/s]Loading weights:  44%|████▍     | 273/617 [00:17<00:21, 16.07it/s]Loading weights:  47%|████▋     | 291/617 [00:17<00:13, 24.53it/s]Loading weights:  48%|████▊     | 295/617 [00:18<00:17, 18.02it/s]Loading weights:  50%|█████     | 309/617 [00:18<00:12, 24.30it/s]Loading weights:  51%|█████     | 313/617 [00:18<00:12, 24.87it/s]Loading weights:  52%|█████▏    | 318/617 [00:18<00:11, 26.31it/s]Loading weights:  53%|█████▎    | 328/617 [00:18<00:08, 34.37it/s]Loading weights:  54%|█████▍    | 333/617 [00:18<00:08, 34.37it/s]Loading weights:  57%|█████▋    | 352/617 [00:19<00:04, 57.15it/s]Loading weights:  58%|█████▊    | 360/617 [00:19<00:04, 57.25it/s]Loading weights:  60%|██████    | 372/617 [00:19<00:03, 64.79it/s]Loading weights:  63%|██████▎   | 388/617 [00:19<00:02, 79.22it/s]Loading weights:  65%|██████▍   | 400/617 [00:19<00:02, 82.81it/s]Loading weights:  67%|██████▋   | 412/617 [00:19<00:02, 85.18it/s]Loading weights:  69%|██████▊   | 424/617 [00:19<00:02, 88.07it/s]Loading weights:  71%|███████   | 436/617 [00:20<00:02, 89.22it/s]Loading weights:  74%|███████▎  | 455/617 [00:20<00:02, 62.44it/s]Loading weights:  79%|███████▉  | 490/617 [00:20<00:01, 105.02it/s]Loading weights:  82%|████████▏ | 506/617 [00:20<00:01, 108.29it/s]Loading weights:  84%|████████▍ | 520/617 [00:20<00:00, 105.26it/s]Loading weights:  86%|████████▋ | 533/617 [00:21<00:00, 100.14it/s]Loading weights:  88%|████████▊ | 545/617 [00:21<00:00, 95.66it/s] Loading weights:  90%|█████████ | 556/617 [00:21<00:00, 90.33it/s]Loading weights:  92%|█████████▏| 568/617 [00:21<00:00, 85.80it/s]Loading weights:  94%|█████████▎| 577/617 [00:21<00:00, 78.94it/s]Loading weights:  95%|█████████▌| 587/617 [00:21<00:00, 81.77it/s]Loading weights:  97%|█████████▋| 597/617 [00:21<00:00, 74.08it/s]Loading weights:  99%|█████████▉| 610/617 [00:22<00:00, 69.88it/s]Loading weights: 100%|██████████| 617/617 [00:22<00:00, 27.78it/s]
+loaded d3-nano in 27.6 s; upscale bilinear2; 18390 windows to score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+500 windows, 0.710 s/window
+1000 windows, 0.709 s/window
+1500 windows, 0.709 s/window
+2000 windows, 0.708 s/window
+2500 windows, 0.708 s/window
+3000 windows, 0.708 s/window
+3500 windows, 0.710 s/window
+4000 windows, 0.711 s/window
+4500 windows, 0.710 s/window
+5000 windows, 0.710 s/window
+5500 windows, 0.710 s/window
+6000 windows, 0.710 s/window
+6500 windows, 0.710 s/window
+7000 windows, 0.710 s/window
+7500 windows, 0.711 s/window
+8000 windows, 0.712 s/window
+8500 windows, 0.713 s/window
+9000 windows, 0.713 s/window
+9500 windows, 0.713 s/window
+10000 windows, 0.713 s/window
+10500 windows, 0.712 s/window
+11000 windows, 0.712 s/window
+11500 windows, 0.712 s/window
+12000 windows, 0.712 s/window
+12500 windows, 0.712 s/window
+13000 windows, 0.712 s/window
+13500 windows, 0.711 s/window
+14000 windows, 0.711 s/window
+14500 windows, 0.711 s/window
+15000 windows, 0.711 s/window
+15500 windows, 0.711 s/window
+16000 windows, 0.711 s/window
+16500 windows, 0.711 s/window
+17000 windows, 0.710 s/window
+17500 windows, 0.710 s/window
+18000 windows, 0.710 s/window
+done: 18390 windows in 13059 s; peak GPU 4.60 GB
+bilinear2 done 2026-11-11T05:21:14Z
+available 106 GB
+Uninstalled 1 package in 0.36ms
+Installed 1 package in 2ms
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:05<59:06,  5.76s/it]Loading weights:   3%|▎         | 20/617 [00:06<02:23,  4.15it/s]Loading weights:   6%|▌         | 36/617 [00:06<01:07,  8.62it/s]Loading weights:   7%|▋         | 43/617 [00:07<01:00,  9.48it/s]Loading weights:   8%|▊         | 48/617 [00:07<00:58,  9.80it/s]Loading weights:   9%|▊         | 53/617 [00:07<00:48, 11.62it/s]Loading weights:  10%|▉         | 60/617 [00:08<00:46, 11.98it/s]Loading weights:  10%|█         | 63/617 [00:08<00:42, 12.93it/s]Loading weights:  12%|█▏        | 75/617 [00:08<00:25, 21.23it/s]Loading weights:  14%|█▍        | 88/617 [00:08<00:16, 32.43it/s]Loading weights:  15%|█▌        | 95/617 [00:08<00:14, 35.56it/s]Loading weights:  16%|█▋        | 101/617 [00:09<00:15, 34.26it/s]Loading weights:  21%|██        | 128/617 [00:09<00:13, 37.24it/s]Loading weights:  23%|██▎       | 142/617 [00:09<00:10, 44.31it/s]Loading weights:  24%|██▍       | 148/617 [00:10<00:15, 30.95it/s]Loading weights:  25%|██▍       | 153/617 [00:10<00:18, 24.80it/s]Loading weights:  26%|██▌       | 159/617 [00:10<00:16, 27.00it/s]Loading weights:  27%|██▋       | 164/617 [00:11<00:25, 17.67it/s]Loading weights:  29%|██▉       | 181/617 [00:11<00:14, 30.71it/s]Loading weights:  30%|███       | 187/617 [00:12<00:18, 22.96it/s]Loading weights:  32%|███▏      | 195/617 [00:12<00:15, 27.28it/s]Loading weights:  32%|███▏      | 200/617 [00:12<00:20, 19.92it/s]Loading weights:  33%|███▎      | 204/617 [00:13<00:19, 21.12it/s]Loading weights:  34%|███▎      | 208/617 [00:13<00:21, 19.03it/s]Loading weights:  34%|███▍      | 212/617 [00:13<00:20, 20.11it/s]Loading weights:  36%|███▌      | 220/617 [00:13<00:15, 26.09it/s]Loading weights:  36%|███▋      | 224/617 [00:14<00:20, 19.15it/s]Loading weights:  37%|███▋      | 227/617 [00:14<00:19, 19.56it/s]Loading weights:  38%|███▊      | 234/617 [00:14<00:15, 24.22it/s]Loading weights:  39%|███▊      | 238/617 [00:14<00:16, 23.48it/s]Loading weights:  39%|███▉      | 241/617 [00:14<00:20, 18.80it/s]Loading weights:  40%|████      | 248/617 [00:15<00:14, 25.10it/s]Loading weights:  41%|████      | 252/617 [00:16<00:33, 11.00it/s]Loading weights:  43%|████▎     | 265/617 [00:16<00:16, 20.99it/s]Loading weights:  44%|████▍     | 273/617 [00:16<00:13, 26.11it/s]Loading weights:  45%|████▌     | 278/617 [00:16<00:20, 16.62it/s]Loading weights:  49%|████▉     | 301/617 [00:17<00:13, 22.93it/s]Loading weights:  52%|█████▏    | 318/617 [00:17<00:09, 32.85it/s]Loading weights:  53%|█████▎    | 328/617 [00:18<00:07, 38.09it/s]Loading weights:  54%|█████▍    | 335/617 [00:18<00:06, 41.56it/s]Loading weights:  55%|█████▌    | 342/617 [00:18<00:06, 41.35it/s]Loading weights:  59%|█████▉    | 363/617 [00:18<00:03, 64.94it/s]Loading weights:  60%|██████    | 372/617 [00:18<00:04, 51.61it/s]Loading weights:  65%|██████▍   | 400/617 [00:18<00:02, 84.00it/s]Loading weights:  67%|██████▋   | 412/617 [00:19<00:02, 83.99it/s]Loading weights:  69%|██████▊   | 423/617 [00:19<00:02, 83.03it/s]Loading weights:  70%|███████   | 433/617 [00:19<00:02, 81.04it/s]Loading weights:  72%|███████▏  | 443/617 [00:19<00:02, 63.01it/s]Loading weights:  73%|███████▎  | 451/617 [00:19<00:03, 49.64it/s]Loading weights:  80%|████████  | 496/617 [00:19<00:01, 109.81it/s]Loading weights:  83%|████████▎ | 511/617 [00:20<00:00, 110.26it/s]Loading weights:  85%|████████▌ | 525/617 [00:20<00:00, 100.99it/s]Loading weights:  87%|████████▋ | 537/617 [00:20<00:00, 94.41it/s] Loading weights:  89%|████████▉ | 548/617 [00:20<00:00, 78.10it/s]Loading weights:  92%|█████████▏| 567/617 [00:20<00:00, 92.72it/s]Loading weights:  94%|█████████▎| 578/617 [00:21<00:00, 42.87it/s]Loading weights: 100%|██████████| 617/617 [00:21<00:00, 28.70it/s]
+loaded d3-nano in 25.8 s; upscale lanczos2; 5 windows to score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+done: 5 windows in 5 s; peak GPU 4.60 GB
+lanczos2 smoke ok, start 2026-11-11T05:21:46Z
+Uninstalled 1 package in 0.44ms
+Installed 1 package in 2ms
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:05<58:08,  5.66s/it]Loading weights:   3%|▎         | 20/617 [00:05<02:07,  4.68it/s]Loading weights:   4%|▍         | 26/617 [00:06<01:33,  6.32it/s]Loading weights:   5%|▍         | 30/617 [00:06<01:21,  7.18it/s]Loading weights:   6%|▌         | 35/617 [00:06<01:02,  9.29it/s]Loading weights:   6%|▋         | 40/617 [00:06<00:51, 11.14it/s]Loading weights:   7%|▋         | 43/617 [00:07<00:52, 11.03it/s]Loading weights:   7%|▋         | 46/617 [00:07<00:58,  9.77it/s]Loading weights:   8%|▊         | 52/617 [00:07<00:41, 13.64it/s]Loading weights:  10%|▉         | 61/617 [00:07<00:26, 20.70it/s]Loading weights:  11%|█         | 65/617 [00:08<00:28, 19.67it/s]Loading weights:  11%|█         | 68/617 [00:08<00:32, 16.76it/s]Loading weights:  12%|█▏        | 75/617 [00:08<00:23, 22.59it/s]Loading weights:  13%|█▎        | 79/617 [00:08<00:25, 20.92it/s]Loading weights:  13%|█▎        | 82/617 [00:08<00:30, 17.28it/s]Loading weights:  14%|█▍        | 85/617 [00:09<00:31, 16.97it/s]Loading weights:  17%|█▋        | 103/617 [00:09<00:12, 41.72it/s]Loading weights:  18%|█▊        | 110/617 [00:09<00:11, 44.53it/s]Loading weights:  19%|█▉        | 117/617 [00:09<00:14, 34.89it/s]Loading weights:  20%|██        | 125/617 [00:10<00:19, 24.98it/s]Loading weights:  21%|██        | 129/617 [00:10<00:18, 25.73it/s]Loading weights:  23%|██▎       | 142/617 [00:11<00:27, 17.47it/s]Loading weights:  27%|██▋       | 167/617 [00:12<00:18, 24.43it/s]Loading weights:  29%|██▉       | 180/617 [00:12<00:14, 30.27it/s]Loading weights:  30%|██▉       | 185/617 [00:12<00:17, 24.17it/s]Loading weights:  32%|███▏      | 195/617 [00:13<00:27, 15.46it/s]Loading weights:  36%|███▌      | 220/617 [00:14<00:18, 21.70it/s]Loading weights:  38%|███▊      | 233/617 [00:15<00:18, 20.38it/s]Loading weights:  40%|████      | 248/617 [00:16<00:17, 20.74it/s]Loading weights:  42%|████▏     | 257/617 [00:16<00:14, 24.27it/s]Loading weights:  42%|████▏     | 261/617 [00:16<00:15, 22.39it/s]Loading weights:  43%|████▎     | 265/617 [00:16<00:15, 22.84it/s]Loading weights:  44%|████▍     | 273/617 [00:16<00:12, 27.18it/s]Loading weights:  45%|████▍     | 277/617 [00:17<00:15, 21.61it/s]Loading weights:  45%|████▌     | 280/617 [00:17<00:15, 21.61it/s]Loading weights:  47%|████▋     | 287/617 [00:17<00:18, 18.18it/s]Loading weights:  47%|████▋     | 290/617 [00:18<00:18, 17.88it/s]Loading weights:  50%|█████     | 310/617 [00:18<00:08, 37.56it/s]Loading weights:  51%|█████     | 315/617 [00:18<00:09, 30.76it/s]Loading weights:  52%|█████▏    | 319/617 [00:18<00:09, 30.33it/s]Loading weights:  53%|█████▎    | 328/617 [00:18<00:07, 37.84it/s]Loading weights:  55%|█████▌    | 340/617 [00:18<00:05, 49.84it/s]Loading weights:  58%|█████▊    | 358/617 [00:19<00:03, 74.00it/s]Loading weights:  60%|█████▉    | 368/617 [00:19<00:03, 76.10it/s]Loading weights:  61%|██████    | 377/617 [00:19<00:03, 74.25it/s]Loading weights:  63%|██████▎   | 386/617 [00:19<00:03, 69.69it/s]Loading weights:  65%|██████▍   | 400/617 [00:19<00:02, 76.04it/s]Loading weights:  66%|██████▋   | 410/617 [00:19<00:02, 75.70it/s]Loading weights:  68%|██████▊   | 420/617 [00:19<00:02, 75.65it/s]Loading weights:  70%|███████   | 432/617 [00:19<00:02, 80.34it/s]Loading weights:  74%|███████▎  | 455/617 [00:20<00:01, 108.32it/s]Loading weights:  76%|███████▌  | 467/617 [00:20<00:01, 84.66it/s] Loading weights:  78%|███████▊  | 484/617 [00:20<00:01, 101.81it/s]Loading weights:  80%|████████  | 496/617 [00:20<00:01, 98.63it/s] Loading weights:  82%|████████▏ | 508/617 [00:20<00:01, 97.24it/s]Loading weights:  84%|████████▍ | 519/617 [00:20<00:01, 91.87it/s]Loading weights:  86%|████████▌ | 531/617 [00:20<00:00, 91.86it/s]Loading weights:  88%|████████▊ | 541/617 [00:21<00:00, 84.03it/s]Loading weights:  90%|█████████ | 556/617 [00:21<00:00, 95.82it/s]Loading weights:  92%|█████████▏| 568/617 [00:21<00:00, 95.04it/s]Loading weights:  94%|█████████▍| 580/617 [00:21<00:00, 93.65it/s]Loading weights:  96%|█████████▌| 592/617 [00:21<00:00, 93.10it/s]Loading weights:  98%|█████████▊| 602/617 [00:21<00:00, 87.43it/s]Loading weights:  99%|█████████▉| 611/617 [00:21<00:00, 73.31it/s]Loading weights: 100%|██████████| 617/617 [00:22<00:00, 28.00it/s]
+loaded d3-nano in 27.6 s; upscale lanczos2; 18390 windows to score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+500 windows, 0.712 s/window
+1000 windows, 0.713 s/window
+1500 windows, 0.712 s/window
+2000 windows, 0.712 s/window
+2500 windows, 0.711 s/window
+3000 windows, 0.711 s/window
+3500 windows, 0.711 s/window
+4000 windows, 0.711 s/window
+4500 windows, 0.711 s/window
+5000 windows, 0.712 s/window
+5500 windows, 0.712 s/window
+6000 windows, 0.712 s/window
+6500 windows, 0.712 s/window
+7000 windows, 0.712 s/window
+7500 windows, 0.711 s/window
+8000 windows, 0.711 s/window
+8500 windows, 0.711 s/window
+9000 windows, 0.711 s/window
+9500 windows, 0.711 s/window
+10000 windows, 0.711 s/window
+10500 windows, 0.711 s/window
+11000 windows, 0.711 s/window
+11500 windows, 0.711 s/window
+12000 windows, 0.711 s/window
+12500 windows, 0.711 s/window
+13000 windows, 0.711 s/window
+13500 windows, 0.711 s/window
+14000 windows, 0.711 s/window
+14500 windows, 0.711 s/window
+15000 windows, 0.711 s/window
+15500 windows, 0.711 s/window
+16000 windows, 0.711 s/window
+16500 windows, 0.711 s/window
+17000 windows, 0.711 s/window
+17500 windows, 0.711 s/window
+18000 windows, 0.711 s/window
+done: 18390 windows in 13068 s; peak GPU 4.60 GB
+lanczos2 done 2026-11-11T09:00:04Z
+Uninstalled 1 package in 0.58ms
+Installed 1 package in 1ms
+bicubic2  small: 85.4/26.1 dAP[+0.7,+5.9]  medium: 92.1/37.9 dAP[-2.3,+4.8]  large: 92.3/25.9 dAP[-6.3,+0.7]  all: 89.0/48.7 dAP[-0.8,+3.6]
+nearest2  small: 85.7/23.3 dAP[-1.4,+2.8]  medium: 91.7/38.3 dAP[-2.6,+4.5]  large: 92.4/23.9 dAP[-9.8,+0.9]  all: 89.0/47.3 dAP[-2.5,+2.5]
+bilinear2  small: 84.5/25.2 dAP[+0.3,+4.9]  medium: 91.9/38.7 dAP[-1.8,+5.0]  large: 92.2/25.8 dAP[-6.3,+0.5]  all: 88.5/48.3 dAP[-1.0,+3.1]
+lanczos2  small: 85.7/26.1 dAP[+0.6,+6.1]  medium: 92.2/38.4 dAP[-1.9,+4.9]  large: 92.2/25.7 dAP[-6.3,+0.4]  all: 89.1/48.8 dAP[-0.6,+3.8]
+Uninstalled 1 package in 0.33ms
+Installed 1 package in 1ms
+nearest2  small: 85.7/23.3 dAP[-4.6,-0.5]  medium: 91.7/38.3 dAP[-2.5,+2.9]  large: 92.4/23.9 dAP[-5.0,+1.1]  all: 89.0/47.3 dAP[-3.0,+0.4]
+bilinear2  small: 84.5/25.2 dAP[-1.5,+0.0]  medium: 91.9/38.7 dAP[-0.8,+2.0]  large: 92.2/25.8 dAP[-1.0,+0.8]  all: 88.5/48.3 dAP[-1.0,+0.3]
+lanczos2  small: 85.7/26.1 dAP[-0.4,+0.5]  medium: 92.2/38.4 dAP[-0.5,+1.4]  large: 92.2/25.7 dAP[-0.7,+0.4]  all: 89.1/48.8 dAP[-0.3,+0.5]
+Uninstalled 1 package in 0.35ms
+Installed 1 package in 1ms
+mix1x          small: 71.8 d[+0.0,+0.0] (n=48)  medium: 82.4 d[+0.0,+0.0] (n=49)  large: 80.6 d[+0.0,+0.0] (n=47)  all: 77.9 d[+0.0,+0.0] (n=139)
+bicubic2       small: 76.0 d[+1.5,+7.2] (n=48)  medium: 84.6 d[+0.0,+4.6] (n=49)  large: 83.2 d[-0.3,+5.9] (n=47)  all: 81.0 d[+1.4,+4.8] (n=139)
+nearest2       small: 74.4 d[+0.2,+5.0] (n=48)  medium: 83.7 d[-1.3,+4.0] (n=49)  large: 81.4 d[-1.0,+2.8] (n=47)  all: 79.5 d[+0.1,+2.9] (n=139)
+bilinear2      small: 76.1 d[+1.6,+7.5] (n=48)  medium: 83.8 d[-0.9,+4.0] (n=49)  large: 82.8 d[-0.4,+5.2] (n=47)  all: 80.6 d[+1.1,+4.3] (n=139)
+lanczos2       small: 75.9 d[+1.2,+7.3] (n=48)  medium: 84.7 d[+0.3,+4.5] (n=49)  large: 83.3 d[+0.2,+5.8] (n=47)  all: 81.0 d[+1.6,+4.6] (n=139)
+all done 2026-11-11T09:00:36Z

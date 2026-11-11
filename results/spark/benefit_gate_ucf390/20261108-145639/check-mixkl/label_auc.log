@@ -1,0 +1,7 @@
+11088 windows; base rate of b > 0: 34.0%
+weight    AUC up  AUC up |b|  AUC Holmes  up rate in top 20%
+ap        0.565   0.531       0.627       40.8%
+crossing  0.569   0.539       0.624       42.0%
+abs_b     0.574   0.555       0.602       41.6%
+logistic  0.593   0.549       0.668       44.9%
+ridge     0.540   0.514       0.534       38.3%

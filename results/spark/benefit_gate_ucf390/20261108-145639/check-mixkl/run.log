@@ -1,0 +1,36 @@
+train 11088 windows (2162 Holmes events), test 18390 windows
+cv mixkl    ap       gate AP 51.5; test zoom rate 13.7%
+cv mixkl    crossing gate AP 51.8; test zoom rate 14.8%
+cv mixkl    abs_b    gate AP 51.8; test zoom rate 9.4%
+cv mixkl    logistic gate AP 51.4; test zoom rate 11.1%
+cv mixkl    ridge    gate AP 51.3; test zoom rate 12.1%
+cv mixkl    original 51.3, all 2x 50.8, oracle 56.4
+main (highest cv gate AP): {'mixkl': 'abs_b'}
+== test, gating zeroshot: 18390 windows
+            original  small: 76.1/23.1 dAP[+0.0,+0.0]  medium: 87.7/29.5 dAP[+0.0,+0.0]  large: 89.5/21.7 dAP[+0.0,+0.0]  all: 82.7/41.9 dAP[+0.0,+0.0]
+        upscaled all  small: 77.9/24.7 dAP[-1.1,+4.6]  medium: 89.1/29.5 dAP[-4.7,+3.7]  large: 89.2/18.8 dAP[-5.1,+0.3]  all: 83.8/42.6 dAP[-1.3,+2.8]
+oracle (events only)  small: 78.6/28.4 dAP[+2.3,+8.6]  medium: 90.0/35.7 dAP[+1.7,+9.3]  large: 90.3/23.7 dAP[-0.9,+4.7]  all: 84.7/47.4 dAP[+3.7,+7.2]
+      mixkl-label ap  small: 76.6/23.7 dAP[-0.4,+1.5]  medium: 87.9/30.6 dAP[-0.4,+2.7]  large: 89.6/21.2 dAP[-1.6,+0.7]  all: 83.0/42.6 dAP[-0.1,+1.4]
+mixkl-label crossing  small: 76.8/23.2 dAP[-0.9,+1.3]  medium: 87.8/30.2 dAP[-1.0,+2.9]  large: 89.5/21.2 dAP[-1.7,+0.6]  all: 83.0/42.3 dAP[-0.5,+1.3]
+   mixkl-label abs_b  small: 77.0/23.6 dAP[-1.0,+1.8]  medium: 87.8/30.1 dAP[-1.6,+2.9]  large: 89.4/20.7 dAP[-2.5,+0.6]  all: 83.1/42.3 dAP[-0.5,+1.5]
+mixkl-label logistic  small: 77.3/23.8 dAP[-0.7,+2.1]  medium: 88.4/30.5 dAP[-2.0,+3.6]  large: 89.3/21.1 dAP[-2.2,+1.0]  all: 83.4/42.8 dAP[-0.1,+2.0]
+   mixkl-label ridge  small: 76.7/23.1 dAP[-1.1,+0.9]  medium: 87.8/30.5 dAP[-0.9,+3.2]  large: 89.5/21.5 dAP[-1.2,+1.0]  all: 82.9/42.3 dAP[-0.3,+1.2]
+            mixkl-label ap  up-scaled: normal video 13.3%, anomaly video, outside events 12.3%, event, small 14.6%, event, medium 24.3%, event, large 34.6%, all windows 13.7%
+      mixkl-label crossing  up-scaled: normal video 15.4%, anomaly video, outside events 12.1%, event, small 15.3%, event, medium 23.6%, event, large 32.2%, all windows 14.8%
+         mixkl-label abs_b  up-scaled: normal video 5.9%, anomaly video, outside events 12.6%, event, small 17.6%, event, medium 24.3%, event, large 24.0%, all windows 9.4%
+      mixkl-label logistic  up-scaled: normal video 4.0%, anomaly video, outside events 18.9%, event, small 25.6%, event, medium 38.4%, event, large 30.6%, all windows 11.1%
+         mixkl-label ridge  up-scaled: normal video 10.2%, anomaly video, outside events 14.1%, event, small 16.4%, event, medium 18.2%, event, large 20.3%, all windows 12.1%
+== test, gating mixkl: 18390 windows
+            original  small: 83.9/22.5 dAP[+0.0,+0.0]  medium: 90.8/37.2 dAP[+0.0,+0.0]  large: 92.3/29.0 dAP[+0.0,+0.0]  all: 87.9/47.3 dAP[+0.0,+0.0]
+        upscaled all  small: 85.4/26.1 dAP[+0.7,+5.9]  medium: 92.1/37.9 dAP[-2.3,+4.8]  large: 92.3/25.9 dAP[-6.3,+0.7]  all: 89.0/48.7 dAP[-0.8,+3.6]
+oracle (events only)  small: 88.3/32.8 dAP[+5.9,+13.4]  medium: 93.9/46.4 dAP[+6.3,+12.2]  large: 94.2/34.7 dAP[+2.2,+7.3]  all: 91.3/56.7 dAP[+7.4,+11.8]
+      mixkl-label ap  small: 84.1/23.3 dAP[-0.2,+1.9]  medium: 91.3/38.2 dAP[-0.9,+3.4]  large: 92.6/29.1 dAP[-1.2,+1.1]  all: 88.2/48.3 dAP[+0.1,+2.0]
+mixkl-label crossing  small: 84.1/23.0 dAP[-0.5,+1.8]  medium: 91.2/38.8 dAP[-0.5,+4.5]  large: 92.6/29.1 dAP[-1.5,+1.2]  all: 88.2/48.2 dAP[-0.1,+2.0]
+   mixkl-label abs_b  small: 84.3/23.7 dAP[-0.1,+2.6]  medium: 91.1/37.6 dAP[-2.4,+3.6]  large: 92.3/27.2 dAP[-4.0,+0.2]  all: 88.2/47.8 dAP[-0.5,+1.8]
+mixkl-label logistic  small: 84.6/23.8 dAP[-0.1,+2.9]  medium: 91.3/38.9 dAP[-1.0,+4.5]  large: 92.1/27.2 dAP[-4.2,+0.0]  all: 88.3/48.3 dAP[-0.1,+2.3]
+   mixkl-label ridge  small: 84.4/23.3 dAP[-0.2,+1.8]  medium: 91.0/37.6 dAP[-2.0,+3.5]  large: 92.3/28.1 dAP[-2.9,+0.5]  all: 88.2/47.8 dAP[-0.4,+1.7]
+            mixkl-label ap  up-scaled: normal video 13.3%, anomaly video, outside events 12.3%, event, small 14.6%, event, medium 24.3%, event, large 34.6%, all windows 13.7%
+      mixkl-label crossing  up-scaled: normal video 15.4%, anomaly video, outside events 12.1%, event, small 15.3%, event, medium 23.6%, event, large 32.2%, all windows 14.8%
+         mixkl-label abs_b  up-scaled: normal video 5.9%, anomaly video, outside events 12.6%, event, small 17.6%, event, medium 24.3%, event, large 24.0%, all windows 9.4%
+      mixkl-label logistic  up-scaled: normal video 4.0%, anomaly video, outside events 18.9%, event, small 25.6%, event, medium 38.4%, event, large 30.6%, all windows 11.1%
+         mixkl-label ridge  up-scaled: normal video 10.2%, anomaly video, outside events 14.1%, event, small 16.4%, event, medium 18.2%, event, large 20.3%, all windows 12.1%

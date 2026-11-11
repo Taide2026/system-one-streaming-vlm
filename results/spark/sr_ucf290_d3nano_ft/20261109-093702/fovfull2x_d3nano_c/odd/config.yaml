@@ -1,0 +1,10 @@
+frames_dir: /home/cctsai/s1-features/frames/frames_ucf290_f8/20261105-180529
+index: results/spark/frames_ucf290_f8/20261105-180529/windows.jsonl
+upscale: odd-bicubic2
+out: results/spark/sr_ucf290_d3nano_ft/20261109-093702/fovfull2x_d3nano_c/odd/scores.jsonl
+limit_windows: None
+asset: d3-nano
+memory_cap_gb: '40'
+adapter: results/pro6000/fovfull2x_d3nano_c/20261106-013724
+torch: 2.14.1+cu130
+gpu: NVIDIA GB10

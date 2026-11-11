@@ -1,0 +1,32 @@
+Uninstalled 1 package in 0.35ms
+Installed 1 package in 2ms
+== zeroshot: 18390 windows, 290 videos
+original                                     winAP  41.9  frame_auc 82.8  frame_ap 39.8  macro_auc 75.7  median_video_auc 79.3  within_auc 70.3  anomaly_auc 72.9  recall_at_1fa_h 16.4
+2x everywhere                                winAP  42.6  frame_auc 83.9  frame_ap 40.5  macro_auc 78.1  median_video_auc 82.0  within_auc 71.7  anomaly_auc 73.8  recall_at_1fa_h 20.2
+oracle (events only)                         winAP  47.4  frame_auc 84.7  frame_ap 45.0  macro_auc 79.3  median_video_auc 83.9  within_auc 72.5  anomaly_auc 76.2  recall_at_1fa_h 18.8
+band, center 0.65 (train), replace           winAP  41.9  frame_auc 83.0  frame_ap 39.9  macro_auc 76.1  median_video_auc 80.3  within_auc 70.2  anomaly_auc 73.2  recall_at_1fa_h 20.9
+band, center 0.65 (train), lambda 1.0, delta winAP  42.3  frame_auc 83.0  frame_ap 40.3  macro_auc 76.1  median_video_auc 79.6  within_auc 70.2  anomaly_auc 73.2  recall_at_1fa_h 20.9
+band, center 0.7 (Sol), replace              winAP  42.3  frame_auc 83.0  frame_ap 40.3  macro_auc 76.0  median_video_auc 79.5  within_auc 70.0  anomaly_auc 73.2  recall_at_1fa_h 20.2
+band, center 0.7 (Sol), lambda 1.0, delta    winAP  42.4  frame_auc 83.0  frame_ap 40.4  macro_auc 76.0  median_video_auc 79.7  within_auc 70.0  anomaly_auc 73.2  recall_at_1fa_h 20.2
+rise, replace                                winAP  42.1  frame_auc 83.2  frame_ap 39.9  macro_auc 76.0  median_video_auc 78.6  within_auc 70.2  anomaly_auc 73.3  recall_at_1fa_h 18.6
+rise, lambda 1.0, delta                      winAP  42.4  frame_auc 83.2  frame_ap 40.2  macro_auc 76.0  median_video_auc 78.7  within_auc 70.3  anomaly_auc 73.3  recall_at_1fa_h 19.0
+rise + motion, beta 0, replace               winAP  42.1  frame_auc 83.2  frame_ap 39.9  macro_auc 76.0  median_video_auc 78.6  within_auc 70.2  anomaly_auc 73.3  recall_at_1fa_h 18.6
+rise + motion, beta 0, lambda 1.0, delta     winAP  42.4  frame_auc 83.2  frame_ap 40.2  macro_auc 76.0  median_video_auc 78.7  within_auc 70.3  anomaly_auc 73.3  recall_at_1fa_h 19.0
+anomaly head (online), replace               winAP  42.8  frame_auc 83.1  frame_ap 40.6  macro_auc 76.9  median_video_auc 80.4  within_auc 70.4  anomaly_auc 73.4  recall_at_1fa_h 18.6
+anomaly head (online), max                   winAP  43.2  frame_auc 83.3  frame_ap 41.1  macro_auc 77.5  median_video_auc 80.9  within_auc 70.4  anomaly_auc 73.6  recall_at_1fa_h 18.1
+all windows, lambda 0.75                     winAP  43.2  frame_auc 83.9  frame_ap 41.1  macro_auc 78.2  median_video_auc 82.9  within_auc 71.5  anomaly_auc 73.8  recall_at_1fa_h 17.9
+== mixkl: 18390 windows, 290 videos
+original                                     winAP  47.3  frame_auc 88.1  frame_ap 45.2  macro_auc 78.5  median_video_auc 82.8  within_auc 73.5  anomaly_auc 73.6  recall_at_1fa_h 24.7
+2x everywhere                                winAP  48.7  frame_auc 89.1  frame_ap 46.5  macro_auc 81.6  median_video_auc 86.7  within_auc 75.1  anomaly_auc 76.0  recall_at_1fa_h 30.6
+oracle (events only)                         winAP  56.7  frame_auc 91.4  frame_ap 54.1  macro_auc 86.6  median_video_auc 91.3  within_auc 81.8  anomaly_auc 80.4  recall_at_1fa_h 31.0
+band, center 0.8 (train), replace            winAP  47.5  frame_auc 88.1  frame_ap 45.4  macro_auc 78.3  median_video_auc 82.8  within_auc 73.5  anomaly_auc 73.6  recall_at_1fa_h 32.3
+band, center 0.8 (train), max                winAP  47.5  frame_auc 88.1  frame_ap 45.4  macro_auc 78.5  median_video_auc 82.8  within_auc 73.5  anomaly_auc 73.6  recall_at_1fa_h 30.3
+band, center 0.7 (Sol), replace              winAP  47.4  frame_auc 88.3  frame_ap 45.4  macro_auc 78.4  median_video_auc 82.8  within_auc 73.6  anomaly_auc 74.0  recall_at_1fa_h 30.4
+band, center 0.7 (Sol), lambda 0.5, delta    winAP  47.9  frame_auc 88.2  frame_ap 45.8  macro_auc 78.9  median_video_auc 83.1  within_auc 73.8  anomaly_auc 74.0  recall_at_1fa_h 29.4
+rise, replace                                winAP  48.0  frame_auc 88.3  frame_ap 45.7  macro_auc 79.1  median_video_auc 82.8  within_auc 73.4  anomaly_auc 74.2  recall_at_1fa_h 30.2
+rise, max                                    winAP  47.4  frame_auc 88.1  frame_ap 45.1  macro_auc 79.0  median_video_auc 83.0  within_auc 73.1  anomaly_auc 73.9  recall_at_1fa_h 28.6
+rise + motion, beta 0, replace               winAP  48.0  frame_auc 88.3  frame_ap 45.7  macro_auc 79.1  median_video_auc 82.8  within_auc 73.4  anomaly_auc 74.2  recall_at_1fa_h 30.2
+rise + motion, beta 0, max                   winAP  47.4  frame_auc 88.1  frame_ap 45.1  macro_auc 79.0  median_video_auc 83.0  within_auc 73.1  anomaly_auc 73.9  recall_at_1fa_h 28.6
+anomaly head (online), replace               winAP  48.5  frame_auc 88.4  frame_ap 46.1  macro_auc 80.5  median_video_auc 86.7  within_auc 73.9  anomaly_auc 74.6  recall_at_1fa_h 29.4
+anomaly head (online), max                   winAP  48.5  frame_auc 88.4  frame_ap 46.1  macro_auc 80.7  median_video_auc 86.7  within_auc 73.8  anomaly_auc 74.6  recall_at_1fa_h 27.8
+all windows, lambda 0.25                     winAP  48.1  frame_auc 88.5  frame_ap 46.0  macro_auc 79.7  median_video_auc 86.0  within_auc 74.0  anomaly_auc 74.3  recall_at_1fa_h 27.3

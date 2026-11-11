@@ -1,0 +1,1 @@
+Stopped by Eric on 2026-11-09 after the windows in floor_d3nano_c/video-1x/scores.jsonl. The frames were sent as a list, so the d3 runtime read them at 2 fps: a 2 s window looked like 4 s. The 2026-11-01 video-input run (archive) passed d3_runtime.Video with the real fps and frame indices instead.

@@ -1,0 +1,4 @@
+Uninstalled 1 package in 0.88ms
+Installed 1 package in 3ms
+nearest2  small: 85.7/23.3 dAP[-4.6,-0.5]  medium: 91.7/38.3 dAP[-2.5,+2.9]  large: 92.4/23.9 dAP[-5.0,+1.1]  all: 89.0/47.3 dAP[-3.0,+0.4]
+bilinear2  small: 84.5/25.2 dAP[-1.5,+0.0]  medium: 91.9/38.7 dAP[-0.8,+2.0]  large: 92.2/25.8 dAP[-1.0,+0.8]  all: 88.5/48.3 dAP[-1.0,+0.3]

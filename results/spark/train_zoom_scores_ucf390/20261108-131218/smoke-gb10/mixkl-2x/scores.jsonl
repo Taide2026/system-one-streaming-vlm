@@ -1,0 +1,5 @@
+{"video": "Abuse001_x264.mp4", "window": 0, "start_s": 0.0, "end_s": 2.0, "label": 0, "score": 0.3030637502670288, "hot_area": 0.008411458333333333, "seconds": 1.5958165619522333, "size": [640, 480]}
+{"video": "Abuse001_x264.mp4", "window": 1, "start_s": 2.0, "end_s": 4.0, "label": 1, "score": 0.24430851638317108, "hot_area": 0.004674479166666667, "seconds": 0.6796451399568468, "size": [640, 480]}
+{"video": "Abuse001_x264.mp4", "window": 2, "start_s": 4.0, "end_s": 6.0, "label": 1, "score": 0.21400269865989685, "hot_area": 0.042890625, "seconds": 0.7067280829651281, "size": [640, 480]}
+{"video": "Abuse001_x264.mp4", "window": 3, "start_s": 6.0, "end_s": 8.0, "label": 1, "score": 0.29065170884132385, "hot_area": 0.0133984375, "seconds": 0.6900803139433265, "size": [640, 480]}
+{"video": "Abuse001_x264.mp4", "window": 4, "start_s": 8.0, "end_s": 10.0, "label": 1, "score": 0.7383540272712708, "hot_area": 0.018190104166666665, "seconds": 0.709791733068414, "size": [640, 480]}

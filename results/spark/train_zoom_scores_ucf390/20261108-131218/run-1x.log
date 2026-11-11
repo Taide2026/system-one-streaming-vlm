@@ -1,0 +1,51 @@
+zeroshot 1x start 2026-11-08T13:16:00Z
+loaded d3-nano in 24.3 s; upscale none; 11088 windows to score
+500 windows, 0.251 s/window
+1000 windows, 0.250 s/window
+1500 windows, 0.248 s/window
+2000 windows, 0.250 s/window
+2500 windows, 0.252 s/window
+3000 windows, 0.251 s/window
+3500 windows, 0.251 s/window
+4000 windows, 0.251 s/window
+4500 windows, 0.251 s/window
+5000 windows, 0.251 s/window
+5500 windows, 0.250 s/window
+6000 windows, 0.250 s/window
+6500 windows, 0.250 s/window
+7000 windows, 0.250 s/window
+7500 windows, 0.250 s/window
+8000 windows, 0.250 s/window
+8500 windows, 0.250 s/window
+9000 windows, 0.249 s/window
+9500 windows, 0.249 s/window
+10000 windows, 0.249 s/window
+10500 windows, 0.249 s/window
+11000 windows, 0.249 s/window
+done: 11088 windows in 2763 s; peak GPU 4.28 GB
+mixkl 1x start 2026-11-08T14:02:30Z
+loaded d3-nano in 26.3 s; upscale none; 11088 windows to score
+500 windows, 0.257 s/window
+1000 windows, 0.256 s/window
+1500 windows, 0.257 s/window
+2000 windows, 0.256 s/window
+2500 windows, 0.256 s/window
+3000 windows, 0.256 s/window
+3500 windows, 0.256 s/window
+4000 windows, 0.257 s/window
+4500 windows, 0.256 s/window
+5000 windows, 0.256 s/window
+5500 windows, 0.256 s/window
+6000 windows, 0.256 s/window
+6500 windows, 0.256 s/window
+7000 windows, 0.256 s/window
+7500 windows, 0.256 s/window
+8000 windows, 0.257 s/window
+8500 windows, 0.257 s/window
+9000 windows, 0.257 s/window
+9500 windows, 0.257 s/window
+10000 windows, 0.257 s/window
+10500 windows, 0.257 s/window
+11000 windows, 0.257 s/window
+done: 11088 windows in 2849 s; peak GPU 4.60 GB
+done 2026-11-08T14:50:27Z

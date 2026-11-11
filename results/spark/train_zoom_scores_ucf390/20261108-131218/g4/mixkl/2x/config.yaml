@@ -1,0 +1,10 @@
+frames_dir: /content/frames
+index: results/spark/train_zoom_scores_ucf390/20261108-131218/windows.jsonl
+upscale: bicubic2
+out: results/spark/train_zoom_scores_ucf390/20261108-131218/g4/mixkl/2x/scores.jsonl
+limit_windows: None
+asset: d3-nano
+memory_cap_gb: '40'
+adapter: results/pro6000/floor_d3nano_c/20261031-045123
+torch: 2.14.1+cu130
+gpu: NVIDIA RTX PRO 6000 Blackwell Server Edition

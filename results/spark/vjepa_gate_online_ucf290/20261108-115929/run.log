@@ -1,0 +1,24 @@
+cutoffs: train crossfit (c=1.095), train insample (c=1.133), fixed c=0.5, fixed c=1.0, fixed c=1.5
+== zeroshot: 18390 windows
+            original  small: 76.1/23.1 dAP[+0.0,+0.0]  medium: 87.7/29.5 dAP[+0.0,+0.0]  large: 89.5/21.7 dAP[+0.0,+0.0]  all: 82.7/41.9 dAP[+0.0,+0.0]
+        upscaled all  small: 77.9/24.7 dAP[-1.1,+4.6]  medium: 89.1/29.5 dAP[-4.7,+3.7]  large: 89.2/18.8 dAP[-5.1,+0.3]  all: 83.8/42.6 dAP[-1.3,+2.8]
+oracle (events only)  small: 78.6/28.4 dAP[+2.3,+8.6]  medium: 90.0/35.7 dAP[+1.7,+9.3]  large: 90.3/23.7 dAP[-0.9,+4.7]  all: 84.7/47.4 dAP[+3.7,+7.2]
+train crossfit (c=1.095)  small: 76.6/24.0 dAP[-0.3,+2.4]  medium: 88.2/30.7 dAP[-2.1,+3.6]  large: 89.8/21.3 dAP[-2.0,+2.0]  all: 83.1/42.8 dAP[-0.1,+2.1]
+train insample (c=1.133)  small: 76.6/24.1 dAP[-0.3,+2.5]  medium: 88.2/30.7 dAP[-2.1,+3.5]  large: 89.8/21.5 dAP[-1.8,+2.1]  all: 83.1/42.8 dAP[-0.1,+2.1]
+         fixed c=0.5  small: 77.0/24.7 dAP[-0.5,+3.8]  medium: 88.7/31.1 dAP[-2.4,+4.6]  large: 89.7/20.5 dAP[-3.2,+1.6]  all: 83.4/43.3 dAP[-0.2,+3.1]
+         fixed c=1.0  small: 76.6/24.2 dAP[-0.4,+2.7]  medium: 88.3/31.2 dAP[-1.6,+4.0]  large: 89.7/21.3 dAP[-2.1,+1.9]  all: 83.1/43.0 dAP[-0.0,+2.4]
+         fixed c=1.5  small: 76.4/23.6 dAP[-0.4,+1.9]  medium: 88.0/30.8 dAP[-1.0,+3.3]  large: 89.9/21.9 dAP[-1.1,+1.8]  all: 83.0/42.7 dAP[+0.0,+1.7]
+== mixkl: 18390 windows
+            original  small: 83.9/22.5 dAP[+0.0,+0.0]  medium: 90.8/37.2 dAP[+0.0,+0.0]  large: 92.3/29.0 dAP[+0.0,+0.0]  all: 87.9/47.3 dAP[+0.0,+0.0]
+        upscaled all  small: 85.4/26.1 dAP[+0.7,+5.9]  medium: 92.1/37.9 dAP[-2.3,+4.8]  large: 92.3/25.9 dAP[-6.3,+0.7]  all: 89.0/48.7 dAP[-0.8,+3.6]
+oracle (events only)  small: 88.3/32.8 dAP[+5.9,+13.4]  medium: 93.9/46.4 dAP[+6.3,+12.2]  large: 94.2/34.7 dAP[+2.2,+7.3]  all: 91.3/56.7 dAP[+7.4,+11.8]
+train crossfit (c=1.095)  small: 84.2/24.2 dAP[+0.2,+3.1]  medium: 91.5/39.2 dAP[-0.4,+4.8]  large: 92.5/27.7 dAP[-3.0,+1.5]  all: 88.3/48.5 dAP[-0.0,+2.6]
+train insample (c=1.133)  small: 84.2/24.2 dAP[+0.2,+3.1]  medium: 91.4/39.1 dAP[-0.4,+4.8]  large: 92.5/27.9 dAP[-2.9,+1.6]  all: 88.3/48.4 dAP[-0.0,+2.6]
+         fixed c=0.5  small: 84.8/25.2 dAP[+0.7,+4.5]  medium: 91.6/38.7 dAP[-1.2,+5.0]  large: 92.3/26.7 dAP[-4.7,+1.0]  all: 88.6/48.7 dAP[-0.2,+3.3]
+         fixed c=1.0  small: 84.3/24.4 dAP[+0.3,+3.4]  medium: 91.6/39.6 dAP[-0.1,+5.4]  large: 92.5/27.8 dAP[-3.1,+1.5]  all: 88.4/48.6 dAP[+0.1,+2.9]
+         fixed c=1.5  small: 83.9/23.4 dAP[-0.3,+2.4]  medium: 91.2/38.4 dAP[-0.9,+3.6]  large: 92.5/28.3 dAP[-2.1,+1.2]  all: 88.1/48.0 dAP[-0.2,+1.9]
+    train crossfit (c=1.095)  up-scaled: normal video 16.0%, anomaly video, outside events 16.7%, event, small 30.8%, event, medium 49.1%, event, large 30.6%, all windows 17.9%
+    train insample (c=1.133)  up-scaled: normal video 15.4%, anomaly video, outside events 16.1%, event, small 29.9%, event, medium 48.4%, event, large 29.6%, all windows 17.3%
+                 fixed c=0.5  up-scaled: normal video 30.7%, anomaly video, outside events 32.8%, event, small 53.6%, event, medium 66.8%, event, large 43.3%, all windows 33.4%
+                 fixed c=1.0  up-scaled: normal video 17.8%, anomaly video, outside events 18.9%, event, small 34.1%, event, medium 52.7%, event, large 31.7%, all windows 20.0%
+                 fixed c=1.5  up-scaled: normal video 9.7%, anomaly video, outside events 10.5%, event, small 19.2%, event, medium 35.7%, event, large 23.7%, all windows 11.2%

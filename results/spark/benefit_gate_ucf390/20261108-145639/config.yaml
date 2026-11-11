@@ -1,0 +1,27 @@
+# Zoom-benefit gate heads (2026-11-08, Eric): V-JEPA 2 heads trained to predict whether the 2x up-scale helps a window.
+# Train: the 390 UCF train videos of the anomaly head (Holmes labels), VLM scores from Colab G4.
+# Test: 290 UCF test videos, VLM scores from the GB10 (same as vjepa_gate_ucf290).
+train:
+  features: /home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8/vjepa2-vitl/run-1      # train_anomaly, train_normal
+  scores: results/spark/train_zoom_scores_ucf390/20261108-131218/g4      # <model>/<1x|2x>/scores.jsonl
+test:
+  features:
+    - /home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8/vjepa2-vitl/run-1/test
+    - /home/cctsai/s1-features/encoder_probe_ucf_test_rest_v1_f8/vjepa2-vitl/20261108-063724/test
+  manifest: results/spark/frames_ucf290_f8/20261105-180529/manifest.json
+  events: results/spark/tgm_size_ucf290/20261105-200402/jev-hard-events.jsonl
+  models:
+    zeroshot:
+      original: /home/cctsai/Eric/VLM/system-one-streaming-vlm/results/spark/d3_nano_ucf_test_v1_f8/20261022-012454/scores.jsonl
+      upscaled: results/spark/sr_ucf290_d3nano_zs/20261106-040502/B/scores.jsonl
+    mixkl:
+      original: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/draft/scores.jsonl
+      upscaled: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/B/scores.jsonl
+feature: {kind: patch_mean, state: 18}
+head: {lam: 0.01, steps: 1000, lr: 0.001, seed: 20261022}   # = encoder-probing s1stream.probe.fit
+weights: [ap, crossing, abs_b, logistic, ridge]
+ap_clip_percentile: 99
+folds: {n: 5, seed: 20261108}     # by video; = train_scores.py
+upscale_rate: 0.2                 # c = the score that up-scales 20% of the cross-fitted training windows
+# Main setting, fixed before the run: per label model, the weight with the highest 5-fold cross-validated gate AP
+# (all tier) on the training videos, gating the same model. The other heads are references.

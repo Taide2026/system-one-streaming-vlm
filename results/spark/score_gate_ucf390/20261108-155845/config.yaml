@@ -1,0 +1,30 @@
+# Score-based gates and score fusion for the 2x cascade (2026-11-09, Eric approved trying the cheap ideas of the
+# Sol survey ~/Eric/notes/raw/sessions/2026-11-08-gate-selection-survey-sol.md). Offline, CPU only.
+# Every cutoff and parameter comes from the 390 training videos (in-sample: 1-2 parameters per rule); the 290 test
+# videos only evaluate. Each VLM uses its own train scores.
+train:
+  windows: results/spark/train_zoom_scores_ucf390/20261108-131218/windows.jsonl     # hot_area (TGM)
+  scores: results/spark/train_zoom_scores_ucf390/20261108-131218/g4                 # <model>/<1x|2x>/scores.jsonl
+  anomaly_gate: /home/cctsai/Eric/VLM/system-one-streaming-vlm-wt/encoder-probing/results/spark/encoder_probe_ucf_test_rest_v1_f8/20261108-063724/train-scores/train-scores.jsonl
+test:
+  manifest: results/spark/frames_ucf290_f8/20261105-180529/manifest.json
+  events: results/spark/tgm_size_ucf290/20261105-200402/jev-hard-events.jsonl
+  anomaly_gate: /home/cctsai/Eric/VLM/system-one-streaming-vlm-wt/encoder-probing/results/spark/encoder_probe_ucf_test_rest_v1_f8/20261108-063724/refit-290/scores.jsonl
+  models:
+    zeroshot:
+      original: /home/cctsai/Eric/VLM/system-one-streaming-vlm/results/spark/d3_nano_ucf_test_v1_f8/20261022-012454/scores.jsonl
+      upscaled: results/spark/sr_ucf290_d3nano_zs/20261106-040502/B/scores.jsonl
+    mixkl:
+      original: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/draft/scores.jsonl
+      upscaled: results/spark/sr_ucf290_d3nano_ft/20261106-142617/floor_d3nano_c/B/scores.jsonl
+rate: 0.2                      # every gate up-scales 20% of the training windows
+band_centers: [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95]
+band_fixed_center: 0.7         # Sol's rule; its 0.5-0.9 band came from the test set, so it is only a reference
+rise_history: 16               # r_t = s1_t - mean of the previous <= 16 1x scores of the same video; r_1 = 0
+motion_betas: [0, 0.25, 0.5, 1.0]   # g_t = r_t + beta * m_t, m_t = train-quantile of hot_area
+fusion_lambdas: [0, 0.25, 0.5, 0.75, 1.0]   # zoomed window score = s1 + lambda (s2 - s1 [- delta]); 1 = replacement
+# delta = mean(s2 - s1) over the training negatives (Holmes 0). Fusion candidates: each lambda without and with
+# delta, plus max(s1, s2). For each gate the fusion with the highest train AP (all) is the main fusion.
+# Main gates, fixed before the run: band (center picked on train), rise, rise + motion (beta picked on train),
+# anomaly-head online gate (c = 1.095 from the cross-fitted train scores). Each is reported with replacement and
+# with its main fusion. Reference: fusion on all windows (cost = 2x everywhere).

@@ -1,0 +1,75 @@
+Uninstalled 1 package in 0.55ms
+Installed 1 package in 2ms
+records from results/spark/floor2x_hn_d3nano_c/extract-20261109-075346: 10000 train, 2000 val
+upscale 2x: 3000 of 10000 train, 600 of 2000 val
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:05<1:00:19,  5.88s/it]Loading weights:   1%|          | 6/617 [00:06<07:46,  1.31it/s]  Loading weights:   4%|▍         | 25/617 [00:06<01:23,  7.10it/s]Loading weights:   5%|▌         | 31/617 [00:06<01:07,  8.67it/s]Loading weights:   6%|▌         | 35/617 [00:06<00:58,  9.88it/s]Loading weights:   6%|▋         | 39/617 [00:06<00:51, 11.26it/s]Loading weights:   7%|▋         | 42/617 [00:07<00:52, 11.01it/s]Loading weights:   7%|▋         | 45/617 [00:07<00:46, 12.22it/s]Loading weights:   8%|▊         | 48/617 [00:07<00:48, 11.77it/s]Loading weights:   9%|▊         | 53/617 [00:07<00:36, 15.37it/s]Loading weights:  10%|▉         | 61/617 [00:07<00:24, 22.68it/s]Loading weights:  11%|█         | 65/617 [00:08<00:25, 21.27it/s]Loading weights:  11%|█         | 68/617 [00:08<00:31, 17.51it/s]Loading weights:  12%|█▏        | 72/617 [00:08<00:27, 19.76it/s]Loading weights:  12%|█▏        | 75/617 [00:08<00:27, 19.40it/s]Loading weights:  14%|█▍        | 89/617 [00:08<00:14, 35.75it/s]Loading weights:  16%|█▌        | 99/617 [00:09<00:10, 47.37it/s]Loading weights:  17%|█▋        | 105/617 [00:09<00:11, 45.17it/s]Loading weights:  18%|█▊        | 114/617 [00:09<00:14, 35.85it/s]Loading weights:  21%|██        | 128/617 [00:09<00:09, 49.90it/s]Loading weights:  22%|██▏       | 135/617 [00:10<00:16, 29.72it/s]Loading weights:  23%|██▎       | 141/617 [00:10<00:16, 29.34it/s]Loading weights:  24%|██▎       | 146/617 [00:10<00:19, 24.71it/s]Loading weights:  24%|██▍       | 150/617 [00:10<00:18, 25.33it/s]Loading weights:  25%|██▍       | 154/617 [00:11<00:24, 18.61it/s]Loading weights:  27%|██▋       | 167/617 [00:11<00:15, 28.93it/s]Loading weights:  28%|██▊       | 171/617 [00:11<00:20, 22.12it/s]Loading weights:  28%|██▊       | 174/617 [00:12<00:19, 22.15it/s]Loading weights:  29%|██▉       | 180/617 [00:12<00:16, 25.79it/s]Loading weights:  30%|██▉       | 184/617 [00:12<00:15, 28.08it/s]Loading weights:  30%|███       | 188/617 [00:12<00:22, 18.81it/s]Loading weights:  32%|███▏      | 195/617 [00:12<00:19, 21.60it/s]Loading weights:  32%|███▏      | 199/617 [00:13<00:18, 23.01it/s]Loading weights:  33%|███▎      | 202/617 [00:13<00:21, 18.91it/s]Loading weights:  33%|███▎      | 205/617 [00:13<00:29, 13.88it/s]Loading weights:  34%|███▍      | 210/617 [00:13<00:23, 17.63it/s]Loading weights:  36%|███▌      | 220/617 [00:14<00:14, 27.98it/s]Loading weights:  36%|███▋      | 224/617 [00:14<00:15, 24.84it/s]Loading weights:  37%|███▋      | 228/617 [00:14<00:18, 20.65it/s]Loading weights:  37%|███▋      | 231/617 [00:15<00:33, 11.59it/s]Loading weights:  40%|████      | 248/617 [00:15<00:14, 25.31it/s]Loading weights:  41%|████      | 253/617 [00:15<00:16, 22.37it/s]Loading weights:  42%|████▏     | 257/617 [00:16<00:17, 20.31it/s]Loading weights:  42%|████▏     | 260/617 [00:16<00:20, 17.69it/s]Loading weights:  43%|████▎     | 265/617 [00:16<00:17, 20.38it/s]Loading weights:  44%|████▍     | 270/617 [00:16<00:15, 21.85it/s]Loading weights:  45%|████▍     | 277/617 [00:16<00:13, 26.05it/s]Loading weights:  45%|████▌     | 280/617 [00:17<00:16, 20.42it/s]Loading weights:  46%|████▌     | 283/617 [00:17<00:17, 19.31it/s]Loading weights:  47%|████▋     | 291/617 [00:17<00:12, 25.66it/s]Loading weights:  48%|████▊     | 294/617 [00:17<00:15, 20.32it/s]Loading weights:  50%|█████     | 310/617 [00:18<00:08, 37.61it/s]Loading weights:  51%|█████     | 315/617 [00:18<00:09, 30.36it/s]Loading weights:  52%|█████▏    | 319/617 [00:18<00:09, 29.83it/s]Loading weights:  53%|█████▎    | 328/617 [00:18<00:07, 37.95it/s]Loading weights:  55%|█████▌    | 340/617 [00:18<00:05, 50.16it/s]Loading weights:  58%|█████▊    | 358/617 [00:18<00:03, 75.21it/s]Loading weights:  60%|█████▉    | 368/617 [00:18<00:03, 75.70it/s]Loading weights:  61%|██████    | 377/617 [00:19<00:03, 74.75it/s]Loading weights:  63%|██████▎   | 388/617 [00:19<00:02, 77.53it/s]Loading weights:  65%|██████▍   | 400/617 [00:19<00:02, 80.97it/s]Loading weights:  66%|██████▋   | 409/617 [00:19<00:02, 76.52it/s]Loading weights:  68%|██████▊   | 417/617 [00:19<00:02, 72.19it/s]Loading weights:  70%|██████▉   | 431/617 [00:19<00:03, 54.23it/s]Loading weights:  74%|███████▍  | 457/617 [00:20<00:02, 77.75it/s]Loading weights:  78%|███████▊  | 482/617 [00:20<00:01, 98.52it/s]Loading weights:  80%|███████▉  | 493/617 [00:20<00:01, 75.98it/s]Loading weights:  83%|████████▎ | 513/617 [00:20<00:01, 84.74it/s]Loading weights:  86%|████████▌ | 532/617 [00:20<00:00, 97.36it/s]Loading weights:  88%|████████▊ | 543/617 [00:21<00:00, 92.82it/s]Loading weights:  90%|████████▉ | 553/617 [00:21<00:00, 87.91it/s]Loading weights:  91%|█████████ | 563/617 [00:21<00:00, 83.04it/s]Loading weights:  93%|█████████▎| 576/617 [00:21<00:00, 86.30it/s]Loading weights:  95%|█████████▌| 587/617 [00:21<00:00, 88.78it/s]Loading weights:  98%|█████████▊| 602/617 [00:21<00:00, 101.36it/s]Loading weights:  99%|█████████▉| 613/617 [00:22<00:00, 66.69it/s] Loading weights: 100%|██████████| 617/617 [00:22<00:00, 28.04it/s]
+c14: 5000 records
+replay: 5000 records
+total items: 20000 (v1:10000, c14:5000, replay:5000)
+trainable: LoRA 62.5 M, head 0.5 M; arm: C (KL 0.50)
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+step 10/626 loss 0.8775 79.7 s/step
+step 20/626 loss 0.9695 80.4 s/step
+step 30/626 loss 1.1833 95.5 s/step
+step 40/626 loss 0.9702 93.4 s/step
+step 50/626 loss 0.8904 90.5 s/step
+step 60/626 loss 0.9159 87.8 s/step
+step 70/626 loss 1.0011 86.7 s/step
+step 80/626 loss 0.8987 85.2 s/step
+step 90/626 loss 0.9020 87.2 s/step
+step 100/626 loss 0.8911 86.3 s/step
+step 110/626 loss 0.8021 85.9 s/step
+step 120/626 loss 0.7884 85.7 s/step
+step 130/626 loss 1.0093 85.0 s/step
+step 140/626 loss 0.8299 84.6 s/step
+step 150/626 loss 0.9268 84.1 s/step
+step 160/626 loss 0.8443 83.1 s/step
+step 170/626 loss 0.9987 81.8 s/step
+step 180/626 loss 0.6865 82.0 s/step
+step 190/626 loss 1.1576 81.2 s/step
+step 200/626 loss 0.9307 80.8 s/step
+step 210/626 loss 0.8502 80.8 s/step
+step 220/626 loss 0.9891 81.3 s/step
+step 230/626 loss 0.9447 81.1 s/step
+step 240/626 loss 0.7979 81.5 s/step
+step 250/626 loss 0.7963 81.2 s/step
+step 260/626 loss 0.7095 81.4 s/step
+step 270/626 loss 0.9314 81.1 s/step
+step 280/626 loss 0.8806 80.7 s/step
+step 290/626 loss 0.7247 80.8 s/step
+step 300/626 loss 0.9043 80.6 s/step
+step 310/626 loss 0.7963 80.1 s/step
+step 320/626 loss 0.8855 80.3 s/step
+step 330/626 loss 0.9907 80.2 s/step
+step 340/626 loss 0.7383 80.3 s/step
+step 350/626 loss 0.7072 80.3 s/step
+step 360/626 loss 0.6567 80.4 s/step
+step 370/626 loss 0.9774 80.2 s/step
+step 380/626 loss 0.6280 80.2 s/step
+step 390/626 loss 0.7374 79.9 s/step
+step 400/626 loss 0.6608 79.9 s/step
+step 410/626 loss 0.6660 79.9 s/step
+step 420/626 loss 0.7779 80.3 s/step
+step 430/626 loss 0.7106 80.2 s/step
+step 440/626 loss 0.6432 79.9 s/step
+step 450/626 loss 0.7294 79.7 s/step
+step 460/626 loss 0.8248 79.5 s/step
+step 470/626 loss 0.6861 79.3 s/step
+step 480/626 loss 0.7080 79.6 s/step
+step 490/626 loss 0.6893 79.2 s/step
+step 500/626 loss 0.7675 78.9 s/step
+step 510/626 loss 0.7564 78.9 s/step
+step 520/626 loss 0.6390 78.9 s/step
+step 530/626 loss 0.7557 78.7 s/step
+step 540/626 loss 0.5829 78.7 s/step
+step 550/626 loss 0.6259 78.8 s/step
+step 560/626 loss 0.6207 78.7 s/step
+step 570/626 loss 0.6663 79.0 s/step
+step 580/626 loss 0.6065 78.9 s/step
+step 590/626 loss 0.7074 79.1 s/step
+step 600/626 loss 0.7003 79.0 s/step
+step 610/626 loss 0.6311 78.8 s/step
+step 620/626 loss 0.6613 78.9 s/step
+step 626/626 loss 0.3877 79.1 s/step
+done -> results/spark/floor2x_hn_d3nano_c/20261109-134518  T=1.18  peak GPU 14.0 GB

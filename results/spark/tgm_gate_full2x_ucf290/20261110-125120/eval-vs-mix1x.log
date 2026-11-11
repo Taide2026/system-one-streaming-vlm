@@ -1,0 +1,4 @@
+Uninstalled 1 package in 0.47ms
+Installed 1 package in 1ms
+   mix2x  small: 85.4/26.1 dAP[+0.7,+5.9]  medium: 92.1/37.9 dAP[-2.3,+4.8]  large: 92.3/25.9 dAP[-6.3,+0.7]  all: 89.0/48.7 dAP[-0.8,+3.6]
+tgm_gate  small: 85.7/27.0 dAP[+1.6,+6.7]  medium: 91.5/36.7 dAP[-3.1,+2.5]  large: 91.4/24.3 dAP[-7.8,-0.8]  all: 88.8/48.3 dAP[-1.0,+3.1]

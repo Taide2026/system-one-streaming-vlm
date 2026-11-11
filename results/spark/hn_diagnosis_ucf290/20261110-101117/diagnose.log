@@ -1,0 +1,11 @@
+Macro AUC over 139 anomaly videos (window level)
+  mix1x    77.9  d[+0.0, +0.0]
+  hn1x     76.5  d[-3.0, +0.2]
+  mix2x    81.0  d[+1.4, +4.9]
+  hn2x     80.1  d[+0.2, +4.0]
+Mean score by distance to the nearest event window (anomaly videos)
+  事件 window  n= 1552  mix1x 0.617  hn1x 0.507  mix2x 0.673  hn2x 0.522
+  距離 1       n=  294  mix1x 0.497  hn1x 0.390  mix2x 0.549  hn2x 0.385
+  距離 2–3     n=  513  mix1x 0.455  hn1x 0.355  mix2x 0.513  hn2x 0.352
+  距離 4–10    n= 1283  mix1x 0.422  hn1x 0.333  mix2x 0.482  hn2x 0.330
+  距離 11 以上   n= 4002  mix1x 0.419  hn1x 0.333  mix2x 0.474  hn2x 0.323

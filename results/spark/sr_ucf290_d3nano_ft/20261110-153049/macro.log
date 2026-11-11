@@ -1,0 +1,6 @@
+Uninstalled 1 package in 0.57ms
+Installed 1 package in 1ms
+mix1x          small: 71.8 d[+0.0,+0.0] (n=48)  medium: 82.4 d[+0.0,+0.0] (n=49)  large: 80.6 d[+0.0,+0.0] (n=47)  all: 77.9 d[+0.0,+0.0] (n=139)
+mix2x          small: 76.0 d[+1.5,+7.2] (n=48)  medium: 84.6 d[+0.0,+4.6] (n=49)  large: 83.2 d[-0.3,+5.9] (n=47)  all: 81.0 d[+1.4,+4.8] (n=139)
+f2x1x          small: 71.1 d[-2.3,+0.9] (n=48)  medium: 79.9 d[-4.7,-0.6] (n=49)  large: 79.2 d[-3.4,+0.4] (n=47)  all: 76.4 d[-2.7,-0.5] (n=139)
+f2x2x          small: 75.5 d[+0.6,+7.3] (n=48)  medium: 84.0 d[-0.6,+3.9] (n=49)  large: 81.2 d[-2.5,+4.2] (n=47)  all: 80.0 d[+0.2,+3.8] (n=139)

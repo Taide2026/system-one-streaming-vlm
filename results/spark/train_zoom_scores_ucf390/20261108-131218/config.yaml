@@ -1,0 +1,18 @@
+# VLM 1x and 2x scores on the 390 UCF train videos of the V-JEPA 2 head (2026-11-08, Eric).
+# Purpose: zoom-benefit labels for a new gate head. Same videos, windows and frames as the head's training set.
+dataset:            # = the train section of encoder-probing configs/encoder_probe_ucf_short_v1_f8.yaml
+  name: ucf_crime_train
+  asset: ucf-crime
+  holmes_asset: holmes-vau-ucf-train
+  max_duration_s: 128.0
+  per_class: 15
+  n_normal: 195
+  seed: 20261022
+window: {length_s: 2.0, stride_s: 2.0, frames: 8}
+plugin: /home/cctsai/Eric/VLM/system-one-streaming-vlm-wt/encoder-probing/src/s1stream/datasets/ucf_crime_train.py
+check_meta:         # V-JEPA 2 training windows; the extracted windows must equal them
+  - /home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8/vjepa2-vitl/run-1/train_anomaly/meta.jsonl
+  - /home/cctsai/s1-features/encoder_probe_ucf_short_v1_f8/vjepa2-vitl/run-1/train_normal/meta.jsonl
+models:             # scored at 1x (GB10) and 2x bicubic (Colab G4) with scripts/sr-score.py
+  zeroshot: null
+  mixkl: results/pro6000/floor_d3nano_c/20261031-045123

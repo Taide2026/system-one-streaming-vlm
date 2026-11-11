@@ -1,0 +1,8 @@
+mix1x      frame AUC 88.06  d[+0.00, +0.00]
+mix1x      frame AP  45.16  d[+0.00, +0.00]
+fov2_2x    frame AUC 89.55  d[+0.32, +2.90]
+fov2_2x    frame AP  47.28  d[-1.36, +5.86]
+fov2_2x_mean2 frame AUC 89.54  d[+0.30, +2.94]
+fov2_2x_mean2 frame AP  47.87  d[-0.88, +6.71]
+fov2_2x_ema85 frame AUC 89.64  d[+0.40, +3.04]
+fov2_2x_ema85 frame AP  47.83  d[-0.88, +6.74]

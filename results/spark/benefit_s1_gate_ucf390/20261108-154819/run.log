@@ -1,0 +1,45 @@
+Uninstalled 1 package in 0.59ms
+Installed 1 package in 2ms
+train 11088 windows, test 18390 windows, input dim 1025
+cv zeroshot ap       gate AP 44.34; test zoom rate 21.7%
+cv zeroshot crossing gate AP 44.26; test zoom rate 27.2%
+cv zeroshot abs_b    gate AP 44.50; test zoom rate 22.1%
+cv zeroshot logistic gate AP 44.29; test zoom rate 17.0%
+cv zeroshot ridge    gate AP 44.58; test zoom rate 21.6%
+cv zeroshot original 44.1, all 2x 44.6, oracle 46.9
+main zeroshot: ridge
+== test, gating zeroshot: 18390 windows
+            original  small: 76.1/23.1 dAP[+0.0,+0.0]  medium: 87.7/29.5 dAP[+0.0,+0.0]  large: 89.5/21.7 dAP[+0.0,+0.0]  all: 82.7/41.9 dAP[+0.0,+0.0]
+        upscaled all  small: 77.9/24.7 dAP[-1.1,+4.6]  medium: 89.1/29.5 dAP[-4.7,+3.7]  large: 89.2/18.8 dAP[-5.1,+0.3]  all: 83.8/42.6 dAP[-1.3,+2.8]
+oracle (events only)  small: 78.6/28.4 dAP[+2.3,+8.6]  medium: 90.0/35.7 dAP[+1.7,+9.3]  large: 90.3/23.7 dAP[-0.9,+4.7]  all: 84.7/47.4 dAP[+3.7,+7.2]
+zeroshot-label ap + 1x  small: 76.9/23.4 dAP[-0.9,+1.4]  medium: 87.9/29.3 dAP[-1.6,+1.1]  large: 89.5/21.2 dAP[-1.5,+0.4]  all: 83.1/42.2 dAP[-0.6,+1.2]
+zeroshot-label crossing + 1x  small: 76.9/23.4 dAP[-0.4,+0.9]  medium: 88.0/29.9 dAP[-0.9,+1.7]  large: 89.7/21.6 dAP[-1.1,+0.8]  all: 83.1/42.3 dAP[-0.2,+1.0]
+zeroshot-label abs_b + 1x  small: 76.6/22.8 dAP[-1.8,+0.8]  medium: 87.9/30.5 dAP[-1.2,+3.2]  large: 89.5/20.5 dAP[-2.3,+0.1]  all: 83.0/42.0 dAP[-1.1,+1.2]
+zeroshot-label logistic + 1x  small: 76.5/23.2 dAP[-0.5,+0.8]  medium: 87.9/31.1 dAP[+0.0,+3.8]  large: 89.6/21.5 dAP[-0.7,+0.5]  all: 82.9/42.4 dAP[-0.1,+1.2]
+zeroshot-label ridge + 1x  small: 77.0/22.7 dAP[-2.0,+1.0]  medium: 87.9/29.6 dAP[-2.3,+2.3]  large: 89.3/20.1 dAP[-3.0,+0.1]  all: 83.1/41.8 dAP[-1.2,+0.8]
+        ap  up-scaled: normal video 30.3%, anomaly video, outside events 9.1%, event, small 10.9%, event, medium 14.8%, event, large 9.8%, all windows 21.7%
+  crossing  up-scaled: normal video 37.0%, anomaly video, outside events 13.4%, event, small 14.9%, event, medium 12.3%, event, large 10.0%, all windows 27.2%
+     abs_b  up-scaled: normal video 31.6%, anomaly video, outside events 7.2%, event, small 12.6%, event, medium 21.8%, event, large 10.8%, all windows 22.1%
+  logistic  up-scaled: normal video 24.0%, anomaly video, outside events 6.4%, event, small 10.5%, event, medium 14.1%, event, large 5.8%, all windows 17.0%
+     ridge  up-scaled: normal video 25.1%, anomaly video, outside events 15.3%, event, small 17.7%, event, medium 28.9%, event, large 19.8%, all windows 21.6%
+cv mixkl    ap       gate AP 51.39; test zoom rate 12.1%
+cv mixkl    crossing gate AP 51.88; test zoom rate 12.6%
+cv mixkl    abs_b    gate AP 51.69; test zoom rate 8.9%
+cv mixkl    logistic gate AP 51.31; test zoom rate 10.7%
+cv mixkl    ridge    gate AP 51.13; test zoom rate 10.4%
+cv mixkl    original 51.3, all 2x 50.8, oracle 56.4
+main mixkl: crossing
+== test, gating mixkl: 18390 windows
+            original  small: 83.9/22.5 dAP[+0.0,+0.0]  medium: 90.8/37.2 dAP[+0.0,+0.0]  large: 92.3/29.0 dAP[+0.0,+0.0]  all: 87.9/47.3 dAP[+0.0,+0.0]
+        upscaled all  small: 85.4/26.1 dAP[+0.7,+5.9]  medium: 92.1/37.9 dAP[-2.3,+4.8]  large: 92.3/25.9 dAP[-6.3,+0.7]  all: 89.0/48.7 dAP[-0.8,+3.6]
+oracle (events only)  small: 88.3/32.8 dAP[+5.9,+13.4]  medium: 93.9/46.4 dAP[+6.3,+12.2]  large: 94.2/34.7 dAP[+2.2,+7.3]  all: 91.3/56.7 dAP[+7.4,+11.8]
+ mixkl-label ap + 1x  small: 84.1/23.3 dAP[-0.3,+2.0]  medium: 91.2/38.2 dAP[-1.1,+3.6]  large: 92.6/29.0 dAP[-1.3,+1.2]  all: 88.2/48.2 dAP[-0.1,+2.0]
+mixkl-label crossing + 1x  small: 84.1/23.2 dAP[-0.5,+2.1]  medium: 91.2/38.2 dAP[-1.4,+4.3]  large: 92.6/28.8 dAP[-1.9,+1.2]  all: 88.2/48.1 dAP[-0.3,+2.0]
+mixkl-label abs_b + 1x  small: 84.3/23.7 dAP[-0.4,+2.8]  medium: 91.1/37.7 dAP[-2.1,+3.5]  large: 92.3/26.7 dAP[-4.5,-0.0]  all: 88.2/47.8 dAP[-0.6,+1.9]
+mixkl-label logistic + 1x  small: 84.5/24.3 dAP[+0.1,+3.6]  medium: 91.3/38.4 dAP[-1.4,+4.1]  large: 92.1/27.1 dAP[-4.4,+0.5]  all: 88.3/48.5 dAP[+0.0,+2.6]
+mixkl-label ridge + 1x  small: 84.2/23.6 dAP[-0.2,+2.4]  medium: 90.9/37.0 dAP[-3.0,+3.1]  large: 92.4/27.5 dAP[-3.7,+0.3]  all: 88.1/47.7 dAP[-0.7,+1.6]
+        ap  up-scaled: normal video 10.3%, anomaly video, outside events 12.2%, event, small 16.0%, event, medium 25.5%, event, large 37.7%, all windows 12.1%
+  crossing  up-scaled: normal video 10.9%, anomaly video, outside events 12.5%, event, small 17.7%, event, medium 26.1%, event, large 35.4%, all windows 12.6%
+     abs_b  up-scaled: normal video 4.0%, anomaly video, outside events 12.6%, event, small 23.6%, event, medium 34.8%, event, large 30.1%, all windows 8.9%
+  logistic  up-scaled: normal video 3.1%, anomaly video, outside events 17.7%, event, small 30.6%, event, medium 43.9%, event, large 37.2%, all windows 10.7%
+     ridge  up-scaled: normal video 5.0%, anomaly video, outside events 16.8%, event, small 18.6%, event, medium 24.3%, event, large 31.7%, all windows 10.4%

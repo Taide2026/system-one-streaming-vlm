@@ -1,0 +1,22 @@
+train n=11088 test n=18390; train AP 1x 51.4 2x 50.8; vjepa AUC train(crossfit) 0.803 test 0.824, AP test 32.8
+  within-bin AUC(d) ev vs an train: [0.0,0.2):0.54 [0.2,0.4):0.50 [0.4,0.6):0.45 [0.6,0.8):0.50 [0.8,1.0):0.49
+  within-bin AUC(d) ev vs an test: [0.0,0.2):0.59 [0.2,0.4):0.67 [0.4,0.6):0.61 [0.6,0.8):0.56 [0.8,1.0):0.55
+1x                                 AUC 87.9 vs1x[0.0, 0.0] vs2x[-2.1, -0.1] | AP 47.3 vs1x[0.0, 0.0] vs2x[-3.6, 0.8] | macro 77.9 vs1x[0.0, 0.0] vs2x[-4.9, -1.4] | 
+all 2x                             AUC 89.0 vs1x[0.1, 2.1] vs2x[0.0, 0.0] | AP 48.7 vs1x[-0.8, 3.6] vs2x[0.0, 0.0] | macro 81.0 vs1x[1.4, 4.9] vs2x[0.0, 0.0] | 
+band s1 in [0.70,0.75)             AUC 88.0 vs1x[-0.0, 0.1] vs2x[-2.0, -0.1] | AP 47.6 vs1x[-0.3, 1.1] vs2x[-2.9, 0.8] | macro 77.9 vs1x[-0.3, 0.2] vs2x[-4.9, -1.4] | train AP 51.6, zoom 4%
+s2 - a*cummean(d) a=0.5 incl=True  AUC 88.6 vs1x[-0.6, 1.9] vs2x[-1.4, 0.3] | AP 48.8 vs1x[-1.1, 4.1] vs2x[-1.9, 2.2] | macro 81.0 vs1x[1.4, 4.7] vs2x[-0.8, 0.8] | train AP 51.1
+s2 - a*cummean(d) a=0.25 incl=False AUC 88.8 vs1x[-0.1, 2.1] vs2x[-0.7, 0.2] | AP 49.1 vs1x[-0.5, 4.0] vs2x[-0.7, 1.5] | macro 80.8 vs1x[1.1, 4.6] vs2x[-0.8, 0.4] | train AP 51.0
+quantile match s2->s1 (past>=5)    AUC 88.0 vs1x[-0.7, 0.9] vs2x[-2.2, -0.1] | AP 46.4 vs1x[-2.5, 0.4] vs2x[-4.9, -0.1] | macro 78.0 vs1x[-2.2, 2.5] vs2x[-4.8, -1.3] | train AP 49.4
+video route run-max s1>=0.95       AUC 87.9 vs1x[0.0, 0.0] vs2x[-2.1, -0.1] | AP 47.3 vs1x[0.0, 0.0] vs2x[-3.6, 0.8] | macro 77.9 vs1x[0.0, 0.0] vs2x[-4.9, -1.4] | train AP 51.4, zoom 0%(approx)
+video route run-mean s1>=0.95      AUC 87.9 vs1x[0.0, 0.0] vs2x[-2.1, -0.1] | AP 47.3 vs1x[0.0, 0.0] vs2x[-3.6, 0.8] | macro 77.9 vs1x[0.0, 0.0] vs2x[-4.9, -1.4] | train AP 51.4, zoom 0%(approx)
+causal mean k=2 on 1x              AUC 88.1 vs1x[-0.1, 0.4] vs2x[-2.0, 0.0] | AP 48.7 vs1x[0.3, 2.3] vs2x[-2.6, 2.3] | macro 78.5 vs1x[-1.0, 2.2] vs2x[-4.7, -0.0] | train AP 51.7
+EMA a=0.85 on 1x                   AUC 88.1 vs1x[0.1, 0.4] vs2x[-1.8, 0.0] | AP 48.3 vs1x[0.3, 1.7] vs2x[-2.7, 1.8] | macro 78.6 vs1x[0.1, 1.4] vs2x[-4.3, -0.5] | train AP 51.6
+causal mean k=2 on 2x              AUC 89.0 vs1x[0.1, 2.2] vs2x[-0.2, 0.3] | AP 49.5 vs1x[-0.2, 4.7] vs2x[-0.3, 1.9] | macro 81.5 vs1x[1.4, 5.8] vs2x[-1.0, 2.1] | train AP 50.9
+EMA a=0.85 on 2x                   AUC 89.1 vs1x[0.2, 2.2] vs2x[0.0, 0.2] | AP 49.4 vs1x[-0.2, 4.5] vs2x[-0.1, 1.4] | macro 81.2 vs1x[1.6, 5.1] vs2x[-0.5, 0.9] | train AP 50.9
+logit(1x) + w*vjepa w=0.3          AUC 88.4 vs1x[-0.3, 1.4] vs2x[-1.9, 0.7] | AP 45.7 vs1x[-5.0, 2.4] vs2x[-6.3, 0.9] | macro 80.2 vs1x[1.1, 3.3] vs2x[-2.6, 0.8] | train AP 52.9
+logit(2x) + w*vjepa w=0.3          AUC 89.2 vs1x[0.0, 2.7] vs2x[-0.7, 1.2] | AP 46.4 vs1x[-5.1, 4.0] vs2x[-5.7, 1.8] | macro 82.7 vs1x[2.8, 6.7] vs2x[0.4, 2.9] | train AP 52.5
+s1 - a*cummean(s1) a=0.25          AUC 86.5 vs1x[-2.2, -0.6] vs2x[-3.9, -1.0] | AP 44.2 vs1x[-7.0, 1.9] vs2x[-9.3, 1.0] | macro 77.4 vs1x[-1.5, 0.3] vs2x[-5.6, -1.8] | train AP 52.2
+  train: TGM gate hot<0.045 AP 50.7; zoom 70%
+hot<0.045 & s1 in [0.70,0.80)      AUC 88.0 vs1x[-0.1, 0.1] vs2x[-2.0, -0.1] | AP 47.2 vs1x[-1.2, 1.0] vs2x[-3.3, 0.2] | macro 77.8 vs1x[-0.5, 0.1] vs2x[-5.0, -1.6] | train AP 51.5
+combo a=0.5 k=2                    AUC 88.8 vs1x[-0.5, 2.1] vs2x[-1.2, 0.5] | AP 49.4 vs1x[-0.8, 4.9] vs2x[-1.7, 3.1] | macro 81.0 vs1x[0.7, 5.6] vs2x[-1.6, 1.7] | train AP 51.0
+  k=2 on 2x: ev-vs-an AUC 0.755 vs raw 2x 0.756

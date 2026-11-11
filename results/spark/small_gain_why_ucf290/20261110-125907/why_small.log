@@ -1,0 +1,40 @@
+== zeroshot
+  small            n=  733  1x mean 0.414  d mean +0.062
+  medium           n=  440  1x mean 0.592  d mean +0.053
+  large            n=  379  1x mean 0.602  d mean +0.023
+  anomaly negative n= 6092  1x mean 0.237  d mean +0.032
+  small  - large            raw +0.038  adjusted +0.029 [-0.005, +0.066]
+  small  - medium           raw +0.009  adjusted -0.010 [-0.051, +0.026]
+  medium - large            raw +0.029  adjusted +0.030 [-0.000, +0.067]
+  small  - anomaly negative raw +0.030  adjusted +0.044 [+0.023, +0.075]
+  large  - anomaly negative raw -0.009  adjusted +0.009 [-0.020, +0.044]
+== mixkl
+  small            n=  733  1x mean 0.544  d mean +0.075
+  medium           n=  440  1x mean 0.676  d mean +0.050
+  large            n=  379  1x mean 0.688  d mean +0.031
+  anomaly negative n= 6092  1x mean 0.427  d mean +0.056
+  small  - large            raw +0.044  adjusted +0.008 [-0.026, +0.039]
+  small  - medium           raw +0.025  adjusted -0.007 [-0.038, +0.020]
+  medium - large            raw +0.019  adjusted +0.015 [+0.003, +0.030]
+  small  - anomaly negative raw +0.018  adjusted +0.044 [+0.015, +0.099]
+  large  - anomaly negative raw -0.026  adjusted +0.039 [+0.001, +0.071]
+== fovfull2x
+  small            n=  733  1x mean 0.544  d mean +0.073
+  medium           n=  440  1x mean 0.665  d mean +0.062
+  large            n=  379  1x mean 0.664  d mean +0.031
+  anomaly negative n= 6092  1x mean 0.421  d mean +0.064
+  small  - large            raw +0.042  adjusted +0.022 [-0.020, +0.051]
+  small  - medium           raw +0.011  adjusted -0.018 [-0.057, +0.017]
+  medium - large            raw +0.030  adjusted +0.028 [+0.011, +0.043]
+  small  - anomaly negative raw +0.009  adjusted +0.034 [+0.000, +0.094]
+  large  - anomaly negative raw -0.033  adjusted +0.009 [-0.024, +0.048]
+== floor2x_hn
+  small            n=  733  1x mean 0.442  d mean +0.026
+  medium           n=  440  1x mean 0.565  d mean +0.011
+  large            n=  379  1x mean 0.564  d mean +0.001
+  anomaly negative n= 6092  1x mean 0.338  d mean -0.008
+  small  - large            raw +0.024  adjusted +0.022 [+0.002, +0.043]
+  small  - medium           raw +0.014  adjusted -0.001 [-0.023, +0.019]
+  medium - large            raw +0.010  adjusted +0.012 [-0.004, +0.031]
+  small  - anomaly negative raw +0.034  adjusted +0.043 [+0.023, +0.068]
+  large  - anomaly negative raw +0.010  adjusted +0.006 [-0.013, +0.026]

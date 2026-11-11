@@ -1,0 +1,11 @@
+frames_dir: /home/cctsai/s1-features/frames/frames_ucf290_f8/20261105-180529
+index: results/spark/frames_ucf290_f8/20261105-180529/windows.jsonl
+upscale: none
+send_as: images
+out: results/spark/sr_ucf290_d3nano_ft/20261110-153049/floor2x_d3nano_c/draft/scores.jsonl
+limit_windows: None
+asset: d3-nano
+memory_cap_gb: '40'
+adapter: results/colab/floor2x_d3nano_c/20261110-a100
+torch: 2.14.1+cu130
+gpu: NVIDIA GB10

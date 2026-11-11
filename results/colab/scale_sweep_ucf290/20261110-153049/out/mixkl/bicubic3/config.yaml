@@ -1,0 +1,11 @@
+frames_dir: /content/frames
+index: results/spark/frames_ucf290_f8/20261105-180529/windows.jsonl
+upscale: bicubic3
+send_as: images
+out: /content/out/mixkl/bicubic3/scores.jsonl
+limit_windows: None
+asset: d3-nano
+memory_cap_gb: '40'
+adapter: results/pro6000/floor_d3nano_c/20261031-045123
+torch: 2.14.1+cu130
+gpu: NVIDIA A100-SXM4-40GB

@@ -1,0 +1,5 @@
+Uninstalled 1 package in 0.35ms
+Installed 1 package in 1ms
+   mix2x  small: 85.4/26.1 dAP[+0.7,+5.9]  medium: 92.1/37.9 dAP[-2.3,+4.8]  large: 92.3/25.9 dAP[-6.3,+0.7]  all: 89.0/48.7 dAP[-0.8,+3.6]
+   f2x1x  small: 85.1/24.3 dAP[-0.6,+4.4]  medium: 90.9/37.7 dAP[-2.8,+3.8]  large: 91.9/28.3 dAP[-3.5,+2.5]  all: 88.4/48.0 dAP[-1.2,+2.7]
+   f2x2x  small: 86.9/28.1 dAP[+2.0,+9.1]  medium: 92.2/38.7 dAP[-2.6,+6.0]  large: 91.9/26.4 dAP[-5.9,+1.4]  all: 89.6/49.8 dAP[-0.1,+5.4]

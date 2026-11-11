@@ -1,0 +1,6 @@
+Uninstalled 1 package in 0.58ms
+Installed 1 package in 1ms
+bicubic2  small: 85.4/26.1 dAP[+0.7,+5.9]  medium: 92.1/37.9 dAP[-2.3,+4.8]  large: 92.3/25.9 dAP[-6.3,+0.7]  all: 89.0/48.7 dAP[-0.8,+3.6]
+nearest2  small: 85.7/23.3 dAP[-1.4,+2.8]  medium: 91.7/38.3 dAP[-2.6,+4.5]  large: 92.4/23.9 dAP[-9.8,+0.9]  all: 89.0/47.3 dAP[-2.5,+2.5]
+bilinear2  small: 84.5/25.2 dAP[+0.3,+4.9]  medium: 91.9/38.7 dAP[-1.8,+5.0]  large: 92.2/25.8 dAP[-6.3,+0.5]  all: 88.5/48.3 dAP[-1.0,+3.1]
+lanczos2  small: 85.7/26.1 dAP[+0.6,+6.1]  medium: 92.2/38.4 dAP[-1.9,+4.9]  large: 92.2/25.7 dAP[-6.3,+0.4]  all: 89.1/48.8 dAP[-0.6,+3.8]

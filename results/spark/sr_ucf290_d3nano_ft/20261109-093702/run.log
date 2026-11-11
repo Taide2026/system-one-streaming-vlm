@@ -1,0 +1,44 @@
+Uninstalled 1 package in 0.56ms
+Installed 1 package in 2ms
+Loading weights:   0%|          | 0/617 [00:00<?, ?it/s]Loading weights:   0%|          | 1/617 [00:05<58:53,  5.74s/it]Loading weights:   4%|▎         | 22/617 [00:06<01:57,  5.06it/s]Loading weights:   4%|▍         | 27/617 [00:06<01:35,  6.15it/s]Loading weights:   5%|▌         | 31/617 [00:06<01:18,  7.44it/s]Loading weights:   6%|▌         | 36/617 [00:06<01:00,  9.61it/s]Loading weights:   6%|▋         | 40/617 [00:06<00:53, 10.82it/s]Loading weights:   7%|▋         | 43/617 [00:07<00:52, 10.87it/s]Loading weights:   7%|▋         | 46/617 [00:07<00:59,  9.61it/s]Loading weights:   9%|▊         | 53/617 [00:07<00:38, 14.79it/s]Loading weights:  10%|▉         | 60/617 [00:08<00:39, 14.27it/s]Loading weights:  11%|█         | 67/617 [00:08<00:29, 18.45it/s]Loading weights:  12%|█▏        | 74/617 [00:08<00:32, 16.64it/s]Loading weights:  13%|█▎        | 81/617 [00:08<00:25, 21.16it/s]Loading weights:  14%|█▍        | 87/617 [00:09<00:22, 23.45it/s]Loading weights:  17%|█▋        | 103/617 [00:09<00:12, 40.74it/s]Loading weights:  18%|█▊        | 113/617 [00:09<00:16, 30.18it/s]Loading weights:  21%|██        | 128/617 [00:09<00:11, 42.27it/s]Loading weights:  22%|██▏       | 135/617 [00:10<00:16, 28.78it/s]Loading weights:  23%|██▎       | 140/617 [00:10<00:16, 28.50it/s]Loading weights:  24%|██▎       | 146/617 [00:10<00:16, 29.41it/s]Loading weights:  24%|██▍       | 150/617 [00:11<00:18, 24.82it/s]Loading weights:  25%|██▍       | 154/617 [00:11<00:24, 18.59it/s]Loading weights:  27%|██▋       | 165/617 [00:11<00:16, 27.83it/s]Loading weights:  28%|██▊       | 171/617 [00:12<00:21, 20.59it/s]Loading weights:  29%|██▉       | 181/617 [00:12<00:15, 28.37it/s]Loading weights:  30%|███       | 186/617 [00:12<00:18, 23.07it/s]Loading weights:  31%|███       | 190/617 [00:12<00:18, 23.16it/s]Loading weights:  31%|███▏      | 194/617 [00:13<00:26, 15.81it/s]Loading weights:  33%|███▎      | 201/617 [00:13<00:19, 20.82it/s]Loading weights:  33%|███▎      | 205/617 [00:13<00:24, 16.54it/s]Loading weights:  34%|███▍      | 211/617 [00:14<00:19, 20.62it/s]Loading weights:  35%|███▌      | 219/617 [00:14<00:14, 27.02it/s]Loading weights:  36%|███▌      | 223/617 [00:14<00:19, 20.37it/s]Loading weights:  37%|███▋      | 226/617 [00:14<00:18, 20.65it/s]Loading weights:  37%|███▋      | 230/617 [00:14<00:19, 19.76it/s]Loading weights:  39%|███▊      | 238/617 [00:15<00:13, 27.72it/s]Loading weights:  39%|███▉      | 242/617 [00:15<00:16, 22.74it/s]Loading weights:  40%|████      | 248/617 [00:15<00:14, 24.75it/s]Loading weights:  41%|████      | 252/617 [00:15<00:15, 24.20it/s]Loading weights:  41%|████▏     | 255/617 [00:16<00:18, 19.53it/s]Loading weights:  42%|████▏     | 258/617 [00:16<00:25, 14.13it/s]Loading weights:  43%|████▎     | 265/617 [00:16<00:17, 20.41it/s]Loading weights:  44%|████▍     | 270/617 [00:16<00:15, 21.72it/s]Loading weights:  45%|████▍     | 277/617 [00:17<00:15, 21.92it/s]Loading weights:  45%|████▌     | 280/617 [00:17<00:15, 21.97it/s]Loading weights:  46%|████▌     | 284/617 [00:17<00:16, 20.54it/s]Loading weights:  50%|█████     | 310/617 [00:17<00:07, 42.02it/s]Loading weights:  51%|█████     | 314/617 [00:17<00:07, 39.72it/s]Loading weights:  52%|█████▏    | 318/617 [00:18<00:08, 36.83it/s]Loading weights:  52%|█████▏    | 323/617 [00:18<00:08, 36.22it/s]Loading weights:  55%|█████▌    | 340/617 [00:18<00:04, 56.16it/s]Loading weights:  57%|█████▋    | 350/617 [00:18<00:04, 63.92it/s]Loading weights:  59%|█████▊    | 362/617 [00:18<00:03, 71.53it/s]Loading weights:  61%|██████    | 374/617 [00:18<00:03, 69.99it/s]Loading weights:  64%|██████▍   | 396/617 [00:19<00:02, 88.84it/s]Loading weights:  66%|██████▌   | 405/617 [00:19<00:02, 81.74it/s]Loading weights:  68%|██████▊   | 419/617 [00:19<00:02, 80.65it/s]Loading weights:  71%|███████   | 436/617 [00:19<00:01, 93.65it/s]Loading weights:  73%|███████▎  | 448/617 [00:19<00:01, 93.06it/s]Loading weights:  75%|███████▍  | 460/617 [00:19<00:01, 91.73it/s]Loading weights:  76%|███████▋  | 472/617 [00:19<00:01, 90.98it/s]Loading weights:  78%|███████▊  | 484/617 [00:19<00:01, 90.90it/s]Loading weights:  80%|████████  | 496/617 [00:20<00:01, 91.34it/s]Loading weights:  82%|████████▏ | 506/617 [00:20<00:01, 76.17it/s]Loading weights:  86%|████████▌ | 528/617 [00:20<00:00, 97.19it/s]Loading weights:  88%|████████▊ | 542/617 [00:20<00:00, 99.90it/s]Loading weights:  90%|████████▉ | 553/617 [00:20<00:00, 85.59it/s]Loading weights:  91%|█████████ | 562/617 [00:21<00:00, 65.84it/s]Loading weights:  96%|█████████▌| 590/617 [00:21<00:00, 103.14it/s]Loading weights:  98%|█████████▊| 603/617 [00:21<00:00, 101.90it/s]Loading weights: 100%|█████████▉| 615/617 [00:21<00:00, 71.92it/s] Loading weights: 100%|██████████| 617/617 [00:21<00:00, 28.57it/s]
+loaded d3-nano in 25.8 s; upscale odd-bicubic2; 18390 windows to score
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+500 windows, 0.479 s/window
+1000 windows, 0.477 s/window
+1500 windows, 0.476 s/window
+2000 windows, 0.476 s/window
+2500 windows, 0.475 s/window
+3000 windows, 0.476 s/window
+3500 windows, 0.476 s/window
+4000 windows, 0.476 s/window
+4500 windows, 0.476 s/window
+5000 windows, 0.476 s/window
+5500 windows, 0.476 s/window
+6000 windows, 0.476 s/window
+6500 windows, 0.476 s/window
+7000 windows, 0.476 s/window
+7500 windows, 0.476 s/window
+8000 windows, 0.476 s/window
+8500 windows, 0.476 s/window
+9000 windows, 0.476 s/window
+9500 windows, 0.476 s/window
+10000 windows, 0.476 s/window
+10500 windows, 0.476 s/window
+11000 windows, 0.476 s/window
+11500 windows, 0.476 s/window
+12000 windows, 0.476 s/window
+12500 windows, 0.476 s/window
+13000 windows, 0.476 s/window
+13500 windows, 0.476 s/window
+14000 windows, 0.476 s/window
+14500 windows, 0.476 s/window
+15000 windows, 0.476 s/window
+15500 windows, 0.476 s/window
+16000 windows, 0.476 s/window
+16500 windows, 0.476 s/window
+17000 windows, 0.476 s/window
+17500 windows, 0.477 s/window
+18000 windows, 0.477 s/window
+done: 18390 windows in 8765 s; peak GPU 4.60 GB
+odd done 2026-11-09T12:03:40Z

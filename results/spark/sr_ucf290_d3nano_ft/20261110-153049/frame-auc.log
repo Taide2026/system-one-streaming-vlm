@@ -1,0 +1,8 @@
+mix1x      frame AUC 88.06  d[+0.00, +0.00]
+mix1x      frame AP  45.16  d[+0.00, +0.00]
+mix2x      frame AUC 89.11  d[+0.07, +2.20]
+mix2x      frame AP  46.54  d[-0.79, +3.66]
+f2x1x      frame AUC 88.63  d[-0.25, +1.68]
+f2x1x      frame AP  45.81  d[-1.28, +2.78]
+f2x2x      frame AUC 89.77  d[+0.64, +3.02]
+f2x2x      frame AP  47.59  d[-0.17, +5.23]

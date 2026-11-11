@@ -1,0 +1,8 @@
+Uninstalled 1 package in 0.39ms
+Installed 1 package in 2ms
+negatives, all             n= 16838  mean 0.210 -> 0.272  median 0.073 -> 0.183  p99 0.808 -> 0.813  >0.5 18.2% -> 24.6%  higher 87%
+negatives, normal videos   n= 10746  mean 0.066 -> 0.131  median 0.014 -> 0.051  p99 0.651 -> 0.714  >0.5 2.3% -> 5.3%  higher 95%
+negatives, anomaly videos  n=  6092  mean 0.465 -> 0.521  median 0.469 -> 0.565  p99 0.831 -> 0.832  >0.5 46.2% -> 58.7%  higher 72%
+positives, small           n=   733  mean 0.594 -> 0.654  median 0.676 -> 0.707  p99 0.896 -> 0.902  >0.5 65.9% -> 77.1%  higher 75%
+positives, medium          n=   440  mean 0.685 -> 0.728  median 0.751 -> 0.762  p99 0.895 -> 0.902  >0.5 85.2% -> 93.6%  higher 62%
+positives, large           n=   379  mean 0.701 -> 0.714  median 0.759 -> 0.761  p99 0.859 -> 0.852  >0.5 88.9% -> 92.1%  higher 51%

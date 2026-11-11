@@ -1,0 +1,5 @@
+11088 windows, feature dim 1024, base rate of b > 0: 34.0%
+head    in-sample AUC up  held-out AUC up  in-sample AUC Holmes  held-out AUC Holmes
+linear  0.820             0.593            0.756                0.668
+mlp     0.958             0.606            0.780                0.671
+199.52 s, peak RSS 1280216 KB
