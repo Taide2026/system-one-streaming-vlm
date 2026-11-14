@@ -32,10 +32,28 @@ MSAD fine-tuned in domain (three seeds, 454 of 480 training videos; Macro-AUC): 
 real 360p 86.5 ± 1.2, rectangle in place 81.8 ± 1.8, one box per group 81.1 ± 2.4, most-changed patches 81.7 ± 1.7,
 moving patches 83.6 ± 2.0.
 
-Other small models, zero-shot, UCF-Crime 290 (scripts/smallvlm.py; visual tokens per frame at 1x -> 2x):
-Qwen3-VL-4B 82 -> 302, Macro-AUC 71.8 -> 75.7. Gemma 3 4B (259 at both), Gemma 4 E4B (268), SmolVLM2-2.2B (1083),
-InternVL3.5-2B (3331): runs in progress when this was written.
+Other small models, zero-shot, UCF-Crime 290, whole frame 1x vs bicubic 2x (scripts/smallvlm.py, processor defaults;
+change paired over 139 videos, ± = half-width of the 95% bootstrap interval):
 
-Scripts: scripts/bl.py (selections and named baselines), prune.py, smallvlm.py, tokevent.py, tokslope.py, split.py,
+| Model | visual tokens / frame, 1x -> 2x | Macro-AUC 1x -> 2x | change | small-event AUC |
+|---|---|---|---|---|
+| Qwen3-VL-4B | 82 -> 302 | 71.8 -> 75.7 | +3.8 ± 1.9 | 80.4 -> 83.9 |
+| Gemma 3 4B | 259 -> 259 | 68.6 -> 67.4 | -1.3 ± 1.6 | 77.9 -> 77.8 |
+| Gemma 4 E4B | 268 -> 268 | 71.9 -> 71.6 | -0.3 ± 0.9 | 79.0 -> 78.6 |
+| SmolVLM2-2.2B | 1083 -> 1083 | 66.7 -> 67.0 | +0.2 ± 1.3 | 75.2 -> 75.2 |
+| InternVL3.5-2B | 3331 -> 3331 | 72.0 -> 71.8 | -0.2 ± 1.0 | 80.1 -> 80.4 |
+
+Only the model whose vision tower returns more tokens for a larger input gains.
+
+Oracle placement of the fine tokens (2,902 sampled windows; scripts/oracle.py, oracle-recalc.py; AUC of small-event
+positives against the sampled negatives, zero-shot / fine-tuned seed 0): all coarse 72.2 / 78.3, 5 random blocks
+73.0 / 78.5, motion map 74.5 / 79.4, 5 most influential blocks without the label 76.2 / 79.7, whole 2x 74.9 / 79.2,
+5 most helpful blocks with the label 92.5 / 94.1. Most influential minus motion map at the same budget:
++1.6 ± 1.2 / +0.3 ± 2.0 (bootstrap over videos).
+
+Events cut by the window grid (scripts/split.py): 12 of the 156 UCF-Crime events never fill a 2 s window; at two false
+alarms per hour 19.4% of them are caught at 1x and at 2x, against 48.4% -> 57.6% of the other events.
+
+Scripts: scripts/bl.py (selections and named baselines), prune.py, smallvlm.py, tokevent.py, tokslope.py, split.py, oracle-recalc.py,
 stream.py, gran.py, evalrun.py, cvad-metrics.py, cvad-prep.py, msad-prep.py, msad-train-prep.py. Job scripts as run on
 the cluster: jobs/nano4-upx/.
