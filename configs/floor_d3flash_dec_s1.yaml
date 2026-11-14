@@ -1,0 +1,44 @@
+name: floor_d3flash_dec_s1
+data:
+  asset: ucf-crime
+  hivau_json: $S1_DATASETS/HolmesVAU/HIVAU-70k/raw_annotations/ucf_database_train.json
+  n_abnormal: 5000
+  n_normal: 5000
+  n_val: 2000
+  holdout: 0.1
+  seed: 1
+tasks:
+  v1:
+    n: 10000
+  c14:
+    n: 5000
+  replay:
+    n: 5000
+    split: train
+    per_config: 400
+  v1m:
+    video_target: video
+anchor:
+  kl_lambda: 0.5
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+backbone:
+  name: d3
+  asset: d3-flash
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+optim:
+  lr: 0.00015
+  head_lr: 0.00015
+  warmup: 0.03
+  batch: 2
+  accumulate: 16
+  epochs: 1
+  workers: 4
+  grad_checkpoint: false

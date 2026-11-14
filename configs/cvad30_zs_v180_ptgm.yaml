@@ -1,0 +1,25 @@
+name: cvad30_zs_v180_ptgm
+dataset:
+  name: complexvad
+  path: /work/u9117820/datasets/complexvad
+  variant: v180
+  videos: list30.txt
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+input_form:
+  name: frames
+backbone:
+  name: d3
+  asset: d3-nano
+  memory_cap_gb: 40
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01

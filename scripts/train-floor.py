@@ -51,8 +51,13 @@ C14_BY_FOLDER = {"Normal": "Normal", "Abuse": "Abuse", "Arrest": "Police arrest"
 JEV_REPO = "Praveenrajus/jev-bench"
 
 
+CLASS_OPTIONS: list[str] | None = None   # tasks.c14.options: another dataset's class names, "Normal" first (MSAD, 2026-11-14)
+
+
 def c14_question() -> Question:
     p = PROMPTS["c14"]
+    if CLASS_OPTIONS:
+        return Question(state=p["state"], text=p["text"], options=tuple(CLASS_OPTIONS), positive=tuple(CLASS_OPTIONS[1:]))
     return Question(state=p["state"], text=p["text"], options=tuple(p["options"]), positive=tuple(p["positive"]))
 
 
@@ -389,9 +394,11 @@ def main() -> None:
     anchor = float(data.get("anchor", {}).get("kl_lambda", 0.0))
     dpo_beta = float(data.get("dpo", {}).get("beta", 0.0))
     torch.manual_seed(int(dspec.get("seed", 0)))
+    global CLASS_OPTIONS
+    CLASS_OPTIONS = list(tasks.get("c14", {}).get("options") or []) or None
 
     # ---- records
-    root = resolve(dspec["asset"])
+    root = Path(dspec["root"]) if dspec.get("root") else resolve(dspec["asset"])  # root: a dataset outside the asset lock (MSAD, 2026-11-14)
     items_v = read_hivau(Path(os.path.expandvars(os.path.expanduser(dspec["hivau_json"]))), root,
                          str(dspec.get("videos_dir", "videos")), bool(dspec.get("flat", False)),
                          bool(dspec.get("skip_missing", False)))
@@ -427,7 +434,7 @@ def main() -> None:
         for r in pool:
             if added >= n:
                 break
-            label = C14_BY_FOLDER.get(r.category, None) if r.y >= 0.5 else "Normal"
+            label = (r.category.replace("_", " ") if CLASS_OPTIONS else C14_BY_FOLDER.get(r.category, None)) if r.y >= 0.5 else "Normal"
             if label is None or label not in c14_opts:
                 continue
             items.append(("c14", r, None, c14_opts.index(label)))
@@ -532,7 +539,12 @@ def main() -> None:
     z = torch.cat(zs) if zs else torch.zeros(0, 2)
     y = torch.tensor([float(v) for v in ys_all])
     t_new = fit_temperature(z, torch.stack([y, 1 - y], dim=1)) if len(z) else 1.0
-    (out_dir / "calibration.json").write_text(json.dumps({"temperature": float(t_new), "val_windows": len(z)}, indent=1))
+    val_auc = None
+    if len(z) and (y > 0).any() and (y == 0).any():  # AUC on the held-out TRAINING videos (2026-11-14)
+        sc = (z[:, 0] - z[:, 1]); pos, neg = sc[y > 0], sc[y == 0]
+        val_auc = float(((pos[:, None] > neg[None]).float().mean() + 0.5 * (pos[:, None] == neg[None]).float().mean()))
+        print(f"val AUC {val_auc:.4f} on {len(z)} held-out training windows", flush=True)
+    (out_dir / "calibration.json").write_text(json.dumps({"temperature": float(t_new), "val_windows": len(z), "val_auc": val_auc}, indent=1))
     floor.save(out_dir)
     (out_dir / "run.json").write_text(json.dumps({"name": data["name"], "finished": datetime.now(timezone.utc).isoformat(),
                                                   "steps": step, "arm": "C" if anchor else ("D" if dpo_beta else "B")}, indent=1))

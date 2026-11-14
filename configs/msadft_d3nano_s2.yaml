@@ -1,0 +1,58 @@
+name: msadft_d3nano_s2
+data:
+  root: /work/u9117820/datasets/msad/prep
+  asset: ucf-crime
+  hivau_json: /work/u9117820/datasets/msad/prep/msad_train.json
+  videos_dir: train180
+  flat: true
+  n_val: 172
+  holdout: 0.1
+  seed: 2
+tasks:
+  v1:
+    n: 1568
+  c14:
+    n: 784
+    options:
+    - Normal
+    - Assault
+    - Explosion
+    - Fighting
+    - Fire
+    - Object falling
+    - People falling
+    - Robbery
+    - Shooting
+    - Traffic accident
+    - Vandalism
+    - Water incident
+  replay:
+    n: 784
+    split: train
+    per_config: 400
+anchor:
+  kl_lambda: 0.5
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+input_form:
+  name: frames
+backbone:
+  name: d3
+  asset: d3-nano
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+optim:
+  lr: 0.00015
+  head_lr: 0.00015
+  warmup: 0.03
+  batch: 8
+  accumulate: 4
+  epochs: 4
+  workers: 6
+  grad_checkpoint: false

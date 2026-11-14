@@ -1,0 +1,72 @@
+name: msadft_d3nano_s1
+data:
+  root: /work/u9117820/datasets/msad/prep
+  asset: ucf-crime
+  hivau_json: /work/u9117820/datasets/msad/prep/msad_train.json
+  videos_dir: train180
+  flat: true
+  n_val: 194
+  holdout: 0.1
+  seed: 1
+tasks:
+  v1:
+    n: 1546
+  c14:
+    n: 773
+    options:
+    - Normal
+    - Assault
+    - Explosion
+    - Fighting
+    - Fire
+    - Object falling
+    - People falling
+    - Robbery
+    - Shooting
+    - Traffic accident
+    - Vandalism
+    - Water incident
+  replay:
+    n: 773
+    split: train
+    per_config: 400
+anchor:
+  kl_lambda: 0.5
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+  state: Surveillance camera footage, 2 seconds.
+  text: If you were a law enforcement agency, would you rate this scene as a scene
+    involving suspicious activities such as abuse (intentionally harming or mistreating
+    others), arrest (legally detaining someone), arson (deliberately setting fire),
+    assault (physical attack on someone), burglary (illegally entering with the intent
+    to commit a crime), disorderly conduct (disruptive or destructive behavior), explosion
+    (violent release of energy), fighting (violent confrontation), robbery (unlawfully
+    taking property), shooting (firing a gun), shoplifting (stealing from a retail
+    store), theft (taking someone else's property without permission), or vandalism
+    (deliberate destruction of property), rather than a standard scene?
+  options:
+  - 'Yes'
+  - 'No'
+  positive: 'Yes'
+input_form:
+  name: frames
+backbone:
+  name: d3
+  asset: d3-nano
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.0
+optim:
+  lr: 0.00015
+  head_lr: 0.00015
+  warmup: 0.03
+  batch: 8
+  accumulate: 4
+  epochs: 4
+  workers: 6
+  grad_checkpoint: false

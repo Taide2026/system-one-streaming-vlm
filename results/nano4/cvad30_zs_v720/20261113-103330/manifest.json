@@ -1,0 +1,450 @@
+[
+ {
+  "name": "4199",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5936,
+  "duration_s": 742.0,
+  "events": [
+   [
+    1536,
+    1571
+   ],
+   [
+    1808,
+    1851
+   ]
+  ],
+  "path": "v720/4199.avi"
+ },
+ {
+  "name": "4201",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 6016,
+  "duration_s": 752.0,
+  "events": [
+   [
+    2024,
+    2252
+   ]
+  ],
+  "path": "v720/4201.avi"
+ },
+ {
+  "name": "4218",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5824,
+  "duration_s": 728.0,
+  "events": [
+   [
+    2113,
+    2129
+   ]
+  ],
+  "path": "v720/4218.avi"
+ },
+ {
+  "name": "4223",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5888,
+  "duration_s": 736.0,
+  "events": [
+   [
+    5222,
+    5263
+   ]
+  ],
+  "path": "v720/4223.avi"
+ },
+ {
+  "name": "4225",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5856,
+  "duration_s": 732.0,
+  "events": [
+   [
+    1651,
+    1885
+   ]
+  ],
+  "path": "v720/4225.avi"
+ },
+ {
+  "name": "4229",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 3344,
+  "duration_s": 418.0,
+  "events": [
+   [
+    1906,
+    1939
+   ],
+   [
+    2425,
+    2465
+   ]
+  ],
+  "path": "v720/4229.avi"
+ },
+ {
+  "name": "4236",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 3616,
+  "duration_s": 452.0,
+  "events": [
+   [
+    2320,
+    2462
+   ]
+  ],
+  "path": "v720/4236.avi"
+ },
+ {
+  "name": "4238",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5760,
+  "duration_s": 720.0,
+  "events": [
+   [
+    321,
+    370
+   ],
+   [
+    5058,
+    5096
+   ]
+  ],
+  "path": "v720/4238.avi"
+ },
+ {
+  "name": "4243",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5968,
+  "duration_s": 746.0,
+  "events": [
+   [
+    3197,
+    3268
+   ]
+  ],
+  "path": "v720/4243.avi"
+ },
+ {
+  "name": "4251",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 6048,
+  "duration_s": 756.0,
+  "events": [
+   [
+    1024,
+    3161
+   ]
+  ],
+  "path": "v720/4251.avi"
+ },
+ {
+  "name": "4253",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5920,
+  "duration_s": 740.0,
+  "events": [
+   [
+    1190,
+    3097
+   ]
+  ],
+  "path": "v720/4253.avi"
+ },
+ {
+  "name": "4254",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5968,
+  "duration_s": 746.0,
+  "events": [
+   [
+    4917,
+    4936
+   ]
+  ],
+  "path": "v720/4254.avi"
+ },
+ {
+  "name": "4255",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 6016,
+  "duration_s": 752.0,
+  "events": [
+   [
+    167,
+    6016
+   ]
+  ],
+  "path": "v720/4255.avi"
+ },
+ {
+  "name": "4256",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 6016,
+  "duration_s": 752.0,
+  "events": [
+   [
+    3225,
+    6024
+   ]
+  ],
+  "path": "v720/4256.avi"
+ },
+ {
+  "name": "4264",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5920,
+  "duration_s": 740.0,
+  "events": [
+   [
+    300,
+    5920
+   ]
+  ],
+  "path": "v720/4264.avi"
+ },
+ {
+  "name": "4272",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 6160,
+  "duration_s": 770.0,
+  "events": [
+   [
+    1337,
+    1591
+   ]
+  ],
+  "path": "v720/4272.avi"
+ },
+ {
+  "name": "4281",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5712,
+  "duration_s": 714.0,
+  "events": [
+   [
+    3090,
+    3102
+   ]
+  ],
+  "path": "v720/4281.avi"
+ },
+ {
+  "name": "4282",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5712,
+  "duration_s": 714.0,
+  "events": [
+   [
+    1421,
+    1441
+   ],
+   [
+    3108,
+    3131
+   ],
+   [
+    4890,
+    4903
+   ]
+  ],
+  "path": "v720/4282.avi"
+ },
+ {
+  "name": "4283",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5728,
+  "duration_s": 716.0,
+  "events": [
+   [
+    3045,
+    3181
+   ],
+   [
+    5135,
+    5194
+   ]
+  ],
+  "path": "v720/4283.avi"
+ },
+ {
+  "name": "4284",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5712,
+  "duration_s": 714.0,
+  "events": [
+   [
+    3193,
+    5712
+   ]
+  ],
+  "path": "v720/4284.avi"
+ },
+ {
+  "name": "4285",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5728,
+  "duration_s": 716.0,
+  "events": [
+   [
+    2287,
+    2437
+   ]
+  ],
+  "path": "v720/4285.avi"
+ },
+ {
+  "name": "4287",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 2432,
+  "duration_s": 304.0,
+  "events": [
+   [
+    1031,
+    1080
+   ]
+  ],
+  "path": "v720/4287.avi"
+ },
+ {
+  "name": "4315",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5904,
+  "duration_s": 738.0,
+  "events": [
+   [
+    3437,
+    3465
+   ]
+  ],
+  "path": "v720/4315.avi"
+ },
+ {
+  "name": "4316",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5936,
+  "duration_s": 742.0,
+  "events": [
+   [
+    4652,
+    4667
+   ]
+  ],
+  "path": "v720/4316.avi"
+ },
+ {
+  "name": "4317",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 3600,
+  "duration_s": 450.0,
+  "events": [
+   [
+    2318,
+    2385
+   ],
+   [
+    2688,
+    2716
+   ]
+  ],
+  "path": "v720/4317.avi"
+ },
+ {
+  "name": "4318",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5792,
+  "duration_s": 724.0,
+  "events": [
+   [
+    1580,
+    1604
+   ]
+  ],
+  "path": "v720/4318.avi"
+ },
+ {
+  "name": "4331",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 5888,
+  "duration_s": 736.0,
+  "events": [
+   [
+    2485,
+    2540
+   ]
+  ],
+  "path": "v720/4331.avi"
+ },
+ {
+  "name": "4332",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 4224,
+  "duration_s": 528.0,
+  "events": [
+   [
+    1808,
+    1842
+   ]
+  ],
+  "path": "v720/4332.avi"
+ },
+ {
+  "name": "4344",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 6064,
+  "duration_s": 758.0,
+  "events": [
+   [
+    1884,
+    1910
+   ]
+  ],
+  "path": "v720/4344.avi"
+ },
+ {
+  "name": "4345",
+  "category": "abnormal",
+  "fps": 8.0,
+  "n_frames": 6032,
+  "duration_s": 754.0,
+  "events": [
+   [
+    1024,
+    1182
+   ]
+  ],
+  "path": "v720/4345.avi"
+ }
+]

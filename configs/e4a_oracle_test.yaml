@@ -1,0 +1,35 @@
+name: e4a_oracle_test
+dataset:
+  name: ucf_crime
+  asset: ucf-crime
+  n_anomaly: 140
+  n_normal: 150
+  max_duration_s: 1000000000
+  seed: 0
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+input_form:
+  name: temporal_control
+  mode: history4_oracle
+  seed: 0
+  history_s: 6.0
+  scores: r0/r0_test_C_s0.jsonl
+  tau: 0.72
+  tau_ref: 0.72
+  L: 30.0
+backbone:
+  name: d3
+  asset: d3-nano
+  memory_cap_gb: 40
+  adapter: results/pro6000/floor_d3nano_tc_history4_h6/20261107-180515
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01

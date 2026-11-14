@@ -1,0 +1,2566 @@
+[
+ {
+  "name": "Assault_11",
+  "category": "Assault",
+  "fps": 8.0,
+  "n_frames": 208,
+  "duration_s": 26.0,
+  "events": [
+   [
+    0,
+    66
+   ]
+  ],
+  "path": "prep/v720/Assault_11.avi"
+ },
+ {
+  "name": "Assault_13",
+  "category": "Assault",
+  "fps": 8.0,
+  "n_frames": 224,
+  "duration_s": 28.0,
+  "events": [
+   [
+    0,
+    151
+   ]
+  ],
+  "path": "prep/v720/Assault_13.avi"
+ },
+ {
+  "name": "Assault_14",
+  "category": "Assault",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [
+   [
+    21,
+    131
+   ]
+  ],
+  "path": "prep/v720/Assault_14.avi"
+ },
+ {
+  "name": "Assault_15",
+  "category": "Assault",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    10,
+    40
+   ]
+  ],
+  "path": "prep/v720/Assault_15.avi"
+ },
+ {
+  "name": "Assault_2",
+  "category": "Assault",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    5,
+    53
+   ]
+  ],
+  "path": "prep/v720/Assault_2.avi"
+ },
+ {
+  "name": "Assault_4",
+  "category": "Assault",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [
+   [
+    0,
+    137
+   ]
+  ],
+  "path": "prep/v720/Assault_4.avi"
+ },
+ {
+  "name": "Assault_7",
+  "category": "Assault",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    56,
+    66
+   ]
+  ],
+  "path": "prep/v720/Assault_7.avi"
+ },
+ {
+  "name": "Explosion_1",
+  "category": "Explosion",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    1,
+    97
+   ]
+  ],
+  "path": "prep/v720/Explosion_1.avi"
+ },
+ {
+  "name": "Explosion_11",
+  "category": "Explosion",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [
+   [
+    26,
+    128
+   ]
+  ],
+  "path": "prep/v720/Explosion_11.avi"
+ },
+ {
+  "name": "Explosion_13",
+  "category": "Explosion",
+  "fps": 8.0,
+  "n_frames": 208,
+  "duration_s": 26.0,
+  "events": [
+   [
+    128,
+    216
+   ]
+  ],
+  "path": "prep/v720/Explosion_13.avi"
+ },
+ {
+  "name": "Explosion_15",
+  "category": "Explosion",
+  "fps": 8.0,
+  "n_frames": 352,
+  "duration_s": 44.0,
+  "events": [
+   [
+    108,
+    297
+   ]
+  ],
+  "path": "prep/v720/Explosion_15.avi"
+ },
+ {
+  "name": "Explosion_3",
+  "category": "Explosion",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [
+   [
+    121,
+    125
+   ]
+  ],
+  "path": "prep/v720/Explosion_3.avi"
+ },
+ {
+  "name": "Explosion_5",
+  "category": "Explosion",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    16,
+    67
+   ]
+  ],
+  "path": "prep/v720/Explosion_5.avi"
+ },
+ {
+  "name": "Explosion_7",
+  "category": "Explosion",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    24,
+    111
+   ]
+  ],
+  "path": "prep/v720/Explosion_7.avi"
+ },
+ {
+  "name": "Explosion_9",
+  "category": "Explosion",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    40,
+    101
+   ]
+  ],
+  "path": "prep/v720/Explosion_9.avi"
+ },
+ {
+  "name": "Fighting_10",
+  "category": "Fighting",
+  "fps": 8.0,
+  "n_frames": 144,
+  "duration_s": 18.0,
+  "events": [
+   [
+    34,
+    159
+   ]
+  ],
+  "path": "prep/v720/Fighting_10.avi"
+ },
+ {
+  "name": "Fighting_12",
+  "category": "Fighting",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [
+   [
+    82,
+    199
+   ]
+  ],
+  "path": "prep/v720/Fighting_12.avi"
+ },
+ {
+  "name": "Fighting_13",
+  "category": "Fighting",
+  "fps": 8.0,
+  "n_frames": 544,
+  "duration_s": 68.0,
+  "events": [
+   [
+    262,
+    518
+   ]
+  ],
+  "path": "prep/v720/Fighting_13.avi"
+ },
+ {
+  "name": "Fighting_3",
+  "category": "Fighting",
+  "fps": 8.0,
+  "n_frames": 272,
+  "duration_s": 34.0,
+  "events": [
+   [
+    127,
+    275
+   ]
+  ],
+  "path": "prep/v720/Fighting_3.avi"
+ },
+ {
+  "name": "Fighting_4",
+  "category": "Fighting",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    11,
+    67
+   ]
+  ],
+  "path": "prep/v720/Fighting_4.avi"
+ },
+ {
+  "name": "Fighting_7",
+  "category": "Fighting",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [
+   [
+    0,
+    112
+   ]
+  ],
+  "path": "prep/v720/Fighting_7.avi"
+ },
+ {
+  "name": "Fire_11",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    0,
+    58
+   ]
+  ],
+  "path": "prep/v720/Fire_11.avi"
+ },
+ {
+  "name": "Fire_15",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 160,
+  "duration_s": 20.0,
+  "events": [
+   [
+    0,
+    161
+   ]
+  ],
+  "path": "prep/v720/Fire_15.avi"
+ },
+ {
+  "name": "Fire_16",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [
+   [
+    0,
+    199
+   ]
+  ],
+  "path": "prep/v720/Fire_16.avi"
+ },
+ {
+  "name": "Fire_2",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    0,
+    57
+   ]
+  ],
+  "path": "prep/v720/Fire_2.avi"
+ },
+ {
+  "name": "Fire_20",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [
+   [
+    0,
+    115
+   ]
+  ],
+  "path": "prep/v720/Fire_20.avi"
+ },
+ {
+  "name": "Fire_21",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 80,
+  "duration_s": 10.0,
+  "events": [
+   [
+    4,
+    83
+   ]
+  ],
+  "path": "prep/v720/Fire_21.avi"
+ },
+ {
+  "name": "Fire_22",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [
+   [
+    30,
+    117
+   ]
+  ],
+  "path": "prep/v720/Fire_22.avi"
+ },
+ {
+  "name": "Fire_24",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [
+   [
+    85,
+    131
+   ]
+  ],
+  "path": "prep/v720/Fire_24.avi"
+ },
+ {
+  "name": "Fire_4",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 144,
+  "duration_s": 18.0,
+  "events": [
+   [
+    0,
+    148
+   ]
+  ],
+  "path": "prep/v720/Fire_4.avi"
+ },
+ {
+  "name": "Fire_6",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    32,
+    65
+   ]
+  ],
+  "path": "prep/v720/Fire_6.avi"
+ },
+ {
+  "name": "Fire_8",
+  "category": "Fire",
+  "fps": 8.0,
+  "n_frames": 80,
+  "duration_s": 10.0,
+  "events": [
+   [
+    0,
+    80
+   ]
+  ],
+  "path": "prep/v720/Fire_8.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_1",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_1.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_10",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_10.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_100",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_100.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_101",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_101.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_102",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 224,
+  "duration_s": 28.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_102.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_103",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_103.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_104",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_104.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_105",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_105.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_106",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_106.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_107",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_107.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_108",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_108.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_109",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_109.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_11",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_11.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_110",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_110.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_111",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 160,
+  "duration_s": 20.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_111.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_112",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_112.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_113",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_113.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_114",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 256,
+  "duration_s": 32.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_114.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_115",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_115.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_116",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_116.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_117",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_117.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_118",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_118.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_119",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_119.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_12",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_12.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_120",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_120.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_13",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_13.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_14",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_14.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_15",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_15.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_16",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_16.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_17",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_17.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_18",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_18.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_19",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_19.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_2",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_2.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_20",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_20.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_21",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_21.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_22",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_22.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_23",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_23.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_24",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_24.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_25",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_25.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_27",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_27.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_28",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_28.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_29",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 224,
+  "duration_s": 28.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_29.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_3",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_3.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_30",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_30.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_31",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_31.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_32",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_32.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_33",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_33.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_34",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_34.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_35",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_35.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_36",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_36.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_37",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_37.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_38",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_38.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_39",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_39.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_40",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_40.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_43",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_43.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_44",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_44.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_45",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_45.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_46",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_46.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_47",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_47.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_48",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 224,
+  "duration_s": 28.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_48.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_49",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_49.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_5",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_5.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_50",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_50.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_51",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_51.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_53",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_53.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_54",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_54.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_56",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_56.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_57",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_57.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_58",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_58.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_60",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_60.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_61",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 208,
+  "duration_s": 26.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_61.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_62",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 144,
+  "duration_s": 18.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_62.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_63",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_63.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_64",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_64.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_66",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_66.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_67",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_67.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_68",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_68.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_69",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_69.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_7",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_7.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_70",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_70.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_73",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_73.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_74",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 224,
+  "duration_s": 28.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_74.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_75",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_75.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_76",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_76.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_78",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_78.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_79",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_79.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_80",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 224,
+  "duration_s": 28.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_80.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_81",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_81.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_83",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_83.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_84",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_84.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_85",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_85.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_86",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_86.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_87",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_87.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_88",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_88.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_89",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_89.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_9",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_9.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_90",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_90.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_91",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_91.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_92",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_92.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_93",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_93.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_94",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_94.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_95",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_95.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_96",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_96.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_97",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_97.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_98",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_98.avi"
+ },
+ {
+  "name": "MSAD_normal_testing_99",
+  "category": "Normal",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [],
+  "path": "prep/v720/MSAD_normal_testing_99.avi"
+ },
+ {
+  "name": "Object_falling_11",
+  "category": "Object_falling",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    42,
+    61
+   ]
+  ],
+  "path": "prep/v720/Object_falling_11.avi"
+ },
+ {
+  "name": "Object_falling_14",
+  "category": "Object_falling",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    29,
+    105
+   ]
+  ],
+  "path": "prep/v720/Object_falling_14.avi"
+ },
+ {
+  "name": "Object_falling_15",
+  "category": "Object_falling",
+  "fps": 8.0,
+  "n_frames": 176,
+  "duration_s": 22.0,
+  "events": [
+   [
+    4,
+    19
+   ]
+  ],
+  "path": "prep/v720/Object_falling_15.avi"
+ },
+ {
+  "name": "Object_falling_17",
+  "category": "Object_falling",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    65,
+    92
+   ]
+  ],
+  "path": "prep/v720/Object_falling_17.avi"
+ },
+ {
+  "name": "Object_falling_19",
+  "category": "Object_falling",
+  "fps": 8.0,
+  "n_frames": 16,
+  "duration_s": 2.0,
+  "events": [
+   [
+    4,
+    22
+   ]
+  ],
+  "path": "prep/v720/Object_falling_19.avi"
+ },
+ {
+  "name": "Object_falling_21",
+  "category": "Object_falling",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [
+   [
+    47,
+    60
+   ]
+  ],
+  "path": "prep/v720/Object_falling_21.avi"
+ },
+ {
+  "name": "Object_falling_3",
+  "category": "Object_falling",
+  "fps": 8.0,
+  "n_frames": 224,
+  "duration_s": 28.0,
+  "events": [
+   [
+    0,
+    237
+   ]
+  ],
+  "path": "prep/v720/Object_falling_3.avi"
+ },
+ {
+  "name": "Object_falling_4",
+  "category": "Object_falling",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    22,
+    53
+   ]
+  ],
+  "path": "prep/v720/Object_falling_4.avi"
+ },
+ {
+  "name": "Object_falling_7",
+  "category": "Object_falling",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    52,
+    87
+   ]
+  ],
+  "path": "prep/v720/Object_falling_7.avi"
+ },
+ {
+  "name": "Object_falling_9",
+  "category": "Object_falling",
+  "fps": 8.0,
+  "n_frames": 272,
+  "duration_s": 34.0,
+  "events": [
+   [
+    0,
+    281
+   ]
+  ],
+  "path": "prep/v720/Object_falling_9.avi"
+ },
+ {
+  "name": "People_falling_1",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 80,
+  "duration_s": 10.0,
+  "events": [
+   [
+    11,
+    28
+   ]
+  ],
+  "path": "prep/v720/People_falling_1.avi"
+ },
+ {
+  "name": "People_falling_10",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 80,
+  "duration_s": 10.0,
+  "events": [
+   [
+    37,
+    62
+   ]
+  ],
+  "path": "prep/v720/People_falling_10.avi"
+ },
+ {
+  "name": "People_falling_11",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    11,
+    35
+   ]
+  ],
+  "path": "prep/v720/People_falling_11.avi"
+ },
+ {
+  "name": "People_falling_14",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    17,
+    36
+   ]
+  ],
+  "path": "prep/v720/People_falling_14.avi"
+ },
+ {
+  "name": "People_falling_16",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    24,
+    42
+   ]
+  ],
+  "path": "prep/v720/People_falling_16.avi"
+ },
+ {
+  "name": "People_falling_18",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    15,
+    26
+   ]
+  ],
+  "path": "prep/v720/People_falling_18.avi"
+ },
+ {
+  "name": "People_falling_20",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    17,
+    35
+   ]
+  ],
+  "path": "prep/v720/People_falling_20.avi"
+ },
+ {
+  "name": "People_falling_23",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    9,
+    65
+   ]
+  ],
+  "path": "prep/v720/People_falling_23.avi"
+ },
+ {
+  "name": "People_falling_24",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    36,
+    56
+   ]
+  ],
+  "path": "prep/v720/People_falling_24.avi"
+ },
+ {
+  "name": "People_falling_25",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    22,
+    62
+   ]
+  ],
+  "path": "prep/v720/People_falling_25.avi"
+ },
+ {
+  "name": "People_falling_26",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    21,
+    60
+   ]
+  ],
+  "path": "prep/v720/People_falling_26.avi"
+ },
+ {
+  "name": "People_falling_28",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    33,
+    61
+   ]
+  ],
+  "path": "prep/v720/People_falling_28.avi"
+ },
+ {
+  "name": "People_falling_3",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    47,
+    62
+   ]
+  ],
+  "path": "prep/v720/People_falling_3.avi"
+ },
+ {
+  "name": "People_falling_31",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 80,
+  "duration_s": 10.0,
+  "events": [
+   [
+    45,
+    92
+   ]
+  ],
+  "path": "prep/v720/People_falling_31.avi"
+ },
+ {
+  "name": "People_falling_32",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 144,
+  "duration_s": 18.0,
+  "events": [
+   [
+    30,
+    155
+   ]
+  ],
+  "path": "prep/v720/People_falling_32.avi"
+ },
+ {
+  "name": "People_falling_36",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    37,
+    62
+   ]
+  ],
+  "path": "prep/v720/People_falling_36.avi"
+ },
+ {
+  "name": "People_falling_37",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    39,
+    79
+   ]
+  ],
+  "path": "prep/v720/People_falling_37.avi"
+ },
+ {
+  "name": "People_falling_38",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    22,
+    59
+   ]
+  ],
+  "path": "prep/v720/People_falling_38.avi"
+ },
+ {
+  "name": "People_falling_40",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    34,
+    57
+   ]
+  ],
+  "path": "prep/v720/People_falling_40.avi"
+ },
+ {
+  "name": "People_falling_42",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [
+   [
+    24,
+    84
+   ]
+  ],
+  "path": "prep/v720/People_falling_42.avi"
+ },
+ {
+  "name": "People_falling_5",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    29,
+    46
+   ]
+  ],
+  "path": "prep/v720/People_falling_5.avi"
+ },
+ {
+  "name": "People_falling_7",
+  "category": "People_falling",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    26,
+    48
+   ]
+  ],
+  "path": "prep/v720/People_falling_7.avi"
+ },
+ {
+  "name": "Robbery_11",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [
+   [
+    9,
+    143
+   ]
+  ],
+  "path": "prep/v720/Robbery_11.avi"
+ },
+ {
+  "name": "Robbery_13",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [
+   [
+    11,
+    123
+   ]
+  ],
+  "path": "prep/v720/Robbery_13.avi"
+ },
+ {
+  "name": "Robbery_15",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    0,
+    106
+   ]
+  ],
+  "path": "prep/v720/Robbery_15.avi"
+ },
+ {
+  "name": "Robbery_17",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [
+   [
+    10,
+    29
+   ]
+  ],
+  "path": "prep/v720/Robbery_17.avi"
+ },
+ {
+  "name": "Robbery_19",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 512,
+  "duration_s": 64.0,
+  "events": [
+   [
+    88,
+    522
+   ]
+  ],
+  "path": "prep/v720/Robbery_19.avi"
+ },
+ {
+  "name": "Robbery_2",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 320,
+  "duration_s": 40.0,
+  "events": [
+   [
+    191,
+    320
+   ]
+  ],
+  "path": "prep/v720/Robbery_2.avi"
+ },
+ {
+  "name": "Robbery_27",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 144,
+  "duration_s": 18.0,
+  "events": [
+   [
+    0,
+    138
+   ]
+  ],
+  "path": "prep/v720/Robbery_27.avi"
+ },
+ {
+  "name": "Robbery_28",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 176,
+  "duration_s": 22.0,
+  "events": [
+   [
+    0,
+    190
+   ]
+  ],
+  "path": "prep/v720/Robbery_28.avi"
+ },
+ {
+  "name": "Robbery_29",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 80,
+  "duration_s": 10.0,
+  "events": [
+   [
+    16,
+    84
+   ]
+  ],
+  "path": "prep/v720/Robbery_29.avi"
+ },
+ {
+  "name": "Robbery_4",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    6,
+    75
+   ]
+  ],
+  "path": "prep/v720/Robbery_4.avi"
+ },
+ {
+  "name": "Robbery_7",
+  "category": "Robbery",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [
+   [
+    3,
+    137
+   ]
+  ],
+  "path": "prep/v720/Robbery_7.avi"
+ },
+ {
+  "name": "Shooting_10",
+  "category": "Shooting",
+  "fps": 8.0,
+  "n_frames": 240,
+  "duration_s": 30.0,
+  "events": [
+   [
+    34,
+    112
+   ]
+  ],
+  "path": "prep/v720/Shooting_10.avi"
+ },
+ {
+  "name": "Shooting_12",
+  "category": "Shooting",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    33,
+    59
+   ]
+  ],
+  "path": "prep/v720/Shooting_12.avi"
+ },
+ {
+  "name": "Shooting_13",
+  "category": "Shooting",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    34,
+    110
+   ]
+  ],
+  "path": "prep/v720/Shooting_13.avi"
+ },
+ {
+  "name": "Shooting_16",
+  "category": "Shooting",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    0,
+    64
+   ]
+  ],
+  "path": "prep/v720/Shooting_16.avi"
+ },
+ {
+  "name": "Shooting_17",
+  "category": "Shooting",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [
+   [
+    61,
+    134
+   ]
+  ],
+  "path": "prep/v720/Shooting_17.avi"
+ },
+ {
+  "name": "Shooting_2",
+  "category": "Shooting",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    27,
+    71
+   ]
+  ],
+  "path": "prep/v720/Shooting_2.avi"
+ },
+ {
+  "name": "Shooting_4",
+  "category": "Shooting",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    0,
+    75
+   ]
+  ],
+  "path": "prep/v720/Shooting_4.avi"
+ },
+ {
+  "name": "Shooting_5",
+  "category": "Shooting",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    0,
+    56
+   ]
+  ],
+  "path": "prep/v720/Shooting_5.avi"
+ },
+ {
+  "name": "Shooting_6",
+  "category": "Shooting",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    9,
+    80
+   ]
+  ],
+  "path": "prep/v720/Shooting_6.avi"
+ },
+ {
+  "name": "Traffic_accident_11",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    26,
+    78
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_11.avi"
+ },
+ {
+  "name": "Traffic_accident_12",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    13,
+    103
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_12.avi"
+ },
+ {
+  "name": "Traffic_accident_15",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    33,
+    96
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_15.avi"
+ },
+ {
+  "name": "Traffic_accident_16",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    24,
+    42
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_16.avi"
+ },
+ {
+  "name": "Traffic_accident_19",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    0,
+    62
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_19.avi"
+ },
+ {
+  "name": "Traffic_accident_2",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    45,
+    97
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_2.avi"
+ },
+ {
+  "name": "Traffic_accident_20",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [
+   [
+    86,
+    114
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_20.avi"
+ },
+ {
+  "name": "Traffic_accident_21",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 176,
+  "duration_s": 22.0,
+  "events": [
+   [
+    30,
+    45
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_21.avi"
+ },
+ {
+  "name": "Traffic_accident_23",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [
+   [
+    33,
+    120
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_23.avi"
+ },
+ {
+  "name": "Traffic_accident_25",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    18,
+    73
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_25.avi"
+ },
+ {
+  "name": "Traffic_accident_26",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    7,
+    43
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_26.avi"
+ },
+ {
+  "name": "Traffic_accident_27",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 48,
+  "duration_s": 6.0,
+  "events": [
+   [
+    9,
+    29
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_27.avi"
+ },
+ {
+  "name": "Traffic_accident_31",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 128,
+  "duration_s": 16.0,
+  "events": [
+   [
+    67,
+    96
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_31.avi"
+ },
+ {
+  "name": "Traffic_accident_32",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    58,
+    86
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_32.avi"
+ },
+ {
+  "name": "Traffic_accident_35",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 208,
+  "duration_s": 26.0,
+  "events": [
+   [
+    109,
+    141
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_35.avi"
+ },
+ {
+  "name": "Traffic_accident_36",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 80,
+  "duration_s": 10.0,
+  "events": [
+   [
+    0,
+    36
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_36.avi"
+ },
+ {
+  "name": "Traffic_accident_39",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 160,
+  "duration_s": 20.0,
+  "events": [
+   [
+    46,
+    64
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_39.avi"
+ },
+ {
+  "name": "Traffic_accident_4",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 80,
+  "duration_s": 10.0,
+  "events": [
+   [
+    0,
+    21
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_4.avi"
+ },
+ {
+  "name": "Traffic_accident_7",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 80,
+  "duration_s": 10.0,
+  "events": [
+   [
+    16,
+    58
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_7.avi"
+ },
+ {
+  "name": "Traffic_accident_8",
+  "category": "Traffic_accident",
+  "fps": 8.0,
+  "n_frames": 80,
+  "duration_s": 10.0,
+  "events": [
+   [
+    2,
+    56
+   ]
+  ],
+  "path": "prep/v720/Traffic_accident_8.avi"
+ },
+ {
+  "name": "Vandalism_1",
+  "category": "Vandalism",
+  "fps": 8.0,
+  "n_frames": 256,
+  "duration_s": 32.0,
+  "events": [
+   [
+    192,
+    219
+   ]
+  ],
+  "path": "prep/v720/Vandalism_1.avi"
+ },
+ {
+  "name": "Vandalism_12",
+  "category": "Vandalism",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    0,
+    102
+   ]
+  ],
+  "path": "prep/v720/Vandalism_12.avi"
+ },
+ {
+  "name": "Vandalism_3",
+  "category": "Vandalism",
+  "fps": 8.0,
+  "n_frames": 96,
+  "duration_s": 12.0,
+  "events": [
+   [
+    14,
+    108
+   ]
+  ],
+  "path": "prep/v720/Vandalism_3.avi"
+ },
+ {
+  "name": "Vandalism_4",
+  "category": "Vandalism",
+  "fps": 8.0,
+  "n_frames": 160,
+  "duration_s": 20.0,
+  "events": [
+   [
+    133,
+    143
+   ]
+  ],
+  "path": "prep/v720/Vandalism_4.avi"
+ },
+ {
+  "name": "Vandalism_6",
+  "category": "Vandalism",
+  "fps": 8.0,
+  "n_frames": 160,
+  "duration_s": 20.0,
+  "events": [
+   [
+    23,
+    152
+   ]
+  ],
+  "path": "prep/v720/Vandalism_6.avi"
+ },
+ {
+  "name": "Vandalism_9",
+  "category": "Vandalism",
+  "fps": 8.0,
+  "n_frames": 112,
+  "duration_s": 14.0,
+  "events": [
+   [
+    13,
+    71
+   ]
+  ],
+  "path": "prep/v720/Vandalism_9.avi"
+ },
+ {
+  "name": "Water_incident_10",
+  "category": "Water_incident",
+  "fps": 8.0,
+  "n_frames": 256,
+  "duration_s": 32.0,
+  "events": [
+   [
+    169,
+    264
+   ]
+  ],
+  "path": "prep/v720/Water_incident_10.avi"
+ },
+ {
+  "name": "Water_incident_2",
+  "category": "Water_incident",
+  "fps": 8.0,
+  "n_frames": 64,
+  "duration_s": 8.0,
+  "events": [
+   [
+    5,
+    64
+   ]
+  ],
+  "path": "prep/v720/Water_incident_2.avi"
+ },
+ {
+  "name": "Water_incident_4",
+  "category": "Water_incident",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [
+   [
+    0,
+    202
+   ]
+  ],
+  "path": "prep/v720/Water_incident_4.avi"
+ },
+ {
+  "name": "Water_incident_6",
+  "category": "Water_incident",
+  "fps": 8.0,
+  "n_frames": 192,
+  "duration_s": 24.0,
+  "events": [
+   [
+    0,
+    207
+   ]
+  ],
+  "path": "prep/v720/Water_incident_6.avi"
+ },
+ {
+  "name": "Water_incident_8",
+  "category": "Water_incident",
+  "fps": 8.0,
+  "n_frames": 144,
+  "duration_s": 18.0,
+  "events": [
+   [
+    0,
+    158
+   ]
+  ],
+  "path": "prep/v720/Water_incident_8.avi"
+ }
+]
