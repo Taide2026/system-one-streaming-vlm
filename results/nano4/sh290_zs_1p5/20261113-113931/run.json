@@ -1,0 +1,38 @@
+{
+ "name": "sh290_zs_1p5",
+ "machine": "nano4",
+ "gpu": "NVIDIA H200",
+ "started": "2026-11-13T03:39:34.465458+00:00",
+ "finished": "2026-11-13T04:55:44.909924+00:00",
+ "free_memory_gb": 1879.3342781066895,
+ "peak_gpu_gb": 7.997335910797119,
+ "load_s": 19.54208148701582,
+ "windows": 18390,
+ "limit_windows": null,
+ "prefetch": 0,
+ "versions": {
+  "python": "3.12.16",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.17.0"
+ },
+ "git_commit": "c0ab3f0b85bcc029998998a5687728a22e3030de",
+ "git_dirty": true,
+ "assets": {
+  "shieldstral-3b": {
+   "revision": "003ec7e2b0bab5f0e6307edbaf186fa5822b76f5",
+   "sha256": {
+    "config.json": "a0b1122916b629ab9c3b54a422476e3f4bf4f2b66353a82c43c349c4fe2257ad"
+   }
+  },
+  "ucf-crime": {
+   "revision": null,
+   "sha256": {
+    "annotations/Temporal_Anomaly_Annotation_for_Testing_Videos.txt": "3b9542413f2ed9e94f73bf0488c151b3d7d595a8d2ad30f524e9243a2ae2a17c",
+    "splits/Anomaly_Test.txt": "afcb2a6bffe7286607e08c864425964d8784cbd5b1f263e03b76025e11548de7",
+    "splits/Anomaly_Train.txt": "ea91e03de7581bfa6b139e663ebb7511ab1651c33427f85741d3f497a2027744",
+    "splits/Action_Regnition_splits/ClassIDs.txt": "4e2af08c8fdeb3466494f276e1e877e837317a001eca9d826f933be73e6e7fd8",
+    "ReadMe-Anomaly-Detection.txt": "90e6c08923ef91c31e7b2ebf455b7ff82b8de31c79a7334a7b76f4cd2562098b"
+   }
+  }
+ }
+}
