@@ -1,0 +1,32 @@
+{
+ "name": "cvadall_flf1_v360",
+ "machine": "nano4",
+ "gpu": "NVIDIA H200",
+ "started": "2026-11-15T12:18:16.603280+00:00",
+ "finished": "2026-11-15T15:19:36.260776+00:00",
+ "free_memory_gb": 1904.504539489746,
+ "peak_gpu_gb": 16.035022258758545,
+ "load_s": 26.343094164971262,
+ "windows": 26810,
+ "limit_windows": null,
+ "prefetch": 0,
+ "versions": {
+  "python": "3.12.16",
+  "torch": "2.14.1+cu130",
+  "transformers": "5.17.0"
+ },
+ "git_commit": "c0ab3f0b85bcc029998998a5687728a22e3030de",
+ "git_dirty": true,
+ "assets": {
+  "d3-flash": {
+   "revision": "8b35c853b90e777595ec36bacae820fe08ea077a",
+   "sha256": {
+    "MODEL_MANIFEST.json": "abdafb9f4a3e39595a54b7ca977e6bd7a3279c57745231319e3a171a43976e65",
+    "config.json": "9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb",
+    "d3_runtime.py": "adf7f7aa085674b5682e492d8b2e3cc4f11c67b0d153515c742e907e9b550917",
+    "decision_config.json": "0269c72ac055d8149a7a778c477780af361f4c1cde3fd0e5ba9af791453ece18",
+    "readout.safetensors": "8bbc9a9df4e1b7df85a80a1091977092b938d8d2d2869dfaeb8fd36063cf322f"
+   }
+  }
+ }
+}

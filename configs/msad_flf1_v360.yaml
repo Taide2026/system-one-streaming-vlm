@@ -1,0 +1,26 @@
+name: msad_flf1_v360
+dataset:
+  name: msad
+  path: /work/u9117820/datasets/msad
+  variant: v360
+  videos_from: v720
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+input_form:
+  name: frames
+backbone:
+  name: d3
+  asset: d3-flash
+  memory_cap_gb: 40
+  adapter: results/nano4/floor_d3flash_c_s1/20261107-044624
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01
