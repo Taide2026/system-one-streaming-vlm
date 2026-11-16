@@ -16,4 +16,5 @@ import s1stream.input_forms.frames  # noqa: F401
 import s1stream.input_forms.keycrop  # noqa: F401  (2026-11-13)
 import s1stream.input_forms.temporal_control  # noqa: F401  (2026-11-08)
 import s1stream.input_forms.upsample  # noqa: F401  (2026-11-11)
+import s1stream.input_forms.soften  # noqa: F401  (2026-11-16)
 import s1stream.rules.threshold  # noqa: F401

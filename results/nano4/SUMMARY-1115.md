@@ -33,3 +33,16 @@ Gains by event size (videos split into thirds by tokens on the event): `tokthird
 `gran-1113.json` (small in space, partial in time), `stream-1113.json` (stream metrics), `latsh/771911.json` (latency),
 `scripts/tokslope.py`, `scripts/split.py`, `scripts/oracle-recalc.py`, `scripts/msad-train-prep.py`.
 Job scripts: `jobs/nano4-upx/{second,second2,second3,qwenyn,msad2,flft1,flft2,flft1g,msadflft,svcvad}.sbatch`.
+
+## 2026-11-16: sharpness at a fixed token count (ComplexVAD, 110 videos, Macro-AUC)
+
+The 360p frame area-downscaled to height `via` and enlarged back to 640×360 (input form `soften`,
+`src/s1stream/input_forms/soften.py`): the token count is the same in every column, only the detail changes.
+via 180 is the "180p enlarged 2x" input (`*_v180up2`); differences are against that column.
+
+| model | run names | via 180 | via 240 | via 300 | real 360p |
+|---|---|---|---|---|---|
+| d3-nano, zero-shot | `cvadall_zs_v360s*` | 79.8 | 80.3 (+0.5 ± 1.3) | 81.0 (+1.3 ± 1.4) | 82.0 (+2.2 ± 1.5) |
+| d3-flash, UCF fine-tune, seed 1 | `cvadall_flf1_v360s*` | 84.9 | 84.1 (−0.8 ± 1.2) | 84.2 (−0.7 ± 1.2) | 82.8 (−2.1 ± 1.6) |
+
+Job script: `jobs/nano4-upx/soft.sbatch`.

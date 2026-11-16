@@ -21,6 +21,7 @@ form_yaml() {  # $1 form -> the input_form block body (after "input_form:\n")
     frames|f16) echo "  name: frames" ;;
     mix) printf '  name: foveated\n  frac: 1.0\n  upscale: 2\n' ;;
     fov036) printf '  name: foveated\n  frac: 0.333\n  upscale: 2\n  max_area: 0.036\n' ;;
+    soft:*) printf '  name: soften\n  via: %s\n  kernel: bicubic\n' "${1#soft:}" ;;
     up:*) f=${1#up:}; printf '  name: upsample\n  factor: %s\n  kernel: %s\n' "${f%%:*}" "$( [[ $f == *:* ]] && echo ${f#*:} || echo bicubic )" ;;
     *) echo "unknown form $1" >&2; return 1 ;;
   esac

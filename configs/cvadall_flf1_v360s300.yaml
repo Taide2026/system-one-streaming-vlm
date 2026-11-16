@@ -1,0 +1,28 @@
+name: cvadall_flf1_v360s300
+dataset:
+  name: complexvad
+  path: /work/u9117820/datasets/complexvad
+  variant: v360
+  n_videos: 113
+window:
+  length_s: 2.0
+  stride_s: 2.0
+  frames: 8
+question:
+  prompt: v1
+input_form:
+  name: soften
+  via: 300
+  kernel: bicubic
+backbone:
+  name: d3
+  asset: d3-flash
+  memory_cap_gb: 40
+  adapter: results/nano4/floor_d3flash_c_s1/20261107-044624
+answer_head:
+  name: option_logits
+decision_rules:
+- name: threshold
+  start: 0.0
+  stop: 1.0
+  step: 0.01
