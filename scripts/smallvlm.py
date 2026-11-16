@@ -33,7 +33,7 @@ from s1stream.windows import plan_windows
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--model", type=Path, required=True); ap.add_argument("--config", type=Path, required=True); ap.add_argument("--out", type=Path, required=True)
-ap.add_argument("--factor", type=float, default=1.0); ap.add_argument("--limit", type=int, default=0); ap.add_argument("--probe", type=int, default=0)
+ap.add_argument("--factor", type=float, default=1.0); ap.add_argument("--via", type=int, default=0); ap.add_argument("--limit", type=int, default=0); ap.add_argument("--probe", type=int, default=0)
 args = ap.parse_args()
 from transformers import AutoModelForImageTextToText, AutoProcessor  # noqa: E402
 
@@ -70,6 +70,9 @@ def encode(images: list) -> dict:
 
 
 def run(images: list) -> tuple[float, int, float]:
+    if args.via:        # as input_forms/soften.py: same size and tokens, less detail (2026-11-16)
+        from s1stream.input_forms.soften import soften
+        images = soften(images, args.via)
     if args.factor != 1:
         images = [Image.fromarray(cv2.resize(np.asarray(im.convert('RGB')), (int(im.size[0] * args.factor), int(im.size[1] * args.factor)), interpolation=cv2.INTER_CUBIC)) for im in images]   # as input_forms/upsample.py
     enc = encode(images)
@@ -105,7 +108,7 @@ if (args.out / "scores.jsonl").is_file():
     rows = [json.loads(l) for l in (args.out / "scores.jsonl").read_text().splitlines() if l.strip().endswith("}")]
     done = {(r["video"], r["window"]) for r in rows}
     (args.out / "scores.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows)); print("resuming after", len(done), "windows", flush=True)
-(args.out / "config.yaml").write_text(json.dumps({"model": str(args.model), "factor": args.factor, "config": str(args.config), "text_len": TEXT_LEN, "answer_ids": ids}))
+(args.out / "config.yaml").write_text(json.dumps({"model": str(args.model), "factor": args.factor, "via": args.via, "config": str(args.config), "text_len": TEXT_LEN, "answer_ids": ids}))
 n = len(done)
 with (args.out / "scores.jsonl").open("a") as stream:
     for item in items:

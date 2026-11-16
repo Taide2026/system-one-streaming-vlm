@@ -46,3 +46,20 @@ via 180 is the "180p enlarged 2x" input (`*_v180up2`); differences are against t
 | d3-flash, UCF fine-tune, seed 1 | `cvadall_flf1_v360s*` | 84.9 | 84.1 (−0.8 ± 1.2) | 84.2 (−0.7 ± 1.2) | 82.8 (−2.1 ± 1.6) |
 
 Job script: `jobs/nano4-upx/soft.sbatch`.
+
+### Sharpness ladder, all settings (2026-11-16, job script `soft2.sbatch`)
+
+Change in Macro-AUC against via 180 (the "180p enlarged 2x" input); tokens equal in every column.
+Runs `{cvadall,msad}_{zs,f0,flzs,flf1,flf2}_v360s{240,300}` and `sv{cvad,msad}_qwen3-vl-4b_yn_v360s{240,300}`.
+
+| model | ComplexVAD: 240 / 300 / real 360p | MSAD: 240 / 300 / real 360p |
+|---|---|---|
+| d3-nano, zero-shot | +0.5 / +1.3 / +2.2 ± 1.5 | +2.4 / +4.1 / +3.2 ± 3.3 |
+| d3-nano, UCF fine-tune | +0.6 / +0.6 / +0.7 ± 1.4 | +0.4 / +0.4 / +0.6 ± 2.8 |
+| d3-flash, zero-shot | −2.4 / +0.2 / −1.0 ± 2.1 | −0.6 / −2.2 / −1.1 ± 3.8 |
+| d3-flash, UCF fine-tune, seed 1 | −0.8 / −0.7 / −2.1 ± 1.6 | −1.5 / −0.3 / −1.4 ± 5.0 |
+| d3-flash, UCF fine-tune, seed 2 | −1.3 / −0.3 / −0.8 ± 1.8 | −3.2 / −2.9 / −3.7 ± 2.8 |
+| Qwen3-VL-4B, neutral question | −0.7 / +0.5 / +2.4 ± 2.1 | −0.1 / 0.0 / −1.5 ± 3.8 |
+
+d3-nano: flat or rising in all four comparisons. d3-flash: real 360p below the softest frame in all six, two of them
+with intervals excluding zero; not tied to fine-tuning. MSAD per-window scores are not in the repository.
